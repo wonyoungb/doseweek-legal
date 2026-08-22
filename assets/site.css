@@ -172,6 +172,8 @@ body:has(.language-panel[data-language="ja"] :target) .skip-label[data-language=
   display: inline-flex;
   align-items: center;
   gap: 11px;
+  min-width: 44px;
+  min-height: 44px;
   color: var(--text);
   font-size: 1.02rem;
   font-weight: 720;
@@ -534,16 +536,17 @@ h2 {
   display: none;
 }
 
-.faq-list summary::after {
+.summary-symbol {
   position: absolute;
   top: 50%;
   right: 20px;
+  display: grid;
   width: 26px;
   height: 26px;
+  place-items: center;
   border-radius: 50%;
   background: var(--accent-soft);
   color: var(--accent-strong);
-  content: "+";
   font-size: 1.18rem;
   font-weight: 500;
   line-height: 24px;
@@ -551,8 +554,25 @@ h2 {
   transform: translateY(-50%);
 }
 
-.faq-list details[open] summary::after {
-  content: "−";
+.summary-symbol::before,
+.summary-symbol::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.summary-symbol::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-list details[open] .summary-symbol::after {
+  opacity: 0;
 }
 
 .faq-answer {
@@ -735,7 +755,9 @@ h2 {
 }
 
 .policy-toc a {
-  display: block;
+  display: flex;
+  min-height: 44px;
+  align-items: center;
   padding: 7px 8px;
   border-radius: 9px;
   color: var(--secondary);
@@ -810,6 +832,7 @@ code {
 
 .page-link {
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   gap: 7px;
   margin-top: 24px;
@@ -838,17 +861,14 @@ code {
 
   .site-header {
     align-items: flex-start;
+    gap: 10px;
     padding-top: 16px;
   }
 
-  .brand-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    clip-path: inset(50%);
+  .brand {
+    flex-shrink: 0;
+    gap: 7px;
+    font-size: 0.88rem;
   }
 
   .language-link {

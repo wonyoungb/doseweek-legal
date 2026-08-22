@@ -22,12 +22,16 @@ The public policy must mirror, verbatim and in all three languages:
 
 Change those app strings first, review the clinical/privacy meaning there, and then copy the
 approved values into `privacy/index.html`. Never make a substantive policy change only on the
-website. The current effective date is **August 21, 2026**.
+website. The current effective date is **August 22, 2026**.
 
 The support FAQ must remain consistent with the same catalog and with the shipped behavior.
 In particular, keep the exact four read-only Apple Health types, local-notification boundary,
 encrypted user-directed backup boundary, recovery-code warning, and
-`SystemLanguageModel.default` availability/manual fallback accurate.
+`SystemLanguageModel.default` availability/manual fallback accurate. Keep plaintext PDF/CSV
+exports distinct from encrypted backups: they are generated on request, go only to the share-sheet
+destination the user selects, and are outside the app's control afterward. The deletion copy must
+also distinguish immediate logical removal from the secure database-file cleanup retry, and App
+Lock support must never suggest that authentication can be bypassed.
 
 The app icon is derived from:
 
@@ -65,7 +69,8 @@ Korean** DOM order. Do not reorder them without updating the sibling selectors i
 - `privacy/index.html` — public policy mirrored from the app catalog
 - `assets/site.css` — shared responsive, dark-mode, focus, and reduced-motion styles
 - `assets/language.js` — hash/browser-language selection only
-- `scripts/check_site.py` — dependency-free structural and local-link checks
+- `scripts/check_site.py` — dependency-free structural, metadata, accessibility, disclosure, and
+  local-link checks
 
 ## Local verification
 

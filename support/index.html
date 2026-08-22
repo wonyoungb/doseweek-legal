@@ -3,12 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="DoseWeek support, privacy, backup, Apple Health, notifications, and safety guidance.">
+    <meta name="description" content="DoseWeek support for records, Apple Health, notifications, backups, sensitive exports, App Lock, on-device AI, and safety.">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f4f8">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
     <title>DoseWeek — 도움말</title>
+    <link rel="canonical" href="https://wonyoungb.github.io/doseweek-legal/support/">
     <link rel="icon" type="image/png" href="../assets/app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/app-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DoseWeek">
+    <meta property="og:title" content="DoseWeek Support">
+    <meta property="og:description" content="Help with records, Apple Health, notifications, encrypted backups, plaintext exports, App Lock, and on-device AI.">
+    <meta property="og:url" content="https://wonyoungb.github.io/doseweek-legal/support/">
+    <meta property="og:image" content="https://wonyoungb.github.io/doseweek-legal/assets/app-icon.png">
+    <meta property="og:image:alt" content="DoseWeek app icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DoseWeek Support">
+    <meta name="twitter:description" content="Help with records, Apple Health, notifications, encrypted backups, plaintext exports, App Lock, and on-device AI.">
+    <meta name="twitter:image" content="https://wonyoungb.github.io/doseweek-legal/assets/app-icon.png">
+    <meta name="twitter:image:alt" content="DoseWeek app icon">
     <link rel="stylesheet" href="../assets/site.css">
     <script src="../assets/language.js" defer></script>
   </head>
@@ -57,31 +71,39 @@
           </section>
 
           <section class="content-section" aria-labelledby="en-faq">
-            <div class="section-heading"><p class="section-kicker">Quick answers</p><h2 id="en-faq">Frequently asked questions</h2><p class="section-description">The most common questions about records, Apple Health, reminders, backups, and on-device AI.</p></div>
+            <div class="section-heading"><p class="section-kicker">Quick answers</p><h2 id="en-faq">Frequently asked questions</h2><p class="section-description">The most common questions about records, Apple Health, reminders, backups, sensitive exports, App Lock, and on-device AI.</p></div>
             <div class="faq-list">
               <details>
-                <summary>Where are my records, and can support see them?</summary>
+                <summary><span>Where are my records, and can support see them?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
                 <div class="faq-answer"><p>All records stay in DoseWeek on your device. The app has no account, server, cloud sync, analytics, or support dashboard. We cannot view, retrieve, or change your data remotely.</p><p>Before deleting the app or moving to another device, create and export an encrypted backup if you want to keep your records.</p></div>
               </details>
               <details>
-                <summary>What does DoseWeek read from Apple Health?</summary>
+                <summary><span>What does DoseWeek read from Apple Health?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
                 <div class="faq-answer"><p>Apple Health access is read-only and limited to exactly four body metrics you permit: weight, body fat percentage, lean body mass, and waist circumference. DoseWeek never writes to Apple Health.</p><p>You can change access in iOS Settings at any time. Manual body-metric entry remains available.</p></div>
               </details>
               <details>
-                <summary>Why did a reminder not arrive?</summary>
+                <summary><span>Why did a reminder not arrive?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
                 <div class="faq-answer"><p>DoseWeek schedules local notifications directly on your device and does not use a push server. Check that notifications are allowed for DoseWeek in iOS Settings, then review the reminder options in the app.</p><p>Notifications never include dose amounts. You can choose whether a medication name appears.</p></div>
               </details>
               <details>
-                <summary>How do backups and recovery codes work?</summary>
+                <summary><span>How do backups and recovery codes work?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
                 <div class="faq-answer"><p>A backup is created only when you choose to make one. It is encrypted on device with AES-256-GCM and leaves the app only when you export it through the system share sheet. The live database and local backup envelope are excluded from device backups.</p><p>Keep the exported file and its recovery code secure. The developer has access to neither and cannot recover a lost code or decrypt the file for you. Never share either with support.</p></div>
               </details>
               <details>
-                <summary>Why is an AI feature unavailable?</summary>
+                <summary><span>Are PDF and CSV exports encrypted?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
+                <div class="faq-answer"><p>PDF and CSV exports are plaintext files generated on device only when you request them. They are delivered to the destination you choose in the system share sheet. After sharing, DoseWeek and the developer cannot control copies or retention.</p><p>Choose a trusted destination, then store and delete exported files securely. An encrypted DoseWeek backup is different from a plaintext PDF or CSV.</p></div>
+              </details>
+              <details>
+                <summary><span>Why is an AI feature unavailable?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
                 <div class="faq-answer"><p>Optional AI entry and Visit Prep use only Apple Foundation Models’ on-device <code>SystemLanguageModel.default</code>. Availability depends on the device, Apple Intelligence status, and supported system language. No Private Cloud Compute, server model, or third-party model is used.</p><p>If the model is unavailable, DoseWeek explains the fallback and the normal manual entry or deterministic Visit Prep view remains available.</p></div>
               </details>
               <details>
-                <summary>How do I delete my records?</summary>
-                <div class="faq-answer"><p>Use Settings &gt; Delete All Local Records in DoseWeek. Records stored on the device are deleted immediately. There is no server copy and no separate deletion request to send.</p></div>
+                <summary><span>What if Face ID or the device passcode becomes unavailable?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
+                <div class="faq-answer"><p>Set a passcode again in iOS Settings, return to DoseWeek, then unlock. App Lock cannot be turned off without authentication. Support cannot unlock the app remotely.</p></div>
+              </details>
+              <details>
+                <summary><span>How do I delete my records?</span><span class="summary-symbol" aria-hidden="true"></span></summary>
+                <div class="faq-answer"><p>Use Settings &gt; Delete All Local Records in DoseWeek. DoseWeek immediately removes the records and on-device recovery code, then securely cleans the private database files.</p><p>If the app says cleanup still needs to finish, run Delete All Local Records again or relaunch DoseWeek. The app retries before reopening the database. Deleted records are not restored. There is no server copy or separate deletion request.</p></div>
               </details>
             </div>
           </section>
@@ -115,14 +137,16 @@
           </section>
 
           <section class="content-section" aria-labelledby="ja-faq">
-            <div class="section-heading"><p class="section-kicker">すぐにわかる回答</p><h2 id="ja-faq">よくあるご質問</h2><p class="section-description">記録、Appleヘルスケア、通知、バックアップ、オンデバイスAIに関する回答です。</p></div>
+            <div class="section-heading"><p class="section-kicker">すぐにわかる回答</p><h2 id="ja-faq">よくあるご質問</h2><p class="section-description">記録、Appleヘルスケア、通知、バックアップ、平文の書き出し、アプリロック、オンデバイスAIに関する回答です。</p></div>
             <div class="faq-list">
-              <details><summary>記録はどこにあり、サポートから見られますか？</summary><div class="faq-answer"><p>すべての記録はお使いのデバイス上のDoseWeekにのみ保存されます。アカウント、サーバー、クラウド同期、分析ツール、サポート用の管理画面はありません。私たちが遠隔でデータを閲覧、取得、変更することはできません。</p><p>アプリの削除や機種変更の前に記録を残したい場合は、暗号化バックアップを作成し、書き出してください。</p></div></details>
-              <details><summary>DoseWeekはAppleヘルスケアから何を読み取りますか？</summary><div class="faq-answer"><p>Appleヘルスケア連携は読み取り専用で、許可した4つの身体データ—体重、体脂肪率、除脂肪体重、ウエスト周囲径—に限定されます。DoseWeekがAppleヘルスケアにデータを書き込むことはありません。</p><p>アクセス権はiOSの設定でいつでも変更できます。身体データは手動でも入力できます。</p></div></details>
-              <details><summary>リマインダーが届かないのはなぜですか？</summary><div class="faq-answer"><p>DoseWeekはプッシュサーバーを使わず、デバイス上でローカル通知を予約します。iOSの設定でDoseWeekの通知が許可されているか確認し、アプリ内のリマインダー設定も見直してください。</p><p>通知に用量は表示されません。薬剤名を表示するかどうかは設定で選べます。</p></div></details>
-              <details><summary>バックアップと復旧コードはどのように機能しますか？</summary><div class="faq-answer"><p>バックアップは、ユーザーが作成を選んだ場合にのみ作られます。デバイス上でAES-256-GCMにより暗号化され、システム共有シートから書き出した場合にのみアプリ外へ出ます。現在のデータベースとローカルバックアップ・エンベロープはデバイスバックアップの対象外です。</p><p>書き出したファイルと復旧コードは安全に保管してください。開発者はどちらにもアクセスできず、紛失したコードの復旧やファイルの復号はできません。どちらもサポートに送らないでください。</p></div></details>
-              <details><summary>AI機能が利用できないのはなぜですか？</summary><div class="faq-answer"><p>任意機能の「AIで記録」と受診準備は、Apple Foundation Modelsのオンデバイスモデル<code>SystemLanguageModel.default</code>のみを使用します。利用可否は、デバイス、Apple Intelligenceの状態、対応するシステム言語によって異なります。Private Cloud Compute、サーバーモデル、第三者モデルは使用しません。</p><p>モデルが利用できない場合、DoseWeekは代替方法を案内し、通常の手動入力または決定論的な受診準備画面をそのまま利用できます。</p></div></details>
-              <details><summary>記録を削除するには？</summary><div class="faq-answer"><p>DoseWeekで「設定 &gt; すべてのローカル記録を削除」を実行してください。デバイス内の記録は直ちに削除されます。サーバーのコピーはないため、別途の削除依頼は不要です。</p></div></details>
+              <details><summary><span>記録はどこにあり、サポートから見られますか？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>すべての記録はお使いのデバイス上のDoseWeekにのみ保存されます。アカウント、サーバー、クラウド同期、分析ツール、サポート用の管理画面はありません。私たちが遠隔でデータを閲覧、取得、変更することはできません。</p><p>アプリの削除や機種変更の前に記録を残したい場合は、暗号化バックアップを作成し、書き出してください。</p></div></details>
+              <details><summary><span>DoseWeekはAppleヘルスケアから何を読み取りますか？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>Appleヘルスケア連携は読み取り専用で、許可した4つの身体データ—体重、体脂肪率、除脂肪体重、ウエスト周囲径—に限定されます。DoseWeekがAppleヘルスケアにデータを書き込むことはありません。</p><p>アクセス権はiOSの設定でいつでも変更できます。身体データは手動でも入力できます。</p></div></details>
+              <details><summary><span>リマインダーが届かないのはなぜですか？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>DoseWeekはプッシュサーバーを使わず、デバイス上でローカル通知を予約します。iOSの設定でDoseWeekの通知が許可されているか確認し、アプリ内のリマインダー設定も見直してください。</p><p>通知に用量は表示されません。薬剤名を表示するかどうかは設定で選べます。</p></div></details>
+              <details><summary><span>バックアップと復旧コードはどのように機能しますか？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>バックアップは、ユーザーが作成を選んだ場合にのみ作られます。デバイス上でAES-256-GCMにより暗号化され、システム共有シートから書き出した場合にのみアプリ外へ出ます。現在のデータベースとローカルバックアップ・エンベロープはデバイスバックアップの対象外です。</p><p>書き出したファイルと復旧コードは安全に保管してください。開発者はどちらにもアクセスできず、紛失したコードの復旧やファイルの復号はできません。どちらもサポートに送らないでください。</p></div></details>
+              <details><summary><span>PDFとCSVの書き出しデータは暗号化されていますか？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>PDFとCSVの書き出しデータは平文ファイルで、ユーザーが書き出しを選んだ場合にのみデバイス上で生成されます。システム共有シートで選択した送信先に渡されます。共有後のコピーや保存期間はDoseWeekと開発者には管理できません。</p><p>信頼できる送信先を選び、書き出したファイルを安全に保管・削除してください。暗号化されたDoseWeekバックアップとは異なります。</p></div></details>
+              <details><summary><span>AI機能が利用できないのはなぜですか？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>任意機能の「AIで記録」と受診準備は、Apple Foundation Modelsのオンデバイスモデル<code>SystemLanguageModel.default</code>のみを使用します。利用可否は、デバイス、Apple Intelligenceの状態、対応するシステム言語によって異なります。Private Cloud Compute、サーバーモデル、第三者モデルは使用しません。</p><p>モデルが利用できない場合、DoseWeekは代替方法を案内し、通常の手動入力または決定論的な受診準備画面をそのまま利用できます。</p></div></details>
+              <details><summary><span>Face IDや端末のパスコードが利用できない場合は？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>iOSの設定でパスコードを再設定してからDoseWeekに戻り、ロックを解除してください。認証せずにアプリロックをオフにすることはできません。サポートから遠隔で解除することもできません。</p></div></details>
+              <details><summary><span>記録を削除するには？</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>DoseWeekで「設定 &gt; すべてのローカル記録を削除」を実行してください。記録と端末内の復旧コードは直ちに削除され、その後、アプリ専用データベースファイルが安全に消去されます。</p><p>「安全なストレージ消去を完了する必要があります」と表示された場合は、もう一度削除を実行するかDoseWeekを再起動してください。データベースを再び開く前に再試行され、削除した記録が復元されることはありません。サーバー上のコピーもありません。</p></div></details>
             </div>
           </section>
 
@@ -152,14 +176,16 @@
           </section>
 
           <section class="content-section" aria-labelledby="ko-faq">
-            <div class="section-heading"><p class="section-kicker">빠른 답변</p><h2 id="ko-faq">자주 묻는 질문</h2><p class="section-description">기록, Apple 건강, 알림, 백업, 온디바이스 AI에 대해 가장 자주 묻는 내용입니다.</p></div>
+            <div class="section-heading"><p class="section-kicker">빠른 답변</p><h2 id="ko-faq">자주 묻는 질문</h2><p class="section-description">기록, Apple 건강, 알림, 백업, 평문 내보내기, 앱 잠금, 온디바이스 AI에 대해 가장 자주 묻는 내용입니다.</p></div>
             <div class="faq-list">
-              <details><summary>기록은 어디에 있고, 지원 담당자가 볼 수 있나요?</summary><div class="faq-answer"><p>모든 기록은 사용자 기기의 DoseWeek 안에만 보관됩니다. 계정, 서버, 클라우드 동기화, 분석 도구, 지원용 관리 화면이 없습니다. 개발자가 원격으로 데이터를 보거나 가져오거나 바꿀 수 없습니다.</p><p>앱을 삭제하거나 기기를 바꾸기 전 기록을 남기고 싶다면 암호화된 백업을 만들어 내보내세요.</p></div></details>
-              <details><summary>DoseWeek는 Apple 건강에서 무엇을 읽나요?</summary><div class="faq-answer"><p>Apple 건강 연동은 읽기 전용이며, 사용자가 허용한 네 가지 신체 지표—체중, 체지방률, 제지방량, 허리둘레—만 읽습니다. DoseWeek는 Apple 건강에 아무 데이터도 기록하지 않습니다.</p><p>권한은 iOS 설정에서 언제든 바꿀 수 있으며, 신체 지표는 직접 입력할 수도 있습니다.</p></div></details>
-              <details><summary>알림이 오지 않았어요.</summary><div class="faq-answer"><p>DoseWeek는 푸시 서버 없이 기기에서 로컬 알림을 직접 예약합니다. iOS 설정에서 DoseWeek 알림이 허용되었는지 확인한 뒤, 앱 안의 알림 설정도 확인하세요.</p><p>알림에는 용량이 표시되지 않습니다. 약물 이름 표시 여부는 설정에서 선택할 수 있습니다.</p></div></details>
-              <details><summary>백업과 복구 코드는 어떻게 작동하나요?</summary><div class="faq-answer"><p>백업은 사용자가 만들기를 선택할 때만 생성됩니다. 기기 안에서 AES-256-GCM으로 암호화되고, 시스템 공유 시트로 사용자가 내보낼 때만 앱 밖으로 나갑니다. 현재 데이터베이스와 로컬 백업 봉투는 기기 백업 대상에서 제외됩니다.</p><p>내보낸 파일과 복구 코드를 안전하게 보관하세요. 개발자는 둘 중 어느 것에도 접근할 수 없으며, 잃어버린 코드를 복구하거나 파일을 복호화해 드릴 수 없습니다. 둘 다 지원 담당자에게 보내지 마세요.</p></div></details>
-              <details><summary>AI 기능을 사용할 수 없어요.</summary><div class="faq-answer"><p>선택 기능인 AI 기록과 진료 준비는 Apple Foundation Models의 온디바이스 모델인 <code>SystemLanguageModel.default</code>만 사용합니다. 사용 가능 여부는 기기, Apple Intelligence 상태, 지원하는 시스템 언어에 따라 다릅니다. Private Cloud Compute, 서버 모델, 제3자 모델은 사용하지 않습니다.</p><p>모델을 사용할 수 없으면 DoseWeek가 대체 방법을 안내하며, 기존 수동 기록 또는 결정적인 진료 준비 화면을 계속 사용할 수 있습니다.</p></div></details>
-              <details><summary>기록을 어떻게 삭제하나요?</summary><div class="faq-answer"><p>DoseWeek에서 설정 &gt; 모든 로컬 기록 삭제를 실행하세요. 기기에 저장된 기록이 즉시 삭제됩니다. 서버 사본이 없으므로 별도의 삭제 요청은 필요하지 않습니다.</p></div></details>
+              <details><summary><span>기록은 어디에 있고, 지원 담당자가 볼 수 있나요?</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>모든 기록은 사용자 기기의 DoseWeek 안에만 보관됩니다. 계정, 서버, 클라우드 동기화, 분석 도구, 지원용 관리 화면이 없습니다. 개발자가 원격으로 데이터를 보거나 가져오거나 바꿀 수 없습니다.</p><p>앱을 삭제하거나 기기를 바꾸기 전 기록을 남기고 싶다면 암호화된 백업을 만들어 내보내세요.</p></div></details>
+              <details><summary><span>DoseWeek는 Apple 건강에서 무엇을 읽나요?</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>Apple 건강 연동은 읽기 전용이며, 사용자가 허용한 네 가지 신체 지표—체중, 체지방률, 제지방량, 허리둘레—만 읽습니다. DoseWeek는 Apple 건강에 아무 데이터도 기록하지 않습니다.</p><p>권한은 iOS 설정에서 언제든 바꿀 수 있으며, 신체 지표는 직접 입력할 수도 있습니다.</p></div></details>
+              <details><summary><span>알림이 오지 않았어요.</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>DoseWeek는 푸시 서버 없이 기기에서 로컬 알림을 직접 예약합니다. iOS 설정에서 DoseWeek 알림이 허용되었는지 확인한 뒤, 앱 안의 알림 설정도 확인하세요.</p><p>알림에는 용량이 표시되지 않습니다. 약물 이름 표시 여부는 설정에서 선택할 수 있습니다.</p></div></details>
+              <details><summary><span>백업과 복구 코드는 어떻게 작동하나요?</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>백업은 사용자가 만들기를 선택할 때만 생성됩니다. 기기 안에서 AES-256-GCM으로 암호화되고, 시스템 공유 시트로 사용자가 내보낼 때만 앱 밖으로 나갑니다. 현재 데이터베이스와 로컬 백업 봉투는 기기 백업 대상에서 제외됩니다.</p><p>내보낸 파일과 복구 코드를 안전하게 보관하세요. 개발자는 둘 중 어느 것에도 접근할 수 없으며, 잃어버린 코드를 복구하거나 파일을 복호화해 드릴 수 없습니다. 둘 다 지원 담당자에게 보내지 마세요.</p></div></details>
+              <details><summary><span>PDF와 CSV 내보내기는 암호화되나요?</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>PDF와 CSV 내보내기는 평문 파일이며, 사용자가 요청할 때만 기기에서 생성됩니다. 시스템 공유 시트에서 사용자가 선택한 대상으로 전달됩니다. 공유한 뒤의 사본과 보관 기간은 DoseWeek와 개발자가 통제할 수 없습니다.</p><p>신뢰할 수 있는 대상을 선택하고 내보낸 파일을 안전하게 보관·삭제하세요. 암호화된 DoseWeek 백업과는 다릅니다.</p></div></details>
+              <details><summary><span>AI 기능을 사용할 수 없어요.</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>선택 기능인 AI 기록과 진료 준비는 Apple Foundation Models의 온디바이스 모델인 <code>SystemLanguageModel.default</code>만 사용합니다. 사용 가능 여부는 기기, Apple Intelligence 상태, 지원하는 시스템 언어에 따라 다릅니다. Private Cloud Compute, 서버 모델, 제3자 모델은 사용하지 않습니다.</p><p>모델을 사용할 수 없으면 DoseWeek가 대체 방법을 안내하며, 기존 수동 기록 또는 규칙 기반 진료 준비 화면을 계속 사용할 수 있습니다.</p></div></details>
+              <details><summary><span>Face ID나 기기 암호를 사용할 수 없으면 어떻게 하나요?</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>iOS 설정에서 암호를 다시 설정한 뒤 DoseWeek로 돌아와 잠금을 해제하세요. 인증 없이는 앱 잠금을 끌 수 없습니다. 지원 담당자도 원격으로 잠금을 해제할 수 없습니다.</p></div></details>
+              <details><summary><span>기록을 어떻게 삭제하나요?</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>DoseWeek에서 설정 &gt; 모든 로컬 기록 삭제를 실행하세요. 기록과 기기 내 복구 코드는 즉시 제거되고, 이어서 앱 전용 데이터베이스 파일을 안전하게 정리합니다.</p><p>‘안전한 저장소 정리를 완료해야 합니다’라는 안내가 나오면 삭제를 다시 실행하거나 DoseWeek를 재실행하세요. 데이터베이스를 다시 열기 전에 정리를 재시도하며 삭제된 기록은 복원되지 않습니다. 서버 사본도 없습니다.</p></div></details>
             </div>
           </section>
 

@@ -3,12 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="DoseWeek privacy policy: local-only records, read-only Apple Health access, encrypted backups, and on-device AI.">
+    <meta name="description" content="DoseWeek privacy policy: local-only records, read-only Apple Health, encrypted backups, plaintext user-directed exports, and on-device AI.">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f4f8">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
     <title>DoseWeek — 개인정보 처리방침</title>
+    <link rel="canonical" href="https://wonyoungb.github.io/doseweek-legal/privacy/">
     <link rel="icon" type="image/png" href="../assets/app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/app-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DoseWeek">
+    <meta property="og:title" content="DoseWeek Privacy Policy">
+    <meta property="og:description" content="How DoseWeek stores records, reads Apple Health, protects encrypted backups, and handles plaintext exports and on-device AI.">
+    <meta property="og:url" content="https://wonyoungb.github.io/doseweek-legal/privacy/">
+    <meta property="og:image" content="https://wonyoungb.github.io/doseweek-legal/assets/app-icon.png">
+    <meta property="og:image:alt" content="DoseWeek app icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DoseWeek Privacy Policy">
+    <meta name="twitter:description" content="How DoseWeek stores records, reads Apple Health, protects encrypted backups, and handles plaintext exports and on-device AI.">
+    <meta name="twitter:image" content="https://wonyoungb.github.io/doseweek-legal/assets/app-icon.png">
+    <meta name="twitter:image:alt" content="DoseWeek app icon">
     <link rel="stylesheet" href="../assets/site.css">
     <script src="../assets/language.js" defer></script>
   </head>
@@ -39,7 +53,7 @@
             <p class="eyebrow">Privacy, in plain language</p>
             <h1 id="en-title">Privacy Policy</h1>
             <p class="hero-copy">DoseWeek is a personal record-keeping tool for injection tracking. The following describes exactly how the app actually works.</p>
-            <p class="date"><time datetime="2026-08-21">Effective date: August 21, 2026</time></p>
+            <p class="date"><time datetime="2026-08-22">Effective date: August 22, 2026</time></p>
             <ul class="hero-meta" aria-label="Policy summary"><li>Records stay on device</li><li>4 read-only Apple Health metrics</li><li>No tracking</li></ul>
             <div class="button-row"><a class="button primary" href="#en-storage">Read the policy</a><a class="button" href="../support/#en">Get support</a></div>
           </header>
@@ -48,17 +62,17 @@
             <nav class="policy-toc" aria-label="Policy contents">
               <h2>On this page</h2>
               <ol>
-                <li><a href="#en-storage">Data storage</a></li><li><a href="#en-health">Apple Health</a></li><li><a href="#en-backups">Backups</a></li><li><a href="#en-notifications">Notifications</a></li><li><a href="#en-tracking">Tracking</a></li><li><a href="#en-deletion">Deletion</a></li><li><a href="#en-contact">Contact</a></li><li><a href="#en-ai">On-device AI</a></li><li><a href="#en-medical">Medical disclaimer</a></li>
+                <li><a href="#en-storage">Data storage</a></li><li><a href="#en-health">Apple Health</a></li><li><a href="#en-backups">Backups and exports</a></li><li><a href="#en-notifications">Notifications</a></li><li><a href="#en-tracking">Tracking</a></li><li><a href="#en-deletion">Deletion</a></li><li><a href="#en-contact">Contact</a></li><li><a href="#en-ai">On-device AI</a></li><li><a href="#en-medical">Medical disclaimer</a></li>
               </ol>
             </nav>
 
             <div class="policy-card">
-              <section id="en-storage" class="policy-section"><h2>1. Where Your Data Is Stored</h2><p>All health records (injection schedules, administration history, injection sites, notes, and body-metric data) are stored only on your device. DoseWeek operates no servers and never transmits or collects any of your data.</p></section>
+              <section id="en-storage" class="policy-section"><h2>1. Where Your Data Is Stored</h2><p>All health records (injection schedules, administration history, injection sites, notes, and body-metric data) are stored only on your device by default. DoseWeek operates no servers and does not automatically transmit or collect your data. Records leave the app only when you explicitly export or share them as described below.</p></section>
               <section id="en-health" class="policy-section"><h2>2. Apple Health (HealthKit) Integration</h2><p>Apple Health integration is read-only. Only the body metrics you allow — weight, body fat percentage, lean body mass, and waist circumference — are read and shown or stored on your device. You can change permissions at any time in iOS Settings. DoseWeek does not write any data to Apple Health.</p></section>
-              <section id="en-backups" class="policy-section"><h2>3. Backups</h2><p>The live clinical database and encrypted local backup envelope are excluded from device backups. A backup is created only when you choose to create one and is encrypted on device with AES-256-GCM. It leaves the app only when you explicitly export it through the system share sheet. You manage the exported ciphertext and recovery code; the developer cannot access either.</p></section>
+              <section id="en-backups" class="policy-section"><h2>3. Backups and exports</h2><div><p>The live clinical database and encrypted local backup envelope are excluded from device backups. A backup is created only when you choose to create one and is encrypted on device with AES-256-GCM. It leaves the app only when you explicitly export it through the system share sheet. You manage the exported ciphertext and recovery code; the developer cannot access either.</p><p>PDF and CSV exports are plaintext files generated on device only when you request them. They are delivered to the destination you choose in the system share sheet. After sharing, DoseWeek and the developer cannot control copies or retention; store and delete exported files securely.</p></div></section>
               <section id="en-notifications" class="policy-section"><h2>4. Notifications</h2><p>All notifications are local notifications scheduled directly on your device. No push servers are used; notifications never include dose amounts, and you can choose in Settings whether the medication name is shown.</p></section>
               <section id="en-tracking" class="policy-section"><h2>5. Third Parties and Tracking</h2><p>The app contains no third-party SDKs, analytics tools, or advertising. It does not collect usage statistics, track users, or build profiles.</p></section>
-              <section id="en-deletion" class="policy-section"><h2>6. Deleting Your Data</h2><p>Running Settings &gt; Delete All Local Records immediately deletes every record stored on your device. Since no server copies exist, no separate deletion request is needed.</p></section>
+              <section id="en-deletion" class="policy-section"><h2>6. Deleting Your Data</h2><p>Running Settings &gt; Delete All Local Records immediately removes every record from DoseWeek and deletes the on-device recovery code. DoseWeek then securely cleans the private database files. If iOS temporarily prevents that cleanup, the app tells you to run the deletion again or relaunch DoseWeek and automatically retries before reopening the database. Deleted records are not restored. Since no server copies exist, no separate deletion request is needed.</p></section>
               <section id="en-contact" class="policy-section"><h2>7. Contact</h2><p>For questions about how your personal data is handled, contact us at the email below.<br><a class="policy-contact" href="mailto:wonyoung@wonyoungchoi.dev">wonyoung@wonyoungchoi.dev</a></p></section>
               <section id="en-ai" class="policy-section"><h2>8. On-device AI</h2><p>Optional AI entry and Visit Prep use only Apple Foundation Models' on-device Apple Intelligence model, SystemLanguageModel.default. AI entry input and structured model output are processed in a temporary in-memory session on the device. DoseWeek does not send them off device or persist the temporary session or output before you confirm. If you continue, your original sentence becomes an editable draft note, and only the fields and note you review and explicitly confirm are stored in the local clinical database. For Visit Prep, the model receives only closed fact identifiers, not clinical values, and returns only order and reviewed-expression enums. The app builds every sentence from localized templates and computed values. The resulting summary is memory-only and is not stored; it is included in a PDF only when you choose to include it. No Private Cloud Compute, server model, or third-party model is used. You can turn these features off in Settings.</p></section>
               <section id="en-medical" class="policy-section medical"><h2>Medical Disclaimer</h2><div><p>DoseWeek is a personal record-keeping tool and does not provide medical advice, diagnosis, or treatment. Always consult your doctor or pharmacist for any decisions about your treatment, including schedules and doses.</p><p>This app is not a medical device. It cannot determine whether you have a condition, and it is not intended to diagnose, treat, or prevent disease.</p></div></section>
@@ -72,7 +86,7 @@
             <p class="eyebrow">わかりやすいプライバシー情報</p>
             <h1 id="ja-title">プライバシーポリシー</h1>
             <p class="hero-copy">DoseWeekは注射の投与記録をサポートする個人用の記録ツールです。以下は、アプリの実際の動作をそのまま説明したものです。</p>
-            <p class="date"><time datetime="2026-08-21">施行日: 2026年8月21日</time></p>
+            <p class="date"><time datetime="2026-08-22">施行日: 2026年8月22日</time></p>
             <ul class="hero-meta" aria-label="ポリシーの概要"><li>記録はデバイス内に保存</li><li>Appleヘルスケア4項目を読み取り専用</li><li>トラッキングなし</li></ul>
             <div class="button-row"><a class="button primary" href="#ja-storage">ポリシーを読む</a><a class="button" href="../support/#ja">サポート</a></div>
           </header>
@@ -81,17 +95,17 @@
             <nav class="policy-toc" aria-label="ポリシーの目次">
               <h2>目次</h2>
               <ol>
-                <li><a href="#ja-storage">データの保存場所</a></li><li><a href="#ja-health">Appleヘルスケア</a></li><li><a href="#ja-backups">バックアップ</a></li><li><a href="#ja-notifications">通知</a></li><li><a href="#ja-tracking">トラッキング</a></li><li><a href="#ja-deletion">データの削除</a></li><li><a href="#ja-contact">お問い合わせ</a></li><li><a href="#ja-ai">オンデバイスAI</a></li><li><a href="#ja-medical">医療に関する注意</a></li>
+                <li><a href="#ja-storage">データの保存場所</a></li><li><a href="#ja-health">Appleヘルスケア</a></li><li><a href="#ja-backups">バックアップと書き出し</a></li><li><a href="#ja-notifications">通知</a></li><li><a href="#ja-tracking">トラッキング</a></li><li><a href="#ja-deletion">データの削除</a></li><li><a href="#ja-contact">お問い合わせ</a></li><li><a href="#ja-ai">オンデバイスAI</a></li><li><a href="#ja-medical">医療に関する注意</a></li>
               </ol>
             </nav>
 
             <div class="policy-card">
-              <section id="ja-storage" class="policy-section"><h2>1. データの保存場所</h2><p>すべての健康記録（投与スケジュール、投与履歴、注射部位、メモ、身体データ）は、お使いのデバイス内にのみ保存されます。DoseWeekはサーバーを運営しておらず、いかなるデータも外部に送信・収集しません。</p></section>
+              <section id="ja-storage" class="policy-section"><h2>1. データの保存場所</h2><p>すべての健康記録（投与スケジュール、投与履歴、注射部位、メモ、身体データ）は、初期状態ではお使いのデバイス内にのみ保存されます。DoseWeekはサーバーを運営せず、データを自動で送信・収集しません。記録がアプリ外へ出るのは、以下のとおりユーザーが明示的に書き出しまたは共有した場合だけです。</p></section>
               <section id="ja-health" class="policy-section"><h2>2. Appleヘルスケア（HealthKit）連携</h2><p>Appleヘルスケア連携は読み取り専用です。許可した身体データ（体重、体脂肪率、除脂肪体重、ウエスト周囲径）のみを読み込み、デバイス内で表示・保存します。権限はいつでもiOSの設定から変更できます。DoseWeekがAppleヘルスケアにデータを書き込むことはありません。</p></section>
-              <section id="ja-backups" class="policy-section"><h2>3. バックアップ</h2><p>現在使用中の臨床記録データベースと暗号化されたローカルバックアップ・エンベロープは、デバイスバックアップの対象外です。バックアップは、ユーザーが作成を選んだ場合にのみ端末内でAES-256-GCMにより暗号化されます。システム共有シートから明示的に書き出した場合にのみアプリ外へ出ます。書き出した暗号文と復旧コードはユーザー自身が管理し、開発者はどちらにもアクセスできません。</p></section>
+              <section id="ja-backups" class="policy-section"><h2>3. バックアップと書き出し</h2><div><p>現在使用中の臨床記録データベースと暗号化されたローカルバックアップ・エンベロープは、デバイスバックアップの対象外です。バックアップは、ユーザーが作成を選んだ場合にのみ端末内でAES-256-GCMにより暗号化されます。システム共有シートから明示的に書き出した場合にのみアプリ外へ出ます。書き出した暗号文と復旧コードはユーザー自身が管理し、開発者はどちらにもアクセスできません。</p><p>PDFとCSVの書き出しデータは平文ファイルで、ユーザーが書き出しを選んだ場合にのみデバイス上で生成されます。システム共有シートで選択した送信先に渡されます。共有後のコピーや保存期間はDoseWeekと開発者には管理できないため、書き出したファイルはユーザー自身で安全に保管・削除してください。</p></div></section>
               <section id="ja-notifications" class="policy-section"><h2>4. 通知</h2><p>すべての通知は、デバイス上で直接スケジュールされるローカル通知です。プッシュサーバーは使用せず、通知に用量情報は含まれません。薬剤名の表示有無も設定で選択できます。</p></section>
               <section id="ja-tracking" class="policy-section"><h2>5. 第三者提供とトラッキング</h2><p>第三者SDK、分析ツール、広告は一切含まれていません。利用統計の収集、ユーザートラッキング、プロファイリングは行いません。</p></section>
-              <section id="ja-deletion" class="policy-section"><h2>6. データの削除</h2><p>設定 &gt; すべてのローカル記録を削除 を実行すると、デバイスに保存されたすべての記録が直ちに削除されます。サーバー上のコピーは存在しないため、別途の削除依頼は不要です。</p></section>
+              <section id="ja-deletion" class="policy-section"><h2>6. データの削除</h2><p>「設定 &gt; すべてのローカル記録を削除」を実行すると、DoseWeek内のすべての記録と端末内の復旧コードが直ちに削除されます。その後、アプリはアプリ専用データベースファイルの安全な消去を完了します。iOSによって一時的に消去を完了できない場合は、もう一度削除を実行するかDoseWeekを再起動するよう案内し、データベースを再び開く前に自動で消去を再試行します。削除した記録が復元されることはありません。サーバー上のコピーは存在しないため、別途の削除依頼は不要です。</p></section>
               <section id="ja-contact" class="policy-section"><h2>7. お問い合わせ</h2><p>個人情報の取り扱いに関するお問い合わせは、下記のメールアドレスまでご連絡ください。<br><a class="policy-contact" href="mailto:wonyoung@wonyoungchoi.dev">wonyoung@wonyoungchoi.dev</a></p></section>
               <section id="ja-ai" class="policy-section"><h2>8. オンデバイスAI</h2><p>任意機能の「AIで記録」と受診準備は、Apple Foundation ModelsのオンデバイスApple IntelligenceモデルであるSystemLanguageModel.defaultのみを使用します。AI記録の入力と構造化されたモデル出力は、端末上の一時的なメモリ内セッションで処理されます。DoseWeekはそれらを端末外へ送信せず、ユーザーが確認する前に一時セッションや出力を永続保存しません。続行すると元の文は編集可能な下書きメモとなり、ユーザーが確認して明示的に確定した項目とメモだけがローカルの臨床記録データベースに保存されます。受診準備では、モデルは臨床値ではなく閉じた事実識別子のみを受け取り、順序と確認済み表現の列挙値のみを返します。すべての文はアプリがローカライズ済みテンプレートと計算値から作成します。完成した要約はメモリ内だけに保持され、保存されません。ユーザーが含めることを選んだ場合にのみPDFに入ります。Private Cloud Compute、サーバーモデル、第三者モデルは使用しません。この機能は設定でオフにできます。</p></section>
               <section id="ja-medical" class="policy-section medical"><h2>医療に関する注意</h2><div><p>DoseWeekは個人用の記録ツールであり、医学的助言、診断、治療を提供するものではありません。投与スケジュールや用量など、治療に関するすべての決定は、必ず医師または薬剤師にご相談ください。</p><p>本プログラムは医療機器ではありません。疾病の診断、治療、予防を目的としていません。</p></div></section>
@@ -105,7 +119,7 @@
             <p class="eyebrow">쉽게 읽는 개인정보</p>
             <h1 id="ko-title">개인정보 처리방침</h1>
             <p class="hero-copy">DoseWeek는 주사 투여 기록을 돕는 개인용 기록 도구입니다. 아래 내용은 앱이 실제로 동작하는 방식을 그대로 설명합니다.</p>
-            <p class="date"><time datetime="2026-08-21">시행일: 2026년 8월 21일</time></p>
+            <p class="date"><time datetime="2026-08-22">시행일: 2026년 8월 22일</time></p>
             <ul class="hero-meta" aria-label="처리방침 요약"><li>기록은 기기 안에 보관</li><li>Apple 건강 4종 읽기 전용</li><li>추적 없음</li></ul>
             <div class="button-row"><a class="button primary" href="#ko-storage">처리방침 읽기</a><a class="button" href="../support/#ko">도움말</a></div>
           </header>
@@ -114,17 +128,17 @@
             <nav class="policy-toc" aria-label="처리방침 목차">
               <h2>목차</h2>
               <ol>
-                <li><a href="#ko-storage">데이터 저장</a></li><li><a href="#ko-health">Apple 건강</a></li><li><a href="#ko-backups">백업</a></li><li><a href="#ko-notifications">알림</a></li><li><a href="#ko-tracking">제3자 및 추적</a></li><li><a href="#ko-deletion">데이터 삭제</a></li><li><a href="#ko-contact">문의</a></li><li><a href="#ko-ai">온디바이스 AI</a></li><li><a href="#ko-medical">의료 고지</a></li>
+                <li><a href="#ko-storage">데이터 저장</a></li><li><a href="#ko-health">Apple 건강</a></li><li><a href="#ko-backups">백업 및 내보내기</a></li><li><a href="#ko-notifications">알림</a></li><li><a href="#ko-tracking">제3자 및 추적</a></li><li><a href="#ko-deletion">데이터 삭제</a></li><li><a href="#ko-contact">문의</a></li><li><a href="#ko-ai">온디바이스 AI</a></li><li><a href="#ko-medical">의료 고지</a></li>
               </ol>
             </nav>
 
             <div class="policy-card">
-              <section id="ko-storage" class="policy-section"><h2>1. 데이터 저장 위치</h2><p>모든 건강 기록(투여 일정, 투여 이력, 주사 부위, 메모, 신체 지표 데이터)은 사용자의 기기 안에만 저장됩니다. DoseWeek는 서버를 운영하지 않으며, 어떠한 데이터도 외부로 전송하거나 수집하지 않습니다.</p></section>
+              <section id="ko-storage" class="policy-section"><h2>1. 데이터 저장 위치</h2><p>모든 건강 기록(투여 일정, 투여 이력, 주사 부위, 메모, 신체 지표 데이터)은 기본적으로 사용자의 기기 안에만 저장됩니다. DoseWeek는 서버를 운영하지 않으며 데이터를 자동으로 전송하거나 수집하지 않습니다. 기록은 아래 설명처럼 사용자가 명시적으로 내보내거나 공유할 때만 앱 밖으로 나갑니다.</p></section>
               <section id="ko-health" class="policy-section"><h2>2. Apple 건강(HealthKit) 연동</h2><p>Apple 건강 연동은 읽기 전용입니다. 허용한 신체 지표(체중, 체지방률, 제지방량, 허리둘레)만 읽어와 기기 내에 표시·저장합니다. 권한은 언제든지 iOS 설정에서 직접 변경할 수 있습니다. DoseWeek는 Apple 건강에 데이터를 기록하지 않습니다.</p></section>
-              <section id="ko-backups" class="policy-section"><h2>3. 백업</h2><p>현재 사용하는 임상 기록 데이터베이스와 암호화된 로컬 백업 봉투(envelope)는 기기 백업 대상에서 제외됩니다. 백업은 사용자가 만들기를 선택할 때만 기기 안에서 AES-256-GCM으로 암호화됩니다. 시스템 공유 시트를 통해 사용자가 명시적으로 내보낼 때만 앱 밖으로 나갑니다. 내보낸 암호문과 복구 코드는 사용자가 관리하며, 개발자는 어느 쪽에도 접근할 수 없습니다.</p></section>
+              <section id="ko-backups" class="policy-section"><h2>3. 백업 및 내보내기</h2><div><p>현재 사용하는 임상 기록 데이터베이스와 암호화된 로컬 백업 봉투(envelope)는 기기 백업 대상에서 제외됩니다. 백업은 사용자가 만들기를 선택할 때만 기기 안에서 AES-256-GCM으로 암호화됩니다. 시스템 공유 시트를 통해 사용자가 명시적으로 내보낼 때만 앱 밖으로 나갑니다. 내보낸 암호문과 복구 코드는 사용자가 관리하며, 개발자는 어느 쪽에도 접근할 수 없습니다.</p><p>PDF와 CSV 내보내기는 평문 파일이며, 사용자가 요청할 때만 기기에서 생성됩니다. 시스템 공유 시트에서 사용자가 선택한 대상으로 전달됩니다. 공유한 뒤의 사본과 보관 기간은 DoseWeek와 개발자가 통제할 수 없으므로, 내보낸 파일은 사용자가 안전하게 보관하고 삭제해야 합니다.</p></div></section>
               <section id="ko-notifications" class="policy-section"><h2>4. 알림</h2><p>모든 알림은 기기에서 직접 예약되는 로컬 알림입니다. 푸시 서버를 사용하지 않으며, 알림에는 용량 정보가 포함되지 않고 약물 이름 표시 여부도 설정에서 선택할 수 있습니다.</p></section>
               <section id="ko-tracking" class="policy-section"><h2>5. 제3자 제공 및 추적</h2><p>제3자 SDK, 분석 도구, 광고가 일절 포함되어 있지 않습니다. 이용 통계 수집, 사용자 추적, 프로파일링을 하지 않습니다.</p></section>
-              <section id="ko-deletion" class="policy-section"><h2>6. 데이터 삭제</h2><p>설정 &gt; 모든 로컬 기록 삭제를 실행하면 기기에 저장된 모든 기록이 즉시 삭제됩니다. 서버 사본이 존재하지 않으므로, 별도의 삭제 요청 절차가 필요하지 않습니다.</p></section>
+              <section id="ko-deletion" class="policy-section"><h2>6. 데이터 삭제</h2><p>설정 &gt; 모든 로컬 기록 삭제를 실행하면 DoseWeek 안의 모든 기록과 기기에 저장된 복구 코드가 즉시 제거됩니다. 이어서 앱이 앱 전용 데이터베이스 파일을 안전하게 정리합니다. iOS가 일시적으로 정리를 막으면 앱이 다시 삭제를 실행하거나 DoseWeek를 재실행하라고 안내하며, 데이터베이스를 다시 열기 전에 자동으로 정리를 재시도합니다. 삭제된 기록은 복원되지 않습니다. 서버 사본이 없으므로 별도의 삭제 요청도 필요하지 않습니다.</p></section>
               <section id="ko-contact" class="policy-section"><h2>7. 문의</h2><p>개인정보 처리와 관련한 문의는 아래 이메일로 연락해 주세요.<br><a class="policy-contact" href="mailto:wonyoung@wonyoungchoi.dev">wonyoung@wonyoungchoi.dev</a></p></section>
               <section id="ko-ai" class="policy-section"><h2>8. 온디바이스 AI</h2><p>선택 기능인 AI 기록과 진료 준비는 Apple Foundation Models의 온디바이스 Apple Intelligence 모델인 SystemLanguageModel.default만 사용합니다. AI 기록의 입력과 구조화된 모델 출력은 기기 안의 일시적인 메모리 세션에서 처리됩니다. DoseWeek는 이를 기기 밖으로 보내지 않으며, 사용자가 확인하기 전에는 임시 세션이나 출력을 영구 저장하지 않습니다. 계속하면 원문이 수정 가능한 초안 메모가 되고, 사용자가 검토해 명시적으로 확인한 필드와 메모만 로컬 임상 기록 데이터베이스에 저장됩니다. 진료 준비에서 모델은 임상 값이 아닌 닫힌 사실 식별자만 받고, 순서와 검수된 표현의 열거형 값만 반환합니다. 모든 문장은 앱이 현지화된 템플릿과 계산값으로 만듭니다. 완성된 요약은 메모리에서만 유지되고 저장되지 않으며, 사용자가 포함하도록 선택한 경우에만 PDF에 들어갑니다. Private Cloud Compute, 서버 모델, 제3자 모델은 사용하지 않습니다. 이 기능은 설정에서 끌 수 있습니다.</p></section>
               <section id="ko-medical" class="policy-section medical"><h2>의료 고지</h2><div><p>DoseWeek는 개인 기록 도구이며 의학적 조언, 진단, 치료를 제공하지 않습니다. 투여 일정·용량 등 치료에 관한 모든 결정은 반드시 의사 또는 약사와 상의하세요.</p><p>이 앱은 의료기기가 아닙니다. 질병의 유무를 판단할 수 없으며, 질병의 진단·치료·예방을 목적으로 하지 않습니다.</p></div></section>
