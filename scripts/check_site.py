@@ -445,9 +445,7 @@ def main() -> None:
         "SystemLanguageModel",
         "Private Cloud Compute",
         "Face ID",
-        "App Lock",
         "PDF",
-        "CSV",
         "Visit Prep",
     ):
         pattern = (
@@ -462,7 +460,9 @@ def main() -> None:
         "AES-256-GCM",
         "app-private storage",
         "Health Connect",
-        "does not provide notifications, reminders, or widgets",
+        "Tapping a reminder only opens the app",
+        "There are no widgets or wearable apps",
+        "stores no biometric data",
         "not a medical device",
         "wonyoung@wonyoungchoi.dev",
         "Android 1.0.0",

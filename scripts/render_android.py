@@ -317,7 +317,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
     assert catalog["versionName"] == "1.0.0"
-    assert catalog["effectiveDate"] == "2026-08-31"
+    assert catalog["effectiveDate"] == "2026-09-02"
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
     assert isinstance(catalog["locales"], dict)
@@ -343,11 +343,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     ]
     expected_policy_lengths = {
         "scope": (2, None),
-        "stored-data": (1, 5),
+        "stored-data": (1, 7),
         "no-collection": (1, 7),
         "backup": (4, None),
         "retention": (2, None),
-        "security": (1, None),
+        "security": (2, None),
         "changes": (1, None),
     }
     expected_faq_answer_lengths = {
@@ -496,7 +496,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     for prohibited in (
         "iphone", "ipad", "ios", "apple health", "healthkit", "apple foundation models",
         "apple intelligence", "systemlanguagemodel", "private cloud compute", "face id",
-        "app lock", "pdf", "csv", "visit prep",
+        "pdf", "visit prep",
     ):
         pattern = rf"(?<![A-Za-z0-9_]){re.escape(prohibited)}(?![A-Za-z0-9_])"
         assert not re.search(pattern, serialized), (
