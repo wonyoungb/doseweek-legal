@@ -317,7 +317,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
     assert catalog["versionName"] == "1.0.0"
-    assert catalog["effectiveDate"] == "2026-09-02"
+    assert catalog["effectiveDate"] == "2026-09-08"
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
     assert isinstance(catalog["locales"], dict)
@@ -344,10 +344,10 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     expected_policy_lengths = {
         "scope": (2, None),
         "stored-data": (1, 7),
-        "no-collection": (1, 7),
-        "backup": (4, None),
-        "retention": (2, None),
-        "security": (2, None),
+        "no-collection": (4, 7),
+        "backup": (7, None),
+        "retention": (3, None),
+        "security": (3, None),
         "changes": (1, None),
     }
     expected_faq_answer_lengths = {
