@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE_BASE = "https://wonyoungb.github.io/doseweek-legal/"
+SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
 SOCIAL_IMAGE = f"{SITE_BASE}assets/android-app-icon.png"
 ANDROID_ICON_PATH = ROOT / "assets/android-app-icon.png"
 ANDROID_ICON_SOURCE = Path("marketing/GooglePlay/play-icon-512.png")

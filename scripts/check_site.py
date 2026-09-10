@@ -28,7 +28,7 @@ ANDROID_LANGUAGES = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 ]
-SITE_BASE = "https://wonyoungb.github.io/doseweek-legal/"
+SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
 SOCIAL_IMAGE = f"{SITE_BASE}assets/app-icon.png"
 ANDROID_SOCIAL_IMAGE = f"{SITE_BASE}assets/android-app-icon.png"
 
@@ -117,7 +117,7 @@ def local_target(source: Path, reference: str) -> tuple[Path, str] | None:
         if split.scheme == "mailto":
             return None
         if reference.startswith(SITE_BASE):
-            relative_path = unquote(split.path.removeprefix("/doseweek-legal/"))
+            relative_path = unquote(split.path.removeprefix("/doseweek-legal/").lstrip("/"))
             target = (ROOT / relative_path).resolve()
             if target.is_dir() or split.path.endswith("/"):
                 target /= "index.html"
