@@ -417,8 +417,8 @@ def main() -> None:
         "support/index.html: missing corrected Korean deterministic fallback"
     )
 
-    assert len(support_page.summary_markers) == 24, (
-        "support/index.html: expected eight FAQ disclosures in each language"
+    assert len(support_page.summary_markers) == 13 * len(IOS_PANEL_LANGUAGES), (
+        "support/index.html: expected eight existing and five candidate FAQ disclosures per language"
     )
     assert all(markers == ["true"] for markers in support_page.summary_markers), (
         "support/index.html: every summary needs one aria-hidden summary-symbol"
@@ -427,12 +427,31 @@ def main() -> None:
     android_pages = [pages[path.resolve()] for path in ANDROID_HTML_FILES]
     android_text = " ".join(text for page in android_pages for text in page.text)
     android_support = pages[(ROOT / "android/support/index.html").resolve()]
-    assert len(android_support.summary_markers) == 7 * len(ANDROID_LANGUAGES), (
-        "android/support/index.html: expected seven FAQ disclosures in each language"
+    assert len(android_support.summary_markers) == 12 * len(ANDROID_LANGUAGES), (
+        "android/support/index.html: expected seven existing and five candidate FAQ disclosures per language"
     )
     assert all(markers == ["true"] for markers in android_support.summary_markers), (
         "android/support/index.html: every summary needs one aria-hidden summary-symbol"
     )
+
+    for path, page, languages, candidate_version in (
+        (ROOT / "support/index.html", support_page, IOS_PANEL_LANGUAGES, "iOS 1.0.4 (build 16)"),
+        (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
+         "Android 1.0.0 (versionCode 10)"),
+    ):
+        source = path.read_text(encoding="utf-8")
+        for language in languages:
+            for topic in ("dates", "edit", "past", "health", "sites"):
+                identifier = f"{language}-candidate-{topic}"
+                assert identifier in page.ids, f"{path.name}: missing candidate FAQ {identifier}"
+                entry = re.search(rf'<details id="{re.escape(identifier)}"[^>]*>(.*?)</details>',
+                                  source, flags=re.DOTALL)
+                assert entry is not None, identifier
+                paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
+                assert len(paragraphs) == (3 if topic == "sites" else 2), identifier
+                assert candidate_version in paragraphs[0], (
+                    f"{identifier}: candidate notice must identify the exact version and build"
+                )
 
     for prohibited in (
         "iPhone",

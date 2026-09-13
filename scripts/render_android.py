@@ -340,6 +340,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     ]
     expected_faq_ids = [
         "storage", "accounts", "ai-health", "notifications", "backup", "deletion", "recovery",
+        "candidate-dates", "candidate-edit", "candidate-past", "candidate-health", "candidate-sites",
     ]
     expected_policy_lengths = {
         "scope": (2, None),
@@ -358,6 +359,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "backup": 2,
         "deletion": 1,
         "recovery": 1,
+        "candidate-dates": 2,
+        "candidate-edit": 2,
+        "candidate-past": 2,
+        "candidate-health": 2,
+        "candidate-sites": 3,
     }
     for locale, entry in catalog["locales"].items():
         assert isinstance(entry, dict), f"{locale}: locale entry must be an object"
