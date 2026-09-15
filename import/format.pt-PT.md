@@ -4,6 +4,8 @@ Já pode preparar e verificar um rascunho JSON. Este guia não significa que a v
 
 Este formato preserva elementos de prova para revisão manual. Não é uma cópia de segurança encriptada, uma decisão clínica, uma garantia de formato de fornecedor nem uma prova de que a aplicação atual o possa importar.
 
+Importação no Android: o rascunho guardado tem um limite de 1 MiB (1.048.576 bytes) e 10.000 linhas, separado dos 10 MiB do JSON. As linhas de sintomas e não classificadas não podem ser guardadas; preserve o texto e desmarque-as. Registos correspondentes eliminados continuam já importados e não são restaurados. A versão candidata do iOS tem um limite separado de 4 MiB para retomar rascunhos. Não pressuponha comportamento ou disponibilidade iguais nas plataformas ou na app instalada.
+
 1. O campo format de nível superior é doseweek.record_extraction_draft; version é 1; reviewed_by_user é false. records e unreadable_sections são arrays. Rejeite campos desconhecidos em vez de os eliminar silenciosamente.
 
 2. Cada linha contém todos os campos do modelo e um row_id único no rascunho. Os identificadores da fonte nunca se tornam automaticamente IDs de registos do DoseWeek. source_references preserva o rótulo do documento, o número de página a partir de 1 quando conhecido, o rótulo da linha e o texto visível; null significa desconhecido.

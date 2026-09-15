@@ -4,6 +4,8 @@ Możesz już przygotować i sprawdzić wersję roboczą JSON. Ten poradnik nie o
 
 Ten format zachowuje dane źródłowe do ręcznego sprawdzenia. Nie jest zaszyfrowaną kopią zapasową, decyzją kliniczną, gwarancją formatu dostawcy ani dowodem, że bieżąca aplikacja go importuje.
 
+Import Android: zapisany szkic ma limit 1 MiB (1 048 576 bajtów) i 10 000 wierszy, niezależny od 10 MiB dla JSON. Nie można zapisać wierszy objawów ani niesklasyfikowanych; zachowaj ich tekst i odznacz je. Pasujące usunięte rekordy pozostają już zaimportowane i nie są przywracane. Wersja kandydująca iOS ma osobny limit 4 MiB dla wznawianych szkiców. Nie zakładaj identycznego działania ani dostępności na obu platformach lub w zainstalowanej aplikacji.
+
 1. Na najwyższym poziomie format ma wartość doseweek.record_extraction_draft; version ma wartość 1; reviewed_by_user ma wartość false. records i unreadable_sections są tablicami. Odrzucaj nieznane pola zamiast po cichu je pomijać.
 
 2. Każdy wiersz ma wszystkie pola szablonu i unikatowy row_id lokalny dla wersji roboczej. Identyfikatory źródłowe nigdy nie stają się automatycznie identyfikatorami zapisów DoseWeek. source_references zachowują etykietę dokumentu, numer strony liczony od 1, jeśli jest znany, etykietę wiersza oraz widoczny tekst; null oznacza wartość nieznaną.

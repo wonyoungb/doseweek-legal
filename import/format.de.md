@@ -4,6 +4,8 @@ Sie können jetzt einen JSON-Entwurf vorbereiten und prüfen. Diese Anleitung be
 
 Dieses Format bewahrt Belege für die manuelle Prüfung. Es ist weder ein verschlüsseltes Backup noch eine klinische Entscheidung, eine Garantie für ein Anbieterformat oder ein Nachweis, dass die aktuelle App es importiert.
 
+Android-Import: Der gespeicherte Prüfentwurf ist auf 1 MiB (1.048.576 Bytes) und 10.000 Zeilen begrenzt, unabhängig von der 10-MiB-Grenze der JSON-Eingabe. Symptom- und unklassifizierte Zeilen können nicht gespeichert werden; bewahren Sie den Quelltext auf und wählen Sie sie ab. Passende gelöschte Datensätze gelten weiterhin als importiert und werden nicht wiederhergestellt. Der iOS-Kandidat hat eine eigene 4-MiB-Grenze für fortsetzbare Entwürfe. Verhalten und Verfügbarkeit in der installierten App sind nicht automatisch plattformgleich.
+
 1. Das übergeordnete format lautet doseweek.record_extraction_draft; version ist 1; reviewed_by_user ist false. records und unreadable_sections sind Arrays. Weise unbekannte Felder zurück, statt sie stillschweigend zu verwerfen.
 
 2. Jede Zeile enthält alle Vorlagenfelder und eine eindeutige, nur im Entwurf gültige row_id. Quellkennungen werden niemals automatisch zu DoseWeek-Datensatz-IDs. source_references bewahren die Dokumentbezeichnung, die bei 1 beginnende Seitennummer, sofern bekannt, die Zeilenbezeichnung und den sichtbaren Text; null bedeutet unbekannt.

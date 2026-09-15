@@ -4,6 +4,8 @@ Ya puedes preparar y comprobar un borrador JSON. Esta guía no significa que la 
 
 Este formato conserva pruebas para una revisión manual. No es una copia de seguridad cifrada, una decisión clínica, una garantía de formato de un proveedor ni una prueba de que la app actual pueda importarlo.
 
+Importación en Android: el borrador guardado admite 1 MiB (1.048.576 bytes) y 10.000 filas, aparte del límite de 10 MiB del JSON. Las filas de síntomas y sin clasificar no se guardan; conserve el texto y desmárquelas. Los registros coincidentes eliminados siguen considerándose importados y no se restauran. La versión candidata de iOS tiene un límite separado de 4 MiB para reanudar borradores. No suponga que ambas plataformas o la app instalada ofrecen lo mismo.
+
 1. El format del nivel superior es doseweek.record_extraction_draft; version es 1; reviewed_by_user es false. records y unreadable_sections son arrays. Rechaza los campos desconocidos en lugar de descartarlos silenciosamente.
 
 2. Cada fila contiene todos los campos de la plantilla y un row_id único dentro del borrador. Los identificadores de origen nunca se convierten automáticamente en identificadores de registros de DoseWeek. source_references conserva la etiqueta del documento, la página numerada desde 1 cuando se conozca, la etiqueta de la fila y el texto visible; null significa desconocido.

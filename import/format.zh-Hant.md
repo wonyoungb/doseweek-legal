@@ -4,6 +4,8 @@
 
 此格式保留來源證據，供使用者手動核對。它不是加密備份、臨床決策、廠商格式保證，也不能證明目前 App 能夠匯入它。
 
+Android 匯入：儲存草稿上限為 1 MiB（1,048,576 位元組）和 10,000 行，獨立於 JSON 的 10 MiB 上限。症狀行和未分類行無法儲存，請保留原文並取消選取。已刪除的相符紀錄仍視為已匯入，不會還原。iOS 候選版本用於繼續編輯的草稿儲存上限另為 4 MiB。請勿假定兩個平台或已安裝 App 的行為與可用功能相同。
+
 1. 最上層 format 為 doseweek.record_extraction_draft；version 為 1；reviewed_by_user 為 false。records 和 unreadable_sections 為陣列。遇到未知欄位應拒絕處理，不要悄悄捨棄。
 
 2. 每列包含所有範本欄位，以及草稿內部唯一的 row_id。來源識別碼絕不能自動成為 DoseWeek 紀錄 ID。source_references 保留文件標籤、已知且從 1 開始的頁碼、列標籤和可見文字；null 表示未知。

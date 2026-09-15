@@ -4,6 +4,8 @@ Du kan förbereda och kontrollera ett JSON-utkast nu. Den här guiden innebär i
 
 Detta format bevarar underlag för manuell granskning. Det är inte en krypterad säkerhetskopia, ett kliniskt beslut, en garanti för en leverantörs format eller ett bevis på att den aktuella appen importerar det.
 
+Android-import: det sparade utkastet begränsas till 1 MiB (1 048 576 byte) och 10 000 rader, separat från 10 MiB för JSON. Symtomrader och oklassificerade rader kan inte sparas; behåll texten och avmarkera dem. Matchande raderade poster räknas fortfarande som importerade och återställs inte. iOS-kandidaten har en separat gräns på 4 MiB för återupptagbara utkast. Förutsätt inte samma beteende eller tillgänglighet på båda plattformarna eller i den installerade appen.
+
 1. På toppnivån är format doseweek.record_extraction_draft, version är 1 och reviewed_by_user är false. records och unreadable_sections är arrayer. Avvisa okända fält i stället för att kasta bort dem utan att ange det.
 
 2. Varje rad har alla mallfält och ett unikt row_id som är lokalt för utkastet. Källidentifierare blir aldrig automatiskt post-ID:n i DoseWeek. source_references bevarar dokumentets etikett, sidnummer räknat från 1 när det är känt, radetikett och synlig text; null betyder okänt.

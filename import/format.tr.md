@@ -4,6 +4,8 @@
 
 Bu biçim, elle inceleme için kaynak kanıtlarını korur. Şifreli yedek, klinik karar, sağlayıcı biçimi garantisi veya mevcut uygulamanın bunu içe aktardığının kanıtı değildir.
 
+Android içe aktarma: kayıtlı taslak sınırı, JSON için 10 MiB sınırından ayrı olarak 1 MiB (1.048.576 bayt) ve 10.000 satırdır. Belirti ve sınıflandırılmamış satırlar kaydedilemez; metinlerini koruyup seçimlerini kaldırın. Eşleşen silinmiş kayıtlar zaten içe aktarılmış sayılır ve geri yüklenmez. iOS aday sürümünde taslağı sürdürmek için ayrı bir 4 MiB sınırı vardır. Platformlarda veya yüklü uygulamada aynı davranış ve kullanılabilirliği varsaymayın.
+
 1. Üst düzeyde format değeri doseweek.record_extraction_draft, version değeri 1 ve reviewed_by_user değeri false olmalıdır. records ve unreadable_sections dizidir. Bilinmeyen alanları sessizce atmak yerine reddedin.
 
 2. Her satır tüm şablon alanlarını ve taslağa özgü benzersiz bir row_id içerir. Kaynak kimlikleri hiçbir zaman otomatik olarak DoseWeek kayıt kimliklerine dönüşmez. source_references belge etiketini, biliniyorsa 1’den başlayan sayfa numarasını, satır etiketini ve görünen metni korur; null bilinmiyor demektir.

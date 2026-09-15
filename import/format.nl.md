@@ -4,6 +4,8 @@ Je kunt nu al een JSON-concept voorbereiden en controleren. Deze gids betekent n
 
 Dit formaat bewaart bewijs voor handmatige controle. Het is geen versleutelde back-up, klinische beslissing, garantie voor een leveranciersformaat of bewijs dat de huidige app het kan importeren.
 
+Android-import: het opgeslagen concept is beperkt tot 1 MiB (1.048.576 bytes) en 10.000 rijen, los van de 10 MiB voor JSON-invoer. Symptoomrijen en niet-geclassificeerde rijen kunnen niet worden opgeslagen; bewaar hun tekst en deselecteer ze. Overeenkomende verwijderde records blijven al geïmporteerd en worden niet hersteld. De iOS-kandidaat heeft een aparte limiet van 4 MiB voor hervatbare concepten. Ga niet uit van gelijk gedrag of beschikbaarheid op beide platforms of in de geïnstalleerde app.
+
 1. Het format op het hoogste niveau is doseweek.record_extraction_draft; version is 1; reviewed_by_user is false. records en unreadable_sections zijn arrays. Wijs onbekende velden af in plaats van ze stilzwijgend weg te laten.
 
 2. Elke rij heeft alle sjabloonvelden en een unieke row_id binnen het concept. Bron-ID’s worden nooit automatisch DoseWeek-registratie-ID’s. source_references bewaart het documentlabel, het paginanummer vanaf 1 indien bekend, het rijlabel en de zichtbare tekst; null betekent onbekend.

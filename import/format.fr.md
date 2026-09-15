@@ -4,6 +4,8 @@ Vous pouvez dès maintenant préparer et vérifier un brouillon JSON. Ce guide n
 
 Ce format conserve les éléments justificatifs pour une vérification manuelle. Ce n’est ni une sauvegarde chiffrée, ni une décision clinique, ni une garantie de format fournisseur, ni la preuve que l’app actuelle peut l’importer.
 
+Importation Android : le brouillon enregistré est limité à 1 MiB (1 048 576 octets) et 10 000 lignes, indépendamment des 10 MiB du JSON d’entrée. Les lignes de symptômes et non classées ne sont pas enregistrables ; conservez leur texte et désélectionnez-les. Les enregistrements correspondants supprimés restent considérés comme importés et ne sont pas restaurés. La version candidate iOS limite séparément les brouillons à reprendre à 4 MiB. Ne supposez pas un comportement ou une disponibilité identiques selon la plateforme ou l’app installée.
+
 1. Le format de premier niveau est doseweek.record_extraction_draft ; version vaut 1 ; reviewed_by_user vaut false. records et unreadable_sections sont des tableaux. Rejette les champs inconnus au lieu de les supprimer silencieusement.
 
 2. Chaque ligne contient tous les champs du modèle et un row_id unique dans le brouillon. Les identifiants source ne deviennent jamais automatiquement des identifiants de données DoseWeek. source_references conserve le libellé du document, le numéro de page commençant à 1 lorsqu’il est connu, le libellé de la ligne et le texte visible ; null signifie inconnu.

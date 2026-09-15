@@ -4,6 +4,8 @@ Puoi già preparare e controllare una bozza JSON. Questa guida non significa che
 
 Questo formato conserva le prove per la verifica manuale. Non è un backup crittografato, una decisione clinica, una garanzia sul formato di un fornitore né la prova che l’app attuale possa importarlo.
 
+Importazione Android: la bozza salvata è limitata a 1 MiB (1.048.576 byte) e 10.000 righe, separatamente dai 10 MiB del JSON. Le righe dei sintomi e non classificate non si possono salvare; conservate il testo e deselezionatele. Le registrazioni corrispondenti eliminate restano già importate e non vengono ripristinate. La versione candidata iOS ha un limite separato di 4 MiB per riprendere le bozze. Non presumete comportamento o disponibilità identici nelle due piattaforme o nell’app installata.
+
 1. Il format di primo livello è doseweek.record_extraction_draft; version è 1; reviewed_by_user è false. records e unreadable_sections sono array. Rifiuta i campi sconosciuti invece di eliminarli silenziosamente.
 
 2. Ogni riga contiene tutti i campi del modello e un row_id univoco all’interno della bozza. Gli identificatori della fonte non diventano mai automaticamente ID di registrazioni DoseWeek. source_references conserva l’etichetta del documento, il numero di pagina a partire da 1 quando è noto, l’etichetta della riga e il testo visibile; null significa sconosciuto.

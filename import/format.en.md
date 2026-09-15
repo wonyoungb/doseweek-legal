@@ -4,6 +4,8 @@ You can prepare and check a JSON draft now. This guide does not mean your instal
 
 This format preserves evidence for manual review. It is not an encrypted backup, a clinical decision, a vendor format guarantee, or proof that the current app imports it.
 
+Android import: the stored review draft is limited to 1 MiB (1,048,576 bytes) and 10,000 rows, separately from the 10 MiB input JSON limit. Symptom and unclassified rows cannot be saved; keep their source text and deselect them. Matching deleted records remain already imported and are not restored. The iOS candidate has a separate 4 MiB draft-resume limit; do not assume identical platform behavior or availability in the installed app.
+
 1. The top-level format is doseweek.record_extraction_draft; version is 1; reviewed_by_user is false. records and unreadable_sections are arrays. Reject unknown fields rather than silently discarding them.
 
 2. Every row has all template fields and a unique draft-local row_id. Source identifiers never become DoseWeek record IDs automatically. source_references preserve the document label, one-based page when known, row label, and visible text; null means unknown.

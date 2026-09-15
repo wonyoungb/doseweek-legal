@@ -38,7 +38,7 @@ deliberately differ in health integrations, AI, notifications, exports, backup t
 deletion behavior.
 
 The existing iOS support FAQ must remain consistent with the iOS app catalog and with the
-shipped iOS behavior. In particular, keep the exact four read-only Apple Health types,
+shipped iOS behavior. In particular, keep the exact five read-only Apple Health types,
 local-notification boundary,
 encrypted user-directed backup boundary, recovery-code warning, and
 `SystemLanguageModel.default` availability/manual fallback accurate. Keep plaintext PDF/CSV

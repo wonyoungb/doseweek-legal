@@ -53,7 +53,7 @@ def prompt(value: dict) -> str:
 
 
 def spec(value: dict) -> str:
-    return f"# {value['spec_title']}\n\n{value['status_body']}\n\n{value['spec_intro']}\n\n" + '\n\n'.join(f'{i}. {rule}' for i, rule in enumerate(value['spec_rules'], 1)) + '\n\n```json\n' + dump(TEMPLATE) + '```\n'
+    return f"# {value['spec_title']}\n\n{value['status_body']}\n\n{value['spec_intro']}\n\n{value['app_limits']}\n\n" + '\n\n'.join(f'{i}. {rule}' for i, rule in enumerate(value['spec_rules'], 1)) + '\n\n```json\n' + dump(TEMPLATE) + '```\n'
 
 
 def schema() -> dict:
@@ -94,7 +94,7 @@ def rendered(content: dict) -> dict[str, str]:
         skips.append(f'<a class="skip-link" href="#{lang}-title" lang="{lang}" dir="{direction}" data-language-skip="{lang}">{e(value["skip_label"])}</a>')
         steps = ''.join(f'<li class="info-card"><h2>{e(step["title"])}</h2><p>{e(step["body"])}</p></li>' for step in value['steps'])
         review = ''.join(f'<li>{e(rule)}</li>' for rule in value['review_rules'])
-        spec_rules = ''.join(f'<li>{e(rule)}</li>' for rule in value['spec_rules'])
+        spec_rules = ''.join(f'<li>{e(rule)}</li>' for rule in [value['app_limits'], *value['spec_rules']])
         panels.append(f'''<article id="{lang}" class="language-panel" lang="{lang}" dir="{direction}" data-language="{lang}" data-document-title="DoseWeek — {e(value['title'])}" aria-labelledby="{lang}-title">
 <header class="hero"><h1 id="{lang}-title" tabindex="-1" data-skip-target>{e(value['title'])}</h1><p class="hero-copy">{e(value['lead'])}</p>
 <div class="notice import-status" role="note" data-import-status="{status}"><strong>{e(value['status_title'])}</strong></div></header>
