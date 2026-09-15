@@ -1,0 +1,51 @@
+.import-steps {
+  padding: 0;
+  margin-block: 28px;
+  list-style: none;
+}
+
+.import-steps h2 {
+  font-size: 1.15rem;
+}
+
+.import-prompt {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  unicode-bidi: plaintext;
+}
+
+.import-copy-status:empty {
+  display: none;
+}
+
+.button[data-copy-prompt] {
+  font: inherit;
+  cursor: pointer;
+}
+
+.import-status {
+  display: block;
+  padding: 14px 16px;
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.import-status strong {
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.faq-answer {
+  overflow-wrap: anywhere;
+}
