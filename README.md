@@ -1,6 +1,6 @@
 # DoseWeek public pages
 
-This repository contains the public landing, support, and privacy pages for **DoseWeek**.
+This repository contains the public landing, support, privacy, and record-preparation pages for **DoseWeek**.
 It is a dependency-free static site: no analytics, remote fonts, third-party scripts, cookies,
 accounts, or form backend.
 
@@ -38,7 +38,7 @@ deliberately differ in health integrations, AI, notifications, exports, backup t
 deletion behavior.
 
 The existing iOS support FAQ must remain consistent with the iOS app catalog and with the
-shipped iOS behavior. In particular, keep the exact four read-only Apple Health types,
+shipped iOS behavior. In particular, keep the exact five read-only Apple Health types,
 local-notification boundary,
 encrypted user-directed backup boundary, recovery-code warning, and
 `SystemLanguageModel.default` availability/manual fallback accurate. Keep plaintext PDF/CSV
@@ -144,3 +144,25 @@ explicitly includes an iOS policy update.
 
 Publishing is a separate, explicit step. Do not commit, push, or deploy from a preview-only
 review task.
+
+## Record preparation guide
+
+`/import/#<locale>` provides the same three-step guide in all seventeen supported locales.
+It has its own localized prompt copy control and downloadable Markdown prompts, Markdown
+format notes, an empty JSON draft, and `draft-v1.schema.json`. It uses the existing language
+script without changing the landing, privacy, or platform support pages.
+
+The canonical copy is `import/content.json`; regenerate it with `python3 scripts/render_import.py`.
+Run `python3 scripts/render_import.py --check --require-all-locales` before publishing.
+The normal site checker also validates all generated guide files and language links.
+
+The current status is `preparation_only`: users can prepare and review drafts, but the guide
+must not claim that the released app saves this JSON. Change that status and its localized
+wording together only when the corresponding app importer and manual-review flow have been
+verified. An extraction draft is never an encrypted full backup. The format uses identical
+machine keys in every language, preserves source text, and leaves unknown values null.
+
+The intended later save operation adds selected validated rows atomically, keeps manual
+review mandatory, and never automatically overwrites existing records. Date-only event
+semantics and vendor-specific formats require separate implementation and verification.
+No real health record, screenshot, or extracted patient value belongs in this repository.

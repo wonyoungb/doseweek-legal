@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 from render_android import rendered_pages, validate_catalog
+from render_import import rendered as rendered_import, validate as validate_import
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,7 +22,8 @@ ANDROID_HTML_FILES = [
     ROOT / "android/support/index.html",
     ROOT / "android/privacy/index.html",
 ]
-HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES
+IMPORT_HTML_FILES = [ROOT / "import/index.html"]
+HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES + IMPORT_HTML_FILES
 IOS_PANEL_LANGUAGES = ["en", "ja", "ko"]
 IOS_LINK_LANGUAGES = ["ko", "en", "ja"]
 ANDROID_LANGUAGES = [
@@ -250,6 +252,10 @@ def main() -> None:
             f"{SITE_BASE}privacy/", "../assets/app-icon.png", SOCIAL_IMAGE,
             IOS_PANEL_LANGUAGES, IOS_LINK_LANGUAGES,
         ),
+        (ROOT / "import/index.html").resolve(): (
+            f"{SITE_BASE}import/", "../assets/app-icon.png", SOCIAL_IMAGE,
+            ANDROID_LANGUAGES, ANDROID_LANGUAGES,
+        ),
         (ROOT / "android/index.html").resolve(): (
             f"{SITE_BASE}android/", "../assets/android-app-icon.png", ANDROID_SOCIAL_IMAGE,
             ANDROID_LANGUAGES, ANDROID_LANGUAGES,
@@ -281,7 +287,7 @@ def main() -> None:
         current = [language for language, state, _ in page.language_links if state == "true"]
         assert current == [], f"{label}: static markup must not misstate aria-current before JS"
 
-        if path in {candidate.resolve() for candidate in ANDROID_HTML_FILES}:
+        if path in {candidate.resolve() for candidate in ANDROID_HTML_FILES + IMPORT_HTML_FILES}:
             assert page.language_skips == ANDROID_LANGUAGES, (
                 f"{label}: Android skip-link locale mismatch"
             )
@@ -334,9 +340,9 @@ def main() -> None:
         "Effective date: August 22, 2026",
         "施行日: 2026年8月22日",
         "시행일: 2026년 8월 22일",
-        "weight, body fat percentage, lean body mass, and waist circumference",
-        "体重、体脂肪率、除脂肪体重、ウエスト周囲径",
-        "체중, 체지방률, 제지방량, 허리둘레",
+        "weight, BMI, body fat percentage, lean body mass, and waist circumference",
+        "体重、BMI、体脂肪率、除脂肪体重、ウエスト周囲径",
+        "체중, BMI, 체지방률, 제지방량, 허리둘레",
         "SystemLanguageModel.default",
         "Private Cloud Compute",
         "AES-256-GCM",
@@ -546,6 +552,21 @@ def main() -> None:
             assert path.read_text(encoding="utf-8") == expected, (
                 f"{path.relative_to(ROOT)} does not match the Android legal source"
             )
+
+    import_content = json.loads((ROOT / "import/content.json").read_text(encoding="utf-8"))
+    validate_import(import_content, require_all=True)
+    for relative, expected in rendered_import(import_content).items():
+        assert (ROOT / relative).read_text(encoding="utf-8") == expected, (
+            f"{relative}: stale generated import guide or download"
+        )
+    import_source = (ROOT / "import/index.html").read_text(encoding="utf-8")
+    assert import_source.count(f'data-import-status="{import_content["status"]}"') == 17
+    assert "<form" not in import_source and 'type="file"' not in import_source, (
+        "import/index.html: the preparation guide must not upload records"
+    )
+    import_page = pages[(ROOT / "import/index.html").resolve()]
+    assert len(import_page.summary_markers) == 3 * 17
+    assert all(markers == ["true"] for markers in import_page.summary_markers)
 
     parity = []
     if arguments.catalog:
