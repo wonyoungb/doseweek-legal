@@ -12,11 +12,18 @@ The privacy copy does not originate here. Its canonical source is the app reposi
 DoseDay/Resources/Localizable.xcstrings
 ```
 
+`privacy/index.html` is generated. `docs/ios-content.json` holds a verbatim mirror of those
+app strings for all seventeen locales plus the repository-local second-release candidate
+section, and `scripts/render_ios.py` renders the page from it. Change the app strings first,
+then re-mirror and regenerate; `python3 scripts/render_ios.py --check --catalog <xcstrings>`
+compares every mirrored string with the app catalog.
+
 The public policy must mirror, verbatim and in all three languages:
 
 - `privacy.intro`
 - `privacy.effectiveDate`
-- `privacy.section1.title` through `privacy.section8.body`
+- `privacy.section1.title` through `privacy.section9.body` (section 9 is the optional
+  calendar sync that ships with the unreleased next version)
 - `privacy.medical.title` and `privacy.medical.body`
 - `common.notAMedicalDevice` (the second medical-disclaimer paragraph)
 
@@ -29,6 +36,11 @@ Android policy and support copy has a separate canonical source in the Android a
 ```text
 DoseweekPlayStore/docs/legal/android-content.json
 ```
+
+`docs/android-content.candidate.json` in this repository is an unpublished mirror of that
+catalog as it stands on the app's stage-2 branches, and is what the committed `android/`
+pages are currently rendered from. Before publishing, the app repository must carry the same
+bytes; the candidate file is not a second source of truth.
 
 That catalog pins the Android application ID, effective date, language order, text direction,
 and all localized product, privacy, and support copy for the Android pages. Change and review
@@ -74,8 +86,19 @@ Every main page has three localized panels and these stable deep links:
 ```text
 /#ko       /#en       /#ja
 /support/#ko  /support/#en  /support/#ja
-/privacy/#ko  /privacy/#en  /privacy/#ja
 ```
+
+`/privacy/` now serves the same seventeen locales as the Android and record-preparation
+pages, with the identical panel, localized skip link, and right-to-left contract:
+
+```text
+/privacy/#ko  /privacy/#en  /privacy/#ja  /privacy/#de  …  /privacy/#tr
+```
+
+The landing and iOS support pages still serve Korean, English, and Japanese. Extending the
+iOS support FAQ to seventeen locales needs translated answers for the eight released topics
+and the matching in-app link mapping in `RecordHelpView.swift`, which today sends every other
+language to `/support/#en`.
 
 A valid hash wins. With no valid hash, `assets/language.js` chooses the first supported browser
 language and falls back to Korean. It updates the document language, title, visible panel, and
@@ -114,6 +137,9 @@ Korean** DOM order. Do not reorder them without updating the sibling selectors i
 - `assets/language.js` — page-scoped hash/browser-language selection only
 - `assets/app-icon.png` — existing iOS icon
 - `assets/android-app-icon.png` — Android Google Play icon
+- `docs/ios-content.json` — mirrored iOS policy strings plus the candidate section
+- `docs/android-content.candidate.json` — unpublished mirror of the Android legal catalog
+- `scripts/render_ios.py` — deterministic iOS privacy page renderer
 - `scripts/render_android.py` — deterministic Android page renderer
 - `scripts/check_site.py` — dependency-free structural, metadata, accessibility, disclosure, and
   local-link checks
@@ -124,6 +150,7 @@ Run before every handoff or publish:
 
 ```bash
 python3 scripts/check_site.py
+python3 scripts/render_ios.py --check --catalog /path/to/DoseDay/Resources/Localizable.xcstrings
 python3 scripts/check_site.py --catalog /path/to/DoseDay/Resources/Localizable.xcstrings
 python3 scripts/render_android.py --content /path/to/DoseweekPlayStore/docs/legal/android-content.json --check
 python3 scripts/check_site.py \
