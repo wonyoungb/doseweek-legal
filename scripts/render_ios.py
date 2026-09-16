@@ -16,9 +16,27 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
 CONTENT_PATH = ROOT / "docs/ios-content.json"
 PAGE_PATH = ROOT / "privacy/index.html"
-SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
+SUPPORT_PATH = ROOT / "support/index.html"
+SUPPORT_CANONICAL = f"{SITE_BASE}support/"
+SUPPORT_TITLE = "DoseWeek Support"
+SUPPORT_DESCRIPTION = (
+    "Help with records, Apple Health, notifications, encrypted backups, plaintext exports, "
+    "App Lock, on-device AI, and the unreleased candidate features."
+)
+RELEASED_FAQ = [
+    "storage", "health", "notifications", "backup", "exports", "ai", "applock", "deletion",
+]
+BUGFIX_CANDIDATE_FAQ = ["dates", "edit", "past", "health", "sites"]
+SECOND_RELEASE_FAQ = ["meals", "dates", "charts", "calendar", "backup", "devices", "import"]
+SUPPORT_LABELS = [
+    "title", "lead", "beforeEmailKicker", "beforeEmailTitle", "noticeStrong", "noticeBody",
+    "faqKicker", "faqTitle", "faqDescription", "safetyKicker", "safetyTitle",
+    "contactKicker", "contactTitle", "contactBody",
+]
+AI_MODEL_TOKEN = "SystemLanguageModel.default"
 SOCIAL_IMAGE = f"{SITE_BASE}assets/app-icon.png"
 CANONICAL = f"{SITE_BASE}privacy/"
 TITLE = "DoseWeek Privacy Policy"
@@ -60,7 +78,8 @@ def validate(content: dict) -> None:
     assert list(content["locales"]) == LOCALE_ORDER
 
     for locale, entry in content["locales"].items():
-        assert set(entry) == {"languageName", "direction", "common", "privacy"}, locale
+        assert set(entry) == {"languageName", "direction", "common", "privacy", "support"}, locale
+        validate_support(locale, entry["support"])
         assert entry["direction"] == ("rtl" if locale == "ar" else "ltr"), locale
         assert set(entry["common"]) == {"skipToContent", "contents", "supportLinkTitle"}, locale
         privacy = entry["privacy"]
@@ -99,6 +118,54 @@ def validate(content: dict) -> None:
             privacy["title"], privacy["intro"], privacy["effectiveDate"],
         ):
             assert isinstance(string, str) and string.strip(), locale
+
+
+def validate_support(locale: str, support: dict) -> None:
+    assert set(support) == {
+        "labels", "safetyCards", "released", "candidate", "secondRelease",
+    }, locale
+    assert set(support["labels"]) == set(SUPPORT_LABELS), locale
+    for key, value in support["labels"].items():
+        assert isinstance(value, str) and value.strip(), f"{locale}: labels.{key}"
+    assert len(support["safetyCards"]) == 2, locale
+    for card in support["safetyCards"]:
+        assert set(card) == {"title", "body"} and card["title"].strip() and card["body"].strip(), (
+            locale
+        )
+    groups = (
+        ("released", RELEASED_FAQ, None),
+        ("candidate", BUGFIX_CANDIDATE_FAQ, 2),
+        ("secondRelease", SECOND_RELEASE_FAQ, 2),
+    )
+    for group, keys, answer_count in groups:
+        assert list(support[group]) == keys, f"{locale}: {group}"
+        for key, item in support[group].items():
+            assert set(item) == {"question", "answers"}, f"{locale}: {group}.{key}"
+            assert item["question"].strip(), f"{locale}: {group}.{key}"
+            expected = answer_count
+            if group == "candidate" and key == "sites":
+                expected = 3
+            if expected is not None:
+                assert len(item["answers"]) == expected, f"{locale}: {group}.{key}"
+            assert item["answers"] and all(a.strip() for a in item["answers"]), (
+                f"{locale}: {group}.{key}"
+            )
+    # every candidate answer opens with the notice that names the version it belongs to
+    for key in BUGFIX_CANDIDATE_FAQ:
+        assert f"iOS {CANDIDATE_VERSION}" in support["candidate"][key]["answers"][0], (
+            f"{locale}: bugfix-candidate {key} must name iOS {CANDIDATE_VERSION}"
+        )
+    for key in SECOND_RELEASE_FAQ:
+        assert CANDIDATE_VERSION in support["secondRelease"][key]["answers"][0], (
+            f"{locale}: second-release {key} must name the version it follows"
+        )
+    ai_answer = support["released"]["ai"]["answers"][0]
+    assert ai_answer.count(AI_MODEL_TOKEN) == 1, f"{locale}: AI answer must name the model once"
+    assert "Private Cloud Compute" in ai_answer, locale
+    assert "AES-256-GCM" in support["released"]["backup"]["answers"][0], locale
+    assert "<" not in json.dumps(support, ensure_ascii=False), (
+        f"{locale}: support copy is plain text; markup is added by the renderer"
+    )
 
 
 def catalog_parity(content: dict, catalog_path: Path) -> None:
@@ -170,8 +237,161 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
               <section id="{escaped(locale)}-medical" class="policy-section medical"><h2>{escaped(disclaimer['title'])}</h2><div><p>{escaped(disclaimer['body'])}</p><p>{escaped(disclaimer['notAMedicalDevice'])}</p></div></section>
             </div>
           </div>
-          <a class="page-link" href="../support/#{escaped(locale if locale in ('ko', 'en', 'ja') else 'en')}">{escaped(entry['common']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
+          <a class="page-link" href="../support/#{escaped(locale)}">{escaped(entry['common']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
         </article>"""
+
+
+def faq_answer(text: str) -> str:
+    """Escape an answer and wrap the on-device model name in <code>, as the published page did."""
+    escaped_text = escaped(text)
+    return escaped_text.replace(AI_MODEL_TOKEN, f"<code>{AI_MODEL_TOKEN}</code>")
+
+
+def faq_details(locale: str, identifier: str, item: dict, candidate: bool) -> str:
+    status = ' data-release-status="candidate"' if candidate else ""
+    answers = "".join(f"<p>{faq_answer(answer)}</p>" for answer in item["answers"])
+    return (
+        f'              <details id="{escaped(locale)}-{escaped(identifier)}"{status}>'
+        f'<summary><span>{escaped(item["question"])}</span>'
+        '<span class="summary-symbol" aria-hidden="true"></span></summary>'
+        f'<div class="faq-answer">{answers}</div></details>'
+    )
+
+
+def support_panel(locale: str, entry: dict, bundle_version: str, email: str) -> str:
+    support = entry["support"]
+    labels = support["labels"]
+    direction = entry["direction"]
+    arrow = "←" if direction == "rtl" else "→"
+    document_title = f"DoseWeek — {labels['title']}"
+    faq = []
+    for key in RELEASED_FAQ:
+        faq.append(faq_details(locale, f"faq-{key}", support["released"][key], False))
+    for key in BUGFIX_CANDIDATE_FAQ:
+        faq.append(faq_details(locale, f"candidate-{key}", support["candidate"][key], True))
+    for key in SECOND_RELEASE_FAQ:
+        faq.append(faq_details(locale, f"candidate2-{key}", support["secondRelease"][key], True))
+    cards = "".join(
+        f'<div class="info-card"><h3>{escaped(card["title"])}</h3><p>{escaped(card["body"])}</p></div>'
+        for card in support["safetyCards"]
+    )
+    mailto = f"mailto:{email}?subject=DoseWeek%20Support"
+    privacy_title = entry["privacy"]["title"]
+    return f"""        <article id="{escaped(locale)}" class="language-panel" lang="{escaped(locale)}" dir="{escaped(direction)}" data-language="{escaped(locale)}" data-document-title="{escaped(document_title)}" aria-labelledby="{escaped(locale)}-content">
+          <header class="hero">
+            <p class="eyebrow">DoseWeek · iOS {escaped(bundle_version)}</p>
+            <h1 id="{escaped(locale)}-content" data-skip-target tabindex="-1">{escaped(labels['title'])}</h1>
+            <p class="hero-copy">{escaped(labels['lead'])}</p>
+          </header>
+
+          <section class="content-section" aria-labelledby="{escaped(locale)}-before-email">
+            <div class="section-heading"><p class="section-kicker">{escaped(labels['beforeEmailKicker'])}</p><h2 id="{escaped(locale)}-before-email">{escaped(labels['beforeEmailTitle'])}</h2></div>
+            <div class="notice" role="note"><span class="notice-symbol" aria-hidden="true">!</span><div><strong>{escaped(labels['noticeStrong'])}</strong><p>{escaped(labels['noticeBody'])}</p></div></div>
+          </section>
+
+          <section class="content-section" aria-labelledby="{escaped(locale)}-faq">
+            <div class="section-heading"><p class="section-kicker">{escaped(labels['faqKicker'])}</p><h2 id="{escaped(locale)}-faq">{escaped(labels['faqTitle'])}</h2><p class="section-description">{escaped(labels['faqDescription'])}</p></div>
+            <div class="faq-list">
+{chr(10).join(faq)}
+            </div>
+          </section>
+
+          <section class="content-section" aria-labelledby="{escaped(locale)}-safety">
+            <div class="section-heading"><p class="section-kicker">{escaped(labels['safetyKicker'])}</p><h2 id="{escaped(locale)}-safety">{escaped(labels['safetyTitle'])}</h2></div>
+            <div class="card-grid">{cards}</div>
+          </section>
+
+          <section class="content-section" aria-labelledby="{escaped(locale)}-contact">
+            <div class="contact-card"><div><p class="section-kicker">{escaped(labels['contactKicker'])}</p><h2 id="{escaped(locale)}-contact">{escaped(labels['contactTitle'])}</h2><p>{escaped(labels['contactBody'])}</p></div><a class="button primary" href="{escaped(mailto)}">{escaped(email)}</a></div>
+          </section>
+          <a class="page-link" href="../privacy/#{escaped(locale)}">{escaped(privacy_title)} <span aria-hidden="true">{arrow}</span></a>
+        </article>"""
+
+
+def page_shell(content: dict, *, page: str, canonical: str, title: str, description: str,
+               document_title: str, panels: str) -> str:
+    locales = content["locales"]
+    navigation = "\n".join(
+        '          <li><a class="language-link" '
+        f'href="#{escaped(locale)}" lang="{escaped(locale)}" hreflang="{escaped(locale)}" '
+        f'data-language-link="{escaped(locale)}">{escaped(locales[locale]["languageName"])}</a></li>'
+        for locale in content["localeOrder"]
+    )
+    skips = "\n".join(
+        f'    <a class="skip-link" data-language-skip="{escaped(locale)}" '
+        f'href="#{escaped(locale)}-content" lang="{escaped(locale)}" '
+        f'dir="{escaped(locales[locale]["direction"])}">'
+        f'{escaped(locales[locale]["common"]["skipToContent"])}</a>'
+        for locale in content["localeOrder"]
+    )
+    return f"""<!doctype html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="{escaped(description)}">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f4f8">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
+    <title>{escaped(document_title)}</title>
+    <link rel="canonical" href="{canonical}">
+    <link rel="icon" type="image/png" href="../assets/app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/app-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DoseWeek">
+    <meta property="og:title" content="{escaped(title)}">
+    <meta property="og:description" content="{escaped(description)}">
+    <meta property="og:url" content="{canonical}">
+    <meta property="og:image" content="{SOCIAL_IMAGE}">
+    <meta property="og:image:alt" content="DoseWeek app icon">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{escaped(title)}">
+    <meta name="twitter:description" content="{escaped(description)}">
+    <meta name="twitter:image" content="{SOCIAL_IMAGE}">
+    <meta name="twitter:image:alt" content="DoseWeek app icon">
+    <link rel="stylesheet" href="../assets/site.css">
+    <script src="../assets/language.js" defer></script>
+  </head>
+  <body data-platform="ios" data-page="{escaped(page)}">
+{skips}
+
+    <header class="site-header site-shell">
+      <a class="brand" href="../" aria-label="DoseWeek" data-language-path="../">
+        <img class="brand-mark" src="../assets/app-icon.png" alt="" width="36" height="36">
+        <span class="brand-label">DoseWeek</span>
+      </a>
+      <nav class="language-nav many-languages" aria-label="Language">
+        <ul class="language-list">
+{navigation}
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="site-shell" tabindex="-1">
+      <div class="language-stack">
+{panels}
+      </div>
+    </main>
+
+    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span><span>DoseWeek · iOS {escaped(content['bundleVersion'])}</span></footer>
+  </body>
+</html>
+"""
+
+
+def rendered_support(content: dict) -> str:
+    validate(content)
+    panels = "\n\n".join(
+        support_panel(locale, content["locales"][locale], content["bundleVersion"],
+                      content["supportEmail"])
+        for locale in content["localeOrder"]
+    )
+    return page_shell(
+        content, page="support", canonical=SUPPORT_CANONICAL, title=SUPPORT_TITLE,
+        description=SUPPORT_DESCRIPTION,
+        document_title=f"DoseWeek — {content['locales']['ko']['support']['labels']['title']}",
+        panels=panels,
+    )
 
 
 def rendered(content: dict) -> str:
@@ -260,21 +480,23 @@ def main() -> None:
     arguments = parser.parse_args()
 
     content = json.loads(CONTENT_PATH.read_text(encoding="utf-8"))
-    page = rendered(content)
+    pages = {PAGE_PATH: rendered(content), SUPPORT_PATH: rendered_support(content)}
     if arguments.catalog:
         catalog_parity(content, arguments.catalog.resolve())
 
     if arguments.check:
-        assert PAGE_PATH.is_file(), "missing generated iOS privacy page"
-        assert PAGE_PATH.read_text(encoding="utf-8") == page, (
-            "stale privacy/index.html; rerun render_ios.py"
-        )
+        for path, page in pages.items():
+            assert path.is_file(), f"missing generated page {path.relative_to(ROOT)}"
+            assert path.read_text(encoding="utf-8") == page, (
+                f"stale {path.relative_to(ROOT)}; rerun render_ios.py"
+            )
         suffix = " and app-catalog parity" if arguments.catalog else ""
-        print(f"OK: iOS privacy page ({len(content['locales'])} locales){suffix}")
+        print(f"OK: iOS privacy and support pages ({len(content['locales'])} locales){suffix}")
         return
 
-    PAGE_PATH.write_text(page, encoding="utf-8")
-    print(f"Rendered privacy/index.html from {CONTENT_PATH.relative_to(ROOT)}")
+    for path, page in pages.items():
+        path.write_text(page, encoding="utf-8")
+    print(f"Rendered privacy/index.html and support/index.html from {CONTENT_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

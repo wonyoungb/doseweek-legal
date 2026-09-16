@@ -105,7 +105,7 @@ def rendered(content: dict) -> dict[str, str]:
 <div class="faq-list"><details><summary><span>{e(value['prompt_details_label'])}</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><pre id="{lang}-prompt-text" class="import-prompt" dir="ltr" tabindex="0">{e(text)}</pre></div></details>
 <details><summary><span>{e(value['review_title'])}</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>{e(value['status_body'])}</p><ul>{review}</ul></div></details>
 <details><summary><span>{e(value['format_title'])}</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>{e(value['format_intro'])}</p><ul>{spec_rules}</ul><p><a href="draft-v1.schema.json" download>{e(value['schema_label'])}</a></p><p><a href="format.{lang}.md" download>{e(value['spec_label'])}</a></p><p><a href="draft.example.json" download>{e(value['example_label'])}</a></p></div></details></div></section>
-<footer class="site-footer"><a href="../#{lang if lang in ['en','ja','ko'] else 'en'}">{e(value['home_label'])}</a><a href="../support/#{lang if lang in ['en','ja','ko'] else 'en'}">{e(value['support_label'])}</a><a href="../android/support/#{lang}">{e(value['android_support_label'])}</a></footer>
+<footer class="site-footer"><a href="../#{lang if lang in ['en','ja','ko'] else 'en'}">{e(value['home_label'])}</a><a href="../support/#{lang}">{e(value['support_label'])}</a><a href="../android/support/#{lang}">{e(value['android_support_label'])}</a></footer>
 </article>''')
     page = f'''<!doctype html>
 <html lang="ko"><head>

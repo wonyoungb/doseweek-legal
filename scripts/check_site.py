@@ -252,7 +252,7 @@ def main() -> None:
         ),
         (ROOT / "support/index.html").resolve(): (
             f"{SITE_BASE}support/", "../assets/app-icon.png", SOCIAL_IMAGE,
-            IOS_PANEL_LANGUAGES, IOS_LINK_LANGUAGES,
+            ALL_LANGUAGES, ALL_LANGUAGES,
         ),
         (ROOT / "privacy/index.html").resolve(): (
             f"{SITE_BASE}privacy/", "../assets/app-icon.png", SOCIAL_IMAGE,
@@ -293,7 +293,9 @@ def main() -> None:
         current = [language for language, state, _ in page.language_links if state == "true"]
         assert current == [], f"{label}: static markup must not misstate aria-current before JS"
 
-        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + [ROOT / "privacy/index.html"]
+        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + [
+            ROOT / "privacy/index.html", ROOT / "support/index.html",
+        ]
         if path in {candidate.resolve() for candidate in multilingual}:
             assert page.language_skips == ANDROID_LANGUAGES, (
                 f"{label}: Android skip-link locale mismatch"
@@ -359,7 +361,7 @@ def main() -> None:
     assert privacy_text.count("SystemLanguageModel.default") == len(ALL_LANGUAGES), (
         "privacy/index.html: SystemLanguageModel.default must appear once per language"
     )
-    assert support_text.count("SystemLanguageModel.default") == 3, (
+    assert support_text.count("SystemLanguageModel.default") == len(ALL_LANGUAGES), (
         "support/index.html: SystemLanguageModel.default must appear once per language"
     )
     for warning in (
@@ -430,7 +432,7 @@ def main() -> None:
         "support/index.html: missing corrected Korean deterministic fallback"
     )
 
-    assert len(support_page.summary_markers) == 20 * len(IOS_PANEL_LANGUAGES), (
+    assert len(support_page.summary_markers) == 20 * len(ALL_LANGUAGES), (
         "support/index.html: expected eight existing, five bugfix-candidate and seven "
         "second-release FAQ disclosures per language"
     )
@@ -450,7 +452,7 @@ def main() -> None:
     )
 
     for path, page, languages, candidate_version in (
-        (ROOT / "support/index.html", support_page, IOS_PANEL_LANGUAGES, "iOS 1.0.4 (build 16)"),
+        (ROOT / "support/index.html", support_page, ALL_LANGUAGES, "iOS 1.0.4 (build 16)"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "Android 1.0.0 (versionCode 10)"),
     ):
@@ -470,7 +472,7 @@ def main() -> None:
                 )
 
     for path, page, languages, second_release_version in (
-        (ROOT / "support/index.html", support_page, IOS_PANEL_LANGUAGES,
+        (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
          "1.0.4 (build 16)"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "versionCode 11"),
@@ -589,6 +591,9 @@ def main() -> None:
     assert render_ios.rendered(ios_content) == (ROOT / "privacy/index.html").read_text(
         encoding="utf-8"
     ), "privacy/index.html does not match docs/ios-content.json; rerun render_ios.py"
+    assert render_ios.rendered_support(ios_content) == (ROOT / "support/index.html").read_text(
+        encoding="utf-8"
+    ), "support/index.html does not match docs/ios-content.json; rerun render_ios.py"
 
     if arguments.catalog:
         catalog_check(arguments.catalog.resolve(), privacy_text)

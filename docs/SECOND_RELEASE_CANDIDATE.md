@@ -59,16 +59,17 @@ version number is not assigned yet.
    real processing changes.
 4. Publication waits for the releases themselves: Android 1.0.0 (versionCode 11) and the next
    iOS build. Until then the candidate wording names the unreleased version in every locale.
-5. The iOS support FAQ still serves Korean, English and Japanese. Extending it to seventeen
-   locales needs translated answers for the eight released topics plus the in-app link mapping
-   in `RecordHelpView.swift` (owner decision BUGFIX-PARITY-20260915-07).
+5. The iOS support FAQ now serves all seventeen locales. The fourteen locales beyond Korean,
+   English and Japanese were written in this branch from the published English answers and
+   have not had a native-speaker review; the in-app link mapping in `RecordHelpView.swift`
+   still sends those languages to `/support/#en` (owner decision BUGFIX-PARITY-20260915-07).
 
 ## Verification run on this branch
 
 ```bash
 python3 scripts/render_ios.py --check --catalog <ios>/DoseDay/Resources/Localizable.xcstrings
 python3 scripts/render_android.py --content docs/android-content.candidate.json --check
-python3 scripts/render_import.py --check --require-all-locales
+python3 scripts/render_import.py --check --require-all-locales   # footer now links /support/#<locale>
 python3 scripts/check_site.py --catalog <ios>/DoseDay/Resources/Localizable.xcstrings \
   --android-content docs/android-content.candidate.json
 node --check assets/language.js

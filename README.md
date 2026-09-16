@@ -12,11 +12,14 @@ The privacy copy does not originate here. Its canonical source is the app reposi
 DoseDay/Resources/Localizable.xcstrings
 ```
 
-`privacy/index.html` is generated. `docs/ios-content.json` holds a verbatim mirror of those
-app strings for all seventeen locales plus the repository-local second-release candidate
-section, and `scripts/render_ios.py` renders the page from it. Change the app strings first,
-then re-mirror and regenerate; `python3 scripts/render_ios.py --check --catalog <xcstrings>`
-compares every mirrored string with the app catalog.
+`privacy/index.html` and `support/index.html` are generated. `docs/ios-content.json` holds a
+verbatim mirror of those app strings for all seventeen locales, the repository-local
+second-release candidate section, and the support FAQ copy, and `scripts/render_ios.py`
+renders both pages from it. Change the app strings first, then re-mirror and regenerate;
+`python3 scripts/render_ios.py --check --catalog <xcstrings>` compares every mirrored policy
+string with the app catalog. The Korean, English, and Japanese support answers are the
+previously published text; the other fourteen locales were written for the second-release
+candidate and have not had a native-speaker review.
 
 The public policy must mirror, verbatim and in all three languages:
 
@@ -88,17 +91,18 @@ Every main page has three localized panels and these stable deep links:
 /support/#ko  /support/#en  /support/#ja
 ```
 
-`/privacy/` now serves the same seventeen locales as the Android and record-preparation
-pages, with the identical panel, localized skip link, and right-to-left contract:
+`/privacy/` and `/support/` now serve the same seventeen locales as the Android and
+record-preparation pages, with the identical panel, localized skip link, and right-to-left
+contract:
 
 ```text
 /privacy/#ko  /privacy/#en  /privacy/#ja  /privacy/#de  …  /privacy/#tr
+/support/#ko  /support/#en  /support/#ja  /support/#de  …  /support/#tr
 ```
 
-The landing and iOS support pages still serve Korean, English, and Japanese. Extending the
-iOS support FAQ to seventeen locales needs translated answers for the eight released topics
-and the matching in-app link mapping in `RecordHelpView.swift`, which today sends every other
-language to `/support/#en`.
+The landing page still serves Korean, English, and Japanese. The in-app online-help link in
+`RecordHelpView.swift` still sends every other language to `/support/#en`; owner decision
+BUGFIX-PARITY-20260915-07 asks for that mapping to cover all seventeen locales.
 
 A valid hash wins. With no valid hash, `assets/language.js` chooses the first supported browser
 language and falls back to Korean. It updates the document language, title, visible panel, and
@@ -120,10 +124,11 @@ hash links keep the selected language, reading direction, and skip destination e
 JavaScript; JavaScript also updates the document root metadata. The existing iOS URLs and their
 three-language behavior remain unchanged.
 
-For that no-script fallback, localized panels intentionally stay in **English, Japanese,
-Korean** DOM order. Do not reorder them without updating the sibling selectors in
-`assets/site.css`. Privacy table-of-contents IDs start with their locale (`en-health`,
-`ja-health`, `ko-health`), which lets the shared script retain the correct panel.
+For that no-script fallback, the landing page's localized panels intentionally stay in
+**English, Japanese, Korean** DOM order. Do not reorder them without updating the sibling
+selectors in `assets/site.css`. The generated privacy and support pages use the seventeen-locale
+order instead. Privacy table-of-contents IDs start with their locale (`en-health`, `ja-health`,
+`ko-health`), which lets the shared script retain the correct panel.
 
 ## Files
 
@@ -137,9 +142,10 @@ Korean** DOM order. Do not reorder them without updating the sibling selectors i
 - `assets/language.js` — page-scoped hash/browser-language selection only
 - `assets/app-icon.png` — existing iOS icon
 - `assets/android-app-icon.png` — Android Google Play icon
-- `docs/ios-content.json` — mirrored iOS policy strings plus the candidate section
+- `docs/ios-content.json` — mirrored iOS policy strings, the candidate section, and the
+  seventeen-locale support copy
 - `docs/android-content.candidate.json` — unpublished mirror of the Android legal catalog
-- `scripts/render_ios.py` — deterministic iOS privacy page renderer
+- `scripts/render_ios.py` — deterministic iOS privacy and support page renderer
 - `scripts/render_android.py` — deterministic Android page renderer
 - `scripts/check_site.py` — dependency-free structural, metadata, accessibility, disclosure, and
   local-link checks
