@@ -433,8 +433,9 @@ def main() -> None:
     android_pages = [pages[path.resolve()] for path in ANDROID_HTML_FILES]
     android_text = " ".join(text for page in android_pages for text in page.text)
     android_support = pages[(ROOT / "android/support/index.html").resolve()]
-    assert len(android_support.summary_markers) == 12 * len(ANDROID_LANGUAGES), (
-        "android/support/index.html: expected seven existing and five candidate FAQ disclosures per language"
+    assert len(android_support.summary_markers) == 19 * len(ANDROID_LANGUAGES), (
+        "android/support/index.html: expected seven existing, five bugfix-candidate and "
+        "seven second-release FAQ disclosures per language"
     )
     assert all(markers == ["true"] for markers in android_support.summary_markers), (
         "android/support/index.html: every summary needs one aria-hidden summary-symbol"
@@ -445,6 +446,7 @@ def main() -> None:
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "Android 1.0.0 (versionCode 10)"),
     ):
+        # the five bugfix-candidate topics keep their own released-version notice
         source = path.read_text(encoding="utf-8")
         for language in languages:
             for topic in ("dates", "edit", "past", "health", "sites"):
@@ -494,7 +496,10 @@ def main() -> None:
         "Android 1.0.0",
     ):
         assert required in android_text, f"Android pages are missing required disclosure {required!r}"
-    assert not re.search(r"(?<![\d.])1\.0(?![\d.])", android_text), (
+    # "CC0 1.0" is the name of a data licence, not an app version, so it is removed before
+    # the version scan; every remaining 1.0 would be an inexact version scope.
+    android_version_text = android_text.replace("CC0 1.0", "CC0")
+    assert not re.search(r"(?<![\d.])1\.0(?![\d.])", android_version_text), (
         "Android pages must use the binary's exact 1.0.0 version scope"
     )
     for relative_path in ("android/privacy/index.html", "android/support/index.html"):

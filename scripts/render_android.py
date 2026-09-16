@@ -34,6 +34,10 @@ REQUIRED_BACKUP_SECURITY_PHRASES = {
     "zh-Hant": ("AES-256-GCM 加密檔案", "獨立的高熵復原碼"),
     "tr": ("AES-256-GCM ile şifrelenmiş bir dosyaya", "Ayrı, yüksek entropili bir kurtarma kodu"),
 }
+SECOND_RELEASE_TOPICS = (
+    "meals", "dates", "charts", "calendar", "backup", "devices", "import",
+)
+SECOND_RELEASE_VERSION = "versionCode 11"
 REQUIRED_EMERGENCY_SERVICE_PHRASES = {
     "es": "servicios de emergencia locales",
     "it": "servizi di emergenza locali",
@@ -337,19 +341,22 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     }
     expected_section_ids = [
         "scope", "stored-data", "no-collection", "backup", "retention", "security", "changes",
+        "next-release",
     ]
     expected_faq_ids = [
         "storage", "accounts", "ai-health", "notifications", "backup", "deletion", "recovery",
         "candidate-dates", "candidate-edit", "candidate-past", "candidate-health", "candidate-sites",
+        *(f"candidate2-{topic}" for topic in SECOND_RELEASE_TOPICS),
     ]
     expected_policy_lengths = {
         "scope": (2, None),
         "stored-data": (1, 7),
-        "no-collection": (4, 7),
+        "no-collection": (5, 7),  # the fifth paragraph is the optional calendar integration
         "backup": (7, None),
         "retention": (3, None),
         "security": (3, None),
         "changes": (1, None),
+        "next-release": (5, None),
     }
     expected_faq_answer_lengths = {
         "storage": 1,
@@ -364,6 +371,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "candidate-past": 2,
         "candidate-health": 2,
         "candidate-sites": 3,
+        **{f"candidate2-{topic}": 2 for topic in SECOND_RELEASE_TOPICS},
     }
     for locale, entry in catalog["locales"].items():
         assert isinstance(entry, dict), f"{locale}: locale entry must be an object"
@@ -480,6 +488,15 @@ def validate_catalog(catalog: dict[str, object]) -> None:
                     f"{locale}: critical location is missing {token!r}"
                 )
 
+        for topic in SECOND_RELEASE_TOPICS:
+            notice = faq_by_id[f"candidate2-{topic}"]["answers"][0]
+            assert SECOND_RELEASE_VERSION in notice, (
+                f"{locale}: second-release FAQ {topic} must name the unreleased version"
+            )
+        assert SECOND_RELEASE_VERSION in policy_by_id["next-release"]["paragraphs"][0], (
+            f"{locale}: candidate policy section must name the unreleased version"
+        )
+
         backup_answer = faq_by_id["backup"]["answers"][0]
         for phrase in REQUIRED_BACKUP_SECURITY_PHRASES[locale]:
             assert phrase in backup_answer, (
@@ -545,8 +562,16 @@ def rendered_pages(catalog: dict[str, object]) -> dict[Path, str]:
     }
 
 
-def source_icon(content_path: Path) -> Path:
+CANDIDATE_CONTENT_PATH = ROOT / "docs/android-content.candidate.json"
+
+
+def source_icon(content_path: Path) -> Path | None:
     resolved = content_path.resolve()
+    if resolved == CANDIDATE_CONTENT_PATH.resolve():
+        # Unpublished mirror of the Android app catalog kept in this repository while the
+        # second-release copy is reviewed. The icon still comes from the app repository, so
+        # rendering from the candidate never rewrites assets/android-app-icon.png.
+        return None
     assert resolved.parent.name == "legal" and resolved.parent.parent.name == "docs", (
         "Android content must be DoseweekPlayStore/docs/legal/android-content.json"
     )
@@ -572,13 +597,15 @@ def main() -> None:
                 f"stale generated page: {path.relative_to(ROOT)}; rerun render_android.py"
             )
         assert ANDROID_ICON_PATH.is_file(), "missing generated Android web icon"
-        assert ANDROID_ICON_PATH.read_bytes() == canonical_icon.read_bytes(), (
-            "assets/android-app-icon.png does not match the Android Google Play icon"
-        )
+        if canonical_icon is not None:
+            assert ANDROID_ICON_PATH.read_bytes() == canonical_icon.read_bytes(), (
+                "assets/android-app-icon.png does not match the Android Google Play icon"
+            )
         print(f"OK: {len(pages)} Android pages and icon match {arguments.content}")
         return
 
-    ANDROID_ICON_PATH.write_bytes(canonical_icon.read_bytes())
+    if canonical_icon is not None:
+        ANDROID_ICON_PATH.write_bytes(canonical_icon.read_bytes())
     for path, content in pages.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
