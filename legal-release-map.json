@@ -6,8 +6,8 @@
     "repository": "wonyoungb/doseweek-legal",
     "branch": "candidate/second-release",
     "baseCommit": "8a615a1",
-    "headCommit": "439428d3d99cb403ac555744c174ae5a5f8f2953",
-    "publishStatus": "unpublished candidate branch; not merged to main; the live site still serves main",
+    "headCommit": "5b69a37",
+    "publishStatus": "unpublished candidate branch; not merged to main; the live site still serves main; reviewed 2026-09-16 against the stage-2 branches and STATE.json decisions (version wording corrected in 5b69a37)",
     "sourceStatus": "vendored candidate catalogs docs/android-content.candidate.json and docs/ios-content.json; the app repositories have not adopted them yet",
     "generatedPages": [
       "privacy/index.html",
