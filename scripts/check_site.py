@@ -11,6 +11,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+import render_ios
 from render_android import rendered_pages, validate_catalog
 from render_import import rendered as rendered_import, validate as validate_import
 
@@ -29,6 +30,11 @@ IOS_LINK_LANGUAGES = ["ko", "en", "ja"]
 ANDROID_LANGUAGES = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
+]
+# The iOS privacy policy is generated for the same seventeen locales the apps ship.
+ALL_LANGUAGES = ANDROID_LANGUAGES
+SECOND_RELEASE_TOPICS = [
+    "meals", "dates", "charts", "calendar", "backup", "devices", "import",
 ]
 SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
 SOCIAL_IMAGE = f"{SITE_BASE}assets/app-icon.png"
@@ -135,13 +141,13 @@ def local_target(source: Path, reference: str) -> tuple[Path, str] | None:
 def catalog_check(catalog_path: Path, privacy_text: str) -> None:
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))["strings"]
     keys = ["privacy.title", "privacy.intro", "privacy.effectiveDate"]
-    for number in range(1, 9):
+    for number in range(1, 10):
         keys.extend((f"privacy.section{number}.title", f"privacy.section{number}.body"))
     keys.extend(("privacy.medical.title", "privacy.medical.body", "common.notAMedicalDevice"))
 
     for key in keys:
         assert key in catalog, f"catalog: missing source-of-truth key {key!r}"
-        for language in ("en", "ja", "ko"):
+        for language in ANDROID_LANGUAGES:
             value = catalog[key]["localizations"][language]["stringUnit"]["value"]
             normalized = " ".join(value.split())
             assert normalized in privacy_text, (
@@ -250,7 +256,7 @@ def main() -> None:
         ),
         (ROOT / "privacy/index.html").resolve(): (
             f"{SITE_BASE}privacy/", "../assets/app-icon.png", SOCIAL_IMAGE,
-            IOS_PANEL_LANGUAGES, IOS_LINK_LANGUAGES,
+            ALL_LANGUAGES, ALL_LANGUAGES,
         ),
         (ROOT / "import/index.html").resolve(): (
             f"{SITE_BASE}import/", "../assets/app-icon.png", SOCIAL_IMAGE,
@@ -287,7 +293,8 @@ def main() -> None:
         current = [language for language, state, _ in page.language_links if state == "true"]
         assert current == [], f"{label}: static markup must not misstate aria-current before JS"
 
-        if path in {candidate.resolve() for candidate in ANDROID_HTML_FILES + IMPORT_HTML_FILES}:
+        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + [ROOT / "privacy/index.html"]
+        if path in {candidate.resolve() for candidate in multilingual}:
             assert page.language_skips == ANDROID_LANGUAGES, (
                 f"{label}: Android skip-link locale mismatch"
             )
@@ -349,7 +356,7 @@ def main() -> None:
     ):
         assert required in privacy_text, f"privacy/index.html: missing required disclosure {required!r}"
 
-    assert privacy_text.count("SystemLanguageModel.default") == 3, (
+    assert privacy_text.count("SystemLanguageModel.default") == len(ALL_LANGUAGES), (
         "privacy/index.html: SystemLanguageModel.default must appear once per language"
     )
     assert support_text.count("SystemLanguageModel.default") == 3, (
@@ -423,8 +430,9 @@ def main() -> None:
         "support/index.html: missing corrected Korean deterministic fallback"
     )
 
-    assert len(support_page.summary_markers) == 13 * len(IOS_PANEL_LANGUAGES), (
-        "support/index.html: expected eight existing and five candidate FAQ disclosures per language"
+    assert len(support_page.summary_markers) == 20 * len(IOS_PANEL_LANGUAGES), (
+        "support/index.html: expected eight existing, five bugfix-candidate and seven "
+        "second-release FAQ disclosures per language"
     )
     assert all(markers == ["true"] for markers in support_page.summary_markers), (
         "support/index.html: every summary needs one aria-hidden summary-symbol"
@@ -459,6 +467,26 @@ def main() -> None:
                 assert len(paragraphs) == (3 if topic == "sites" else 2), identifier
                 assert candidate_version in paragraphs[0], (
                     f"{identifier}: candidate notice must identify the exact version and build"
+                )
+
+    for path, page, languages, second_release_version in (
+        (ROOT / "support/index.html", support_page, IOS_PANEL_LANGUAGES,
+         "1.0.4 (build 16)"),
+        (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
+         "versionCode 11"),
+    ):
+        source = path.read_text(encoding="utf-8")
+        for language in languages:
+            for topic in SECOND_RELEASE_TOPICS:
+                identifier = f"{language}-candidate2-{topic}"
+                assert identifier in page.ids, f"{path.name}: missing {identifier}"
+                entry = re.search(rf'<details id="{re.escape(identifier)}"[^>]*>(.*?)</details>',
+                                  source, flags=re.DOTALL)
+                assert entry is not None, identifier
+                paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
+                assert len(paragraphs) == 2, identifier
+                assert second_release_version in paragraphs[0], (
+                    f"{identifier}: the notice must name the version this candidate belongs to"
                 )
 
     for prohibited in (
@@ -546,8 +574,25 @@ def main() -> None:
             f"assets/site.css: missing no-JS localized skip-link selectors for {language}"
         )
 
+    for required in (
+        "USDA FoodData Central",
+        "Open Government Licence v3.0",
+        "CC0 1.0",
+        "data.go.kr",
+        "iOS 26.0",
+    ):
+        assert required in privacy_text, (
+            f"privacy/index.html: missing second-release disclosure {required!r}"
+        )
+
+    ios_content = json.loads((ROOT / "docs/ios-content.json").read_text(encoding="utf-8"))
+    assert render_ios.rendered(ios_content) == (ROOT / "privacy/index.html").read_text(
+        encoding="utf-8"
+    ), "privacy/index.html does not match docs/ios-content.json; rerun render_ios.py"
+
     if arguments.catalog:
         catalog_check(arguments.catalog.resolve(), privacy_text)
+        render_ios.catalog_parity(ios_content, arguments.catalog.resolve())
 
     if arguments.android_content:
         android_catalog = json.loads(arguments.android_content.read_text(encoding="utf-8"))
