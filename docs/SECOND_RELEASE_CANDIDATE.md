@@ -2,8 +2,16 @@
 
 Branch `candidate/second-release`, cut from `main` `8a615a1` on 2026-09-16. Nothing here is
 merged or published. It prepares the public pages for the stage-2 release of both apps:
-Android **1.0.0 (versionCode 11)** and the iOS release that follows **1.0.4 (build 16)**, whose
-version number is not assigned yet.
+Android **1.0.0 (versionCode 11)** and the next iOS release, whose version number is not assigned
+yet. The iOS candidate source still carries `MARKETING_VERSION` 1.0.4 and build 16, but build 16 has
+never been uploaded: the local ledger shows 1.0.3 (build 14) confirmed live on 2026-09-11 and
+1.0.4 (build 15), a store-metadata release functionally identical to build 14, submitted for
+review on 2026-09-12 with no later store observation recorded. The pages therefore name no
+build as the current or next App Store version; the five bugfix-candidate FAQ answers keep the
+published "iOS 1.0.4 (build 16)" candidate label from `main`, and the integrator revisits it
+when the store number is chosen. Android code 10 was accepted by Play but its review was
+withheld for stage 2, so every Android candidate answer names versionCode 11, the first build
+users receive after live code 9.
 
 ## Sources read for every fact
 
@@ -11,7 +19,7 @@ version number is not assigned yet.
 |---|---|
 | Android policy and support copy | `DoseweekPlayStore` `feat/calendar-sync` `c7495fc` → `docs/legal/android-content.json` |
 | iOS policy copy (sections 1–9) | `DoseWeek` `feat/calendar-sync` `5e82eae` → `DoseDay/Resources/Localizable.xcstrings` |
-| Meals / nutrition | `feat/nutrition-p2` (iOS `af60d22`, Android `e8cb6a8`) and each repository's `docs/NUTRITION.md` |
+| Meals / nutrition | `feat/nutrition-p2` (iOS `a95915b`, tests-only after `af60d22`; Android `e8cb6a8`) and each repository's `docs/NUTRITION.md` |
 | Chosen schedule dates | `feat/explicit-dates` (iOS `a3ee11f`, Android `d1ebfa2`) |
 | Body chart references | `feat/body-charts` (iOS `88678dd`, Android `6152e7c`), `designs/body-chart-references.md` |
 | Calendar sync | `feat/calendar-sync` both platforms, `designs/calendar-sync.md` |
@@ -58,7 +66,10 @@ version number is not assigned yet.
    an owner decision to be made with the release, because meal records and calendar sync are
    real processing changes.
 4. Publication waits for the releases themselves: Android 1.0.0 (versionCode 11) and the next
-   iOS build. Until then the candidate wording names the unreleased version in every locale.
+   iOS build. Until then the Android candidate wording names versionCode 11 in every locale and
+   the iOS wording says "the next iOS version, not released yet" without a build number; once
+   the iOS store number is assigned, set it in the seven second-release notices, the five
+   bugfix-candidate notices and `bundleVersion` together.
 5. The iOS support FAQ now serves all seventeen locales. The fourteen locales beyond Korean,
    English and Japanese were written in this branch from the published English answers and
    have not had a native-speaker review; the in-app link mapping in `RecordHelpView.swift`

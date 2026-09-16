@@ -53,7 +53,11 @@ SECTION_IDS = [
     "calendar", "next-release",
 ]
 CANDIDATE_SECTION_ID = "next-release"
+# The bugfix-candidate FAQ notice names the candidate source's version and build; it is not a
+# released build. The page eyebrow and footer carry only the marketing version, because build 16
+# has never been uploaded and the next version number is not assigned.
 CANDIDATE_VERSION = "1.0.4 (build 16)"
+PAGE_VERSION = "1.0.4"
 CATALOG_KEYS = {
     "storage": 1, "health": 2, "backups": 3, "notifications": 4, "tracking": 5,
     "deletion": 6, "contact": 7, "ai": 8, "calendar": 9,
@@ -71,7 +75,7 @@ def validate(content: dict) -> None:
     }
     assert content["schemaVersion"] == 1
     assert content["platform"] == "ios"
-    assert content["bundleVersion"] == CANDIDATE_VERSION
+    assert content["bundleVersion"] == PAGE_VERSION
     assert content["effectiveDate"] == "2026-08-22"
     assert content["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert content["localeOrder"] == LOCALE_ORDER
@@ -99,8 +103,10 @@ def validate(content: dict) -> None:
                     f"{locale}:{section['id']}"
                 )
         candidate = privacy["sections"][-1]
-        assert CANDIDATE_VERSION in candidate["paragraphs"][0], (
-            f"{locale}: the candidate section must name the released version it follows"
+        # The candidate section must not name a build as the current App Store version: build 16
+        # was never uploaded and the store state after 2026-09-12 is not recorded here.
+        assert "build" not in candidate["paragraphs"][0].lower(), (
+            f"{locale}: the candidate section must not name a build number"
         )
         serialized = json.dumps(candidate, ensure_ascii=False)
         # Every food data source keeps its name and its licence basis in every language;
@@ -156,8 +162,9 @@ def validate_support(locale: str, support: dict) -> None:
             f"{locale}: bugfix-candidate {key} must name iOS {CANDIDATE_VERSION}"
         )
     for key in SECOND_RELEASE_FAQ:
-        assert CANDIDATE_VERSION in support["secondRelease"][key]["answers"][0], (
-            f"{locale}: second-release {key} must name the version it follows"
+        notice = support["secondRelease"][key]["answers"][0]
+        assert "iOS" in notice and "build" not in notice.lower(), (
+            f"{locale}: second-release {key} must say it is an unreleased iOS version, without a build"
         )
     ai_answer = support["released"]["ai"]["answers"][0]
     assert ai_answer.count(AI_MODEL_TOKEN) == 1, f"{locale}: AI answer must name the model once"

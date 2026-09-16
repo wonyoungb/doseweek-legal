@@ -211,7 +211,7 @@
             "id": "candidate-dates",
             "question": "출시 전 안내: 날짜와 시각 선택",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
+              "Android 1.0.0 (versionCode 11): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
               "날짜나 시각을 누르면 시스템 선택기가 열립니다. 오래된 날짜는 월·연도를 바꾸고, 오전·오후가 표시되면 함께 선택하세요. 취소하면 기존 입력이 유지되고, 선택을 확정하면 입력 중인 값만 바뀝니다. 기록의 저장 버튼을 눌러야 반영됩니다. 연필 버튼으로 직접 입력할 수도 있습니다. 날짜는 YYYY-MM-DD 또는 YYYYMMDD, 시각은 24시간 HH:mm 또는 HHmm 형식입니다."
             ]
           },
@@ -219,7 +219,7 @@
             "id": "candidate-edit",
             "question": "출시 전 안내: 기록 수정",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
+              "Android 1.0.0 (versionCode 11): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
               "기록 화면에서 날짜를 고른 뒤 해당 기록의 수정 버튼을 누르세요. 저장하면 같은 기록이 수정됩니다. 날짜를 바꾸면 수정한 기록은 바뀐 날짜에 있습니다. 헬스 커넥트에서 가져온 측정값은 읽기 전용이므로 원래 기록한 앱에서 수정하세요."
             ]
           },
@@ -227,7 +227,7 @@
             "id": "candidate-past",
             "question": "출시 전 안내: 과거 주사 기록 추가",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
+              "Android 1.0.0 (versionCode 11): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
               "기록 화면에서 과거 날짜를 고르고 과거 투약을 추가하세요. 약품·용량·단위·실제 투약 시각을 확인한 뒤 저장합니다. 계획 없이 기록만 관리할 수도 있습니다. 계획 없이 기록한 항목은 일정·재고를 바꾸지 않습니다. 계획에 연결된 기록은 표시되는 재고 차감 여부를 확인하세요. 암호화 백업 복원은 데이터를 교체하는 별도 기능입니다. 과거 기록의 재고 차감은 기본으로 꺼져 있으니 표시된 선택을 확인하세요. 연결된 계획의 최신 투약이 바뀌면 향후 미해결 일정이 조정될 수 있습니다."
             ]
           },
@@ -235,7 +235,7 @@
             "id": "candidate-health",
             "question": "출시 전 안내: 안 보이는 건강 기록 확인",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
+              "Android 1.0.0 (versionCode 11): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
               "먼저 원래 기록한 앱과 헬스 커넥트에 측정값이 있는지 확인하세요. DoseWeek 신체 화면에서 지표와 기간을 확인합니다. 설정에서 헬스 커넥트를 열고 지금 가져오기를 누르세요. 결과가 없으면 읽기 권한과 이전 기록 권한, 원래 앱의 동기화 상태를 각각 확인하세요. 측정 날짜는 가져온 시각이 아니라 실제 측정 시각입니다."
             ]
           },
@@ -243,7 +243,7 @@
             "id": "candidate-sites",
             "question": "출시 전 안내: 주사 부위 좌우 확인",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
+              "Android 1.0.0 (versionCode 11): 이 다섯 항목은 아직 출시되지 않은 후보 버전의 시험 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
               "왼쪽·오른쪽은 항상 내 몸 기준입니다. ‘내 몸 기준’과 ‘정면에서 보기’는 그림을 보여주는 방식만 바꿉니다. 선택한 부위와 저장된 기록의 좌우는 그대로 유지됩니다. 선택된 부위 이름을 확인하거나 부위 목록에서 글자로 고르세요. 설정에서도 보기 방식을 바꿀 수 있습니다.",
               "복부 왼쪽 위 · 복부 오른쪽 위 · 복부 왼쪽 아래 · 복부 오른쪽 아래 · 왼쪽 허벅지 · 오른쪽 허벅지 · 왼쪽 위팔 · 오른쪽 위팔"
             ]
@@ -501,7 +501,7 @@
             "id": "candidate-dates",
             "question": "Candidate guidance: Choose dates and times",
             "answers": [
-              "Android 1.0.0 (versionCode 10): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
+              "Android 1.0.0 (versionCode 11): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
               "Tap a date or time to open the system picker. Use the month or year control for older dates, and AM/PM when shown. Cancel keeps your entry; confirming changes the draft. Save the record to keep your changes. Use the pencil to type dates as YYYY-MM-DD or YYYYMMDD and 24-hour times as HH:mm or HHmm."
             ]
           },
@@ -509,7 +509,7 @@
             "id": "candidate-edit",
             "question": "Candidate guidance: Correct a record",
             "answers": [
-              "Android 1.0.0 (versionCode 10): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
+              "Android 1.0.0 (versionCode 11): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
               "In History, choose the date, then Edit on the record. Save to update that same record. If you change its date, the updated record is under the new date. Imported Health Connect measurements are read-only: correct them in the original app."
             ]
           },
@@ -517,7 +517,7 @@
             "id": "candidate-past",
             "question": "Candidate guidance: Add a past injection",
             "answers": [
-              "Android 1.0.0 (versionCode 10): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
+              "Android 1.0.0 (versionCode 11): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
               "In History, choose a past date and add a past administration. Confirm the medicine, dose, unit, and actual time before saving. You can manage records without creating a plan. Records without a plan do not change schedules or stock. For records linked to a plan, check whether stock will be deducted. Restoring an encrypted backup replaces data; it is a separate action. Stock deduction for past entries starts off; review the displayed choice. If a linked plan’s latest injection changes, future unresolved dates may be adjusted."
             ]
           },
@@ -525,7 +525,7 @@
             "id": "candidate-health",
             "question": "Candidate guidance: Find missing measurements",
             "answers": [
-              "Android 1.0.0 (versionCode 10): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
+              "Android 1.0.0 (versionCode 11): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
               "First check the original app and Health Connect. In DoseWeek’s Body screen, check the metric and period. In Settings, open Health Connect and choose Import now. For missing results, check read permissions and permission for past records separately from syncing in the original app. The measurement date is when it was measured, not when DoseWeek imported it."
             ]
           },
@@ -533,7 +533,7 @@
             "id": "candidate-sites",
             "question": "Candidate guidance: Understand left and right",
             "answers": [
-              "Android 1.0.0 (versionCode 10): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
+              "Android 1.0.0 (versionCode 11): These five topics describe an unreleased candidate version for testing. Screens and behavior may not be available in the currently released app.",
               "Left and right always mean your own body. My body and Front view change only how the diagram is displayed. Your selection and saved records keep the same body side. Check the selected name or open the site list to choose by text. You can change the view in Settings too.",
               "Upper-left abdomen · Upper-right abdomen · Lower-left abdomen · Lower-right abdomen · Left thigh · Right thigh · Left upper arm · Right upper arm"
             ]
@@ -791,7 +791,7 @@
             "id": "candidate-dates",
             "question": "公開前のご案内: 日付と時刻を選ぶ",
             "answers": [
-              "Android 1.0.0 (versionCode 10): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
+              "Android 1.0.0 (versionCode 11): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
               "日付や時刻をタップすると、システムの選択画面が開きます。古い日付は月や年を切り替えて選びます。午前・午後が表示される場合は、そちらも選んでください。キャンセルすると入力は元のままです。選択を確定すると編集中の値だけが変わります。変更を残すには記録を保存してください。 鉛筆ボタンで直接入力もできます。日付はYYYY-MM-DDまたはYYYYMMDD、時刻は24時間形式のHH:mmまたはHHmmです。"
             ]
           },
@@ -799,7 +799,7 @@
             "id": "candidate-edit",
             "question": "公開前のご案内: 記録を修正する",
             "answers": [
-              "Android 1.0.0 (versionCode 10): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
+              "Android 1.0.0 (versionCode 11): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
               "「履歴」で日付を選び、記録の編集ボタンをタップします。保存すると同じ記録が更新されます。日付を変えた場合、更新した記録は変更先の日付にあります。Health Connectから取り込んだ測定値は読み取り専用です。記録した元のアプリで修正してください。"
             ]
           },
@@ -807,7 +807,7 @@
             "id": "candidate-past",
             "question": "公開前のご案内: 過去の注射を記録する",
             "answers": [
-              "Android 1.0.0 (versionCode 10): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
+              "Android 1.0.0 (versionCode 11): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
               "「履歴」で過去の日付を選び、投与を追加します。薬、用量、単位、実際の投与時刻を確認して保存してください。計画なしで記録だけを管理することもできます。計画に属さない記録は予定や在庫を変えません。計画に関連する記録では、在庫が差し引かれるかを確認してください。暗号化バックアップの復元は、データを置き換える別の操作です。 過去の記録の在庫差し引きは初期状態ではオフです。表示された選択を確認してください。関連する計画の最新の注射が変わると、今後の未確定の予定日が調整されることがあります。"
             ]
           },
@@ -815,7 +815,7 @@
             "id": "candidate-health",
             "question": "公開前のご案内: 見つからない測定値を確認する",
             "answers": [
-              "Android 1.0.0 (versionCode 10): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
+              "Android 1.0.0 (versionCode 11): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
               "まず元のアプリとHealth Connectに測定値があるか確認します。DoseWeekの「身体」で指標と期間を確認します。「設定」からHealth Connectを開き、「今すぐ取り込む」を選んでください。結果がない場合、読み取り権限、過去の記録の権限、元のアプリの同期をそれぞれ確認します。測定日は取り込み時刻ではなく、実際に測定された日時です。"
             ]
           },
@@ -823,7 +823,7 @@
             "id": "candidate-sites",
             "question": "公開前のご案内: 注射部位の左右を確認する",
             "answers": [
-              "Android 1.0.0 (versionCode 10): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
+              "Android 1.0.0 (versionCode 11): この5項目は、未公開の候補版を試すための案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
               "左右は常に自分の身体を基準にします。「自分の身体基準」と「正面から見る」は図の表示方法だけを変えます。選択した部位や保存済みの記録の左右は変わりません。選択した部位名を確認するか、部位の一覧から文字で選んでください。「設定」でも表示を切り替えられます。",
               "腹部左上 · 腹部右上 · 腹部左下 · 腹部右下 · 左大腿部 · 右大腿部 · 左上腕 · 右上腕"
             ]
@@ -1081,7 +1081,7 @@
             "id": "candidate-dates",
             "question": "Hinweise zur Vorabversion: Datum und Uhrzeit wählen",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
+              "Android 1.0.0 (versionCode 11): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
               "Tippen Sie auf ein Datum oder eine Uhrzeit, um die Systemauswahl zu öffnen. Für ältere Daten wechseln Sie Monat oder Jahr. Wählen Sie AM/PM, falls angezeigt. Abbrechen behält Ihre Eingabe bei. Bestätigen ändert nur den Entwurf. Speichern Sie den Eintrag, um die Änderungen zu übernehmen. Über den Stift können Sie Daten als YYYY-MM-DD oder YYYYMMDD und Uhrzeiten im 24-Stunden-Format HH:mm oder HHmm eingeben."
             ]
           },
@@ -1089,7 +1089,7 @@
             "id": "candidate-edit",
             "question": "Hinweise zur Vorabversion: Einen Eintrag korrigieren",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
+              "Android 1.0.0 (versionCode 11): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
               "Wählen Sie im Verlauf das Datum und dann Bearbeiten beim Eintrag. Speichern aktualisiert denselben Eintrag. Nach einer Datumsänderung finden Sie den aktualisierten Eintrag unter dem neuen Datum. Aus Health Connect importierte Messungen sind schreibgeschützt. Korrigieren Sie diese in der ursprünglichen App."
             ]
           },
@@ -1097,7 +1097,7 @@
             "id": "candidate-past",
             "question": "Hinweise zur Vorabversion: Eine frühere Injektion hinzufügen",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
+              "Android 1.0.0 (versionCode 11): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
               "Wählen Sie im Verlauf ein vergangenes Datum und fügen Sie eine Verabreichung hinzu. Prüfen Sie vor dem Speichern Medikament, Dosis, Einheit und tatsächliche Uhrzeit. Sie können Einträge auch ohne Plan verwalten. Einträge ohne Plan ändern weder Termine noch Bestand. Prüfen Sie bei verknüpften Einträgen, ob Bestand abgezogen wird. Das Wiederherstellen einer verschlüsselten Sicherung ersetzt Daten und ist ein eigener Vorgang. Der Bestandsabzug ist bei früheren Einträgen zunächst ausgeschaltet. Prüfen Sie die angezeigte Auswahl. Ändert sich die letzte Injektion eines verknüpften Plans, können zukünftige noch offene Termine angepasst werden."
             ]
           },
@@ -1105,7 +1105,7 @@
             "id": "candidate-health",
             "question": "Hinweise zur Vorabversion: Fehlende Messungen finden",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
+              "Android 1.0.0 (versionCode 11): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
               "Prüfen Sie zuerst die ursprüngliche App und Health Connect. Prüfen Sie in DoseWeek unter Körper die Messgröße und den Zeitraum. Öffnen Sie in Einstellungen Health Connect und wählen Sie Jetzt importieren. Prüfen Sie bei fehlenden Ergebnissen Lesezugriff und Zugriff auf frühere Einträge getrennt von der Synchronisierung der ursprünglichen App. Das Messdatum ist der tatsächliche Messzeitpunkt, nicht der Importzeitpunkt."
             ]
           },
@@ -1113,7 +1113,7 @@
             "id": "candidate-sites",
             "question": "Hinweise zur Vorabversion: Links und rechts verstehen",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
+              "Android 1.0.0 (versionCode 11): Diese fünf Themen beschreiben eine noch nicht veröffentlichte Testversion. Die beschriebenen Ansichten und Funktionen sind in der aktuell veröffentlichten App möglicherweise nicht verfügbar.",
               "Links und rechts beziehen sich immer auf Ihren eigenen Körper. Aus meiner Sicht und Von vorne ändern nur die Darstellung. Die Körperseite Ihrer Auswahl und gespeicherten Einträge bleibt gleich. Prüfen Sie den gewählten Namen oder wählen Sie aus der Stellenliste. Die Ansicht lässt sich auch in den Einstellungen ändern.",
               "Bauch links oben · Bauch rechts oben · Bauch links unten · Bauch rechts unten · Linker Oberschenkel · Rechter Oberschenkel · Linker Oberarm · Rechter Oberarm"
             ]
@@ -1371,7 +1371,7 @@
             "id": "candidate-dates",
             "question": "Guide de la version candidate: Choisir les dates et les heures",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
+              "Android 1.0.0 (versionCode 11): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
               "Touchez une date ou une heure pour ouvrir le sélecteur du système. Changez le mois ou l’année pour une date ancienne, et choisissez AM/PM si cette option apparaît. Annuler conserve votre saisie. Confirmer modifie seulement le brouillon. Enregistrez le relevé pour conserver les modifications. Le crayon permet de saisir une date en YYYY-MM-DD ou YYYYMMDD et une heure sur 24 heures en HH:mm ou HHmm."
             ]
           },
@@ -1379,7 +1379,7 @@
             "id": "candidate-edit",
             "question": "Guide de la version candidate: Corriger un relevé",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
+              "Android 1.0.0 (versionCode 11): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
               "Dans Historique, choisissez la date puis Modifier sur le relevé. L’enregistrement met à jour ce même relevé. Si vous changez sa date, le relevé mis à jour se trouve à la nouvelle date. Les mesures importées d’Health Connect sont en lecture seule : corrigez-les dans l’app d’origine."
             ]
           },
@@ -1387,7 +1387,7 @@
             "id": "candidate-past",
             "question": "Guide de la version candidate: Ajouter une injection passée",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
+              "Android 1.0.0 (versionCode 11): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
               "Dans Historique, choisissez une date passée et ajoutez une administration. Vérifiez le médicament, la dose, l’unité et l’heure réelle avant d’enregistrer. Vous pouvez gérer les relevés sans créer de programme. Les relevés sans programme ne modifient ni le calendrier ni le stock. Pour les relevés liés à un programme, vérifiez si le stock sera déduit. Restaurer une sauvegarde chiffrée remplace les données : c’est une autre opération. La déduction du stock est désactivée au départ pour les relevés passés ; vérifiez le choix affiché. Si la dernière injection d’un programme lié change, les dates futures encore en attente peuvent être ajustées."
             ]
           },
@@ -1395,7 +1395,7 @@
             "id": "candidate-health",
             "question": "Guide de la version candidate: Retrouver les mesures manquantes",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
+              "Android 1.0.0 (versionCode 11): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
               "Vérifiez l’app d’origine et Health Connect. Dans Corps de DoseWeek, vérifiez la mesure et la période. Dans Réglages, ouvrez Health Connect et choisissez Importer maintenant. Si des résultats manquent, vérifiez les autorisations de lecture et des relevés passés séparément de la synchronisation dans l’app d’origine. La date de mesure correspond à la mesure réelle, pas à l’importation."
             ]
           },
@@ -1403,7 +1403,7 @@
             "id": "candidate-sites",
             "question": "Guide de la version candidate: Comprendre la gauche et la droite",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
+              "Android 1.0.0 (versionCode 11): Ces cinq rubriques concernent une version candidate non publiée, destinée aux essais. Les écrans et comportements décrits peuvent être absents de la version actuellement disponible.",
               "La gauche et la droite désignent toujours votre propre corps. De mon point de vue et Vue de face changent seulement l’affichage. Votre sélection et les relevés enregistrés conservent le même côté du corps. Vérifiez le nom sélectionné ou choisissez dans la liste des zones. Vous pouvez aussi changer la vue dans Réglages.",
               "Abdomen, en haut à gauche · Abdomen, en haut à droite · Abdomen, en bas à gauche · Abdomen, en bas à droite · Cuisse gauche · Cuisse droite · Partie supérieure du bras gauche · Partie supérieure du bras droit"
             ]
@@ -1661,7 +1661,7 @@
             "id": "candidate-dates",
             "question": "Guía de la versión candidata: Elegir fechas y horas",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
+              "Android 1.0.0 (versionCode 11): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
               "Toque una fecha u hora para abrir el selector del sistema. Cambie el mes o el año para fechas anteriores y elija AM/PM si aparece. Cancelar mantiene la entrada; confirmar solo cambia el borrador. Guarde el registro para conservar los cambios. Use el lápiz para escribir fechas como YYYY-MM-DD o YYYYMMDD y horas de 24 horas como HH:mm o HHmm."
             ]
           },
@@ -1669,7 +1669,7 @@
             "id": "candidate-edit",
             "question": "Guía de la versión candidata: Corregir un registro",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
+              "Android 1.0.0 (versionCode 11): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
               "En Historial, elija la fecha y después Editar en el registro. Al guardar se actualiza ese mismo registro. Si cambia la fecha, el registro actualizado se encuentra en la nueva fecha. Las mediciones importadas de Health Connect son de solo lectura: corríjalas en la app original."
             ]
           },
@@ -1677,7 +1677,7 @@
             "id": "candidate-past",
             "question": "Guía de la versión candidata: Añadir una inyección anterior",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
+              "Android 1.0.0 (versionCode 11): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
               "En Historial, elija una fecha pasada y añada una administración. Confirme el medicamento, la dosis, la unidad y la hora real antes de guardar. Puede gestionar registros sin crear un plan. Los registros sin plan no cambian horarios ni existencias. En los registros vinculados a un plan, compruebe si se descontarán existencias. Restaurar una copia cifrada reemplaza los datos y es una acción distinta. El descuento de existencias está desactivado inicialmente para registros pasados; revise la opción mostrada. Si cambia la última inyección de un plan vinculado, podrían ajustarse fechas futuras pendientes."
             ]
           },
@@ -1685,7 +1685,7 @@
             "id": "candidate-health",
             "question": "Guía de la versión candidata: Encontrar mediciones que faltan",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
+              "Android 1.0.0 (versionCode 11): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
               "Compruebe la app original y Health Connect. En Cuerpo de DoseWeek, revise la medida y el período. Abra Health Connect en Ajustes y elija Importar ahora. Si faltan resultados, compruebe los permisos de lectura y de registros anteriores por separado de la sincronización de la app original. La fecha de medición es cuando se midió, no cuando se importó."
             ]
           },
@@ -1693,7 +1693,7 @@
             "id": "candidate-sites",
             "question": "Guía de la versión candidata: Entender la izquierda y la derecha",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
+              "Android 1.0.0 (versionCode 11): Estos cinco temas describen una versión candidata aún no publicada para pruebas. Las pantallas y funciones pueden no estar disponibles en la versión publicada actualmente.",
               "La izquierda y la derecha siempre se refieren a su cuerpo. Desde mi perspectiva y Vista de frente solo cambian cómo se muestra el dibujo. La selección y los registros guardados mantienen el mismo lado del cuerpo. Compruebe el nombre seleccionado o elija por texto en la lista de zonas. También puede cambiar la vista en Ajustes.",
               "Parte superior izquierda del abdomen · Parte superior derecha del abdomen · Parte inferior izquierda del abdomen · Parte inferior derecha del abdomen · Muslo izquierdo · Muslo derecho · Parte superior del brazo izquierdo · Parte superior del brazo derecho"
             ]
@@ -1951,7 +1951,7 @@
             "id": "candidate-dates",
             "question": "Guida alla versione candidata: Scegliere date e orari",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
+              "Android 1.0.0 (versionCode 11): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
               "Tocca una data o un’ora per aprire il selettore di sistema. Per le date meno recenti cambia mese o anno e scegli AM/PM quando compare. Annulla mantiene la tua immissione; confermare cambia solo la bozza. Salva la registrazione per conservare le modifiche. Usa la matita per inserire date come YYYY-MM-DD o YYYYMMDD e orari a 24 ore come HH:mm o HHmm."
             ]
           },
@@ -1959,7 +1959,7 @@
             "id": "candidate-edit",
             "question": "Guida alla versione candidata: Correggere una registrazione",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
+              "Android 1.0.0 (versionCode 11): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
               "In Cronologia scegli la data, poi Modifica sulla registrazione. Salvando aggiorni la stessa registrazione. Se cambi la data, la registrazione aggiornata si trova nella nuova data. Le misurazioni importate da Health Connect sono di sola lettura: correggile nell’app originale."
             ]
           },
@@ -1967,7 +1967,7 @@
             "id": "candidate-past",
             "question": "Guida alla versione candidata: Aggiungere un’iniezione passata",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
+              "Android 1.0.0 (versionCode 11): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
               "In Cronologia scegli una data passata e aggiungi una somministrazione. Conferma medicinale, dose, unità e ora effettiva prima di salvare. Puoi gestire le registrazioni senza creare un piano. Le registrazioni senza piano non modificano calendario o scorte. Per quelle collegate a un piano, controlla se verranno scalate le scorte. Ripristinare un backup crittografato sostituisce i dati: è un’operazione distinta. La riduzione delle scorte è inizialmente disattivata per le registrazioni passate: controlla la scelta mostrata. Se cambia l’ultima iniezione di un piano collegato, le date future ancora in sospeso potrebbero essere modificate."
             ]
           },
@@ -1975,7 +1975,7 @@
             "id": "candidate-health",
             "question": "Guida alla versione candidata: Trovare misurazioni mancanti",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
+              "Android 1.0.0 (versionCode 11): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
               "Controlla l’app originale e Health Connect. In Corpo di DoseWeek verifica la misura e il periodo. Nelle Impostazioni apri Health Connect e scegli Importa ora. Se mancano risultati, controlla i permessi di lettura e delle registrazioni passate separatamente dalla sincronizzazione nell’app originale. La data della misurazione è quella effettiva, non quella dell’importazione."
             ]
           },
@@ -1983,7 +1983,7 @@
             "id": "candidate-sites",
             "question": "Guida alla versione candidata: Capire destra e sinistra",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
+              "Android 1.0.0 (versionCode 11): Questi cinque argomenti descrivono una versione candidata non ancora pubblicata, destinata alle prove. Schermate e funzioni potrebbero non essere disponibili nella versione attualmente pubblicata.",
               "Destra e sinistra si riferiscono sempre al tuo corpo. Dal mio punto di vista e Vista frontale cambiano solo come viene mostrata la figura. La selezione e le registrazioni salvate mantengono lo stesso lato del corpo. Controlla il nome selezionato o scegli il testo nell’elenco delle zone. Puoi cambiare vista anche nelle Impostazioni.",
               "Addome in alto a sinistra · Addome in alto a destra · Addome in basso a sinistra · Addome in basso a destra · Coscia sinistra · Coscia destra · Parte superiore del braccio sinistro · Parte superiore del braccio destro"
             ]
@@ -2241,7 +2241,7 @@
             "id": "candidate-dates",
             "question": "Uitleg bij de testversie: Datums en tijden kiezen",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
+              "Android 1.0.0 (versionCode 11): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
               "Tik op een datum of tijd om de systeemkiezer te openen. Gebruik maand of jaar voor oudere datums en kies AM/PM als dit verschijnt. Annuleren behoudt uw invoer; bevestigen wijzigt alleen het concept. Sla de registratie op om de wijzigingen te bewaren. Gebruik het potlood om datums als YYYY-MM-DD of YYYYMMDD en tijden in 24-uursnotatie als HH:mm of HHmm te typen."
             ]
           },
@@ -2249,7 +2249,7 @@
             "id": "candidate-edit",
             "question": "Uitleg bij de testversie: Een registratie corrigeren",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
+              "Android 1.0.0 (versionCode 11): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
               "Kies in Geschiedenis de datum en vervolgens Bewerken bij de registratie. Opslaan werkt dezelfde registratie bij. Als u de datum wijzigt, staat de bijgewerkte registratie onder de nieuwe datum. Metingen uit Health Connect zijn alleen-lezen: corrigeer ze in de oorspronkelijke app."
             ]
           },
@@ -2257,7 +2257,7 @@
             "id": "candidate-past",
             "question": "Uitleg bij de testversie: Een eerdere injectie toevoegen",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
+              "Android 1.0.0 (versionCode 11): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
               "Kies in Geschiedenis een eerdere datum en voeg een toediening toe. Bevestig vóór het opslaan het geneesmiddel, de dosis, de eenheid en de werkelijke tijd. U kunt registraties zonder plan beheren. Registraties zonder plan veranderen geen schema of voorraad. Controleer bij gekoppelde registraties of voorraad wordt afgetrokken. Een versleutelde back-up terugzetten vervangt gegevens en is een aparte handeling. Voor eerdere registraties staat voorraadaftrek standaard uit; controleer de getoonde keuze. Als de laatste injectie van een gekoppeld plan verandert, kunnen toekomstige nog openstaande datums worden aangepast."
             ]
           },
@@ -2265,7 +2265,7 @@
             "id": "candidate-health",
             "question": "Uitleg bij de testversie: Ontbrekende metingen vinden",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
+              "Android 1.0.0 (versionCode 11): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
               "Controleer de oorspronkelijke app en Health Connect. Controleer in Lichaam van DoseWeek de meetwaarde en periode. Open Health Connect in Instellingen en kies Nu ophalen. Controleer bij ontbrekende resultaten de leesrechten en toegang tot eerdere registraties los van de synchronisatie in de oorspronkelijke app. De meetdatum is wanneer er is gemeten, niet wanneer er is geïmporteerd."
             ]
           },
@@ -2273,7 +2273,7 @@
             "id": "candidate-sites",
             "question": "Uitleg bij de testversie: Links en rechts begrijpen",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
+              "Android 1.0.0 (versionCode 11): Deze vijf onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie voor tests. De schermen en functies zijn mogelijk niet beschikbaar in de huidige uitgebrachte app.",
               "Links en rechts betekenen altijd uw eigen lichaam. Vanuit mijn perspectief en Van voren veranderen alleen de weergave. Uw keuze en opgeslagen registraties behouden dezelfde lichaamskant. Controleer de gekozen naam of kies uit de lijst met plaatsen. U kunt de weergave ook in Instellingen wijzigen.",
               "Linksboven op de buik · Rechtsboven op de buik · Linksonder op de buik · Rechtsonder op de buik · Linkerdij · Rechterdij · Linkerbovenarm · Rechterbovenarm"
             ]
@@ -2531,7 +2531,7 @@
             "id": "candidate-dates",
             "question": "Guia da versão candidata: Escolher datas e horas",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
               "Toque numa data ou hora para abrir o seletor do sistema. Para datas antigas, mude o mês ou ano e escolha AM/PM quando aparecer. Cancelar mantém a sua entrada; confirmar muda apenas o rascunho. Guarde o registo para manter as alterações. Use o lápis para escrever datas como YYYY-MM-DD ou YYYYMMDD e horas no formato de 24 horas HH:mm ou HHmm."
             ]
           },
@@ -2539,7 +2539,7 @@
             "id": "candidate-edit",
             "question": "Guia da versão candidata: Corrigir um registo",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
               "Em Histórico, escolha a data e depois Editar no registo. Ao guardar, o mesmo registo é atualizado. Se mudar a data, o registo atualizado fica na nova data. As medições importadas do Health Connect são apenas de leitura: corrija-as na aplicação original."
             ]
           },
@@ -2547,7 +2547,7 @@
             "id": "candidate-past",
             "question": "Guia da versão candidata: Adicionar uma injeção anterior",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
               "Em Histórico, escolha uma data passada e adicione uma administração. Confirme medicamento, dose, unidade e hora real antes de guardar. Pode gerir registos sem criar um plano. Registos sem plano não alteram o horário nem o stock. Nos registos associados a um plano, confirme se o stock será descontado. Restaurar uma cópia de segurança encriptada substitui os dados e é uma ação separada. O desconto de stock está inicialmente desativado para registos anteriores; confirme a opção apresentada. Se a última injeção de um plano associado mudar, as datas futuras ainda pendentes poderão ser ajustadas."
             ]
           },
@@ -2555,7 +2555,7 @@
             "id": "candidate-health",
             "question": "Guia da versão candidata: Encontrar medições em falta",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
               "Verifique a aplicação original e o Health Connect. Em Corpo no DoseWeek, verifique a medida e o período. Em Definições, abra Health Connect e escolha Importar agora. Se faltarem resultados, verifique as permissões de leitura e de registos anteriores separadamente da sincronização na aplicação original. A data da medição é quando foi feita, não quando foi importada."
             ]
           },
@@ -2563,7 +2563,7 @@
             "id": "candidate-sites",
             "question": "Guia da versão candidata: Compreender esquerda e direita",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. Os ecrãs e funcionalidades podem não estar disponíveis na versão atualmente publicada.",
               "Esquerda e direita referem-se sempre ao seu corpo. Na minha perspetiva e Vista de frente mudam apenas a apresentação. A sua seleção e os registos guardados mantêm o mesmo lado do corpo. Confirme o nome selecionado ou escolha pelo texto na lista de locais. Também pode mudar a vista em Definições.",
               "Parte superior esquerda do abdómen · Parte superior direita do abdómen · Parte inferior esquerda do abdómen · Parte inferior direita do abdómen · Coxa esquerda · Coxa direita · Parte superior do braço esquerdo · Parte superior do braço direito"
             ]
@@ -2821,7 +2821,7 @@
             "id": "candidate-dates",
             "question": "Wskazówki dotyczące wersji testowej: Wybieranie daty i godziny",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
+              "Android 1.0.0 (versionCode 11): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
               "Dotknij daty lub godziny, aby otworzyć systemowy wybór. Dla starszych dat zmień miesiąc lub rok. Wybierz AM/PM, jeśli jest widoczne. Anuluj zachowuje wpisaną wartość; potwierdzenie zmienia tylko wersję roboczą. Zapisz rekord, aby zachować zmiany. Ikona ołówka pozwala wpisać datę jako YYYY-MM-DD lub YYYYMMDD oraz godzinę w formacie 24-godzinnym HH:mm lub HHmm."
             ]
           },
@@ -2829,7 +2829,7 @@
             "id": "candidate-edit",
             "question": "Wskazówki dotyczące wersji testowej: Poprawianie zapisu",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
+              "Android 1.0.0 (versionCode 11): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
               "W Historii wybierz datę, a następnie Edytuj przy zapisie. Zapisanie aktualizuje ten sam zapis. Po zmianie daty zaktualizowany zapis znajduje się pod nową datą. Pomiary z Health Connect są tylko do odczytu: popraw je w aplikacji źródłowej."
             ]
           },
@@ -2837,7 +2837,7 @@
             "id": "candidate-past",
             "question": "Wskazówki dotyczące wersji testowej: Dodawanie wcześniejszego zastrzyku",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
+              "Android 1.0.0 (versionCode 11): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
               "W Historii wybierz wcześniejszą datę i dodaj podanie. Przed zapisaniem potwierdź lek, dawkę, jednostkę i rzeczywistą godzinę. Możesz prowadzić zapisy bez planu. Zapisy bez planu nie zmieniają harmonogramu ani zapasu. Przy zapisach powiązanych z planem sprawdź, czy zapas zostanie zmniejszony. Przywrócenie zaszyfrowanej kopii zapasowej zastępuje dane i jest oddzielną czynnością. Zmniejszanie zapasu jest domyślnie wyłączone dla wcześniejszych zapisów; sprawdź widoczny wybór. Zmiana ostatniego zastrzyku w powiązanym planie może dostosować przyszłe nierozstrzygnięte terminy."
             ]
           },
@@ -2845,7 +2845,7 @@
             "id": "candidate-health",
             "question": "Wskazówki dotyczące wersji testowej: Szukanie brakujących pomiarów",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
+              "Android 1.0.0 (versionCode 11): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
               "Sprawdź aplikację źródłową i Health Connect. W Pomiary w DoseWeek sprawdź rodzaj pomiaru i okres. W Ustawieniach otwórz Health Connect i wybierz Pobierz teraz. Przy brakujących wynikach sprawdź uprawnienia odczytu i wcześniejszych zapisów oddzielnie od synchronizacji aplikacji źródłowej. Data pomiaru oznacza jego wykonanie, a nie import."
             ]
           },
@@ -2853,7 +2853,7 @@
             "id": "candidate-sites",
             "question": "Wskazówki dotyczące wersji testowej: Rozróżnianie lewej i prawej strony",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
+              "Android 1.0.0 (versionCode 11): Te pięć tematów opisuje nieopublikowaną jeszcze wersję kandydującą do testów. Opisane ekrany i funkcje mogą być niedostępne w obecnie opublikowanej aplikacji.",
               "Lewa i prawa strona zawsze odnoszą się do Twojego ciała. Z mojej perspektywy i Widok z przodu zmieniają tylko sposób wyświetlania rysunku. Wybór i zapisane rekordy zachowują tę samą stronę ciała. Sprawdź wybraną nazwę lub wybierz ją z listy miejsc. Widok można zmienić również w Ustawieniach.",
               "Górna lewa część brzucha · Górna prawa część brzucha · Dolna lewa część brzucha · Dolna prawa część brzucha · Lewe udo · Prawe udo · Lewe ramię · Prawe ramię"
             ]
@@ -3111,7 +3111,7 @@
             "id": "candidate-dates",
             "question": "Hjälp för testversionen: Välj datum och klockslag",
             "answers": [
-              "Android 1.0.0 (versionCode 10): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
+              "Android 1.0.0 (versionCode 11): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
               "Tryck på ett datum eller klockslag för att öppna systemets väljare. Byt månad eller år för äldre datum och välj AM/PM om det visas. Avbryt behåller din inmatning; bekräftelse ändrar bara utkastet. Spara posten för att behålla ändringarna. Använd pennan för att skriva datum som YYYY-MM-DD eller YYYYMMDD och klockslag i 24-timmarsformat som HH:mm eller HHmm."
             ]
           },
@@ -3119,7 +3119,7 @@
             "id": "candidate-edit",
             "question": "Hjälp för testversionen: Rätta en post",
             "answers": [
-              "Android 1.0.0 (versionCode 10): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
+              "Android 1.0.0 (versionCode 11): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
               "Välj datum i Historik och sedan Redigera på posten. När du sparar uppdateras samma post. Om du ändrar datumet finns den uppdaterade posten under det nya datumet. Mätningar från Health Connect är skrivskyddade: rätta dem i ursprungsappen."
             ]
           },
@@ -3127,7 +3127,7 @@
             "id": "candidate-past",
             "question": "Hjälp för testversionen: Lägg till en tidigare injektion",
             "answers": [
-              "Android 1.0.0 (versionCode 10): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
+              "Android 1.0.0 (versionCode 11): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
               "Välj ett tidigare datum i Historik och lägg till en given dos. Bekräfta läkemedel, dos, enhet och faktiskt klockslag innan du sparar. Du kan hantera poster utan en plan. Poster utan plan ändrar inte schema eller lager. För kopplade poster ska du kontrollera om lagret minskas. Att återställa en krypterad säkerhetskopia ersätter data och är en separat åtgärd. Lagerminskning är avstängd från början för tidigare poster; kontrollera det visade valet. Om den senaste injektionen i en kopplad plan ändras kan framtida ännu öppna datum justeras."
             ]
           },
@@ -3135,7 +3135,7 @@
             "id": "candidate-health",
             "question": "Hjälp för testversionen: Hitta saknade mätningar",
             "answers": [
-              "Android 1.0.0 (versionCode 10): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
+              "Android 1.0.0 (versionCode 11): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
               "Kontrollera ursprungsappen och Health Connect. Kontrollera mätvärde och period i Kropp i DoseWeek. Öppna Health Connect i Inställningar och välj Hämta nu. Om resultat saknas, kontrollera läsbehörighet och behörighet för tidigare poster separat från synkroniseringen i ursprungsappen. Mätdatumet är när mätningen gjordes, inte när den importerades."
             ]
           },
@@ -3143,7 +3143,7 @@
             "id": "candidate-sites",
             "question": "Hjälp för testversionen: Förstå vänster och höger",
             "answers": [
-              "Android 1.0.0 (versionCode 10): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
+              "Android 1.0.0 (versionCode 11): De här fem ämnena beskriver en ännu inte släppt kandidatversion för testning. Skärmar och funktioner kanske inte finns i den nu utgivna appen.",
               "Vänster och höger avser alltid din egen kropp. Ur mitt perspektiv och Framifrån ändrar bara hur bilden visas. Ditt val och sparade poster behåller samma kroppssida. Kontrollera valt namn eller välj via text i listan med ställen. Du kan också byta vy i Inställningar.",
               "Övre vänstra delen av buken · Övre högra delen av buken · Nedre vänstra delen av buken · Nedre högra delen av buken · Vänster lår · Höger lår · Vänster överarm · Höger överarm"
             ]
@@ -3401,7 +3401,7 @@
             "id": "candidate-dates",
             "question": "परीक्षण संस्करण की जानकारी: तारीख और समय चुनें",
             "answers": [
-              "Android 1.0.0 (versionCode 10): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
+              "Android 1.0.0 (versionCode 11): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
               "सिस्टम का चयन विकल्प खोलने के लिए तारीख या समय पर टैप करें। पुरानी तारीखों के लिए महीना या वर्ष बदलें। AM/PM दिखे तो उसे भी चुनें। रद्द करने से पुराना इनपुट बना रहता है; चयन की पुष्टि करने से केवल मसौदा बदलता है। बदलाव रखने के लिए रिकॉर्ड सहेजें। पेंसिल से सीधे लिख सकते हैं। तारीख YYYY-MM-DD या YYYYMMDD और समय 24 घंटे में HH:mm या HHmm लिखें।"
             ]
           },
@@ -3409,7 +3409,7 @@
             "id": "candidate-edit",
             "question": "परीक्षण संस्करण की जानकारी: रिकॉर्ड सुधारें",
             "answers": [
-              "Android 1.0.0 (versionCode 10): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
+              "Android 1.0.0 (versionCode 11): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
               "“इतिहास” में तारीख चुनें, फिर रिकॉर्ड पर बदलाव का विकल्प चुनें। सहेजने से वही रिकॉर्ड अपडेट होता है। तारीख बदलने पर अपडेट हुआ रिकॉर्ड नई तारीख में रहता है। Health Connect से आए माप केवल पढ़े जा सकते हैं; उन्हें मूल ऐप में सुधारें।"
             ]
           },
@@ -3417,7 +3417,7 @@
             "id": "candidate-past",
             "question": "परीक्षण संस्करण की जानकारी: पुराने इंजेक्शन का रिकॉर्ड जोड़ें",
             "answers": [
-              "Android 1.0.0 (versionCode 10): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
+              "Android 1.0.0 (versionCode 11): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
               "“इतिहास” में पुरानी तारीख चुनकर दवा देने का रिकॉर्ड जोड़ें। सहेजने से पहले दवा, खुराक, इकाई और वास्तविक समय की पुष्टि करें। योजना बनाए बिना भी रिकॉर्ड संभाल सकते हैं। बिना योजना वाले रिकॉर्ड समय-सारणी या स्टॉक नहीं बदलते। योजना से जुड़े रिकॉर्ड में देखें कि स्टॉक घटेगा या नहीं। एन्क्रिप्ट किया गया बैकअप बहाल करना अलग काम है, जो डेटा बदल देता है। पुराने रिकॉर्ड के लिए स्टॉक घटाना शुरू में बंद रहता है; दिखा विकल्प जाँचें। जुड़ी योजना का सबसे हाल का इंजेक्शन बदलने पर आगे की लंबित तारीखें बदल सकती हैं।"
             ]
           },
@@ -3425,7 +3425,7 @@
             "id": "candidate-health",
             "question": "परीक्षण संस्करण की जानकारी: न दिख रहे माप ढूँढ़ें",
             "answers": [
-              "Android 1.0.0 (versionCode 10): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
+              "Android 1.0.0 (versionCode 11): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
               "मूल ऐप और Health Connect में जाँचें। DoseWeek के “शरीर” में माप और अवधि देखें। “सेटिंग” में Health Connect खोलकर “अभी इंपोर्ट करें” चुनें। नतीजे न मिलें तो पढ़ने और पुराने रिकॉर्ड की अनुमतियाँ, तथा मूल ऐप की सिंक स्थिति अलग-अलग जाँचें। माप की तारीख उसका वास्तविक समय है, आयात का समय नहीं।"
             ]
           },
@@ -3433,7 +3433,7 @@
             "id": "candidate-sites",
             "question": "परीक्षण संस्करण की जानकारी: बाएँ और दाएँ को समझें",
             "answers": [
-              "Android 1.0.0 (versionCode 10): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
+              "Android 1.0.0 (versionCode 11): ये पाँच विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ ऐप के वर्तमान जारी संस्करण में उपलब्ध न हों।",
               "बायाँ और दायाँ हमेशा आपके अपने शरीर के अनुसार हैं। “मेरे शरीर के अनुसार” और “सामने से देखें” केवल चित्र दिखाने का तरीका बदलते हैं। आपका चयन और सहेजे गए रिकॉर्ड शरीर की वही तरफ़ रखते हैं। चुनी जगह का नाम जाँचें या जगहों की सूची से नाम चुनें। “सेटिंग” में भी दृश्य बदल सकते हैं।",
               "पेट का ऊपरी बायाँ हिस्सा · पेट का ऊपरी दायाँ हिस्सा · पेट का निचला बायाँ हिस्सा · पेट का निचला दायाँ हिस्सा · बाईं जांघ · दाईं जांघ · बाईं ऊपरी बांह · दाईं ऊपरी बांह"
             ]
@@ -3691,7 +3691,7 @@
             "id": "candidate-dates",
             "question": "Guia da versão candidata: Escolher datas e horários",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
               "Toque em uma data ou horário para abrir o seletor do sistema. Para datas antigas, mude o mês ou ano e escolha AM/PM quando aparecer. Cancelar mantém sua entrada; confirmar muda apenas o rascunho. Salve o registro para manter as alterações. Use o lápis para digitar datas como YYYY-MM-DD ou YYYYMMDD e horários de 24 horas como HH:mm ou HHmm."
             ]
           },
@@ -3699,7 +3699,7 @@
             "id": "candidate-edit",
             "question": "Guia da versão candidata: Corrigir um registro",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
               "Em Histórico, escolha a data e depois Editar no registro. Ao salvar, o mesmo registro é atualizado. Se mudar a data, o registro atualizado fica na nova data. As medições importadas do Health Connect são somente leitura: corrija-as no app original."
             ]
           },
@@ -3707,7 +3707,7 @@
             "id": "candidate-past",
             "question": "Guia da versão candidata: Adicionar uma injeção anterior",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
               "Em Histórico, escolha uma data passada e adicione uma administração. Confirme medicamento, dose, unidade e horário real antes de salvar. Você pode gerenciar registros sem criar um plano. Registros sem plano não alteram a programação nem o estoque. Nos registros vinculados a um plano, confira se haverá desconto no estoque. Restaurar um backup criptografado substitui os dados e é uma ação separada. O desconto de estoque começa desativado para registros anteriores; confira a opção exibida. Se a última injeção de um plano vinculado mudar, as datas futuras ainda pendentes poderão ser ajustadas."
             ]
           },
@@ -3715,7 +3715,7 @@
             "id": "candidate-health",
             "question": "Guia da versão candidata: Encontrar medições que não aparecem",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
               "Confira o app original e o Health Connect. Em Corpo no DoseWeek, confira a medida e o período. Em Ajustes, abra Health Connect e escolha Importar agora. Se faltarem resultados, confira as permissões de leitura e de registros anteriores separadamente da sincronização no app original. A data da medição é quando ela foi feita, não quando foi importada."
             ]
           },
@@ -3723,7 +3723,7 @@
             "id": "candidate-sites",
             "question": "Guia da versão candidata: Entender esquerda e direita",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
+              "Android 1.0.0 (versionCode 11): Estes cinco tópicos descrevem uma versão candidata ainda não publicada, destinada a testes. As telas e os recursos podem não estar disponíveis na versão publicada atualmente.",
               "Esquerda e direita sempre se referem ao seu corpo. Na minha perspectiva e Vista de frente mudam apenas a exibição. Sua seleção e os registros salvos mantêm o mesmo lado do corpo. Confira o nome selecionado ou escolha pelo texto na lista de locais. Você também pode mudar a visualização em Ajustes.",
               "Parte superior esquerda do abdômen · Parte superior direita do abdômen · Parte inferior esquerda do abdômen · Parte inferior direita do abdômen · Coxa esquerda · Coxa direita · Parte superior do braço esquerdo · Parte superior do braço direito"
             ]
@@ -3981,7 +3981,7 @@
             "id": "candidate-dates",
             "question": "إرشادات الإصدار التجريبي: اختيار التاريخ والوقت",
             "answers": [
-              "Android 1.0.0 (versionCode 10): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
+              "Android 1.0.0 (versionCode 11): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
               "اضغط على تاريخ أو وقت لفتح أداة الاختيار في النظام. للتواريخ القديمة، غيّر الشهر أو السنة، واختر صباحًا أو مساءً إن ظهر الخيار. الإلغاء يبقي إدخالك كما هو؛ وتأكيد الاختيار يغيّر المسودة فقط. احفظ السجل للاحتفاظ بالتغييرات. استخدم القلم لكتابة التاريخ بصيغة YYYY-MM-DD أو YYYYMMDD والوقت بنظام 24 ساعة بصيغة HH:mm أو HHmm."
             ]
           },
@@ -3989,7 +3989,7 @@
             "id": "candidate-edit",
             "question": "إرشادات الإصدار التجريبي: تصحيح سجل",
             "answers": [
-              "Android 1.0.0 (versionCode 10): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
+              "Android 1.0.0 (versionCode 11): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
               "في «السجل»، اختر التاريخ ثم «تعديل» في السجل المطلوب. يؤدي الحفظ إلى تحديث السجل نفسه. إذا غيّرت التاريخ، يظهر السجل المحدّث تحت التاريخ الجديد. قياسات Health Connect المستوردة للقراءة فقط؛ صحّحها في التطبيق الأصلي."
             ]
           },
@@ -3997,7 +3997,7 @@
             "id": "candidate-past",
             "question": "إرشادات الإصدار التجريبي: إضافة حقنة سابقة",
             "answers": [
-              "Android 1.0.0 (versionCode 10): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
+              "Android 1.0.0 (versionCode 11): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
               "في «السجل»، اختر تاريخًا سابقًا وأضف إعطاء الدواء. تأكد من الدواء والجرعة والوحدة والوقت الفعلي قبل الحفظ. يمكنك إدارة السجلات دون إنشاء خطة. السجلات دون خطة لا تغيّر الجدول أو المخزون. للسجلات المرتبطة بخطة، تحقّق مما إذا كان سيُخصم من المخزون. استعادة نسخة احتياطية مشفّرة تستبدل البيانات، وهي إجراء منفصل. خصم المخزون معطّل افتراضيًا للسجلات السابقة؛ راجع الخيار المعروض. إذا تغيّرت أحدث حقنة في خطة مرتبطة، فقد تُعدّل المواعيد المستقبلية التي لم تُحسم بعد."
             ]
           },
@@ -4005,7 +4005,7 @@
             "id": "candidate-health",
             "question": "إرشادات الإصدار التجريبي: العثور على القياسات المفقودة",
             "answers": [
-              "Android 1.0.0 (versionCode 10): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
+              "Android 1.0.0 (versionCode 11): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
               "تحقّق من التطبيق الأصلي وHealth Connect. في «الجسم» داخل DoseWeek، تحقّق من نوع القياس والفترة. افتح Health Connect من «الإعدادات» واختر «الاستيراد الآن». إذا لم تظهر نتائج، تحقّق من أذونات القراءة وأذونات السجلات السابقة بشكل منفصل عن مزامنة التطبيق الأصلي. تاريخ القياس هو وقت إجرائه الفعلي، لا وقت استيراده."
             ]
           },
@@ -4013,7 +4013,7 @@
             "id": "candidate-sites",
             "question": "إرشادات الإصدار التجريبي: فهم اليسار واليمين",
             "answers": [
-              "Android 1.0.0 (versionCode 10): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
+              "Android 1.0.0 (versionCode 11): تصف هذه المواضيع الخمسة إصدارًا مرشحًا للاختبار لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف المذكورة في الإصدار المنشور حاليًا من التطبيق.",
               "اليسار واليمين يعنيان دائمًا جانبي جسمك أنت. «من منظور جسمي» و«من الأمام» يغيّران طريقة عرض الرسم فقط. تبقى جهة الجسم في اختيارك وسجلاتك المحفوظة كما هي. تحقّق من اسم الموضع المحدد أو اختر بالنص من قائمة المواضع. يمكنك تغيير العرض أيضًا من «الإعدادات».",
               "أعلى يسار البطن · أعلى يمين البطن · أسفل يسار البطن · أسفل يمين البطن · الفخذ الأيسر · الفخذ الأيمن · أعلى الذراع اليسرى · أعلى الذراع اليمنى"
             ]
@@ -4271,7 +4271,7 @@
             "id": "candidate-dates",
             "question": "未发布版本指南: 选择日期和时刻",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
+              "Android 1.0.0 (versionCode 11): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
               "轻点日期或时刻即可打开系统选择器。较早的日期可切换月份或年份；显示上午、下午时请一并选择。取消会保留原输入，确认选择只会更改草稿。还需保存记录才能保留更改。 也可点铅笔直接输入。日期格式为 YYYY-MM-DD 或 YYYYMMDD，时刻为24小时制 HH:mm 或 HHmm。"
             ]
           },
@@ -4279,7 +4279,7 @@
             "id": "candidate-edit",
             "question": "未发布版本指南: 修改记录",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
+              "Android 1.0.0 (versionCode 11): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
               "在“记录”中选择日期，再点击该记录的编辑按钮。保存会更新同一条记录。如果更改日期，更新后的记录会位于新日期。Health Connect 导入的测量值为只读，请在最初记录的应用中修改。"
             ]
           },
@@ -4287,7 +4287,7 @@
             "id": "candidate-past",
             "question": "未发布版本指南: 添加过去的注射记录",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
+              "Android 1.0.0 (versionCode 11): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
               "在“记录”中选择过去的日期并添加用药记录。保存前请确认药品、剂量、单位和实际用药时刻。您也可以不创建计划，仅管理记录。未关联计划的记录不会更改日程或库存。关联计划的记录请确认是否扣减库存。恢复加密备份会替换数据，是另一项操作。 过去记录的库存扣减默认关闭，请确认显示的选项。若关联计划的最近一次注射改变，未来尚未处理的日程日期可能会调整。"
             ]
           },
@@ -4295,7 +4295,7 @@
             "id": "candidate-health",
             "question": "未发布版本指南: 查找未显示的测量记录",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
+              "Android 1.0.0 (versionCode 11): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
               "先检查原应用和 Health Connect。在 DoseWeek 的“身体”中确认指标和时间范围。在“设置”中打开 Health Connect，选择“立即导入”。如没有结果，请分别检查读取权限、过去记录的权限，以及原应用的同步状态。测量日期是实际测量时刻，并非导入时刻。"
             ]
           },
@@ -4303,7 +4303,7 @@
             "id": "candidate-sites",
             "question": "未发布版本指南: 确认身体左右侧",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
+              "Android 1.0.0 (versionCode 11): 这五项内容是尚未发布的候选版本的测试指南。当前已发布的应用可能尚不提供所述界面或功能。",
               "左右始终以您自己的身体为准。“以自身为准”和“正面视角”只改变图示的显示方式。所选部位和已保存记录的身体左右侧不会改变。请核对已选部位名称，或从部位列表按名称选择。您也可以在“设置”中切换视角。",
               "左上腹部 · 右上腹部 · 左下腹部 · 右下腹部 · 左大腿 · 右大腿 · 左上臂 · 右上臂"
             ]
@@ -4561,7 +4561,7 @@
             "id": "candidate-dates",
             "question": "未發布版本指南: 選擇日期和時刻",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
+              "Android 1.0.0 (versionCode 11): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
               "點一下日期或時刻即可開啟系統選擇器。較早的日期可切換月份或年份；顯示上午、下午時請一併選擇。取消會保留原輸入，確認選擇只會更改草稿。還需儲存紀錄才能保留更改。 也可點選鉛筆直接輸入。日期格式為 YYYY-MM-DD 或 YYYYMMDD，時刻為24小時制 HH:mm 或 HHmm。"
             ]
           },
@@ -4569,7 +4569,7 @@
             "id": "candidate-edit",
             "question": "未發布版本指南: 修改紀錄",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
+              "Android 1.0.0 (versionCode 11): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
               "在「紀錄」中選擇日期，再點選該紀錄的編輯按鈕。儲存會更新同一筆紀錄。如果更改日期，更新後的紀錄會位於新日期。Health Connect 匯入的測量值為唯讀，請在最初記錄的 App 中修改。"
             ]
           },
@@ -4577,7 +4577,7 @@
             "id": "candidate-past",
             "question": "未發布版本指南: 新增過去的注射紀錄",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
+              "Android 1.0.0 (versionCode 11): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
               "在「紀錄」中選擇過去的日期並新增用藥紀錄。儲存前請確認藥品、劑量、單位和實際用藥時刻。您也可以不建立計畫，僅管理紀錄。未關聯計畫的紀錄不會更改排程或庫存。關聯計畫的紀錄請確認是否扣減庫存。還原加密備份會取代資料，是另一項操作。 過去紀錄的庫存扣減預設關閉，請確認顯示的選項。若關聯計畫的最近一次注射改變，未來尚未處理的排程日期可能會調整。"
             ]
           },
@@ -4585,7 +4585,7 @@
             "id": "candidate-health",
             "question": "未發布版本指南: 尋找未顯示的測量紀錄",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
+              "Android 1.0.0 (versionCode 11): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
               "先檢查原 App 和 Health Connect。在 DoseWeek 的「身體」中確認指標和時間範圍。在「設定」中開啟 Health Connect，選擇「立即匯入」。如沒有結果，請分別檢查讀取權限、過去紀錄的權限，以及原 App 的同步狀態。測量日期是實際測量時刻，並非匯入時刻。"
             ]
           },
@@ -4593,7 +4593,7 @@
             "id": "candidate-sites",
             "question": "未發布版本指南: 確認身體左右側",
             "answers": [
-              "Android 1.0.0 (versionCode 10): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
+              "Android 1.0.0 (versionCode 11): 這五項內容是尚未發布的候選版本測試指南。目前已發布的 App 可能尚未提供所述畫面或功能。",
               "左右始終以您自己的身體為準。「以自身為準」和「正面視角」只改變圖示的顯示方式。所選部位和已儲存紀錄的身體左右側不會改變。請核對已選部位名稱，或從部位列表按名稱選擇。您也可以在「設定」中切換視角。",
               "左上腹部 · 右上腹部 · 左下腹部 · 右下腹部 · 左大腿 · 右大腿 · 左上臂 · 右上臂"
             ]
@@ -4851,7 +4851,7 @@
             "id": "candidate-dates",
             "question": "Aday sürüm kılavuzu: Tarih ve saat seçimi",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
+              "Android 1.0.0 (versionCode 11): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
               "Sistem seçicisini açmak için tarih veya saate dokunun. Eski tarihler için ayı veya yılı değiştirin; görünüyorsa AM/PM seçimini yapın. Vazgeç, girişinizi korur; seçimi onaylamak yalnızca taslağı değiştirir. Değişiklikleri korumak için kaydı kaydedin. Kalemle tarihi YYYY-MM-DD veya YYYYMMDD, saati 24 saat biçiminde HH:mm veya HHmm olarak yazabilirsiniz."
             ]
           },
@@ -4859,7 +4859,7 @@
             "id": "candidate-edit",
             "question": "Aday sürüm kılavuzu: Bir kaydı düzeltme",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
+              "Android 1.0.0 (versionCode 11): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
               "Geçmiş bölümünde tarihi, ardından kayıttaki Düzenle seçeneğini seçin. Kaydettiğinizde aynı kayıt güncellenir. Tarihi değiştirirseniz güncellenen kayıt yeni tarihin altında yer alır. Health Connect’ten alınan ölçümler salt okunurdur; bunları kaynak uygulamada düzeltin."
             ]
           },
@@ -4867,7 +4867,7 @@
             "id": "candidate-past",
             "question": "Aday sürüm kılavuzu: Geçmiş bir enjeksiyon ekleme",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
+              "Android 1.0.0 (versionCode 11): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
               "Geçmiş bölümünde eski bir tarih seçip ilaç uygulaması ekleyin. Kaydetmeden önce ilacı, dozu, birimi ve gerçek saati doğrulayın. Plan oluşturmadan kayıtları yönetebilirsiniz. Plansız kayıtlar takvimi veya stoğu değiştirmez. Plana bağlı kayıtlarda stok düşülüp düşülmeyeceğini kontrol edin. Şifreli yedeği geri yüklemek verileri değiştirir ve ayrı bir işlemdir. Geçmiş kayıtlar için stok düşme başlangıçta kapalıdır; gösterilen seçimi kontrol edin. Bağlı plandaki en son enjeksiyon değişirse gelecekteki henüz sonuçlanmamış tarihler ayarlanabilir."
             ]
           },
@@ -4875,7 +4875,7 @@
             "id": "candidate-health",
             "question": "Aday sürüm kılavuzu: Eksik ölçümleri bulma",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
+              "Android 1.0.0 (versionCode 11): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
               "Kaynak uygulamayı ve Health Connect’i kontrol edin. DoseWeek’te Vücut bölümünde ölçümü ve dönemi kontrol edin. Ayarlar’da Health Connect’i açıp Şimdi al seçeneğini seçin. Sonuç eksikse okuma ve geçmiş kayıt izinlerini, kaynak uygulamanın eşitlemesinden ayrı kontrol edin. Ölçüm tarihi, içe aktarma değil gerçek ölçüm zamanıdır."
             ]
           },
@@ -4883,7 +4883,7 @@
             "id": "candidate-sites",
             "question": "Aday sürüm kılavuzu: Sol ve sağı anlama",
             "answers": [
-              "Android 1.0.0 (versionCode 10): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
+              "Android 1.0.0 (versionCode 11): Bu beş konu, test için henüz yayımlanmamış bir aday sürümü açıklar. Ekranlar ve işlevler, uygulamanın şu an yayımlanan sürümünde bulunmayabilir.",
               "Sol ve sağ her zaman kendi vücudunuza göredir. Kendi bakış açımdan ve Önden görünüm yalnızca şeklin gösterimini değiştirir. Seçiminiz ve kayıtlarınız aynı vücut tarafını korur. Seçili bölge adını kontrol edin veya bölge listesinden adı seçin. Görünümü Ayarlar’dan da değiştirebilirsiniz.",
               "Karnın sol üst bölgesi · Karnın sağ üst bölgesi · Karnın sol alt bölgesi · Karnın sağ alt bölgesi · Sol uyluk · Sağ uyluk · Sol üst kol · Sağ üst kol"
             ]

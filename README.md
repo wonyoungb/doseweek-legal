@@ -170,7 +170,7 @@ git diff --check
 python3 -m http.server 4173
 ```
 
-Then inspect the nine existing iOS locale URLs and all Android routes at desktop and
+Then inspect all seventeen iOS locale URLs and all Android routes at desktop and
 narrow-mobile widths. Check light and dark appearance, keyboard focus, FAQ disclosure controls,
 privacy table-of-contents links, browser back/forward, Arabic right-to-left layout, and one run
 with JavaScript disabled. Confirm only one localized panel is visible and the language tab has

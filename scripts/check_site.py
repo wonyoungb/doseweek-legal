@@ -454,9 +454,10 @@ def main() -> None:
     for path, page, languages, candidate_version in (
         (ROOT / "support/index.html", support_page, ALL_LANGUAGES, "iOS 1.0.4 (build 16)"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
-         "Android 1.0.0 (versionCode 10)"),
+         "Android 1.0.0 (versionCode 11)"),
     ):
-        # the five bugfix-candidate topics keep their own released-version notice
+        # the five bugfix-candidate topics name the candidate build they were written against
+        # (iOS) or the first Play build after live code 9 (Android; code 10 was withheld)
         source = path.read_text(encoding="utf-8")
         for language in languages:
             for topic in ("dates", "edit", "past", "health", "sites"):
@@ -472,8 +473,9 @@ def main() -> None:
                 )
 
     for path, page, languages, second_release_version in (
-        (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
-         "1.0.4 (build 16)"),
+        # iOS: the next version number is not assigned and build 16 was never uploaded, so the
+        # notice names no build at all
+        (ROOT / "support/index.html", support_page, ALL_LANGUAGES, None),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "versionCode 11"),
     ):
@@ -487,9 +489,14 @@ def main() -> None:
                 assert entry is not None, identifier
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == 2, identifier
-                assert second_release_version in paragraphs[0], (
-                    f"{identifier}: the notice must name the version this candidate belongs to"
-                )
+                if second_release_version is None:
+                    assert "iOS" in paragraphs[0] and "build" not in paragraphs[0].lower(), (
+                        f"{identifier}: the notice must not name an unreleased build"
+                    )
+                else:
+                    assert second_release_version in paragraphs[0], (
+                        f"{identifier}: the notice must name the version this candidate belongs to"
+                    )
 
     for prohibited in (
         "iPhone",
