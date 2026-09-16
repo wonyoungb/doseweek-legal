@@ -149,6 +149,7 @@ order instead. Privacy table-of-contents IDs start with their locale (`en-health
 - `scripts/render_android.py` — deterministic Android page renderer
 - `scripts/check_site.py` — dependency-free structural, metadata, accessibility, disclosure, and
   local-link checks
+- `legal-release-map.json` — per-platform candidate, catalog hash, decision, and check record
 
 ## Local verification
 
@@ -159,6 +160,8 @@ python3 scripts/check_site.py
 python3 scripts/render_ios.py --check --catalog /path/to/DoseDay/Resources/Localizable.xcstrings
 python3 scripts/check_site.py --catalog /path/to/DoseDay/Resources/Localizable.xcstrings
 python3 scripts/render_android.py --content /path/to/DoseweekPlayStore/docs/legal/android-content.json --check
+# Until the app repository adopts the candidate catalog, pass docs/android-content.candidate.json
+# instead of the app-repository path in the two commands above and below.
 python3 scripts/check_site.py \
   --catalog /path/to/DoseDay/Resources/Localizable.xcstrings \
   --android-content /path/to/DoseweekPlayStore/docs/legal/android-content.json
