@@ -11,6 +11,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+import legal_release
 import render_ios
 from render_android import rendered_pages, validate_catalog
 from render_import import rendered as rendered_import, validate as validate_import
@@ -241,7 +242,15 @@ def main() -> None:
         type=Path,
         help="optional path to DoseweekPlayStore/docs/legal/android-content.json",
     )
+    argument_parser.add_argument(
+        "--release",
+        action="store_true",
+        help="publish gate: also require the release step to have filled "
+        "legal_release.SECOND_RELEASE_EFFECTIVE_DATE",
+    )
     arguments = argument_parser.parse_args()
+    if arguments.release:
+        legal_release.require_release_date()
 
     pages = {path.resolve(): parse(path) for path in HTML_FILES}
 
@@ -452,12 +461,14 @@ def main() -> None:
     )
 
     for path, page, languages, candidate_version in (
-        (ROOT / "support/index.html", support_page, ALL_LANGUAGES, "iOS 1.0.4 (build 16)"),
+        (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
+         f"iOS {render_ios.CANDIDATE_VERSION}"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "Android 1.0.0 (versionCode 11)"),
     ):
-        # the five bugfix-candidate topics name the candidate build they were written against
-        # (iOS) or the first Play build after live code 9 (Android; code 10 was withheld)
+        # the five bugfix-candidate topics name the release they ship in: iOS 1.0.5 (owner
+        # decision IOS-VERSION-104-20260917) or the first Play build after live code 9
+        # (Android; code 10 was withheld)
         source = path.read_text(encoding="utf-8")
         for language in languages:
             for topic in ("dates", "edit", "past", "health", "sites"):
@@ -469,13 +480,14 @@ def main() -> None:
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == (3 if topic == "sites" else 2), identifier
                 assert candidate_version in paragraphs[0], (
-                    f"{identifier}: candidate notice must identify the exact version and build"
+                    f"{identifier}: candidate notice must identify the exact version"
                 )
 
     for path, page, languages, second_release_version in (
-        # iOS: the next version number is not assigned and build 16 was never uploaded, so the
-        # notice names no build at all
-        (ROOT / "support/index.html", support_page, ALL_LANGUAGES, None),
+        # iOS: the notice names the marketing version 1.0.5 but no build, because the store build
+        # number is chosen at upload
+        (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
+         f"iOS {render_ios.PAGE_VERSION}"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "versionCode 11"),
     ):
@@ -489,13 +501,12 @@ def main() -> None:
                 assert entry is not None, identifier
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == 2, identifier
-                if second_release_version is None:
-                    assert "iOS" in paragraphs[0] and "build" not in paragraphs[0].lower(), (
+                assert second_release_version in paragraphs[0], (
+                    f"{identifier}: the notice must name the version this candidate belongs to"
+                )
+                if path.parent.name == "support" and path.parent.parent == ROOT:
+                    assert "build" not in paragraphs[0].lower(), (
                         f"{identifier}: the notice must not name an unreleased build"
-                    )
-                else:
-                    assert second_release_version in paragraphs[0], (
-                        f"{identifier}: the notice must name the version this candidate belongs to"
                     )
 
     for prohibited in (

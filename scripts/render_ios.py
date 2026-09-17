@@ -14,6 +14,8 @@ import html
 import json
 from pathlib import Path
 
+from legal_release import CURRENT_IOS_EFFECTIVE_DATE, expected_effective_date
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
@@ -53,11 +55,13 @@ SECTION_IDS = [
     "calendar", "next-release",
 ]
 CANDIDATE_SECTION_ID = "next-release"
-# The bugfix-candidate FAQ notice names the candidate source's version and build; it is not a
-# released build. The page eyebrow and footer carry only the marketing version, because build 16
-# has never been uploaded and the next version number is not assigned.
-CANDIDATE_VERSION = "1.0.4 (build 16)"
-PAGE_VERSION = "1.0.4"
+# Owner decision IOS-VERSION-104-20260917: the pending 1.0.4 (build 15) review is cancelled and the
+# stage-2 release ships as iOS 1.0.5. Every candidate notice (five bugfix-candidate answers, seven
+# second-release answers and the candidate policy section) names that marketing version, and the
+# page eyebrow and footer carry it too. No notice names a build: the store build number is chosen
+# at upload, and build 16 has never been uploaded.
+CANDIDATE_VERSION = "1.0.5"
+PAGE_VERSION = "1.0.5"
 CATALOG_KEYS = {
     "storage": 1, "health": 2, "backups": 3, "notifications": 4, "tracking": 5,
     "deletion": 6, "contact": 7, "ai": 8, "calendar": 9,
@@ -76,7 +80,7 @@ def validate(content: dict) -> None:
     assert content["schemaVersion"] == 1
     assert content["platform"] == "ios"
     assert content["bundleVersion"] == PAGE_VERSION
-    assert content["effectiveDate"] == "2026-08-22"
+    assert content["effectiveDate"] == expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE)
     assert content["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert content["localeOrder"] == LOCALE_ORDER
     assert list(content["locales"]) == LOCALE_ORDER
@@ -103,10 +107,13 @@ def validate(content: dict) -> None:
                     f"{locale}:{section['id']}"
                 )
         candidate = privacy["sections"][-1]
-        # The candidate section must not name a build as the current App Store version: build 16
-        # was never uploaded and the store state after 2026-09-12 is not recorded here.
+        # The candidate section names the version it belongs to, never a build: the store build
+        # number is chosen at upload.
         assert "build" not in candidate["paragraphs"][0].lower(), (
             f"{locale}: the candidate section must not name a build number"
+        )
+        assert f"iOS {PAGE_VERSION}" in candidate["paragraphs"][0], (
+            f"{locale}: the candidate section must name iOS {PAGE_VERSION}"
         )
         serialized = json.dumps(candidate, ensure_ascii=False)
         # Every food data source keeps its name and its licence basis in every language;
@@ -158,13 +165,14 @@ def validate_support(locale: str, support: dict) -> None:
             )
     # every candidate answer opens with the notice that names the version it belongs to
     for key in BUGFIX_CANDIDATE_FAQ:
-        assert f"iOS {CANDIDATE_VERSION}" in support["candidate"][key]["answers"][0], (
-            f"{locale}: bugfix-candidate {key} must name iOS {CANDIDATE_VERSION}"
+        notice = support["candidate"][key]["answers"][0]
+        assert f"iOS {CANDIDATE_VERSION}" in notice and "build" not in notice.lower(), (
+            f"{locale}: bugfix-candidate {key} must name iOS {CANDIDATE_VERSION}, without a build"
         )
     for key in SECOND_RELEASE_FAQ:
         notice = support["secondRelease"][key]["answers"][0]
-        assert "iOS" in notice and "build" not in notice.lower(), (
-            f"{locale}: second-release {key} must say it is an unreleased iOS version, without a build"
+        assert f"iOS {PAGE_VERSION}" in notice and "build" not in notice.lower(), (
+            f"{locale}: second-release {key} must name unreleased iOS {PAGE_VERSION}, without a build"
         )
     ai_answer = support["released"]["ai"]["answers"][0]
     assert ai_answer.count(AI_MODEL_TOKEN) == 1, f"{locale}: AI answer must name the model once"

@@ -9,6 +9,8 @@ import json
 import re
 from pathlib import Path
 
+from legal_release import CURRENT_ANDROID_EFFECTIVE_DATE, expected_effective_date
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
@@ -321,7 +323,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
     assert catalog["versionName"] == "1.0.0"
-    assert catalog["effectiveDate"] == "2026-09-08"
+    assert catalog["effectiveDate"] == expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
     assert isinstance(catalog["locales"], dict)
