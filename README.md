@@ -26,13 +26,20 @@ The public policy must mirror, verbatim and in all three languages:
 - `privacy.intro`
 - `privacy.effectiveDate`
 - `privacy.section1.title` through `privacy.section9.body` (section 9 is the optional
-  calendar sync that ships with the unreleased next version)
+  calendar sync that ships with the unreleased iOS 1.0.5)
 - `privacy.medical.title` and `privacy.medical.body`
 - `common.notAMedicalDevice` (the second medical-disclaimer paragraph)
 
 Change those app strings first, review the clinical/privacy meaning there, and then copy the
 approved values into `privacy/index.html`. Never make a substantive policy change only on the
 website. The current effective date is **August 22, 2026**.
+
+The second-release effective date is chosen only after both builds are uploaded for store review
+(owner decision LEGAL-EFFECTIVE-DATE-20260917). It lives in one marked constant,
+`SECOND_RELEASE_EFFECTIVE_DATE` in `scripts/legal_release.py`; that file lists everything the
+release step must change with it. Until it is filled, both renderers keep requiring the live
+dates, and `python3 scripts/check_site.py --release` fails so the candidate cannot be published by
+accident.
 
 Android policy and support copy has a separate canonical source in the Android app repository:
 
@@ -147,6 +154,8 @@ order instead. Privacy table-of-contents IDs start with their locale (`en-health
 - `docs/android-content.candidate.json` — unpublished mirror of the Android legal catalog
 - `scripts/render_ios.py` — deterministic iOS privacy and support page renderer
 - `scripts/render_android.py` — deterministic Android page renderer
+- `scripts/render_import.py` — deterministic import guide and download renderer
+- `scripts/legal_release.py` — release-step effective date and the bundled food data attribution lines
 - `scripts/check_site.py` — dependency-free structural, metadata, accessibility, disclosure, and
   local-link checks
 - `legal-release-map.json` — per-platform candidate, catalog hash, decision, and check record
@@ -178,12 +187,22 @@ the matching `aria-current` value. Before publishing an Android change, also pro
 `index.html`, `privacy/index.html`, and `support/index.html` did not change unless the task
 explicitly includes an iOS policy update.
 
+Before publishing, also run the release gate once the release step has filled the effective date:
+
+```bash
+python3 scripts/check_site.py --release \
+  --catalog /path/to/DoseDay/Resources/Localizable.xcstrings \
+  --android-content /path/to/DoseweekPlayStore/docs/legal/android-content.json
+```
+
 Publishing is a separate, explicit step. Do not commit, push, or deploy from a preview-only
 review task.
 
-## Record preparation guide
+## Record import guide
 
-`/import/#<locale>` provides the same three-step guide in all seventeen supported locales.
+`/import/#<locale>` provides the same six-step import guide in all seventeen supported locales:
+a new AI chat, attaching the files, pasting the copied prompt, saving the JSON reply, reviewing
+every row in the app's Import records from another app screen, and adding only the selected rows.
 It has its own localized prompt copy control and downloadable Markdown prompts, Markdown
 format notes, an empty JSON draft, and `draft-v1.schema.json`. It uses the existing language
 script without changing the landing, privacy, or platform support pages.
@@ -192,10 +211,11 @@ The canonical copy is `import/content.json`; regenerate it with `python3 scripts
 Run `python3 scripts/render_import.py --check --require-all-locales` before publishing.
 The normal site checker also validates all generated guide files and language links.
 
-The current status is `preparation_only`: users can prepare and review drafts, but the guide
-must not claim that the released app saves this JSON. Change that status and its localized
-wording together only when the corresponding app importer and manual-review flow have been
-verified. An extraction draft is never an encrypted full backup. The format uses identical
+The status is `supported` (owner decisions TRANSFER-20260913-08 and TRANSFER-20260913-10): the
+guide leads into the JSON import of DoseWeek 1.0.5 on iPhone and iPad and of the Android release
+that shows the import screen. In that state the renderer requires six steps and, in every locale,
+the apps' own labels for the import screen, its file and add buttons, the copy button and the iOS
+version, and `check_site.py` refuses `preparation_only`. Publish it only with those app releases. An extraction draft is never an encrypted full backup. The format uses identical
 machine keys in every language, preserves source text, and leaves unknown values null.
 
 The intended later save operation adds selected validated rows atomically, keeps manual

@@ -13,6 +13,32 @@ when the store number is chosen. Android code 10 was accepted by Play but its re
 withheld for stage 2, so every Android candidate answer names versionCode 11, the first build
 users receive after live code 9.
 
+## Cycle-2 update (2026-09-17, branch `feat/c2-legal-guide`)
+
+Owner decisions applied on top of `274d397`; still unmerged and unpublished:
+
+- **IOS-VERSION-104-20260917** — the pending 1.0.4 (build 15) review is cancelled and the
+  stage-2 release ships as **iOS 1.0.5**. `bundleVersion`, `render_ios.py`
+  `CANDIDATE_VERSION`/`PAGE_VERSION`, the five bugfix-candidate notices, the seven second-release
+  notices and the candidate policy section name iOS 1.0.5 in all seventeen locales. No notice
+  names a build: the store build number is chosen at upload (build 16 was never uploaded).
+- **LEGAL-EFFECTIVE-DATE-20260917** — the new effective date is set after the store upload.
+  It is the single constant `SECOND_RELEASE_EFFECTIVE_DATE` in `scripts/legal_release.py`
+  (currently `None`); `check_site.py --release` fails until the release step fills it.
+- **NUTRITION-CATALOG-RELEASE-20260917** — catalog search ships, so both candidate policy
+  sections describe the bundled read-only food table (on-device search, no network download or
+  update, market/search-language choices and table favorites stored on the device and in the
+  encrypted backup, sources and licences listed in the app) and carry the USDA, CoFID, MEXT and
+  MFDS attribution lines plus the MEXT change statement verbatim from food data release
+  `d1f046b4…` `notices/NOTICE.txt`. The meals FAQ answers on both platforms describe the search.
+- **TRANSFER-20260913-08/10** — `/import/` is the final six-step import guide (`supported`):
+  new AI chat, attachment, copied prompt, JSON save, in-app review, selected append. The import
+  FAQ answers on both support pages point to it.
+
+The Android candidate catalog changed (food paragraph, meals and import answers), so
+`DoseweekPlayStore` must adopt the new bytes of `docs/android-content.candidate.json` before the
+Android pages are published; its sha256 is recorded in `legal-release-map.json`.
+
 ## Sources read for every fact
 
 | Fact area | Source |
@@ -30,12 +56,12 @@ users receive after live code 9.
 
 ## Deliberate limits in the published wording
 
-- **Food data packs are described as not shipping in this version.** Neither app branch bundles
-  a `fooddata` release; only the nutrition contracts are in the app assets. The pages name the
-  sources and licences (USDA FoodData Central, public domain CC0 1.0 with attribution
-  requested; UK CoFID under the Open Government Licence v3.0; the Japanese MEXT Standard Tables
-  under the MEXT data-use statement and site terms; Korean MFDS data under the data.go.kr
-  grant with no use restriction) and say the tables are still in preparation.
+- **Food data (updated in cycle 2).** The pages first described the food tables as still in
+  preparation; since NUTRITION-CATALOG-RELEASE-20260917 they describe the bundled table and
+  carry its attribution lines (see the cycle-2 update above). The wording stays at the privacy
+  level (on-device search, storage, backup, source listing) because the catalog search branches
+  were not yet pushed when it was written; re-check it against the shipped apps before
+  publishing.
 - The MFDS clearance is written as the data.go.kr grant, not as a KOGL type 1 mark: the release
   notes record that the dataset pages carry no 공공누리 mark and that MFDS was not consulted.
 - **Backup numbers are described by behaviour, not by number.** The ledger reserves iOS schema
@@ -52,9 +78,9 @@ users receive after live code 9.
   events only, user-edited events left alone, provider accounts store and sync under their own
   policies. iOS notes that the event links survive a restore on the same device.
 - **Health integrations are unchanged** and stay read-only on both platforms.
-- The record-preparation guide at `/import/` was left as published: its status is still
-  `preparation_only`, and its limits already name both platforms (Android 1 MiB draft, iOS
-  4 MiB draft, 10,000 rows, symptom rows unsupported).
+- The import guide at `/import/` is `supported` since cycle 2; its limits name both platforms
+  (Android 1 MiB draft, iOS 4 MiB draft, 10,000 rows, 10 MiB input, symptom and unclassified
+  rows unsupported).
 
 ## Required before any of this is published
 
@@ -62,14 +88,13 @@ users receive after live code 9.
    `docs/legal/android-content.json`; the Android pages are rendered from the candidate mirror.
 2. The iOS app catalog should gain equivalent strings for the candidate policy section, so the
    published policy keeps mirroring the app instead of only the site.
-3. The effective date stays 2026-08-22 (iOS) and 2026-09-08 (Android). A new effective date is
-   an owner decision to be made with the release, because meal records and calendar sync are
-   real processing changes.
-4. Publication waits for the releases themselves: Android 1.0.0 (versionCode 11) and the next
-   iOS build. Until then the Android candidate wording names versionCode 11 in every locale and
-   the iOS wording says "the next iOS version, not released yet" without a build number; once
-   the iOS store number is assigned, set it in the seven second-release notices, the five
-   bugfix-candidate notices and `bundleVersion` together.
+3. The effective date stays 2026-08-22 (iOS) and 2026-09-08 (Android) until the release step
+   fills `SECOND_RELEASE_EFFECTIVE_DATE` after the store upload (LEGAL-EFFECTIVE-DATE-20260917)
+   and changes, in the same commit, the catalogs' `effectiveDate`, the mirrored
+   `privacy.effectiveDate` strings (the iOS app catalog must carry the same value) and the
+   "effective date is set when that version is released" sentences.
+4. Publication waits for the store upload of iOS 1.0.5 and Android 1.0.0 (versionCode 11), then
+   `check_site.py --release` must pass before `candidate/second-release` is merged to `main`.
 5. The iOS support FAQ now serves all seventeen locales. The fourteen locales beyond Korean,
    English and Japanese were written in this branch from the published English answers and
    have not had a native-speaker review; the in-app link mapping in `RecordHelpView.swift`
