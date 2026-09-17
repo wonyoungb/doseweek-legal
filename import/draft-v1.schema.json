@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://doseweek-legal.wonyoungchoi.dev/import/draft-v1.schema.json",
   "title": "DoseWeek record extraction draft v1",
-  "description": "Unreviewed transcription draft. Not an encrypted backup or proof of app import support. Semantic review is required in addition to schema validation.",
+  "description": "Unreviewed transcription draft for DoseWeek Import records from another app. Not an encrypted backup. Passing this schema does not mean a row can be saved; every row is reviewed in the app before the selected rows are added.",
   "$comment": "Application resource limits: at most 10000 records, input JSON at most 10 MiB (10485760 bytes), nesting depth at most 32, and each decoded JSON string at most 16 KiB (16384 UTF-8 bytes). JSON Schema maxLength counts Unicode code points, not UTF-8 bytes; the importer must enforce the byte and nesting limits separately.",
   "type": "object",
   "additionalProperties": false,

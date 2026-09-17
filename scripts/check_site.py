@@ -628,6 +628,10 @@ def main() -> None:
 
     import_content = json.loads((ROOT / "import/content.json").read_text(encoding="utf-8"))
     validate_import(import_content, require_all=True)
+    assert import_content["status"] == "supported", (
+        "import/content.json: the published guide must lead to the in-app import "
+        "(TRANSFER-20260913-10), not stay preparation_only"
+    )
     for relative, expected in rendered_import(import_content).items():
         assert (ROOT / relative).read_text(encoding="utf-8") == expected, (
             f"{relative}: stale generated import guide or download"
@@ -635,7 +639,7 @@ def main() -> None:
     import_source = (ROOT / "import/index.html").read_text(encoding="utf-8")
     assert import_source.count(f'data-import-status="{import_content["status"]}"') == 17
     assert "<form" not in import_source and 'type="file"' not in import_source, (
-        "import/index.html: the preparation guide must not upload records"
+        "import/index.html: the import guide must not upload records"
     )
     import_page = pages[(ROOT / "import/index.html").resolve()]
     assert len(import_page.summary_markers) == 3 * 17

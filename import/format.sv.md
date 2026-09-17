@@ -1,10 +1,10 @@
 # Utkast för avskrift av DoseWeek-poster — version 1
 
-Du kan förbereda och kontrollera ett JSON-utkast nu. Den här guiden innebär inte att din installerade version av DoseWeek kan spara det. Behåll originalposterna tills appen uttryckligen stöder formatet.
+Den här guiden hör till ”Importera poster från en annan app” i DoseWeek 1.0.5 eller senare på iPhone och iPad, och i DoseWeeks Android-app när den skärmen finns i din installerade version. Om du inte ser den, uppdatera DoseWeek först. Behåll de ursprungliga posterna tills importen är klar.
 
-Detta format bevarar underlag för manuell granskning. Det är inte en krypterad säkerhetskopia, ett kliniskt beslut, en garanti för en leverantörs format eller ett bevis på att den aktuella appen importerar det.
+Formatet bevarar underlag för granskningen på DoseWeeks importskärm. Det är ingen krypterad säkerhetskopia, inget kliniskt beslut och ingen garanti för en leverantörs format.
 
-Android-import: det sparade utkastet begränsas till 1 MiB (1 048 576 byte) och 10 000 rader, separat från 10 MiB för JSON. Symtomrader och oklassificerade rader kan inte sparas; behåll texten och avmarkera dem. Matchande raderade poster räknas fortfarande som importerade och återställs inte. iOS-kandidaten har en separat gräns på 4 MiB för återupptagbara utkast. Förutsätt inte samma beteende eller tillgänglighet på båda plattformarna eller i den installerade appen.
+Appens gränser: en import rymmer högst 10 000 rader och indata-JSON högst 10 MiB. Ett ofullständigt granskningsutkast får vara högst 4 MiB på iPhone och iPad och högst 1 MiB (1 048 576 byte) på Android; en större import avvisas och kortas aldrig. Symtomrader och oklassificerade rader kan inte sparas; behåll källtexten och avmarkera dem. På Android räknas rader som motsvarar poster du raderat efter en tidigare import som redan importerade och återställs inte.
 
 1. På toppnivån är format doseweek.record_extraction_draft, version är 1 och reviewed_by_user är false. records och unreadable_sections är arrayer. Avvisa okända fält i stället för att kasta bort dem utan att ange det.
 
@@ -14,9 +14,9 @@ Android-import: det sparade utkastet begränsas till 1 MiB (1 048 576 byte) och 
 
 4. date_iso är YYYY-MM-DD endast när det fullständiga datumet är entydigt och giltigt. time_24h är HH:mm, med sekunder och bråkdelar av sekunder om de är synliga. time_zone och utc_offset kräver uttryckligt belägg i källan. Saknade eller tvetydiga fält är null, inte tomma strängar eller gissade datum och klockslag.
 
-5. Schemat kontrollerar strukturen. En framtida importfunktion måste även kontrollera faktiska kalenderdatum, enheter, mappningar av läkemedel och mätvärden som stöds, källunderlag, tvetydighet kring tidszon och dubbletter. Att enbart klara schemavalideringen tillåter aldrig sparande.
+5. Schemat kontrollerar bara strukturen. DoseWeeks import kontrollerar också verkliga kalenderdatum, enheter, stödda kopplingar för läkemedel och mätvärden, tidszoner och dubbletter, och du granskar fortfarande varje rad. Att klara schemat ger aldrig ensamt rätt att spara.
 
-6. Det planerade sparflödet granskar alla valda rader, avvisar olösta obligatoriska fält och lägger till hela urvalet eller inget alls, utan att automatiskt skriva över befintliga poster. Betydelsen av händelser med enbart datum måste stödjas uttryckligen före sparande; midnatt eller middagstid får inte användas som platshållare.
+6. Appen avvisar markerade rader med olösta obligatoriska fält och lägger till urvalet atomärt utan att skriva över befintliga poster. En rad utan tid behöver den faktiska tiden angiven och bekräftad i appen; ingen platshållartid som midnatt eller klockan tolv används.
 
 7. Håll utkast och källfiler privata. Denna statiska guide har inget uppladdningsformulär. Om du väljer en extern AI skickas valda filer till den tjänsten enligt dess egna villkor. Du kan förbereda samma fält manuellt eller med textigenkänning på enheten. Om du skapar en fil manuellt sparar du endast JSON-innehållet från AI-svaret som en UTF-8-fil med ändelsen .json. Ett utkast får innehålla högst 10 000 poster. Varje avkodad JSON-sträng är begränsad till 16 KiB (16 384 UTF-8-byte). Appen kontrollerar denna bytegräns; maxLength i JSON Schema räknar Unicode-kodpunkter, inte UTF-8-byte. JSON-filen får vara högst 10 MiB och nästlingsdjupet är begränsat till 32 nivåer.
 

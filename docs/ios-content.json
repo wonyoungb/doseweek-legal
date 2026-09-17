@@ -288,7 +288,7 @@
             "question": "출시 전 안내: 다른 앱의 기록 가져오기",
             "answers": [
               "iOS 1.0.5(미출시): 이 일곱 항목은 후보 버전 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
-              "CSV, TSV, JSON 파일을 고르거나 표를 붙여 넣어 과거 투약 기록을 가져옵니다. 한 번에 최대 10,000건이며, 10 MB를 넘는 파일은 잘라내지 않고 거부하고, 저장되는 검토 초안은 iPhone과 iPad에서 4 MiB까지입니다. 증상과 분류되지 않은 행은 아직 저장할 수 없으므로 선택을 해제해야 하며, 원문은 보존되어 사라지지 않습니다. 중복 가능성이 있는 행은 검토 대상으로 표시되고 확인하기 전에는 아무것도 저장되지 않습니다. 이것은 백업 복원이 아닙니다. 프롬프트와 초안 형식을 포함한 준비 안내는 doseweek-legal.wonyoungchoi.dev/import/에 있습니다."
+              "CSV, TSV, JSON 파일을 고르거나 표를 붙여 넣어 과거 투약 기록을 가져옵니다. 한 번에 최대 10,000건이며, 10 MB를 넘는 파일은 잘라내지 않고 거부하고, 저장되는 검토 초안은 iPhone과 iPad에서 4 MiB까지입니다. 증상과 분류되지 않은 행은 아직 저장할 수 없으므로 선택을 해제해야 하며, 원문은 보존되어 사라지지 않습니다. 중복 가능성이 있는 행은 검토 대상으로 표시되고 확인하기 전에는 아무것도 저장되지 않습니다. 이것은 백업 복원이 아닙니다. AI 프롬프트부터 검토한 기록 추가까지 단계별 가져오기 안내는 doseweek-legal.wonyoungchoi.dev/import/에 있습니다."
             ]
           }
         }
@@ -558,7 +558,7 @@
             "question": "Candidate guidance: Bring records from another app",
             "answers": [
               "iOS 1.0.5, which is not released yet: these seven topics describe a candidate. Screens and behavior may not be available in the currently released app.",
-              "You can import past administrations from a CSV, TSV or JSON file, or paste a table. One import takes up to 10,000 records, a source file larger than 10 MB is refused rather than cut, and a saved review draft is limited to 4 MiB on iPhone and iPad. Symptom and unclassified rows cannot be saved yet and must be deselected; their source text is kept so nothing is lost. Rows that may be duplicates are marked for review and nothing is saved until you confirm. This is not a backup restore. The preparation guide, including the prompt and the draft format, is at doseweek-legal.wonyoungchoi.dev/import/."
+              "You can import past administrations from a CSV, TSV or JSON file, or paste a table. One import takes up to 10,000 records, a source file larger than 10 MB is refused rather than cut, and a saved review draft is limited to 4 MiB on iPhone and iPad. Symptom and unclassified rows cannot be saved yet and must be deselected; their source text is kept so nothing is lost. Rows that may be duplicates are marked for review and nothing is saved until you confirm. This is not a backup restore. The step-by-step import guide, from the AI prompt to adding the reviewed records, is at doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -828,7 +828,7 @@
             "question": "公開前のご案内: 他のアプリの記録を取り込む",
             "answers": [
               "iOS 1.0.5（未公開）: この7項目は候補版の案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
-              "CSV、TSV、JSONのファイルを選ぶか、表を貼り付けて過去の投与記録を取り込めます。1回の取り込みは最大10,000件、10 MBを超えるファイルは切り詰めずに拒否し、保存される確認用の下書きはiPhoneとiPadで4 MiBまでです。症状と未分類の行はまだ保存できないため選択を外してください。原文は保持されるので失われません。重複の可能性がある行は確認対象として表示され、確定するまで何も保存されません。これはバックアップの復元ではありません。プロンプトと下書き形式を含む準備の手引きはdoseweek-legal.wonyoungchoi.dev/import/にあります。"
+              "CSV、TSV、JSONのファイルを選ぶか、表を貼り付けて過去の投与記録を取り込めます。1回の取り込みは最大10,000件、10 MBを超えるファイルは切り詰めずに拒否し、保存される確認用の下書きはiPhoneとiPadで4 MiBまでです。症状と未分類の行はまだ保存できないため選択を外してください。原文は保持されるので失われません。重複の可能性がある行は確認対象として表示され、確定するまで何も保存されません。これはバックアップの復元ではありません。AIへのプロンプトから確認済みの記録の追加までを説明する取り込みガイドはdoseweek-legal.wonyoungchoi.dev/import/にあります。"
             ]
           }
         }
@@ -1098,7 +1098,7 @@
             "question": "Hinweise zur Vorabversion: Einträge aus einer anderen App übernehmen",
             "answers": [
               "iOS 1.0.5, noch nicht veröffentlicht: Diese sieben Themen beschreiben eine Kandidatenversion. Die beschriebenen Bildschirme und Funktionen sind in der derzeit veröffentlichten App möglicherweise nicht vorhanden.",
-              "Sie können frühere Anwendungen aus einer CSV-, TSV- oder JSON-Datei importieren oder eine Tabelle einfügen. Ein Import umfasst bis zu 10.000 Einträge, eine Quelldatei über 10 MB wird abgelehnt statt gekürzt, und ein gespeicherter Prüfentwurf ist auf iPhone und iPad auf 4 MiB begrenzt. Symptomzeilen und nicht klassifizierte Zeilen lassen sich noch nicht speichern und müssen abgewählt werden; ihr Quelltext bleibt erhalten. Möglicherweise doppelte Zeilen werden zur Prüfung markiert, und nichts wird gespeichert, bevor Sie bestätigen. Das ist keine Wiederherstellung einer Sicherung. Die Anleitung mit Prompt und Entwurfsformat steht unter doseweek-legal.wonyoungchoi.dev/import/."
+              "Sie können frühere Anwendungen aus einer CSV-, TSV- oder JSON-Datei importieren oder eine Tabelle einfügen. Ein Import umfasst bis zu 10.000 Einträge, eine Quelldatei über 10 MB wird abgelehnt statt gekürzt, und ein gespeicherter Prüfentwurf ist auf iPhone und iPad auf 4 MiB begrenzt. Symptomzeilen und nicht klassifizierte Zeilen lassen sich noch nicht speichern und müssen abgewählt werden; ihr Quelltext bleibt erhalten. Möglicherweise doppelte Zeilen werden zur Prüfung markiert, und nichts wird gespeichert, bevor Sie bestätigen. Das ist keine Wiederherstellung einer Sicherung. Die Schritt-für-Schritt-Anleitung vom KI-Prompt bis zum Hinzufügen der geprüften Einträge steht unter doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -1368,7 +1368,7 @@
             "question": "Guide de la version candidate : Reprendre des enregistrements d’une autre app",
             "answers": [
               "iOS 1.0.5, version non encore publiée : ces sept rubriques décrivent une version candidate. Les écrans et comportements décrits peuvent ne pas exister dans l’application actuellement publiée.",
-              "Vous pouvez importer des administrations passées depuis un fichier CSV, TSV ou JSON, ou coller un tableau. Un import accepte jusqu’à 10 000 enregistrements, un fichier source de plus de 10 Mo est refusé plutôt que tronqué, et un brouillon de vérification enregistré est limité à 4 MiB sur iPhone et iPad. Les lignes de symptômes et non classées ne peuvent pas encore être enregistrées et doivent être désélectionnées ; leur texte source est conservé. Les lignes susceptibles d’être des doublons sont signalées pour vérification et rien n’est enregistré avant votre confirmation. Ce n’est pas une restauration de sauvegarde. Le guide de préparation, avec l’invite et le format de brouillon, se trouve sur doseweek-legal.wonyoungchoi.dev/import/."
+              "Vous pouvez importer des administrations passées depuis un fichier CSV, TSV ou JSON, ou coller un tableau. Un import accepte jusqu’à 10 000 enregistrements, un fichier source de plus de 10 Mo est refusé plutôt que tronqué, et un brouillon de vérification enregistré est limité à 4 MiB sur iPhone et iPad. Les lignes de symptômes et non classées ne peuvent pas encore être enregistrées et doivent être désélectionnées ; leur texte source est conservé. Les lignes susceptibles d’être des doublons sont signalées pour vérification et rien n’est enregistré avant votre confirmation. Ce n’est pas une restauration de sauvegarde. Le guide d’import pas à pas, des consignes pour l’IA à l’ajout des données vérifiées, se trouve sur doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -1638,7 +1638,7 @@
             "question": "Guía de la versión candidata: Traer registros de otra aplicación",
             "answers": [
               "iOS 1.0.5, versión aún sin publicar: estos siete temas describen una versión candidata. Las pantallas y funciones descritas pueden no existir en la aplicación publicada actualmente.",
-              "Puede importar administraciones pasadas desde un archivo CSV, TSV o JSON, o pegar una tabla. Una importación admite hasta 10.000 registros, un archivo de origen mayor de 10 MB se rechaza en lugar de recortarse y el borrador de revisión guardado se limita a 4 MiB en iPhone y iPad. Las filas de síntomas y sin clasificar todavía no pueden guardarse y deben desmarcarse; su texto original se conserva. Las filas que puedan ser duplicados se marcan para revisión y no se guarda nada hasta que usted confirme. Esto no es una restauración de copia de seguridad. La guía de preparación, con el prompt y el formato del borrador, está en doseweek-legal.wonyoungchoi.dev/import/."
+              "Puede importar administraciones pasadas desde un archivo CSV, TSV o JSON, o pegar una tabla. Una importación admite hasta 10.000 registros, un archivo de origen mayor de 10 MB se rechaza en lugar de recortarse y el borrador de revisión guardado se limita a 4 MiB en iPhone y iPad. Las filas de síntomas y sin clasificar todavía no pueden guardarse y deben desmarcarse; su texto original se conserva. Las filas que puedan ser duplicados se marcan para revisión y no se guarda nada hasta que usted confirme. Esto no es una restauración de copia de seguridad. La guía de importación paso a paso, desde las instrucciones para la IA hasta añadir los registros revisados, está en doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -1908,7 +1908,7 @@
             "question": "Guida alla versione candidata: Portare registrazioni da un’altra app",
             "answers": [
               "iOS 1.0.5, versione non ancora pubblicata: questi sette argomenti descrivono una versione candidata. Le schermate e i comportamenti descritti potrebbero non essere presenti nell’app attualmente pubblicata.",
-              "Puoi importare somministrazioni passate da un file CSV, TSV o JSON, oppure incollare una tabella. Un’importazione accetta fino a 10.000 registrazioni, un file di origine più grande di 10 MB viene rifiutato anziché troncato e la bozza di revisione salvata è limitata a 4 MiB su iPhone e iPad. Le righe dei sintomi e non classificate non possono ancora essere salvate e vanno deselezionate; il loro testo di origine viene conservato. Le righe che potrebbero essere duplicati sono segnalate per la revisione e nulla viene salvato prima della tua conferma. Non è un ripristino del backup. La guida alla preparazione, con il prompt e il formato della bozza, è su doseweek-legal.wonyoungchoi.dev/import/."
+              "Puoi importare somministrazioni passate da un file CSV, TSV o JSON, oppure incollare una tabella. Un’importazione accetta fino a 10.000 registrazioni, un file di origine più grande di 10 MB viene rifiutato anziché troncato e la bozza di revisione salvata è limitata a 4 MiB su iPhone e iPad. Le righe dei sintomi e non classificate non possono ancora essere salvate e vanno deselezionate; il loro testo di origine viene conservato. Le righe che potrebbero essere duplicati sono segnalate per la revisione e nulla viene salvato prima della tua conferma. Non è un ripristino del backup. La guida all’importazione passo per passo, dalle istruzioni per l’IA all’aggiunta delle registrazioni controllate, è su doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -2178,7 +2178,7 @@
             "question": "Uitleg bij de testversie: Registraties uit een andere app overnemen",
             "answers": [
               "iOS 1.0.5, een versie die nog niet is uitgebracht: deze zeven onderwerpen beschrijven een kandidaatversie. De beschreven schermen en functies zijn mogelijk niet aanwezig in de nu uitgebrachte app.",
-              "U kunt eerdere toedieningen importeren uit een CSV-, TSV- of JSON-bestand, of een tabel plakken. Eén import verwerkt maximaal 10.000 registraties, een bronbestand groter dan 10 MB wordt geweigerd in plaats van afgekapt, en een bewaard controleconcept is op iPhone en iPad beperkt tot 4 MiB. Symptoomrijen en niet-geclassificeerde rijen kunnen nog niet worden bewaard en moeten worden gedeselecteerd; hun brontekst blijft behouden. Rijen die mogelijk dubbel zijn, worden gemarkeerd voor controle en er wordt niets bewaard voordat u bevestigt. Dit is geen back-upherstel. De voorbereidingsgids, met de prompt en het conceptformaat, staat op doseweek-legal.wonyoungchoi.dev/import/."
+              "U kunt eerdere toedieningen importeren uit een CSV-, TSV- of JSON-bestand, of een tabel plakken. Eén import verwerkt maximaal 10.000 registraties, een bronbestand groter dan 10 MB wordt geweigerd in plaats van afgekapt, en een bewaard controleconcept is op iPhone en iPad beperkt tot 4 MiB. Symptoomrijen en niet-geclassificeerde rijen kunnen nog niet worden bewaard en moeten worden gedeselecteerd; hun brontekst blijft behouden. Rijen die mogelijk dubbel zijn, worden gemarkeerd voor controle en er wordt niets bewaard voordat u bevestigt. Dit is geen back-upherstel. De stapsgewijze importgids, van de AI-prompt tot het toevoegen van de gecontroleerde registraties, staat op doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -2448,7 +2448,7 @@
             "question": "Guia da versão candidata: Trazer registos de outra aplicação",
             "answers": [
               "iOS 1.0.5, versão ainda não publicada: estes sete tópicos descrevem uma versão candidata. Os ecrãs e comportamentos descritos podem não existir na aplicação atualmente publicada.",
-              "Pode importar administrações passadas a partir de um ficheiro CSV, TSV ou JSON, ou colar uma tabela. Uma importação aceita até 10 000 registos, um ficheiro de origem com mais de 10 MB é recusado em vez de cortado e o rascunho de revisão guardado está limitado a 4 MiB em iPhone e iPad. As linhas de sintomas e não classificadas ainda não podem ser guardadas e têm de ser desmarcadas; o respetivo texto de origem é conservado. As linhas que possam ser duplicados são assinaladas para revisão e nada é guardado até confirmar. Isto não é um restauro de cópia de segurança. O guia de preparação, com o prompt e o formato do rascunho, está em doseweek-legal.wonyoungchoi.dev/import/."
+              "Pode importar administrações passadas a partir de um ficheiro CSV, TSV ou JSON, ou colar uma tabela. Uma importação aceita até 10 000 registos, um ficheiro de origem com mais de 10 MB é recusado em vez de cortado e o rascunho de revisão guardado está limitado a 4 MiB em iPhone e iPad. As linhas de sintomas e não classificadas ainda não podem ser guardadas e têm de ser desmarcadas; o respetivo texto de origem é conservado. As linhas que possam ser duplicados são assinaladas para revisão e nada é guardado até confirmar. Isto não é um restauro de cópia de segurança. O guia de importação passo a passo, das instruções para a IA até adicionar os registos revistos, está em doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -2718,7 +2718,7 @@
             "question": "Wskazówki dotyczące wersji testowej: Przeniesienie zapisów z innej aplikacji",
             "answers": [
               "iOS 1.0.5, wersja jeszcze nieopublikowana: te siedem tematów opisuje wersję kandydującą. Opisane ekrany i funkcje mogą nie występować w obecnie opublikowanej aplikacji.",
-              "Możesz zaimportować wcześniejsze podania z pliku CSV, TSV lub JSON albo wkleić tabelę. Jeden import obejmuje do 10 000 zapisów, plik źródłowy większy niż 10 MB jest odrzucany zamiast przycinany, a zapisany szkic do przeglądu ma limit 4 MiB na iPhonie i iPadzie. Wierszy objawów i niesklasyfikowanych nie można jeszcze zapisać i trzeba je odznaczyć; ich tekst źródłowy zostaje zachowany. Wiersze mogące być duplikatami są oznaczane do przeglądu i nic nie zostaje zapisane przed Twoim potwierdzeniem. To nie jest przywracanie kopii zapasowej. Przewodnik przygotowania, z promptem i formatem szkicu, znajdziesz na doseweek-legal.wonyoungchoi.dev/import/."
+              "Możesz zaimportować wcześniejsze podania z pliku CSV, TSV lub JSON albo wkleić tabelę. Jeden import obejmuje do 10 000 zapisów, plik źródłowy większy niż 10 MB jest odrzucany zamiast przycinany, a zapisany szkic do przeglądu ma limit 4 MiB na iPhonie i iPadzie. Wierszy objawów i niesklasyfikowanych nie można jeszcze zapisać i trzeba je odznaczyć; ich tekst źródłowy zostaje zachowany. Wiersze mogące być duplikatami są oznaczane do przeglądu i nic nie zostaje zapisane przed Twoim potwierdzeniem. To nie jest przywracanie kopii zapasowej. Przewodnik importu krok po kroku, od polecenia dla AI po dodanie sprawdzonych wpisów, znajdziesz na doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -2988,7 +2988,7 @@
             "question": "Hjälp för testversionen: Hämta poster från en annan app",
             "answers": [
               "iOS 1.0.5, en version som ännu inte har släppts: de här sju ämnena beskriver en kandidatversion. Skärmar och funktioner som beskrivs kan saknas i den app som är släppt i dag.",
-              "Du kan importera tidigare administreringar från en CSV-, TSV- eller JSON-fil, eller klistra in en tabell. En import tar upp till 10 000 poster, en källfil större än 10 MB avvisas i stället för att kapas, och ett sparat granskningsutkast är begränsat till 4 MiB på iPhone och iPad. Symtomrader och oklassificerade rader kan ännu inte sparas och måste avmarkeras; deras källtext behålls. Rader som kan vara dubbletter markeras för granskning och ingenting sparas förrän du bekräftar. Detta är inte en återställning av en säkerhetskopia. Förberedelseguiden, med prompten och utkastformatet, finns på doseweek-legal.wonyoungchoi.dev/import/."
+              "Du kan importera tidigare administreringar från en CSV-, TSV- eller JSON-fil, eller klistra in en tabell. En import tar upp till 10 000 poster, en källfil större än 10 MB avvisas i stället för att kapas, och ett sparat granskningsutkast är begränsat till 4 MiB på iPhone och iPad. Symtomrader och oklassificerade rader kan ännu inte sparas och måste avmarkeras; deras källtext behålls. Rader som kan vara dubbletter markeras för granskning och ingenting sparas förrän du bekräftar. Detta är inte en återställning av en säkerhetskopia. Den stegvisa importguiden, från AI-instruktionen till att lägga till de granskade posterna, finns på doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -3258,7 +3258,7 @@
             "question": "परीक्षण संस्करण की जानकारी: दूसरे ऐप से रिकॉर्ड लाएँ",
             "answers": [
               "iOS 1.0.5, जो अभी जारी नहीं हुआ: ये सात विषय एक प्रस्तावित संस्करण का वर्णन करते हैं। बताए गए स्क्रीन और सुविधाएँ फ़िलहाल जारी ऐप में न हों, यह संभव है।",
-              "आप CSV, TSV या JSON फ़ाइल से पुराने प्रयोग आयात कर सकते हैं, या तालिका चिपका सकते हैं। एक आयात में अधिकतम 10,000 रिकॉर्ड आते हैं, 10 MB से बड़ी स्रोत फ़ाइल काटी नहीं जाती बल्कि अस्वीकार होती है, और सहेजा गया समीक्षा मसौदा iPhone तथा iPad पर 4 MiB तक सीमित है। लक्षण और अवर्गीकृत पंक्तियाँ अभी सहेजी नहीं जा सकतीं और उनका चयन हटाना होगा; उनका मूल पाठ सुरक्षित रहता है। संभावित दोहराव वाली पंक्तियाँ समीक्षा के लिए चिह्नित होती हैं और आपकी पुष्टि से पहले कुछ भी सहेजा नहीं जाता। यह बैकअप पुनर्स्थापना नहीं है। प्रॉम्प्ट और मसौदा प्रारूप सहित तैयारी मार्गदर्शिका doseweek-legal.wonyoungchoi.dev/import/ पर है।"
+              "आप CSV, TSV या JSON फ़ाइल से पुराने प्रयोग आयात कर सकते हैं, या तालिका चिपका सकते हैं। एक आयात में अधिकतम 10,000 रिकॉर्ड आते हैं, 10 MB से बड़ी स्रोत फ़ाइल काटी नहीं जाती बल्कि अस्वीकार होती है, और सहेजा गया समीक्षा मसौदा iPhone तथा iPad पर 4 MiB तक सीमित है। लक्षण और अवर्गीकृत पंक्तियाँ अभी सहेजी नहीं जा सकतीं और उनका चयन हटाना होगा; उनका मूल पाठ सुरक्षित रहता है। संभावित दोहराव वाली पंक्तियाँ समीक्षा के लिए चिह्नित होती हैं और आपकी पुष्टि से पहले कुछ भी सहेजा नहीं जाता। यह बैकअप पुनर्स्थापना नहीं है। AI प्रॉम्प्ट से लेकर जाँचे गए रिकॉर्ड जोड़ने तक की चरण-दर-चरण आयात मार्गदर्शिका doseweek-legal.wonyoungchoi.dev/import/ पर है।"
             ]
           }
         }
@@ -3528,7 +3528,7 @@
             "question": "Guia da versão candidata: Trazer registros de outro app",
             "answers": [
               "iOS 1.0.5, versão ainda não publicada: estes sete tópicos descrevem uma versão candidata. As telas e comportamentos descritos podem não existir no app publicado atualmente.",
-              "Você pode importar aplicações passadas de um arquivo CSV, TSV ou JSON, ou colar uma tabela. Uma importação aceita até 10.000 registros, um arquivo de origem maior que 10 MB é recusado em vez de cortado e o rascunho de revisão salvo é limitado a 4 MiB no iPhone e no iPad. Linhas de sintomas e não classificadas ainda não podem ser salvas e precisam ser desmarcadas; o texto de origem delas é preservado. Linhas que podem ser duplicadas são marcadas para revisão e nada é salvo até você confirmar. Isso não é restauração de backup. O guia de preparação, com o prompt e o formato do rascunho, está em doseweek-legal.wonyoungchoi.dev/import/."
+              "Você pode importar aplicações passadas de um arquivo CSV, TSV ou JSON, ou colar uma tabela. Uma importação aceita até 10.000 registros, um arquivo de origem maior que 10 MB é recusado em vez de cortado e o rascunho de revisão salvo é limitado a 4 MiB no iPhone e no iPad. Linhas de sintomas e não classificadas ainda não podem ser salvas e precisam ser desmarcadas; o texto de origem delas é preservado. Linhas que podem ser duplicadas são marcadas para revisão e nada é salvo até você confirmar. Isso não é restauração de backup. O guia de importação passo a passo, das instruções para a IA até adicionar os registros revisados, está em doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -3798,7 +3798,7 @@
             "question": "إرشادات الإصدار التجريبي: نقل السجلات من تطبيق آخر",
             "answers": [
               "الإصدار iOS 1.0.5 الذي لم يُطرح بعد: تصف هذه المواضيع السبعة إصدارًا مرشحًا. قد لا تتوفر الشاشات والوظائف الموصوفة في التطبيق المنشور حاليًا.",
-              "يمكنك استيراد جرعات سابقة من ملف CSV أو TSV أو JSON، أو لصق جدول. يستوعب الاستيراد الواحد حتى 10,000 سجل، ويُرفض الملف المصدر الذي يتجاوز 10 ميغابايت بدل قصّه، وتقتصر مسودة المراجعة المحفوظة على 4 MiB على iPhone وiPad. لا يمكن بعد حفظ صفوف الأعراض والصفوف غير المصنفة ويجب إلغاء تحديدها؛ ويُحتفظ بنصها الأصلي. تُوسم الصفوف التي قد تكون مكررة للمراجعة، ولا يُحفظ شيء قبل تأكيدك. وهذا ليس استعادة لنسخة احتياطية. دليل التحضير، مع الموجّه وصيغة المسودة، متاح على doseweek-legal.wonyoungchoi.dev/import/."
+              "يمكنك استيراد جرعات سابقة من ملف CSV أو TSV أو JSON، أو لصق جدول. يستوعب الاستيراد الواحد حتى 10,000 سجل، ويُرفض الملف المصدر الذي يتجاوز 10 ميغابايت بدل قصّه، وتقتصر مسودة المراجعة المحفوظة على 4 MiB على iPhone وiPad. لا يمكن بعد حفظ صفوف الأعراض والصفوف غير المصنفة ويجب إلغاء تحديدها؛ ويُحتفظ بنصها الأصلي. تُوسم الصفوف التي قد تكون مكررة للمراجعة، ولا يُحفظ شيء قبل تأكيدك. وهذا ليس استعادة لنسخة احتياطية. دليل الاستيراد خطوة بخطوة، من تعليمات الذكاء الاصطناعي حتى إضافة السجلات التي راجعتها، متاح على doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         }
@@ -4068,7 +4068,7 @@
             "question": "未发布版本指南: 导入其他应用的记录",
             "answers": [
               "iOS 1.0.5（尚未发布）：这七项内容是候选版本说明。当前已发布的应用可能尚不提供所述界面或功能。",
-              "您可以从 CSV、TSV 或 JSON 文件导入过去的用药记录，或直接粘贴表格。单次导入最多 10,000 条，超过 10 MB 的源文件会被拒绝而不是截断，保存的复核草稿在 iPhone 和 iPad 上上限为 4 MiB。症状行和未分类行尚不能保存，需要取消选择；其原文会被保留。可能重复的行会标记为待复核，在您确认之前不会保存任何内容。这不是备份恢复。包含提示词和草稿格式的准备指南见 doseweek-legal.wonyoungchoi.dev/import/。"
+              "您可以从 CSV、TSV 或 JSON 文件导入过去的用药记录，或直接粘贴表格。单次导入最多 10,000 条，超过 10 MB 的源文件会被拒绝而不是截断，保存的复核草稿在 iPhone 和 iPad 上上限为 4 MiB。症状行和未分类行尚不能保存，需要取消选择；其原文会被保留。可能重复的行会标记为待复核，在您确认之前不会保存任何内容。这不是备份恢复。从 AI 提示词到添加已核对记录的分步导入指南见 doseweek-legal.wonyoungchoi.dev/import/。"
             ]
           }
         }
@@ -4338,7 +4338,7 @@
             "question": "未發布版本指南: 匯入其他 App 的紀錄",
             "answers": [
               "iOS 1.0.5（尚未發布）：這七項內容是候選版本說明。目前已發布的 App 可能尚未提供所述畫面或功能。",
-              "您可以從 CSV、TSV 或 JSON 檔匯入過去的用藥紀錄，或直接貼上表格。單次匯入最多 10,000 筆，超過 10 MB 的來源檔會被拒絕而不是截斷，儲存的檢閱草稿在 iPhone 與 iPad 上上限為 4 MiB。症狀列與未分類列目前無法儲存，需要取消選取；其原文會被保留。可能重複的列會標示為待檢閱，在您確認前不會儲存任何內容。這不是備份還原。包含提示詞與草稿格式的準備指南請見 doseweek-legal.wonyoungchoi.dev/import/。"
+              "您可以從 CSV、TSV 或 JSON 檔匯入過去的用藥紀錄，或直接貼上表格。單次匯入最多 10,000 筆，超過 10 MB 的來源檔會被拒絕而不是截斷，儲存的檢閱草稿在 iPhone 與 iPad 上上限為 4 MiB。症狀列與未分類列目前無法儲存，需要取消選取；其原文會被保留。可能重複的列會標示為待檢閱，在您確認前不會儲存任何內容。這不是備份還原。從 AI 提示詞到新增已核對紀錄的逐步匯入指南請見 doseweek-legal.wonyoungchoi.dev/import/。"
             ]
           }
         }
@@ -4608,7 +4608,7 @@
             "question": "Aday sürüm kılavuzu: Başka bir uygulamadan kayıt getirme",
             "answers": [
               "Henüz yayımlanmamış iOS 1.0.5 sürümü: Bu yedi konu bir aday sürümü açıklar. Anlatılan ekranlar ve işlevler şu anda yayımlanan uygulamada bulunmayabilir.",
-              "Geçmiş uygulamaları bir CSV, TSV veya JSON dosyasından içe aktarabilir ya da bir tabloyu yapıştırabilirsiniz. Tek içe aktarma en fazla 10.000 kayıt alır, 10 MB'tan büyük bir kaynak dosya kırpılmak yerine reddedilir ve kaydedilen inceleme taslağı iPhone ile iPad'de 4 MiB ile sınırlıdır. Belirti ve sınıflandırılmamış satırlar henüz kaydedilemez ve seçimleri kaldırılmalıdır; kaynak metinleri korunur. Yinelenmiş olabilecek satırlar inceleme için işaretlenir ve siz onaylayana kadar hiçbir şey kaydedilmez. Bu bir yedek geri yükleme değildir. İstem ve taslak biçimini içeren hazırlık kılavuzu doseweek-legal.wonyoungchoi.dev/import/ adresindedir."
+              "Geçmiş uygulamaları bir CSV, TSV veya JSON dosyasından içe aktarabilir ya da bir tabloyu yapıştırabilirsiniz. Tek içe aktarma en fazla 10.000 kayıt alır, 10 MB'tan büyük bir kaynak dosya kırpılmak yerine reddedilir ve kaydedilen inceleme taslağı iPhone ile iPad'de 4 MiB ile sınırlıdır. Belirti ve sınıflandırılmamış satırlar henüz kaydedilemez ve seçimleri kaldırılmalıdır; kaynak metinleri korunur. Yinelenmiş olabilecek satırlar inceleme için işaretlenir ve siz onaylayana kadar hiçbir şey kaydedilmez. Bu bir yedek geri yükleme değildir. Yapay zekâ isteminden incelenen kayıtların eklenmesine kadar adım adım aktarma kılavuzu doseweek-legal.wonyoungchoi.dev/import/ adresindedir."
             ]
           }
         }

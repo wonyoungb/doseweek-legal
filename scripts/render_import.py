@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the shared record-preparation guide and its localized downloads."""
+"""Render the shared record import guide and its localized downloads."""
 from __future__ import annotations
 import argparse
 import html
@@ -11,6 +11,30 @@ LANGUAGES = ['ko', 'en', 'ja', 'de', 'fr', 'es', 'it', 'nl', 'pt-PT', 'pl', 'sv'
 LABELS = dict(zip(LANGUAGES, ['한국어', 'English', '日本語', 'Deutsch', 'Français', 'Español', 'Italiano', 'Nederlands', 'Português (Portugal)', 'Polski', 'Svenska', 'हिन्दी', 'Português (Brasil)', 'العربية', '简体中文', '繁體中文', 'Türkçe']))
 BASE = 'https://doseweek-legal.wonyoungchoi.dev/'
 SCALAR_FIELDS = ['source_app', 'source_record_id', 'date_text', 'date_iso', 'time_text', 'time_24h', 'time_zone', 'utc_offset', 'medication_name', 'dose_value_text', 'dose_unit', 'site_text', 'measurement_type', 'measurement_value_text', 'measurement_unit', 'symptom_text', 'severity_text', 'note']
+# Owner decision TRANSFER-20260913-10: the published guide leads from a new AI chat to the in-app
+# review and selected append. In the supported state every locale quotes the app's own labels for
+# the import screen, its file button and its add button (identical in the iOS and Android apps).
+IMPORT_IOS_VERSION = '1.0.5'
+APP_LABELS = {
+    'ko': ('다른 앱에서 기록 가져오기', '파일 선택', '선택한 기록 추가'),
+    'en': ('Import records from another app', 'Choose file', 'Add selected records'),
+    'ja': ('ほかのアプリから記録を取り込む', 'ファイルを選択', '選択した記録を追加'),
+    'de': ('Einträge aus einer anderen App importieren', 'Datei auswählen', 'Ausgewählte Einträge hinzufügen'),
+    'fr': ('Importer des données d’une autre app', 'Choisir un fichier', 'Ajouter les données sélectionnées'),
+    'es': ('Importar registros de otra app', 'Elegir archivo', 'Añadir registros seleccionados'),
+    'it': ('Importa registrazioni da un’altra app', 'Scegli file', 'Aggiungi registrazioni selezionate'),
+    'nl': ('Gegevens uit een andere app importeren', 'Bestand kiezen', 'Geselecteerde registraties toevoegen'),
+    'pt-PT': ('Importar registos de outra aplicação', 'Escolher ficheiro', 'Adicionar registos selecionados'),
+    'pl': ('Importuj wpisy z innej aplikacji', 'Wybierz plik', 'Dodaj wybrane wpisy'),
+    'sv': ('Importera poster från en annan app', 'Välj fil', 'Lägg till valda poster'),
+    'hi': ('दूसरे ऐप से रिकॉर्ड आयात करें', 'फ़ाइल चुनें', 'चुने गए रिकॉर्ड जोड़ें'),
+    'pt-BR': ('Importar registros de outro aplicativo', 'Escolher arquivo', 'Adicionar registros selecionados'),
+    'ar': ('استيراد سجلات من تطبيق آخر', 'اختيار ملف', 'إضافة السجلات المحددة'),
+    'zh-Hans': ('从其他应用导入记录', '选择文件', '添加所选记录'),
+    'zh-Hant': ('從其他 App 匯入紀錄', '選擇檔案', '新增所選紀錄'),
+    'tr': ('Başka bir uygulamadan kayıt aktar', 'Dosya seç', 'Seçilen kayıtları ekle'),
+}
+STEP_COUNTS = {'preparation_only': 3, 'supported': 6}
 RECORD = {'row_id': 'row-0001', 'record_type': 'unclassified', 'source_app': None, 'source_record_id': None, 'source_references': [{'document': None, 'page': None, 'row': None, 'visible_text': None}]}
 RECORD.update({key: None for key in SCALAR_FIELDS if key not in RECORD})
 RECORD['needs_review'] = []
@@ -26,7 +50,7 @@ def validate(content: dict, require_all: bool = False) -> None:
     if require_all:
         assert set(locales) == set(LANGUAGES), 'The published guide requires all 17 locales.'
     keys = set(locales['en'])
-    lists = {'steps': 3, 'review_rules': 5, 'prompt_rules': 10, 'spec_rules': 7}
+    lists = {'steps': STEP_COUNTS[content['status']], 'review_rules': 5, 'prompt_rules': 10, 'spec_rules': 7}
     for lang, value in locales.items():
         assert set(value) == keys, f'{lang}: translation keys differ'
         for key, field in value.items():
@@ -39,6 +63,11 @@ def validate(content: dict, require_all: bool = False) -> None:
                         assert isinstance(item, str) and item.strip(), f'{lang}.{key}: empty rule'
             else:
                 assert isinstance(field, str) and field.strip(), f'{lang}.{key}: empty translation'
+        if content['status'] == 'supported':
+            steps_text = ' '.join(step['body'] for step in value['steps'])
+            for label in (*APP_LABELS[lang], value['copy_label']):
+                assert label in steps_text, f'{lang}: steps must quote the label {label!r}'
+            assert IMPORT_IOS_VERSION in value['status_body'], f'{lang}: status must name iOS {IMPORT_IOS_VERSION}'
         for token in ('date_text', 'time_text', 'source_references', 'source_record_id', 'row_id', 'row-0001', 'needs_review', 'unclassified', 'unreadable_sections', 'reviewed_by_user', 'false', 'null', 'administration', 'body_measurement', 'symptom', 'measurement_type', 'weight', 'height', 'waist', 'body_fat', 'lean_body_mass'):
             assert token in ' '.join(value['prompt_rules']), f'{lang}: missing machine token {token}'
 
@@ -70,7 +99,7 @@ def schema() -> dict:
         'measurement_type': {'enum': ['weight', 'height', 'waist', 'body_fat', 'lean_body_mass', None]},
         'needs_review': {'type': 'array', 'items': {'type': 'string', 'minLength': 1}},
     })
-    return {'$schema': 'https://json-schema.org/draft/2020-12/schema', '$id': BASE + 'import/draft-v1.schema.json', 'title': 'DoseWeek record extraction draft v1', 'description': 'Unreviewed transcription draft. Not an encrypted backup or proof of app import support. Semantic review is required in addition to schema validation.', '$comment': 'Application resource limits: at most 10000 records, input JSON at most 10 MiB (10485760 bytes), nesting depth at most 32, and each decoded JSON string at most 16 KiB (16384 UTF-8 bytes). JSON Schema maxLength counts Unicode code points, not UTF-8 bytes; the importer must enforce the byte and nesting limits separately.', 'type': 'object', 'additionalProperties': False, 'required': list(TEMPLATE), 'properties': {'format': {'const': TEMPLATE['format']}, 'version': {'const': 1}, 'reviewed_by_user': {'const': False}, 'records': {'type': 'array', 'maxItems': 10000, 'items': {'type': 'object', 'additionalProperties': False, 'required': list(RECORD), 'properties': properties}}, 'unreadable_sections': {'type': 'array', 'items': {'type': 'string', 'minLength': 1}}}}
+    return {'$schema': 'https://json-schema.org/draft/2020-12/schema', '$id': BASE + 'import/draft-v1.schema.json', 'title': 'DoseWeek record extraction draft v1', 'description': 'Unreviewed transcription draft for DoseWeek Import records from another app. Not an encrypted backup. Passing this schema does not mean a row can be saved; every row is reviewed in the app before the selected rows are added.', '$comment': 'Application resource limits: at most 10000 records, input JSON at most 10 MiB (10485760 bytes), nesting depth at most 32, and each decoded JSON string at most 16 KiB (16384 UTF-8 bytes). JSON Schema maxLength counts Unicode code points, not UTF-8 bytes; the importer must enforce the byte and nesting limits separately.', 'type': 'object', 'additionalProperties': False, 'required': list(TEMPLATE), 'properties': {'format': {'const': TEMPLATE['format']}, 'version': {'const': 1}, 'reviewed_by_user': {'const': False}, 'records': {'type': 'array', 'maxItems': 10000, 'items': {'type': 'object', 'additionalProperties': False, 'required': list(RECORD), 'properties': properties}}, 'unreadable_sections': {'type': 'array', 'items': {'type': 'string', 'minLength': 1}}}}
 
 
 def rendered(content: dict) -> dict[str, str]:

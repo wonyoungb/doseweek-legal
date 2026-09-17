@@ -1,10 +1,10 @@
 # Brouillon d’extraction de données DoseWeek — version 1
 
-Vous pouvez dès maintenant préparer et vérifier un brouillon JSON. Ce guide ne signifie pas que votre version installée de DoseWeek peut l’enregistrer. Conservez les données originales jusqu’à ce que l’app prenne explicitement en charge ce format.
+Ce guide s’utilise avec « Importer des données d’une autre app » dans DoseWeek 1.0.5 ou ultérieur sur iPhone et iPad, et dans l’app Android DoseWeek dès que cet écran apparaît dans votre version installée. Si vous ne le voyez pas, mettez d’abord DoseWeek à jour. Conservez vos données d’origine jusqu’à la fin de l’import.
 
-Ce format conserve les éléments justificatifs pour une vérification manuelle. Ce n’est ni une sauvegarde chiffrée, ni une décision clinique, ni une garantie de format fournisseur, ni la preuve que l’app actuelle peut l’importer.
+Ce format conserve les éléments de preuve pour la vérification dans l’écran d’import de DoseWeek. Ce n’est ni une sauvegarde chiffrée, ni une décision clinique, ni une garantie sur le format d’un éditeur.
 
-Importation Android : le brouillon enregistré est limité à 1 MiB (1 048 576 octets) et 10 000 lignes, indépendamment des 10 MiB du JSON d’entrée. Les lignes de symptômes et non classées ne sont pas enregistrables ; conservez leur texte et désélectionnez-les. Les enregistrements correspondants supprimés restent considérés comme importés et ne sont pas restaurés. La version candidate iOS limite séparément les brouillons à reprendre à 4 MiB. Ne supposez pas un comportement ou une disponibilité identiques selon la plateforme ou l’app installée.
+Limites de l’app : un import contient au plus 10 000 lignes et le JSON importé au plus 10 Mio. Un brouillon de vérification non terminé peut atteindre 4 Mio sur iPhone et iPad et 1 Mio (1 048 576 octets) sur Android ; un import plus grand est refusé, jamais tronqué. Les lignes de symptôme ou non classées ne peuvent pas être enregistrées ; gardez leur texte source et désélectionnez-les. Sur Android, les lignes correspondant à des données supprimées après un import précédent comptent comme déjà importées et ne sont pas restaurées.
 
 1. Le format de premier niveau est doseweek.record_extraction_draft ; version vaut 1 ; reviewed_by_user vaut false. records et unreadable_sections sont des tableaux. Rejette les champs inconnus au lieu de les supprimer silencieusement.
 
@@ -14,9 +14,9 @@ Importation Android : le brouillon enregistré est limité à 1 MiB (1 048 576 o
 
 4. date_iso utilise YYYY-MM-DD uniquement si la date complète est valide et sans ambiguïté. time_24h utilise HH:mm, avec les secondes et fractions de seconde facultatives lorsqu’elles sont visibles. time_zone et utc_offset exigent des éléments explicites dans la source. Les champs manquants ou ambigus valent null, pas des chaînes vides ni des dates ou heures devinées.
 
-5. Le schéma vérifie la structure ; un futur importateur devra aussi vérifier les dates calendaires réelles, les unités, les correspondances prises en charge pour les médicaments et les mesures, les éléments source, les ambiguïtés de fuseau horaire et les doublons. La seule validation du schéma n’autorise jamais l’enregistrement.
+5. Le schéma ne vérifie que la structure. L’import de DoseWeek vérifie aussi les dates réelles du calendrier, les unités, les correspondances de médicaments et de mesures prises en charge, les fuseaux horaires et les doublons, et vous vérifiez toujours chaque ligne. Réussir le schéma n’autorise jamais à lui seul l’enregistrement.
 
-6. Le parcours d’enregistrement prévu vérifie toutes les lignes sélectionnées, rejette les champs obligatoires non résolus et ajoute la sélection de façon atomique sans écraser automatiquement les données existantes. Le sens des événements comportant seulement une date doit être explicitement pris en charge avant leur enregistrement ; aucun remplacement par minuit ou midi n’est autorisé.
+6. L’app refuse les lignes sélectionnées dont des champs obligatoires restent non résolus et ajoute la sélection de façon atomique, sans écraser les données existantes. Une ligne sans heure exige l’heure réelle saisie et confirmée dans l’app ; aucune heure fictive comme minuit ou midi n’est utilisée.
 
 7. Gardez les brouillons et les fichiers source privés. Ce guide statique ne comporte aucun formulaire d’envoi. Choisir une IA externe transmet les fichiers sélectionnés à ce service selon ses propres conditions. Vous pouvez préparer les mêmes champs manuellement ou avec la reconnaissance de texte sur votre appareil. Si vous créez un fichier manuellement, enregistrez uniquement le contenu JSON de la réponse de l’IA dans un fichier UTF-8 se terminant par .json. Un brouillon peut contenir au maximum 10 000 enregistrements. Chaque chaîne JSON décodée est limitée à 16 KiB (16 384 octets UTF-8). Cette limite en octets est vérifiée par l’application ; maxLength dans JSON Schema compte les points de code Unicode, pas les octets UTF-8. La taille du fichier JSON est limitée à 10 MiB et l’imbrication à 32 niveaux.
 

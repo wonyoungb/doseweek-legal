@@ -1,10 +1,10 @@
 # DoseWeek-concept voor gegevensextractie — versie 1
 
-Je kunt nu al een JSON-concept voorbereiden en controleren. Deze gids betekent niet dat je geïnstalleerde versie van DoseWeek het kan opslaan. Bewaar de oorspronkelijke gegevens totdat de app dit formaat uitdrukkelijk ondersteunt.
+Deze handleiding hoort bij ‘Gegevens uit een andere app importeren’ in DoseWeek 1.0.5 of later op iPhone en iPad, en in de Android-app van DoseWeek zodra dat scherm in uw geïnstalleerde versie verschijnt. Ziet u het niet, werk DoseWeek dan eerst bij. Bewaar de oorspronkelijke registraties tot het importeren klaar is.
 
-Dit formaat bewaart bewijs voor handmatige controle. Het is geen versleutelde back-up, klinische beslissing, garantie voor een leveranciersformaat of bewijs dat de huidige app het kan importeren.
+Dit formaat bewaart bewijs voor de controle in het importscherm van DoseWeek. Het is geen versleutelde back-up, geen klinische beslissing en geen garantie voor het formaat van een leverancier.
 
-Android-import: het opgeslagen concept is beperkt tot 1 MiB (1.048.576 bytes) en 10.000 rijen, los van de 10 MiB voor JSON-invoer. Symptoomrijen en niet-geclassificeerde rijen kunnen niet worden opgeslagen; bewaar hun tekst en deselecteer ze. Overeenkomende verwijderde records blijven al geïmporteerd en worden niet hersteld. De iOS-kandidaat heeft een aparte limiet van 4 MiB voor hervatbare concepten. Ga niet uit van gelijk gedrag of beschikbaarheid op beide platforms of in de geïnstalleerde app.
+App-limieten: één import bevat maximaal 10.000 regels en de ingelezen JSON maximaal 10 MiB. Een onvoltooid controleconcept mag op iPhone en iPad maximaal 4 MiB en op Android maximaal 1 MiB (1.048.576 bytes) zijn; een grotere import wordt geweigerd, nooit ingekort. Regels met symptomen of zonder categorie kunnen niet worden bewaard; houd hun brontekst en deselecteer ze. Op Android gelden regels die overeenkomen met registraties die na een eerdere import zijn verwijderd als al geïmporteerd; ze worden niet hersteld.
 
 1. Het format op het hoogste niveau is doseweek.record_extraction_draft; version is 1; reviewed_by_user is false. records en unreadable_sections zijn arrays. Wijs onbekende velden af in plaats van ze stilzwijgend weg te laten.
 
@@ -14,9 +14,9 @@ Android-import: het opgeslagen concept is beperkt tot 1 MiB (1.048.576 bytes) en
 
 4. date_iso gebruikt YYYY-MM-DD alleen als de volledige datum ondubbelzinnig en geldig is. time_24h gebruikt HH:mm, met optionele zichtbare seconden en fracties van seconden. time_zone en utc_offset vereisen expliciet bewijs uit de bron. Ontbrekende of dubbelzinnige velden zijn null, geen lege strings of geraden datums en tijden.
 
-5. Het schema controleert de structuur; een latere importer moet ook echte kalenderdatums, eenheden, ondersteunde koppelingen van medicatie en meettypen, bronbewijs, tijdzoneambiguïteit en dubbele registraties controleren. Alleen slagen voor de schemacontrole geeft nooit toestemming om op te slaan.
+5. Het schema controleert alleen de structuur. De import van DoseWeek controleert ook echte kalenderdatums, eenheden, ondersteunde koppelingen van medicijnen en metingen, tijdzones en dubbele registraties, en u controleert nog steeds elke regel. Alleen slagen voor het schema geeft nooit toestemming om te bewaren.
 
-6. De beoogde opslagprocedure controleert alle geselecteerde rijen, wijst onopgeloste verplichte velden af en voegt de selectie atomair toe zonder bestaande registraties automatisch te overschrijven. De betekenis van gebeurtenissen met alleen een datum moet vóór het opslaan expliciet worden ondersteund; middernacht of twaalf uur ’s middags als tijdelijke invulling is niet toegestaan.
+6. De app weigert geselecteerde regels met onopgeloste verplichte velden en voegt de selectie atomair toe zonder bestaande registraties te overschrijven. Een regel zonder tijd heeft de werkelijke tijd nodig, ingevuld en bevestigd in de app; er wordt geen plaatsvervangende tijd zoals middernacht of het middaguur gebruikt.
 
 7. Houd concepten en bronbestanden privé. Deze statische gids heeft geen uploadformulier. Als je een externe AI kiest, worden de geselecteerde bestanden onder de eigen voorwaarden van die dienst verstuurd. Je kunt dezelfde velden handmatig voorbereiden of tekstherkenning op je apparaat gebruiken. Als u handmatig een bestand maakt, sla dan alleen de JSON-inhoud van het AI-antwoord op als UTF-8-bestand met de extensie .json. Een concept mag maximaal 10.000 records bevatten. Elke gedecodeerde JSON-tekenreeks is beperkt tot 16 KiB (16.384 UTF-8-bytes). De app controleert deze bytelimiet; maxLength in JSON Schema telt Unicode-codepunten, geen UTF-8-bytes. Het JSON-bestand mag maximaal 10 MiB groot zijn; de nestingsdiepte is beperkt tot 32 niveaus.
 

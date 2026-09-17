@@ -301,7 +301,7 @@
             "question": "다른 앱의 기록을 가져올 수 있나요?",
             "answers": [
               "Android 1.0.0 (versionCode 11): 아래 일곱 항목은 아직 출시되지 않은 후보 버전의 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
-              "CSV, TSV, JSON 파일을 고르거나 표를 직접 붙여 넣어 과거 투약 기록을 가져옵니다. 한 번에 최대 10,000행이며 저장되는 검토 초안은 1 MiB까지입니다. 증상과 분류되지 않은 행은 아직 저장할 수 없으므로 선택을 해제해야 합니다. 중복 가능성이 있는 행은 검토 대상으로 표시되고, 확인하기 전에는 아무것도 저장되지 않습니다. 이것은 백업 복원이 아니며, 준비 방법은 doseweek-legal.wonyoungchoi.dev/import/ 안내를 참고하세요."
+              "CSV, TSV, JSON 파일을 고르거나 표를 직접 붙여 넣어 과거 투약 기록을 가져옵니다. 한 번에 최대 10,000행이며 저장되는 검토 초안은 1 MiB까지입니다. 증상과 분류되지 않은 행은 아직 저장할 수 없으므로 선택을 해제해야 합니다. 중복 가능성이 있는 행은 검토 대상으로 표시되고, 확인하기 전에는 아무것도 저장되지 않습니다. 이것은 백업 복원이 아니며, AI 프롬프트부터 검토한 기록 추가까지의 단계별 안내는 doseweek-legal.wonyoungchoi.dev/import/에서 확인하세요."
             ]
           }
         ],
@@ -591,7 +591,7 @@
             "question": "Can I bring records from another app?",
             "answers": [
               "Android 1.0.0 (versionCode 11): these seven topics describe an unreleased candidate version. Screens and behavior may not be available in the currently released app.",
-              "You can import past administrations from a CSV, TSV or JSON file, or paste a table directly. One import takes up to 10,000 rows and the saved review draft is limited to 1 MiB. Symptom and unclassified rows cannot be saved yet and must be deselected. Rows that may be duplicates are marked for review, and nothing is saved until you confirm. This is not a backup restore; the preparation guide is at doseweek-legal.wonyoungchoi.dev/import/."
+              "You can import past administrations from a CSV, TSV or JSON file, or paste a table directly. One import takes up to 10,000 rows and the saved review draft is limited to 1 MiB. Symptom and unclassified rows cannot be saved yet and must be deselected. Rows that may be duplicates are marked for review, and nothing is saved until you confirm. This is not a backup restore; the step-by-step import guide, from the AI prompt to adding the reviewed records, is at doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -881,7 +881,7 @@
             "question": "他のアプリの記録を取り込めますか？",
             "answers": [
               "Android 1.0.0 (versionCode 11): この7項目は、未公開の候補版に関する案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
-              "CSV、TSV、JSONのファイルを選ぶか、表を貼り付けて過去の投与記録を取り込めます。1回の取り込みは最大10,000行、保存される確認用の下書きは1 MiBまでです。症状と未分類の行はまだ保存できないため、選択を外してください。重複の可能性がある行は確認対象として表示され、確定するまで何も保存されません。これはバックアップの復元ではありません。準備方法はdoseweek-legal.wonyoungchoi.dev/import/の案内をご覧ください。"
+              "CSV、TSV、JSONのファイルを選ぶか、表を貼り付けて過去の投与記録を取り込めます。1回の取り込みは最大10,000行、保存される確認用の下書きは1 MiBまでです。症状と未分類の行はまだ保存できないため、選択を外してください。重複の可能性がある行は確認対象として表示され、確定するまで何も保存されません。これはバックアップの復元ではありません。AIへのプロンプトから確認済みの記録の追加までの手順はdoseweek-legal.wonyoungchoi.dev/import/の案内をご覧ください。"
             ]
           }
         ],
@@ -1171,7 +1171,7 @@
             "question": "Kann ich Einträge aus einer anderen App übernehmen?",
             "answers": [
               "Android 1.0.0 (versionCode 11): Diese sieben Themen beschreiben eine noch nicht veröffentlichte Kandidatenversion. Die beschriebenen Bildschirme und Funktionen sind in der derzeit veröffentlichten App möglicherweise nicht vorhanden.",
-              "Sie können frühere Anwendungen aus einer CSV-, TSV- oder JSON-Datei importieren oder eine Tabelle direkt einfügen. Ein Import umfasst bis zu 10.000 Zeilen, der gespeicherte Prüfentwurf ist auf 1 MiB begrenzt. Symptomzeilen und nicht klassifizierte Zeilen lassen sich noch nicht speichern und müssen abgewählt werden. Möglicherweise doppelte Zeilen werden zur Prüfung markiert, und nichts wird gespeichert, bevor Sie bestätigen. Das ist keine Wiederherstellung einer Sicherung; die Anleitung steht unter doseweek-legal.wonyoungchoi.dev/import/."
+              "Sie können frühere Anwendungen aus einer CSV-, TSV- oder JSON-Datei importieren oder eine Tabelle direkt einfügen. Ein Import umfasst bis zu 10.000 Zeilen, der gespeicherte Prüfentwurf ist auf 1 MiB begrenzt. Symptomzeilen und nicht klassifizierte Zeilen lassen sich noch nicht speichern und müssen abgewählt werden. Möglicherweise doppelte Zeilen werden zur Prüfung markiert, und nichts wird gespeichert, bevor Sie bestätigen. Das ist keine Wiederherstellung einer Sicherung; die Schritt-für-Schritt-Anleitung vom KI-Prompt bis zum Hinzufügen der geprüften Einträge steht unter doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -1461,7 +1461,7 @@
             "question": "Puis-je récupérer des enregistrements d’une autre application ?",
             "answers": [
               "Android 1.0.0 (versionCode 11) : ces sept rubriques concernent une version candidate non publiée. Les écrans et les comportements décrits peuvent ne pas exister dans l’application actuellement publiée.",
-              "Vous pouvez importer des administrations passées depuis un fichier CSV, TSV ou JSON, ou coller un tableau directement. Un import accepte jusqu’à 10 000 lignes et le brouillon de vérification enregistré est limité à 1 MiB. Les lignes de symptômes et non classées ne peuvent pas encore être enregistrées et doivent être désélectionnées. Les lignes susceptibles d’être des doublons sont signalées pour vérification, et rien n’est enregistré avant votre confirmation. Ce n’est pas une restauration de sauvegarde ; le guide de préparation se trouve sur doseweek-legal.wonyoungchoi.dev/import/."
+              "Vous pouvez importer des administrations passées depuis un fichier CSV, TSV ou JSON, ou coller un tableau directement. Un import accepte jusqu’à 10 000 lignes et le brouillon de vérification enregistré est limité à 1 MiB. Les lignes de symptômes et non classées ne peuvent pas encore être enregistrées et doivent être désélectionnées. Les lignes susceptibles d’être des doublons sont signalées pour vérification, et rien n’est enregistré avant votre confirmation. Ce n’est pas une restauration de sauvegarde ; le guide d’import pas à pas, des consignes pour l’IA à l’ajout des données vérifiées, se trouve sur doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -1751,7 +1751,7 @@
             "question": "¿Puedo traer registros de otra aplicación?",
             "answers": [
               "Android 1.0.0 (versionCode 11): estos siete temas describen una versión candidata aún no publicada. Las pantallas y funciones descritas pueden no existir en la aplicación publicada actualmente.",
-              "Puede importar administraciones pasadas desde un archivo CSV, TSV o JSON, o pegar una tabla directamente. Una importación admite hasta 10.000 filas y el borrador de revisión guardado se limita a 1 MiB. Las filas de síntomas y sin clasificar todavía no pueden guardarse y deben desmarcarse. Las filas que puedan ser duplicados se marcan para revisión y no se guarda nada hasta que usted confirme. Esto no es una restauración de copia de seguridad; la guía de preparación está en doseweek-legal.wonyoungchoi.dev/import/."
+              "Puede importar administraciones pasadas desde un archivo CSV, TSV o JSON, o pegar una tabla directamente. Una importación admite hasta 10.000 filas y el borrador de revisión guardado se limita a 1 MiB. Las filas de síntomas y sin clasificar todavía no pueden guardarse y deben desmarcarse. Las filas que puedan ser duplicados se marcan para revisión y no se guarda nada hasta que usted confirme. Esto no es una restauración de copia de seguridad; la guía de importación paso a paso, desde las instrucciones para la IA hasta añadir los registros revisados, está en doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -2041,7 +2041,7 @@
             "question": "Posso portare registrazioni da un’altra app?",
             "answers": [
               "Android 1.0.0 (versionCode 11): questi sette argomenti descrivono una versione candidata non ancora pubblicata. Le schermate e i comportamenti descritti potrebbero non essere presenti nell’app attualmente pubblicata.",
-              "Puoi importare somministrazioni passate da un file CSV, TSV o JSON, oppure incollare direttamente una tabella. Un’importazione accetta fino a 10.000 righe e la bozza di revisione salvata è limitata a 1 MiB. Le righe dei sintomi e non classificate non possono ancora essere salvate e vanno deselezionate. Le righe che potrebbero essere duplicati sono segnalate per la revisione e nulla viene salvato prima della tua conferma. Non è un ripristino del backup; la guida alla preparazione è su doseweek-legal.wonyoungchoi.dev/import/."
+              "Puoi importare somministrazioni passate da un file CSV, TSV o JSON, oppure incollare direttamente una tabella. Un’importazione accetta fino a 10.000 righe e la bozza di revisione salvata è limitata a 1 MiB. Le righe dei sintomi e non classificate non possono ancora essere salvate e vanno deselezionate. Le righe che potrebbero essere duplicati sono segnalate per la revisione e nulla viene salvato prima della tua conferma. Non è un ripristino del backup; la guida all’importazione passo per passo, dalle istruzioni per l’IA all’aggiunta delle registrazioni controllate, è su doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -2331,7 +2331,7 @@
             "question": "Kan ik registraties uit een andere app overnemen?",
             "answers": [
               "Android 1.0.0 (versionCode 11): deze zeven onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie. De beschreven schermen en functies zijn mogelijk niet aanwezig in de nu uitgebrachte app.",
-              "U kunt eerdere toedieningen importeren uit een CSV-, TSV- of JSON-bestand, of een tabel rechtstreeks plakken. Eén import verwerkt maximaal 10.000 rijen en het opgeslagen controleconcept is beperkt tot 1 MiB. Symptoomrijen en niet-geclassificeerde rijen kunnen nog niet worden opgeslagen en moeten worden gedeselecteerd. Rijen die mogelijk dubbel zijn, worden gemarkeerd voor controle en er wordt niets opgeslagen voordat u bevestigt. Dit is geen back-upherstel; de voorbereidingsgids staat op doseweek-legal.wonyoungchoi.dev/import/."
+              "U kunt eerdere toedieningen importeren uit een CSV-, TSV- of JSON-bestand, of een tabel rechtstreeks plakken. Eén import verwerkt maximaal 10.000 rijen en het opgeslagen controleconcept is beperkt tot 1 MiB. Symptoomrijen en niet-geclassificeerde rijen kunnen nog niet worden opgeslagen en moeten worden gedeselecteerd. Rijen die mogelijk dubbel zijn, worden gemarkeerd voor controle en er wordt niets opgeslagen voordat u bevestigt. Dit is geen back-upherstel; de stapsgewijze importgids, van de AI-prompt tot het toevoegen van de gecontroleerde registraties, staat op doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -2621,7 +2621,7 @@
             "question": "Posso trazer registos de outra aplicação?",
             "answers": [
               "Android 1.0.0 (versionCode 11): estes sete tópicos descrevem uma versão candidata ainda não publicada. Os ecrãs e comportamentos descritos podem não existir na aplicação atualmente publicada.",
-              "Pode importar administrações passadas a partir de um ficheiro CSV, TSV ou JSON, ou colar uma tabela diretamente. Uma importação aceita até 10 000 linhas e o rascunho de revisão guardado está limitado a 1 MiB. As linhas de sintomas e não classificadas ainda não podem ser guardadas e têm de ser desmarcadas. As linhas que possam ser duplicados são assinaladas para revisão e nada é guardado até confirmar. Isto não é um restauro de cópia de segurança; o guia de preparação está em doseweek-legal.wonyoungchoi.dev/import/."
+              "Pode importar administrações passadas a partir de um ficheiro CSV, TSV ou JSON, ou colar uma tabela diretamente. Uma importação aceita até 10 000 linhas e o rascunho de revisão guardado está limitado a 1 MiB. As linhas de sintomas e não classificadas ainda não podem ser guardadas e têm de ser desmarcadas. As linhas que possam ser duplicados são assinaladas para revisão e nada é guardado até confirmar. Isto não é um restauro de cópia de segurança; o guia de importação passo a passo, das instruções para a IA até adicionar os registos revistos, está em doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -2911,7 +2911,7 @@
             "question": "Czy mogę przenieść zapisy z innej aplikacji?",
             "answers": [
               "Android 1.0.0 (versionCode 11): te siedem tematów opisuje nieopublikowaną jeszcze wersję kandydującą. Opisane ekrany i funkcje mogą nie być dostępne w obecnie opublikowanej aplikacji.",
-              "Możesz zaimportować wcześniejsze podania z pliku CSV, TSV lub JSON albo wkleić tabelę bezpośrednio. Jeden import obejmuje do 10 000 wierszy, a zapisany szkic do przeglądu ma limit 1 MiB. Wierszy objawów i niesklasyfikowanych nie można jeszcze zapisać i trzeba je odznaczyć. Wiersze mogące być duplikatami są oznaczane do przeglądu i nic nie zostaje zapisane przed Twoim potwierdzeniem. To nie jest przywracanie kopii zapasowej; przewodnik przygotowania znajdziesz na doseweek-legal.wonyoungchoi.dev/import/."
+              "Możesz zaimportować wcześniejsze podania z pliku CSV, TSV lub JSON albo wkleić tabelę bezpośrednio. Jeden import obejmuje do 10 000 wierszy, a zapisany szkic do przeglądu ma limit 1 MiB. Wierszy objawów i niesklasyfikowanych nie można jeszcze zapisać i trzeba je odznaczyć. Wiersze mogące być duplikatami są oznaczane do przeglądu i nic nie zostaje zapisane przed Twoim potwierdzeniem. To nie jest przywracanie kopii zapasowej; przewodnik importu krok po kroku, od polecenia dla AI po dodanie sprawdzonych wpisów, znajdziesz na doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -3201,7 +3201,7 @@
             "question": "Kan jag hämta poster från en annan app?",
             "answers": [
               "Android 1.0.0 (versionCode 11): de här sju ämnena beskriver en ännu inte släppt kandidatversion. Skärmar och funktioner som beskrivs kan saknas i den app som är släppt i dag.",
-              "Du kan importera tidigare administreringar från en CSV-, TSV- eller JSON-fil, eller klistra in en tabell direkt. En import tar upp till 10 000 rader och det sparade granskningsutkastet är begränsat till 1 MiB. Symtomrader och oklassificerade rader kan ännu inte sparas och måste avmarkeras. Rader som kan vara dubbletter markeras för granskning, och ingenting sparas förrän du bekräftar. Detta är inte en återställning av en säkerhetskopia; förberedelseguiden finns på doseweek-legal.wonyoungchoi.dev/import/."
+              "Du kan importera tidigare administreringar från en CSV-, TSV- eller JSON-fil, eller klistra in en tabell direkt. En import tar upp till 10 000 rader och det sparade granskningsutkastet är begränsat till 1 MiB. Symtomrader och oklassificerade rader kan ännu inte sparas och måste avmarkeras. Rader som kan vara dubbletter markeras för granskning, och ingenting sparas förrän du bekräftar. Detta är inte en återställning av en säkerhetskopia; den stegvisa importguiden, från AI-instruktionen till att lägga till de granskade posterna, finns på doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -3491,7 +3491,7 @@
             "question": "क्या मैं दूसरे ऐप के रिकॉर्ड ला सकता/सकती हूँ?",
             "answers": [
               "Android 1.0.0 (versionCode 11): ये सात विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ फ़िलहाल जारी ऐप में उपलब्ध न हों, यह संभव है।",
-              "आप CSV, TSV या JSON फ़ाइल से पुराने प्रयोग आयात कर सकते हैं, या तालिका सीधे चिपका सकते हैं। एक आयात में अधिकतम 10,000 पंक्तियाँ और सहेजा गया समीक्षा मसौदा 1 MiB तक होता है। लक्षण और अवर्गीकृत पंक्तियाँ अभी सहेजी नहीं जा सकतीं, उनका चयन हटाना होगा। संभावित दोहराव वाली पंक्तियाँ समीक्षा के लिए चिह्नित होती हैं और आपकी पुष्टि से पहले कुछ भी सहेजा नहीं जाता। यह बैकअप पुनर्स्थापना नहीं है; तैयारी मार्गदर्शिका doseweek-legal.wonyoungchoi.dev/import/ पर है।"
+              "आप CSV, TSV या JSON फ़ाइल से पुराने प्रयोग आयात कर सकते हैं, या तालिका सीधे चिपका सकते हैं। एक आयात में अधिकतम 10,000 पंक्तियाँ और सहेजा गया समीक्षा मसौदा 1 MiB तक होता है। लक्षण और अवर्गीकृत पंक्तियाँ अभी सहेजी नहीं जा सकतीं, उनका चयन हटाना होगा। संभावित दोहराव वाली पंक्तियाँ समीक्षा के लिए चिह्नित होती हैं और आपकी पुष्टि से पहले कुछ भी सहेजा नहीं जाता। यह बैकअप पुनर्स्थापना नहीं है; AI प्रॉम्प्ट से लेकर जाँचे गए रिकॉर्ड जोड़ने तक की चरण-दर-चरण आयात मार्गदर्शिका doseweek-legal.wonyoungchoi.dev/import/ पर है।"
             ]
           }
         ],
@@ -3781,7 +3781,7 @@
             "question": "Posso trazer registros de outro app?",
             "answers": [
               "Android 1.0.0 (versionCode 11): estes sete tópicos descrevem uma versão candidata ainda não publicada. As telas e os comportamentos descritos podem não existir no app publicado atualmente.",
-              "Você pode importar aplicações passadas de um arquivo CSV, TSV ou JSON, ou colar uma tabela diretamente. Uma importação aceita até 10.000 linhas e o rascunho de revisão salvo é limitado a 1 MiB. Linhas de sintomas e não classificadas ainda não podem ser salvas e precisam ser desmarcadas. Linhas que podem ser duplicadas são marcadas para revisão e nada é salvo até você confirmar. Isso não é restauração de backup; o guia de preparação está em doseweek-legal.wonyoungchoi.dev/import/."
+              "Você pode importar aplicações passadas de um arquivo CSV, TSV ou JSON, ou colar uma tabela diretamente. Uma importação aceita até 10.000 linhas e o rascunho de revisão salvo é limitado a 1 MiB. Linhas de sintomas e não classificadas ainda não podem ser salvas e precisam ser desmarcadas. Linhas que podem ser duplicadas são marcadas para revisão e nada é salvo até você confirmar. Isso não é restauração de backup; o guia de importação passo a passo, das instruções para a IA até adicionar os registros revisados, está em doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -4071,7 +4071,7 @@
             "question": "هل يمكنني نقل السجلات من تطبيق آخر؟",
             "answers": [
               "Android 1.0.0 (versionCode 11): تصف هذه المواضيع السبعة إصدارًا مرشحًا لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف الموصوفة في التطبيق المنشور حاليًا.",
-              "يمكنك استيراد جرعات سابقة من ملف CSV أو TSV أو JSON، أو لصق جدول مباشرة. يستوعب الاستيراد الواحد حتى 10,000 صف، وحد المسودة المحفوظة للمراجعة 1 MiB. ولا يمكن بعد حفظ صفوف الأعراض والصفوف غير المصنفة، فألغِ تحديدها. وتُوسم الصفوف التي قد تكون مكررة للمراجعة، ولا يُحفظ شيء قبل تأكيدك. وهذا ليس استعادة لنسخة احتياطية؛ ودليل التحضير متاح على doseweek-legal.wonyoungchoi.dev/import/."
+              "يمكنك استيراد جرعات سابقة من ملف CSV أو TSV أو JSON، أو لصق جدول مباشرة. يستوعب الاستيراد الواحد حتى 10,000 صف، وحد المسودة المحفوظة للمراجعة 1 MiB. ولا يمكن بعد حفظ صفوف الأعراض والصفوف غير المصنفة، فألغِ تحديدها. وتُوسم الصفوف التي قد تكون مكررة للمراجعة، ولا يُحفظ شيء قبل تأكيدك. وهذا ليس استعادة لنسخة احتياطية؛ ودليل الاستيراد خطوة بخطوة، من تعليمات الذكاء الاصطناعي حتى إضافة السجلات التي راجعتها، متاح على doseweek-legal.wonyoungchoi.dev/import/."
             ]
           }
         ],
@@ -4361,7 +4361,7 @@
             "question": "可以导入其他应用的记录吗？",
             "answers": [
               "Android 1.0.0 (versionCode 11): 这七项内容是尚未发布的候选版本说明。当前已发布的应用可能尚不提供所述界面或功能。",
-              "可以从 CSV、TSV 或 JSON 文件导入过去的用药记录，或直接粘贴表格。单次导入最多 10,000 行，保存的复核草稿上限为 1 MiB。症状行与未分类行尚不能保存，需要取消选择。可能重复的行会标记为待复核，在您确认之前不会保存任何内容。这不是备份恢复；准备指南见 doseweek-legal.wonyoungchoi.dev/import/。"
+              "可以从 CSV、TSV 或 JSON 文件导入过去的用药记录，或直接粘贴表格。单次导入最多 10,000 行，保存的复核草稿上限为 1 MiB。症状行与未分类行尚不能保存，需要取消选择。可能重复的行会标记为待复核，在您确认之前不会保存任何内容。这不是备份恢复；从 AI 提示词到添加已核对记录的分步导入指南见 doseweek-legal.wonyoungchoi.dev/import/。"
             ]
           }
         ],
@@ -4651,7 +4651,7 @@
             "question": "可以匯入其他 App 的紀錄嗎？",
             "answers": [
               "Android 1.0.0 (versionCode 11): 這七項內容是尚未發布的候選版本說明。目前已發布的 App 可能尚未提供所述畫面或功能。",
-              "可從 CSV、TSV 或 JSON 檔匯入過去的用藥紀錄，或直接貼上表格。單次匯入最多 10,000 列，儲存的檢閱草稿上限為 1 MiB。症狀列與未分類列目前無法儲存，需要取消選取。可能重複的列會標示為待檢閱，在您確認前不會儲存任何內容。這不是備份還原；準備指南請見 doseweek-legal.wonyoungchoi.dev/import/。"
+              "可從 CSV、TSV 或 JSON 檔匯入過去的用藥紀錄，或直接貼上表格。單次匯入最多 10,000 列，儲存的檢閱草稿上限為 1 MiB。症狀列與未分類列目前無法儲存，需要取消選取。可能重複的列會標示為待檢閱，在您確認前不會儲存任何內容。這不是備份還原；從 AI 提示詞到新增已核對紀錄的逐步匯入指南請見 doseweek-legal.wonyoungchoi.dev/import/。"
             ]
           }
         ],
@@ -4941,7 +4941,7 @@
             "question": "Başka bir uygulamadaki kayıtları aktarabilir miyim?",
             "answers": [
               "Android 1.0.0 (versionCode 11): Bu yedi konu, henüz yayımlanmamış bir aday sürümü açıklar. Anlatılan ekranlar ve işlevler şu anda yayımlanan uygulamada bulunmayabilir.",
-              "Geçmiş uygulamaları bir CSV, TSV veya JSON dosyasından içe aktarabilir ya da bir tabloyu doğrudan yapıştırabilirsiniz. Tek içe aktarma en fazla 10.000 satır alır ve kaydedilen inceleme taslağı 1 MiB ile sınırlıdır. Belirti ve sınıflandırılmamış satırlar henüz kaydedilemez, seçimlerini kaldırmanız gerekir. Yinelenmiş olabilecek satırlar inceleme için işaretlenir ve siz onaylayana kadar hiçbir şey kaydedilmez. Bu bir yedek geri yükleme değildir; hazırlık kılavuzu doseweek-legal.wonyoungchoi.dev/import/ adresindedir."
+              "Geçmiş uygulamaları bir CSV, TSV veya JSON dosyasından içe aktarabilir ya da bir tabloyu doğrudan yapıştırabilirsiniz. Tek içe aktarma en fazla 10.000 satır alır ve kaydedilen inceleme taslağı 1 MiB ile sınırlıdır. Belirti ve sınıflandırılmamış satırlar henüz kaydedilemez, seçimlerini kaldırmanız gerekir. Yinelenmiş olabilecek satırlar inceleme için işaretlenir ve siz onaylayana kadar hiçbir şey kaydedilmez. Bu bir yedek geri yükleme değildir; yapay zekâ isteminden incelenen kayıtların eklenmesine kadar adım adım aktarma kılavuzu doseweek-legal.wonyoungchoi.dev/import/ adresindedir."
             ]
           }
         ],
