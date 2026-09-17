@@ -53,3 +53,28 @@ def require_release_date() -> str:
         "sets it after the store upload (LEGAL-EFFECTIVE-DATE-20260917) before publishing"
     )
     return expected_effective_date("0000-00-00")
+
+
+# Food data bundled with the second release (owner decision NUTRITION-CATALOG-RELEASE-20260917):
+# android-nutrition-data feat/nutrition-data a2eb701, release
+# d1f046b4e17eba4f0d7499a06f9df6a5a67b55424e44ed775cb54b3dac6f9891, notices/NOTICE.txt. The
+# attribution lines (and the MEXT change statement that MEXT requires for edited data) are legal
+# notices, so both candidate policy sections carry them verbatim, in their source language, in
+# every locale.
+FOOD_DATA_RELEASE_ID = "d1f046b4e17eba4f0d7499a06f9df6a5a67b55424e44ed775cb54b3dac6f9891"
+FOOD_DATA_ATTRIBUTIONS = (
+    "U.S. Department of Agriculture, Agricultural Research Service. FoodData Central: "
+    "Foundation Foods, April 2026 bulk release. https://fdc.nal.usda.gov/",
+    "PHE (Public Health England) (2021). Composition of foods integrated dataset (CoFID). "
+    "© Crown copyright 2021. Contains public sector information licensed under the Open "
+    "Government Licence v3.0.",
+    "出典：日本食品標準成分表（八訂）増補2023年（文部科学省）",
+    "「日本食品標準成分表（八訂）増補2023年」（文部科学省）を基にDoseWeekが編集・加工"
+    "（文部科学省が作成したものではありません）。",
+    "출처: 식품의약품안전처, 전국통합식품영양성분정보(음식)표준데이터 (공공데이터포털 data.go.kr, "
+    "데이터기준일자 2026-08-28). 일부 항목 원출처: 농촌진흥청 국가표준식품성분표.",
+)
+
+
+def missing_food_attributions(text: str) -> list[str]:
+    return [line for line in FOOD_DATA_ATTRIBUTIONS if line not in text]

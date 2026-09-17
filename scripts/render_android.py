@@ -9,7 +9,11 @@ import json
 import re
 from pathlib import Path
 
-from legal_release import CURRENT_ANDROID_EFFECTIVE_DATE, expected_effective_date
+from legal_release import (
+    CURRENT_ANDROID_EFFECTIVE_DATE,
+    expected_effective_date,
+    missing_food_attributions,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -497,6 +501,12 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             )
         assert SECOND_RELEASE_VERSION in policy_by_id["next-release"]["paragraphs"][0], (
             f"{locale}: candidate policy section must name the unreleased version"
+        )
+        # the bundled food data ships in this release, so its attribution lines are verbatim
+        food_paragraph = policy_by_id["next-release"]["paragraphs"][4]
+        assert not missing_food_attributions(food_paragraph), (
+            f"{locale}: candidate food data paragraph is missing the attribution "
+            f"{missing_food_attributions(food_paragraph)[0]!r}"
         )
 
         backup_answer = faq_by_id["backup"]["answers"][0]

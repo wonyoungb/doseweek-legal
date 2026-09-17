@@ -14,7 +14,11 @@ import html
 import json
 from pathlib import Path
 
-from legal_release import CURRENT_IOS_EFFECTIVE_DATE, expected_effective_date
+from legal_release import (
+    CURRENT_IOS_EFFECTIVE_DATE,
+    expected_effective_date,
+    missing_food_attributions,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -125,6 +129,11 @@ def validate(content: dict) -> None:
             assert any(token in serialized for token in tokens), (
                 f"{locale}: candidate section is missing {tokens[0]!r}"
             )
+        # the bundled food data ships in this release, so its attribution lines are verbatim
+        assert not missing_food_attributions(candidate["paragraphs"][4]), (
+            f"{locale}: candidate food data paragraph is missing the attribution "
+            f"{missing_food_attributions(candidate['paragraphs'][4])[0]!r}"
+        )
         for string in (
             entry["languageName"], entry["common"]["skipToContent"],
             entry["common"]["contents"], entry["common"]["supportLinkTitle"],
