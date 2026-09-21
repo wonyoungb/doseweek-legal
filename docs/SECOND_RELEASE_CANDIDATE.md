@@ -1,3 +1,7 @@
+> Historical snapshot. Use [CURRENT_HANDOFF.md](CURRENT_HANDOFF.md) and
+> [legal-release-map.json](../legal-release-map.json) for current status. Do not restart
+> old workflows or treat original pending work below as still pending.
+
 # Second-release candidate — what this branch publishes and what it does not
 
 Branch `candidate/second-release`, cut from `main` `8a615a1` on 2026-09-16. Nothing here is
