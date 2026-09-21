@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "purpose": "Per-platform publication record for the doseweek-legal second-release candidate (LEGAL_TWO_RELEASES.md section 5). Null means not assigned or not decided; nothing here is a placeholder version or date.",
   "legal": {
     "repository": "wonyoungb/doseweek-legal",
     "branch": "codex/privacy-completion-20260920",
     "baseCommit": "8a615a1",
     "headCommit": null,
-    "publishStatus": "Unpublished integrated candidate worktree; no publication performed by this reconciliation. Owner decision LEGAL-EFFECTIVE-DATE-20260917 still requires both store uploads, a chosen SECOND_RELEASE_EFFECTIVE_DATE and check_site.py --release PASS before publication.",
+    "publishStatus": "Unpublished. Owner 2026-09-22: date/catalog alignment before final builds/signing; both accepted store uploads and release checks before site publication.",
     "sourceStatus": "Current Android canonical catalog and legal mirror are byte-identical; 17 generated in-app policy locales match. Current iOS policy strings (sections 1-10 and medical text) match the legal mirror verbatim in all 17 locales. All generated pages pass deterministic checks on 2026-09-21; this does not certify translation or browser accessibility.",
     "generatedPages": [
       "privacy/index.html",
@@ -26,13 +26,13 @@
       "liveApp": "DoseWeek 1.0.0 for Android on Google Play; per the app repository ledger versionCode 9 (submitted 2026-09-11) is the live Production build, and versionCode 10 was accepted by Play on 2026-09-15 but its review submission was withheld for stage 2, so it is never released",
       "candidateApp": "DoseWeek 1.0.0/code11; integrated candidate 79a1fd416d75ed3bbeb21440055c1e6126d42b78; not uploaded in this continuation",
       "catalogSource": "../android/docs/legal/android-content.json; current integrated worktree",
-      "catalogSourceSha256": "86cd7b18a28e7b022b6c60597a7563abff121f99af9a2dcde706e313049a5d94",
+      "catalogSourceSha256": "28946a2bb250a852dd3cab76f99b71b974f9c047771fad0fcd5ee1736098c924",
       "candidateCatalog": "docs/android-content.candidate.json",
-      "candidateCatalogSha256": "86cd7b18a28e7b022b6c60597a7563abff121f99af9a2dcde706e313049a5d94",
-      "effectiveDate": "2026-09-08",
-      "effectiveDateDecision": "LEGAL-EFFECTIVE-DATE-20260917: set after the store upload through scripts/legal_release.py SECOND_RELEASE_EFFECTIVE_DATE (not filled yet)",
+      "candidateCatalogSha256": "28946a2bb250a852dd3cab76f99b71b974f9c047771fad0fcd5ee1736098c924",
+      "effectiveDate": "2026-09-22",
+      "effectiveDateDecision": "Owner 2026-09-22: fixed before final builds/signing, superseding after-upload date order.",
       "candidateWording": "Current 17-locale catalog includes selected-image-only food-label ML Kit consent, Google diagnostics/usage metrics, possible queued transmission, manual fallback, readable Drive metadata and distinct local/Drive/SDK retention boundaries; no Android generative AI.",
-      "publishCondition": "Both platform builds uploaded; set the owner-approved second-release effective date consistently; rerun exact Android/iOS catalog and generated-page checks plus check_site.py --release; publish only through the authorized release process.",
+      "publishCondition": "Align catalogs and date before final builds/signing; both accepted store uploads plus exact catalog/render/release checks before site publication.",
       "previousCandidateCatalogSha256": "81149a99a30928b0674e9f62c56d5c91e4176e54b0e8f4d80d0d1f9f3180d955"
     },
     "ios": {
@@ -40,13 +40,13 @@
       "candidateApp": "DoseWeek 1.0.5/build16; integrated candidate a4636882d32e56441d993655df161f5a64ad9e99; not uploaded in this continuation",
       "candidateAppNote": "Current source project has MARKETING_VERSION 1.0.5 and CURRENT_PROJECT_VERSION 16; store upload/submission remains separate.",
       "catalogSource": "../ios/DoseDay/Resources/Localizable.xcstrings; current integrated worktree",
-      "catalogSourceSha256": "7f0c811bdbca64811cbcb93ec51ac7129da8824875a6fcb6a499e9881e90485c",
+      "catalogSourceSha256": "12dbe479869a5544ecfbb42541519026617e5f9b43303409a0ef06f3d62d1d0f",
       "candidateCatalog": "docs/ios-content.json",
-      "candidateCatalogSha256": "a14682d97c2a00fa225b596e5d23b070f32e92f703d162405ddedde63c7e6b8c",
-      "effectiveDate": "2026-08-22",
-      "effectiveDateDecision": "LEGAL-EFFECTIVE-DATE-20260917: set after the store upload through scripts/legal_release.py SECOND_RELEASE_EFFECTIVE_DATE (not filled yet)",
+      "candidateCatalogSha256": "ad8fe7b5e2f391102dc909afa36a49764b48792001b5fe6defee7ceac205762f",
+      "effectiveDate": "2026-09-22",
+      "effectiveDateDecision": "Owner 2026-09-22: fixed before final builds/signing, superseding after-upload date order.",
       "candidateWording": "Current 17-locale mirror includes app policy sections 1-10 (including consented voice and selected label processing), medical text, and separately maintained candidate section 11 naming iOS 1.0.5. Android ML Kit telemetry exception does not apply to iOS.",
-      "publishCondition": "Both platform builds uploaded; set the owner-approved second-release effective date consistently; rerun exact Android/iOS catalog and generated-page checks plus check_site.py --release; publish only through the authorized release process.",
+      "publishCondition": "Align catalogs and date before final builds/signing; both accepted store uploads plus exact catalog/render/release checks before site publication.",
       "catalogParityCheckedAgainst": "Current source hash 7f0c811bdbca64811cbcb93ec51ac7129da8824875a6fcb6a499e9881e90485c; scripts/render_ios.py --check --catalog and scripts/check_site.py both passed 2026-09-21."
     }
   },
@@ -75,7 +75,7 @@
     "attributionSource": "notices/NOTICE.txt of the release; the attribution lines and the MEXT change statement are kept verbatim in scripts/legal_release.py FOOD_DATA_ATTRIBUTIONS and required in both candidate policy sections"
   },
   "checks": {
-    "passedOn": "2026-09-21",
+    "passedOn": "2026-09-22",
     "commands": [
       "python3 scripts/generate_privacy_strings.py --check",
       "python3 scripts/render_ios.py --check --catalog /Users/wonyoungchoi/Documents/Coding Work/Doseweek/Claude outputs/DoseWeek-release/ios/DoseDay/Resources/Localizable.xcstrings",
@@ -88,7 +88,7 @@
       "native-speaker review of the cycle-2 import guide, food data and version wording in all seventeen locales",
       "Full VoiceOver/screen-reader review and browser text zoom"
     ],
-    "releaseGate": "EXPECTED FAIL on 2026-09-21: SECOND_RELEASE_EFFECTIVE_DATE remains None. Effective dates remain Android 2026-09-08 and iOS 2026-08-22.",
+    "releaseGate": "PASS 2026-09-22: fixed date; exact iOS/Android catalog parity,7pages,locale/link/disclosure checks.",
     "proof": "../evidence/continuation-20260921/privacy/parity-proof.json",
     "documentationReconciledAt": "2026-09-21T23:13:00.913246+09:00",
     "browserReview": {

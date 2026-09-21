@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "platform": "ios",
   "bundleVersion": "1.0.5",
-  "effectiveDate": "2026-08-22",
+  "effectiveDate": "2026-09-22",
   "supportEmail": "wonyoung@wonyoungchoi.dev",
   "localeOrder": [
     "ko",
@@ -35,7 +35,7 @@
       "privacy": {
         "title": "개인정보 처리방침",
         "intro": "DoseWeek는 주사 투여 기록을 돕는 개인용 기록 도구입니다. 아래 내용은 앱이 실제로 동작하는 방식을 그대로 설명합니다.",
-        "effectiveDate": "시행일: 2026년 8월 22일",
+        "effectiveDate": "시행일: 2026년 9월 22일",
         "sections": [
           {
             "id": "storage",
@@ -111,7 +111,7 @@
             "id": "next-release",
             "title": "11. 다음 버전에 준비 중인 변경(후보)",
             "paragraphs": [
-              "이 항목은 아직 출시되지 않은 iOS 1.0.5에 적용될 예정인 변경을 미리 공개합니다. 9항의 선택적 캘린더 연동도 같은 버전과 함께 제공됩니다. 시행일은 해당 버전 출시와 함께 확정합니다.",
+              "이 항목은 아직 출시되지 않은 iOS 1.0.5에 적용될 예정인 변경을 미리 공개합니다. 9항의 선택적 캘린더 연동도 같은 버전과 함께 제공됩니다. 시행일: 2026년 9월 22일.",
               "식사 기록: 사용자가 직접 입력한 식사 이름, 날짜, 선택적 시각과 식사 구분, 그리고 아는 범위에서 입력한 열량·단백질·탄수화물·지방 총량이 기기의 앱 전용 저장소에 저장됩니다. 비워 둔 값은 '모름'으로 남고 계산되지 않습니다. 식사 기록은 암호화 백업에 포함되고, 사용자가 요청할 때만 평문 CSV 파일로 내보낼 수 있으며, 진료 준비 화면과 PDF 내보내기에는 포함되지 않습니다. 개발자는 식사 정보를 받지 않습니다.",
               "일정과 신체 그래프: 반복 간격 대신 직접 고른 주사 날짜 목록을 저장할 수 있고, 체중 주간 변화와 BMI 그래프에 공개된 일반 기준 또는 사용자가 정한 개인 목표를 표시할 수 있습니다. 선택한 기준과 목표 값은 기기에 저장되고 암호화 백업에 포함됩니다. 표시되는 것은 범위와 출처뿐이며, 기준은 일반 인구 정보로서 치료에 대한 조언이 아닙니다.",
               "백업 형식: 새 기능 때문에 앱 데이터베이스와 암호화 백업 파일의 형식 번호가 올라갑니다. 이전 버전에서 만든 백업은 계속 복원할 수 있지만, 새 버전이 만든 백업은 이전 버전에서 복원할 수 없습니다. 캘린더 일정 연결 정보는 기기에만 남고 백업에 포함되지 않으며, 같은 기기에서 복원할 때는 그대로 유지됩니다. 저장하지 않은 임시 초안도 백업에 포함되지 않습니다.",
@@ -312,7 +312,7 @@
       "privacy": {
         "title": "Privacy Policy",
         "intro": "DoseWeek is a personal record-keeping tool for injection tracking. The following describes exactly how the app actually works.",
-        "effectiveDate": "Effective date: August 22, 2026",
+        "effectiveDate": "Effective date: September 22, 2026",
         "sections": [
           {
             "id": "storage",
@@ -388,7 +388,7 @@
             "id": "next-release",
             "title": "11. Candidate: what the next version adds",
             "paragraphs": [
-              "This section publishes, in advance, the changes prepared for iOS 1.0.5, which is not released yet. The optional calendar sync in section 9 ships with the same version. The effective date is set when that version is released.",
+              "This section publishes, in advance, the changes prepared for iOS 1.0.5, which is not released yet. The optional calendar sync in section 9 ships with the same version. Effective date: September 22, 2026.",
               "Meal records: the meal name, date, optional time and meal kind you enter, and the energy, protein, carbohydrate and fat totals you know, are kept in app-private storage on the device. A value you leave blank stays unknown and is not calculated. Meal records are included in the encrypted backup, can be written to a plaintext CSV file only when you ask for it, and are not part of the Visit Prep view or the PDF export. The developer receives no meal information.",
               "Schedules and body charts: a plan can store a list of injection dates you choose instead of a repeating interval, and the weekly weight-change and BMI charts can show either a published general reference or a personal target you set. The chosen reference and target value are stored on the device and are included in the encrypted backup. Only the range and its source are shown; a reference is general population information, not advice about your treatment.",
               "Backup format: the new features raise the format numbers of the app database and of the encrypted backup file. Backups written by earlier versions can still be restored, but a backup written by the new version cannot be restored by an earlier version. Calendar event links stay on the device, are not included in a backup, and are kept when you restore on the same device. Unsaved drafts are not included either.",
@@ -589,7 +589,7 @@
       "privacy": {
         "title": "プライバシーポリシー",
         "intro": "DoseWeekは注射の投与記録をサポートする個人用の記録ツールです。以下は、アプリの実際の動作をそのまま説明したものです。",
-        "effectiveDate": "施行日: 2026年8月22日",
+        "effectiveDate": "施行日: 2026年9月22日",
         "sections": [
           {
             "id": "storage",
@@ -665,7 +665,7 @@
             "id": "next-release",
             "title": "11. 次のバージョンで予定している変更（候補）",
             "paragraphs": [
-              "この項では、まだ公開していないiOS 1.0.5に向けて準備している変更を先に公開します。第9項の任意のカレンダー連携も同じバージョンで提供します。施行日は当該バージョンの公開時に確定します。",
+              "この項では、まだ公開していないiOS 1.0.5に向けて準備している変更を先に公開します。第9項の任意のカレンダー連携も同じバージョンで提供します。施行日: 2026年9月22日。",
               "食事の記録: 入力した食事名、日付、任意の時刻と食事区分、そして分かる範囲で入力したエネルギー・たんぱく質・炭水化物・脂質の合計が、端末のアプリ専用領域に保存されます。空欄のままにした値は「不明」として扱い、計算には使いません。食事の記録は暗号化バックアップに含まれ、ユーザーが求めたときにのみ平文のCSVファイルとして書き出せます。診療準備の画面とPDFの書き出しには含まれません。開発者は食事の情報を受け取りません。",
               "予定と身体グラフ: 繰り返し間隔の代わりに、自分で選んだ注射予定日の一覧を保存できます。体重の週あたり変化とBMIのグラフには、公開された一般的な基準か、自分で設定した目標のどちらかを表示できます。選んだ基準と目標値は端末に保存され、暗号化バックアップに含まれます。表示されるのは範囲と出典のみで、基準は一般集団の情報であり、治療に関する助言ではありません。",
               "バックアップ形式: 新機能に伴い、アプリのデータベースと暗号化バックアップファイルの形式番号が上がります。以前のバージョンで作成したバックアップは引き続き復元できますが、新しいバージョンで作成したバックアップを以前のバージョンで復元することはできません。カレンダー予定との対応情報は端末内にとどまり、バックアップには含まれず、同じ端末で復元した場合はそのまま保持されます。未保存の下書きも含まれません。",
@@ -866,7 +866,7 @@
       "privacy": {
         "title": "Datenschutzerklärung",
         "intro": "DoseWeek ist ein persönliches Werkzeug zur Dokumentation von Injektionen. Im Folgenden wird genau beschrieben, wie die App tatsächlich arbeitet.",
-        "effectiveDate": "Gültig ab: 22. August 2026",
+        "effectiveDate": "Gültig ab: 22. September 2026",
         "sections": [
           {
             "id": "storage",
@@ -942,7 +942,7 @@
             "id": "next-release",
             "title": "11. Kandidat: Was die nächste Version ergänzt",
             "paragraphs": [
-              "Dieser Abschnitt veröffentlicht vorab die Änderungen, die für iOS 1.0.5 vorbereitet sind; diese Version ist noch nicht veröffentlicht. Die optionale Kalender-Integration aus Abschnitt 9 erscheint mit derselben Version. Das Datum des Inkrafttretens wird mit der Veröffentlichung dieser Version festgelegt.",
+              "Dieser Abschnitt veröffentlicht vorab die Änderungen, die für iOS 1.0.5 vorbereitet sind; diese Version ist noch nicht veröffentlicht. Die optionale Kalender-Integration aus Abschnitt 9 erscheint mit derselben Version. Gültig ab: 22. September 2026.",
               "Mahlzeiteneinträge: Der Name der Mahlzeit, das Datum, die optionale Uhrzeit und Art der Mahlzeit sowie die Ihnen bekannten Summen für Energie, Eiweiß, Kohlenhydrate und Fett werden im app-privaten Speicher des Geräts abgelegt. Ein leer gelassener Wert bleibt unbekannt und wird nicht berechnet. Mahlzeiteneinträge sind in der verschlüsselten Sicherung enthalten, werden nur auf Ihre Anforderung hin in eine CSV-Datei im Klartext geschrieben und sind weder Teil der Arztbesuch-Vorbereitung noch des PDF-Exports. Der Entwickler erhält keine Angaben zu Mahlzeiten.",
               "Zeitpläne und Körperdiagramme: Ein Plan kann statt eines wiederkehrenden Intervalls eine Liste selbst gewählter Injektionstage speichern, und die Diagramme für die wöchentliche Gewichtsänderung und den BMI können entweder eine veröffentlichte allgemeine Referenz oder ein von Ihnen gesetztes persönliches Ziel anzeigen. Die gewählte Referenz und der Zielwert werden auf dem Gerät gespeichert und sind in der verschlüsselten Sicherung enthalten. Angezeigt werden nur der Bereich und seine Quelle; eine Referenz ist eine allgemeine Information zur Bevölkerung, keine Empfehlung zu Ihrer Behandlung.",
               "Sicherungsformat: Durch die neuen Funktionen steigen die Formatnummern der App-Datenbank und der verschlüsselten Sicherungsdatei. Sicherungen früherer Versionen lassen sich weiterhin wiederherstellen, eine von der neuen Version geschriebene Sicherung kann von einer früheren Version jedoch nicht wiederhergestellt werden. Verknüpfungen zu Kalenderterminen bleiben auf dem Gerät, sind nicht in der Sicherung enthalten und bleiben erhalten, wenn Sie auf demselben Gerät wiederherstellen. Nicht gespeicherte Entwürfe sind ebenfalls nicht enthalten.",
@@ -1143,7 +1143,7 @@
       "privacy": {
         "title": "Politique de confidentialité",
         "intro": "DoseWeek est un outil personnel d’enregistrement pour le suivi des injections. Ce qui suit décrit exactement le fonctionnement réel de l’app.",
-        "effectiveDate": "Date d’entrée en vigueur : 22 août 2026",
+        "effectiveDate": "Date d’entrée en vigueur : 22 septembre 2026",
         "sections": [
           {
             "id": "storage",
@@ -1219,7 +1219,7 @@
             "id": "next-release",
             "title": "11. Version candidate : ce qu’ajoute la prochaine version",
             "paragraphs": [
-              "Cette section publie à l’avance les changements préparés pour iOS 1.0.5, version qui n’est pas encore publiée. La synchronisation facultative du calendrier décrite à la section 9 arrive avec cette même version. La date d’entrée en vigueur sera fixée lors de la publication de cette version.",
+              "Cette section publie à l’avance les changements préparés pour iOS 1.0.5, version qui n’est pas encore publiée. La synchronisation facultative du calendrier décrite à la section 9 arrive avec cette même version. Date d’entrée en vigueur : 22 septembre 2026.",
               "Enregistrements de repas : le nom du repas, la date, l’heure et le type de repas facultatifs que vous saisissez, ainsi que les totaux d’énergie, de protéines, de glucides et de lipides que vous connaissez, sont conservés dans le stockage privé de l’application sur l’appareil. Une valeur laissée vide reste inconnue et n’est pas calculée. Les repas sont inclus dans la sauvegarde chiffrée, ne sont écrits dans un fichier CSV en clair que si vous le demandez, et ne font partie ni de la préparation de consultation ni de l’export PDF. Le développeur ne reçoit aucune information sur les repas.",
               "Calendrier de traitement et graphiques corporels : un plan peut mémoriser une liste de dates d’injection que vous choisissez au lieu d’un intervalle répété, et les graphiques de variation hebdomadaire du poids et d’IMC peuvent afficher soit une référence générale publiée, soit un objectif personnel que vous définissez. La référence choisie et la valeur cible sont stockées sur l’appareil et incluses dans la sauvegarde chiffrée. Seules la plage et sa source sont affichées ; une référence est une information de population générale, pas un conseil sur votre traitement.",
               "Format de sauvegarde : les nouvelles fonctions augmentent les numéros de format de la base de données de l’application et du fichier de sauvegarde chiffré. Les sauvegardes écrites par les versions antérieures restent restaurables, mais une sauvegarde écrite par la nouvelle version ne peut pas être restaurée par une version antérieure. Les liens vers les événements du calendrier restent sur l’appareil, ne figurent pas dans la sauvegarde et sont conservés lorsque vous restaurez sur le même appareil. Les brouillons non enregistrés n’y figurent pas non plus.",
@@ -1420,7 +1420,7 @@
       "privacy": {
         "title": "Política de Privacidad",
         "intro": "DoseWeek es una herramienta personal de registro para el seguimiento de inyecciones. A continuación se describe exactamente cómo funciona la app.",
-        "effectiveDate": "Fecha de entrada en vigor: 22 de agosto de 2026",
+        "effectiveDate": "Fecha de entrada en vigor: 22 de septiembre de 2026",
         "sections": [
           {
             "id": "storage",
@@ -1496,7 +1496,7 @@
             "id": "next-release",
             "title": "11. Versión candidata: lo que añade la próxima versión",
             "paragraphs": [
-              "Esta sección publica por adelantado los cambios preparados para iOS 1.0.5, versión que aún no se ha publicado. La sincronización opcional con el calendario de la sección 9 llega con esa misma versión. La fecha de entrada en vigor se fijará al publicar esa versión.",
+              "Esta sección publica por adelantado los cambios preparados para iOS 1.0.5, versión que aún no se ha publicado. La sincronización opcional con el calendario de la sección 9 llega con esa misma versión. Fecha de entrada en vigor: 22 de septiembre de 2026.",
               "Registros de comidas: el nombre de la comida, la fecha, la hora y el tipo de comida opcionales que introduzca, junto con los totales de energía, proteínas, carbohidratos y grasas que conozca, se guardan en el almacenamiento privado de la aplicación en el dispositivo. Un valor que deje vacío permanece desconocido y no se calcula. Las comidas se incluyen en la copia de seguridad cifrada, solo se escriben en un archivo CSV en texto plano cuando usted lo pide y no forman parte de la preparación de la consulta ni de la exportación en PDF. El desarrollador no recibe información de comidas.",
               "Pautas y gráficos corporales: una pauta puede guardar una lista de fechas de inyección elegidas por usted en lugar de un intervalo repetido, y los gráficos de cambio semanal de peso y de IMC pueden mostrar una referencia general publicada o un objetivo personal que usted defina. La referencia elegida y el valor objetivo se guardan en el dispositivo y se incluyen en la copia de seguridad cifrada. Solo se muestran el rango y su fuente; una referencia es información de población general, no un consejo sobre su tratamiento.",
               "Formato de copia de seguridad: las nuevas funciones elevan los números de formato de la base de datos de la aplicación y del archivo de copia cifrado. Las copias escritas por versiones anteriores siguen pudiendo restaurarse, pero una copia escrita por la nueva versión no puede restaurarse en una versión anterior. Los vínculos con eventos del calendario permanecen en el dispositivo, no se incluyen en la copia y se conservan al restaurar en el mismo dispositivo. Los borradores sin guardar tampoco se incluyen.",
@@ -1697,7 +1697,7 @@
       "privacy": {
         "title": "Informativa sulla privacy",
         "intro": "DoseWeek è uno strumento personale di registrazione per tenere traccia delle iniezioni. Quanto segue descrive esattamente il funzionamento reale dell'app.",
-        "effectiveDate": "Data di entrata in vigore: 22 agosto 2026",
+        "effectiveDate": "Data di entrata in vigore: 22 settembre 2026",
         "sections": [
           {
             "id": "storage",
@@ -1773,7 +1773,7 @@
             "id": "next-release",
             "title": "11. Versione candidata: cosa aggiunge la prossima versione",
             "paragraphs": [
-              "Questa sezione pubblica in anticipo le modifiche preparate per iOS 1.0.5, versione non ancora pubblicata. La sincronizzazione facoltativa del calendario della sezione 9 arriva con la stessa versione. La data di efficacia sarà fissata con la pubblicazione di quella versione.",
+              "Questa sezione pubblica in anticipo le modifiche preparate per iOS 1.0.5, versione non ancora pubblicata. La sincronizzazione facoltativa del calendario della sezione 9 arriva con la stessa versione. Data di entrata in vigore: 22 settembre 2026.",
               "Registrazioni dei pasti: il nome del pasto, la data, l’ora e il tipo di pasto facoltativi che inserisci, insieme ai totali di energia, proteine, carboidrati e grassi che conosci, restano nella memoria privata dell’app sul dispositivo. Un valore lasciato vuoto resta sconosciuto e non viene calcolato. I pasti sono inclusi nel backup crittografato, vengono scritti in un file CSV in chiaro solo su tua richiesta e non fanno parte della preparazione alla visita né dell’esportazione PDF. Lo sviluppatore non riceve informazioni sui pasti.",
               "Programmi e grafici corporei: un programma può memorizzare un elenco di date di iniezione scelte da te invece di un intervallo ripetuto, e i grafici della variazione settimanale del peso e dell’IMC possono mostrare un riferimento generale pubblicato oppure un obiettivo personale impostato da te. Il riferimento scelto e il valore obiettivo sono memorizzati sul dispositivo e inclusi nel backup crittografato. Vengono mostrati solo l’intervallo e la sua fonte; un riferimento è un’informazione sulla popolazione generale, non un consiglio sulla tua terapia.",
               "Formato del backup: le nuove funzioni aumentano i numeri di formato del database dell’app e del file di backup crittografato. I backup scritti da versioni precedenti restano ripristinabili, ma un backup scritto dalla nuova versione non può essere ripristinato da una versione precedente. I collegamenti agli eventi del calendario restano sul dispositivo, non sono inclusi nel backup e vengono mantenuti quando ripristini sullo stesso dispositivo. Anche le bozze non salvate non sono incluse.",
@@ -1974,7 +1974,7 @@
       "privacy": {
         "title": "Privacybeleid",
         "intro": "DoseWeek is een persoonlijk registratiehulpmiddel voor het bijhouden van injecties. Hieronder staat precies beschreven hoe de app werkt.",
-        "effectiveDate": "Ingangsdatum: 22 augustus 2026",
+        "effectiveDate": "Ingangsdatum: 22 september 2026",
         "sections": [
           {
             "id": "storage",
@@ -2050,7 +2050,7 @@
             "id": "next-release",
             "title": "11. Kandidaat: wat de volgende versie toevoegt",
             "paragraphs": [
-              "Deze paragraaf publiceert vooraf de wijzigingen die zijn voorbereid voor iOS 1.0.5, een versie die nog niet is uitgebracht. De optionele agenda-integratie uit paragraaf 9 verschijnt met dezelfde versie. De ingangsdatum wordt vastgesteld bij het uitbrengen van die versie.",
+              "Deze paragraaf publiceert vooraf de wijzigingen die zijn voorbereid voor iOS 1.0.5, een versie die nog niet is uitgebracht. De optionele agenda-integratie uit paragraaf 9 verschijnt met dezelfde versie. Ingangsdatum: 22 september 2026.",
               "Maaltijdregistraties: de maaltijdnaam, de datum, de optionele tijd en het maaltijdtype die u invoert, samen met de totalen voor energie, eiwit, koolhydraten en vet die u kent, blijven in de app-privéopslag op het apparaat. Een waarde die u leeg laat, blijft onbekend en wordt niet berekend. Maaltijden zitten in de versleutelde back-up, worden alleen op uw verzoek naar een CSV-bestand zonder versleuteling geschreven en maken geen deel uit van de consultvoorbereiding of de PDF-export. De ontwikkelaar ontvangt geen maaltijdgegevens.",
               "Schema’s en lichaamsgrafieken: een schema kan een lijst met door u gekozen injectiedata bewaren in plaats van een herhalend interval, en de grafieken voor wekelijkse gewichtsverandering en BMI kunnen een gepubliceerde algemene referentie of een door u ingesteld persoonlijk doel tonen. De gekozen referentie en de doelwaarde staan op het apparaat en zitten in de versleutelde back-up. Alleen het bereik en de bron worden getoond; een referentie is algemene bevolkingsinformatie, geen advies over uw behandeling.",
               "Back-upformaat: door de nieuwe functies stijgen de formaatnummers van de app-database en van het versleutelde back-upbestand. Back-ups van eerdere versies blijven te herstellen, maar een back-up van de nieuwe versie kan niet worden hersteld door een eerdere versie. Koppelingen naar agenda-afspraken blijven op het apparaat, zitten niet in de back-up en blijven behouden wanneer u op hetzelfde apparaat herstelt. Niet-opgeslagen concepten zitten er evenmin in.",
@@ -2251,7 +2251,7 @@
       "privacy": {
         "title": "Política de Privacidade",
         "intro": "O DoseWeek é uma ferramenta pessoal de registo para o acompanhamento de injeções. O texto que se segue descreve exatamente como a aplicação funciona.",
-        "effectiveDate": "Data de entrada em vigor: 22 de agosto de 2026",
+        "effectiveDate": "Data de entrada em vigor: 22 de setembro de 2026",
         "sections": [
           {
             "id": "storage",
@@ -2327,7 +2327,7 @@
             "id": "next-release",
             "title": "11. Versão candidata: o que a próxima versão acrescenta",
             "paragraphs": [
-              "Esta secção publica antecipadamente as alterações preparadas para iOS 1.0.5, versão ainda não publicada. A sincronização opcional do calendário descrita na secção 9 chega com essa mesma versão. A data de entrada em vigor será fixada com a publicação dessa versão.",
+              "Esta secção publica antecipadamente as alterações preparadas para iOS 1.0.5, versão ainda não publicada. A sincronização opcional do calendário descrita na secção 9 chega com essa mesma versão. Data de entrada em vigor: 22 de setembro de 2026.",
               "Registos de refeições: o nome da refeição, a data, a hora e o tipo de refeição opcionais que introduzir, bem como os totais de energia, proteína, hidratos de carbono e gordura que conhecer, ficam no armazenamento privado da aplicação no dispositivo. Um valor deixado em branco permanece desconhecido e não é calculado. As refeições são incluídas na cópia de segurança encriptada, só são escritas num ficheiro CSV em texto simples quando o pedir e não fazem parte da preparação da consulta nem da exportação em PDF. O programador não recebe informação sobre refeições.",
               "Esquemas e gráficos corporais: um esquema pode guardar uma lista de datas de injeção escolhidas por si em vez de um intervalo repetido, e os gráficos de variação semanal do peso e de IMC podem mostrar uma referência geral publicada ou um objetivo pessoal definido por si. A referência escolhida e o valor do objetivo ficam no dispositivo e são incluídos na cópia de segurança encriptada. São mostrados apenas o intervalo e a sua fonte; uma referência é informação da população em geral, não um conselho sobre o seu tratamento.",
               "Formato da cópia de segurança: as novas funcionalidades aumentam os números de formato da base de dados da aplicação e do ficheiro de cópia encriptado. As cópias escritas por versões anteriores continuam a poder ser restauradas, mas uma cópia escrita pela nova versão não pode ser restaurada por uma versão anterior. As ligações a eventos do calendário permanecem no dispositivo, não são incluídas na cópia e são mantidas quando restaura no mesmo dispositivo. Os rascunhos não guardados também não são incluídos.",
@@ -2528,7 +2528,7 @@
       "privacy": {
         "title": "Polityka prywatności",
         "intro": "DoseWeek to osobiste narzędzie do prowadzenia zapisów wstrzyknięć. Poniżej opisano dokładnie, jak aplikacja faktycznie działa.",
-        "effectiveDate": "Data wejścia w życie: 22 sierpnia 2026 r.",
+        "effectiveDate": "Data wejścia w życie: 22 września 2026 r.",
         "sections": [
           {
             "id": "storage",
@@ -2604,7 +2604,7 @@
             "id": "next-release",
             "title": "11. Wersja kandydująca: co dodaje następna wersja",
             "paragraphs": [
-              "Ta sekcja publikuje z wyprzedzeniem zmiany przygotowane dla iOS 1.0.5, wersji, która nie została jeszcze opublikowana. Opcjonalna synchronizacja kalendarza z sekcji 9 pojawia się w tej samej wersji. Data wejścia w życie zostanie ustalona wraz z publikacją tej wersji.",
+              "Ta sekcja publikuje z wyprzedzeniem zmiany przygotowane dla iOS 1.0.5, wersji, która nie została jeszcze opublikowana. Opcjonalna synchronizacja kalendarza z sekcji 9 pojawia się w tej samej wersji. Data wejścia w życie: 22 września 2026 r..",
               "Zapisy posiłków: nazwa posiłku, data, opcjonalna godzina i rodzaj posiłku, które wpiszesz, oraz znane Ci sumy energii, białka, węglowodanów i tłuszczu pozostają w prywatnej pamięci aplikacji na urządzeniu. Wartość pozostawiona pusta pozostaje nieznana i nie jest obliczana. Posiłki są objęte zaszyfrowaną kopią zapasową, trafiają do pliku CSV bez szyfrowania tylko na Twoje żądanie i nie są częścią przygotowania do wizyty ani eksportu PDF. Deweloper nie otrzymuje informacji o posiłkach.",
               "Harmonogramy i wykresy ciała: harmonogram może przechowywać listę wybranych przez Ciebie dat wstrzyknięć zamiast powtarzalnego odstępu, a wykresy tygodniowej zmiany masy ciała i BMI mogą pokazywać opublikowane odniesienie ogólne albo Twój własny cel. Wybrane odniesienie i wartość celu są zapisywane na urządzeniu i objęte zaszyfrowaną kopią zapasową. Pokazywane są wyłącznie zakres i jego źródło; odniesienie to informacja o populacji ogólnej, a nie porada dotycząca Twojego leczenia.",
               "Format kopii zapasowej: nowe funkcje podnoszą numery formatu bazy danych aplikacji i zaszyfrowanego pliku kopii. Kopie utworzone przez wcześniejsze wersje nadal można przywrócić, ale kopii utworzonej przez nową wersję nie przywróci wersja wcześniejsza. Powiązania z wydarzeniami kalendarza pozostają na urządzeniu, nie wchodzą do kopii i są zachowywane przy przywracaniu na tym samym urządzeniu. Niezapisane szkice również nie wchodzą do kopii.",
@@ -2805,7 +2805,7 @@
       "privacy": {
         "title": "Integritetspolicy",
         "intro": "DoseWeek är ett personligt verktyg för att dokumentera injektioner. Nedan beskrivs exakt hur appen faktiskt fungerar.",
-        "effectiveDate": "Ikraftträdandedatum: 22 augusti 2026",
+        "effectiveDate": "Ikraftträdandedatum: 22 september 2026",
         "sections": [
           {
             "id": "storage",
@@ -2881,7 +2881,7 @@
             "id": "next-release",
             "title": "11. Kandidat: vad nästa version lägger till",
             "paragraphs": [
-              "Det här avsnittet publicerar i förväg de ändringar som förbereds för iOS 1.0.5, en version som ännu inte har släppts. Den valfria kalendersynkroniseringen i avsnitt 9 kommer med samma version. Ikraftträdandedatum fastställs när den versionen släpps.",
+              "Det här avsnittet publicerar i förväg de ändringar som förbereds för iOS 1.0.5, en version som ännu inte har släppts. Den valfria kalendersynkroniseringen i avsnitt 9 kommer med samma version. Ikraftträdandedatum: 22 september 2026.",
               "Måltidsposter: måltidens namn, datum, valfri tid och måltidstyp som du skriver in, tillsammans med de summor för energi, protein, kolhydrater och fett som du känner till, sparas i appens privata lagring på enheten. Ett värde som du lämnar tomt förblir okänt och räknas inte. Måltider ingår i den krypterade säkerhetskopian, skrivs till en CSV-fil i klartext bara när du ber om det och ingår varken i besöksförberedelsen eller PDF-exporten. Utvecklaren får inga måltidsuppgifter.",
               "Scheman och kroppsdiagram: ett schema kan spara en lista med injektionsdatum som du väljer i stället för ett upprepat intervall, och diagrammen för veckoförändring av vikt och för BMI kan visa antingen en publicerad allmän referens eller ett personligt mål som du anger. Vald referens och målvärde sparas på enheten och ingår i den krypterade säkerhetskopian. Endast intervallet och dess källa visas; en referens är allmän befolkningsinformation, inte råd om din behandling.",
               "Säkerhetskopians format: de nya funktionerna höjer formatnumren för appens databas och för den krypterade säkerhetskopian. Kopior som skrivits av tidigare versioner går fortfarande att återställa, men en kopia som skrivits av den nya versionen kan inte återställas av en tidigare version. Länkar till kalenderhändelser stannar på enheten, ingår inte i säkerhetskopian och behålls när du återställer på samma enhet. Osparade utkast ingår inte heller.",
@@ -3082,7 +3082,7 @@
       "privacy": {
         "title": "गोपनीयता नीति",
         "intro": "DoseWeek इंजेक्शन के रिकॉर्ड रखने का एक व्यक्तिगत साधन है। नीचे बताया गया है कि ऐप वास्तव में कैसे काम करता है।",
-        "effectiveDate": "प्रभावी तिथि: 22 अगस्त 2026",
+        "effectiveDate": "प्रभावी तिथि: 22 सितंबर 2026",
         "sections": [
           {
             "id": "storage",
@@ -3158,7 +3158,7 @@
             "id": "next-release",
             "title": "11. प्रस्तावित संस्करण: अगली रिलीज़ में क्या जुड़ेगा",
             "paragraphs": [
-              "यह खंड iOS 1.0.5 के लिए तैयार किए जा रहे बदलाव पहले से प्रकाशित करता है; वह संस्करण अभी जारी नहीं हुआ है। खंड 9 में बताया गया वैकल्पिक कैलेंडर सिंक उसी संस्करण के साथ आएगा। लागू होने की तिथि उस संस्करण के जारी होने पर तय की जाएगी।",
+              "यह खंड iOS 1.0.5 के लिए तैयार किए जा रहे बदलाव पहले से प्रकाशित करता है; वह संस्करण अभी जारी नहीं हुआ है। खंड 9 में बताया गया वैकल्पिक कैलेंडर सिंक उसी संस्करण के साथ आएगा। प्रभावी तिथि: 22 सितंबर 2026।",
               "भोजन के रिकॉर्ड: आपके द्वारा दर्ज भोजन का नाम, तारीख, वैकल्पिक समय और भोजन का प्रकार, तथा जितनी जानकारी आपके पास है उतनी ऊर्जा, प्रोटीन, कार्बोहाइड्रेट और वसा की कुल मात्रा डिवाइस पर ऐप की निजी मेमोरी में रहती है। खाली छोड़ा गया मान अज्ञात रहता है और उसकी गणना नहीं होती। भोजन के रिकॉर्ड एन्क्रिप्टेड बैकअप में शामिल होते हैं, आपके कहने पर ही सादे CSV फ़ाइल में लिखे जाते हैं, और डॉक्टर के लिए बनी तैयारी स्क्रीन तथा PDF निर्यात में शामिल नहीं होते। डेवलपर को भोजन की कोई जानकारी नहीं मिलती।",
               "शेड्यूल और शरीर के ग्राफ़: कोई योजना दोहराए जाने वाले अंतराल के बजाय आपकी चुनी हुई इंजेक्शन तिथियों की सूची रख सकती है, और वज़न के साप्ताहिक बदलाव तथा BMI के ग्राफ़ में या तो प्रकाशित सामान्य संदर्भ या आपका अपना लक्ष्य दिखाया जा सकता है। चुना गया संदर्भ और लक्ष्य मान डिवाइस पर सहेजे जाते हैं और एन्क्रिप्टेड बैकअप में शामिल होते हैं। केवल सीमा और उसका स्रोत दिखाया जाता है; संदर्भ सामान्य जनसंख्या की जानकारी है, आपके उपचार की सलाह नहीं।",
               "बैकअप का प्रारूप: नई सुविधाओं के कारण ऐप डेटाबेस और एन्क्रिप्टेड बैकअप फ़ाइल की प्रारूप संख्याएँ बढ़ जाती हैं। पुराने संस्करणों से बनाए गए बैकअप अब भी पुनर्स्थापित किए जा सकते हैं, पर नए संस्करण से बनाया गया बैकअप पुराने संस्करण में पुनर्स्थापित नहीं होगा। कैलेंडर इवेंट की कड़ियाँ डिवाइस पर ही रहती हैं, बैकअप में शामिल नहीं होतीं, और उसी डिवाइस पर पुनर्स्थापित करने पर बनी रहती हैं। बिना सहेजे मसौदे भी शामिल नहीं होते।",
@@ -3359,7 +3359,7 @@
       "privacy": {
         "title": "Política de Privacidade",
         "intro": "O DoseWeek é uma ferramenta pessoal de registro para acompanhar injeções. O texto a seguir descreve exatamente como o aplicativo funciona na prática.",
-        "effectiveDate": "Data de vigência: 22 de agosto de 2026",
+        "effectiveDate": "Data de vigência: 22 de setembro de 2026",
         "sections": [
           {
             "id": "storage",
@@ -3435,7 +3435,7 @@
             "id": "next-release",
             "title": "11. Versão candidata: o que a próxima versão acrescenta",
             "paragraphs": [
-              "Esta seção publica com antecedência as mudanças preparadas para o iOS 1.0.5, versão ainda não publicada. A sincronização opcional do calendário descrita na seção 9 chega com essa mesma versão. A data de vigência será definida com a publicação dessa versão.",
+              "Esta seção publica com antecedência as mudanças preparadas para o iOS 1.0.5, versão ainda não publicada. A sincronização opcional do calendário descrita na seção 9 chega com essa mesma versão. Data de vigência: 22 de setembro de 2026.",
               "Registros de refeições: o nome da refeição, a data, o horário e o tipo de refeição opcionais que você digitar, além dos totais de energia, proteína, carboidrato e gordura que você souber, ficam no armazenamento privado do app no aparelho. Um valor deixado em branco permanece desconhecido e não é calculado. As refeições entram no backup criptografado, só são gravadas em um arquivo CSV em texto simples quando você pede e não fazem parte da preparação para a consulta nem da exportação em PDF. O desenvolvedor não recebe informações de refeições.",
               "Esquemas e gráficos corporais: um esquema pode guardar uma lista de datas de aplicação escolhidas por você em vez de um intervalo repetido, e os gráficos de variação semanal de peso e de IMC podem mostrar uma referência geral publicada ou uma meta pessoal definida por você. A referência escolhida e o valor da meta ficam no aparelho e entram no backup criptografado. São exibidos apenas a faixa e sua fonte; uma referência é informação da população geral, não um conselho sobre o seu tratamento.",
               "Formato do backup: os novos recursos aumentam os números de formato do banco de dados do app e do arquivo de backup criptografado. Backups gravados por versões anteriores continuam podendo ser restaurados, mas um backup gravado pela nova versão não pode ser restaurado por uma versão anterior. Os vínculos com eventos do calendário ficam no aparelho, não entram no backup e são mantidos quando você restaura no mesmo aparelho. Rascunhos não salvos também não entram.",
@@ -3636,7 +3636,7 @@
       "privacy": {
         "title": "سياسة الخصوصية",
         "intro": "DoseWeek أداة شخصية لحفظ سجلات الحقن. يوضح ما يلي بدقة كيفية عمل التطبيق فعليًا.",
-        "effectiveDate": "تاريخ السريان: 22 أغسطس 2026",
+        "effectiveDate": "تاريخ السريان: 22 سبتمبر 2026",
         "sections": [
           {
             "id": "storage",
@@ -3712,7 +3712,7 @@
             "id": "next-release",
             "title": "11. الإصدار المرشح: ما يضيفه الإصدار التالي",
             "paragraphs": [
-              "ينشر هذا البند مسبقًا التغييرات المُعدّة للإصدار iOS 1.0.5 الذي لم يُطرح بعد. وتصل مزامنة التقويم الاختيارية الموضّحة في البند 9 مع الإصدار نفسه. ويُحدَّد تاريخ السريان عند طرح ذلك الإصدار.",
+              "ينشر هذا البند مسبقًا التغييرات المُعدّة للإصدار iOS 1.0.5 الذي لم يُطرح بعد. وتصل مزامنة التقويم الاختيارية الموضّحة في البند 9 مع الإصدار نفسه. تاريخ السريان: 22 سبتمبر 2026.",
               "سجلات الوجبات: يُحفظ اسم الوجبة والتاريخ والوقت ونوع الوجبة الاختياريان الذي تُدخلها، إضافة إلى مجاميع الطاقة والبروتين والكربوهيدرات والدهون التي تعرفها، في التخزين الخاص بالتطبيق على الجهاز. وأي قيمة تتركها فارغة تبقى غير معروفة ولا تدخل في الحساب. تُدرَج سجلات الوجبات في النسخة الاحتياطية المشفّرة، ولا تُكتب في ملف CSV غير مشفّر إلا بطلب منك، ولا تدخل في شاشة التحضير للزيارة ولا في تصدير PDF. ولا يتلقى المطوّر أي معلومات عن الوجبات.",
               "الجداول الزمنية ومخططات الجسم: يمكن للخطة أن تحفظ قائمة بمواعيد حقن تختارها بنفسك بدل الفاصل الزمني المتكرر، كما يمكن لمخططات التغير الأسبوعي في الوزن ومؤشر كتلة الجسم أن تعرض مرجعًا عامًا منشورًا أو هدفًا شخصيًا تحدده أنت. يُحفظ المرجع المختار وقيمة الهدف على الجهاز ويُدرجان في النسخة الاحتياطية المشفّرة. ولا يُعرض سوى النطاق ومصدره؛ والمرجع معلومة عن عموم السكان وليس نصيحة بشأن علاجك.",
               "صيغة النسخة الاحتياطية: ترفع الميزات الجديدة أرقام صيغة قاعدة بيانات التطبيق وملف النسخة الاحتياطية المشفّر. تظل النسخ التي كتبتها الإصدارات السابقة قابلة للاستعادة، لكن النسخة التي يكتبها الإصدار الجديد لا يمكن استعادتها بإصدار أقدم. وتبقى روابط أحداث التقويم على الجهاز ولا تُدرَج في النسخة الاحتياطية، وتُحفَظ عند الاستعادة على الجهاز نفسه. كما لا تُدرَج المسودات غير المحفوظة.",
@@ -3913,7 +3913,7 @@
       "privacy": {
         "title": "隐私政策",
         "intro": "DoseWeek 是帮助记录注射的个人记录工具。以下内容如实说明本应用的实际运作方式。",
-        "effectiveDate": "生效日期：2026年8月22日",
+        "effectiveDate": "生效日期：2026年9月22日",
         "sections": [
           {
             "id": "storage",
@@ -3989,7 +3989,7 @@
             "id": "next-release",
             "title": "11. 候选版本：下一版本将新增的内容",
             "paragraphs": [
-              "本节提前公布为尚未发布的 iOS 1.0.5 准备的变更。第 9 节所述的可选日历同步随同一版本推出。生效日期将在该版本发布时确定。",
+              "本节提前公布为尚未发布的 iOS 1.0.5 准备的变更。第 9 节所述的可选日历同步随同一版本推出。生效日期：2026年9月22日。",
               "用餐记录：您输入的餐名、日期、可选时间与用餐类型，以及您已知的能量、蛋白质、碳水化合物和脂肪合计，保存在设备上的应用私有存储中。留空的数值保持为未知，不参与计算。用餐记录包含在加密备份中，仅在您要求时才写入明文 CSV 文件，并且不包含在就诊准备界面和 PDF 导出中。开发者不会收到任何用餐信息。",
               "用药计划与身体图表：计划可以保存您自行选定的注射日期清单，替代固定重复间隔；体重周变化与 BMI 图表可以显示已公开的一般参考，或您自行设定的个人目标。所选参考与目标值保存在设备上，并包含在加密备份中。界面只显示范围与来源；参考属于一般人群信息，不是针对您治疗的建议。",
               "备份格式：新功能会提高应用数据库与加密备份文件的格式编号。旧版本写入的备份仍可恢复，但新版本写入的备份无法在旧版本中恢复。日历事件的关联信息仅保留在设备上，不包含在备份中，在同一设备上恢复时会保留。未保存的草稿同样不包含在内。",
@@ -4190,7 +4190,7 @@
       "privacy": {
         "title": "隱私權政策",
         "intro": "DoseWeek 是協助記錄注射的個人記錄工具。以下如實說明本 App 的實際運作方式。",
-        "effectiveDate": "生效日期：2026年8月22日",
+        "effectiveDate": "生效日期：2026年9月22日",
         "sections": [
           {
             "id": "storage",
@@ -4266,7 +4266,7 @@
             "id": "next-release",
             "title": "11. 候選版本：下一版本將新增的內容",
             "paragraphs": [
-              "本節提前公布為尚未發布的 iOS 1.0.5 準備的變更。第 9 節所述的選用日曆同步會隨同一版本推出。生效日期將於該版本發布時確定。",
+              "本節提前公布為尚未發布的 iOS 1.0.5 準備的變更。第 9 節所述的選用日曆同步會隨同一版本推出。生效日期：2026年9月22日。",
               "用餐紀錄：您輸入的餐點名稱、日期、選填時間與用餐類型，以及您已知的熱量、蛋白質、碳水化合物與脂肪合計，會保存在裝置上的 App 私有儲存空間。留白的數值維持為未知，不納入計算。用餐紀錄會包含在加密備份中，僅在您要求時才寫入純文字 CSV 檔，且不會出現在就診準備畫面與 PDF 匯出中。開發者不會取得任何用餐資訊。",
               "療程排程與身體圖表：計畫可以保存您自行選定的注射日期清單，取代固定重複間隔；體重週變化與 BMI 圖表可顯示已公開的一般參考，或您自行設定的個人目標。所選參考與目標值保存在裝置上，並包含在加密備份中。畫面只顯示範圍與來源；參考屬於一般人群資訊，不是針對您治療的建議。",
               "備份格式：新功能會提高 App 資料庫與加密備份檔的格式編號。舊版本寫入的備份仍可還原，但新版本寫入的備份無法在舊版本還原。日曆事件的連結資訊僅保留在裝置上，不包含在備份中，在同一裝置還原時會保留。未儲存的草稿同樣不包含在內。",
@@ -4467,7 +4467,7 @@
       "privacy": {
         "title": "Gizlilik Politikası",
         "intro": "DoseWeek, enjeksiyon takibi için kişisel bir kayıt tutma aracıdır. Aşağıda uygulamanın gerçekte nasıl çalıştığı olduğu gibi açıklanmaktadır.",
-        "effectiveDate": "Yürürlük tarihi: 22 Ağustos 2026",
+        "effectiveDate": "Yürürlük tarihi: 22 Eylül 2026",
         "sections": [
           {
             "id": "storage",
@@ -4543,7 +4543,7 @@
             "id": "next-release",
             "title": "11. Aday sürüm: Sonraki sürümün eklediği özellikler",
             "paragraphs": [
-              "Bu bölüm, henüz yayımlanmamış olan iOS 1.0.5 için hazırlanan değişiklikleri önceden yayımlar. 9. bölümde anlatılan isteğe bağlı takvim eşitleme de aynı sürümle gelir. Yürürlük tarihi, o sürümün yayımlanmasıyla belirlenir.",
+              "Bu bölüm, henüz yayımlanmamış olan iOS 1.0.5 için hazırlanan değişiklikleri önceden yayımlar. 9. bölümde anlatılan isteğe bağlı takvim eşitleme de aynı sürümle gelir. Yürürlük tarihi: 22 Eylül 2026.",
               "Öğün kayıtları: Girdiğiniz öğün adı, tarih, isteğe bağlı saat ve öğün türü ile bildiğiniz enerji, protein, karbonhidrat ve yağ toplamları cihazdaki uygulamaya özel depolamada tutulur. Boş bıraktığınız bir değer bilinmeyen olarak kalır ve hesaplanmaz. Öğün kayıtları şifreli yedeğe dahildir, yalnızca siz istediğinizde düz metin bir CSV dosyasına yazılır ve ne muayene hazırlığı ekranında ne de PDF dışa aktarımında yer alır. Geliştirici öğün bilgisi almaz.",
               "Programlar ve vücut grafikleri: Bir program, yinelenen aralık yerine sizin seçtiğiniz enjeksiyon tarihlerinin listesini saklayabilir; haftalık kilo değişimi ve BKİ grafikleri ise yayımlanmış genel bir referansı ya da sizin belirlediğiniz kişisel hedefi gösterebilir. Seçilen referans ve hedef değeri cihazda saklanır ve şifreli yedeğe dahil edilir. Yalnızca aralık ve kaynağı gösterilir; referans, genel nüfusa ilişkin bir bilgidir, tedavinize dair bir öneri değildir.",
               "Yedek biçimi: Yeni özellikler uygulama veritabanının ve şifreli yedek dosyasının biçim numaralarını yükseltir. Önceki sürümlerin yazdığı yedekler geri yüklenmeye devam eder, ancak yeni sürümün yazdığı bir yedek önceki bir sürümde geri yüklenemez. Takvim etkinliği bağlantıları cihazda kalır, yedeğe dahil edilmez ve aynı cihazda geri yükleme yaptığınızda korunur. Kaydedilmemiş taslaklar da dahil edilmez.",

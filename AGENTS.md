@@ -7,8 +7,10 @@
 2. Diagnose a failure from retained logs and inputs before editing. Fix the responsible layer,
    then exercise the related failure family. Preserve assertions and failing evidence. Do not
    retry an entire suite because the first run failed, or erase caches without evidence of corruption.
-3. Freeze source, tests, runners, SDK and fixtures for a gate. Run the required full release
-   matrix after related focused checks pass. Never edit an executing script or test input.
+3. Freeze source, tests, runners, SDK and fixtures for a gate. Run the agreed release scope.
+   Reuse completed coverage; do not restart a full matrix for an isolated test or documentation
+   change. Record owner-approved scope reductions and unresolved failures explicitly. Never
+   edit executing scripts or test inputs.
 4. Reuse results with matching relevant input hashes. A new session, commit or documentation-only
    change does not by itself require another native gate. Record the input comparison and limits.
 5. After each meaningful edit, completed check, commit/push or store action, update the existing
@@ -38,7 +40,7 @@ disclosed SDK metrics. It does not apply to iOS, generative AI, or this static w
 Do not rewrite legal attributions or claim a native-speaker review without evidence.
 
 Before publication, run the catalog/render/site checks documented in README.md, then the
-release-date gate. The existing owner decision sets the second-release effective date after
-both platform uploads. Preserve that order and align app catalogs, mirrors, pages and the
-release map. main may publish the site; do not merge an unready candidate merely to close a PR.
+release-date gate. Owner decision 2026-09-22: align the effective date, app catalogs, mirrors,
+pages and release map BEFORE final builds/signing. Then upload both immutable artifacts;
+publish only after both uploads are accepted. main may publish the site.
 Current observations live in docs/CURRENT_HANDOFF.md and legal-release-map.json.

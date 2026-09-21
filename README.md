@@ -38,7 +38,7 @@ python3 scripts/render_ios.py --check --catalog ../ios/DoseDay/Resources/Localiz
 python3 scripts/render_android.py --content ../android/docs/legal/android-content.json --check
 python3 scripts/render_import.py --check --require-all-locales
 python3 scripts/check_site.py --catalog ../ios/DoseDay/Resources/Localizable.xcstrings --android-content ../android/docs/legal/android-content.json
-# Publication additionally requires the accepted-upload/effective-date sequence:
+# Before final app builds, validate the fixed policy date:
 python3 scripts/check_site.py --release
 ```
 
@@ -52,9 +52,9 @@ Keep those evidence categories distinct in [the current handoff](docs/CURRENT_HA
 ## Release and documentation
 
 [legal-release-map.json](legal-release-map.json) binds candidate catalogs and release decisions.
-The owner-approved second-release date is set after both platform builds are uploaded, then
-mirrored consistently. Until then the release gate intentionally fails. main publication follows
-the authorized release sequence; a pushed branch is not a published policy.
+Owner decision 2026-09-22 fixes the policy date and mirrors before final app builds/signing.
+Both immutable builds must be accepted by their stores before main publication.
+The policy date does not assert app availability; a pushed branch is not a published policy.
 
 Read [AGENTS.md](AGENTS.md), [the documentation index](docs/README.md) and
 [CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md). Dated continuation files are historical only.

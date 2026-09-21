@@ -360,10 +360,9 @@ def main() -> None:
         )
     javascript = (ROOT / "assets/language.js").read_text(encoding="utf-8")
 
+    policy_dates = json.loads((ROOT / "docs/ios-content.json").read_text(encoding="utf-8"))
     for required in (
-        "Effective date: August 22, 2026",
-        "施行日: 2026年8月22日",
-        "시행일: 2026년 8월 22일",
+        *(entry["privacy"]["effectiveDate"] for entry in policy_dates["locales"].values()),
         "weight, BMI, body fat percentage, lean body mass, and waist circumference",
         "体重、BMI、体脂肪率、除脂肪体重、ウエスト周囲径",
         "체중, BMI, 체지방률, 제지방량, 허리둘레",

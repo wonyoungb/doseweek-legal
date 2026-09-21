@@ -1,11 +1,9 @@
 """Release-step constants shared by the page renderers and the site checker.
 
-RELEASE STEP FILLS THIS (owner decision LEGAL-EFFECTIVE-DATE-20260917)
------------------------------------------------------------------------
-The second-release effective date is chosen after both builds (iOS 1.0.5 and Android 1.0.0,
-versionCode 11) are uploaded for store review, and the candidate pages are merged to `main` and
-published only after that. Until then `SECOND_RELEASE_EFFECTIVE_DATE` stays `None` and the
-renderers keep requiring the effective dates that are live today.
+Owner decision 2026-09-22: align the effective date in both app catalogs BEFORE
+final builds/signing. Upload those immutable artifacts to both stores, then publish
+the site after both uploads are accepted. A policy date is not proof of app availability.
+This supersedes the 2026-09-17 after-upload date order and avoids duplicate signing.
 
 When the release step sets it to an ISO date (`YYYY-MM-DD`), the same change must also set:
 
@@ -25,8 +23,8 @@ from __future__ import annotations
 
 import datetime
 
-# RELEASE STEP: replace None with the chosen second-release effective date, e.g. "2026-09-30".
-SECOND_RELEASE_EFFECTIVE_DATE: str | None = None
+# Owner-approved order: fix the policy date before final build and signing.
+SECOND_RELEASE_EFFECTIVE_DATE: str | None = "2026-09-22"
 
 # Effective dates of the policies that are live now (main 8a615a1).
 CURRENT_IOS_EFFECTIVE_DATE = "2026-08-22"
@@ -50,7 +48,7 @@ def expected_effective_date(current: str) -> str:
 def require_release_date() -> str:
     assert SECOND_RELEASE_EFFECTIVE_DATE is not None, (
         "scripts/legal_release.py: SECOND_RELEASE_EFFECTIVE_DATE is not filled; the release step "
-        "sets it after the store upload (LEGAL-EFFECTIVE-DATE-20260917) before publishing"
+        "sets it before final builds/signing (owner decision 2026-09-22)"
     )
     return expected_effective_date("0000-00-00")
 
