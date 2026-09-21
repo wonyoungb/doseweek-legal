@@ -6,6 +6,8 @@ import html
 import json
 from pathlib import Path
 
+from site_assets import stylesheet_path
+
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ['ko', 'en', 'ja', 'de', 'fr', 'es', 'it', 'nl', 'pt-PT', 'pl', 'sv', 'hi', 'pt-BR', 'ar', 'zh-Hans', 'zh-Hant', 'tr']
 LABELS = dict(zip(LANGUAGES, ['한국어', 'English', '日本語', 'Deutsch', 'Français', 'Español', 'Italiano', 'Nederlands', 'Português (Portugal)', 'Polski', 'Svenska', 'हिन्दी', 'Português (Brasil)', 'العربية', '简体中文', '繁體中文', 'Türkçe']))
@@ -144,7 +146,7 @@ def rendered(content: dict) -> dict[str, str]:
 <link rel="canonical" href="{BASE}import/"><link rel="icon" type="image/png" href="../assets/app-icon.png"><link rel="apple-touch-icon" href="../assets/app-icon.png">
 <meta property="og:type" content="website"><meta property="og:site_name" content="DoseWeek"><meta property="og:title" content="DoseWeek — Prepare records from another app"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{BASE}import/"><meta property="og:image" content="{BASE}assets/app-icon.png"><meta property="og:image:alt" content="DoseWeek app icon">
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="DoseWeek — Prepare records from another app"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{BASE}assets/app-icon.png"><meta name="twitter:image:alt" content="DoseWeek app icon">
-<link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/import.css"><script src="../assets/language.js" defer></script><script src="../assets/import.js" defer></script>
+<link rel="stylesheet" href="{stylesheet_path('../')}"><link rel="stylesheet" href="../assets/import.css"><script src="../assets/language.js" defer></script><script src="../assets/import.js" defer></script>
 </head><body>{''.join(skips)}
 <header class="site-header site-shell"><a class="brand" href="../" aria-label="DoseWeek"><img class="brand-mark" src="../assets/app-icon.png" alt="" width="36" height="36"><span class="brand-label">DoseWeek</span></a><nav class="language-nav many-languages" aria-label="Language / 언어 / 言語"><ul class="language-list">{''.join(links)}</ul></nav></header>
 <main id="main" class="site-shell" tabindex="-1"><div class="language-stack">{''.join(panels)}</div></main>

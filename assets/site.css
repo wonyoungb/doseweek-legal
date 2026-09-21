@@ -66,7 +66,7 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Apple SD Gothic Neo",
     "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -445,16 +445,16 @@ h3 {
 h1 {
   max-width: 720px;
   margin: 0;
-  font-size: clamp(2.1rem, 7vw, 4.25rem);
+  font-size: clamp(1.875rem, 1.2rem + 3vw, 3.5rem);
   font-weight: 790;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.025em;
 }
 
 .hero-copy {
   max-width: 690px;
   margin: 18px 0 0;
   color: var(--secondary);
-  font-size: clamp(1rem, 2.2vw, 1.16rem);
+  font-size: clamp(1rem, 0.94rem + 0.3vw, 1.16rem);
   line-height: 1.7;
 }
 
@@ -547,9 +547,9 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: clamp(1.55rem, 4vw, 2.15rem);
+  font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2rem);
   font-weight: 760;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
 }
 
 .section-description {
@@ -994,10 +994,6 @@ code {
     border-radius: 24px;
   }
 
-  h1 {
-    font-size: clamp(2rem, 12vw, 3rem);
-  }
-
   .home-hero,
   .card-grid,
   .card-grid.three,
@@ -1103,3 +1099,37 @@ code {
     border: 2px solid Highlight;
   }
 }
+
+/* Home is a short platform chooser; detailed disclosures stay on their own pages. */
+.home-simple .home-hero { display: block; padding: clamp(24px, 5vw, 44px); }
+.home-simple .home-hero h1 { font-size: clamp(1.875rem, 1.35rem + 2.4vw, 3.25rem); line-height: 1.22; letter-spacing: -0.025em; max-width: none; overflow-wrap: break-word; }
+.home-simple .home-hero .hero-copy { max-width: 62ch; }
+.home-simple .home-platforms { margin-top: 28px; }
+.home-simple .home-platforms > h2 { margin: 0 0 18px; font-size: 1.25rem; }
+.platform-grid { align-items: stretch; }
+.platform-card { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.platform-heading { display: flex; align-items: center; gap: 14px; }
+.platform-heading img { flex: 0 0 48px; border-radius: 12px; }
+.platform-heading h3 { margin: 4px 0 0; font-size: 1.2rem; }
+.platform-card .platform-version { margin: 0; color: var(--secondary); font-size: 0.8rem; }
+.platform-card .button-row { margin-top: auto; }
+.home-transfer { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 24px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-medium); }
+.home-transfer h2 { margin: 0 0 6px; font-size: 1.1rem; }
+.home-transfer p { margin: 0; color: var(--secondary); }
+.home-transfer .button { flex-shrink: 0; }
+.home-simple .home-note { margin: 20px 0 0; }
+@media (max-width: 720px) {
+  .home-simple .home-hero { padding: 24px; }
+  .home-transfer { align-items: stretch; flex-direction: column; }
+  .platform-card .button-row { align-items: stretch; }
+}
+
+.home-simple :is(h1, h2, h3) { text-wrap: balance; }
+.home-simple :is(p, a) { overflow-wrap: anywhere; }
+[lang="ko"] :is(h1, h2, h3, p) { word-break: keep-all; overflow-wrap: anywhere; }
+[lang="ja"] :is(h1, h2, h3, p) { line-break: strict; word-break: normal; }
+.home-simple .platform-heading h3 { line-height: 1.4; letter-spacing: -0.015em; }
+.home-simple .hero-copy { line-height: 1.75; letter-spacing: normal; }
+
+/* CJK and connected scripts need natural glyph spacing. */
+.language-panel:is([lang="ko"], [lang="ja"], [lang="zh-Hans"], [lang="zh-Hant"], [lang="ar"], [lang="hi"]) :is(h1, h2, h3, .eyebrow, .section-kicker) { letter-spacing: normal; }

@@ -14,6 +14,8 @@ import html
 import json
 from pathlib import Path
 
+from site_assets import stylesheet_path
+
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
     expected_effective_date,
@@ -376,7 +378,7 @@ def page_shell(content: dict, *, page: str, canonical: str, title: str, descript
     <meta name="twitter:description" content="{escaped(description)}">
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek app icon">
-    <link rel="stylesheet" href="../assets/site.css">
+    <link rel="stylesheet" href="{stylesheet_path('../')}">
     <script src="../assets/language.js" defer></script>
   </head>
   <body data-platform="ios" data-page="{escaped(page)}">
@@ -466,7 +468,7 @@ def rendered(content: dict) -> str:
     <meta name="twitter:description" content="{escaped(DESCRIPTION)}">
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek app icon">
-    <link rel="stylesheet" href="../assets/site.css">
+    <link rel="stylesheet" href="{stylesheet_path('../')}">
     <script src="../assets/language.js" defer></script>
   </head>
   <body data-platform="ios" data-page="privacy">

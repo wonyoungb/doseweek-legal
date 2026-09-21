@@ -17,9 +17,9 @@
       "android/support/index.html",
       "import/index.html"
     ],
-    "handoff": "docs/SECOND_RELEASE_CANDIDATE.md",
+    "handoff": "docs/CURRENT_HANDOFF.md",
     "headCommitNote": "the branch head is recorded by the final gate; this file cannot name its own commit",
-    "observedHeadCommit": "c164e12fa297eb9f49be97a64a0f2fac1efb86b8"
+    "observedHeadCommit": "4600d513f23d6d59e64de9cc8ccd58e5c5006f3e"
   },
   "platforms": {
     "android": {
@@ -84,17 +84,17 @@
       "python3 scripts/check_site.py --catalog /Users/wonyoungchoi/Documents/Coding Work/Doseweek/Claude outputs/DoseWeek-release/ios/DoseDay/Resources/Localizable.xcstrings --android-content /Users/wonyoungchoi/Documents/Coding Work/Doseweek/Claude outputs/DoseWeek-release/android/docs/legal/android-content.json"
     ],
     "notRun": [
-      "desktop and narrow-mobile browser review",
-      "light and dark appearance",
-      "JavaScript disabled",
-      "Arabic right-to-left layout in a browser",
-      "VoiceOver and keyboard focus",
       "native-speaker review of the fourteen newly written iOS support locales",
-      "native-speaker review of the cycle-2 import guide, food data and version wording in all seventeen locales"
+      "native-speaker review of the cycle-2 import guide, food data and version wording in all seventeen locales",
+      "Full VoiceOver/screen-reader review and browser text zoom"
     ],
     "releaseGate": "EXPECTED FAIL on 2026-09-21: SECOND_RELEASE_EFFECTIVE_DATE remains None. Effective dates remain Android 2026-09-08 and iOS 2026-08-22.",
     "proof": "../evidence/continuation-20260921/privacy/parity-proof.json",
-    "documentationReconciledAt": "2026-09-21T23:13:00.913246+09:00"
+    "documentationReconciledAt": "2026-09-21T23:13:00.913246+09:00",
+    "browserReview": {
+      "proof": "../evidence/continuation-20260921/homepage/browser-proof.json",
+      "scope": "12 homepage responsive DOM checks; six secondary routes KO/JA/AR at320; representative light/dark/RTL/no-JS, keyboard focus and guide navigation; not complete accessibility review"
+    }
   },
   "importGuide": {
     "status": "supported",

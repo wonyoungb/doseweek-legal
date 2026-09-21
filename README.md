@@ -18,7 +18,7 @@ exception must not be described as zero SDK traffic or copied into iOS policy.
 
 ## Locales and routes
 
-The iOS landing page has Korean, English and Japanese panels. iOS privacy/support, Android
+The shared platform chooser has Korean, English and Japanese panels. iOS privacy/support, Android
 pages and the supported import guide have 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT,
 pl, sv, hi, pt-BR, ar, zh-Hans, zh-Hant and tr. In-app help supports that same locale set.
 
@@ -39,6 +39,10 @@ python3 scripts/check_site.py --catalog ../ios/DoseDay/Resources/Localizable.xcs
 # Publication additionally requires the accepted-upload/effective-date sequence:
 python3 scripts/check_site.py --release
 ```
+
+Shared typography uses relative sizes, gradual viewport scaling and natural CJK/connected-script
+spacing. Generated pages version the stylesheet by content hash; after a CSS change regenerate
+the pages and update the root index.html stylesheet query to the same hash.
 
 Structural checks do not prove browser appearance, screen-reader use or native-speaker review.
 Keep those evidence categories distinct in [the current handoff](docs/CURRENT_HANDOFF.md).

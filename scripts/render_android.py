@@ -9,6 +9,8 @@ import json
 import re
 from pathlib import Path
 
+from site_assets import stylesheet_path
+
 from legal_release import (
     CURRENT_ANDROID_EFFECTIVE_DATE,
     expected_effective_date,
@@ -122,7 +124,7 @@ def page_shell(
     <meta name="twitter:description" content="{escaped(description)}">
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek Android app icon">
-    <link rel="stylesheet" href="{asset_prefix}assets/site.css">
+    <link rel="stylesheet" href="{stylesheet_path(asset_prefix)}">
     <script src="{asset_prefix}assets/language.js" defer></script>
   </head>
   <body data-platform="android" data-page="{escaped(page)}">

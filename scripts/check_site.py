@@ -9,6 +9,8 @@ import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
+
+from site_assets import stylesheet_path
 from urllib.parse import unquote, urlsplit
 
 import legal_release
@@ -352,6 +354,10 @@ def main() -> None:
     support_page = pages[(ROOT / "support/index.html").resolve()]
     support_text = " ".join(support_page.text)
     css = (ROOT / "assets/site.css").read_text(encoding="utf-8")
+    for path in pages:
+        assert stylesheet_path() in path.read_text(encoding="utf-8"), (
+            f"{path.relative_to(ROOT)}: stale stylesheet version; regenerate pages and update index.html"
+        )
     javascript = (ROOT / "assets/language.js").read_text(encoding="utf-8")
 
     for required in (
