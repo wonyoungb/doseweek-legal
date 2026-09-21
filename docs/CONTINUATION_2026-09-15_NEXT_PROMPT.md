@@ -1,3 +1,7 @@
+> Historical snapshot. Use [CURRENT_HANDOFF.md](CURRENT_HANDOFF.md) and
+> [legal-release-map.json](../legal-release-map.json) for current status. Do not restart
+> old workflows or treat original pending work below as still pending.
+
 # 다음 세션에 그대로 전달할 프롬프트 (2026-09-15 저녁판)
 
 DoseWeek 개발을 이어서 실제로 수행해 주세요. 전체 요구는 아직 미완료입니다. 답변과 서브에이전트 보고는 전부 /caveman ultra, 토큰 절약(리뷰어 1명, 재개 우선, 통과한 검사 반복 금지)이지만 검증·guard·요구사항 범위는 줄이지 마세요.

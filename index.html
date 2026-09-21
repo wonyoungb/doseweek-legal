@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="DoseWeek: a private, local-first iPhone record for weekly injection therapy.">
+    <meta name="description" content="DoseWeek: a local-first record of weekly injection therapy for iPhone, iPad and Android.">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f4f8">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
@@ -14,141 +14,467 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DoseWeek">
     <meta property="og:title" content="DoseWeek — Your records, on your device">
-    <meta property="og:description" content="A private, local-first iPhone record for weekly injection therapy.">
+    <meta property="og:description" content="A local-first record of weekly injection therapy for iPhone, iPad and Android.">
     <meta property="og:url" content="https://doseweek-legal.wonyoungchoi.dev/">
     <meta property="og:image" content="https://doseweek-legal.wonyoungchoi.dev/assets/app-icon.png">
     <meta property="og:image:alt" content="DoseWeek app icon">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="DoseWeek — Your records, on your device">
-    <meta name="twitter:description" content="A private, local-first iPhone record for weekly injection therapy.">
+    <meta name="twitter:description" content="A local-first record of weekly injection therapy for iPhone, iPad and Android.">
     <meta name="twitter:image" content="https://doseweek-legal.wonyoungchoi.dev/assets/app-icon.png">
     <meta name="twitter:image:alt" content="DoseWeek app icon">
-    <link rel="stylesheet" href="assets/site.css">
+    <link rel="stylesheet" href="assets/site.css?v=088373389f60">
     <script src="assets/language.js" defer></script>
   </head>
-  <body>
-    <span id="en" class="locale-target" aria-hidden="true"></span>
-    <span id="ja" class="locale-target" aria-hidden="true"></span>
-    <span id="ko" class="locale-target" aria-hidden="true"></span>
-    <a class="skip-link" href="#main"><span class="skip-label" data-language="en" lang="en">Skip to content</span><span class="skip-label" data-language="ja" lang="ja">本文へスキップ</span><span class="skip-label" data-language="ko" lang="ko">본문으로 건너뛰기</span></a>
-
+  <body class="home-simple">
+    <a class="skip-link" data-language-skip="ko" href="#ko-content" lang="ko" dir="ltr">본문으로 건너뛰기</a>
+    <a class="skip-link" data-language-skip="en" href="#en-content" lang="en" dir="ltr">Skip to content</a>
+    <a class="skip-link" data-language-skip="ja" href="#ja-content" lang="ja" dir="ltr">本文へ移動</a>
+    <a class="skip-link" data-language-skip="de" href="#de-content" lang="de" dir="ltr">Zum Inhalt springen</a>
+    <a class="skip-link" data-language-skip="fr" href="#fr-content" lang="fr" dir="ltr">Aller au contenu</a>
+    <a class="skip-link" data-language-skip="es" href="#es-content" lang="es" dir="ltr">Saltar al contenido</a>
+    <a class="skip-link" data-language-skip="it" href="#it-content" lang="it" dir="ltr">Vai al contenuto</a>
+    <a class="skip-link" data-language-skip="nl" href="#nl-content" lang="nl" dir="ltr">Naar inhoud springen</a>
+    <a class="skip-link" data-language-skip="pt-PT" href="#pt-PT-content" lang="pt-PT" dir="ltr">Saltar para o conteúdo</a>
+    <a class="skip-link" data-language-skip="pl" href="#pl-content" lang="pl" dir="ltr">Przejdź do treści</a>
+    <a class="skip-link" data-language-skip="sv" href="#sv-content" lang="sv" dir="ltr">Gå till huvudinnehållet</a>
+    <a class="skip-link" data-language-skip="hi" href="#hi-content" lang="hi" dir="ltr">मुख्य सामग्री पर जाएँ</a>
+    <a class="skip-link" data-language-skip="pt-BR" href="#pt-BR-content" lang="pt-BR" dir="ltr">Pular para o conteúdo principal</a>
+    <a class="skip-link" data-language-skip="ar" href="#ar-content" lang="ar" dir="rtl">الانتقال إلى المحتوى</a>
+    <a class="skip-link" data-language-skip="zh-Hans" href="#zh-Hans-content" lang="zh-Hans" dir="ltr">跳至正文</a>
+    <a class="skip-link" data-language-skip="zh-Hant" href="#zh-Hant-content" lang="zh-Hant" dir="ltr">跳至主要內容</a>
+    <a class="skip-link" data-language-skip="tr" href="#tr-content" lang="tr" dir="ltr">Ana içeriğe geç</a>
     <header class="site-header site-shell">
-      <a class="brand" href="./" aria-label="DoseWeek" data-language-path="./">
-        <img class="brand-mark" src="assets/app-icon.png" alt="" width="36" height="36">
-        <span class="brand-label">DoseWeek</span>
-      </a>
-      <nav class="language-nav" aria-label="Language / 언어 / 言語">
-        <ul class="language-list">
+      <a class="brand" href="./" aria-label="DoseWeek" data-language-path="./"><img class="brand-mark" src="assets/app-icon.png" alt="" width="36" height="36"><span class="brand-label">DoseWeek</span></a>
+      <nav class="language-nav many-languages" aria-label="Language"><ul class="language-list">
           <li><a class="language-link" href="#ko" lang="ko" hreflang="ko" data-language-link="ko">한국어</a></li>
           <li><a class="language-link" href="#en" lang="en" hreflang="en" data-language-link="en">English</a></li>
           <li><a class="language-link" href="#ja" lang="ja" hreflang="ja" data-language-link="ja">日本語</a></li>
-        </ul>
-      </nav>
+          <li><a class="language-link" href="#de" lang="de" hreflang="de" data-language-link="de">Deutsch</a></li>
+          <li><a class="language-link" href="#fr" lang="fr" hreflang="fr" data-language-link="fr">Français</a></li>
+          <li><a class="language-link" href="#es" lang="es" hreflang="es" data-language-link="es">Español</a></li>
+          <li><a class="language-link" href="#it" lang="it" hreflang="it" data-language-link="it">Italiano</a></li>
+          <li><a class="language-link" href="#nl" lang="nl" hreflang="nl" data-language-link="nl">Nederlands</a></li>
+          <li><a class="language-link" href="#pt-PT" lang="pt-PT" hreflang="pt-PT" data-language-link="pt-PT">Português (Portugal)</a></li>
+          <li><a class="language-link" href="#pl" lang="pl" hreflang="pl" data-language-link="pl">Polski</a></li>
+          <li><a class="language-link" href="#sv" lang="sv" hreflang="sv" data-language-link="sv">Svenska</a></li>
+          <li><a class="language-link" href="#hi" lang="hi" hreflang="hi" data-language-link="hi">हिन्दी</a></li>
+          <li><a class="language-link" href="#pt-BR" lang="pt-BR" hreflang="pt-BR" data-language-link="pt-BR">Português (Brasil)</a></li>
+          <li><a class="language-link" href="#ar" lang="ar" hreflang="ar" data-language-link="ar">العربية</a></li>
+          <li><a class="language-link" href="#zh-Hans" lang="zh-Hans" hreflang="zh-Hans" data-language-link="zh-Hans">简体中文</a></li>
+          <li><a class="language-link" href="#zh-Hant" lang="zh-Hant" hreflang="zh-Hant" data-language-link="zh-Hant">繁體中文</a></li>
+          <li><a class="language-link" href="#tr" lang="tr" hreflang="tr" data-language-link="tr">Türkçe</a></li>
+      </ul></nav>
     </header>
-
-    <main id="main" class="site-shell" tabindex="-1">
-      <div class="language-stack">
-        <article class="language-panel" lang="en" data-language="en" data-document-title="DoseWeek — Your records, on your device" aria-labelledby="en-title">
-          <header class="hero home-hero">
-            <div>
-              <p class="eyebrow">Private therapy records</p>
-              <h1 id="en-title">Your week, clearly in view.</h1>
-              <p class="hero-copy">DoseWeek is a local-first app for adults recording weekly injection therapy, on iPhone and on Android. No DoseWeek account, no ads, no subscription, and no developer server.</p>
-              <ul class="hero-meta" aria-label="DoseWeek summary"><li>Local-first</li><li>Read-only health import</li><li>iPhone and Android</li></ul>
-              <div class="button-row"><a class="button primary" href="support/#en">Get support</a><a class="button" href="privacy/#en">Privacy Policy</a></div>
-            </div>
-            <img class="hero-app-icon" src="assets/app-icon.png" alt="DoseWeek app icon" width="512" height="512">
-          </header>
-
-          <section class="content-section" aria-labelledby="en-approach">
-            <div class="section-heading"><p class="section-kicker">Made for clarity</p><h2 id="en-approach">A calm place for factual records</h2><p class="section-description">The app helps you keep a schedule, history, body trends, and appointment-ready notes together without creating an online health profile.</p></div>
-            <div class="card-grid three">
-              <div class="info-card"><h3>Local by design</h3><p>Your clinical records stay on your device. There is no DoseWeek account, no developer server, no analytics and no advertising, and nothing is uploaded automatically. On Android you can choose to turn on an encrypted backup to your own Google Drive; the developer holds neither the file nor the key.</p></div>
-              <div class="info-card"><h3>A clear weekly rhythm</h3><p>See your plan, local reminders, administration history, sites, side effects, body trends, and Visit Prep in one focused record.</p></div>
-              <div class="info-card"><h3>You stay in control</h3><p>Health imports are read-only on both platforms — Apple Health on iPhone, Health Connect on Android — and backups are encrypted and user-directed. On-device AI is an iPhone feature; the Android app has no AI at all and its full workflow is manual.</p></div>
+    <main id="main" class="site-shell" tabindex="-1"><div class="language-stack">
+      <article id="ko" class="language-panel" lang="ko" dir="ltr" data-language="ko" data-document-title="DoseWeek — 내 기록을, 한눈에." aria-labelledby="ko-title">
+        <div id="ko-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="ko-title">내 기록을, 한눈에.</h1><p class="hero-copy">주사 일정과 지난 기록, 몸의 변화와 식사를 한곳에 모으세요. 사용하시는 기기를 선택하면 필요한 안내를 바로 찾을 수 있습니다.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="ko-choose">
+            <h2 id="ko-choose">어떤 기기를 사용하시나요?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="ko-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · 이용 안내</p><h3 id="ko-ios">iPhone·iPad를 쓰시나요?</h3></div></div>
+            <p>기록하기부터 Apple 건강, 백업, 선택형 기기 내 초안 기능까지 차근차근 안내합니다.</p>
+            <div class="button-row"><a class="button primary" href="support/#ko">사용 방법 보기</a><a class="button" href="privacy/#ko">개인정보처리방침</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="ko-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · 이용 안내</p><h3 id="ko-android">Android를 쓰시나요?</h3></div></div>
+            <p>기록하기부터 헬스 커넥트, 암호화 백업, 선택형 입력 도구까지 차근차근 안내합니다.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#ko">사용 방법 보기</a><a class="button" href="android/privacy/#ko">개인정보처리방침</a></div>
+          </section>
             </div>
           </section>
+          <section class="home-transfer" aria-labelledby="ko-transfer"><div><h2 id="ko-transfer">다른 앱에서 옮겨오시나요?</h2><p>지난 기록을 불러온 뒤 내용을 확인하고, 추가할 기록만 선택할 수 있습니다.</p></div><a class="button" href="import/#ko">기록 가져오는 방법</a></section>
+          <p class="quiet-note home-note">선택 기능과 데이터 처리 방식은 각 기기의 개인정보 처리방침에서 확인하세요. Android 음식 라벨 SDK의 진단 정보도 안내합니다.</p>
+          <p class="quiet-note home-note">DoseWeek는 개인 기록 도구이며 의학적 조언, 진단, 치료를 제공하지 않습니다. 투여 일정·용량 등 치료에 관한 모든 결정은 반드시 의사 또는 약사와 상의하세요. 이 앱은 의료기기가 아닙니다. 질병의 유무를 판단할 수 없으며, 질병의 진단·치료·예방을 목적으로 하지 않습니다.</p>
+        </div>
+      </article>
 
-          <section class="content-section" aria-labelledby="en-next">
-            <div class="section-heading"><p class="section-kicker">Explore</p><h2 id="en-next">What do you need?</h2></div>
-            <div class="card-grid">
-              <a class="link-card" href="support/#en"><h3>iPhone — Support</h3><p>Answers about records, Apple Health, notifications, encrypted backups, recovery codes, and AI availability.</p></a>
-              <a class="link-card" href="privacy/#en"><h3>iPhone — Privacy Policy</h3><p>Where data is stored, what the app can access, and what never leaves your device automatically.</p></a>
-              <a class="link-card" href="android/support/#en"><h3>Android — Support</h3><p>Answers about records, the optional Health Connect import, notifications, encrypted backups, and the Google Drive backup.</p></a>
-              <a class="link-card" href="android/privacy/#en"><h3>Android — Privacy Policy</h3><p>Where data is stored, the two optional integrations, and exactly what leaves the device when you turn one on.</p></a>
-            </div>
-            <p class="quiet-note">DoseWeek is a personal record-keeping tool, not a medical device, and does not provide medical advice, diagnosis, or treatment. For treatment decisions, consult your doctor or pharmacist.</p>
+      <article id="en" class="language-panel" lang="en" dir="ltr" data-language="en" data-document-title="DoseWeek — Your records, one clear place." aria-labelledby="en-title">
+        <div id="en-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="en-title">Your records, one clear place.</h1><p class="hero-copy">Keep your injection schedule, past records, body changes and meals together. Choose your device to get started.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="en-choose">
+            <h2 id="en-choose">How can we help?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="en-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guide</p><h3 id="en-ios">For iPhone and iPad</h3></div></div>
+            <p>Find help with recording, Apple Health, backups and optional on-device drafts.</p>
+            <div class="button-row"><a class="button primary" href="support/#en">Open the guide</a><a class="button" href="privacy/#en">Privacy Policy</a></div>
           </section>
-        </article>
-
-        <article class="language-panel" lang="ja" data-language="ja" data-document-title="DoseWeek — あなたの記録を、あなたのデバイスに" aria-labelledby="ja-title">
-          <header class="hero home-hero">
-            <div>
-              <p class="eyebrow">プライベートな治療記録</p>
-              <h1 id="ja-title">一週間を、わかりやすく。</h1>
-              <p class="hero-copy">DoseWeekは、週一回の注射治療を記録する成人向けのローカルファーストアプリで、iPhoneとAndroidで利用できます。DoseWeekアカウント、広告、サブスクリプション、開発者サーバーはありません。</p>
-              <ul class="hero-meta" aria-label="DoseWeekの概要"><li>ローカルファースト</li><li>ヘルス連携は読み取り専用</li><li>iPhoneとAndroid</li></ul>
-              <div class="button-row"><a class="button primary" href="support/#ja">サポート</a><a class="button" href="privacy/#ja">プライバシーポリシー</a></div>
-            </div>
-            <img class="hero-app-icon" src="assets/app-icon.png" alt="DoseWeekのアプリアイコン" width="512" height="512">
-          </header>
-
-          <section class="content-section" aria-labelledby="ja-approach">
-            <div class="section-heading"><p class="section-kicker">わかりやすさのために</p><h2 id="ja-approach">事実を穏やかに記録する場所</h2><p class="section-description">オンラインの健康プロファイルを作らずに、スケジュール、履歴、身体の傾向、受診用のメモを一つにまとめられます。</p></div>
-            <div class="card-grid three">
-              <div class="info-card"><h3>ローカル設計</h3><p>臨床記録はデバイス内に保存されます。DoseWeekアカウント、開発者サーバー、分析、広告はなく、自動的にアップロードされるものもありません。Androidでは、ご自身のGoogleドライブへの暗号化バックアップを任意で有効にできます。開発者はそのファイルも鍵も持ちません。</p></div>
-              <div class="info-card"><h3>週間リズムを明確に</h3><p>計画、ローカル通知、投与履歴、部位、副作用、身体の傾向、受診準備をひとつの集中した記録で確認できます。</p></div>
-              <div class="info-card"><h3>管理するのはあなた</h3><p>ヘルス連携は両プラットフォームとも読み取り専用です（iPhoneはAppleヘルスケア、AndroidはHealth Connect）。バックアップは暗号化され、ユーザーが操作します。オンデバイスAIはiPhone向けの機能で、Android版にAIはなく、すべて手動の操作で完結します。</p></div>
+          <section class="info-card platform-card" aria-labelledby="en-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guide</p><h3 id="en-android">For Android</h3></div></div>
+            <p>Find help with recording, Health Connect, encrypted backups and optional input tools.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#en">Open the guide</a><a class="button" href="android/privacy/#en">Privacy Policy</a></div>
+          </section>
             </div>
           </section>
+          <section class="home-transfer" aria-labelledby="en-transfer"><div><h2 id="en-transfer">Moving from another app?</h2><p>Bring your past records, review them, then choose what to add.</p></div><a class="button" href="import/#en">How to import records</a></section>
+          <p class="quiet-note home-note">See your platform’s privacy policy for optional features and data handling, including Android food-label SDK diagnostics.</p>
+          <p class="quiet-note home-note">DoseWeek is a personal record-keeping tool and does not provide medical advice, diagnosis, or treatment. Always consult your doctor or pharmacist for any decisions about your treatment, including schedules and doses. This app is not a medical device. It cannot determine whether you have a condition, and it is not intended to diagnose, treat, or prevent disease.</p>
+        </div>
+      </article>
 
-          <section class="content-section" aria-labelledby="ja-next">
-            <div class="section-heading"><p class="section-kicker">ご案内</p><h2 id="ja-next">何をお探しですか？</h2></div>
-            <div class="card-grid">
-              <a class="link-card" href="support/#ja"><h3>iPhone — サポート</h3><p>記録、Appleヘルスケア、通知、暗号化バックアップ、復旧コード、AIの利用可否について。</p></a>
-              <a class="link-card" href="privacy/#ja"><h3>iPhone — プライバシーポリシー</h3><p>データの保存場所、アプリがアクセスできる情報、自動的にデバイス外へ出ない情報。</p></a>
-              <a class="link-card" href="android/support/#ja"><h3>Android — サポート</h3><p>記録、任意のHealth Connect連携、通知、暗号化バックアップ、Googleドライブへのバックアップについて。</p></a>
-              <a class="link-card" href="android/privacy/#ja"><h3>Android — プライバシーポリシー</h3><p>データの保存場所、2つの任意連携、そして有効にしたとき何が端末の外に出るのか。</p></a>
-            </div>
-            <p class="quiet-note">DoseWeekは個人用の記録ツールであり、医療機器ではありません。医学的助言、診断、治療は提供しません。治療の決定は医師または薬剤師にご相談ください。</p>
+      <article id="ja" class="language-panel" lang="ja" dir="ltr" data-language="ja" data-document-title="DoseWeek — 記録を、ひとつに。" aria-labelledby="ja-title">
+        <div id="ja-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="ja-title">記録を、ひとつに。</h1><p class="hero-copy">注射の予定と過去の記録、体の変化、食事をまとめて確認。お使いの端末から、ご案内を選べます。</p></header>
+          <section class="content-section home-platforms" aria-labelledby="ja-choose">
+            <h2 id="ja-choose">お使いの端末を選んでください</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="ja-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · ご利用ガイド</p><h3 id="ja-ios">iPhone・iPadをお使いの方</h3></div></div>
+            <p>記録、Appleヘルスケア、バックアップ、任意の端末内下書き機能をご案内します。</p>
+            <div class="button-row"><a class="button primary" href="support/#ja">使い方を見る</a><a class="button" href="privacy/#ja">プライバシーポリシー</a></div>
           </section>
-        </article>
-
-        <article class="language-panel" lang="ko" data-language="ko" data-document-title="DoseWeek — 나의 기록, 나의 기기에" aria-labelledby="ko-title">
-          <header class="hero home-hero">
-            <div>
-              <p class="eyebrow">나만의 치료 기록</p>
-              <h1 id="ko-title">한 주를, 한눈에.</h1>
-              <p class="hero-copy">DoseWeek는 주 1회 주사 치료를 기록하는 성인을 위한 로컬 우선 앱으로, iPhone과 Android에서 사용합니다. DoseWeek 계정, 광고, 구독, 개발자 서버가 없습니다.</p>
-              <ul class="hero-meta" aria-label="DoseWeek 요약"><li>로컬 우선</li><li>건강 가져오기는 읽기 전용</li><li>iPhone과 Android</li></ul>
-              <div class="button-row"><a class="button primary" href="support/#ko">도움말 보기</a><a class="button" href="privacy/#ko">개인정보 처리방침</a></div>
-            </div>
-            <img class="hero-app-icon" src="assets/app-icon.png" alt="DoseWeek 앱 아이콘" width="512" height="512">
-          </header>
-
-          <section class="content-section" aria-labelledby="ko-approach">
-            <div class="section-heading"><p class="section-kicker">명확한 기록</p><h2 id="ko-approach">사실을 차분하게 모아두는 곳</h2><p class="section-description">온라인 건강 프로필을 만들지 않고도 일정, 기록, 신체 변화, 진료 준비 내용을 한곳에서 관리할 수 있습니다.</p></div>
-            <div class="card-grid three">
-              <div class="info-card"><h3>처음부터 로컬</h3><p>임상 기록은 기기 안에 남습니다. DoseWeek 계정, 개발자 서버, 분석, 광고가 없고 자동으로 올라가는 것도 없습니다. Android에서는 본인의 Google Drive로 암호화 백업을 선택적으로 켜실 수 있으며, 개발자는 그 파일도 키도 가지지 않습니다.</p></div>
-              <div class="info-card"><h3>한 주의 흐름을 명확하게</h3><p>계획, 로컬 알림, 투여 이력, 주사 부위, 부작용, 신체 변화, 진료 준비를 하나의 집중된 기록에서 확인하세요.</p></div>
-              <div class="info-card"><h3>선택권은 사용자에게</h3><p>건강 가져오기는 양쪽 모두 읽기 전용입니다 — iPhone은 Apple 건강, Android는 헬스 커넥트. 백업은 암호화된 뒤 사용자가 직접 내보냅니다. 온디바이스 AI는 iPhone 기능이고, Android에는 AI가 없으며 모든 과정이 수동입니다.</p></div>
+          <section class="info-card platform-card" aria-labelledby="ja-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · ご利用ガイド</p><h3 id="ja-android">Androidをお使いの方</h3></div></div>
+            <p>記録、Health Connect、暗号化バックアップ、任意の入力補助をご案内します。</p>
+            <div class="button-row"><a class="button primary" href="android/support/#ja">使い方を見る</a><a class="button" href="android/privacy/#ja">プライバシーポリシー</a></div>
+          </section>
             </div>
           </section>
+          <section class="home-transfer" aria-labelledby="ja-transfer"><div><h2 id="ja-transfer">別のアプリから移りますか？</h2><p>過去の記録を読み込み、内容を確認してから追加する記録を選べます。</p></div><a class="button" href="import/#ja">記録の取り込み方法</a></section>
+          <p class="quiet-note home-note">任意の機能とデータの取り扱いは、各端末のプライバシーポリシーをご覧ください。Android食品ラベルSDKの診断情報についてもご案内しています。</p>
+          <p class="quiet-note home-note">DoseWeekは個人用の記録ツールであり、医学的助言、診断、治療を提供するものではありません。投与スケジュールや用量など、治療に関するすべての決定は、必ず医師または薬剤師にご相談ください。 本プログラムは医療機器ではありません。疾病の診断、治療、予防を目的としていません。</p>
+        </div>
+      </article>
 
-          <section class="content-section" aria-labelledby="ko-next">
-            <div class="section-heading"><p class="section-kicker">안내</p><h2 id="ko-next">무엇을 찾고 계신가요?</h2></div>
-            <div class="card-grid">
-              <a class="link-card" href="support/#ko"><h3>iPhone — 도움말</h3><p>기록, Apple 건강, 알림, 암호화 백업, 복구 코드, AI 사용 가능 여부에 대한 답변.</p></a>
-              <a class="link-card" href="privacy/#ko"><h3>iPhone — 개인정보 처리방침</h3><p>데이터가 저장되는 곳, 앱이 접근할 수 있는 항목, 자동으로 기기 밖으로 나가지 않는 정보.</p></a>
-              <a class="link-card" href="android/support/#ko"><h3>Android — 도움말</h3><p>기록, 선택 사항인 헬스 커넥트 가져오기, 알림, 암호화 백업, Google Drive 백업에 대한 답변.</p></a>
-              <a class="link-card" href="android/privacy/#ko"><h3>Android — 개인정보 처리방침</h3><p>데이터가 저장되는 곳, 두 가지 선택 연동, 그리고 켰을 때 정확히 무엇이 기기 밖으로 나가는지.</p></a>
-            </div>
-            <p class="quiet-note">DoseWeek는 개인 기록 도구이며 의료기기가 아닙니다. 의학적 조언, 진단, 치료를 제공하지 않습니다. 치료에 관한 결정은 의사 또는 약사와 상의하세요.</p>
+      <article id="de" class="language-panel" lang="de" dir="ltr" data-language="de" data-document-title="DoseWeek — Ihre Aufzeichnungen, übersichtlich an einem Ort." aria-labelledby="de-title">
+        <div id="de-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="de-title">Ihre Aufzeichnungen, übersichtlich an einem Ort.</h1><p class="hero-copy">Behalten Sie Injektionspläne, frühere Einträge, Körperveränderungen und Mahlzeiten im Blick. Wählen Sie Ihr Gerät für die passende Anleitung.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="de-choose">
+            <h2 id="de-choose">Welches Gerät verwenden Sie?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="de-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Anleitung</p><h3 id="de-ios">Für iPhone und iPad</h3></div></div>
+            <p>Hilfe zu Einträgen, Apple Health, Backups und optionalen Entwürfen auf dem Gerät.</p>
+            <div class="button-row"><a class="button primary" href="support/#de">Anleitung öffnen</a><a class="button" href="privacy/#de">Datenschutzerklärung</a></div>
           </section>
-        </article>
-      </div>
-    </main>
+          <section class="info-card platform-card" aria-labelledby="de-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Anleitung</p><h3 id="de-android">Für Android</h3></div></div>
+            <p>Hilfe zu Einträgen, Health Connect, verschlüsselten Backups und optionalen Eingabehilfen.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#de">Anleitung öffnen</a><a class="button" href="android/privacy/#de">Datenschutzerklärung</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="de-transfer"><div><h2 id="de-transfer">Wechseln Sie von einer anderen App?</h2><p>Importieren und prüfen Sie frühere Einträge. Entscheiden Sie dann, welche Sie hinzufügen möchten.</p></div><a class="button" href="import/#de">Einträge importieren</a></section>
+          <p class="quiet-note home-note">Die Datenschutzerklärung Ihrer Plattform erläutert optionale Funktionen und die Datenverarbeitung, einschließlich SDK-Diagnosedaten für Lebensmitteletiketten unter Android.</p>
+          <p class="quiet-note home-note">DoseWeek ist ein persönliches Werkzeug zur Dokumentation und stellt keine medizinische Beratung, Diagnose oder Behandlung dar. Wenden Sie sich bei allen Entscheidungen zu Ihrer Behandlung – einschließlich Zeitplan und Dosis – immer an Ihre Ärztin, Ihren Arzt oder Ihre Apotheke. Diese App ist kein Medizinprodukt. Sie kann nicht feststellen, ob eine Erkrankung vorliegt, und ist nicht zur Diagnose, Behandlung oder Verhütung von Krankheiten bestimmt.</p>
+        </div>
+      </article>
 
+      <article id="fr" class="language-panel" lang="fr" dir="ltr" data-language="fr" data-document-title="DoseWeek — Vos données, réunies au même endroit." aria-labelledby="fr-title">
+        <div id="fr-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="fr-title">Vos données, réunies au même endroit.</h1><p class="hero-copy">Retrouvez vos injections prévues, vos anciens enregistrements, vos mesures corporelles et vos repas. Choisissez votre appareil pour consulter le guide.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="fr-choose">
+            <h2 id="fr-choose">Quel appareil utilisez-vous ?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="fr-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guide</p><h3 id="fr-ios">Pour iPhone et iPad</h3></div></div>
+            <p>Aide pour les enregistrements, Apple Santé, les sauvegardes et les brouillons facultatifs sur l’appareil.</p>
+            <div class="button-row"><a class="button primary" href="support/#fr">Consulter le guide</a><a class="button" href="privacy/#fr">Politique de confidentialité</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="fr-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guide</p><h3 id="fr-android">Pour Android</h3></div></div>
+            <p>Aide pour les enregistrements, Santé Connect, les sauvegardes chiffrées et les outils de saisie facultatifs.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#fr">Consulter le guide</a><a class="button" href="android/privacy/#fr">Politique de confidentialité</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="fr-transfer"><div><h2 id="fr-transfer">Vous venez d’une autre application ?</h2><p>Importez vos anciens enregistrements, vérifiez-les, puis choisissez ceux à ajouter.</p></div><a class="button" href="import/#fr">Importer des enregistrements</a></section>
+          <p class="quiet-note home-note">Consultez la politique de confidentialité de votre plateforme pour les fonctions facultatives et le traitement des données, notamment les diagnostics du SDK d’étiquettes alimentaires sur Android.</p>
+          <p class="quiet-note home-note">DoseWeek est un outil personnel d’enregistrement et ne fournit pas d’avis médical, de diagnostic ni de traitement. Consultez toujours votre médecin ou votre pharmacien pour toute décision concernant votre traitement, y compris le calendrier et les doses. Cette application n’est pas un dispositif médical. Elle ne permet pas de déterminer si vous présentez une pathologie et n’est pas destinée à diagnostiquer, traiter ou prévenir une maladie.</p>
+        </div>
+      </article>
+
+      <article id="es" class="language-panel" lang="es" dir="ltr" data-language="es" data-document-title="DoseWeek — Tus registros, en un solo lugar." aria-labelledby="es-title">
+        <div id="es-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="es-title">Tus registros, en un solo lugar.</h1><p class="hero-copy">Reúne tu calendario de inyecciones, registros anteriores, cambios corporales y comidas. Elige tu dispositivo para ver la guía.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="es-choose">
+            <h2 id="es-choose">¿Qué dispositivo usas?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="es-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guía</p><h3 id="es-ios">Para iPhone y iPad</h3></div></div>
+            <p>Ayuda con los registros, Salud de Apple, copias de seguridad y borradores opcionales en el dispositivo.</p>
+            <div class="button-row"><a class="button primary" href="support/#es">Ver la guía</a><a class="button" href="privacy/#es">Política de privacidad</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="es-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guía</p><h3 id="es-android">Para Android</h3></div></div>
+            <p>Ayuda con los registros, Health Connect, copias de seguridad cifradas y herramientas de entrada opcionales.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#es">Ver la guía</a><a class="button" href="android/privacy/#es">Política de privacidad</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="es-transfer"><div><h2 id="es-transfer">¿Vienes de otra aplicación?</h2><p>Importa tus registros anteriores, revísalos y elige cuáles añadir.</p></div><a class="button" href="import/#es">Cómo importar registros</a></section>
+          <p class="quiet-note home-note">Consulta la política de privacidad de tu plataforma para conocer las funciones opcionales y el tratamiento de datos, incluidos los diagnósticos del SDK de etiquetas alimentarias en Android.</p>
+          <p class="quiet-note home-note">DoseWeek es una herramienta personal de registro y no proporciona asesoramiento médico, diagnóstico ni tratamiento. Consulte siempre a su médico o farmacéutico para cualquier decisión sobre su tratamiento, incluidos los calendarios y las dosis. Esta app no es un producto sanitario. No puede determinar si usted padece una enfermedad y no está destinada a diagnosticar, tratar ni prevenir enfermedades.</p>
+        </div>
+      </article>
+
+      <article id="it" class="language-panel" lang="it" dir="ltr" data-language="it" data-document-title="DoseWeek — I tuoi dati, in un unico posto." aria-labelledby="it-title">
+        <div id="it-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="it-title">I tuoi dati, in un unico posto.</h1><p class="hero-copy">Riunisci il programma delle iniezioni, i dati precedenti, i cambiamenti del corpo e i pasti. Scegli il tuo dispositivo per consultare la guida.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="it-choose">
+            <h2 id="it-choose">Quale dispositivo usi?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="it-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guida</p><h3 id="it-ios">Per iPhone e iPad</h3></div></div>
+            <p>Aiuto per le registrazioni, Salute di Apple, i backup e le bozze facoltative sul dispositivo.</p>
+            <div class="button-row"><a class="button primary" href="support/#it">Apri la guida</a><a class="button" href="privacy/#it">Informativa sulla privacy</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="it-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guida</p><h3 id="it-android">Per Android</h3></div></div>
+            <p>Aiuto per le registrazioni, Health Connect, i backup crittografati e gli strumenti di inserimento facoltativi.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#it">Apri la guida</a><a class="button" href="android/privacy/#it">Informativa sulla privacy</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="it-transfer"><div><h2 id="it-transfer">Passi da un’altra app?</h2><p>Importa i dati precedenti, controllali e scegli quali aggiungere.</p></div><a class="button" href="import/#it">Come importare i dati</a></section>
+          <p class="quiet-note home-note">Consulta l’informativa sulla privacy della tua piattaforma per le funzioni facoltative e il trattamento dei dati, compresa la diagnostica dell’SDK per le etichette alimentari su Android.</p>
+          <p class="quiet-note home-note">DoseWeek è uno strumento personale di registrazione e non fornisce consulenza medica, diagnosi o trattamento. Per qualsiasi decisione sulla terapia, compresi i programmi e le dosi, rivolgersi sempre al medico o al farmacista. Questa app non è un dispositivo medico. Non è in grado di stabilire la presenza di una patologia e non è destinata alla diagnosi, al trattamento o alla prevenzione di malattie.</p>
+        </div>
+      </article>
+
+      <article id="nl" class="language-panel" lang="nl" dir="ltr" data-language="nl" data-document-title="DoseWeek — Je gegevens, overzichtelijk bij elkaar." aria-labelledby="nl-title">
+        <div id="nl-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="nl-title">Je gegevens, overzichtelijk bij elkaar.</h1><p class="hero-copy">Bewaar je injectieschema, eerdere registraties, lichaamsveranderingen en maaltijden op één plek. Kies je apparaat voor de juiste uitleg.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="nl-choose">
+            <h2 id="nl-choose">Welk apparaat gebruik je?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="nl-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Handleiding</p><h3 id="nl-ios">Voor iPhone en iPad</h3></div></div>
+            <p>Hulp bij registraties, Apple Gezondheid, back-ups en optionele concepten op je apparaat.</p>
+            <div class="button-row"><a class="button primary" href="support/#nl">Open de handleiding</a><a class="button" href="privacy/#nl">Privacybeleid</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="nl-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Handleiding</p><h3 id="nl-android">Voor Android</h3></div></div>
+            <p>Hulp bij registraties, Health Connect, versleutelde back-ups en optionele invoerhulpmiddelen.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#nl">Open de handleiding</a><a class="button" href="android/privacy/#nl">Privacybeleid</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="nl-transfer"><div><h2 id="nl-transfer">Stap je over van een andere app?</h2><p>Importeer je eerdere registraties, controleer ze en kies wat je wilt toevoegen.</p></div><a class="button" href="import/#nl">Registraties importeren</a></section>
+          <p class="quiet-note home-note">Lees het privacybeleid van je platform voor optionele functies en gegevensverwerking, waaronder diagnostische gegevens van de SDK voor voedingsetiketten op Android.</p>
+          <p class="quiet-note home-note">DoseWeek is een persoonlijk registratiehulpmiddel en biedt geen medisch advies, diagnose of behandeling. Overleg altijd met uw arts of apotheker over beslissingen die uw behandeling betreffen, waaronder schema&#x27;s en doses. Deze app is geen medisch hulpmiddel. De app kan niet vaststellen of u een aandoening heeft en is niet bedoeld om ziekten te diagnosticeren, te behandelen of te voorkomen.</p>
+        </div>
+      </article>
+
+      <article id="pt-PT" class="language-panel" lang="pt-PT" dir="ltr" data-language="pt-PT" data-document-title="DoseWeek — Os seus registos, num só lugar." aria-labelledby="pt-PT-title">
+        <div id="pt-PT-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="pt-PT-title">Os seus registos, num só lugar.</h1><p class="hero-copy">Reúna o plano de injeções, registos anteriores, alterações corporais e refeições. Escolha o seu dispositivo para consultar o guia.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="pt-PT-choose">
+            <h2 id="pt-PT-choose">Que dispositivo utiliza?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="pt-PT-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guia</p><h3 id="pt-PT-ios">Para iPhone e iPad</h3></div></div>
+            <p>Ajuda com registos, Saúde da Apple, cópias de segurança e rascunhos opcionais no dispositivo.</p>
+            <div class="button-row"><a class="button primary" href="support/#pt-PT">Consultar o guia</a><a class="button" href="privacy/#pt-PT">Política de Privacidade</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="pt-PT-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guia</p><h3 id="pt-PT-android">Para Android</h3></div></div>
+            <p>Ajuda com registos, Health Connect, cópias de segurança encriptadas e ferramentas de introdução opcionais.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#pt-PT">Consultar o guia</a><a class="button" href="android/privacy/#pt-PT">Política de Privacidade</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="pt-PT-transfer"><div><h2 id="pt-PT-transfer">Vai mudar de outra aplicação?</h2><p>Importe os registos anteriores, reveja-os e escolha quais pretende adicionar.</p></div><a class="button" href="import/#pt-PT">Como importar registos</a></section>
+          <p class="quiet-note home-note">Consulte a política de privacidade da sua plataforma para conhecer as funções opcionais e o tratamento de dados, incluindo os diagnósticos do SDK de rótulos alimentares no Android.</p>
+          <p class="quiet-note home-note">O DoseWeek é uma ferramenta pessoal de registo e não fornece aconselhamento médico, diagnóstico ou tratamento. Consulte sempre o seu médico ou farmacêutico para qualquer decisão sobre o seu tratamento, incluindo agendas e doses. Esta aplicação não é um dispositivo médico. Não consegue determinar se tem alguma doença e não se destina a diagnosticar, tratar ou prevenir doenças.</p>
+        </div>
+      </article>
+
+      <article id="pl" class="language-panel" lang="pl" dir="ltr" data-language="pl" data-document-title="DoseWeek — Twoje zapisy w jednym miejscu." aria-labelledby="pl-title">
+        <div id="pl-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="pl-title">Twoje zapisy w jednym miejscu.</h1><p class="hero-copy">Zbierz harmonogram zastrzyków, wcześniejsze zapisy, pomiary ciała i posiłki. Wybierz urządzenie, aby otworzyć poradnik.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="pl-choose">
+            <h2 id="pl-choose">Z jakiego urządzenia korzystasz?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="pl-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Poradnik</p><h3 id="pl-ios">iPhone i iPad</h3></div></div>
+            <p>Pomoc dotycząca zapisów, Zdrowia Apple, kopii zapasowych i opcjonalnych szkiców na urządzeniu.</p>
+            <div class="button-row"><a class="button primary" href="support/#pl">Otwórz poradnik</a><a class="button" href="privacy/#pl">Polityka prywatności</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="pl-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Poradnik</p><h3 id="pl-android">Android</h3></div></div>
+            <p>Pomoc dotycząca zapisów, Health Connect, szyfrowanych kopii zapasowych i opcjonalnych narzędzi wprowadzania danych.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#pl">Otwórz poradnik</a><a class="button" href="android/privacy/#pl">Polityka prywatności</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="pl-transfer"><div><h2 id="pl-transfer">Przechodzisz z innej aplikacji?</h2><p>Zaimportuj wcześniejsze zapisy, sprawdź je i wybierz, które dodać.</p></div><a class="button" href="import/#pl">Jak importować zapisy</a></section>
+          <p class="quiet-note home-note">Zasady prywatności dla Twojej platformy opisują funkcje opcjonalne i przetwarzanie danych, w tym diagnostykę SDK etykiet żywności na Androidzie.</p>
+          <p class="quiet-note home-note">DoseWeek to osobiste narzędzie do prowadzenia zapisów i nie udziela porad medycznych, nie stawia diagnozy ani nie prowadzi leczenia. We wszystkich decyzjach dotyczących leczenia, w tym harmonogramów i dawek, należy zawsze skonsultować się z lekarzem lub farmaceutą. Ta aplikacja nie jest wyrobem medycznym. Nie może stwierdzić, czy występuje choroba, i nie jest przeznaczona do diagnozowania, leczenia ani zapobiegania chorobom.</p>
+        </div>
+      </article>
+
+      <article id="sv" class="language-panel" lang="sv" dir="ltr" data-language="sv" data-document-title="DoseWeek — Dina uppgifter, samlade på ett ställe." aria-labelledby="sv-title">
+        <div id="sv-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="sv-title">Dina uppgifter, samlade på ett ställe.</h1><p class="hero-copy">Samla ditt injektionsschema, tidigare registreringar, kroppsmått och måltider. Välj din enhet för att läsa guiden.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="sv-choose">
+            <h2 id="sv-choose">Vilken enhet använder du?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="sv-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guide</p><h3 id="sv-ios">För iPhone och iPad</h3></div></div>
+            <p>Hjälp med registreringar, Apple Hälsa, säkerhetskopior och valfria utkast på enheten.</p>
+            <div class="button-row"><a class="button primary" href="support/#sv">Öppna guiden</a><a class="button" href="privacy/#sv">Integritetspolicy</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="sv-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guide</p><h3 id="sv-android">För Android</h3></div></div>
+            <p>Hjälp med registreringar, Health Connect, krypterade säkerhetskopior och valfria inmatningsverktyg.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#sv">Öppna guiden</a><a class="button" href="android/privacy/#sv">Integritetspolicy</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="sv-transfer"><div><h2 id="sv-transfer">Byter du från en annan app?</h2><p>Importera tidigare registreringar, granska dem och välj vilka du vill lägga till.</p></div><a class="button" href="import/#sv">Så importerar du registreringar</a></section>
+          <p class="quiet-note home-note">Läs plattformens integritetspolicy om valfria funktioner och datahantering, inklusive SDK-diagnostik för livsmedelsetiketter på Android.</p>
+          <p class="quiet-note home-note">DoseWeek är ett personligt dokumentationsverktyg och ger inte medicinsk rådgivning, diagnos eller behandling. Rådgör alltid med din läkare eller farmaceut om alla beslut som rör din behandling, inklusive scheman och doser. Den här appen är inte en medicinteknisk produkt. Den kan inte avgöra om du har ett sjukdomstillstånd och är inte avsedd för diagnos, behandling eller förebyggande av sjukdom.</p>
+        </div>
+      </article>
+
+      <article id="hi" class="language-panel" lang="hi" dir="ltr" data-language="hi" data-document-title="DoseWeek — आपके रिकॉर्ड, एक ही जगह।" aria-labelledby="hi-title">
+        <div id="hi-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="hi-title">आपके रिकॉर्ड, एक ही जगह।</h1><p class="hero-copy">इंजेक्शन का शेड्यूल, पुराने रिकॉर्ड, शरीर में बदलाव और भोजन की जानकारी एक जगह रखें। गाइड देखने के लिए अपना डिवाइस चुनें।</p></header>
+          <section class="content-section home-platforms" aria-labelledby="hi-choose">
+            <h2 id="hi-choose">आप कौन-सा डिवाइस इस्तेमाल करते हैं?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="hi-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · गाइड</p><h3 id="hi-ios">iPhone और iPad के लिए</h3></div></div>
+            <p>रिकॉर्ड, Apple Health, बैकअप और डिवाइस पर बनने वाले वैकल्पिक मसौदों के बारे में मदद पाएँ।</p>
+            <div class="button-row"><a class="button primary" href="support/#hi">गाइड देखें</a><a class="button" href="privacy/#hi">गोपनीयता नीति</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="hi-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · गाइड</p><h3 id="hi-android">Android के लिए</h3></div></div>
+            <p>रिकॉर्ड, Health Connect, एन्क्रिप्टेड बैकअप और वैकल्पिक इनपुट टूल के बारे में मदद पाएँ।</p>
+            <div class="button-row"><a class="button primary" href="android/support/#hi">गाइड देखें</a><a class="button" href="android/privacy/#hi">गोपनीयता नीति</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="hi-transfer"><div><h2 id="hi-transfer">किसी दूसरे ऐप से आ रहे हैं?</h2><p>पुराने रिकॉर्ड आयात करें, उन्हें जाँचें और चुनें कि कौन-से रिकॉर्ड जोड़ने हैं।</p></div><a class="button" href="import/#hi">रिकॉर्ड आयात करने का तरीका</a></section>
+          <p class="quiet-note home-note">वैकल्पिक सुविधाओं और डेटा के इस्तेमाल के बारे में अपने प्लेटफ़ॉर्म की गोपनीयता नीति देखें। इसमें Android के खाद्य लेबल SDK की निदान जानकारी भी शामिल है।</p>
+          <p class="quiet-note home-note">DoseWeek रिकॉर्ड रखने का एक व्यक्तिगत साधन है और चिकित्सीय सलाह, निदान या उपचार प्रदान नहीं करता। खुराक और शेड्यूल सहित अपने उपचार से जुड़े किसी भी निर्णय के लिए हमेशा अपने डॉक्टर या फार्मासिस्ट से परामर्श करें। यह ऐप चिकित्सा उपकरण नहीं है। यह निर्धारित नहीं कर सकता कि आपको कोई रोग है या नहीं, और इसका उद्देश्य किसी रोग का निदान, उपचार या रोकथाम नहीं है।</p>
+        </div>
+      </article>
+
+      <article id="pt-BR" class="language-panel" lang="pt-BR" dir="ltr" data-language="pt-BR" data-document-title="DoseWeek — Seus registros, em um só lugar." aria-labelledby="pt-BR-title">
+        <div id="pt-BR-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="pt-BR-title">Seus registros, em um só lugar.</h1><p class="hero-copy">Reúna a programação de injeções, registros anteriores, mudanças no corpo e refeições. Escolha seu dispositivo para consultar o guia.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="pt-BR-choose">
+            <h2 id="pt-BR-choose">Qual dispositivo você usa?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="pt-BR-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Guia</p><h3 id="pt-BR-ios">Para iPhone e iPad</h3></div></div>
+            <p>Ajuda com registros, Saúde da Apple, backups e rascunhos opcionais no dispositivo.</p>
+            <div class="button-row"><a class="button primary" href="support/#pt-BR">Abrir o guia</a><a class="button" href="privacy/#pt-BR">Política de Privacidade</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="pt-BR-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Guia</p><h3 id="pt-BR-android">Para Android</h3></div></div>
+            <p>Ajuda com registros, Health Connect, backups criptografados e ferramentas de entrada opcionais.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#pt-BR">Abrir o guia</a><a class="button" href="android/privacy/#pt-BR">Política de Privacidade</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="pt-BR-transfer"><div><h2 id="pt-BR-transfer">Está vindo de outro aplicativo?</h2><p>Importe os registros anteriores, confira os dados e escolha quais adicionar.</p></div><a class="button" href="import/#pt-BR">Como importar registros</a></section>
+          <p class="quiet-note home-note">Consulte a política de privacidade da sua plataforma para saber sobre funções opcionais e tratamento de dados, incluindo os diagnósticos do SDK de rótulos de alimentos no Android.</p>
+          <p class="quiet-note home-note">O DoseWeek é uma ferramenta pessoal de registro e não fornece aconselhamento médico, diagnóstico ou tratamento. Consulte sempre seu médico ou farmacêutico para qualquer decisão sobre o seu tratamento, incluindo a agenda e as doses. Este aplicativo não é um dispositivo médico. Ele não consegue determinar se você tem alguma condição de saúde e não se destina a diagnosticar, tratar ou prevenir doenças.</p>
+        </div>
+      </article>
+
+      <article id="ar" class="language-panel" lang="ar" dir="rtl" data-language="ar" data-document-title="DoseWeek — سجلاتك، في مكان واحد." aria-labelledby="ar-title">
+        <div id="ar-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="ar-title">سجلاتك، في مكان واحد.</h1><p class="hero-copy">اجمع جدول الحقن والسجلات السابقة وتغيرات الجسم والوجبات في مكان واحد. اختر جهازك للاطلاع على الدليل.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="ar-choose">
+            <h2 id="ar-choose">ما الجهاز الذي تستخدمه؟</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="ar-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · دليل الاستخدام</p><h3 id="ar-ios">لمستخدمي iPhone وiPad</h3></div></div>
+            <p>مساعدة في التسجيل وApple Health والنسخ الاحتياطي والمسودات الاختيارية على الجهاز.</p>
+            <div class="button-row"><a class="button primary" href="support/#ar">افتح الدليل</a><a class="button" href="privacy/#ar">سياسة الخصوصية</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="ar-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · دليل الاستخدام</p><h3 id="ar-android">لمستخدمي Android</h3></div></div>
+            <p>مساعدة في التسجيل وHealth Connect والنسخ الاحتياطي المشفّر وأدوات الإدخال الاختيارية.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#ar">افتح الدليل</a><a class="button" href="android/privacy/#ar">سياسة الخصوصية</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="ar-transfer"><div><h2 id="ar-transfer">هل تنتقل من تطبيق آخر؟</h2><p>استورد سجلاتك السابقة وراجعها، ثم اختر السجلات التي تريد إضافتها.</p></div><a class="button" href="import/#ar">كيفية استيراد السجلات</a></section>
+          <p class="quiet-note home-note">راجع سياسة الخصوصية الخاصة بمنصتك للتعرّف على الميزات الاختيارية ومعالجة البيانات، بما في ذلك بيانات تشخيص SDK لملصقات الأغذية على Android.</p>
+          <p class="quiet-note home-note">DoseWeek أداة شخصية لحفظ السجلات ولا يقدّم مشورة طبية أو تشخيصًا أو علاجًا. استشر دائمًا طبيبك أو الصيدلي بشأن أي قرارات تتعلق بعلاجك، بما في ذلك المواعيد والجرعات. هذا التطبيق ليس جهازًا طبيًا. لا يمكنه تحديد ما إذا كنت مصابًا بحالة مرضية، وهو غير مخصص لتشخيص الأمراض أو علاجها أو الوقاية منها.</p>
+        </div>
+      </article>
+
+      <article id="zh-Hans" class="language-panel" lang="zh-Hans" dir="ltr" data-language="zh-Hans" data-document-title="DoseWeek — 记录汇于一处，一目了然。" aria-labelledby="zh-Hans-title">
+        <div id="zh-Hans-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="zh-Hans-title">记录汇于一处，一目了然。</h1><p class="hero-copy">集中查看注射计划、过往记录、身体变化和饮食。选择您的设备，即可找到相应指南。</p></header>
+          <section class="content-section home-platforms" aria-labelledby="zh-Hans-choose">
+            <h2 id="zh-Hans-choose">您使用哪种设备？</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="zh-Hans-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · 使用指南</p><h3 id="zh-Hans-ios">iPhone 和 iPad 用户</h3></div></div>
+            <p>了解记录、Apple 健康、备份以及可选的设备端草稿功能。</p>
+            <div class="button-row"><a class="button primary" href="support/#zh-Hans">查看使用指南</a><a class="button" href="privacy/#zh-Hans">隐私政策</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="zh-Hans-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · 使用指南</p><h3 id="zh-Hans-android">Android 用户</h3></div></div>
+            <p>了解记录、Health Connect、加密备份以及可选的输入工具。</p>
+            <div class="button-row"><a class="button primary" href="android/support/#zh-Hans">查看使用指南</a><a class="button" href="android/privacy/#zh-Hans">隐私政策</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="zh-Hans-transfer"><div><h2 id="zh-Hans-transfer">从其他应用迁移？</h2><p>导入过往记录，核对内容后，选择要添加的记录。</p></div><a class="button" href="import/#zh-Hans">如何导入记录</a></section>
+          <p class="quiet-note home-note">请查阅相应平台的隐私政策，了解可选功能和数据处理方式，包括 Android 食品标签 SDK 的诊断信息。</p>
+          <p class="quiet-note home-note">DoseWeek 是个人记录工具，不提供医学建议、诊断或治疗。关于治疗的任何决定，包括日程和用量，请务必咨询医生或药师。 本应用不是医疗器械。它无法判断您是否患有某种疾病，也不用于疾病的诊断、治疗或预防。</p>
+        </div>
+      </article>
+
+      <article id="zh-Hant" class="language-panel" lang="zh-Hant" dir="ltr" data-language="zh-Hant" data-document-title="DoseWeek — 記錄匯於一處，一目了然。" aria-labelledby="zh-Hant-title">
+        <div id="zh-Hant-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="zh-Hant-title">記錄匯於一處，一目了然。</h1><p class="hero-copy">集中查看注射計畫、過往記錄、身體變化和飲食。選擇您的裝置，即可找到相應指南。</p></header>
+          <section class="content-section home-platforms" aria-labelledby="zh-Hant-choose">
+            <h2 id="zh-Hant-choose">您使用哪種裝置？</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="zh-Hant-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · 使用指南</p><h3 id="zh-Hant-ios">iPhone 和 iPad 使用者</h3></div></div>
+            <p>瞭解記錄、Apple 健康、備份以及可選的裝置端草稿功能。</p>
+            <div class="button-row"><a class="button primary" href="support/#zh-Hant">查看使用指南</a><a class="button" href="privacy/#zh-Hant">隱私權政策</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="zh-Hant-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · 使用指南</p><h3 id="zh-Hant-android">Android 使用者</h3></div></div>
+            <p>瞭解記錄、Health Connect、加密備份以及可選的輸入工具。</p>
+            <div class="button-row"><a class="button primary" href="android/support/#zh-Hant">查看使用指南</a><a class="button" href="android/privacy/#zh-Hant">隱私權政策</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="zh-Hant-transfer"><div><h2 id="zh-Hant-transfer">從其他應用程式移轉？</h2><p>匯入過往記錄，核對內容後，選擇要新增的記錄。</p></div><a class="button" href="import/#zh-Hant">如何匯入記錄</a></section>
+          <p class="quiet-note home-note">請查閱相應平台的隱私權政策，瞭解可選功能和資料處理方式，包括 Android 食品標籤 SDK 的診斷資訊。</p>
+          <p class="quiet-note home-note">DoseWeek 是個人記錄工具，不提供醫療建議、診斷或治療。關於治療的任何決定，包括排程與劑量，請務必諮詢您的醫師或藥師。 本 App 並非醫療器材。無法判斷您是否患有疾病，亦非以疾病之診斷、治療或預防為目的。</p>
+        </div>
+      </article>
+
+      <article id="tr" class="language-panel" lang="tr" dir="ltr" data-language="tr" data-document-title="DoseWeek — Kayıtlarınız tek bir yerde." aria-labelledby="tr-title">
+        <div id="tr-content" tabindex="-1" data-skip-target>
+          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="tr-title">Kayıtlarınız tek bir yerde.</h1><p class="hero-copy">Enjeksiyon planınızı, geçmiş kayıtlarınızı, vücudunuzdaki değişimleri ve öğünlerinizi bir arada tutun. Kılavuz için cihazınızı seçin.</p></header>
+          <section class="content-section home-platforms" aria-labelledby="tr-choose">
+            <h2 id="tr-choose">Hangi cihazı kullanıyorsunuz?</h2>
+            <div class="card-grid platform-grid">
+          <section class="info-card platform-card" aria-labelledby="tr-ios">
+            <div class="platform-heading"><img src="assets/app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">iOS 1.0.5 · Kılavuz</p><h3 id="tr-ios">iPhone ve iPad için</h3></div></div>
+            <p>Kayıtlar, Apple Sağlık, yedekler ve cihazda oluşturulan isteğe bağlı taslaklar hakkında yardım alın.</p>
+            <div class="button-row"><a class="button primary" href="support/#tr">Kılavuzu aç</a><a class="button" href="privacy/#tr">Gizlilik Politikası</a></div>
+          </section>
+          <section class="info-card platform-card" aria-labelledby="tr-android">
+            <div class="platform-heading"><img src="assets/android-app-icon.png" alt="" width="48" height="48"><div><p class="platform-version">Android 1.0.0 · Kılavuz</p><h3 id="tr-android">Android için</h3></div></div>
+            <p>Kayıtlar, Health Connect, şifreli yedekler ve isteğe bağlı giriş araçları hakkında yardım alın.</p>
+            <div class="button-row"><a class="button primary" href="android/support/#tr">Kılavuzu aç</a><a class="button" href="android/privacy/#tr">Gizlilik Politikası</a></div>
+          </section>
+            </div>
+          </section>
+          <section class="home-transfer" aria-labelledby="tr-transfer"><div><h2 id="tr-transfer">Başka bir uygulamadan mı geçiyorsunuz?</h2><p>Geçmiş kayıtlarınızı içe aktarın, kontrol edin ve eklemek istediklerinizi seçin.</p></div><a class="button" href="import/#tr">Kayıtlar nasıl içe aktarılır?</a></section>
+          <p class="quiet-note home-note">İsteğe bağlı özellikler ve Android gıda etiketi SDK tanı verileri dahil veri işleme hakkında bilgi için platformunuzun gizlilik politikasına bakın.</p>
+          <p class="quiet-note home-note">DoseWeek kişisel bir kayıt tutma aracıdır; tıbbi tavsiye, tanı veya tedavi sunmaz. Uygulama zamanları ve dozlar dâhil tedavinizle ilgili tüm kararlar için mutlaka doktorunuza veya eczacınıza danışın. Bu uygulama bir tıbbi cihaz değildir. Herhangi bir rahatsızlığınız olup olmadığını belirleyemez ve hastalıkların tanısı, tedavisi veya önlenmesi amacıyla tasarlanmamıştır.</p>
+        </div>
+      </article>
+    </div></main>
     <footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span><span lang="en">DoseWeek · Private by design</span></footer>
   </body>
 </html>

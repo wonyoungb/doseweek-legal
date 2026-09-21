@@ -9,6 +9,14 @@ import json
 import re
 from pathlib import Path
 
+from site_assets import stylesheet_path
+
+from legal_release import (
+    CURRENT_ANDROID_EFFECTIVE_DATE,
+    expected_effective_date,
+    missing_food_attributions,
+)
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
@@ -34,6 +42,10 @@ REQUIRED_BACKUP_SECURITY_PHRASES = {
     "zh-Hant": ("AES-256-GCM 加密檔案", "獨立的高熵復原碼"),
     "tr": ("AES-256-GCM ile şifrelenmiş bir dosyaya", "Ayrı, yüksek entropili bir kurtarma kodu"),
 }
+SECOND_RELEASE_TOPICS = (
+    "meals", "dates", "charts", "calendar", "backup", "devices", "import",
+)
+SECOND_RELEASE_VERSION = "versionCode 11"
 REQUIRED_EMERGENCY_SERVICE_PHRASES = {
     "es": "servicios de emergencia locales",
     "it": "servizi di emergenza locali",
@@ -112,7 +124,7 @@ def page_shell(
     <meta name="twitter:description" content="{escaped(description)}">
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek Android app icon">
-    <link rel="stylesheet" href="{asset_prefix}assets/site.css">
+    <link rel="stylesheet" href="{stylesheet_path(asset_prefix)}">
     <script src="{asset_prefix}assets/language.js" defer></script>
   </head>
   <body data-platform="android" data-page="{escaped(page)}">
@@ -317,7 +329,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
     assert catalog["versionName"] == "1.0.0"
-    assert catalog["effectiveDate"] == "2026-09-08"
+    assert catalog["effectiveDate"] == expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
     assert isinstance(catalog["locales"], dict)
@@ -337,19 +349,22 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     }
     expected_section_ids = [
         "scope", "stored-data", "no-collection", "backup", "retention", "security", "changes",
+        "next-release",
     ]
     expected_faq_ids = [
         "storage", "accounts", "ai-health", "notifications", "backup", "deletion", "recovery",
         "candidate-dates", "candidate-edit", "candidate-past", "candidate-health", "candidate-sites",
+        *(f"candidate2-{topic}" for topic in SECOND_RELEASE_TOPICS),
     ]
     expected_policy_lengths = {
         "scope": (2, None),
         "stored-data": (1, 7),
-        "no-collection": (4, 7),
+        "no-collection": (5, 7),  # the fifth paragraph is the optional calendar integration
         "backup": (7, None),
-        "retention": (3, None),
+        "retention": (4, None),
         "security": (3, None),
         "changes": (1, None),
+        "next-release": (7, None),  # existing candidate facts, voice, consented label SDK
     }
     expected_faq_answer_lengths = {
         "storage": 1,
@@ -364,6 +379,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "candidate-past": 2,
         "candidate-health": 2,
         "candidate-sites": 3,
+        **{f"candidate2-{topic}": 2 for topic in SECOND_RELEASE_TOPICS},
     }
     for locale, entry in catalog["locales"].items():
         assert isinstance(entry, dict), f"{locale}: locale entry must be an object"
@@ -480,6 +496,26 @@ def validate_catalog(catalog: dict[str, object]) -> None:
                     f"{locale}: critical location is missing {token!r}"
                 )
 
+        for topic in SECOND_RELEASE_TOPICS:
+            notice = faq_by_id[f"candidate2-{topic}"]["answers"][0]
+            assert SECOND_RELEASE_VERSION in notice, (
+                f"{locale}: second-release FAQ {topic} must name the unreleased version"
+            )
+        assert SECOND_RELEASE_VERSION in policy_by_id["next-release"]["paragraphs"][0], (
+            f"{locale}: candidate policy section must name the unreleased version"
+        )
+        # the bundled food data ships in this release, so its attribution lines are verbatim
+        food_paragraph = policy_by_id["next-release"]["paragraphs"][4]
+        assert not missing_food_attributions(food_paragraph), (
+            f"{locale}: candidate food data paragraph is missing the attribution "
+            f"{missing_food_attributions(food_paragraph)[0]!r}"
+        )
+        label_paragraph = policy_by_id["next-release"]["paragraphs"][6]
+        for token in ("Google ML Kit", "HTTPS"):
+            assert token in label_paragraph, (
+                f"{locale}: food-label disclosure is missing {token!r}"
+            )
+
         backup_answer = faq_by_id["backup"]["answers"][0]
         for phrase in REQUIRED_BACKUP_SECURITY_PHRASES[locale]:
             assert phrase in backup_answer, (
@@ -497,6 +533,25 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             assert "descifrar el archivo" in faq_by_id["backup"]["answers"][1], (
                 "es: backup FAQ must identify the file as the object that cannot be decrypted"
             )
+
+    # A candidate append cannot correct an unconditional claim elsewhere on the same pages.
+    english = catalog["locales"]["en"]
+    obsolete_claims = (
+        "No AI",
+        "No advertising, analytics, or tracking",
+        "Advertising, analytics, tracking, or remote crash reporting",
+        "Runtime internet access or network features, until you turn on the optional Google Drive backup",
+        "Generative, online, or on-device AI",
+    )
+    policy = {section["id"]: section for section in english["privacy"]["sections"]}
+    claims = english["home"]["featureBadges"] + policy["no-collection"]["items"]
+    assert not set(obsolete_claims).intersection(claims), (
+        "Android candidate still contains a blanket AI, analytics, or network denial"
+    )
+    faq = {item["id"]: item for item in english["support"]["faq"]}
+    assert "still has no generative, online, or on-device AI" not in " ".join(
+        faq["ai-health"]["answers"]
+    ), "Android AI FAQ must account for optional voice and food-label recognition"
 
     serialized = json.dumps(catalog["locales"], ensure_ascii=False).casefold()
     for prohibited in (
@@ -545,8 +600,16 @@ def rendered_pages(catalog: dict[str, object]) -> dict[Path, str]:
     }
 
 
-def source_icon(content_path: Path) -> Path:
+CANDIDATE_CONTENT_PATH = ROOT / "docs/android-content.candidate.json"
+
+
+def source_icon(content_path: Path) -> Path | None:
     resolved = content_path.resolve()
+    if resolved == CANDIDATE_CONTENT_PATH.resolve():
+        # Unpublished mirror of the Android app catalog kept in this repository while the
+        # second-release copy is reviewed. The icon still comes from the app repository, so
+        # rendering from the candidate never rewrites assets/android-app-icon.png.
+        return None
     assert resolved.parent.name == "legal" and resolved.parent.parent.name == "docs", (
         "Android content must be DoseweekPlayStore/docs/legal/android-content.json"
     )
@@ -572,13 +635,15 @@ def main() -> None:
                 f"stale generated page: {path.relative_to(ROOT)}; rerun render_android.py"
             )
         assert ANDROID_ICON_PATH.is_file(), "missing generated Android web icon"
-        assert ANDROID_ICON_PATH.read_bytes() == canonical_icon.read_bytes(), (
-            "assets/android-app-icon.png does not match the Android Google Play icon"
-        )
+        if canonical_icon is not None:
+            assert ANDROID_ICON_PATH.read_bytes() == canonical_icon.read_bytes(), (
+                "assets/android-app-icon.png does not match the Android Google Play icon"
+            )
         print(f"OK: {len(pages)} Android pages and icon match {arguments.content}")
         return
 
-    ANDROID_ICON_PATH.write_bytes(canonical_icon.read_bytes())
+    if canonical_icon is not None:
+        ANDROID_ICON_PATH.write_bytes(canonical_icon.read_bytes())
     for path, content in pages.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")

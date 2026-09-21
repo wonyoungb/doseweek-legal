@@ -1,3 +1,7 @@
+> Historical snapshot. Use [CURRENT_HANDOFF.md](CURRENT_HANDOFF.md) and
+> [legal-release-map.json](../legal-release-map.json) for current status. Do not restart
+> old workflows or treat original pending work below as still pending.
+
 # DoseWeek 인수인계 — 2026-09-15 저녁 (사용량 90% 시점 체크포인트)
 
 전체 요청은 미완료다. 이 문서는 진행 중인 병렬 작업이 세션 종료로 끊길 때 다음 세션이 그대로 이어가기 위한 것이다. 당일 상세 기록은 같은 폴더의 `COORDINATOR_LOG.md`(시간순), 결정은 `STATE.json`의 `decisions`(HEALTH/DESIGN/NUTRITION/BUGFIX-PARITY/CORE/IMPORT-20260915-*), 설계는 `designs/`, 워크플로 스크립트 사본은 `workflows/`에 있다. 아침 인수인계 `HANDOFF.md`의 확정 원칙은 계속 유효하다.

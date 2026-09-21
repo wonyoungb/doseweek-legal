@@ -1,10 +1,10 @@
 # Wersja robocza odczytu zapisów DoseWeek — wersja 1
 
-Możesz już przygotować i sprawdzić wersję roboczą JSON. Ten poradnik nie oznacza, że zainstalowana wersja DoseWeek może ją zapisać. Zachowaj oryginalne zapisy, dopóki aplikacja nie będzie wyraźnie obsługiwać tego formatu.
+Ten przewodnik służy do ekranu „Importuj wpisy z innej aplikacji” w DoseWeek 1.0.5 lub nowszym na iPhonie i iPadzie oraz w aplikacji DoseWeek na Androida, gdy ten ekran pojawi się w zainstalowanej wersji. Jeśli go nie widzisz, najpierw zaktualizuj DoseWeek. Zachowaj oryginalne wpisy do końca importu.
 
-Ten format zachowuje dane źródłowe do ręcznego sprawdzenia. Nie jest zaszyfrowaną kopią zapasową, decyzją kliniczną, gwarancją formatu dostawcy ani dowodem, że bieżąca aplikacja go importuje.
+Ten format zachowuje dowody do sprawdzenia na ekranie importu DoseWeek. Nie jest zaszyfrowaną kopią zapasową, decyzją kliniczną ani gwarancją formatu innego dostawcy.
 
-Import Android: zapisany szkic ma limit 1 MiB (1 048 576 bajtów) i 10 000 wierszy, niezależny od 10 MiB dla JSON. Nie można zapisać wierszy objawów ani niesklasyfikowanych; zachowaj ich tekst i odznacz je. Pasujące usunięte rekordy pozostają już zaimportowane i nie są przywracane. Wersja kandydująca iOS ma osobny limit 4 MiB dla wznawianych szkiców. Nie zakładaj identycznego działania ani dostępności na obu platformach lub w zainstalowanej aplikacji.
+Limity aplikacji: jeden import mieści do 10 000 wierszy, a wejściowy JSON do 10 MiB. Niedokończony szkic do sprawdzenia może mieć do 4 MiB na iPhonie i iPadzie oraz do 1 MiB (1 048 576 bajtów) na Androidzie; większy import jest odrzucany, nigdy obcinany. Wierszy z objawami ani niesklasyfikowanych nie można zapisać; zachowaj ich tekst źródłowy i odznacz je. Na Androidzie wiersze odpowiadające wpisom usuniętym po wcześniejszym imporcie są traktowane jako już zaimportowane i nie są przywracane.
 
 1. Na najwyższym poziomie format ma wartość doseweek.record_extraction_draft; version ma wartość 1; reviewed_by_user ma wartość false. records i unreadable_sections są tablicami. Odrzucaj nieznane pola zamiast po cichu je pomijać.
 
@@ -14,9 +14,9 @@ Import Android: zapisany szkic ma limit 1 MiB (1 048 576 bajtów) i 10 000 wiers
 
 4. date_iso ma format YYYY-MM-DD tylko wtedy, gdy pełna data jest jednoznaczna i prawidłowa. time_24h ma format HH:mm z opcjonalnymi sekundami i ułamkami sekund, jeśli są widoczne. time_zone i utc_offset wymagają wyraźnego potwierdzenia w źródle. Brakujące lub niejednoznaczne pola mają wartość null, a nie puste ciągi znaków lub odgadnięte daty i godziny.
 
-5. Schemat sprawdza strukturę. Przyszły importer musi też sprawdzać rzeczywiste daty kalendarzowe, jednostki, mapowanie obsługiwanych leków i pomiarów, dowody źródłowe, niejednoznaczność strefy czasowej oraz duplikaty. Samo przejście walidacji schematu nigdy nie upoważnia do zapisu.
+5. Schemat sprawdza tylko strukturę. Import DoseWeek sprawdza też rzeczywiste daty kalendarzowe, jednostki, obsługiwane przypisania leków i pomiarów, strefy czasowe i duplikaty, a Ty nadal sprawdzasz każdy wiersz. Samo przejście walidacji schematu nigdy nie uprawnia do zapisu.
 
-6. Planowany zapis obejmuje sprawdzenie wszystkich wybranych wierszy, odrzucenie nierozstrzygniętych pól wymaganych i dodanie całego wyboru albo żadnego wiersza, bez automatycznego nadpisywania istniejących zapisów. Znaczenie zdarzeń zawierających tylko datę musi być wyraźnie obsługiwane przed zapisem; zastępcza północ lub południe są niedozwolone.
+6. Aplikacja odrzuca zaznaczone wiersze z nierozstrzygniętymi wymaganymi polami i dodaje zaznaczenie atomowo, bez nadpisywania istniejących wpisów. Wiersz bez godziny wymaga rzeczywistej godziny wpisanej i potwierdzonej w aplikacji; nie używa się zastępczej godziny, takiej jak północ czy południe.
 
 7. Chroń prywatność wersji roboczych i plików źródłowych. Ten statyczny poradnik nie ma formularza przesyłania plików. Wybranie zewnętrznego AI oznacza wysłanie wybranych plików do tej usługi na jej warunkach. Te same pola można przygotować ręcznie lub przez rozpoznawanie tekstu na urządzeniu. Jeśli tworzysz plik ręcznie, zapisz wyłącznie treść JSON z odpowiedzi AI jako plik UTF-8 z rozszerzeniem .json. Wersja robocza może zawierać maksymalnie 10 000 rekordów. Każdy zdekodowany ciąg JSON ma limit 16 KiB (16 384 bajtów UTF-8). Ten limit bajtów sprawdza aplikacja; maxLength w JSON Schema liczy punkty kodowe Unicode, a nie bajty UTF-8. Plik JSON może mieć najwyżej 10 MiB, a głębokość zagnieżdżenia jest ograniczona do 32 poziomów.
 

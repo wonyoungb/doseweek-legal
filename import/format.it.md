@@ -1,10 +1,10 @@
 # Bozza di estrazione delle registrazioni DoseWeek — versione 1
 
-Puoi già preparare e controllare una bozza JSON. Questa guida non significa che la versione di DoseWeek installata possa salvarla. Conserva i dati originali finché l’app non supporterà esplicitamente questo formato.
+Questa guida si usa con «Importa registrazioni da un’altra app» in DoseWeek 1.0.5 o successiva su iPhone e iPad, e nell’app DoseWeek per Android quando quella schermata compare nella versione installata. Se non la vedi, aggiorna prima DoseWeek. Conserva le registrazioni originali finché l’importazione non è finita.
 
-Questo formato conserva le prove per la verifica manuale. Non è un backup crittografato, una decisione clinica, una garanzia sul formato di un fornitore né la prova che l’app attuale possa importarlo.
+Questo formato conserva le prove per il controllo nella schermata di importazione di DoseWeek. Non è un backup crittografato, una decisione clinica né una garanzia sul formato di un fornitore.
 
-Importazione Android: la bozza salvata è limitata a 1 MiB (1.048.576 byte) e 10.000 righe, separatamente dai 10 MiB del JSON. Le righe dei sintomi e non classificate non si possono salvare; conservate il testo e deselezionatele. Le registrazioni corrispondenti eliminate restano già importate e non vengono ripristinate. La versione candidata iOS ha un limite separato di 4 MiB per riprendere le bozze. Non presumete comportamento o disponibilità identici nelle due piattaforme o nell’app installata.
+Limiti dell’app: un’importazione contiene al massimo 10.000 righe e il JSON in ingresso al massimo 10 MiB. Una bozza di controllo non finita può arrivare a 4 MiB su iPhone e iPad e a 1 MiB (1.048.576 byte) su Android; un’importazione più grande viene rifiutata, mai troncata. Le righe di sintomi o non classificate non si possono salvare; conserva il testo di origine e deselezionale. Su Android, le righe che corrispondono a registrazioni eliminate dopo un’importazione precedente risultano già importate e non vengono ripristinate.
 
 1. Il format di primo livello è doseweek.record_extraction_draft; version è 1; reviewed_by_user è false. records e unreadable_sections sono array. Rifiuta i campi sconosciuti invece di eliminarli silenziosamente.
 
@@ -14,9 +14,9 @@ Importazione Android: la bozza salvata è limitata a 1 MiB (1.048.576 byte) e 10
 
 4. date_iso usa YYYY-MM-DD solo quando la data completa è inequivocabile e valida. time_24h usa HH:mm, con secondi e frazioni di secondo facoltativi se visibili. time_zone e utc_offset richiedono prove esplicite nella fonte. I campi mancanti o ambigui sono null, non stringhe vuote né date o orari indovinati.
 
-5. Lo schema verifica la struttura; un futuro importatore deve anche verificare le date effettive del calendario, le unità, le corrispondenze supportate per farmaci e metriche, le prove nella fonte, le ambiguità del fuso orario e i duplicati. Superare la sola convalida dello schema non autorizza mai il salvataggio.
+5. Lo schema controlla solo la struttura. L’importazione di DoseWeek controlla anche date di calendario reali, unità, corrispondenze supportate di farmaci e misurazioni, fusi orari e duplicati, e tu controlli comunque ogni riga. Superare lo schema da solo non autorizza mai il salvataggio.
 
-6. Il flusso di salvataggio previsto verifica tutte le righe selezionate, rifiuta i campi obbligatori non risolti e aggiunge la selezione in modo atomico, senza sovrascrivere automaticamente le registrazioni esistenti. Il significato degli eventi con la sola data deve essere esplicitamente supportato prima del salvataggio; non sono ammessi segnaposto a mezzanotte o a mezzogiorno.
+6. L’app rifiuta le righe selezionate con campi obbligatori non risolti e aggiunge la selezione in modo atomico senza sovrascrivere le registrazioni esistenti. Una riga senza ora richiede l’ora reale inserita e confermata nell’app; non si usa alcun orario fittizio come mezzanotte o mezzogiorno.
 
 7. Mantieni privati le bozze e i file originali. Questa guida statica non contiene un modulo di caricamento. Scegliendo un’IA esterna, invii i file selezionati a quel servizio secondo le sue condizioni. Puoi preparare gli stessi campi manualmente o con il riconoscimento del testo sul dispositivo. Se crea un file manualmente, salvi solo il contenuto JSON della risposta dell’IA in un file UTF-8 con estensione .json. Una bozza può contenere al massimo 10.000 record. Ogni stringa JSON decodificata è limitata a 16 KiB (16.384 byte UTF-8). Questo limite in byte viene verificato dall’app; maxLength in JSON Schema conta i punti di codice Unicode, non i byte UTF-8. Il file JSON è limitato a 10 MiB e l’annidamento a 32 livelli.
 

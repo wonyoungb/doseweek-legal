@@ -1,168 +1,61 @@
 # DoseWeek public pages
 
-This repository contains the public landing, support, privacy, and record-preparation pages for **DoseWeek**.
-It is a dependency-free static site: no analytics, remote fonts, third-party scripts, cookies,
-accounts, or form backend.
+Static product, support, privacy and record-import pages for DoseWeek on iOS and Android.
+No third-party scripts, analytics, remote fonts, cookies, accounts or form backend.
 
-## Sources of truth
+## Content ownership
 
-The privacy copy does not originate here. Its canonical source is the app repository:
+| Content | Canonical source | Mirror / renderer |
+|---|---|---|
+| Shared home | `docs/home-content.json` and `templates/home.html` | `scripts/render_home.py`; versions, locale names and medical notices from the platform catalogs |
+| iOS policy | iOS `DoseDay/Resources/Localizable.xcstrings` | `docs/ios-content.json`, `scripts/render_ios.py` |
+| Android pages | Android `docs/legal/android-content.json` | `docs/android-content.candidate.json`, `scripts/render_android.py` |
+| Import guide and downloads | `import/content.json` and templates | `scripts/render_import.py` |
+| Effective date and attributions | Owner decisions and bundled data notices | `scripts/legal_release.py` |
 
-```text
-DoseDay/Resources/Localizable.xcstrings
-```
+Change app behavior and its canonical policy together, then mirror and regenerate. Public
+privacy text is not an independent source. Android's consented food-label ML Kit diagnostics
+exception must not be described as zero SDK traffic or copied into iOS policy.
 
-The public policy must mirror, verbatim and in all three languages:
+## Locales and routes
 
-- `privacy.intro`
-- `privacy.effectiveDate`
-- `privacy.section1.title` through `privacy.section8.body`
-- `privacy.medical.title` and `privacy.medical.body`
-- `common.notAMedicalDevice` (the second medical-disclaimer paragraph)
+The shared home, iOS privacy/support, Android pages and the import guide all use the same
+17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT,
+pl, sv, hi, pt-BR, ar, zh-Hans, zh-Hant and tr. In-app help supports that same locale set.
 
-Change those app strings first, review the clinical/privacy meaning there, and then copy the
-approved values into `privacy/index.html`. Never make a substantive policy change only on the
-website. The current effective date is **August 22, 2026**.
+Stable paths: `/`, `/privacy/`, `/support/`, `/android/`, `/android/privacy/`,
+`/android/support/` and `/import/`. Hashes choose locale, such as `/support/#ar`.
+Preserve Arabic RTL, distinct Portuguese/Chinese variants, keyboard focus and the no-JavaScript
+fallback. Every home guide/privacy/import link must retain its selected locale.
 
-Android policy and support copy has a separate canonical source in the Android app repository:
+## Verify
 
-```text
-DoseweekPlayStore/docs/legal/android-content.json
-```
-
-That catalog pins the Android application ID, effective date, language order, text direction,
-and all localized product, privacy, and support copy for the Android pages. Change and review
-Android behavior and that catalog together, then regenerate `android/` with
-`scripts/render_android.py`. Never copy the iOS policy into the Android routes: the platforms
-deliberately differ in health integrations, AI, notifications, exports, backup transport, and
-deletion behavior.
-
-The existing iOS support FAQ must remain consistent with the iOS app catalog and with the
-shipped iOS behavior. In particular, keep the exact five read-only Apple Health types,
-local-notification boundary,
-encrypted user-directed backup boundary, recovery-code warning, and
-`SystemLanguageModel.default` availability/manual fallback accurate. Keep plaintext PDF/CSV
-exports distinct from encrypted backups: they are generated on request, go only to the share-sheet
-destination the user selects, and are outside the app's control afterward. The deletion copy must
-also distinguish immediate logical removal from the secure database-file cleanup retry, and App
-Lock support must never suggest that authentication can be bypassed.
-
-The existing iOS app icon is derived from:
-
-```text
-DoseDay/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png
-```
-
-The web copy at `assets/app-icon.png` is resized to 512 px for download size. Keep its aspect
-ratio and do not replace it with an unrelated mark.
-
-The Android pages use their own shipped Google Play icon. Its canonical source and generated
-web copy are:
-
-```text
-DoseweekPlayStore/marketing/GooglePlay/play-icon-512.png
-doseweek-legal/assets/android-app-icon.png
-```
-
-Update the web copy from that exact Android source. Do not replace the existing iOS web icon
-when the Android artwork changes.
-
-## Locale URL contract
-
-Every main page has three localized panels and these stable deep links:
-
-```text
-/#ko       /#en       /#ja
-/support/#ko  /support/#en  /support/#ja
-/privacy/#ko  /privacy/#en  /privacy/#ja
-```
-
-A valid hash wins. With no valid hash, `assets/language.js` chooses the first supported browser
-language and falls back to Korean. It updates the document language, title, visible panel, and
-`aria-current`. With JavaScript disabled, CSS defaults to Korean and the three language links
-still show one panel at a time.
-
-Android uses the same hash contract below `/android/`, `/android/privacy/`, and
-`/android/support/`, with these seventeen exact BCP-47 tags:
-
-```text
-ko en ja de fr es it nl pt-PT pl sv hi pt-BR ar zh-Hans zh-Hant tr
-```
-
-Portuguese and Chinese variants remain distinct, and Arabic panels declare right-to-left
-direction. `assets/language.js` derives each page's supported languages from its own navigation,
-prefers an exact locale before applying the documented Portuguese/Chinese fallback, and defaults
-to Korean. Each Android panel and localized skip link carries its own `lang` and `dir`, so direct
-hash links keep the selected language, reading direction, and skip destination even without
-JavaScript; JavaScript also updates the document root metadata. The existing iOS URLs and their
-three-language behavior remain unchanged.
-
-For that no-script fallback, localized panels intentionally stay in **English, Japanese,
-Korean** DOM order. Do not reorder them without updating the sibling selectors in
-`assets/site.css`. Privacy table-of-contents IDs start with their locale (`en-health`,
-`ja-health`, `ko-health`), which lets the shared script retain the correct panel.
-
-## Files
-
-- `index.html` — branded landing page
-- `support/index.html` — FAQ, privacy-safe contact guidance, and medical safety notice
-- `privacy/index.html` — public policy mirrored from the app catalog
-- `android/index.html` — Android landing page generated from the Android legal catalog
-- `android/support/index.html` — Android-only support and safety guidance
-- `android/privacy/index.html` — Android-only public policy
-- `assets/site.css` — shared responsive, dark-mode, focus, and reduced-motion styles
-- `assets/language.js` — page-scoped hash/browser-language selection only
-- `assets/app-icon.png` — existing iOS icon
-- `assets/android-app-icon.png` — Android Google Play icon
-- `scripts/render_android.py` — deterministic Android page renderer
-- `scripts/check_site.py` — dependency-free structural, metadata, accessibility, disclosure, and
-  local-link checks
-
-## Local verification
-
-Run before every handoff or publish:
+From this repository, substitute the actual neighboring checkout paths when necessary:
 
 ```bash
-python3 scripts/check_site.py
-python3 scripts/check_site.py --catalog /path/to/DoseDay/Resources/Localizable.xcstrings
-python3 scripts/render_android.py --content /path/to/DoseweekPlayStore/docs/legal/android-content.json --check
-python3 scripts/check_site.py \
-  --catalog /path/to/DoseDay/Resources/Localizable.xcstrings \
-  --android-content /path/to/DoseweekPlayStore/docs/legal/android-content.json
-node --check assets/language.js
-git diff --check
-python3 -m http.server 4173
+python3 scripts/render_home.py --check
+python3 scripts/render_ios.py --check --catalog ../ios/DoseDay/Resources/Localizable.xcstrings
+python3 scripts/render_android.py --content ../android/docs/legal/android-content.json --check
+python3 scripts/render_import.py --check --require-all-locales
+python3 scripts/check_site.py --catalog ../ios/DoseDay/Resources/Localizable.xcstrings --android-content ../android/docs/legal/android-content.json
+# Before final app builds, validate the fixed policy date:
+python3 scripts/check_site.py --release
 ```
 
-Then inspect the nine existing iOS locale URLs and all Android routes at desktop and
-narrow-mobile widths. Check light and dark appearance, keyboard focus, FAQ disclosure controls,
-privacy table-of-contents links, browser back/forward, Arabic right-to-left layout, and one run
-with JavaScript disabled. Confirm only one localized panel is visible and the language tab has
-the matching `aria-current` value. Before publishing an Android change, also prove that
-`index.html`, `privacy/index.html`, and `support/index.html` did not change unless the task
-explicitly includes an iOS policy update.
+Shared typography uses relative sizes, gradual viewport scaling and natural CJK/connected-script
+spacing. Generated pages version the stylesheet by content hash; after a CSS change regenerate
+all pages, including the shared home. The site check rejects missing locales and stale output.
 
-Publishing is a separate, explicit step. Do not commit, push, or deploy from a preview-only
-review task.
+Structural checks do not prove browser appearance, screen-reader use or native-speaker review.
+Keep those evidence categories distinct in [the current handoff](docs/CURRENT_HANDOFF.md).
 
-## Record preparation guide
+## Release and documentation
 
-`/import/#<locale>` provides the same three-step guide in all seventeen supported locales.
-It has its own localized prompt copy control and downloadable Markdown prompts, Markdown
-format notes, an empty JSON draft, and `draft-v1.schema.json`. It uses the existing language
-script without changing the landing, privacy, or platform support pages.
+[legal-release-map.json](legal-release-map.json) binds candidate catalogs and release decisions.
+Owner decision 2026-09-22 fixes the policy date and mirrors before final app builds/signing.
+Both immutable builds must be accepted by their stores before main publication.
+The policy date does not assert app availability; a pushed branch is not a published policy.
 
-The canonical copy is `import/content.json`; regenerate it with `python3 scripts/render_import.py`.
-Run `python3 scripts/render_import.py --check --require-all-locales` before publishing.
-The normal site checker also validates all generated guide files and language links.
-
-The current status is `preparation_only`: users can prepare and review drafts, but the guide
-must not claim that the released app saves this JSON. Change that status and its localized
-wording together only when the corresponding app importer and manual-review flow have been
-verified. An extraction draft is never an encrypted full backup. The format uses identical
-machine keys in every language, preserves source text, and leaves unknown values null.
-
-The intended later save operation adds selected validated rows atomically, keeps manual
-review mandatory, and never automatically overwrites existing records. Date-only event
-semantics and vendor-specific formats require separate implementation and verification.
-No real health record, screenshot, or extracted patient value belongs in this repository.
+Read [AGENTS.md](AGENTS.md), [the documentation index](docs/README.md) and
+[CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md). Dated continuation files are historical only.
+Original documentation is retained under docs/history and in Git.
