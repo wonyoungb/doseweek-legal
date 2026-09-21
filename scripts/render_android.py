@@ -359,10 +359,10 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "stored-data": (1, 7),
         "no-collection": (5, 7),  # the fifth paragraph is the optional calendar integration
         "backup": (7, None),
-        "retention": (3, None),
+        "retention": (4, None),
         "security": (3, None),
         "changes": (1, None),
-        "next-release": (5, None),
+        "next-release": (7, None),  # existing candidate facts, voice, consented label SDK
     }
     expected_faq_answer_lengths = {
         "storage": 1,
@@ -508,6 +508,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             f"{locale}: candidate food data paragraph is missing the attribution "
             f"{missing_food_attributions(food_paragraph)[0]!r}"
         )
+        label_paragraph = policy_by_id["next-release"]["paragraphs"][6]
+        for token in ("Google ML Kit", "HTTPS"):
+            assert token in label_paragraph, (
+                f"{locale}: food-label disclosure is missing {token!r}"
+            )
 
         backup_answer = faq_by_id["backup"]["answers"][0]
         for phrase in REQUIRED_BACKUP_SECURITY_PHRASES[locale]:
@@ -526,6 +531,25 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             assert "descifrar el archivo" in faq_by_id["backup"]["answers"][1], (
                 "es: backup FAQ must identify the file as the object that cannot be decrypted"
             )
+
+    # A candidate append cannot correct an unconditional claim elsewhere on the same pages.
+    english = catalog["locales"]["en"]
+    obsolete_claims = (
+        "No AI",
+        "No advertising, analytics, or tracking",
+        "Advertising, analytics, tracking, or remote crash reporting",
+        "Runtime internet access or network features, until you turn on the optional Google Drive backup",
+        "Generative, online, or on-device AI",
+    )
+    policy = {section["id"]: section for section in english["privacy"]["sections"]}
+    claims = english["home"]["featureBadges"] + policy["no-collection"]["items"]
+    assert not set(obsolete_claims).intersection(claims), (
+        "Android candidate still contains a blanket AI, analytics, or network denial"
+    )
+    faq = {item["id"]: item for item in english["support"]["faq"]}
+    assert "still has no generative, online, or on-device AI" not in " ".join(
+        faq["ai-health"]["answers"]
+    ), "Android AI FAQ must account for optional voice and food-label recognition"
 
     serialized = json.dumps(catalog["locales"], ensure_ascii=False).casefold()
     for prohibited in (

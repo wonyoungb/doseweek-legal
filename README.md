@@ -21,12 +21,12 @@ string with the app catalog. The Korean, English, and Japanese support answers a
 previously published text; the other fourteen locales were written for the second-release
 candidate and have not had a native-speaker review.
 
-The public policy must mirror, verbatim and in all three languages:
+The public policy must mirror, verbatim and in all seventeen languages:
 
 - `privacy.intro`
 - `privacy.effectiveDate`
-- `privacy.section1.title` through `privacy.section9.body` (section 9 is the optional
-  calendar sync that ships with the unreleased iOS 1.0.5)
+- `privacy.section1.title` through `privacy.section10.body` (section 9 covers optional
+  calendar sync; section 10 covers meal records, backup format, and selected food labels)
 - `privacy.medical.title` and `privacy.medical.body`
 - `common.notAMedicalDevice` (the second medical-disclaimer paragraph)
 
@@ -58,6 +58,17 @@ Android behavior and that catalog together, then regenerate `android/` with
 `scripts/render_android.py`. Never copy the iOS policy into the Android routes: the platforms
 deliberately differ in health integrations, AI, notifications, exports, backup transport, and
 deletion behavior.
+
+The Android candidate has a food-label-only Google ML Kit exception, authorized by
+`OWNER-LABEL-SDK-TELEMETRY-20260920`. Bundled text recognition 16.0.1 (Latin, Korean,
+Japanese) and barcode scanning 17.3.0 process selected image content and recognition
+results locally, while the SDK sends diagnostic and usage metrics to Google. Mirror
+the app's consent and telemetry disclosure; do not describe this as zero SDK traffic
+or zero analytics. Closing the review does not promise to stop queued SDK metrics.
+The canonical app policy and final Play Data safety answers must agree with the
+actual consent and initialization boundary. Retention and remote deletion must not
+be inferred from local record deletion. This Android exception does not change the
+iOS no-third-party-SDK boundary or this static site's dependency-free implementation.
 
 The existing iOS support FAQ must remain consistent with the iOS app catalog and with the
 shipped iOS behavior. In particular, keep the exact five read-only Apple Health types,

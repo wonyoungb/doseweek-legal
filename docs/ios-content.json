@@ -76,7 +76,7 @@
             "id": "deletion",
             "title": "6. 데이터 삭제",
             "paragraphs": [
-              "설정 > 모든 로컬 기록 삭제를 실행하면 DoseWeek 안의 모든 기록과 기기에 저장된 복구 코드가 즉시 제거됩니다. 이어서 앱이 앱 전용 데이터베이스 파일을 안전하게 정리합니다. iOS가 일시적으로 정리를 막으면 앱이 다시 삭제를 실행하거나 DoseWeek를 재실행하라고 안내하며, 데이터베이스를 다시 열기 전에 자동으로 정리를 재시도합니다. 삭제된 기록은 복원되지 않습니다. 서버 사본이 없으므로 별도의 삭제 요청도 필요하지 않습니다."
+              "설정 > 모든 로컬 기록 삭제를 실행하면 DoseWeek 안의 모든 기록과 기기에 저장된 복구 코드가 즉시 제거됩니다. 이어서 앱이 앱 전용 데이터베이스 파일을 안전하게 정리합니다. iOS가 일시적으로 정리를 막으면 앱이 다시 삭제를 실행하거나 DoseWeek를 재실행하라고 안내하며, 데이터베이스를 다시 열기 전에 자동으로 정리를 재시도합니다. 삭제된 기록은 복원되지 않습니다. DoseWeek는 서버 사본을 보유하지 않으므로 개발자에게 별도로 삭제를 요청할 필요가 없습니다. 내보낸 파일과 캘린더 제공자의 사본은 별도로 관리해 주세요."
             ]
           },
           {
@@ -90,7 +90,7 @@
             "id": "ai",
             "title": "8. 온디바이스 AI",
             "paragraphs": [
-              "선택 기능인 AI 기록과 진료 준비는 Apple Foundation Models의 온디바이스 Apple Intelligence 모델인 SystemLanguageModel.default만 사용합니다. AI 기록의 입력과 구조화된 모델 출력은 기기 안의 일시적인 메모리 세션에서 처리됩니다. DoseWeek는 이를 기기 밖으로 보내지 않으며, 사용자가 확인하기 전에는 임시 세션이나 출력을 영구 저장하지 않습니다. 계속하면 원문이 수정 가능한 초안 메모가 되고, 사용자가 검토해 명시적으로 확인한 필드와 메모만 로컬 임상 기록 데이터베이스에 저장됩니다. 진료 준비에서 모델은 임상 값이 아닌 닫힌 사실 식별자만 받고, 순서와 검수된 표현의 열거형 값만 반환합니다. 모든 문장은 앱이 현지화된 템플릿과 계산값으로 만듭니다. 완성된 요약은 메모리에서만 유지되고 저장되지 않으며, 사용자가 포함하도록 선택한 경우에만 PDF에 들어갑니다. Private Cloud Compute, 서버 모델, 제3자 모델은 사용하지 않습니다. 이 기능은 설정에서 끌 수 있습니다."
+              "선택 기능인 AI 기록과 진료 준비는 Apple Foundation Models의 온디바이스 Apple Intelligence 모델인 SystemLanguageModel.default만 사용합니다. AI 기록의 입력과 구조화된 모델 출력은 기기 안의 일시적인 메모리 세션에서 처리됩니다. DoseWeek는 이를 기기 밖으로 보내지 않으며, 사용자가 확인하기 전에는 임시 세션이나 출력을 영구 저장하지 않습니다. 계속하면 원문이 수정 가능한 초안 메모가 되고, 사용자가 검토해 명시적으로 확인한 필드와 메모만 로컬 임상 기록 데이터베이스에 저장됩니다. 진료 준비에서 모델은 임상 값이 아닌 닫힌 사실 식별자만 받고, 순서와 검수된 표현의 열거형 값만 반환합니다. 모든 문장은 앱이 현지화된 템플릿과 계산값으로 만듭니다. 완성된 요약은 메모리에서만 유지되고 저장되지 않으며, 사용자가 포함하도록 선택한 경우에만 PDF에 들어갑니다. Private Cloud Compute, 서버 모델, 제3자 모델은 사용하지 않습니다. 이 기능은 설정에서 끌 수 있습니다.\n\n선택 기능인 음성 입력은 사용자가 직접 시작하고 마이크 권한을 허용한 뒤에만 시작됩니다. 음성은 기기에서 처리되며, 필요한 Apple 음성 리소스는 사용자가 동의한 경우에만 다운로드됩니다. 오디오는 저장하거나 내보내지 않습니다. 취소하거나, 잠그거나, 앱이 백그라운드로 전환되면 녹음이 중지됩니다. 기록 초안으로 계속하기 전에 최종 변환 텍스트를 검토하세요. 지원되지 않는 기기나 언어에서는 직접 입력을 계속 사용할 수 있습니다."
             ]
           },
           {
@@ -101,8 +101,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. 식사 기록과 백업 형식",
+            "paragraphs": [
+              "식사 기록: 사용자가 직접 입력한 식사 이름, 날짜, 선택적 시각과 식사 구분, 그리고 아는 범위에서 입력한 열량·단백질·탄수화물·지방 총량이 기기의 앱 전용 저장소에 저장됩니다. 비워 둔 값은 '모름'으로 남고 계산되지 않습니다. 식사 기록은 암호화 백업에 포함되고, 사용자가 요청할 때만 평문 CSV 파일로 내보낼 수 있으며, 진료 준비 화면과 PDF 내보내기에는 포함되지 않습니다. 개발자는 식사 정보를 받지 않습니다.\n\n백업 형식: 새 기능 때문에 앱 데이터베이스와 암호화 백업 파일의 형식 번호가 올라갑니다. 이전 버전에서 만든 백업은 계속 복원할 수 있지만, 새 버전이 만든 백업은 이전 버전에서 복원할 수 없습니다. 캘린더 일정 연결 정보는 기기에만 남고 백업에 포함되지 않으며, 같은 기기에서 복원할 때는 그대로 유지됩니다. 저장하지 않은 임시 초안도 백업에 포함되지 않습니다.\n\n선택한 식품 라벨은 기기에서 읽습니다. DoseWeek는 전체 사진 보관함 권한 없이 사용자가 선택한 이미지만 사용합니다. 원본 이미지나 위치 메타데이터를 보관하지 않으며, 이미지를 내보내기나 백업에 포함하지 않습니다. 검토 화면을 닫거나, 잠그거나, 앱이 백그라운드로 전환되면 임시 검토 내용이 폐기됩니다. 원본 사진은 변경되지 않습니다. 인식된 값은 확인이 필요하며 자동으로 저장되지 않습니다."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. 다음 버전에 준비 중인 변경(후보)",
+            "title": "11. 다음 버전에 준비 중인 변경(후보)",
             "paragraphs": [
               "이 항목은 아직 출시되지 않은 iOS 1.0.5에 적용될 예정인 변경을 미리 공개합니다. 9항의 선택적 캘린더 연동도 같은 버전과 함께 제공됩니다. 시행일은 해당 버전 출시와 함께 확정합니다.",
               "식사 기록: 사용자가 직접 입력한 식사 이름, 날짜, 선택적 시각과 식사 구분, 그리고 아는 범위에서 입력한 열량·단백질·탄수화물·지방 총량이 기기의 앱 전용 저장소에 저장됩니다. 비워 둔 값은 '모름'으로 남고 계산되지 않습니다. 식사 기록은 암호화 백업에 포함되고, 사용자가 요청할 때만 평문 CSV 파일로 내보낼 수 있으며, 진료 준비 화면과 PDF 내보내기에는 포함되지 않습니다. 개발자는 식사 정보를 받지 않습니다.",
@@ -309,14 +316,14 @@
         "sections": [
           {
             "id": "storage",
-            "title": "1. Where Your Data Is Stored",
+            "title": "1. Where your data is stored",
             "paragraphs": [
               "All health records (injection schedules, administration history, injection sites, notes, and body-metric data) are stored only on your device by default. DoseWeek operates no servers and does not automatically transmit or collect your data. Records leave the app only when you explicitly export or share them as described below."
             ]
           },
           {
             "id": "health",
-            "title": "2. Apple Health (HealthKit) Integration",
+            "title": "2. Apple Health (HealthKit) integration",
             "paragraphs": [
               "Apple Health integration is read-only. Only the body metrics you allow — weight, BMI, body fat percentage, lean body mass, and waist circumference — are read and shown or stored on your device. You can change permissions at any time in iOS Settings. DoseWeek does not write any data to Apple Health."
             ]
@@ -337,16 +344,16 @@
           },
           {
             "id": "tracking",
-            "title": "5. Third Parties and Tracking",
+            "title": "5. Third parties and tracking",
             "paragraphs": [
               "The app contains no third-party SDKs, analytics tools, or advertising. It does not collect usage statistics, track users, or build profiles."
             ]
           },
           {
             "id": "deletion",
-            "title": "6. Deleting Your Data",
+            "title": "6. Deleting your data",
             "paragraphs": [
-              "Running Settings > Delete All Local Records immediately removes every record from DoseWeek and deletes the on-device recovery code. DoseWeek then securely cleans the private database files. If iOS temporarily prevents that cleanup, the app tells you to run the deletion again or relaunch DoseWeek and automatically retries before reopening the database. Deleted records are not restored. Since no server copies exist, no separate deletion request is needed."
+              "Running Settings > Delete All Local Records immediately removes every record from DoseWeek and deletes the on-device recovery code. DoseWeek then securely cleans the private database files. If iOS temporarily prevents that cleanup, the app tells you to run the deletion again or relaunch DoseWeek and automatically retries before reopening the database. Deleted records are not restored. DoseWeek keeps no server copies, so no deletion request to the developer is needed. Manage exported files and calendar-provider copies separately."
             ]
           },
           {
@@ -360,7 +367,7 @@
             "id": "ai",
             "title": "8. On-device AI",
             "paragraphs": [
-              "Optional AI entry and Visit Prep use only Apple Foundation Models' on-device Apple Intelligence model, SystemLanguageModel.default. AI entry input and structured model output are processed in a temporary in-memory session on the device. DoseWeek does not send them off device or persist the temporary session or output before you confirm. If you continue, your original sentence becomes an editable draft note, and only the fields and note you review and explicitly confirm are stored in the local clinical database. For Visit Prep, the model receives only closed fact identifiers, not clinical values, and returns only order and reviewed-expression enums. The app builds every sentence from localized templates and computed values. The resulting summary is memory-only and is not stored; it is included in a PDF only when you choose to include it. No Private Cloud Compute, server model, or third-party model is used. You can turn these features off in Settings."
+              "Optional AI entry and Visit Prep use only Apple Foundation Models' on-device Apple Intelligence model, SystemLanguageModel.default. AI entry input and structured model output are processed in a temporary in-memory session on the device. DoseWeek does not send them off device or persist the temporary session or output before you confirm. If you continue, your original sentence becomes an editable draft note, and only the fields and note you review and explicitly confirm are stored in the local clinical database. For Visit Prep, the model receives only closed fact identifiers, not clinical values, and returns only order and reviewed-expression enums. The app builds every sentence from localized templates and computed values. The resulting summary is memory-only and is not stored; it is included in a PDF only when you choose to include it. No Private Cloud Compute, server model, or third-party model is used. You can turn these features off in Settings.\n\nOptional voice input starts only after your action and microphone permission. Speech is processed on device; required Apple speech resources are downloaded only with your agreement. Audio is not saved or exported. Cancellation, locking or backgrounding stops recording. Review the final transcript before continuing to a record draft. Unsupported devices or languages retain typed input."
             ]
           },
           {
@@ -371,8 +378,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Meal records and backup format",
+            "paragraphs": [
+              "Meal records: the meal name, date, optional time and meal kind you enter, and the energy, protein, carbohydrate and fat totals you know, are kept in app-private storage on the device. A value you leave blank stays unknown and is not calculated. Meal records are included in the encrypted backup, can be written to a plaintext CSV file only when you ask for it, and are not part of the Visit Prep view or the PDF export. The developer receives no meal information.\n\nBackup format: the new features raise the format numbers of the app database and of the encrypted backup file. Backups written by earlier versions can still be restored, but a backup written by the new version cannot be restored by an earlier version. Calendar event links stay on the device, are not included in a backup, and are kept when you restore on the same device. Unsaved drafts are not included either.\n\nSelected food labels are read on device. DoseWeek uses only the image you choose, without full-library permission. It does not keep the original image or location metadata or include images in exports or backups. Closing the review, locking or backgrounding discards the temporary review. The original photo is unchanged. Recognized values require confirmation and are never saved automatically."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Candidate: what the next version adds",
+            "title": "11. Candidate: what the next version adds",
             "paragraphs": [
               "This section publishes, in advance, the changes prepared for iOS 1.0.5, which is not released yet. The optional calendar sync in section 9 ships with the same version. The effective date is set when that version is released.",
               "Meal records: the meal name, date, optional time and meal kind you enter, and the energy, protein, carbohydrate and fat totals you know, are kept in app-private storage on the device. A value you leave blank stays unknown and is not calculated. Meal records are included in the encrypted backup, can be written to a plaintext CSV file only when you ask for it, and are not part of the Visit Prep view or the PDF export. The developer receives no meal information.",
@@ -616,7 +630,7 @@
             "id": "deletion",
             "title": "6. データの削除",
             "paragraphs": [
-              "「設定 > すべてのローカル記録を削除」を実行すると、DoseWeek内のすべての記録と端末内の復旧コードが直ちに削除されます。その後、アプリはアプリ専用データベースファイルの安全な消去を完了します。iOSによって一時的に消去を完了できない場合は、もう一度削除を実行するかDoseWeekを再起動するよう案内し、データベースを再び開く前に自動で消去を再試行します。削除した記録が復元されることはありません。サーバー上のコピーは存在しないため、別途の削除依頼は不要です。"
+              "「設定 > すべてのローカル記録を削除」を実行すると、DoseWeek内のすべての記録と端末内の復旧コードが直ちに削除されます。その後、アプリはアプリ専用データベースファイルの安全な消去を完了します。iOSによって一時的に消去を完了できない場合は、もう一度削除を実行するかDoseWeekを再起動するよう案内し、データベースを再び開く前に自動で消去を再試行します。削除した記録が復元されることはありません。DoseWeekはサーバー上にコピーを保持しないため、開発者への削除依頼は不要です。書き出したファイルやカレンダー提供元のコピーは別途管理してください。"
             ]
           },
           {
@@ -630,7 +644,7 @@
             "id": "ai",
             "title": "8. オンデバイスAI",
             "paragraphs": [
-              "任意機能の「AIで記録」と受診準備は、Apple Foundation ModelsのオンデバイスApple IntelligenceモデルであるSystemLanguageModel.defaultのみを使用します。AI記録の入力と構造化されたモデル出力は、端末上の一時的なメモリ内セッションで処理されます。DoseWeekはそれらを端末外へ送信せず、ユーザーが確認する前に一時セッションや出力を永続保存しません。続行すると元の文は編集可能な下書きメモとなり、ユーザーが確認して明示的に確定した項目とメモだけがローカルの臨床記録データベースに保存されます。受診準備では、モデルは臨床値ではなく閉じた事実識別子のみを受け取り、順序と確認済み表現の列挙値のみを返します。すべての文はアプリがローカライズ済みテンプレートと計算値から作成します。完成した要約はメモリ内だけに保持され、保存されません。ユーザーが含めることを選んだ場合にのみPDFに入ります。Private Cloud Compute、サーバーモデル、第三者モデルは使用しません。この機能は設定でオフにできます。"
+              "任意機能の「AIで記録」と受診準備は、Apple Foundation ModelsのオンデバイスApple IntelligenceモデルであるSystemLanguageModel.defaultのみを使用します。AI記録の入力と構造化されたモデル出力は、端末上の一時的なメモリ内セッションで処理されます。DoseWeekはそれらを端末外へ送信せず、ユーザーが確認する前に一時セッションや出力を永続保存しません。続行すると元の文は編集可能な下書きメモとなり、ユーザーが確認して明示的に確定した項目とメモだけがローカルの臨床記録データベースに保存されます。受診準備では、モデルは臨床値ではなく閉じた事実識別子のみを受け取り、順序と確認済み表現の列挙値のみを返します。すべての文はアプリがローカライズ済みテンプレートと計算値から作成します。完成した要約はメモリ内だけに保持され、保存されません。ユーザーが含めることを選んだ場合にのみPDFに入ります。Private Cloud Compute、サーバーモデル、第三者モデルは使用しません。この機能は設定でオフにできます。\n\n任意の音声入力は、ご自身の操作とマイクへのアクセス許可があった場合にのみ開始されます。音声はデバイス上で処理され、必要なAppleの音声リソースは同意した場合にのみダウンロードされます。音声データは保存も書き出しもされません。キャンセル、ロック、またはアプリのバックグラウンドへの移行により録音は停止します。記録の下書きに進む前に、最終的な文字起こしを確認してください。対応していないデバイスや言語でも、文字入力は引き続き利用できます。"
             ]
           },
           {
@@ -641,8 +655,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. 食事の記録とバックアップ形式",
+            "paragraphs": [
+              "食事の記録: 入力した食事名、日付、任意の時刻と食事区分、そして分かる範囲で入力したエネルギー・たんぱく質・炭水化物・脂質の合計が、端末のアプリ専用領域に保存されます。空欄のままにした値は「不明」として扱い、計算には使いません。食事の記録は暗号化バックアップに含まれ、ユーザーが求めたときにのみ平文のCSVファイルとして書き出せます。診療準備の画面とPDFの書き出しには含まれません。開発者は食事の情報を受け取りません。\n\nバックアップ形式: 新機能に伴い、アプリのデータベースと暗号化バックアップファイルの形式番号が上がります。以前のバージョンで作成したバックアップは引き続き復元できますが、新しいバージョンで作成したバックアップを以前のバージョンで復元することはできません。カレンダー予定との対応情報は端末内にとどまり、バックアップには含まれず、同じ端末で復元した場合はそのまま保持されます。未保存の下書きも含まれません。\n\n選択した食品ラベルはデバイス上で読み取られます。DoseWeekは写真ライブラリ全体へのアクセス許可を求めず、選択した画像のみを使用します。元の画像や位置情報のメタデータを保持せず、書き出しやバックアップに画像を含めません。確認画面を閉じる、ロックする、またはアプリをバックグラウンドに移行すると、一時的な確認内容は破棄されます。元の写真は変更されません。認識された値には確認が必要で、自動的に保存されることはありません。"
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. 次のバージョンで予定している変更（候補）",
+            "title": "11. 次のバージョンで予定している変更（候補）",
             "paragraphs": [
               "この項では、まだ公開していないiOS 1.0.5に向けて準備している変更を先に公開します。第9項の任意のカレンダー連携も同じバージョンで提供します。施行日は当該バージョンの公開時に確定します。",
               "食事の記録: 入力した食事名、日付、任意の時刻と食事区分、そして分かる範囲で入力したエネルギー・たんぱく質・炭水化物・脂質の合計が、端末のアプリ専用領域に保存されます。空欄のままにした値は「不明」として扱い、計算には使いません。食事の記録は暗号化バックアップに含まれ、ユーザーが求めたときにのみ平文のCSVファイルとして書き出せます。診療準備の画面とPDFの書き出しには含まれません。開発者は食事の情報を受け取りません。",
@@ -886,7 +907,7 @@
             "id": "deletion",
             "title": "6. Löschen Ihrer Daten",
             "paragraphs": [
-              "„Einstellungen > Alle lokalen Einträge löschen“ entfernt sofort jeden Eintrag aus DoseWeek und löscht den auf dem Gerät gespeicherten Wiederherstellungscode. Anschließend bereinigt DoseWeek die privaten Datenbankdateien sicher. Verhindert iOS diese Bereinigung vorübergehend, weist die App Sie darauf hin, das Löschen erneut auszuführen oder DoseWeek neu zu starten, und wiederholt den Vorgang automatisch, bevor die Datenbank wieder geöffnet wird. Gelöschte Einträge werden nicht wiederhergestellt. Da keine Kopien auf Servern existieren, ist auch keine gesonderte Löschanfrage nötig."
+              "„Einstellungen > Alle lokalen Einträge löschen“ entfernt sofort jeden Eintrag aus DoseWeek und löscht den auf dem Gerät gespeicherten Wiederherstellungscode. Anschließend bereinigt DoseWeek die privaten Datenbankdateien sicher. Verhindert iOS diese Bereinigung vorübergehend, weist die App Sie darauf hin, das Löschen erneut auszuführen oder DoseWeek neu zu starten, und wiederholt den Vorgang automatisch, bevor die Datenbank wieder geöffnet wird. Gelöschte Einträge werden nicht wiederhergestellt. DoseWeek hält keine Serverkopien vor; eine Löschanfrage an den Entwickler ist daher nicht nötig. Exportierte Dateien und Kopien bei Kalenderanbietern müssen Sie gesondert verwalten."
             ]
           },
           {
@@ -900,7 +921,7 @@
             "id": "ai",
             "title": "8. KI auf dem Gerät",
             "paragraphs": [
-              "Die optionale KI-Erfassung und das Arztgespräch nutzen ausschließlich SystemLanguageModel.default, das On-Device-Modell von Apple Intelligence aus Apple Foundation Models. Eingaben der KI-Erfassung und strukturierte Modellausgaben werden in einer temporären Sitzung im Arbeitsspeicher des Geräts verarbeitet. DoseWeek sendet sie nicht vom Gerät und speichert weder die temporäre Sitzung noch die Ausgabe dauerhaft, bevor Sie bestätigt haben. Wenn Sie fortfahren, wird Ihr ursprünglicher Satz zu einer bearbeitbaren Entwurfsnotiz; nur die Felder und die Notiz, die Sie prüfen und ausdrücklich bestätigen, werden in der lokalen klinischen Datenbank gespeichert. Beim Arztgespräch erhält das Modell nur geschlossene Faktenkennungen, keine klinischen Werte, und gibt nur Enum-Werte für Reihenfolge und geprüfte Formulierung zurück. Jeden Satz bildet die App aus lokalisierten Vorlagen und berechneten Werten. Die entstehende Zusammenfassung besteht nur im Arbeitsspeicher und wird nicht gespeichert; sie kommt nur dann in ein PDF, wenn Sie das auswählen. Private Cloud Compute, Servermodelle oder Modelle Dritter werden nicht verwendet. Sie können diese Funktionen in den Einstellungen ausschalten."
+              "Die optionale KI-Erfassung und das Arztgespräch nutzen ausschließlich SystemLanguageModel.default, das On-Device-Modell von Apple Intelligence aus Apple Foundation Models. Eingaben der KI-Erfassung und strukturierte Modellausgaben werden in einer temporären Sitzung im Arbeitsspeicher des Geräts verarbeitet. DoseWeek sendet sie nicht vom Gerät und speichert weder die temporäre Sitzung noch die Ausgabe dauerhaft, bevor Sie bestätigt haben. Wenn Sie fortfahren, wird Ihr ursprünglicher Satz zu einer bearbeitbaren Entwurfsnotiz; nur die Felder und die Notiz, die Sie prüfen und ausdrücklich bestätigen, werden in der lokalen klinischen Datenbank gespeichert. Beim Arztgespräch erhält das Modell nur geschlossene Faktenkennungen, keine klinischen Werte, und gibt nur Enum-Werte für Reihenfolge und geprüfte Formulierung zurück. Jeden Satz bildet die App aus lokalisierten Vorlagen und berechneten Werten. Die entstehende Zusammenfassung besteht nur im Arbeitsspeicher und wird nicht gespeichert; sie kommt nur dann in ein PDF, wenn Sie das auswählen. Private Cloud Compute, Servermodelle oder Modelle Dritter werden nicht verwendet. Sie können diese Funktionen in den Einstellungen ausschalten.\n\nDie optionale Spracheingabe beginnt erst nach Ihrer Aktion und der Erlaubnis für den Mikrofonzugriff. Sprache wird auf dem Gerät verarbeitet; erforderliche Apple-Sprachressourcen werden nur mit Ihrer Zustimmung heruntergeladen. Audiodaten werden weder gespeichert noch exportiert. Abbrechen, Sperren oder der Wechsel der App in den Hintergrund beendet die Aufnahme. Prüfen Sie die endgültige Transkription, bevor Sie mit einem Eintragsentwurf fortfahren. Auf nicht unterstützten Geräten oder bei nicht unterstützten Sprachen bleibt die Texteingabe verfügbar."
             ]
           },
           {
@@ -911,8 +932,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Mahlzeiteneinträge und Sicherungsformat",
+            "paragraphs": [
+              "Mahlzeiteneinträge: Der Name der Mahlzeit, das Datum, die optionale Uhrzeit und Art der Mahlzeit sowie die Ihnen bekannten Summen für Energie, Eiweiß, Kohlenhydrate und Fett werden im app-privaten Speicher des Geräts abgelegt. Ein leer gelassener Wert bleibt unbekannt und wird nicht berechnet. Mahlzeiteneinträge sind in der verschlüsselten Sicherung enthalten, werden nur auf Ihre Anforderung hin in eine CSV-Datei im Klartext geschrieben und sind weder Teil der Arztbesuch-Vorbereitung noch des PDF-Exports. Der Entwickler erhält keine Angaben zu Mahlzeiten.\n\nSicherungsformat: Durch die neuen Funktionen steigen die Formatnummern der App-Datenbank und der verschlüsselten Sicherungsdatei. Sicherungen früherer Versionen lassen sich weiterhin wiederherstellen, eine von der neuen Version geschriebene Sicherung kann von einer früheren Version jedoch nicht wiederhergestellt werden. Verknüpfungen zu Kalenderterminen bleiben auf dem Gerät, sind nicht in der Sicherung enthalten und bleiben erhalten, wenn Sie auf demselben Gerät wiederherstellen. Nicht gespeicherte Entwürfe sind ebenfalls nicht enthalten.\n\nAusgewählte Lebensmitteletiketten werden auf dem Gerät gelesen. DoseWeek verwendet nur das von Ihnen ausgewählte Bild, ohne Zugriff auf die gesamte Fotomediathek. Das Originalbild und Standortmetadaten werden nicht aufbewahrt; Bilder sind nicht in Exporten oder Backups enthalten. Wenn Sie die Prüfung schließen, das Gerät sperren oder die App in den Hintergrund wechseln, wird die vorübergehende Prüfung verworfen. Das Originalfoto bleibt unverändert. Erkannte Werte müssen bestätigt werden und werden niemals automatisch gespeichert."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Kandidat: Was die nächste Version ergänzt",
+            "title": "11. Kandidat: Was die nächste Version ergänzt",
             "paragraphs": [
               "Dieser Abschnitt veröffentlicht vorab die Änderungen, die für iOS 1.0.5 vorbereitet sind; diese Version ist noch nicht veröffentlicht. Die optionale Kalender-Integration aus Abschnitt 9 erscheint mit derselben Version. Das Datum des Inkrafttretens wird mit der Veröffentlichung dieser Version festgelegt.",
               "Mahlzeiteneinträge: Der Name der Mahlzeit, das Datum, die optionale Uhrzeit und Art der Mahlzeit sowie die Ihnen bekannten Summen für Energie, Eiweiß, Kohlenhydrate und Fett werden im app-privaten Speicher des Geräts abgelegt. Ein leer gelassener Wert bleibt unbekannt und wird nicht berechnet. Mahlzeiteneinträge sind in der verschlüsselten Sicherung enthalten, werden nur auf Ihre Anforderung hin in eine CSV-Datei im Klartext geschrieben und sind weder Teil der Arztbesuch-Vorbereitung noch des PDF-Exports. Der Entwickler erhält keine Angaben zu Mahlzeiten.",
@@ -1114,63 +1142,63 @@
       },
       "privacy": {
         "title": "Politique de confidentialité",
-        "intro": "DoseWeek est un outil personnel d'enregistrement pour le suivi des injections. Ce qui suit décrit exactement le fonctionnement réel de l'app.",
-        "effectiveDate": "Date d'entrée en vigueur : 22 août 2026",
+        "intro": "DoseWeek est un outil personnel d’enregistrement pour le suivi des injections. Ce qui suit décrit exactement le fonctionnement réel de l’app.",
+        "effectiveDate": "Date d’entrée en vigueur : 22 août 2026",
         "sections": [
           {
             "id": "storage",
             "title": "1. Où vos données sont conservées",
             "paragraphs": [
-              "Toutes les données de santé (calendriers d'injection, historique des administrations, sites d'injection, notes et mesures corporelles) sont, par défaut, enregistrées uniquement sur votre appareil. DoseWeek n'exploite aucun serveur et ne transmet ni ne collecte automatiquement vos données. Vos enregistrements ne quittent l'app que si vous les exportez ou les partagez explicitement, comme décrit ci-dessous."
+              "Toutes les données de santé (calendriers d’injection, historique des administrations, sites d’injection, notes et mesures corporelles) sont, par défaut, enregistrées uniquement sur votre appareil. DoseWeek n’exploite aucun serveur et ne transmet ni ne collecte automatiquement vos données. Vos enregistrements ne quittent l’app que si vous les exportez ou les partagez explicitement, comme décrit ci-dessous."
             ]
           },
           {
             "id": "health",
             "title": "2. Intégration Apple Health (HealthKit)",
             "paragraphs": [
-              "L'intégration Apple Health est en lecture seule. Seules les mesures corporelles que vous autorisez — poids, IMC, taux de masse grasse, masse maigre et tour de taille — sont lues, puis affichées ou conservées sur votre appareil. Vous pouvez modifier les autorisations à tout moment dans les réglages iOS. DoseWeek n'écrit aucune donnée dans Apple Health."
+              "L’intégration Apple Health est en lecture seule. Seules les mesures corporelles que vous autorisez — poids, IMC, taux de masse grasse, masse maigre et tour de taille — sont lues, puis affichées ou conservées sur votre appareil. Vous pouvez modifier les autorisations à tout moment dans les réglages iOS. DoseWeek n’écrit aucune donnée dans Apple Health."
             ]
           },
           {
             "id": "backups",
             "title": "3. Sauvegardes et exports",
             "paragraphs": [
-              "La base de données clinique active et l'enveloppe de sauvegarde locale chiffrée sont exclues des sauvegardes de l'appareil. Une sauvegarde n'est créée que si vous choisissez d'en créer une, et elle est chiffrée sur l'appareil avec AES-256-GCM. Elle ne quitte l'app que si vous l'exportez explicitement via le sélecteur de fichiers du système, en l'enregistrant à l'emplacement de votre choix dans l'app Fichiers. Vous gérez vous-même le texte chiffré exporté et le code de récupération ; le développeur n'a accès ni à l'un ni à l'autre. L'emplacement que vous choisissez dans l'app Fichiers peut se trouver hors de cet appareil — chez un fournisseur de fichiers que vous avez configuré — et les conditions de ce fournisseur ainsi que les réglages de votre appareil s'appliquent alors également. Un fichier de sauvegarde enregistré hors de l'app n'est pas supprimé lorsque vous effacez les données de DoseWeek ; vous devez le supprimer vous-même.\n\nLes exports PDF et CSV sont des fichiers en clair, générés sur l'appareil uniquement lorsque vous le demandez. Ils sont transmis à la destination que vous choisissez dans la feuille de partage du système. Après le partage, DoseWeek et le développeur ne peuvent contrôler ni les copies ni leur durée de conservation : conservez et supprimez les fichiers exportés de façon sécurisée."
+              "La base de données clinique active et l’enveloppe de sauvegarde locale chiffrée sont exclues des sauvegardes de l’appareil. Une sauvegarde n’est créée que si vous choisissez d’en créer une, et elle est chiffrée sur l’appareil avec AES-256-GCM. Elle ne quitte l’app que si vous l’exportez explicitement via le sélecteur de fichiers du système, en l’enregistrant à l’emplacement de votre choix dans l’app Fichiers. Vous gérez vous-même le texte chiffré exporté et le code de récupération ; le développeur n’a accès ni à l’un ni à l’autre. L’emplacement que vous choisissez dans l’app Fichiers peut se trouver hors de cet appareil — chez un fournisseur de fichiers que vous avez configuré — et les conditions de ce fournisseur ainsi que les réglages de votre appareil s’appliquent alors également. Un fichier de sauvegarde enregistré hors de l’app n’est pas supprimé lorsque vous effacez les données de DoseWeek ; vous devez le supprimer vous-même.\n\nLes exports PDF et CSV sont des fichiers en clair, générés sur l’appareil uniquement lorsque vous le demandez. Ils sont transmis à la destination que vous choisissez dans la feuille de partage du système. Après le partage, DoseWeek et le développeur ne peuvent contrôler ni les copies ni leur durée de conservation : conservez et supprimez les fichiers exportés de façon sécurisée."
             ]
           },
           {
             "id": "notifications",
             "title": "4. Notifications",
             "paragraphs": [
-              "Toutes les notifications sont des notifications locales programmées directement sur votre appareil. Aucun serveur de notifications push n'est utilisé ; les notifications n'indiquent jamais la quantité de la dose, et vous pouvez choisir dans les réglages si le nom du médicament est affiché."
+              "Toutes les notifications sont des notifications locales programmées directement sur votre appareil. Aucun serveur de notifications push n’est utilisé ; les notifications n’indiquent jamais la quantité de la dose, et vous pouvez choisir dans les réglages si le nom du médicament est affiché."
             ]
           },
           {
             "id": "tracking",
             "title": "5. Tiers et suivi",
             "paragraphs": [
-              "L'app ne contient aucun SDK tiers, aucun outil d'analyse et aucune publicité. Elle ne collecte pas de statistiques d'utilisation, ne suit pas les utilisateurs et n'établit aucun profil."
+              "L’app ne contient aucun SDK tiers, aucun outil d’analyse et aucune publicité. Elle ne collecte pas de statistiques d’utilisation, ne suit pas les utilisateurs et n’établit aucun profil."
             ]
           },
           {
             "id": "deletion",
             "title": "6. Suppression de vos données",
             "paragraphs": [
-              "L'exécution de Réglages > Supprimer tous les enregistrements locaux retire immédiatement tous les enregistrements de DoseWeek et supprime le code de récupération conservé sur l'appareil. DoseWeek nettoie ensuite de façon sécurisée les fichiers de base de données privés. Si iOS empêche temporairement ce nettoyage, l'app vous indique de relancer la suppression ou de rouvrir DoseWeek, et réessaie automatiquement avant de rouvrir la base de données. Les enregistrements supprimés ne sont pas restaurés. Comme il n'existe aucune copie sur un serveur, aucune demande de suppression distincte n'est nécessaire."
+              "L’exécution de Réglages > Supprimer tous les enregistrements locaux retire immédiatement tous les enregistrements de DoseWeek et supprime le code de récupération conservé sur l’appareil. DoseWeek nettoie ensuite de façon sécurisée les fichiers de base de données privés. Si iOS empêche temporairement ce nettoyage, l’app vous indique de relancer la suppression ou de rouvrir DoseWeek, et réessaie automatiquement avant de rouvrir la base de données. Les enregistrements supprimés ne sont pas restaurés. DoseWeek ne conserve aucune copie sur ses serveurs ; aucune demande de suppression au développeur n’est donc nécessaire. Gérez séparément les fichiers exportés et les copies des fournisseurs de calendriers."
             ]
           },
           {
             "id": "contact",
             "title": "7. Contact",
             "paragraphs": [
-              "Pour toute question sur le traitement de vos données personnelles, contactez-nous à l'adresse ci-dessous.\nwonyoung@wonyoungchoi.dev"
+              "Pour toute question sur le traitement de vos données personnelles, contactez-nous à l’adresse ci-dessous.\nwonyoung@wonyoungchoi.dev"
             ]
           },
           {
             "id": "ai",
-            "title": "8. IA sur l'appareil",
+            "title": "8. IA sur l’appareil",
             "paragraphs": [
-              "La saisie par IA et la préparation de consultation, toutes deux facultatives, utilisent uniquement le modèle Apple Intelligence sur l'appareil d'Apple Foundation Models, SystemLanguageModel.default. Le texte saisi pour l'IA et la sortie structurée du modèle sont traités dans une session temporaire en mémoire, sur l'appareil. DoseWeek ne les envoie pas hors de l'appareil et ne conserve ni la session temporaire ni la sortie avant votre confirmation. Si vous continuez, votre phrase d'origine devient un brouillon de note modifiable, et seuls les champs et la note que vous vérifiez et confirmez explicitement sont conservés dans la base de données clinique locale. Pour la préparation de consultation, le modèle ne reçoit que des identifiants de faits fermés, et non des valeurs cliniques, et ne renvoie que des énumérations d'ordre et de formulations validées. L'app construit chaque phrase à partir de modèles localisés et de valeurs calculées. Le résumé obtenu reste en mémoire et n'est pas conservé ; il n'est inclus dans un PDF que si vous choisissez de l'y inclure. Aucun Private Cloud Compute, modèle serveur ou modèle tiers n'est utilisé. Vous pouvez désactiver ces fonctionnalités dans les réglages."
+              "La saisie par IA et la préparation de consultation, toutes deux facultatives, utilisent uniquement le modèle Apple Intelligence sur l’appareil d’Apple Foundation Models, SystemLanguageModel.default. Le texte saisi pour l’IA et la sortie structurée du modèle sont traités dans une session temporaire en mémoire, sur l’appareil. DoseWeek ne les envoie pas hors de l’appareil et ne conserve ni la session temporaire ni la sortie avant votre confirmation. Si vous continuez, votre phrase d’origine devient un brouillon de note modifiable, et seuls les champs et la note que vous vérifiez et confirmez explicitement sont conservés dans la base de données clinique locale. Pour la préparation de consultation, le modèle ne reçoit que des identifiants de faits fermés, et non des valeurs cliniques, et ne renvoie que des énumérations d’ordre et de formulations validées. L’app construit chaque phrase à partir de modèles localisés et de valeurs calculées. Le résumé obtenu reste en mémoire et n’est pas conservé ; il n’est inclus dans un PDF que si vous choisissez de l’y inclure. Aucun Private Cloud Compute, modèle serveur ou modèle tiers n’est utilisé. Vous pouvez désactiver ces fonctionnalités dans les réglages.\n\nLa saisie vocale facultative ne démarre qu’après une action de votre part et l’autorisation d’utiliser le microphone. La parole est traitée sur l’appareil ; les ressources vocales Apple nécessaires ne sont téléchargées qu’avec votre accord. L’audio n’est ni enregistré dans un fichier ni exporté. L’annulation, le verrouillage ou le passage de l’app en arrière-plan arrête la capture audio. Vérifiez la transcription finale avant de poursuivre vers un brouillon de saisie. La saisie au clavier reste disponible sur les appareils ou pour les langues non pris en charge."
             ]
           },
           {
@@ -1181,8 +1209,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Enregistrements de repas et format de sauvegarde",
+            "paragraphs": [
+              "Enregistrements de repas : le nom du repas, la date, l’heure et le type de repas facultatifs que vous saisissez, ainsi que les totaux d’énergie, de protéines, de glucides et de lipides que vous connaissez, sont conservés dans le stockage privé de l’application sur l’appareil. Une valeur laissée vide reste inconnue et n’est pas calculée. Les repas sont inclus dans la sauvegarde chiffrée, ne sont écrits dans un fichier CSV en clair que si vous le demandez, et ne font partie ni de la préparation de consultation ni de l’export PDF. Le développeur ne reçoit aucune information sur les repas.\n\nFormat de sauvegarde : les nouvelles fonctions augmentent les numéros de format de la base de données de l’application et du fichier de sauvegarde chiffré. Les sauvegardes écrites par les versions antérieures restent restaurables, mais une sauvegarde écrite par la nouvelle version ne peut pas être restaurée par une version antérieure. Les liens vers les événements du calendrier restent sur l’appareil, ne figurent pas dans la sauvegarde et sont conservés lorsque vous restaurez sur le même appareil. Les brouillons non enregistrés n’y figurent pas non plus.\n\nLes étiquettes alimentaires sélectionnées sont lues sur l’appareil. DoseWeek utilise uniquement l’image que vous choisissez, sans autorisation d’accès à toute la photothèque. L’app ne conserve ni l’image d’origine ni les métadonnées de localisation et n’inclut aucune image dans les exports ou les sauvegardes. La fermeture de l’écran de vérification, le verrouillage ou le passage de l’app en arrière-plan supprime la vérification temporaire. La photo d’origine reste inchangée. Les valeurs reconnues nécessitent une confirmation et ne sont jamais enregistrées automatiquement."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Version candidate : ce qu’ajoute la prochaine version",
+            "title": "11. Version candidate : ce qu’ajoute la prochaine version",
             "paragraphs": [
               "Cette section publie à l’avance les changements préparés pour iOS 1.0.5, version qui n’est pas encore publiée. La synchronisation facultative du calendrier décrite à la section 9 arrive avec cette même version. La date d’entrée en vigueur sera fixée lors de la publication de cette version.",
               "Enregistrements de repas : le nom du repas, la date, l’heure et le type de repas facultatifs que vous saisissez, ainsi que les totaux d’énergie, de protéines, de glucides et de lipides que vous connaissez, sont conservés dans le stockage privé de l’application sur l’appareil. Une valeur laissée vide reste inconnue et n’est pas calculée. Les repas sont inclus dans la sauvegarde chiffrée, ne sont écrits dans un fichier CSV en clair que si vous le demandez, et ne font partie ni de la préparation de consultation ni de l’export PDF. Le développeur ne reçoit aucune information sur les repas.",
@@ -1195,8 +1230,8 @@
         ],
         "medicalDisclaimer": {
           "title": "Avertissement médical",
-          "body": "DoseWeek est un outil personnel d'enregistrement et ne fournit pas d'avis médical, de diagnostic ni de traitement. Consultez toujours votre médecin ou votre pharmacien pour toute décision concernant votre traitement, y compris le calendrier et les doses.",
-          "notAMedicalDevice": "Cette application n'est pas un dispositif médical. Elle ne permet pas de déterminer si vous présentez une pathologie et n'est pas destinée à diagnostiquer, traiter ou prévenir une maladie."
+          "body": "DoseWeek est un outil personnel d’enregistrement et ne fournit pas d’avis médical, de diagnostic ni de traitement. Consultez toujours votre médecin ou votre pharmacien pour toute décision concernant votre traitement, y compris le calendrier et les doses.",
+          "notAMedicalDevice": "Cette application n’est pas un dispositif médical. Elle ne permet pas de déterminer si vous présentez une pathologie et n’est pas destinée à diagnostiquer, traiter ou prévenir une maladie."
         }
       },
       "support": {
@@ -1426,7 +1461,7 @@
             "id": "deletion",
             "title": "6. Eliminación de sus datos",
             "paragraphs": [
-              "Al ejecutar Ajustes > Eliminar todos los registros locales se eliminan de inmediato todos los registros de DoseWeek y se borra el código de recuperación guardado en el dispositivo. A continuación, DoseWeek limpia de forma segura los archivos privados de la base de datos. Si iOS impide temporalmente esa limpieza, la app le indica que vuelva a ejecutar la eliminación o que reinicie DoseWeek, y lo reintenta automáticamente antes de volver a abrir la base de datos. Los registros eliminados no se restauran. Como no existe ninguna copia en un servidor, tampoco es necesaria ninguna solicitud de eliminación adicional."
+              "Al ejecutar Ajustes > Eliminar todos los registros locales se eliminan de inmediato todos los registros de DoseWeek y se borra el código de recuperación guardado en el dispositivo. A continuación, DoseWeek limpia de forma segura los archivos privados de la base de datos. Si iOS impide temporalmente esa limpieza, la app le indica que vuelva a ejecutar la eliminación o que reinicie DoseWeek, y lo reintenta automáticamente antes de volver a abrir la base de datos. Los registros eliminados no se restauran. DoseWeek no conserva copias en servidores, por lo que no es necesario solicitar su eliminación al desarrollador. Gestione por separado los archivos exportados y las copias de los proveedores de calendario."
             ]
           },
           {
@@ -1440,7 +1475,7 @@
             "id": "ai",
             "title": "8. IA en el dispositivo",
             "paragraphs": [
-              "Las funciones opcionales de registro con IA y de preparación de la consulta utilizan únicamente SystemLanguageModel.default, el modelo de Apple Intelligence en el dispositivo de Apple Foundation Models. El texto introducido en el registro con IA y la salida estructurada del modelo se procesan en una sesión temporal en memoria dentro del dispositivo. DoseWeek no los envía fuera del dispositivo ni conserva la sesión temporal ni la salida antes de que usted lo confirme. Si continúa, la frase original se convierte en una nota de borrador editable, y solo los campos y la nota que usted revise y confirme de forma explícita se guardan en la base de datos clínica local. En la preparación de la consulta, el modelo recibe únicamente identificadores cerrados de hechos, no valores clínicos, y devuelve únicamente valores enumerados de orden y de expresión revisada. La app compone todas las frases a partir de plantillas localizadas y valores calculados. El resumen resultante existe solo en memoria y no se guarda; solo se incluye en un PDF cuando usted decide incluirlo. No se utiliza Private Cloud Compute, ni ningún modelo en servidor, ni ningún modelo de terceros. Puede desactivar estas funciones en Ajustes."
+              "Las funciones opcionales de registro con IA y de preparación de la consulta utilizan únicamente SystemLanguageModel.default, el modelo de Apple Intelligence en el dispositivo de Apple Foundation Models. El texto introducido en el registro con IA y la salida estructurada del modelo se procesan en una sesión temporal en memoria dentro del dispositivo. DoseWeek no los envía fuera del dispositivo ni conserva la sesión temporal ni la salida antes de que usted lo confirme. Si continúa, la frase original se convierte en una nota de borrador editable, y solo los campos y la nota que usted revise y confirme de forma explícita se guardan en la base de datos clínica local. En la preparación de la consulta, el modelo recibe únicamente identificadores cerrados de hechos, no valores clínicos, y devuelve únicamente valores enumerados de orden y de expresión revisada. La app compone todas las frases a partir de plantillas localizadas y valores calculados. El resumen resultante existe solo en memoria y no se guarda; solo se incluye en un PDF cuando usted decide incluirlo. No se utiliza Private Cloud Compute, ni ningún modelo en servidor, ni ningún modelo de terceros. Puede desactivar estas funciones en Ajustes.\n\nLa entrada de voz opcional solo comienza después de una acción tuya y de conceder permiso para usar el micrófono. El habla se procesa en el dispositivo; los recursos de voz de Apple necesarios solo se descargan con tu consentimiento. El audio no se guarda ni se exporta. Cancelar, bloquear o pasar la app a segundo plano detiene la grabación. Revisa la transcripción final antes de continuar a un borrador de registro. La entrada de texto sigue disponible en los dispositivos o idiomas no compatibles."
             ]
           },
           {
@@ -1451,8 +1486,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Registros de comidas y formato de copia de seguridad",
+            "paragraphs": [
+              "Registros de comidas: el nombre de la comida, la fecha, la hora y el tipo de comida opcionales que introduzca, junto con los totales de energía, proteínas, carbohidratos y grasas que conozca, se guardan en el almacenamiento privado de la aplicación en el dispositivo. Un valor que deje vacío permanece desconocido y no se calcula. Las comidas se incluyen en la copia de seguridad cifrada, solo se escriben en un archivo CSV en texto plano cuando usted lo pide y no forman parte de la preparación de la consulta ni de la exportación en PDF. El desarrollador no recibe información de comidas.\n\nFormato de copia de seguridad: las nuevas funciones elevan los números de formato de la base de datos de la aplicación y del archivo de copia cifrado. Las copias escritas por versiones anteriores siguen pudiendo restaurarse, pero una copia escrita por la nueva versión no puede restaurarse en una versión anterior. Los vínculos con eventos del calendario permanecen en el dispositivo, no se incluyen en la copia y se conservan al restaurar en el mismo dispositivo. Los borradores sin guardar tampoco se incluyen.\n\nLas etiquetas de alimentos seleccionadas se leen en el dispositivo. DoseWeek utiliza solo la imagen que eliges, sin permiso de acceso a toda la fototeca. No conserva la imagen original ni los metadatos de ubicación, ni incluye imágenes en las exportaciones o copias de seguridad. Cerrar la revisión, bloquear o pasar la app a segundo plano descarta la revisión temporal. La foto original no se modifica. Los valores reconocidos requieren confirmación y nunca se guardan automáticamente."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Versión candidata: lo que añade la próxima versión",
+            "title": "11. Versión candidata: lo que añade la próxima versión",
             "paragraphs": [
               "Esta sección publica por adelantado los cambios preparados para iOS 1.0.5, versión que aún no se ha publicado. La sincronización opcional con el calendario de la sección 9 llega con esa misma versión. La fecha de entrada en vigor se fijará al publicar esa versión.",
               "Registros de comidas: el nombre de la comida, la fecha, la hora y el tipo de comida opcionales que introduzca, junto con los totales de energía, proteínas, carbohidratos y grasas que conozca, se guardan en el almacenamiento privado de la aplicación en el dispositivo. Un valor que deje vacío permanece desconocido y no se calcula. Las comidas se incluyen en la copia de seguridad cifrada, solo se escriben en un archivo CSV en texto plano cuando usted lo pide y no forman parte de la preparación de la consulta ni de la exportación en PDF. El desarrollador no recibe información de comidas.",
@@ -1696,7 +1738,7 @@
             "id": "deletion",
             "title": "6. Eliminazione dei dati",
             "paragraphs": [
-              "Eseguendo Impostazioni > Elimina tutte le registrazioni locali, ogni registrazione viene rimossa immediatamente da DoseWeek e il codice di recupero presente sul dispositivo viene eliminato. DoseWeek procede poi alla pulizia sicura dei file del database privato. Se iOS impedisce temporaneamente questa pulizia, l'app indica di eseguire di nuovo l'eliminazione o di riavviare DoseWeek e riprova automaticamente prima di riaprire il database. Le registrazioni eliminate non vengono ripristinate. Poiché non esistono copie su server, non è necessaria alcuna richiesta di cancellazione separata."
+              "Eseguendo Impostazioni > Elimina tutte le registrazioni locali, ogni registrazione viene rimossa immediatamente da DoseWeek e il codice di recupero presente sul dispositivo viene eliminato. DoseWeek procede poi alla pulizia sicura dei file del database privato. Se iOS impedisce temporaneamente questa pulizia, l'app indica di eseguire di nuovo l'eliminazione o di riavviare DoseWeek e riprova automaticamente prima di riaprire il database. Le registrazioni eliminate non vengono ripristinate. DoseWeek non conserva copie su server, quindi non occorre richiederne la cancellazione allo sviluppatore. Gestisci separatamente i file esportati e le copie dei fornitori di calendari."
             ]
           },
           {
@@ -1710,7 +1752,7 @@
             "id": "ai",
             "title": "8. AI sul dispositivo",
             "paragraphs": [
-              "Le funzioni facoltative di registrazione con AI e Preparazione visita usano esclusivamente il modello Apple Intelligence sul dispositivo di Apple Foundation Models, SystemLanguageModel.default. Il testo inserito per la registrazione con AI e l'output strutturato del modello vengono elaborati in una sessione temporanea in memoria sul dispositivo. DoseWeek non li invia fuori dal dispositivo e non conserva la sessione temporanea o l'output prima della conferma. Continuando, la frase originale diventa una bozza di nota modificabile e nel database clinico locale vengono salvati solo i campi e la nota esaminati e confermati esplicitamente. Per la Preparazione visita, il modello riceve solo identificatori di fatti da un insieme chiuso, non valori clinici, e restituisce solo enumerazioni di ordine e di espressioni già verificate. Tutte le frasi sono costruite dall'app a partire da modelli di testo localizzati e da valori calcolati. Il riepilogo risultante resta solo in memoria e non viene salvato; è incluso in un PDF solo se lo si sceglie. Non vengono usati Private Cloud Compute, modelli su server o modelli di terze parti. Queste funzioni si possono disattivare nelle impostazioni."
+              "Le funzioni facoltative di registrazione con AI e Preparazione visita usano esclusivamente il modello Apple Intelligence sul dispositivo di Apple Foundation Models, SystemLanguageModel.default. Il testo inserito per la registrazione con AI e l'output strutturato del modello vengono elaborati in una sessione temporanea in memoria sul dispositivo. DoseWeek non li invia fuori dal dispositivo e non conserva la sessione temporanea o l'output prima della conferma. Continuando, la frase originale diventa una bozza di nota modificabile e nel database clinico locale vengono salvati solo i campi e la nota esaminati e confermati esplicitamente. Per la Preparazione visita, il modello riceve solo identificatori di fatti da un insieme chiuso, non valori clinici, e restituisce solo enumerazioni di ordine e di espressioni già verificate. Tutte le frasi sono costruite dall'app a partire da modelli di testo localizzati e da valori calcolati. Il riepilogo risultante resta solo in memoria e non viene salvato; è incluso in un PDF solo se lo si sceglie. Non vengono usati Private Cloud Compute, modelli su server o modelli di terze parti. Queste funzioni si possono disattivare nelle impostazioni.\n\nL’inserimento vocale facoltativo si avvia solo dopo una tua azione e l’autorizzazione all’uso del microfono. Il parlato viene elaborato sul dispositivo; le risorse vocali Apple necessarie vengono scaricate solo con il tuo consenso. L’audio non viene salvato né esportato. L’annullamento, il blocco o il passaggio dell’app in background interrompe la registrazione. Verifica la trascrizione finale prima di proseguire con una bozza di registrazione. L’inserimento tramite tastiera rimane disponibile sui dispositivi o per le lingue non supportati."
             ]
           },
           {
@@ -1721,8 +1763,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Registrazioni dei pasti e formato del backup",
+            "paragraphs": [
+              "Registrazioni dei pasti: il nome del pasto, la data, l’ora e il tipo di pasto facoltativi che inserisci, insieme ai totali di energia, proteine, carboidrati e grassi che conosci, restano nella memoria privata dell’app sul dispositivo. Un valore lasciato vuoto resta sconosciuto e non viene calcolato. I pasti sono inclusi nel backup crittografato, vengono scritti in un file CSV in chiaro solo su tua richiesta e non fanno parte della preparazione alla visita né dell’esportazione PDF. Lo sviluppatore non riceve informazioni sui pasti.\n\nFormato del backup: le nuove funzioni aumentano i numeri di formato del database dell’app e del file di backup crittografato. I backup scritti da versioni precedenti restano ripristinabili, ma un backup scritto dalla nuova versione non può essere ripristinato da una versione precedente. I collegamenti agli eventi del calendario restano sul dispositivo, non sono inclusi nel backup e vengono mantenuti quando ripristini sullo stesso dispositivo. Anche le bozze non salvate non sono incluse.\n\nLe etichette alimentari selezionate vengono lette sul dispositivo. DoseWeek usa solo l’immagine che scegli, senza autorizzazione ad accedere all’intera libreria fotografica. Non conserva l’immagine originale né i metadati di posizione e non include immagini nelle esportazioni o nei backup. Chiudere la verifica, bloccare il dispositivo o portare l’app in background elimina la verifica temporanea. La foto originale rimane invariata. I valori riconosciuti richiedono conferma e non vengono mai salvati automaticamente."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Versione candidata: cosa aggiunge la prossima versione",
+            "title": "11. Versione candidata: cosa aggiunge la prossima versione",
             "paragraphs": [
               "Questa sezione pubblica in anticipo le modifiche preparate per iOS 1.0.5, versione non ancora pubblicata. La sincronizzazione facoltativa del calendario della sezione 9 arriva con la stessa versione. La data di efficacia sarà fissata con la pubblicazione di quella versione.",
               "Registrazioni dei pasti: il nome del pasto, la data, l’ora e il tipo di pasto facoltativi che inserisci, insieme ai totali di energia, proteine, carboidrati e grassi che conosci, restano nella memoria privata dell’app sul dispositivo. Un valore lasciato vuoto resta sconosciuto e non viene calcolato. I pasti sono inclusi nel backup crittografato, vengono scritti in un file CSV in chiaro solo su tua richiesta e non fanno parte della preparazione alla visita né dell’esportazione PDF. Lo sviluppatore non riceve informazioni sui pasti.",
@@ -1966,7 +2015,7 @@
             "id": "deletion",
             "title": "6. Uw gegevens verwijderen",
             "paragraphs": [
-              "Met Instellingen > Alle lokale registraties verwijderen worden alle registraties in DoseWeek en de herstelcode op het apparaat onmiddellijk verwijderd. Daarna wist DoseWeek de privédatabasebestanden veilig. Als iOS dat tijdelijk verhindert, meldt de app dat u de verwijdering opnieuw moet uitvoeren of DoseWeek opnieuw moet starten, en probeert de app het automatisch nogmaals voordat de database weer wordt geopend. Verwijderde registraties worden niet hersteld. Omdat er geen kopieën op een server bestaan, is een apart verwijderverzoek niet nodig."
+              "Met Instellingen > Alle lokale registraties verwijderen worden alle registraties in DoseWeek en de herstelcode op het apparaat onmiddellijk verwijderd. Daarna wist DoseWeek de privédatabasebestanden veilig. Als iOS dat tijdelijk verhindert, meldt de app dat u de verwijdering opnieuw moet uitvoeren of DoseWeek opnieuw moet starten, en probeert de app het automatisch nogmaals voordat de database weer wordt geopend. Verwijderde registraties worden niet hersteld. DoseWeek bewaart geen serverkopieën, dus een verwijderverzoek aan de ontwikkelaar is niet nodig. Beheer geëxporteerde bestanden en kopieën bij agendaproviders afzonderlijk."
             ]
           },
           {
@@ -1980,7 +2029,7 @@
             "id": "ai",
             "title": "8. AI op het apparaat",
             "paragraphs": [
-              "De optionele functies AI-invoer en Consultvoorbereiding gebruiken uitsluitend SystemLanguageModel.default, het Apple Intelligence-model van Apple Foundation Models dat op het apparaat zelf draait. De invoer voor AI-registratie en de gestructureerde uitvoer van het model worden verwerkt in een tijdelijke sessie in het geheugen van het apparaat. DoseWeek verstuurt deze niet buiten het apparaat en bewaart de tijdelijke sessie of de uitvoer niet voordat u bevestigt. Als u doorgaat, wordt uw oorspronkelijke zin een bewerkbare conceptnotitie, en alleen de velden en de notitie die u nakijkt en uitdrukkelijk bevestigt, worden opgeslagen in de lokale klinische database. Bij Consultvoorbereiding ontvangt het model alleen gesloten feitidentificatoren en geen klinische waarden, en geeft het alleen enums voor de volgorde en de gecontroleerde formulering terug. De app stelt elke zin samen uit gelokaliseerde sjablonen en berekende waarden. De resulterende samenvatting blijft alleen in het geheugen en wordt niet opgeslagen; ze wordt alleen in een PDF opgenomen als u daarvoor kiest. Er wordt geen Private Cloud Compute, servermodel of model van derden gebruikt. U kunt deze functies uitschakelen in de instellingen."
+              "De optionele functies AI-invoer en Consultvoorbereiding gebruiken uitsluitend SystemLanguageModel.default, het Apple Intelligence-model van Apple Foundation Models dat op het apparaat zelf draait. De invoer voor AI-registratie en de gestructureerde uitvoer van het model worden verwerkt in een tijdelijke sessie in het geheugen van het apparaat. DoseWeek verstuurt deze niet buiten het apparaat en bewaart de tijdelijke sessie of de uitvoer niet voordat u bevestigt. Als u doorgaat, wordt uw oorspronkelijke zin een bewerkbare conceptnotitie, en alleen de velden en de notitie die u nakijkt en uitdrukkelijk bevestigt, worden opgeslagen in de lokale klinische database. Bij Consultvoorbereiding ontvangt het model alleen gesloten feitidentificatoren en geen klinische waarden, en geeft het alleen enums voor de volgorde en de gecontroleerde formulering terug. De app stelt elke zin samen uit gelokaliseerde sjablonen en berekende waarden. De resulterende samenvatting blijft alleen in het geheugen en wordt niet opgeslagen; ze wordt alleen in een PDF opgenomen als u daarvoor kiest. Er wordt geen Private Cloud Compute, servermodel of model van derden gebruikt. U kunt deze functies uitschakelen in de instellingen.\n\nOptionele spraakinvoer begint pas na een handeling van jou en toestemming voor microfoontoegang. Spraak wordt op het apparaat verwerkt; benodigde spraakbronnen van Apple worden alleen met jouw toestemming gedownload. Audio wordt niet opgeslagen of geëxporteerd. Annuleren, vergrendelen of de app naar de achtergrond verplaatsen stopt de opname. Controleer de definitieve transcriptie voordat je doorgaat naar een conceptregistratie. Tekstinvoer blijft beschikbaar op niet-ondersteunde apparaten of voor niet-ondersteunde talen."
             ]
           },
           {
@@ -1991,8 +2040,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Maaltijdregistraties en back-upformaat",
+            "paragraphs": [
+              "Maaltijdregistraties: de maaltijdnaam, de datum, de optionele tijd en het maaltijdtype die u invoert, samen met de totalen voor energie, eiwit, koolhydraten en vet die u kent, blijven in de app-privéopslag op het apparaat. Een waarde die u leeg laat, blijft onbekend en wordt niet berekend. Maaltijden zitten in de versleutelde back-up, worden alleen op uw verzoek naar een CSV-bestand zonder versleuteling geschreven en maken geen deel uit van de consultvoorbereiding of de PDF-export. De ontwikkelaar ontvangt geen maaltijdgegevens.\n\nBack-upformaat: door de nieuwe functies stijgen de formaatnummers van de app-database en van het versleutelde back-upbestand. Back-ups van eerdere versies blijven te herstellen, maar een back-up van de nieuwe versie kan niet worden hersteld door een eerdere versie. Koppelingen naar agenda-afspraken blijven op het apparaat, zitten niet in de back-up en blijven behouden wanneer u op hetzelfde apparaat herstelt. Niet-opgeslagen concepten zitten er evenmin in.\n\nGeselecteerde voedingsetiketten worden op het apparaat gelezen. DoseWeek gebruikt alleen de afbeelding die je kiest, zonder toestemming voor toegang tot de volledige fotobibliotheek. De oorspronkelijke afbeelding en locatiemetadata worden niet bewaard en afbeeldingen worden niet opgenomen in exports of back-ups. Het sluiten van de controle, vergrendelen of de app naar de achtergrond verplaatsen verwijdert de tijdelijke controle. De oorspronkelijke foto blijft ongewijzigd. Herkende waarden moeten worden bevestigd en worden nooit automatisch opgeslagen."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Kandidaat: wat de volgende versie toevoegt",
+            "title": "11. Kandidaat: wat de volgende versie toevoegt",
             "paragraphs": [
               "Deze paragraaf publiceert vooraf de wijzigingen die zijn voorbereid voor iOS 1.0.5, een versie die nog niet is uitgebracht. De optionele agenda-integratie uit paragraaf 9 verschijnt met dezelfde versie. De ingangsdatum wordt vastgesteld bij het uitbrengen van die versie.",
               "Maaltijdregistraties: de maaltijdnaam, de datum, de optionele tijd en het maaltijdtype die u invoert, samen met de totalen voor energie, eiwit, koolhydraten en vet die u kent, blijven in de app-privéopslag op het apparaat. Een waarde die u leeg laat, blijft onbekend en wordt niet berekend. Maaltijden zitten in de versleutelde back-up, worden alleen op uw verzoek naar een CSV-bestand zonder versleuteling geschreven en maken geen deel uit van de consultvoorbereiding of de PDF-export. De ontwikkelaar ontvangt geen maaltijdgegevens.",
@@ -2236,7 +2292,7 @@
             "id": "deletion",
             "title": "6. Eliminação dos seus dados",
             "paragraphs": [
-              "Executar Definições > Eliminar todos os registos locais remove imediatamente todos os registos do DoseWeek e elimina o código de recuperação guardado no dispositivo. Em seguida, o DoseWeek limpa de forma segura os ficheiros da base de dados privada. Se o iOS impedir temporariamente essa limpeza, a aplicação indica-lhe que volte a executar a eliminação ou que reinicie o DoseWeek, e tenta automaticamente de novo antes de reabrir a base de dados. Os registos eliminados não são restaurados. Como não existem cópias em servidores, também não é necessário qualquer pedido de eliminação em separado."
+              "Executar Definições > Eliminar todos os registos locais remove imediatamente todos os registos do DoseWeek e elimina o código de recuperação guardado no dispositivo. Em seguida, o DoseWeek limpa de forma segura os ficheiros da base de dados privada. Se o iOS impedir temporariamente essa limpeza, a aplicação indica-lhe que volte a executar a eliminação ou que reinicie o DoseWeek, e tenta automaticamente de novo antes de reabrir a base de dados. Os registos eliminados não são restaurados. O DoseWeek não guarda cópias em servidores, pelo que não precisa de pedir a sua eliminação ao programador. Faça a gestão separada dos ficheiros exportados e das cópias dos fornecedores de calendários."
             ]
           },
           {
@@ -2250,7 +2306,7 @@
             "id": "ai",
             "title": "8. IA no dispositivo",
             "paragraphs": [
-              "As funcionalidades opcionais de registo com IA e de preparação da consulta utilizam exclusivamente o modelo Apple Intelligence executado no dispositivo dos Apple Foundation Models, SystemLanguageModel.default. O texto introduzido no registo com IA e o resultado estruturado do modelo são processados numa sessão temporária em memória, no dispositivo. O DoseWeek não os envia para fora do dispositivo nem guarda de forma permanente a sessão temporária ou o resultado antes de os confirmar. Se continuar, a frase original passa a ser uma nota de rascunho editável e apenas os campos e a nota que rever e confirmar explicitamente são guardados na base de dados clínica local. Na preparação da consulta, o modelo recebe apenas identificadores fechados de factos, e não valores clínicos, e devolve apenas enumerações de ordem e de expressão revista. A aplicação constrói todas as frases a partir de modelos de texto localizados e de valores calculados. O resumo resultante existe apenas em memória e não é guardado; só é incluído num PDF quando optar por incluí-lo. Não é utilizado Private Cloud Compute, nem modelos em servidor, nem modelos de terceiros. Pode desativar estas funcionalidades nas Definições."
+              "As funcionalidades opcionais de registo com IA e de preparação da consulta utilizam exclusivamente o modelo Apple Intelligence executado no dispositivo dos Apple Foundation Models, SystemLanguageModel.default. O texto introduzido no registo com IA e o resultado estruturado do modelo são processados numa sessão temporária em memória, no dispositivo. O DoseWeek não os envia para fora do dispositivo nem guarda de forma permanente a sessão temporária ou o resultado antes de os confirmar. Se continuar, a frase original passa a ser uma nota de rascunho editável e apenas os campos e a nota que rever e confirmar explicitamente são guardados na base de dados clínica local. Na preparação da consulta, o modelo recebe apenas identificadores fechados de factos, e não valores clínicos, e devolve apenas enumerações de ordem e de expressão revista. A aplicação constrói todas as frases a partir de modelos de texto localizados e de valores calculados. O resumo resultante existe apenas em memória e não é guardado; só é incluído num PDF quando optar por incluí-lo. Não é utilizado Private Cloud Compute, nem modelos em servidor, nem modelos de terceiros. Pode desativar estas funcionalidades nas Definições.\n\nA introdução de voz opcional só começa após uma ação sua e a autorização de acesso ao microfone. A fala é processada no dispositivo; os recursos de voz da Apple necessários só são descarregados com o seu consentimento. O áudio não é guardado nem exportado. Cancelar, bloquear ou colocar a aplicação em segundo plano interrompe a gravação. Reveja a transcrição final antes de continuar para um rascunho de registo. A introdução de texto continua disponível em dispositivos ou idiomas não suportados."
             ]
           },
           {
@@ -2261,8 +2317,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Registos de refeições e formato da cópia de segurança",
+            "paragraphs": [
+              "Registos de refeições: o nome da refeição, a data, a hora e o tipo de refeição opcionais que introduzir, bem como os totais de energia, proteína, hidratos de carbono e gordura que conhecer, ficam no armazenamento privado da aplicação no dispositivo. Um valor deixado em branco permanece desconhecido e não é calculado. As refeições são incluídas na cópia de segurança encriptada, só são escritas num ficheiro CSV em texto simples quando o pedir e não fazem parte da preparação da consulta nem da exportação em PDF. O programador não recebe informação sobre refeições.\n\nFormato da cópia de segurança: as novas funcionalidades aumentam os números de formato da base de dados da aplicação e do ficheiro de cópia encriptado. As cópias escritas por versões anteriores continuam a poder ser restauradas, mas uma cópia escrita pela nova versão não pode ser restaurada por uma versão anterior. As ligações a eventos do calendário permanecem no dispositivo, não são incluídas na cópia e são mantidas quando restaura no mesmo dispositivo. Os rascunhos não guardados também não são incluídos.\n\nOs rótulos alimentares selecionados são lidos no dispositivo. O DoseWeek utiliza apenas a imagem que escolher, sem autorização de acesso à fototeca completa. Não conserva a imagem original nem os metadados de localização, nem inclui imagens nas exportações ou cópias de segurança. Fechar a revisão, bloquear ou colocar a aplicação em segundo plano descarta a revisão temporária. A fotografia original permanece inalterada. Os valores reconhecidos exigem confirmação e nunca são guardados automaticamente."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Versão candidata: o que a próxima versão acrescenta",
+            "title": "11. Versão candidata: o que a próxima versão acrescenta",
             "paragraphs": [
               "Esta secção publica antecipadamente as alterações preparadas para iOS 1.0.5, versão ainda não publicada. A sincronização opcional do calendário descrita na secção 9 chega com essa mesma versão. A data de entrada em vigor será fixada com a publicação dessa versão.",
               "Registos de refeições: o nome da refeição, a data, a hora e o tipo de refeição opcionais que introduzir, bem como os totais de energia, proteína, hidratos de carbono e gordura que conhecer, ficam no armazenamento privado da aplicação no dispositivo. Um valor deixado em branco permanece desconhecido e não é calculado. As refeições são incluídas na cópia de segurança encriptada, só são escritas num ficheiro CSV em texto simples quando o pedir e não fazem parte da preparação da consulta nem da exportação em PDF. O programador não recebe informação sobre refeições.",
@@ -2506,7 +2569,7 @@
             "id": "deletion",
             "title": "6. Usuwanie danych",
             "paragraphs": [
-              "Uruchomienie opcji Ustawienia > Usuń wszystkie lokalne wpisy natychmiast usuwa z DoseWeek wszystkie wpisy oraz kod odzyskiwania zapisany na urządzeniu. Następnie DoseWeek bezpiecznie czyści prywatne pliki bazy danych. Jeśli system iOS chwilowo uniemożliwi to czyszczenie, aplikacja poinformuje o konieczności ponownego uruchomienia usuwania lub ponownego otwarcia DoseWeek i automatycznie ponowi próbę przed otwarciem bazy danych. Usuniętych wpisów nie da się przywrócić. Ponieważ nie istnieją kopie na serwerze, nie jest potrzebne osobne żądanie usunięcia."
+              "Uruchomienie opcji Ustawienia > Usuń wszystkie lokalne wpisy natychmiast usuwa z DoseWeek wszystkie wpisy oraz kod odzyskiwania zapisany na urządzeniu. Następnie DoseWeek bezpiecznie czyści prywatne pliki bazy danych. Jeśli system iOS chwilowo uniemożliwi to czyszczenie, aplikacja poinformuje o konieczności ponownego uruchomienia usuwania lub ponownego otwarcia DoseWeek i automatycznie ponowi próbę przed otwarciem bazy danych. Usuniętych wpisów nie da się przywrócić. DoseWeek nie przechowuje kopii na serwerach, więc nie trzeba prosić dewelopera o ich usunięcie. Plikami wyeksportowanymi i kopiami u dostawców kalendarzy należy zarządzać osobno."
             ]
           },
           {
@@ -2520,7 +2583,7 @@
             "id": "ai",
             "title": "8. AI na urządzeniu",
             "paragraphs": [
-              "Opcjonalny zapis z AI oraz przygotowanie do wizyty korzystają wyłącznie z działającego na urządzeniu modelu Apple Intelligence z Apple Foundation Models, czyli SystemLanguageModel.default. Dane wejściowe zapisu z AI i ustrukturyzowane wyniki modelu są przetwarzane w tymczasowej sesji w pamięci urządzenia. DoseWeek nie wysyła ich poza urządzenie i nie utrwala tymczasowej sesji ani wyników przed ich potwierdzeniem. Po kontynuowaniu oryginalne zdanie staje się szkicem notatki do edycji, a w lokalnej klinicznej bazie danych zapisywane są tylko te pola i ta notatka, które użytkownik sprawdzi i jawnie potwierdzi. W przygotowaniu do wizyty model otrzymuje wyłącznie zamknięte identyfikatory faktów, a nie wartości kliniczne, i zwraca wyłącznie wartości wyliczeniowe określające kolejność oraz zweryfikowane sformułowanie. Wszystkie zdania aplikacja tworzy z lokalizowanych szablonów i wartości obliczonych. Powstałe podsumowanie istnieje tylko w pamięci i nie jest zapisywane; trafia do pliku PDF wyłącznie wtedy, gdy użytkownik zdecyduje się je dołączyć. Nie są używane Private Cloud Compute, modele serwerowe ani modele podmiotów zewnętrznych. Te funkcje można wyłączyć w Ustawieniach."
+              "Opcjonalny zapis z AI oraz przygotowanie do wizyty korzystają wyłącznie z działającego na urządzeniu modelu Apple Intelligence z Apple Foundation Models, czyli SystemLanguageModel.default. Dane wejściowe zapisu z AI i ustrukturyzowane wyniki modelu są przetwarzane w tymczasowej sesji w pamięci urządzenia. DoseWeek nie wysyła ich poza urządzenie i nie utrwala tymczasowej sesji ani wyników przed ich potwierdzeniem. Po kontynuowaniu oryginalne zdanie staje się szkicem notatki do edycji, a w lokalnej klinicznej bazie danych zapisywane są tylko te pola i ta notatka, które użytkownik sprawdzi i jawnie potwierdzi. W przygotowaniu do wizyty model otrzymuje wyłącznie zamknięte identyfikatory faktów, a nie wartości kliniczne, i zwraca wyłącznie wartości wyliczeniowe określające kolejność oraz zweryfikowane sformułowanie. Wszystkie zdania aplikacja tworzy z lokalizowanych szablonów i wartości obliczonych. Powstałe podsumowanie istnieje tylko w pamięci i nie jest zapisywane; trafia do pliku PDF wyłącznie wtedy, gdy użytkownik zdecyduje się je dołączyć. Nie są używane Private Cloud Compute, modele serwerowe ani modele podmiotów zewnętrznych. Te funkcje można wyłączyć w Ustawieniach.\n\nOpcjonalne wprowadzanie głosowe rozpoczyna się dopiero po Twoim działaniu i udzieleniu dostępu do mikrofonu. Mowa jest przetwarzana na urządzeniu; wymagane zasoby mowy Apple są pobierane wyłącznie za Twoją zgodą. Dźwięk nie jest zapisywany ani eksportowany. Anulowanie, zablokowanie lub przeniesienie aplikacji do tła zatrzymuje nagrywanie. Sprawdź końcową transkrypcję przed przejściem do szkicu wpisu. Wprowadzanie tekstu pozostaje dostępne na nieobsługiwanych urządzeniach lub dla nieobsługiwanych języków."
             ]
           },
           {
@@ -2531,8 +2594,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Zapisy posiłków i format kopii zapasowej",
+            "paragraphs": [
+              "Zapisy posiłków: nazwa posiłku, data, opcjonalna godzina i rodzaj posiłku, które wpiszesz, oraz znane Ci sumy energii, białka, węglowodanów i tłuszczu pozostają w prywatnej pamięci aplikacji na urządzeniu. Wartość pozostawiona pusta pozostaje nieznana i nie jest obliczana. Posiłki są objęte zaszyfrowaną kopią zapasową, trafiają do pliku CSV bez szyfrowania tylko na Twoje żądanie i nie są częścią przygotowania do wizyty ani eksportu PDF. Deweloper nie otrzymuje informacji o posiłkach.\n\nFormat kopii zapasowej: nowe funkcje podnoszą numery formatu bazy danych aplikacji i zaszyfrowanego pliku kopii. Kopie utworzone przez wcześniejsze wersje nadal można przywrócić, ale kopii utworzonej przez nową wersję nie przywróci wersja wcześniejsza. Powiązania z wydarzeniami kalendarza pozostają na urządzeniu, nie wchodzą do kopii i są zachowywane przy przywracaniu na tym samym urządzeniu. Niezapisane szkice również nie wchodzą do kopii.\n\nWybrane etykiety żywności są odczytywane na urządzeniu. DoseWeek używa tylko wybranego przez Ciebie obrazu, bez uprawnienia dostępu do całej biblioteki zdjęć. Nie zachowuje oryginalnego obrazu ani metadanych lokalizacji i nie dołącza obrazów do eksportów ani kopii zapasowych. Zamknięcie przeglądu, zablokowanie lub przeniesienie aplikacji do tła powoduje odrzucenie tymczasowego przeglądu. Oryginalne zdjęcie pozostaje bez zmian. Rozpoznane wartości wymagają potwierdzenia i nigdy nie są zapisywane automatycznie."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Wersja kandydująca: co dodaje następna wersja",
+            "title": "11. Wersja kandydująca: co dodaje następna wersja",
             "paragraphs": [
               "Ta sekcja publikuje z wyprzedzeniem zmiany przygotowane dla iOS 1.0.5, wersji, która nie została jeszcze opublikowana. Opcjonalna synchronizacja kalendarza z sekcji 9 pojawia się w tej samej wersji. Data wejścia w życie zostanie ustalona wraz z publikacją tej wersji.",
               "Zapisy posiłków: nazwa posiłku, data, opcjonalna godzina i rodzaj posiłku, które wpiszesz, oraz znane Ci sumy energii, białka, węglowodanów i tłuszczu pozostają w prywatnej pamięci aplikacji na urządzeniu. Wartość pozostawiona pusta pozostaje nieznana i nie jest obliczana. Posiłki są objęte zaszyfrowaną kopią zapasową, trafiają do pliku CSV bez szyfrowania tylko na Twoje żądanie i nie są częścią przygotowania do wizyty ani eksportu PDF. Deweloper nie otrzymuje informacji o posiłkach.",
@@ -2776,7 +2846,7 @@
             "id": "deletion",
             "title": "6. Radera dina uppgifter",
             "paragraphs": [
-              "När du kör Inställningar > Radera alla lokala registreringar tas alla registreringar i DoseWeek bort omedelbart, och återställningskoden på enheten raderas. Därefter rensar DoseWeek de privata databasfilerna på ett säkert sätt. Om iOS tillfälligt hindrar rensningen uppmanar appen dig att köra raderingen igen eller starta om DoseWeek, och gör automatiskt ett nytt försök innan databasen öppnas på nytt. Raderade registreringar återställs inte. Eftersom det inte finns några kopior på någon server behövs ingen separat begäran om radering."
+              "När du kör Inställningar > Radera alla lokala registreringar tas alla registreringar i DoseWeek bort omedelbart, och återställningskoden på enheten raderas. Därefter rensar DoseWeek de privata databasfilerna på ett säkert sätt. Om iOS tillfälligt hindrar rensningen uppmanar appen dig att köra raderingen igen eller starta om DoseWeek, och gör automatiskt ett nytt försök innan databasen öppnas på nytt. Raderade registreringar återställs inte. DoseWeek lagrar inga serverkopior, så du behöver inte begära radering hos utvecklaren. Hantera exporterade filer och kopior hos kalenderleverantörer separat."
             ]
           },
           {
@@ -2790,7 +2860,7 @@
             "id": "ai",
             "title": "8. AI på enheten",
             "paragraphs": [
-              "Den valfria AI-registreringen och sammanfattningen inför läkarbesöket använder endast Apple Foundation Models modell för Apple Intelligence på enheten, SystemLanguageModel.default. Indata till AI-registreringen och modellens strukturerade utdata bearbetas i en tillfällig session i enhetens minne. DoseWeek skickar dem inte utanför enheten och sparar varken den tillfälliga sessionen eller utdata innan du bekräftar. Om du fortsätter blir din ursprungliga mening ett redigerbart utkast till anteckning, och endast de fält och den anteckning som du granskar och uttryckligen bekräftar sparas i den lokala kliniska databasen. Inför läkarbesöket får modellen bara slutna faktaidentifierare, inte kliniska värden, och returnerar endast uppräkningsvärden för ordning och granskade formuleringar. Appen bygger varje mening av lokaliserade mallar och beräknade värden. Den färdiga sammanfattningen finns bara i minnet och sparas inte; den tas med i en PDF endast när du väljer att inkludera den. Ingen Private Cloud Compute, ingen servermodell och ingen modell från tredje part används. Du kan stänga av de här funktionerna i Inställningar."
+              "Den valfria AI-registreringen och sammanfattningen inför läkarbesöket använder endast Apple Foundation Models modell för Apple Intelligence på enheten, SystemLanguageModel.default. Indata till AI-registreringen och modellens strukturerade utdata bearbetas i en tillfällig session i enhetens minne. DoseWeek skickar dem inte utanför enheten och sparar varken den tillfälliga sessionen eller utdata innan du bekräftar. Om du fortsätter blir din ursprungliga mening ett redigerbart utkast till anteckning, och endast de fält och den anteckning som du granskar och uttryckligen bekräftar sparas i den lokala kliniska databasen. Inför läkarbesöket får modellen bara slutna faktaidentifierare, inte kliniska värden, och returnerar endast uppräkningsvärden för ordning och granskade formuleringar. Appen bygger varje mening av lokaliserade mallar och beräknade värden. Den färdiga sammanfattningen finns bara i minnet och sparas inte; den tas med i en PDF endast när du väljer att inkludera den. Ingen Private Cloud Compute, ingen servermodell och ingen modell från tredje part används. Du kan stänga av de här funktionerna i Inställningar.\n\nValfri röstinmatning startar först efter en åtgärd från dig och tillåtelse att använda mikrofonen. Tal bearbetas på enheten; nödvändiga talresurser från Apple hämtas endast med ditt samtycke. Ljud sparas eller exporteras inte. Inspelningen stoppas om du avbryter, låser eller flyttar appen till bakgrunden. Granska den slutliga transkriptionen innan du fortsätter till ett registreringsutkast. Textinmatning är fortsatt tillgänglig på enheter eller för språk som inte stöds."
             ]
           },
           {
@@ -2801,8 +2871,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Måltidsposter och säkerhetskopians format",
+            "paragraphs": [
+              "Måltidsposter: måltidens namn, datum, valfri tid och måltidstyp som du skriver in, tillsammans med de summor för energi, protein, kolhydrater och fett som du känner till, sparas i appens privata lagring på enheten. Ett värde som du lämnar tomt förblir okänt och räknas inte. Måltider ingår i den krypterade säkerhetskopian, skrivs till en CSV-fil i klartext bara när du ber om det och ingår varken i besöksförberedelsen eller PDF-exporten. Utvecklaren får inga måltidsuppgifter.\n\nSäkerhetskopians format: de nya funktionerna höjer formatnumren för appens databas och för den krypterade säkerhetskopian. Kopior som skrivits av tidigare versioner går fortfarande att återställa, men en kopia som skrivits av den nya versionen kan inte återställas av en tidigare version. Länkar till kalenderhändelser stannar på enheten, ingår inte i säkerhetskopian och behålls när du återställer på samma enhet. Osparade utkast ingår inte heller.\n\nValda livsmedelsetiketter läses på enheten. DoseWeek använder endast bilden du väljer, utan tillstånd till hela bildbiblioteket. Appen behåller inte originalbilden eller platsmetadata och inkluderar inte bilder i exporter eller säkerhetskopior. Om du stänger granskningen, låser eller flyttar appen till bakgrunden kasseras den tillfälliga granskningen. Originalfotot förblir oförändrat. Igenkända värden kräver bekräftelse och sparas aldrig automatiskt."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Kandidat: vad nästa version lägger till",
+            "title": "11. Kandidat: vad nästa version lägger till",
             "paragraphs": [
               "Det här avsnittet publicerar i förväg de ändringar som förbereds för iOS 1.0.5, en version som ännu inte har släppts. Den valfria kalendersynkroniseringen i avsnitt 9 kommer med samma version. Ikraftträdandedatum fastställs när den versionen släpps.",
               "Måltidsposter: måltidens namn, datum, valfri tid och måltidstyp som du skriver in, tillsammans med de summor för energi, protein, kolhydrater och fett som du känner till, sparas i appens privata lagring på enheten. Ett värde som du lämnar tomt förblir okänt och räknas inte. Måltider ingår i den krypterade säkerhetskopian, skrivs till en CSV-fil i klartext bara när du ber om det och ingår varken i besöksförberedelsen eller PDF-exporten. Utvecklaren får inga måltidsuppgifter.",
@@ -3046,7 +3123,7 @@
             "id": "deletion",
             "title": "6. अपना डेटा हटाना",
             "paragraphs": [
-              "सेटिंग्स > सभी लोकल रिकॉर्ड हटाएँ चलाने पर DoseWeek का हर रिकॉर्ड तुरंत हट जाता है और डिवाइस पर सेव रिकवरी कोड भी मिटा दिया जाता है। इसके बाद DoseWeek निजी डेटाबेस फ़ाइलों को सुरक्षित रूप से साफ़ करता है। अगर iOS अस्थायी रूप से यह सफ़ाई रोक देता है, तो ऐप आपसे दोबारा हटाने या DoseWeek को फिर से शुरू करने के लिए कहता है और डेटाबेस दोबारा खोलने से पहले अपने आप फिर कोशिश करता है। हटाए गए रिकॉर्ड वापस नहीं आते। चूँकि सर्वर पर कोई कॉपी नहीं होती, इसलिए अलग से हटाने का अनुरोध करने की ज़रूरत नहीं है।"
+              "सेटिंग्स > सभी लोकल रिकॉर्ड हटाएँ चलाने पर DoseWeek का हर रिकॉर्ड तुरंत हट जाता है और डिवाइस पर सेव रिकवरी कोड भी मिटा दिया जाता है। इसके बाद DoseWeek निजी डेटाबेस फ़ाइलों को सुरक्षित रूप से साफ़ करता है। अगर iOS अस्थायी रूप से यह सफ़ाई रोक देता है, तो ऐप आपसे दोबारा हटाने या DoseWeek को फिर से शुरू करने के लिए कहता है और डेटाबेस दोबारा खोलने से पहले अपने आप फिर कोशिश करता है। हटाए गए रिकॉर्ड वापस नहीं आते। DoseWeek सर्वर पर प्रतियाँ नहीं रखता, इसलिए डेवलपर से उन्हें हटाने का अनुरोध करने की ज़रूरत नहीं है। निर्यात की गई फ़ाइलों और कैलेंडर प्रदाताओं की प्रतियों को अलग से प्रबंधित करें।"
             ]
           },
           {
@@ -3060,7 +3137,7 @@
             "id": "ai",
             "title": "8. ऑन-डिवाइस AI",
             "paragraphs": [
-              "वैकल्पिक AI एंट्री और विज़िट की तैयारी सिर्फ़ Apple Foundation Models के ऑन-डिवाइस Apple Intelligence मॉडल, SystemLanguageModel.default का उपयोग करते हैं। AI एंट्री का इनपुट और मॉडल का संरचित आउटपुट डिवाइस पर एक अस्थायी इन-मेमोरी सेशन में प्रोसेस होते हैं। DoseWeek उन्हें डिवाइस से बाहर नहीं भेजता और आपकी पुष्टि से पहले अस्थायी सेशन या आउटपुट को सेव नहीं करता। आगे बढ़ने पर आपका मूल वाक्य एडिट किया जा सकने वाला ड्राफ़्ट नोट बन जाता है, और सिर्फ़ वही फ़ील्ड और नोट लोकल क्लिनिकल डेटाबेस में सेव होते हैं जिन्हें आप देखकर स्पष्ट रूप से पुष्टि करते हैं। विज़िट की तैयारी में मॉडल को क्लिनिकल मान नहीं, बल्कि केवल बंद तथ्य पहचानकर्ता मिलते हैं, और वह सिर्फ़ क्रम और जाँचे गए अभिव्यक्ति एनम लौटाता है। हर वाक्य ऐप स्थानीयकृत टेम्पलेट और गणना किए गए मानों से बनाता है। बना हुआ सारांश केवल मेमोरी में रहता है और सेव नहीं होता; वह PDF में तभी शामिल होता है जब आप उसे शामिल करना चुनते हैं। Private Cloud Compute, सर्वर मॉडल या थर्ड-पार्टी मॉडल का उपयोग नहीं होता। आप ये सुविधाएँ सेटिंग्स में बंद कर सकते हैं।"
+              "वैकल्पिक AI एंट्री और विज़िट की तैयारी सिर्फ़ Apple Foundation Models के ऑन-डिवाइस Apple Intelligence मॉडल, SystemLanguageModel.default का उपयोग करते हैं। AI एंट्री का इनपुट और मॉडल का संरचित आउटपुट डिवाइस पर एक अस्थायी इन-मेमोरी सेशन में प्रोसेस होते हैं। DoseWeek उन्हें डिवाइस से बाहर नहीं भेजता और आपकी पुष्टि से पहले अस्थायी सेशन या आउटपुट को सेव नहीं करता। आगे बढ़ने पर आपका मूल वाक्य एडिट किया जा सकने वाला ड्राफ़्ट नोट बन जाता है, और सिर्फ़ वही फ़ील्ड और नोट लोकल क्लिनिकल डेटाबेस में सेव होते हैं जिन्हें आप देखकर स्पष्ट रूप से पुष्टि करते हैं। विज़िट की तैयारी में मॉडल को क्लिनिकल मान नहीं, बल्कि केवल बंद तथ्य पहचानकर्ता मिलते हैं, और वह सिर्फ़ क्रम और जाँचे गए अभिव्यक्ति एनम लौटाता है। हर वाक्य ऐप स्थानीयकृत टेम्पलेट और गणना किए गए मानों से बनाता है। बना हुआ सारांश केवल मेमोरी में रहता है और सेव नहीं होता; वह PDF में तभी शामिल होता है जब आप उसे शामिल करना चुनते हैं। Private Cloud Compute, सर्वर मॉडल या थर्ड-पार्टी मॉडल का उपयोग नहीं होता। आप ये सुविधाएँ सेटिंग्स में बंद कर सकते हैं।\n\nवैकल्पिक वॉइस इनपुट केवल आपकी कार्रवाई और माइक्रोफ़ोन की अनुमति के बाद शुरू होता है। बोली को डिवाइस पर प्रोसेस किया जाता है; आवश्यक Apple स्पीच संसाधन केवल आपकी सहमति से डाउनलोड किए जाते हैं। ऑडियो न तो सहेजा जाता है और न ही एक्सपोर्ट किया जाता है। रद्द करने, लॉक करने या ऐप के बैकग्राउंड में जाने पर रिकॉर्डिंग रुक जाती है। रिकॉर्ड के ड्राफ़्ट पर आगे बढ़ने से पहले अंतिम ट्रांसक्रिप्ट की समीक्षा करें। असमर्थित डिवाइस या भाषाओं के लिए टाइप करके इनपुट देना उपलब्ध रहता है।"
             ]
           },
           {
@@ -3071,8 +3148,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. भोजन के रिकॉर्ड और बैकअप का प्रारूप",
+            "paragraphs": [
+              "भोजन के रिकॉर्ड: आपके द्वारा दर्ज भोजन का नाम, तारीख, वैकल्पिक समय और भोजन का प्रकार, तथा जितनी जानकारी आपके पास है उतनी ऊर्जा, प्रोटीन, कार्बोहाइड्रेट और वसा की कुल मात्रा डिवाइस पर ऐप की निजी मेमोरी में रहती है। खाली छोड़ा गया मान अज्ञात रहता है और उसकी गणना नहीं होती। भोजन के रिकॉर्ड एन्क्रिप्टेड बैकअप में शामिल होते हैं, आपके कहने पर ही सादे CSV फ़ाइल में लिखे जाते हैं, और डॉक्टर के लिए बनी तैयारी स्क्रीन तथा PDF निर्यात में शामिल नहीं होते। डेवलपर को भोजन की कोई जानकारी नहीं मिलती।\n\nबैकअप का प्रारूप: नई सुविधाओं के कारण ऐप डेटाबेस और एन्क्रिप्टेड बैकअप फ़ाइल की प्रारूप संख्याएँ बढ़ जाती हैं। पुराने संस्करणों से बनाए गए बैकअप अब भी पुनर्स्थापित किए जा सकते हैं, पर नए संस्करण से बनाया गया बैकअप पुराने संस्करण में पुनर्स्थापित नहीं होगा। कैलेंडर इवेंट की कड़ियाँ डिवाइस पर ही रहती हैं, बैकअप में शामिल नहीं होतीं, और उसी डिवाइस पर पुनर्स्थापित करने पर बनी रहती हैं। बिना सहेजे मसौदे भी शामिल नहीं होते।\n\nचुने गए खाद्य लेबल डिवाइस पर पढ़े जाते हैं। DoseWeek पूरी फ़ोटो लाइब्रेरी की अनुमति के बिना केवल आपके चुने हुए चित्र का उपयोग करता है। यह मूल चित्र या स्थान संबंधी मेटाडेटा नहीं रखता और एक्सपोर्ट या बैकअप में चित्र शामिल नहीं करता। समीक्षा बंद करने, लॉक करने या ऐप के बैकग्राउंड में जाने पर अस्थायी समीक्षा हटा दी जाती है। मूल फ़ोटो में कोई बदलाव नहीं होता। पहचाने गए मानों की पुष्टि आवश्यक है और वे कभी भी अपने आप सहेजे नहीं जाते।"
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. प्रस्तावित संस्करण: अगली रिलीज़ में क्या जुड़ेगा",
+            "title": "11. प्रस्तावित संस्करण: अगली रिलीज़ में क्या जुड़ेगा",
             "paragraphs": [
               "यह खंड iOS 1.0.5 के लिए तैयार किए जा रहे बदलाव पहले से प्रकाशित करता है; वह संस्करण अभी जारी नहीं हुआ है। खंड 9 में बताया गया वैकल्पिक कैलेंडर सिंक उसी संस्करण के साथ आएगा। लागू होने की तिथि उस संस्करण के जारी होने पर तय की जाएगी।",
               "भोजन के रिकॉर्ड: आपके द्वारा दर्ज भोजन का नाम, तारीख, वैकल्पिक समय और भोजन का प्रकार, तथा जितनी जानकारी आपके पास है उतनी ऊर्जा, प्रोटीन, कार्बोहाइड्रेट और वसा की कुल मात्रा डिवाइस पर ऐप की निजी मेमोरी में रहती है। खाली छोड़ा गया मान अज्ञात रहता है और उसकी गणना नहीं होती। भोजन के रिकॉर्ड एन्क्रिप्टेड बैकअप में शामिल होते हैं, आपके कहने पर ही सादे CSV फ़ाइल में लिखे जाते हैं, और डॉक्टर के लिए बनी तैयारी स्क्रीन तथा PDF निर्यात में शामिल नहीं होते। डेवलपर को भोजन की कोई जानकारी नहीं मिलती।",
@@ -3316,7 +3400,7 @@
             "id": "deletion",
             "title": "6. Exclusão dos seus dados",
             "paragraphs": [
-              "Executar Ajustes > Excluir todos os registros locais remove imediatamente todos os registros do DoseWeek e exclui o código de recuperação guardado no dispositivo. Em seguida, o DoseWeek limpa com segurança os arquivos do banco de dados privado. Se o iOS impedir temporariamente essa limpeza, o aplicativo avisa para você executar a exclusão de novo ou reabrir o DoseWeek, e tenta a limpeza automaticamente antes de abrir o banco de dados outra vez. Registros excluídos não são restaurados. Como não existem cópias em servidor, também não é necessário nenhum pedido de exclusão separado."
+              "Executar Ajustes > Excluir todos os registros locais remove imediatamente todos os registros do DoseWeek e exclui o código de recuperação guardado no dispositivo. Em seguida, o DoseWeek limpa com segurança os arquivos do banco de dados privado. Se o iOS impedir temporariamente essa limpeza, o aplicativo avisa para você executar a exclusão de novo ou reabrir o DoseWeek, e tenta a limpeza automaticamente antes de abrir o banco de dados outra vez. Registros excluídos não são restaurados. O DoseWeek não guarda cópias em servidores, então não é preciso pedir a exclusão ao desenvolvedor. Gerencie separadamente os arquivos exportados e as cópias dos provedores de calendários."
             ]
           },
           {
@@ -3330,7 +3414,7 @@
             "id": "ai",
             "title": "8. IA no dispositivo",
             "paragraphs": [
-              "Os recursos opcionais de registro com IA e de preparo para a consulta usam apenas o modelo Apple Intelligence executado no dispositivo pelo Apple Foundation Models, o SystemLanguageModel.default. A entrada do registro com IA e a saída estruturada do modelo são processadas em uma sessão temporária, na memória do dispositivo. O DoseWeek não as envia para fora do dispositivo e não guarda a sessão temporária nem a saída antes de você confirmar. Se continuar, sua frase original vira uma nota de rascunho editável, e apenas os campos e a nota que você revisar e confirmar explicitamente são gravados no banco de dados clínico local. No preparo para a consulta, o modelo recebe apenas identificadores de fatos fechados, não valores clínicos, e devolve apenas enumerações de ordem e de expressão revisada. O aplicativo monta todas as frases a partir de modelos localizados e de valores calculados. O resumo resultante existe apenas na memória e não é armazenado; ele entra em um PDF somente quando você escolhe incluí-lo. Não são usados Private Cloud Compute, modelo em servidor nem modelo de terceiros. Você pode desativar esses recursos nos Ajustes."
+              "Os recursos opcionais de registro com IA e de preparo para a consulta usam apenas o modelo Apple Intelligence executado no dispositivo pelo Apple Foundation Models, o SystemLanguageModel.default. A entrada do registro com IA e a saída estruturada do modelo são processadas em uma sessão temporária, na memória do dispositivo. O DoseWeek não as envia para fora do dispositivo e não guarda a sessão temporária nem a saída antes de você confirmar. Se continuar, sua frase original vira uma nota de rascunho editável, e apenas os campos e a nota que você revisar e confirmar explicitamente são gravados no banco de dados clínico local. No preparo para a consulta, o modelo recebe apenas identificadores de fatos fechados, não valores clínicos, e devolve apenas enumerações de ordem e de expressão revisada. O aplicativo monta todas as frases a partir de modelos localizados e de valores calculados. O resumo resultante existe apenas na memória e não é armazenado; ele entra em um PDF somente quando você escolhe incluí-lo. Não são usados Private Cloud Compute, modelo em servidor nem modelo de terceiros. Você pode desativar esses recursos nos Ajustes.\n\nA entrada de voz opcional só começa após uma ação sua e a permissão para usar o microfone. A fala é processada no dispositivo; os recursos de voz da Apple necessários só são baixados com o seu consentimento. O áudio não é salvo nem exportado. Cancelar, bloquear ou colocar o app em segundo plano interrompe a gravação. Revise a transcrição final antes de continuar para um rascunho de registro. A entrada de texto continua disponível em dispositivos ou idiomas não compatíveis."
             ]
           },
           {
@@ -3341,8 +3425,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Registros de refeições e formato do backup",
+            "paragraphs": [
+              "Registros de refeições: o nome da refeição, a data, o horário e o tipo de refeição opcionais que você digitar, além dos totais de energia, proteína, carboidrato e gordura que você souber, ficam no armazenamento privado do app no aparelho. Um valor deixado em branco permanece desconhecido e não é calculado. As refeições entram no backup criptografado, só são gravadas em um arquivo CSV em texto simples quando você pede e não fazem parte da preparação para a consulta nem da exportação em PDF. O desenvolvedor não recebe informações de refeições.\n\nFormato do backup: os novos recursos aumentam os números de formato do banco de dados do app e do arquivo de backup criptografado. Backups gravados por versões anteriores continuam podendo ser restaurados, mas um backup gravado pela nova versão não pode ser restaurado por uma versão anterior. Os vínculos com eventos do calendário ficam no aparelho, não entram no backup e são mantidos quando você restaura no mesmo aparelho. Rascunhos não salvos também não entram.\n\nOs rótulos de alimentos selecionados são lidos no dispositivo. O DoseWeek usa apenas a imagem que você escolhe, sem permissão de acesso à fototeca completa. Não mantém a imagem original nem os metadados de localização, nem inclui imagens nas exportações ou nos backups. Fechar a revisão, bloquear ou colocar o app em segundo plano descarta a revisão temporária. A foto original permanece inalterada. Os valores reconhecidos exigem confirmação e nunca são salvos automaticamente."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Versão candidata: o que a próxima versão acrescenta",
+            "title": "11. Versão candidata: o que a próxima versão acrescenta",
             "paragraphs": [
               "Esta seção publica com antecedência as mudanças preparadas para o iOS 1.0.5, versão ainda não publicada. A sincronização opcional do calendário descrita na seção 9 chega com essa mesma versão. A data de vigência será definida com a publicação dessa versão.",
               "Registros de refeições: o nome da refeição, a data, o horário e o tipo de refeição opcionais que você digitar, além dos totais de energia, proteína, carboidrato e gordura que você souber, ficam no armazenamento privado do app no aparelho. Um valor deixado em branco permanece desconhecido e não é calculado. As refeições entram no backup criptografado, só são gravadas em um arquivo CSV em texto simples quando você pede e não fazem parte da preparação para a consulta nem da exportação em PDF. O desenvolvedor não recebe informações de refeições.",
@@ -3586,7 +3677,7 @@
             "id": "deletion",
             "title": "6. حذف بياناتك",
             "paragraphs": [
-              "يؤدي تنفيذ الإعدادات > حذف جميع السجلات المحلية إلى إزالة كل سجل من DoseWeek فورًا وحذف رمز الاسترداد المخزَّن على الجهاز. بعد ذلك ينظّف DoseWeek ملفات قاعدة البيانات الخاصة بأمان. وإذا منع iOS هذا التنظيف مؤقتًا، ينبّهك التطبيق إلى تنفيذ الحذف مرة أخرى أو إعادة تشغيل DoseWeek، ويعيد المحاولة تلقائيًا قبل إعادة فتح قاعدة البيانات. لا تُستعاد السجلات المحذوفة. وبما أنه لا توجد نسخ على أي خادم، فلا حاجة إلى طلب حذف منفصل."
+              "يؤدي تنفيذ الإعدادات > حذف جميع السجلات المحلية إلى إزالة كل سجل من DoseWeek فورًا وحذف رمز الاسترداد المخزَّن على الجهاز. بعد ذلك ينظّف DoseWeek ملفات قاعدة البيانات الخاصة بأمان. وإذا منع iOS هذا التنظيف مؤقتًا، ينبّهك التطبيق إلى تنفيذ الحذف مرة أخرى أو إعادة تشغيل DoseWeek، ويعيد المحاولة تلقائيًا قبل إعادة فتح قاعدة البيانات. لا تُستعاد السجلات المحذوفة. لا يحتفظ DoseWeek بنسخ على الخوادم، لذا لا حاجة إلى طلب حذف من المطوّر. أدِر الملفات المُصدَّرة والنسخ لدى مزوّدي التقويمات بشكل منفصل."
             ]
           },
           {
@@ -3600,7 +3691,7 @@
             "id": "ai",
             "title": "8. الذكاء الاصطناعي على الجهاز",
             "paragraphs": [
-              "لا تستخدم ميزتا التسجيل بالذكاء الاصطناعي وتحضير الزيارة الاختياريتان سوى نموذج Apple Intelligence العامل على الجهاز من Apple Foundation Models، وهو SystemLanguageModel.default. تُعالَج مدخلات التسجيل بالذكاء الاصطناعي ومخرجات النموذج المهيكلة في جلسة مؤقتة داخل ذاكرة الجهاز. لا يرسلها DoseWeek خارج الجهاز ولا يحفظ الجلسة المؤقتة أو المخرجات قبل تأكيدك. عند المتابعة تصبح جملتك الأصلية مسودة ملاحظة قابلة للتعديل، ولا يُخزَّن في قاعدة البيانات السريرية المحلية سوى الحقول والملاحظة التي راجعتها وأكدتها صراحةً. في تحضير الزيارة، يتلقى النموذج معرّفات وقائع مغلقة فقط وليس قيمًا سريرية، ولا يعيد سوى قيم تعدادية للترتيب وللصياغات المراجَعة. ينشئ التطبيق كل جملة من قوالب مترجمة وقيم محسوبة. يبقى الملخص الناتج في الذاكرة فقط ولا يُخزَّن، ولا يُدرَج في ملف PDF إلا إذا اخترت إدراجه. لا تُستخدم Private Cloud Compute ولا أي نموذج على خادم ولا أي نموذج من طرف خارجي. يمكنك إيقاف هاتين الميزتين من الإعدادات."
+              "لا تستخدم ميزتا التسجيل بالذكاء الاصطناعي وتحضير الزيارة الاختياريتان سوى نموذج Apple Intelligence العامل على الجهاز من Apple Foundation Models، وهو SystemLanguageModel.default. تُعالَج مدخلات التسجيل بالذكاء الاصطناعي ومخرجات النموذج المهيكلة في جلسة مؤقتة داخل ذاكرة الجهاز. لا يرسلها DoseWeek خارج الجهاز ولا يحفظ الجلسة المؤقتة أو المخرجات قبل تأكيدك. عند المتابعة تصبح جملتك الأصلية مسودة ملاحظة قابلة للتعديل، ولا يُخزَّن في قاعدة البيانات السريرية المحلية سوى الحقول والملاحظة التي راجعتها وأكدتها صراحةً. في تحضير الزيارة، يتلقى النموذج معرّفات وقائع مغلقة فقط وليس قيمًا سريرية، ولا يعيد سوى قيم تعدادية للترتيب وللصياغات المراجَعة. ينشئ التطبيق كل جملة من قوالب مترجمة وقيم محسوبة. يبقى الملخص الناتج في الذاكرة فقط ولا يُخزَّن، ولا يُدرَج في ملف PDF إلا إذا اخترت إدراجه. لا تُستخدم Private Cloud Compute ولا أي نموذج على خادم ولا أي نموذج من طرف خارجي. يمكنك إيقاف هاتين الميزتين من الإعدادات.\n\nلا يبدأ الإدخال الصوتي الاختياري إلا بعد إجراء منك ومنح إذن استخدام الميكروفون. تتم معالجة الكلام على الجهاز؛ ولا تُنزَّل موارد الكلام المطلوبة من Apple إلا بموافقتك. لا يُحفَظ الصوت ولا يُصدَّر. يؤدي الإلغاء أو القفل أو انتقال التطبيق إلى الخلفية إلى إيقاف التسجيل. راجع النص النهائي المفرّغ من الكلام قبل المتابعة إلى مسودة سجل. تظل الكتابة متاحة على الأجهزة غير المدعومة أو للغات غير المدعومة."
             ]
           },
           {
@@ -3611,8 +3702,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. سجلات الوجبات وصيغة النسخة الاحتياطية",
+            "paragraphs": [
+              "سجلات الوجبات: يُحفظ اسم الوجبة والتاريخ والوقت ونوع الوجبة الاختياريان الذي تُدخلها، إضافة إلى مجاميع الطاقة والبروتين والكربوهيدرات والدهون التي تعرفها، في التخزين الخاص بالتطبيق على الجهاز. وأي قيمة تتركها فارغة تبقى غير معروفة ولا تدخل في الحساب. تُدرَج سجلات الوجبات في النسخة الاحتياطية المشفّرة، ولا تُكتب في ملف CSV غير مشفّر إلا بطلب منك، ولا تدخل في شاشة التحضير للزيارة ولا في تصدير PDF. ولا يتلقى المطوّر أي معلومات عن الوجبات.\n\nصيغة النسخة الاحتياطية: ترفع الميزات الجديدة أرقام صيغة قاعدة بيانات التطبيق وملف النسخة الاحتياطية المشفّر. تظل النسخ التي كتبتها الإصدارات السابقة قابلة للاستعادة، لكن النسخة التي يكتبها الإصدار الجديد لا يمكن استعادتها بإصدار أقدم. وتبقى روابط أحداث التقويم على الجهاز ولا تُدرَج في النسخة الاحتياطية، وتُحفَظ عند الاستعادة على الجهاز نفسه. كما لا تُدرَج المسودات غير المحفوظة.\n\nتُقرأ ملصقات الأغذية المحددة على الجهاز. يستخدم DoseWeek الصورة التي تختارها فقط، دون إذن الوصول إلى مكتبة الصور بأكملها. لا يحتفظ بالصورة الأصلية أو البيانات الوصفية للموقع، ولا يضمّن الصور في عمليات التصدير أو النسخ الاحتياطي. يؤدي إغلاق المراجعة أو القفل أو انتقال التطبيق إلى الخلفية إلى التخلص من المراجعة المؤقتة. تبقى الصورة الأصلية دون تغيير. تتطلب القيم المتعرَّف عليها تأكيدًا ولا تُحفَظ تلقائيًا مطلقًا."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. الإصدار المرشح: ما يضيفه الإصدار التالي",
+            "title": "11. الإصدار المرشح: ما يضيفه الإصدار التالي",
             "paragraphs": [
               "ينشر هذا البند مسبقًا التغييرات المُعدّة للإصدار iOS 1.0.5 الذي لم يُطرح بعد. وتصل مزامنة التقويم الاختيارية الموضّحة في البند 9 مع الإصدار نفسه. ويُحدَّد تاريخ السريان عند طرح ذلك الإصدار.",
               "سجلات الوجبات: يُحفظ اسم الوجبة والتاريخ والوقت ونوع الوجبة الاختياريان الذي تُدخلها، إضافة إلى مجاميع الطاقة والبروتين والكربوهيدرات والدهون التي تعرفها، في التخزين الخاص بالتطبيق على الجهاز. وأي قيمة تتركها فارغة تبقى غير معروفة ولا تدخل في الحساب. تُدرَج سجلات الوجبات في النسخة الاحتياطية المشفّرة، ولا تُكتب في ملف CSV غير مشفّر إلا بطلب منك، ولا تدخل في شاشة التحضير للزيارة ولا في تصدير PDF. ولا يتلقى المطوّر أي معلومات عن الوجبات.",
@@ -3856,7 +3954,7 @@
             "id": "deletion",
             "title": "6. 删除您的数据",
             "paragraphs": [
-              "执行“设置”>“删除所有本地记录”后，DoseWeek 中的所有记录以及设备上保存的恢复码会立即被移除。随后 DoseWeek 会安全清理应用专用的数据库文件。如果 iOS 暂时无法完成清理，应用会提示您再次执行删除或重新启动 DoseWeek，并在重新打开数据库之前自动重试。已删除的记录不会恢复。由于不存在服务器副本，也无需另行提出删除请求。"
+              "执行“设置”>“删除所有本地记录”后，DoseWeek 中的所有记录以及设备上保存的恢复码会立即被移除。随后 DoseWeek 会安全清理应用专用的数据库文件。如果 iOS 暂时无法完成清理，应用会提示您再次执行删除或重新启动 DoseWeek，并在重新打开数据库之前自动重试。已删除的记录不会恢复。DoseWeek 不保留服务器副本，因此无需向开发者提出删除请求。请另行管理导出的文件和日历提供商持有的副本。"
             ]
           },
           {
@@ -3870,7 +3968,7 @@
             "id": "ai",
             "title": "8. 设备端 AI",
             "paragraphs": [
-              "可选的“AI 记录”和“就诊准备”功能只使用 Apple Foundation Models 的设备端 Apple Intelligence 模型 SystemLanguageModel.default。AI 记录的输入和结构化的模型输出，都在设备上的临时内存会话中处理。DoseWeek 不会将其发送到设备之外，在您确认之前也不会持久保存临时会话或输出。继续后，您的原句会成为可编辑的草稿备注；只有经您审阅并明确确认的字段和备注，才会保存到本地临床记录数据库。在就诊准备中，模型只接收封闭的事实标识符，而不是临床数值，并且只返回顺序和已审核表述的枚举值。所有句子都由应用根据本地化模板和计算值生成。生成的摘要只保留在内存中，不会保存；只有在您选择包含时才会进入 PDF。不使用 Private Cloud Compute、服务器模型或第三方模型。您可以在“设置”中关闭这些功能。"
+              "可选的“AI 记录”和“就诊准备”功能只使用 Apple Foundation Models 的设备端 Apple Intelligence 模型 SystemLanguageModel.default。AI 记录的输入和结构化的模型输出，都在设备上的临时内存会话中处理。DoseWeek 不会将其发送到设备之外，在您确认之前也不会持久保存临时会话或输出。继续后，您的原句会成为可编辑的草稿备注；只有经您审阅并明确确认的字段和备注，才会保存到本地临床记录数据库。在就诊准备中，模型只接收封闭的事实标识符，而不是临床数值，并且只返回顺序和已审核表述的枚举值。所有句子都由应用根据本地化模板和计算值生成。生成的摘要只保留在内存中，不会保存；只有在您选择包含时才会进入 PDF。不使用 Private Cloud Compute、服务器模型或第三方模型。您可以在“设置”中关闭这些功能。\n\n可选的语音输入仅在您主动操作并授予麦克风权限后开始。语音在设备上处理；所需的 Apple 语音资源仅在您同意后下载。音频不会被保存或导出。取消、锁定或将应用切换到后台会停止录音。在继续进入记录草稿前，请检查最终转写文本。对于不支持的设备或语言，仍可使用键盘输入。"
             ]
           },
           {
@@ -3881,8 +3979,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. 用餐记录与备份格式",
+            "paragraphs": [
+              "用餐记录：您输入的餐名、日期、可选时间与用餐类型，以及您已知的能量、蛋白质、碳水化合物和脂肪合计，保存在设备上的应用私有存储中。留空的数值保持为未知，不参与计算。用餐记录包含在加密备份中，仅在您要求时才写入明文 CSV 文件，并且不包含在就诊准备界面和 PDF 导出中。开发者不会收到任何用餐信息。\n\n备份格式：新功能会提高应用数据库与加密备份文件的格式编号。旧版本写入的备份仍可恢复，但新版本写入的备份无法在旧版本中恢复。日历事件的关联信息仅保留在设备上，不包含在备份中，在同一设备上恢复时会保留。未保存的草稿同样不包含在内。\n\n所选食品标签在设备上读取。DoseWeek 仅使用您选择的图像，无需获得整个照片图库的访问权限。应用不会保留原始图像或位置元数据，也不会在导出内容或备份中包含图像。关闭检查界面、锁定或将应用切换到后台会丢弃临时检查内容。原始照片保持不变。识别出的数值需要确认，绝不会自动保存。"
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. 候选版本：下一版本将新增的内容",
+            "title": "11. 候选版本：下一版本将新增的内容",
             "paragraphs": [
               "本节提前公布为尚未发布的 iOS 1.0.5 准备的变更。第 9 节所述的可选日历同步随同一版本推出。生效日期将在该版本发布时确定。",
               "用餐记录：您输入的餐名、日期、可选时间与用餐类型，以及您已知的能量、蛋白质、碳水化合物和脂肪合计，保存在设备上的应用私有存储中。留空的数值保持为未知，不参与计算。用餐记录包含在加密备份中，仅在您要求时才写入明文 CSV 文件，并且不包含在就诊准备界面和 PDF 导出中。开发者不会收到任何用餐信息。",
@@ -4126,7 +4231,7 @@
             "id": "deletion",
             "title": "6. 刪除您的資料",
             "paragraphs": [
-              "執行「設定」>「刪除所有本機紀錄」後，DoseWeek 中的所有紀錄以及裝置上的復原碼會立即移除。接著 DoseWeek 會安全清理 App 專用的資料庫檔案。如果 iOS 暫時無法完成清理，App 會提示您再次執行刪除或重新啟動 DoseWeek，並在重新開啟資料庫之前自動重試。已刪除的紀錄不會還原。由於不存在伺服器副本，也不需要另外提出刪除請求。"
+              "執行「設定」>「刪除所有本機紀錄」後，DoseWeek 中的所有紀錄以及裝置上的復原碼會立即移除。接著 DoseWeek 會安全清理 App 專用的資料庫檔案。如果 iOS 暫時無法完成清理，App 會提示您再次執行刪除或重新啟動 DoseWeek，並在重新開啟資料庫之前自動重試。已刪除的紀錄不會還原。DoseWeek 不保留伺服器副本，因此無需向開發者提出刪除請求。請另行管理匯出的檔案和行事曆提供者持有的副本。"
             ]
           },
           {
@@ -4140,7 +4245,7 @@
             "id": "ai",
             "title": "8. 裝置端 AI",
             "paragraphs": [
-              "選用的「AI 記錄」與「就診準備」功能只使用 Apple Foundation Models 的裝置端 Apple Intelligence 模型 SystemLanguageModel.default。AI 記錄的輸入與結構化的模型輸出，都在裝置上的暫時記憶體工作階段中處理。DoseWeek 不會將其送出裝置，在您確認之前也不會保存暫時工作階段或輸出。繼續後，您的原句會成為可編輯的草稿備註；只有經您審閱並明確確認的欄位與備註，才會儲存到本機的臨床紀錄資料庫。在就診準備中，模型只會收到封閉的事實識別碼，而不是臨床數值，並且只會回傳順序與已審閱表述的列舉值。所有句子都由 App 以在地化範本與計算值產生。產生的摘要只保留在記憶體中，不會儲存；只有在您選擇納入時才會進入 PDF。不使用 Private Cloud Compute、伺服器模型或第三方模型。您可以在「設定」中關閉這些功能。"
+              "選用的「AI 記錄」與「就診準備」功能只使用 Apple Foundation Models 的裝置端 Apple Intelligence 模型 SystemLanguageModel.default。AI 記錄的輸入與結構化的模型輸出，都在裝置上的暫時記憶體工作階段中處理。DoseWeek 不會將其送出裝置，在您確認之前也不會保存暫時工作階段或輸出。繼續後，您的原句會成為可編輯的草稿備註；只有經您審閱並明確確認的欄位與備註，才會儲存到本機的臨床紀錄資料庫。在就診準備中，模型只會收到封閉的事實識別碼，而不是臨床數值，並且只會回傳順序與已審閱表述的列舉值。所有句子都由 App 以在地化範本與計算值產生。產生的摘要只保留在記憶體中，不會儲存；只有在您選擇納入時才會進入 PDF。不使用 Private Cloud Compute、伺服器模型或第三方模型。您可以在「設定」中關閉這些功能。\n\n選用的語音輸入只會在您主動操作並授予麥克風權限後開始。語音會在裝置上處理；所需的 Apple 語音資源只會在您同意後下載。音訊不會被儲存或匯出。取消、鎖定或將 App 切換至背景會停止錄音。在繼續進入紀錄草稿前，請檢查最終轉寫文字。對於不支援的裝置或語言，仍可使用鍵盤輸入。"
             ]
           },
           {
@@ -4151,8 +4256,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. 用餐紀錄與備份格式",
+            "paragraphs": [
+              "用餐紀錄：您輸入的餐點名稱、日期、選填時間與用餐類型，以及您已知的熱量、蛋白質、碳水化合物與脂肪合計，會保存在裝置上的 App 私有儲存空間。留白的數值維持為未知，不納入計算。用餐紀錄會包含在加密備份中，僅在您要求時才寫入純文字 CSV 檔，且不會出現在就診準備畫面與 PDF 匯出中。開發者不會取得任何用餐資訊。\n\n備份格式：新功能會提高 App 資料庫與加密備份檔的格式編號。舊版本寫入的備份仍可還原，但新版本寫入的備份無法在舊版本還原。日曆事件的連結資訊僅保留在裝置上，不包含在備份中，在同一裝置還原時會保留。未儲存的草稿同樣不包含在內。\n\n所選食品標籤會在裝置上讀取。DoseWeek 只使用您選取的影像，無須取得整個照片圖庫的存取權限。App 不會保留原始影像或位置中繼資料，也不會在匯出內容或備份中包含影像。關閉檢視畫面、鎖定或將 App 切換至背景會捨棄暫存的檢視內容。原始照片維持不變。辨識出的數值須經確認，絕不會自動儲存。"
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. 候選版本：下一版本將新增的內容",
+            "title": "11. 候選版本：下一版本將新增的內容",
             "paragraphs": [
               "本節提前公布為尚未發布的 iOS 1.0.5 準備的變更。第 9 節所述的選用日曆同步會隨同一版本推出。生效日期將於該版本發布時確定。",
               "用餐紀錄：您輸入的餐點名稱、日期、選填時間與用餐類型，以及您已知的熱量、蛋白質、碳水化合物與脂肪合計，會保存在裝置上的 App 私有儲存空間。留白的數值維持為未知，不納入計算。用餐紀錄會包含在加密備份中，僅在您要求時才寫入純文字 CSV 檔，且不會出現在就診準備畫面與 PDF 匯出中。開發者不會取得任何用餐資訊。",
@@ -4396,7 +4508,7 @@
             "id": "deletion",
             "title": "6. Verilerinizi silme",
             "paragraphs": [
-              "Ayarlar > Tüm yerel kayıtları sil işlemini çalıştırmak, DoseWeek'teki her kaydı hemen kaldırır ve cihazdaki kurtarma kodunu siler. DoseWeek ardından özel veritabanı dosyalarını güvenli biçimde temizler. iOS bu temizliği geçici olarak engellerse uygulama size silmeyi yeniden çalıştırmanızı veya DoseWeek'i yeniden başlatmanızı bildirir ve veritabanını yeniden açmadan önce otomatik olarak yeniden dener. Silinen kayıtlar geri getirilmez. Sunucuda kopya bulunmadığı için ayrıca bir silme talebi gerekmez."
+              "Ayarlar > Tüm yerel kayıtları sil işlemini çalıştırmak, DoseWeek'teki her kaydı hemen kaldırır ve cihazdaki kurtarma kodunu siler. DoseWeek ardından özel veritabanı dosyalarını güvenli biçimde temizler. iOS bu temizliği geçici olarak engellerse uygulama size silmeyi yeniden çalıştırmanızı veya DoseWeek'i yeniden başlatmanızı bildirir ve veritabanını yeniden açmadan önce otomatik olarak yeniden dener. Silinen kayıtlar geri getirilmez. DoseWeek sunucu kopyası tutmaz; geliştiriciye silme talebi göndermek gerekmez. Dışa aktarılan dosyaları ve takvim sağlayıcılarındaki kopyaları ayrıca yönetin."
             ]
           },
           {
@@ -4410,7 +4522,7 @@
             "id": "ai",
             "title": "8. Cihaz üzerinde yapay zeka",
             "paragraphs": [
-              "İsteğe bağlı yapay zeka ile kayıt ve Muayene Hazırlığı özellikleri yalnızca Apple Foundation Models'in cihaz üzerindeki Apple Intelligence modeli olan SystemLanguageModel.default'u kullanır. Yapay zeka ile kaydın girdisi ve modelin yapılandırılmış çıktısı, cihazda geçici bir bellek içi oturumda işlenir. DoseWeek bunları cihaz dışına göndermez ve siz onaylamadan önce geçici oturumu ya da çıktıyı kalıcı olarak saklamaz. Devam ederseniz özgün cümleniz düzenlenebilir bir taslak not olur ve yalnızca gözden geçirip açıkça onayladığınız alanlar ile not, yerel klinik veritabanına kaydedilir. Muayene Hazırlığı'nda model, klinik değerleri değil yalnızca kapalı bilgi tanımlayıcılarını alır ve yalnızca sıralama ile gözden geçirilmiş ifade seçeneklerini döndürür. Tüm cümleleri uygulama, yerelleştirilmiş şablonlardan ve hesaplanan değerlerden oluşturur. Ortaya çıkan özet yalnızca bellekte tutulur ve saklanmaz; yalnızca siz eklemeyi seçtiğinizde bir PDF'e dâhil edilir. Private Cloud Compute, sunucu modeli veya üçüncü taraf model kullanılmaz. Bu özellikleri Ayarlar'dan kapatabilirsiniz."
+              "İsteğe bağlı yapay zeka ile kayıt ve Muayene Hazırlığı özellikleri yalnızca Apple Foundation Models'in cihaz üzerindeki Apple Intelligence modeli olan SystemLanguageModel.default'u kullanır. Yapay zeka ile kaydın girdisi ve modelin yapılandırılmış çıktısı, cihazda geçici bir bellek içi oturumda işlenir. DoseWeek bunları cihaz dışına göndermez ve siz onaylamadan önce geçici oturumu ya da çıktıyı kalıcı olarak saklamaz. Devam ederseniz özgün cümleniz düzenlenebilir bir taslak not olur ve yalnızca gözden geçirip açıkça onayladığınız alanlar ile not, yerel klinik veritabanına kaydedilir. Muayene Hazırlığı'nda model, klinik değerleri değil yalnızca kapalı bilgi tanımlayıcılarını alır ve yalnızca sıralama ile gözden geçirilmiş ifade seçeneklerini döndürür. Tüm cümleleri uygulama, yerelleştirilmiş şablonlardan ve hesaplanan değerlerden oluşturur. Ortaya çıkan özet yalnızca bellekte tutulur ve saklanmaz; yalnızca siz eklemeyi seçtiğinizde bir PDF'e dâhil edilir. Private Cloud Compute, sunucu modeli veya üçüncü taraf model kullanılmaz. Bu özellikleri Ayarlar'dan kapatabilirsiniz.\n\nİsteğe bağlı sesli giriş, yalnızca sizin bir işleminizden ve mikrofon izninden sonra başlar. Konuşma cihazda işlenir; gerekli Apple konuşma kaynakları yalnızca onayınızla indirilir. Ses kaydedilmez veya dışa aktarılmaz. İptal etme, kilitleme veya uygulamanın arka plana geçmesi ses alımını durdurur. Bir kayıt taslağına geçmeden önce son transkripsiyonu inceleyin. Desteklenmeyen cihazlarda veya dillerde yazarak giriş kullanılabilir olmaya devam eder."
             ]
           },
           {
@@ -4421,8 +4533,15 @@
             ]
           },
           {
+            "id": "meals",
+            "title": "10. Öğün kayıtları ve yedek biçimi",
+            "paragraphs": [
+              "Öğün kayıtları: Girdiğiniz öğün adı, tarih, isteğe bağlı saat ve öğün türü ile bildiğiniz enerji, protein, karbonhidrat ve yağ toplamları cihazdaki uygulamaya özel depolamada tutulur. Boş bıraktığınız bir değer bilinmeyen olarak kalır ve hesaplanmaz. Öğün kayıtları şifreli yedeğe dahildir, yalnızca siz istediğinizde düz metin bir CSV dosyasına yazılır ve ne muayene hazırlığı ekranında ne de PDF dışa aktarımında yer alır. Geliştirici öğün bilgisi almaz.\n\nYedek biçimi: Yeni özellikler uygulama veritabanının ve şifreli yedek dosyasının biçim numaralarını yükseltir. Önceki sürümlerin yazdığı yedekler geri yüklenmeye devam eder, ancak yeni sürümün yazdığı bir yedek önceki bir sürümde geri yüklenemez. Takvim etkinliği bağlantıları cihazda kalır, yedeğe dahil edilmez ve aynı cihazda geri yükleme yaptığınızda korunur. Kaydedilmemiş taslaklar da dahil edilmez.\n\nSeçilen gıda etiketleri cihazda okunur. DoseWeek, tüm fotoğraf arşivine erişim izni olmadan yalnızca seçtiğiniz görüntüyü kullanır. Orijinal görüntüyü veya konum meta verilerini saklamaz; dışa aktarımlara veya yedeklere görüntü eklemez. İncelemeyi kapatma, kilitleme veya uygulamanın arka plana geçmesi geçici incelemeyi siler. Orijinal fotoğraf değişmeden kalır. Tanınan değerler onay gerektirir ve asla otomatik olarak kaydedilmez."
+            ]
+          },
+          {
             "id": "next-release",
-            "title": "10. Aday sürüm: Sonraki sürümün eklediği özellikler",
+            "title": "11. Aday sürüm: Sonraki sürümün eklediği özellikler",
             "paragraphs": [
               "Bu bölüm, henüz yayımlanmamış olan iOS 1.0.5 için hazırlanan değişiklikleri önceden yayımlar. 9. bölümde anlatılan isteğe bağlı takvim eşitleme de aynı sürümle gelir. Yürürlük tarihi, o sürümün yayımlanmasıyla belirlenir.",
               "Öğün kayıtları: Girdiğiniz öğün adı, tarih, isteğe bağlı saat ve öğün türü ile bildiğiniz enerji, protein, karbonhidrat ve yağ toplamları cihazdaki uygulamaya özel depolamada tutulur. Boş bıraktığınız bir değer bilinmeyen olarak kalır ve hesaplanmaz. Öğün kayıtları şifreli yedeğe dahildir, yalnızca siz istediğinizde düz metin bir CSV dosyasına yazılır ve ne muayene hazırlığı ekranında ne de PDF dışa aktarımında yer alır. Geliştirici öğün bilgisi almaz.",

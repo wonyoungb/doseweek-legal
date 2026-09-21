@@ -56,7 +56,7 @@ LOCALE_ORDER = [
 ]
 SECTION_IDS = [
     "storage", "health", "backups", "notifications", "tracking", "deletion", "contact", "ai",
-    "calendar", "next-release",
+    "calendar", "meals", "next-release",
 ]
 CANDIDATE_SECTION_ID = "next-release"
 # Owner decision IOS-VERSION-104-20260917: the pending 1.0.4 (build 15) review is cancelled and the
@@ -68,7 +68,7 @@ CANDIDATE_VERSION = "1.0.5"
 PAGE_VERSION = "1.0.5"
 CATALOG_KEYS = {
     "storage": 1, "health": 2, "backups": 3, "notifications": 4, "tracking": 5,
-    "deletion": 6, "contact": 7, "ai": 8, "calendar": 9,
+    "deletion": 6, "contact": 7, "ai": 8, "calendar": 9, "meals": 10,
 }
 
 
@@ -111,6 +111,9 @@ def validate(content: dict) -> None:
                     f"{locale}:{section['id']}"
                 )
         candidate = privacy["sections"][-1]
+        assert candidate["title"].startswith("11. "), (
+            f"{locale}: candidate section follows the ten app policy sections"
+        )
         # The candidate section names the version it belongs to, never a build: the store build
         # number is chosen at upload.
         assert "build" not in candidate["paragraphs"][0].lower(), (

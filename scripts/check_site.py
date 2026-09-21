@@ -142,7 +142,7 @@ def local_target(source: Path, reference: str) -> tuple[Path, str] | None:
 def catalog_check(catalog_path: Path, privacy_text: str) -> None:
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))["strings"]
     keys = ["privacy.title", "privacy.intro", "privacy.effectiveDate"]
-    for number in range(1, 10):
+    for number in range(1, 11):
         keys.extend((f"privacy.section{number}.title", f"privacy.section{number}.body"))
     keys.extend(("privacy.medical.title", "privacy.medical.body", "common.notAMedicalDevice"))
 
