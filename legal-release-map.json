@@ -19,7 +19,7 @@
     ],
     "handoff": "docs/CURRENT_HANDOFF.md",
     "headCommitNote": "the branch head is recorded by the final gate; this file cannot name its own commit",
-    "observedHeadCommit": "4600d513f23d6d59e64de9cc8ccd58e5c5006f3e"
+    "observedHeadCommit": "8aee312"
   },
   "platforms": {
     "android": {
@@ -92,8 +92,8 @@
     "proof": "../evidence/continuation-20260921/privacy/parity-proof.json",
     "documentationReconciledAt": "2026-09-21T23:13:00.913246+09:00",
     "browserReview": {
-      "proof": "../evidence/continuation-20260921/homepage/browser-proof.json",
-      "scope": "12 homepage responsive DOM checks; six secondary routes KO/JA/AR at320; representative light/dark/RTL/no-JS, keyboard focus and guide navigation; not complete accessibility review"
+      "proof": "../evidence/continuation-20260921/homepage/locales17-progress.json",
+      "scope": "Home17 locales at320/390/768/1280=68 DOM checks; representative KO/DE/AR screens; home-to-import/Android-guide and import-to-home retain Arabic; Arabic home renders without JavaScript. Shared-CSS18 secondary route checks retained in earlier browser-proof.json. Not native-speaker/screen-reader certification."
     }
   },
   "importGuide": {

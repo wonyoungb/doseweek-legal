@@ -1,6 +1,6 @@
 # Current legal-site handoff
 
-Updated: 2026-09-21T23:38:26.333033+09:00
+Updated: 2026-09-21T23:47:41.352461+09:00
 Status: WORKING; no candidate publication in this continuation.
 
 - Branch: codex/privacy-completion-20260920. Use Git HEAD for the exact current commit.
@@ -14,12 +14,13 @@ Status: WORKING; no candidate publication in this continuation.
   then consistent effective-date update, release gate, main integration and publication.
 - iOS candidate 1.0.5/build16 and Android 1.0.0/code11 are not uploaded by this work yet.
   Store state must be refreshed before the next mutation; a branch push is not public availability.
-- Completed: shorter Korean/English/Japanese platform chooser with versioned guide labels;
+- Completed: shorter shared platform chooser in all17 guide locales with versioned guide labels;
   responsive typography and natural CJK/Arabic/Hindi heading spacing. Content-hashed CSS URLs
-  prevent stale shared styles. Four render/catalog/site checks pass. Home12 viewport/locale
-  and secondary18 narrow route/locale checks show no clipping. Representative light/dark,
+  prevent stale shared styles. Four render/catalog/site checks pass. Home68 viewport/locale
+  and secondary18 narrow route/locale checks show no clipping. All outgoing home links keep
+  their locale; import-to-home no longer falls back to English for14 locales. Representative light/dark,
   RTL, keyboard focus, help navigation and no-JavaScript observations are retained in
-  ../evidence/continuation-20260921/homepage/browser-proof.json; not full accessibility proof.
+  ../evidence/continuation-20260921/homepage/locales17-progress.json; not full accessibility proof.
 - Documentation reconciled; preserve docs/history and treat dated prompts as history.
 
 Next action: finish current documentation/site checks; retain their exact evidence, then follow

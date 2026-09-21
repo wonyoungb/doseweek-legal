@@ -136,7 +136,7 @@ def rendered(content: dict) -> dict[str, str]:
 <div class="faq-list"><details><summary><span>{e(value['prompt_details_label'])}</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><pre id="{lang}-prompt-text" class="import-prompt" dir="ltr" tabindex="0">{e(text)}</pre></div></details>
 <details><summary><span>{e(value['review_title'])}</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>{e(value['status_body'])}</p><ul>{review}</ul></div></details>
 <details><summary><span>{e(value['format_title'])}</span><span class="summary-symbol" aria-hidden="true"></span></summary><div class="faq-answer"><p>{e(value['format_intro'])}</p><ul>{spec_rules}</ul><p><a href="draft-v1.schema.json" download>{e(value['schema_label'])}</a></p><p><a href="format.{lang}.md" download>{e(value['spec_label'])}</a></p><p><a href="draft.example.json" download>{e(value['example_label'])}</a></p></div></details></div></section>
-<footer class="site-footer"><a href="../#{lang if lang in ['en','ja','ko'] else 'en'}">{e(value['home_label'])}</a><a href="../support/#{lang}">{e(value['support_label'])}</a><a href="../android/support/#{lang}">{e(value['android_support_label'])}</a></footer>
+<footer class="site-footer"><a href="../#{lang}">{e(value['home_label'])}</a><a href="../support/#{lang}">{e(value['support_label'])}</a><a href="../android/support/#{lang}">{e(value['android_support_label'])}</a></footer>
 </article>''')
     page = f'''<!doctype html>
 <html lang="ko"><head>
@@ -148,7 +148,7 @@ def rendered(content: dict) -> dict[str, str]:
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="DoseWeek — Prepare records from another app"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{BASE}assets/app-icon.png"><meta name="twitter:image:alt" content="DoseWeek app icon">
 <link rel="stylesheet" href="{stylesheet_path('../')}"><link rel="stylesheet" href="../assets/import.css"><script src="../assets/language.js" defer></script><script src="../assets/import.js" defer></script>
 </head><body>{''.join(skips)}
-<header class="site-header site-shell"><a class="brand" href="../" aria-label="DoseWeek"><img class="brand-mark" src="../assets/app-icon.png" alt="" width="36" height="36"><span class="brand-label">DoseWeek</span></a><nav class="language-nav many-languages" aria-label="Language / 언어 / 言語"><ul class="language-list">{''.join(links)}</ul></nav></header>
+<header class="site-header site-shell"><a class="brand" href="../" aria-label="DoseWeek" data-language-path="../"><img class="brand-mark" src="../assets/app-icon.png" alt="" width="36" height="36"><span class="brand-label">DoseWeek</span></a><nav class="language-nav many-languages" aria-label="Language / 언어 / 言語"><ul class="language-list">{''.join(links)}</ul></nav></header>
 <main id="main" class="site-shell" tabindex="-1"><div class="language-stack">{''.join(panels)}</div></main>
 </body></html>
 '''

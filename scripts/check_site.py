@@ -15,6 +15,7 @@ from urllib.parse import unquote, urlsplit
 
 import legal_release
 import render_ios
+import render_home
 from render_android import rendered_pages, validate_catalog
 from render_import import rendered as rendered_import, validate as validate_import
 
@@ -28,8 +29,6 @@ ANDROID_HTML_FILES = [
 ]
 IMPORT_HTML_FILES = [ROOT / "import/index.html"]
 HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES + IMPORT_HTML_FILES
-IOS_PANEL_LANGUAGES = ["en", "ja", "ko"]
-IOS_LINK_LANGUAGES = ["ko", "en", "ja"]
 ANDROID_LANGUAGES = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
@@ -254,12 +253,13 @@ def main() -> None:
     if arguments.release:
         legal_release.require_release_date()
 
+    assert (ROOT / "index.html").read_text() == render_home.rendered(), "index.html is stale; rerun render_home.py"
     pages = {path.resolve(): parse(path) for path in HTML_FILES}
 
     expected_metadata = {
         (ROOT / "index.html").resolve(): (
-            SITE_BASE, "assets/app-icon.png", SOCIAL_IMAGE, IOS_PANEL_LANGUAGES,
-            IOS_LINK_LANGUAGES,
+            SITE_BASE, "assets/app-icon.png", SOCIAL_IMAGE, ALL_LANGUAGES,
+            ALL_LANGUAGES,
         ),
         (ROOT / "support/index.html").resolve(): (
             f"{SITE_BASE}support/", "../assets/app-icon.png", SOCIAL_IMAGE,
@@ -305,7 +305,7 @@ def main() -> None:
         assert current == [], f"{label}: static markup must not misstate aria-current before JS"
 
         multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + [
-            ROOT / "privacy/index.html", ROOT / "support/index.html",
+            ROOT / "privacy/index.html", ROOT / "support/index.html", ROOT / "index.html",
         ]
         if path in {candidate.resolve() for candidate in multilingual}:
             assert page.language_skips == ANDROID_LANGUAGES, (

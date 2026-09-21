@@ -7,6 +7,7 @@ No third-party scripts, analytics, remote fonts, cookies, accounts or form backe
 
 | Content | Canonical source | Mirror / renderer |
 |---|---|---|
+| Shared home | `docs/home-content.json` and `templates/home.html` | `scripts/render_home.py`; versions, locale names and medical notices from the platform catalogs |
 | iOS policy | iOS `DoseDay/Resources/Localizable.xcstrings` | `docs/ios-content.json`, `scripts/render_ios.py` |
 | Android pages | Android `docs/legal/android-content.json` | `docs/android-content.candidate.json`, `scripts/render_android.py` |
 | Import guide and downloads | `import/content.json` and templates | `scripts/render_import.py` |
@@ -18,20 +19,21 @@ exception must not be described as zero SDK traffic or copied into iOS policy.
 
 ## Locales and routes
 
-The shared platform chooser has Korean, English and Japanese panels. iOS privacy/support, Android
-pages and the supported import guide have 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT,
+The shared home, iOS privacy/support, Android pages and the import guide all use the same
+17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT,
 pl, sv, hi, pt-BR, ar, zh-Hans, zh-Hant and tr. In-app help supports that same locale set.
 
 Stable paths: `/`, `/privacy/`, `/support/`, `/android/`, `/android/privacy/`,
 `/android/support/` and `/import/`. Hashes choose locale, such as `/support/#ar`.
 Preserve Arabic RTL, distinct Portuguese/Chinese variants, keyboard focus and the no-JavaScript
-fallback. Do not reorder landing panels without checking the CSS sibling selectors.
+fallback. Every home guide/privacy/import link must retain its selected locale.
 
 ## Verify
 
 From this repository, substitute the actual neighboring checkout paths when necessary:
 
 ```bash
+python3 scripts/render_home.py --check
 python3 scripts/render_ios.py --check --catalog ../ios/DoseDay/Resources/Localizable.xcstrings
 python3 scripts/render_android.py --content ../android/docs/legal/android-content.json --check
 python3 scripts/render_import.py --check --require-all-locales
@@ -42,7 +44,7 @@ python3 scripts/check_site.py --release
 
 Shared typography uses relative sizes, gradual viewport scaling and natural CJK/connected-script
 spacing. Generated pages version the stylesheet by content hash; after a CSS change regenerate
-the pages and update the root index.html stylesheet query to the same hash.
+all pages, including the shared home. The site check rejects missing locales and stale output.
 
 Structural checks do not prove browser appearance, screen-reader use or native-speaker review.
 Keep those evidence categories distinct in [the current handoff](docs/CURRENT_HANDOFF.md).
