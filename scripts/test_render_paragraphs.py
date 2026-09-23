@@ -1,4 +1,10 @@
-"""Blank-line blocks in policy paragraphs and FAQ answers render as separate <p> elements."""
+"""Blank-line blocks in policy paragraphs and FAQ answers render as separate <p> elements.
+
+Also covers the readability rules: a single "\n" in a policy block renders as <br>, reviewed
+processor URLs may wrap after a path "/" and stay left-to-right in RTL text, an Android policy
+list follows the paragraph that introduces it, and the iOS deletion FAQ names the delete action
+once.
+"""
 
 import html
 import json
@@ -11,11 +17,40 @@ import render_ios
 
 PARAGRAPH = re.compile(r"<p>(.*?)</p>", flags=re.DOTALL)
 TAG = re.compile(r"<[^>]+>")
+POLICY_URLS = (
+    "https://privacy.google.com/businesses/processorsupport",
+    "https://datacenters.google/locations/",
+    "https://business.safety.google/adssubprocessors/",
+    "https://business.safety.google/adsprocessorterms/",
+)
+# settings.deleteAll in the iOS app catalog (apps/ios DoseDay/Resources/Localizable.xcstrings)
+IOS_DELETE_ALL_LABELS = {
+    "ko": "모든 로컬 기록 삭제",
+    "en": "Delete all local records",
+    "ja": "すべてのローカル記録を削除",
+    "de": "Alle lokalen Einträge löschen",
+    "fr": "Supprimer tous les enregistrements locaux",
+    "es": "Eliminar todos los registros locales",
+    "it": "Elimina tutte le registrazioni locali",
+    "nl": "Alle lokale registraties verwijderen",
+    "pt-PT": "Eliminar todos os registos locais",
+    "pl": "Usuń wszystkie lokalne wpisy",
+    "sv": "Radera alla lokala registreringar",
+    "hi": "सभी लोकल रिकॉर्ड हटाएँ",
+    "pt-BR": "Excluir todos os registros locais",
+    "ar": "حذف جميع السجلات المحلية",
+    "zh-Hans": "删除所有本地记录",
+    "zh-Hant": "刪除所有本機紀錄",
+    "tr": "Tüm yerel kayıtları sil",
+}
 
 
 def paragraph_texts(fragment: str) -> list[str]:
-    """Plain text of each <p>, with the renderer's inline markup removed and entities decoded."""
-    return [html.unescape(TAG.sub("", body)) for body in PARAGRAPH.findall(fragment)]
+    """Plain text of each <p>: <br> becomes the source "\\n", other inline markup is removed."""
+    return [
+        html.unescape(TAG.sub("", body.replace("<br>", "\n")))
+        for body in PARAGRAPH.findall(fragment)
+    ]
 
 
 def element(source: str, tag: str, identifier: str) -> str:
@@ -42,7 +77,8 @@ class ParagraphBlockTests(unittest.TestCase):
         rendered = render_android.render_policy_section("en", section)
         url = "https://datacenters.google/locations/"
         self.assertIn(
-            f'<div><p>x &lt; y</p><p><a href="{url}">{url}</a></p><p>single\nline</p></div>',
+            f'<div><p>x &lt; y</p><p><a href="{url}"><bdi dir="ltr">'
+            "https://datacenters.google/<wbr>locations/</bdi></a></p><p>single<br>line</p></div>",
             rendered,
         )
 
@@ -54,6 +90,46 @@ class ParagraphBlockTests(unittest.TestCase):
             "<div><p>A</p><p>B</p><ul><li>i</li></ul></div>",
             rendered,
         )
+
+    def test_android_list_follows_the_paragraph_that_introduces_it(self):
+        section = {
+            "id": "no-collection", "title": "T",
+            "paragraphs": ["Lead:", "Detail\n\nMore", "Last"], "items": ["i", "j"],
+        }
+        rendered = render_android.render_policy_section("en", section)
+        self.assertIn(
+            "<div><p>Lead:</p><ul><li>i</li><li>j</li></ul>"
+            "<p>Detail</p><p>More</p><p>Last</p></div>",
+            rendered,
+        )
+        without_items = {"id": "changes", "title": "T", "paragraphs": ["A", "B"]}
+        self.assertNotIn("<ul>", render_android.render_policy_section("en", without_items))
+
+    def test_single_newline_in_a_policy_block_is_a_line_break(self):
+        for module in (render_ios, render_android):
+            self.assertEqual(
+                module.privacy_paragraph("Contact us below.\nwonyoung@wonyoungchoi.dev"),
+                "Contact us below.<br>wonyoung@wonyoungchoi.dev",
+            )
+            self.assertEqual(module.privacy_paragraph("a < b"), "a &lt; b")
+
+    def test_reviewed_urls_wrap_only_after_path_slashes(self):
+        for module in (render_ios, render_android):
+            self.assertEqual(
+                module.breakable_url("https://privacy.google.com/businesses/processorsupport"),
+                "https://privacy.google.com/<wbr>businesses/<wbr>processorsupport",
+            )
+            self.assertEqual(
+                module.breakable_url("https://datacenters.google/locations/"),
+                "https://datacenters.google/<wbr>locations/",
+            )
+            for url in POLICY_URLS:
+                rendered = module.privacy_paragraph(f"See {url}")
+                self.assertEqual(rendered.count(f'<a href="{url}">'), 1, url)
+                link_text = re.search(r'<a [^>]*><bdi dir="ltr">(.*?)</bdi></a>', rendered).group(1)
+                self.assertEqual(link_text.replace("<wbr>", ""), url)
+                self.assertNotIn("://<wbr>", link_text)
+                self.assertFalse(link_text.endswith("<wbr>"), url)
 
     def test_ios_faq_blocks_keep_inline_markup_per_block(self):
         item = {
@@ -135,6 +211,47 @@ class GeneratedContentTests(unittest.TestCase):
                 self.assert_blocks(fragment, section["paragraphs"], identifier)
                 split_sections += any("\n\n" in text for text in section["paragraphs"])
         self.assertGreater(split_sections, 0)
+
+    def test_ios_contact_email_is_on_its_own_line(self):
+        email = self.ios["supportEmail"]
+        for locale in self.ios["localeOrder"]:
+            fragment = element(self.ios_privacy, "section", f"{locale}-contact")
+            self.assertEqual(fragment.count(f"<br>{email}</p>"), 1, locale)
+
+    def test_policy_urls_render_with_wrap_points_and_exact_text(self):
+        for page in (self.ios_privacy, self.android_privacy):
+            links = re.findall(r'<a href="(https://[^"]+)">(.*?)</a>', page)
+            policy_links = [(href, text) for href, text in links if href in POLICY_URLS]
+            self.assertEqual(len(policy_links), 4 * 17)
+            for href, text in policy_links:
+                self.assertTrue(text.startswith('<bdi dir="ltr">'), href)
+                self.assertIn("<wbr>", text)
+                self.assertEqual(TAG.sub("", text), href)
+
+    def test_android_lists_follow_their_lead_in_paragraph(self):
+        for locale, entry in self.android["locales"].items():
+            for section in entry["privacy"]["sections"]:
+                if not section.get("items"):
+                    continue
+                identifier = f"{locale}-{section['id']}"
+                body = element(self.android_privacy, "section", identifier).split("<div>", 1)[1]
+                lead = "".join(
+                    f"<p>{render_android.privacy_paragraph(block)}</p>"
+                    for block in render_android.paragraph_blocks(section["paragraphs"][0])
+                )
+                self.assertTrue(body.startswith(lead + "<ul>"), identifier)
+                self.assertEqual(body.count("<ul>"), 1, identifier)
+                self.assertEqual(body.count("<li>"), len(section["items"]), identifier)
+
+    def test_ios_deletion_faq_names_the_delete_action_once(self):
+        self.assertEqual(list(IOS_DELETE_ALL_LABELS), self.ios["localeOrder"])
+        for locale, label in IOS_DELETE_ALL_LABELS.items():
+            answers = self.ios["locales"][locale]["support"]["released"]["deletion"]["answers"]
+            self.assertEqual(len(answers), 2, locale)
+            text = " ".join(answers).casefold()
+            self.assertEqual(text.count(label.casefold()), 1, locale)
+            self.assertIn(label.casefold(), answers[0].casefold(), locale)
+            self.assertIn("iOS", answers[1].split("\n\n", 1)[0], locale)
 
     def test_android_support_answers(self):
         for locale, entry in self.android["locales"].items():

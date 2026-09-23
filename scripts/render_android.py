@@ -196,13 +196,24 @@ def paragraph_blocks(value: str) -> list[str]:
     """Split one source string into its blank-line ("\\n\\n") separated display paragraphs.
 
     Sources keep one string per policy paragraph or FAQ answer; each block renders as its own <p>.
-    A single "\\n" inside a block is left unchanged.
+    A single "\\n" inside a block is left in the block; privacy_paragraph renders it as <br>.
     """
     return value.split("\n\n")
 
 
+def breakable_url(safe_url: str) -> str:
+    """Link text for a long URL: allow a line break after each path "/" (never inside "://")."""
+    scheme, separator, rest = safe_url.partition("://")
+    return scheme + separator + re.sub(r"/(?=.)", "/<wbr>", rest)
+
+
 def privacy_paragraph(value: str) -> str:
-    """Keep policy text escaped; link only the reviewed processor-source URLs."""
+    """Keep policy text escaped; link only the reviewed processor-source URLs.
+
+    Link text is isolated left-to-right, so a trailing "/" stays at the end of the URL in RTL text.
+
+    A single "\\n" left inside a block is a line break within that paragraph, rendered as <br>.
+    """
     rendered = escaped(value)
     for url in (
         "https://privacy.google.com/businesses/processorsupport",
@@ -211,18 +222,22 @@ def privacy_paragraph(value: str) -> str:
         "https://business.safety.google/adsprocessorterms/",
     ):
         safe_url = escaped(url)
-        rendered = rendered.replace(safe_url, f'<a href="{safe_url}">{safe_url}</a>')
-    return rendered
+        rendered = rendered.replace(
+            safe_url,
+            f'<a href="{safe_url}"><bdi dir="ltr">{breakable_url(safe_url)}</bdi></a>',
+        )
+    return rendered.replace("\n", "<br>")
 
 
 def render_policy_section(locale: str, section: dict[str, object]) -> str:
+    """Render a policy section; its list follows the first paragraph, which introduces it."""
     body = []
-    for paragraph in section["paragraphs"]:
+    for index, paragraph in enumerate(section["paragraphs"]):
         for block in paragraph_blocks(paragraph):
             body.append(f"<p>{privacy_paragraph(block)}</p>")
-    if section.get("items"):
-        items = "".join(f"<li>{escaped(item)}</li>" for item in section["items"])
-        body.append(f"<ul>{items}</ul>")
+        if index == 0 and section.get("items"):
+            items = "".join(f"<li>{escaped(item)}</li>" for item in section["items"])
+            body.append(f"<ul>{items}</ul>")
     return (
         f'              <section id="{escaped(locale)}-{escaped(section["id"])}" class="policy-section">'
         + "<h2"

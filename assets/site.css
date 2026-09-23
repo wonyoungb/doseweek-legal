@@ -1131,7 +1131,7 @@ code {
 
 .home-simple :is(h1, h2, h3) { text-wrap: balance; }
 .home-simple :is(p, a) { overflow-wrap: anywhere; }
-[lang="ko"] :is(h1, h2, h3, p) { word-break: keep-all; overflow-wrap: anywhere; }
+[lang="ko"] :is(h1, h2, h3, p, li) { word-break: keep-all; overflow-wrap: anywhere; }
 [lang="ja"] :is(h1, h2, h3, p) { line-break: strict; word-break: normal; }
 .home-simple .platform-heading h3 { line-height: 1.4; letter-spacing: -0.015em; }
 .home-simple .hero-copy { line-height: 1.75; letter-spacing: normal; }

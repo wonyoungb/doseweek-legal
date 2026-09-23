@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 from pathlib import Path
 
 from site_assets import stylesheet_path
@@ -82,13 +83,25 @@ def paragraph_blocks(value: str) -> list[str]:
     """Split one source string into its blank-line ("\\n\\n") separated display paragraphs.
 
     Sources keep one string per policy section or FAQ answer; each block renders as its own <p>.
-    A single "\\n" inside a block is left unchanged.
+    A single "\\n" inside a block is left in the block; privacy_paragraph renders it as <br>.
     """
     return value.split("\n\n")
 
 
+def breakable_url(safe_url: str) -> str:
+    """Link text for a long URL: allow a line break after each path "/" (never inside "://")."""
+    scheme, separator, rest = safe_url.partition("://")
+    return scheme + separator + re.sub(r"/(?=.)", "/<wbr>", rest)
+
+
 def privacy_paragraph(value: str) -> str:
-    """Keep policy text escaped; link only the reviewed processor-source URLs."""
+    """Keep policy text escaped; link only the reviewed processor-source URLs.
+
+    Link text is isolated left-to-right, so a trailing "/" stays at the end of the URL in RTL text.
+
+    A single "\\n" left inside a block is a line break within that paragraph (the contact
+    sentence and its email address), so it renders as <br>.
+    """
     rendered = escaped(value)
     for url in (
         "https://privacy.google.com/businesses/processorsupport",
@@ -97,8 +110,11 @@ def privacy_paragraph(value: str) -> str:
         "https://business.safety.google/adsprocessorterms/",
     ):
         safe_url = escaped(url)
-        rendered = rendered.replace(safe_url, f'<a href="{safe_url}">{safe_url}</a>')
-    return rendered
+        rendered = rendered.replace(
+            safe_url,
+            f'<a href="{safe_url}"><bdi dir="ltr">{breakable_url(safe_url)}</bdi></a>',
+        )
+    return rendered.replace("\n", "<br>")
 
 
 def validate(content: dict) -> None:
