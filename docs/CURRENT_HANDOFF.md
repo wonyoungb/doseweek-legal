@@ -7,7 +7,7 @@ below are observations, not instructions to restart work.
 
 Current website candidate metadata: Android 1.0.0/code12; iOS 1.0.5 with future build17.
 At metadata preparation the iOS native source still used build16; root owns that final bump,
-build and upload. Both bundled food locks/manifests match release `7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6`; attribution text is unchanged.
+build and upload. Both bundled food locks/manifests match release `291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697`; attribution text is unchanged. The current bundle keeps 9,913 records and adds 17-language name support for 200 foods. Both platform help answers now describe offline search and the initial all-language search setting; native verification and publication remain separate. The four existing renderers regenerated all seven pages and `check_site.py --release` passed for this narrow update; only the two support pages changed.
 
 ## Current ownership and changes
 

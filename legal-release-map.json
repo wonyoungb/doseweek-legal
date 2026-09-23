@@ -75,7 +75,7 @@
     "pageWording": "format numbers are not printed on the pages because the integrator renumbers in merge order"
   },
   "foodData": {
-    "release": "Current candidate release 7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6; both app bundle locks and manifest hashes match; original provider attribution text unchanged",
+    "release": "Current candidate release 291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697; both app bundle locks and manifest hashes match; original provider attribution text unchanged",
     "bundledInCandidateApps": true,
     "providers": {
       "usda_fdc_foundation": "CC0 1.0, attribution requested",
@@ -87,12 +87,16 @@
     "attributionSource": "notices/NOTICE.txt of the release; the attribution lines and the MEXT change statement are kept verbatim in scripts/legal_release.py FOOD_DATA_ATTRIBUTIONS and required in both candidate policy sections",
     "sourceVerification": {
       "checkedOn": "2026-09-23",
-      "dataReleaseId": "7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6",
+      "dataReleaseId": "291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697",
       "iosLock": "../ios/DoseDay/Resources/FoodData/RELEASE_LOCK.json",
       "androidLock": "../android/app/src/main/assets/fooddata/RELEASE_LOCK.json",
-      "bothManifestSha256": "7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6",
+      "bothManifestSha256": "291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697",
       "bothNoticeSha256": "90589c656fa55e1cf732d06db15c150019c6b0b841d4de5ca7989a697cdb7d6b",
-      "scope": "Read-only lock/manifest/NOTICE parity and unchanged legal attribution strings; not a rerun of native food-data tests."
+      "scope": "Read-only comparison of both 22-file bundles, locks, manifest and NOTICE; 200 foods have names in 17 languages within the 9,913-record catalog. Legal attribution strings are unchanged. Native verification remains separate.",
+      "bothBundleFileCount": 22,
+      "bothBundleTotalBytes": 16008984,
+      "catalogRecordCount": 9913,
+      "foodNamesWith17LocaleSupport": 200
     }
   },
   "checks": {

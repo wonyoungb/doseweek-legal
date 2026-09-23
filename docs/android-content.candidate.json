@@ -256,7 +256,7 @@
             "question": "식사와 영양을 기록할 수 있나요?",
             "answers": [
               "Android 1.0.0 (versionCode 12): 아래 일곱 항목은 아직 출시되지 않은 후보 버전의 안내입니다. 현재 배포 버전에는 화면이나 동작이 없을 수 있습니다.",
-              "신체 탭의 '식사' 구역에서 직접 입력합니다. 음식 이름과 아는 총량(열량, 단백질, 탄수화물, 지방)을 넣고 모르는 값은 비워 두면 '모름'으로 남습니다. 한 끼에 최대 100개 항목, 즐겨찾기 1,000개까지 저장됩니다. 이 버전에는 음식 검색 데이터베이스가 없고, 기록은 기기에만 저장되며 암호화 백업에 포함됩니다. 식사 기록은 영양 상담이나 처방이 아닙니다."
+              "신체 탭의 '식사' 구역에서 직접 입력합니다. 음식 이름과 아는 총량(열량, 단백질, 탄수화물, 지방)을 넣고 모르는 값은 비워 두면 '모름'으로 남습니다. 한 끼에 최대 100개 항목, 즐겨찾기 1,000개까지 저장됩니다. 앱에 포함된 음식 목록에서 오프라인으로 검색할 수도 있어요. 목록에 있는 음식 중 200개는 이제 17개 언어 이름으로 찾을 수 있어요. 처음에는 지원하는 모든 언어로 검색하고, 설정에서 원하는 언어만 고를 수 있어요. 기록은 기기에만 저장되며 암호화 백업에 포함됩니다. 식사 기록은 영양 상담이나 처방이 아닙니다."
             ]
           },
           {
@@ -549,7 +549,7 @@
             "question": "Can I record meals and nutrition?",
             "answers": [
               "Android 1.0.0 (versionCode 12): these seven topics describe an unreleased candidate version. Screens and behavior may not be available in the currently released app.",
-              "In the Body tab, the Meals section takes what you type. Enter the food name and the totals you know (energy, protein, carbohydrate, fat) and leave anything you do not know blank; a blank value stays unknown. A meal holds up to 100 items and you can keep up to 1,000 favorites. This version has no food search database. Records stay on the device and travel in the encrypted backup. Meal records are not nutrition advice or a prescription."
+              "In the Body tab, the Meals section takes what you type. Enter the food name and the totals you know (energy, protein, carbohydrate, fat) and leave anything you do not know blank; a blank value stays unknown. A meal holds up to 100 items and you can keep up to 1,000 favorites. You can also search the built-in food list offline. You can now search for 200 foods in the list using names in 17 languages. Search starts with all supported languages; choose specific languages in Settings if you prefer. Records stay on the device and travel in the encrypted backup. Meal records are not nutrition advice or a prescription."
             ]
           },
           {
@@ -842,7 +842,7 @@
             "question": "食事や栄養を記録できますか？",
             "answers": [
               "Android 1.0.0 (versionCode 12): この7項目は、未公開の候補版に関する案内です。現在公開中のアプリでは、画面や動作を利用できない場合があります。",
-              "「からだ」タブの「食事」で手入力します。食品名と分かっている合計（エネルギー、たんぱく質、炭水化物、脂質）を入力し、分からない値は空欄のままにすると「不明」として残ります。1回の食事に最大100項目、お気に入りは最大1,000件まで保存できます。このバージョンに食品検索データベースはありません。記録は端末に保存され、暗号化バックアップに含まれます。食事の記録は栄養指導や処方ではありません。"
+              "「からだ」タブの「食事」で手入力します。食品名と分かっている合計（エネルギー、たんぱく質、炭水化物、脂質）を入力し、分からない値は空欄のままにすると「不明」として残ります。1回の食事に最大100項目、お気に入りは最大1,000件まで保存できます。アプリ内の食品一覧をオフラインで検索することもできます。一覧のうち200種類の食品は、17言語の名前で検索できるようになりました。初めはすべての対応言語で検索します。「設定」で使いたい言語だけを選べます。記録は端末に保存され、暗号化バックアップに含まれます。食事の記録は栄養指導や処方ではありません。"
             ]
           },
           {
@@ -1135,7 +1135,7 @@
             "question": "Kann ich Mahlzeiten und Nährwerte erfassen?",
             "answers": [
               "Android 1.0.0 (versionCode 12): Diese sieben Themen beschreiben eine noch nicht veröffentlichte Kandidatenversion. Die beschriebenen Bildschirme und Funktionen sind in der derzeit veröffentlichten App möglicherweise nicht vorhanden.",
-              "Im Tab „Körper“ nimmt der Bereich „Mahlzeiten“ Ihre Eingaben auf. Tragen Sie den Namen und die Ihnen bekannten Summen ein (Energie, Eiweiß, Kohlenhydrate, Fett) und lassen Sie Unbekanntes leer; ein leeres Feld bleibt unbekannt. Eine Mahlzeit fasst bis zu 100 Positionen, und Sie können bis zu 1.000 Favoriten speichern. Diese Version hat keine Lebensmittel-Suchdatenbank. Die Einträge bleiben auf dem Gerät und sind in der verschlüsselten Sicherung enthalten. Mahlzeiteneinträge sind keine Ernährungsberatung und keine Verordnung."
+              "Im Tab „Körper“ nimmt der Bereich „Mahlzeiten“ Ihre Eingaben auf. Tragen Sie den Namen und die Ihnen bekannten Summen ein (Energie, Eiweiß, Kohlenhydrate, Fett) und lassen Sie Unbekanntes leer; ein leeres Feld bleibt unbekannt. Eine Mahlzeit fasst bis zu 100 Positionen, und Sie können bis zu 1.000 Favoriten speichern. Sie können auch die integrierte Lebensmittelliste offline durchsuchen. Für 200 Lebensmittel aus der Liste können Sie jetzt Namen in 17 Sprachen suchen. Zu Beginn werden alle unterstützten Sprachen durchsucht; in den Einstellungen können Sie einzelne Sprachen auswählen. Die Einträge bleiben auf dem Gerät und sind in der verschlüsselten Sicherung enthalten. Mahlzeiteneinträge sind keine Ernährungsberatung und keine Verordnung."
             ]
           },
           {
@@ -1428,7 +1428,7 @@
             "question": "Puis-je enregistrer des repas et des apports ?",
             "answers": [
               "Android 1.0.0 (versionCode 12) : ces sept rubriques concernent une version candidate non publiée. Les écrans et les comportements décrits peuvent ne pas exister dans l’application actuellement publiée.",
-              "Dans l’onglet Corps, la section Repas enregistre ce que vous saisissez. Indiquez le nom de l’aliment et les totaux que vous connaissez (énergie, protéines, glucides, lipides) et laissez vide ce que vous ignorez : une valeur vide reste inconnue. Un repas contient jusqu’à 100 éléments et vous pouvez conserver jusqu’à 1 000 favoris. Cette version n’a pas de base de recherche d’aliments. Les enregistrements restent sur l’appareil et figurent dans la sauvegarde chiffrée. Un repas enregistré n’est ni un conseil nutritionnel ni une prescription."
+              "Dans l’onglet Corps, la section Repas enregistre ce que vous saisissez. Indiquez le nom de l’aliment et les totaux que vous connaissez (énergie, protéines, glucides, lipides) et laissez vide ce que vous ignorez : une valeur vide reste inconnue. Un repas contient jusqu’à 100 éléments et vous pouvez conserver jusqu’à 1 000 favoris. Vous pouvez aussi rechercher un aliment dans la liste intégrée, même hors ligne. Pour 200 aliments de la liste, vous pouvez désormais rechercher leur nom dans 17 langues. Au départ, la recherche utilise toutes les langues prises en charge ; vous pouvez en choisir certaines dans Réglages. Les enregistrements restent sur l’appareil et figurent dans la sauvegarde chiffrée. Un repas enregistré n’est ni un conseil nutritionnel ni une prescription."
             ]
           },
           {
@@ -1721,7 +1721,7 @@
             "question": "¿Puedo registrar comidas y nutrición?",
             "answers": [
               "Android 1.0.0 (versionCode 12): estos siete temas describen una versión candidata aún no publicada. Las pantallas y funciones descritas pueden no existir en la aplicación publicada actualmente.",
-              "En la pestaña Cuerpo, la sección Comidas recoge lo que usted escribe. Introduzca el nombre del alimento y los totales que conozca (energía, proteínas, carbohidratos, grasas) y deje en blanco lo que ignore: un valor vacío queda como desconocido. Una comida admite hasta 100 elementos y puede guardar hasta 1.000 favoritos. Esta versión no tiene base de búsqueda de alimentos. Los registros permanecen en el dispositivo y viajan en la copia de seguridad cifrada. Un registro de comida no es asesoramiento nutricional ni una prescripción."
+              "En la pestaña Cuerpo, la sección Comidas recoge lo que usted escribe. Introduzca el nombre del alimento y los totales que conozca (energía, proteínas, carbohidratos, grasas) y deje en blanco lo que ignore: un valor vacío queda como desconocido. Una comida admite hasta 100 elementos y puede guardar hasta 1.000 favoritos. También puede buscar en la lista de alimentos integrada sin conexión. La lista ahora ofrece nombres en 17 idiomas para 200 alimentos. Al principio se busca en todos los idiomas compatibles; puede elegir solo algunos en Ajustes. Los registros permanecen en el dispositivo y viajan en la copia de seguridad cifrada. Un registro de comida no es asesoramiento nutricional ni una prescripción."
             ]
           },
           {
@@ -2014,7 +2014,7 @@
             "question": "Posso registrare pasti e nutrienti?",
             "answers": [
               "Android 1.0.0 (versionCode 12): questi sette argomenti descrivono una versione candidata non ancora pubblicata. Le schermate e i comportamenti descritti potrebbero non essere presenti nell’app attualmente pubblicata.",
-              "Nella scheda Corpo, la sezione Pasti accoglie ciò che scrivi. Inserisci il nome dell’alimento e i totali che conosci (energia, proteine, carboidrati, grassi) e lascia vuoto ciò che non sai: un valore vuoto resta sconosciuto. Un pasto contiene fino a 100 voci e puoi conservare fino a 1.000 preferiti. Questa versione non ha un database di ricerca alimenti. Le registrazioni restano sul dispositivo e viaggiano nel backup crittografato. Una registrazione di un pasto non è una consulenza nutrizionale né una prescrizione."
+              "Nella scheda Corpo, la sezione Pasti accoglie ciò che scrivi. Inserisci il nome dell’alimento e i totali che conosci (energia, proteine, carboidrati, grassi) e lascia vuoto ciò che non sai: un valore vuoto resta sconosciuto. Un pasto contiene fino a 100 voci e puoi conservare fino a 1.000 preferiti. Puoi anche cercare nell’elenco di alimenti integrato senza connessione. Ora puoi cercare i nomi di 200 alimenti dell’elenco in 17 lingue. All’inizio la ricerca usa tutte le lingue supportate; puoi scegliere solo quelle che preferisci nelle Impostazioni. Le registrazioni restano sul dispositivo e viaggiano nel backup crittografato. Una registrazione di un pasto non è una consulenza nutrizionale né una prescrizione."
             ]
           },
           {
@@ -2307,7 +2307,7 @@
             "question": "Kan ik maaltijden en voeding vastleggen?",
             "answers": [
               "Android 1.0.0 (versionCode 12): deze zeven onderwerpen beschrijven een nog niet uitgebrachte kandidaatversie. De beschreven schermen en functies zijn mogelijk niet aanwezig in de nu uitgebrachte app.",
-              "In het tabblad Lichaam neemt het onderdeel Maaltijden op wat u typt. Vul de naam van het voedingsmiddel in en de totalen die u kent (energie, eiwit, koolhydraten, vet) en laat leeg wat u niet weet; een lege waarde blijft onbekend. Een maaltijd bevat maximaal 100 onderdelen en u kunt maximaal 1.000 favorieten bewaren. Deze versie heeft geen zoekdatabase voor voedingsmiddelen. Registraties blijven op het apparaat en reizen mee in de versleutelde back-up. Een maaltijdregistratie is geen voedingsadvies en geen voorschrift."
+              "In het tabblad Lichaam neemt het onderdeel Maaltijden op wat u typt. Vul de naam van het voedingsmiddel in en de totalen die u kent (energie, eiwit, koolhydraten, vet) en laat leeg wat u niet weet; een lege waarde blijft onbekend. Een maaltijd bevat maximaal 100 onderdelen en u kunt maximaal 1.000 favorieten bewaren. U kunt ook offline zoeken in de ingebouwde voedingsmiddelenlijst. Voor 200 voedingsmiddelen in de lijst kunt u nu op namen in 17 talen zoeken. Aanvankelijk worden alle ondersteunde talen doorzocht; in Instellingen kunt u specifieke talen kiezen. Registraties blijven op het apparaat en reizen mee in de versleutelde back-up. Een maaltijdregistratie is geen voedingsadvies en geen voorschrift."
             ]
           },
           {
@@ -2600,7 +2600,7 @@
             "question": "Posso registar refeições e nutrição?",
             "answers": [
               "Android 1.0.0 (versionCode 12): estes sete tópicos descrevem uma versão candidata ainda não publicada. Os ecrãs e comportamentos descritos podem não existir na aplicação atualmente publicada.",
-              "No separador Corpo, a secção Refeições recebe o que escrever. Introduza o nome do alimento e os totais que conhecer (energia, proteína, hidratos de carbono, gordura) e deixe em branco o que desconhecer: um valor vazio fica como desconhecido. Uma refeição admite até 100 itens e pode guardar até 1000 favoritos. Esta versão não tem base de pesquisa de alimentos. Os registos ficam no dispositivo e seguem na cópia de segurança encriptada. Um registo de refeição não é aconselhamento nutricional nem uma prescrição."
+              "No separador Corpo, a secção Refeições recebe o que escrever. Introduza o nome do alimento e os totais que conhecer (energia, proteína, hidratos de carbono, gordura) e deixe em branco o que desconhecer: um valor vazio fica como desconhecido. Uma refeição admite até 100 itens e pode guardar até 1000 favoritos. Também pode pesquisar na lista de alimentos incluída sem ligação à internet. Pode agora pesquisar os nomes de 200 alimentos da lista em 17 idiomas. Inicialmente, a pesquisa inclui todos os idiomas disponíveis; pode escolher apenas alguns nas Definições. Os registos ficam no dispositivo e seguem na cópia de segurança encriptada. Um registo de refeição não é aconselhamento nutricional nem uma prescrição."
             ]
           },
           {
@@ -2893,7 +2893,7 @@
             "question": "Czy mogę zapisywać posiłki i wartości odżywcze?",
             "answers": [
               "Android 1.0.0 (versionCode 12): te siedem tematów opisuje nieopublikowaną jeszcze wersję kandydującą. Opisane ekrany i funkcje mogą nie być dostępne w obecnie opublikowanej aplikacji.",
-              "Na karcie Ciało sekcja Posiłki przyjmuje to, co wpiszesz. Podaj nazwę produktu i znane sumy (energia, białko, węglowodany, tłuszcz), a nieznane pozostaw puste — puste pole pozostaje nieznane. Posiłek mieści do 100 pozycji, a ulubionych możesz zapisać do 1000. Ta wersja nie ma bazy wyszukiwania produktów. Zapisy pozostają na urządzeniu i trafiają do zaszyfrowanej kopii zapasowej. Zapis posiłku nie jest poradą żywieniową ani zaleceniem lekarskim."
+              "Na karcie Ciało sekcja Posiłki przyjmuje to, co wpiszesz. Podaj nazwę produktu i znane sumy (energia, białko, węglowodany, tłuszcz), a nieznane pozostaw puste — puste pole pozostaje nieznane. Posiłek mieści do 100 pozycji, a ulubionych możesz zapisać do 1000. Możesz też przeszukiwać wbudowaną listę produktów bez połączenia z internetem. Nazwy 200 produktów z listy można teraz wyszukiwać w 17 językach. Początkowo wyszukiwanie obejmuje wszystkie obsługiwane języki; wybrane języki możesz ustawić w Ustawieniach. Zapisy pozostają na urządzeniu i trafiają do zaszyfrowanej kopii zapasowej. Zapis posiłku nie jest poradą żywieniową ani zaleceniem lekarskim."
             ]
           },
           {
@@ -3186,7 +3186,7 @@
             "question": "Kan jag registrera måltider och näring?",
             "answers": [
               "Android 1.0.0 (versionCode 12): de här sju ämnena beskriver en ännu inte släppt kandidatversion. Skärmar och funktioner som beskrivs kan saknas i den app som är släppt i dag.",
-              "På fliken Kropp tar avsnittet Måltider emot det du skriver. Ange livsmedlets namn och de summor du känner till (energi, protein, kolhydrater, fett) och lämna det du inte vet tomt; ett tomt värde förblir okänt. En måltid rymmer upp till 100 poster och du kan spara upp till 1 000 favoriter. Den här versionen har ingen sökdatabas för livsmedel. Posterna stannar på enheten och följer med i den krypterade säkerhetskopian. En måltidspost är varken kostrådgivning eller en ordination."
+              "På fliken Kropp tar avsnittet Måltider emot det du skriver. Ange livsmedlets namn och de summor du känner till (energi, protein, kolhydrater, fett) och lämna det du inte vet tomt; ett tomt värde förblir okänt. En måltid rymmer upp till 100 poster och du kan spara upp till 1 000 favoriter. Du kan också söka i den inbyggda livsmedelslistan utan nätanslutning. För 200 av livsmedlen i listan finns nu sökbara namn på 17 språk. Från början söker appen på alla språk som stöds; du kan välja vissa språk i Inställningar. Posterna stannar på enheten och följer med i den krypterade säkerhetskopian. En måltidspost är varken kostrådgivning eller en ordination."
             ]
           },
           {
@@ -3479,7 +3479,7 @@
             "question": "क्या मैं भोजन और पोषण दर्ज कर सकता/सकती हूँ?",
             "answers": [
               "Android 1.0.0 (versionCode 12): ये सात विषय अभी जारी नहीं किए गए परीक्षण संस्करण के बारे में हैं। बताए गए स्क्रीन और सुविधाएँ फ़िलहाल जारी ऐप में उपलब्ध न हों, यह संभव है।",
-              "‘शरीर’ टैब के ‘भोजन’ भाग में आप स्वयं लिखते हैं। खाद्य पदार्थ का नाम और जो कुल मान आपको ज्ञात हैं (ऊर्जा, प्रोटीन, कार्बोहाइड्रेट, वसा) दर्ज करें और अज्ञात मान खाली छोड़ दें; खाली मान अज्ञात ही रहता है। एक भोजन में अधिकतम 100 प्रविष्टियाँ और 1,000 तक पसंदीदा सहेजे जा सकते हैं। इस संस्करण में खाद्य खोज डेटाबेस नहीं है। रिकॉर्ड डिवाइस पर रहते हैं और एन्क्रिप्टेड बैकअप में जाते हैं। भोजन का रिकॉर्ड पोषण-सलाह या पर्चा नहीं है।"
+              "‘शरीर’ टैब के ‘भोजन’ भाग में आप स्वयं लिखते हैं। खाद्य पदार्थ का नाम और जो कुल मान आपको ज्ञात हैं (ऊर्जा, प्रोटीन, कार्बोहाइड्रेट, वसा) दर्ज करें और अज्ञात मान खाली छोड़ दें; खाली मान अज्ञात ही रहता है। एक भोजन में अधिकतम 100 प्रविष्टियाँ और 1,000 तक पसंदीदा सहेजे जा सकते हैं। आप ऐप में दी गई खाद्य सूची में ऑफ़लाइन खोज भी कर सकते हैं। सूची के 200 खाद्य पदार्थों के नाम अब 17 भाषाओं में खोजे जा सकते हैं। शुरुआत में सभी समर्थित भाषाओं में खोज होती है; सेटिंग में आप अपनी पसंद की भाषाएँ चुन सकते हैं। रिकॉर्ड डिवाइस पर रहते हैं और एन्क्रिप्टेड बैकअप में जाते हैं। भोजन का रिकॉर्ड पोषण-सलाह या पर्चा नहीं है।"
             ]
           },
           {
@@ -3772,7 +3772,7 @@
             "question": "Posso registrar refeições e nutrição?",
             "answers": [
               "Android 1.0.0 (versionCode 12): estes sete tópicos descrevem uma versão candidata ainda não publicada. As telas e os comportamentos descritos podem não existir no app publicado atualmente.",
-              "Na aba Corpo, a seção Refeições recebe o que você digita. Informe o nome do alimento e os totais que você souber (energia, proteína, carboidrato, gordura) e deixe em branco o que não souber: um valor vazio permanece desconhecido. Uma refeição comporta até 100 itens e você pode guardar até 1.000 favoritos. Esta versão não tem banco de busca de alimentos. Os registros ficam no aparelho e vão no backup criptografado. Um registro de refeição não é orientação nutricional nem prescrição."
+              "Na aba Corpo, a seção Refeições recebe o que você digita. Informe o nome do alimento e os totais que você souber (energia, proteína, carboidrato, gordura) e deixe em branco o que não souber: um valor vazio permanece desconhecido. Uma refeição comporta até 100 itens e você pode guardar até 1.000 favoritos. Você também pode pesquisar na lista de alimentos do app sem conexão. Agora você pode pesquisar os nomes de 200 alimentos da lista em 17 idiomas. No início, a busca inclui todos os idiomas disponíveis; você pode escolher apenas alguns nas Configurações. Os registros ficam no aparelho e vão no backup criptografado. Um registro de refeição não é orientação nutricional nem prescrição."
             ]
           },
           {
@@ -4065,7 +4065,7 @@
             "question": "هل يمكنني تسجيل الوجبات والتغذية؟",
             "answers": [
               "Android 1.0.0 (versionCode 12): تصف هذه المواضيع السبعة إصدارًا مرشحًا لم يُطرح بعد. قد لا تتوفر الشاشات والوظائف الموصوفة في التطبيق المنشور حاليًا.",
-              "في تبويب الجسم يستقبل قسم الوجبات ما تكتبه. أدخل اسم الطعام والمجاميع التي تعرفها (الطاقة والبروتين والكربوهيدرات والدهون) واترك ما لا تعرفه فارغًا؛ فالقيمة الفارغة تبقى غير معروفة. تتسع الوجبة لما يصل إلى 100 عنصر، ويمكنك حفظ ما يصل إلى 1,000 مفضّلة. لا يتضمن هذا الإصدار قاعدة بيانات للبحث عن الأطعمة. تبقى السجلات على الجهاز وتُدرج في النسخة الاحتياطية المشفّرة. وسجل الوجبة ليس إرشادًا غذائيًا ولا وصفة."
+              "في تبويب الجسم يستقبل قسم الوجبات ما تكتبه. أدخل اسم الطعام والمجاميع التي تعرفها (الطاقة والبروتين والكربوهيدرات والدهون) واترك ما لا تعرفه فارغًا؛ فالقيمة الفارغة تبقى غير معروفة. تتسع الوجبة لما يصل إلى 100 عنصر، ويمكنك حفظ ما يصل إلى 1,000 مفضّلة. يمكنك أيضًا البحث في قائمة الأطعمة المدمجة دون اتصال بالإنترنت. يمكنك الآن البحث بأسماء 200 طعام من القائمة بـ17 لغة. يبدأ البحث بجميع اللغات المدعومة، ويمكنك اختيار لغات محددة من الإعدادات. تبقى السجلات على الجهاز وتُدرج في النسخة الاحتياطية المشفّرة. وسجل الوجبة ليس إرشادًا غذائيًا ولا وصفة."
             ]
           },
           {
@@ -4358,7 +4358,7 @@
             "question": "可以记录用餐和营养吗？",
             "answers": [
               "Android 1.0.0 (versionCode 12): 这七项内容是尚未发布的候选版本说明。当前已发布的应用可能尚不提供所述界面或功能。",
-              "在“身体”标签页的“用餐”部分手动输入。填写食物名称与您已知的合计（能量、蛋白质、碳水化合物、脂肪），不知道的留空即保持为未知。一餐最多 100 个条目，收藏最多 1,000 条。本版本没有食物搜索数据库。记录仅保存在设备上，并随加密备份一同保存。用餐记录不是营养建议，也不是处方。"
+              "在“身体”标签页的“用餐”部分手动输入。填写食物名称与您已知的合计（能量、蛋白质、碳水化合物、脂肪），不知道的留空即保持为未知。一餐最多 100 个条目，收藏最多 1,000 条。也可以离线搜索应用内置的食物列表。现在可以用17种语言搜索列表中200种食物的名称。初次使用时会搜索所有支持的语言，也可以在“设置”中只选想用的语言。记录仅保存在设备上，并随加密备份一同保存。用餐记录不是营养建议，也不是处方。"
             ]
           },
           {
@@ -4651,7 +4651,7 @@
             "question": "可以記錄用餐與營養嗎？",
             "answers": [
               "Android 1.0.0 (versionCode 12): 這七項內容是尚未發布的候選版本說明。目前已發布的 App 可能尚未提供所述畫面或功能。",
-              "在「身體」分頁的「用餐」區塊手動輸入。填寫食物名稱與您已知的合計（熱量、蛋白質、碳水化合物、脂肪），不知道的留白即維持未知。一餐最多 100 個項目，我的最愛最多 1,000 筆。本版本沒有食品搜尋資料庫。紀錄只保存在裝置上，並隨加密備份一併保存。用餐紀錄不是營養建議，也不是處方。"
+              "在「身體」分頁的「用餐」區塊手動輸入。填寫食物名稱與您已知的合計（熱量、蛋白質、碳水化合物、脂肪），不知道的留白即維持未知。一餐最多 100 個項目，我的最愛最多 1,000 筆。也可以離線搜尋 App 內建的食物列表。現在可以用17種語言搜尋列表中200種食物的名稱。初次使用時會搜尋所有支援的語言，也可以在「設定」中只選想用的語言。紀錄只保存在裝置上，並隨加密備份一併保存。用餐紀錄不是營養建議，也不是處方。"
             ]
           },
           {
@@ -4944,7 +4944,7 @@
             "question": "Öğünleri ve besin değerlerini kaydedebilir miyim?",
             "answers": [
               "Android 1.0.0 (versionCode 12): Bu yedi konu, henüz yayımlanmamış bir aday sürümü açıklar. Anlatılan ekranlar ve işlevler şu anda yayımlanan uygulamada bulunmayabilir.",
-              "Vücut sekmesindeki Öğünler bölümü yazdıklarınızı alır. Besinin adını ve bildiğiniz toplamları (enerji, protein, karbonhidrat, yağ) girin, bilmediklerinizi boş bırakın; boş değer bilinmeyen olarak kalır. Bir öğün en fazla 100 kalem alır ve en fazla 1.000 sık kullanılan kaydedebilirsiniz. Bu sürümde besin arama veritabanı yoktur. Kayıtlar cihazda kalır ve şifreli yedekle birlikte taşınır. Öğün kaydı beslenme tavsiyesi ya da reçete değildir."
+              "Vücut sekmesindeki Öğünler bölümü yazdıklarınızı alır. Besinin adını ve bildiğiniz toplamları (enerji, protein, karbonhidrat, yağ) girin, bilmediklerinizi boş bırakın; boş değer bilinmeyen olarak kalır. Bir öğün en fazla 100 kalem alır ve en fazla 1.000 sık kullanılan kaydedebilirsiniz. Yerleşik besin listesinde çevrimdışı arama da yapabilirsiniz. Listedeki 200 besini artık 17 dilde adlarıyla arayabilirsiniz. Arama başlangıçta desteklenen tüm dilleri kullanır; Ayarlar’dan istediğiniz dilleri seçebilirsiniz. Kayıtlar cihazda kalır ve şifreli yedekle birlikte taşınır. Öğün kaydı beslenme tavsiyesi ya da reçete değildir."
             ]
           },
           {

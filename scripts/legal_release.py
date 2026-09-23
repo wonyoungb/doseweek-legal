@@ -53,12 +53,12 @@ def require_release_date() -> str:
 
 
 # Food data bundled with the second release (owner decision NUTRITION-CATALOG-RELEASE-20260917):
-# Integrated candidate food release (reviewed alias update; attribution text unchanged):
-# 7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6, notices/NOTICE.txt. The
+# Integrated candidate food release (200 foods with 17-language names; attribution unchanged):
+# 291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697, notices/NOTICE.txt. The
 # attribution lines (and the MEXT change statement that MEXT requires for edited data) are legal
 # notices, so both candidate policy sections carry them verbatim, in their source language, in
 # every locale.
-FOOD_DATA_RELEASE_ID = "7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6"
+FOOD_DATA_RELEASE_ID = "291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697"
 FOOD_DATA_ATTRIBUTIONS = (
     "U.S. Department of Agriculture, Agricultural Research Service. FoodData Central: "
     "Foundation Foods, April 2026 bulk release. https://fdc.nal.usda.gov/",
