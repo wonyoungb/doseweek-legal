@@ -6,14 +6,23 @@ Read one relevant source; historical plans do not override current contracts.
 
 ## Current sources
 
-- [Release map](../legal-release-map.json): catalog provenance and release decisions.
+- [Release map](../legal-release-map.json): website-source provenance and release decisions.
 - [Release-date contract](../scripts/legal_release.py): effective date and publication gate.
-- [iOS catalog mirror](ios-content.json) and [iOS renderer](../scripts/render_ios.py).
-- [Android catalog mirror](android-content.candidate.json) and [Android renderer](../scripts/render_android.py).
+- [iOS website policy/support source](ios-content.json) and [iOS renderer](../scripts/render_ios.py).
+- [Android website policy/page source](android-content.candidate.json) and [Android renderer](../scripts/render_android.py).
+- [Help navigation and short steps](help-navigation.json), [home copy](home-content.json)
+  and [home renderer](../scripts/render_home.py).
+- [Import guide source](../import/content.json) and [import renderer](../scripts/render_import.py).
 - [Site checks](../scripts/check_site.py): generated content, links and release consistency.
+- [Analytics operations](ANALYTICS_OPERATIONS.md): private monthly export preparation,
+  retention review and the separate user-deletion procedure; no live execution implied.
 
-App catalogs own substantive privacy wording. The product README lists the exact validation
-commands and upstream source paths. CHANGELOG records history, not the current store version.
+The website owns the full policies; apps retain required consent and minimum instructions.
+The product README lists validation commands using these local sources. Legacy app-policy
+copies are not inputs for new website edits. CHANGELOG records history, not the current store version.
+Use the operator guide for credentials, commands and activation steps rather than copying them
+into public pages. The current handoff separates local verification, live-page observations,
+store drafts and publication receipts.
 
 ## Historical references
 

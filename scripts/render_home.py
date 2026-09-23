@@ -9,6 +9,7 @@ from string import Template
 
 from render_android import escaped, language_navigation, skip_links
 from site_assets import stylesheet_path
+from help_navigation import COPY as HELP_COPY, task_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 FIELDS = (
@@ -31,28 +32,12 @@ def rendered() -> str:
         direction = ios["locales"][locale]["direction"]
         privacy = escaped(android["locales"][locale]["home"]["privacyLinkTitle"])
         medical = policy["medicalDisclaimer"]
-        cards = []
-        for platform, version, icon, route in (
-            ("ios", ios["bundleVersion"], "app-icon.png", ""),
-            ("android", android["versionName"], "android-app-icon.png", "android/"),
-        ):
-            label = "iOS" if platform == "ios" else "Android"
-            cards.append(f'''          <section class="info-card platform-card" aria-labelledby="{locale}-{platform}">
-            <div class="platform-heading"><img src="assets/{icon}" alt="" width="48" height="48"><div><p class="platform-version">{label} {escaped(version)} · {c['guide']}</p><h3 id="{locale}-{platform}">{c[platform+'Title']}</h3></div></div>
-            <p>{c[platform+'Body']}</p>
-            <div class="button-row"><a class="button primary" href="{route}support/#{locale}">{c['openGuide']}</a><a class="button" href="{route}privacy/#{locale}">{privacy}</a></div>
-          </section>''')
         panels.append(f'''      <article id="{locale}" class="language-panel" lang="{locale}" dir="{direction}" data-language="{locale}" data-document-title="DoseWeek — {c['title']}" aria-labelledby="{locale}-title">
         <div id="{locale}-content" tabindex="-1" data-skip-target>
-          <header class="hero home-hero"><p class="eyebrow">DoseWeek</p><h1 id="{locale}-title">{c['title']}</h1><p class="hero-copy">{c['intro']}</p></header>
-          <section class="content-section home-platforms" aria-labelledby="{locale}-choose">
-            <h2 id="{locale}-choose">{c['choose']}</h2>
-            <div class="card-grid platform-grid">
-{chr(10).join(cards)}
-            </div>
-          </section>
-          <section class="home-transfer" aria-labelledby="{locale}-transfer"><div><h2 id="{locale}-transfer">{c['transferTitle']}</h2><p>{c['transferBody']}</p></div><a class="button" href="import/#{locale}">{c['importGuide']}</a></section>
-          <p class="quiet-note home-note">{c['privacyNote']}</p>
+          <header class="hero home-hero help-home-hero"><p class="eyebrow">DoseWeek · iPhone / iPad</p><h1 id="{locale}-title">{c['guide']}</h1><p class="hero-copy">{c['iosBody']}</p></header>
+          {task_cards(locale, 'support/', 'import/')}
+          <a class="help-privacy" href="privacy/#{locale}"><strong>{privacy}</strong><span>{escaped(HELP_COPY[locale]['privacyBody'])}</span></a>
+          <a class="help-platform" href="android/#{locale}">{c['androidTitle']} <span aria-hidden="true">{"←" if direction == "rtl" else "→"}</span></a>
           <p class="quiet-note home-note">{escaped(medical['body'])} {escaped(medical['notAMedicalDevice'])}</p>
         </div>
       </article>''')

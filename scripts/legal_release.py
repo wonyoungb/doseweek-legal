@@ -5,13 +5,12 @@ final builds/signing. Upload those immutable artifacts to both stores, then publ
 the site after both uploads are accepted. A policy date is not proof of app availability.
 This supersedes the 2026-09-17 after-upload date order and avoids duplicate signing.
 
-When the release step sets it to an ISO date (`YYYY-MM-DD`), the same change must also set:
+Owner instruction 2026-09-23 makes the website the full-policy source. App consent notices and
+minimum instructions remain native, but full-policy app-catalog parity is retired. Setting an
+ISO date (`YYYY-MM-DD`) must align these website fields:
 
-- `docs/ios-content.json` `effectiveDate`, and every locale's `privacy.effectiveDate`, which is
-  mirrored verbatim from `privacy.effectiveDate` in the iOS app catalog (the app catalog must carry
-  the same date, or `render_ios.py --check --catalog` fails);
-- `docs/android-content.candidate.json` `effectiveDate`, with the same bytes adopted by
-  `DoseweekPlayStore/docs/legal/android-content.json`;
+- `docs/ios-content.json` `effectiveDate` and every locale's `privacy.effectiveDate`;
+- `docs/android-content.candidate.json` `effectiveDate`;
 - the sentence in both candidate policy sections that says the effective date is set when the
   version is released;
 - `effectiveDateDecision` for both platforms in `legal-release-map.json`.
@@ -24,7 +23,7 @@ from __future__ import annotations
 import datetime
 
 # Owner-approved order: fix the policy date before final build and signing.
-SECOND_RELEASE_EFFECTIVE_DATE: str | None = "2026-09-22"
+SECOND_RELEASE_EFFECTIVE_DATE: str | None = "2026-09-23"
 
 # Effective dates of the policies that are live now (main 8a615a1).
 CURRENT_IOS_EFFECTIVE_DATE = "2026-08-22"
@@ -55,11 +54,11 @@ def require_release_date() -> str:
 
 # Food data bundled with the second release (owner decision NUTRITION-CATALOG-RELEASE-20260917):
 # Integrated candidate food release (reviewed alias update; attribution text unchanged):
-# 680bce02fff6f08ab25e27b18caef32f0b978becaec13fa4e7e97e349e0f387b, notices/NOTICE.txt. The
+# 7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6, notices/NOTICE.txt. The
 # attribution lines (and the MEXT change statement that MEXT requires for edited data) are legal
 # notices, so both candidate policy sections carry them verbatim, in their source language, in
 # every locale.
-FOOD_DATA_RELEASE_ID = "680bce02fff6f08ab25e27b18caef32f0b978becaec13fa4e7e97e349e0f387b"
+FOOD_DATA_RELEASE_ID = "7df0320bb6f46a59392e5669621ce9da1d48122d84aac2790dd5bedb84ecdcb6"
 FOOD_DATA_ATTRIBUTIONS = (
     "U.S. Department of Agriculture, Agricultural Research Service. FoodData Central: "
     "Foundation Foods, April 2026 bulk release. https://fdc.nal.usda.gov/",

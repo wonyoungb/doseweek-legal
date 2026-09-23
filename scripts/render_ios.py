@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Render the iOS public privacy policy from the vendored iOS legal catalog.
+"""Render iOS policy/support from the website-owned docs/ios-content.json.
 
-`docs/ios-content.json` mirrors the iOS app catalog
-(`DoseDay/Resources/Localizable.xcstrings`) verbatim for every policy string, plus the
-repository-local second-release candidate section. Pass `--catalog` to prove the mirror,
-which is what `check_site.py --catalog` does.
+Apps retain required consent and minimum instructions; full website policies are no longer
+copied into app catalogs. --catalog is an explicit legacy comparison for historical inputs,
+not the current website release gate.
 """
 
 from __future__ import annotations
@@ -15,6 +14,7 @@ import json
 from pathlib import Path
 
 from site_assets import stylesheet_path
+from help_navigation import support_start
 
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
@@ -65,7 +65,7 @@ CANDIDATE_SECTION_ID = "next-release"
 # stage-2 release ships as iOS 1.0.5. Every candidate notice (five bugfix-candidate answers, seven
 # second-release answers and the candidate policy section) names that marketing version, and the
 # page eyebrow and footer carry it too. No notice names a build: the store build number is chosen
-# at upload, and build 16 has never been uploaded.
+# for the final artifact. Candidate build planning and actual upload state live in the release map.
 CANDIDATE_VERSION = "1.0.5"
 PAGE_VERSION = "1.0.5"
 CATALOG_KEYS = {
@@ -76,6 +76,20 @@ CATALOG_KEYS = {
 
 def escaped(value: object) -> str:
     return html.escape(str(value), quote=True)
+
+
+def privacy_paragraph(value: str) -> str:
+    """Keep policy text escaped; link only the reviewed processor-source URLs."""
+    rendered = escaped(value)
+    for url in (
+        "https://privacy.google.com/businesses/processorsupport",
+        "https://datacenters.google/locations/",
+        "https://business.safety.google/adssubprocessors/",
+        "https://business.safety.google/adsprocessorterms/",
+    ):
+        safe_url = escaped(url)
+        rendered = rendered.replace(safe_url, f'<a href="{safe_url}">{safe_url}</a>')
+    return rendered
 
 
 def validate(content: dict) -> None:
@@ -198,7 +212,7 @@ def validate_support(locale: str, support: dict) -> None:
 
 
 def catalog_parity(content: dict, catalog_path: Path) -> None:
-    """Every policy string except the repository-local candidate section is verbatim."""
+    """Legacy diagnostic for a historical policy and its matching app catalog."""
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))["strings"]
 
     def value(key: str, locale: str) -> str:
@@ -245,8 +259,11 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         f'              <section id="{escaped(locale)}-{escaped(section["id"])}" '
         f'class="policy-section"'
         + (' data-release-status="candidate"' if section["id"] == CANDIDATE_SECTION_ID else "")
-        + f'><h2>{escaped(section["title"])}</h2><div>'
-        + "".join(f"<p>{escaped(paragraph)}</p>" for paragraph in section["paragraphs"])
+        + "><h2"
+        + (f' id="{escaped(locale)}-analytics-overseas-transfer" data-skip-target tabindex="-1"'
+           if section["id"] == "tracking" else "")
+        + f'>{escaped(section["title"])}</h2><div>'
+        + "".join(f"<p>{privacy_paragraph(paragraph)}</p>" for paragraph in section["paragraphs"])
         + "</div></section>"
         for section in privacy["sections"]
     )
@@ -270,15 +287,20 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         </article>"""
 
 
-def faq_answer(text: str) -> str:
+def faq_answer(text: str, locale: str) -> str:
     """Escape an answer and wrap the on-device model name in <code>, as the published page did."""
     escaped_text = escaped(text)
-    return escaped_text.replace(AI_MODEL_TOKEN, f"<code>{AI_MODEL_TOKEN}</code>")
+    escaped_text = escaped_text.replace(AI_MODEL_TOKEN, f"<code>{AI_MODEL_TOKEN}</code>")
+    import_guide = "doseweek-legal.wonyoungchoi.dev/import/"
+    return escaped_text.replace(
+        import_guide,
+        f'<a href="../import/#{escaped(locale)}"><bdi dir="ltr">{import_guide}</bdi></a>',
+    )
 
 
 def faq_details(locale: str, identifier: str, item: dict, candidate: bool) -> str:
     status = ' data-release-status="candidate"' if candidate else ""
-    answers = "".join(f"<p>{faq_answer(answer)}</p>" for answer in item["answers"])
+    answers = "".join(f"<p>{faq_answer(answer, locale)}</p>" for answer in item["answers"])
     return (
         f'              <details id="{escaped(locale)}-{escaped(identifier)}"{status}>'
         f'<summary><span>{escaped(item["question"])}</span>'
@@ -312,6 +334,8 @@ def support_panel(locale: str, entry: dict, bundle_version: str, email: str) -> 
             <h1 id="{escaped(locale)}-content" data-skip-target tabindex="-1">{escaped(labels['title'])}</h1>
             <p class="hero-copy">{escaped(labels['lead'])}</p>
           </header>
+
+          {support_start(locale, '../', '../import/', '../privacy/', privacy_title)}
 
           <section class="content-section" aria-labelledby="{escaped(locale)}-before-email">
             <div class="section-heading"><p class="section-kicker">{escaped(labels['beforeEmailKicker'])}</p><h2 id="{escaped(locale)}-before-email">{escaped(labels['beforeEmailTitle'])}</h2></div>
@@ -504,7 +528,7 @@ def main() -> None:
     parser.add_argument(
         "--catalog",
         type=Path,
-        help="optional path to DoseDay/Resources/Localizable.xcstrings for verbatim parity",
+        help="legacy diagnostic: compare a matching historical app policy; not a current website gate",
     )
     arguments = parser.parse_args()
 
