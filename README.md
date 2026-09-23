@@ -24,6 +24,17 @@ retained during the UI transition and are not upstream sources for website edits
 Android's consented food-label ML Kit diagnostics exception must not be described as zero SDK
 traffic or copied into iOS policy.
 
+## Brand assets
+
+`assets/app-icon.png` comes from an actual Icon Composer Default render of the iOS
+`DoseDay/Resources/AppIcon.icon` package; its system corner mask is already present.
+`assets/android-app-icon.png` is the exact full-square Play PNG. Both show the same
+original five-layer syringe geometry. Android uses static frosted gradients and depth,
+not Apple runtime Liquid Glass. The release-workspace brand generator updates these
+files explicitly; ordinary page rendering does not copy a new icon into the website.
+Retain source/output hashes and verify the platform copies before publication. A local
+asset change is not a deployed website or store-listing update.
+
 ## Locales and routes
 
 The shared home, iOS privacy/support, Android pages and the import guide all use the same

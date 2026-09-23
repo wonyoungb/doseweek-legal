@@ -5,9 +5,20 @@ execution, store state and publication decisions belong to the release owner's
 [handoff](../../CURRENT_HANDOFF.md) and [journal](../../release-journal.json). Historical blocks
 below are observations, not instructions to restart work.
 
-Current website candidate metadata: Android 1.0.0/code12; iOS 1.0.5 with future build17.
-At metadata preparation the iOS native source still used build16; root owns that final bump,
-build and upload. Both bundled food locks/manifests match release `291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697`; attribution text is unchanged. The current bundle keeps 9,913 records and adds 17-language name support for 200 foods. Both platform help answers now describe offline search and the initial all-language search setting; native verification and publication remain separate. The four existing renderers regenerated all seven pages and `check_site.py --release` passed for this narrow update; only the two support pages changed.
+Current website candidate metadata remains Android 1.0.0/code12 and iOS 1.0.5/build17;
+the release owner records actual native build/upload status. Both bundled food locks/manifests
+match release `291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697`.
+The 9,913-record catalog includes 200 foods with names in 17 languages. Both help pages describe
+offline search, the initial all-language search and the language setting; attribution is unchanged.
+The committed food/help update regenerated seven pages and passed `check_site.py --release`.
+
+The reviewed brand update changes README and two platform icon PNGs to use the original
+five-layer syringe from `../ios/DoseDay/Resources/AppIcon.icon`. The iOS web PNG matches its
+Icon Composer marketing export; the Android web PNG matches the Play PNG. Both match the current
+brand manifest. This review changed only this handoff, four current catalog hash fields and
+the iOS candidate note in `legal-release-map.json`. Root confirms source17 and a compiled Debug
+simulator build17; final Release archive/export/upload remain pending, and ASC build16 is a
+separate prior candidate. Candidate identifiers, publication fields and all seven HTML files are preserved.
 
 ## Current ownership and changes
 
@@ -32,14 +43,20 @@ continue release work. An unchecked amendment checkbox alone does not establish 
 
 ## Evidence and reuse
 
-- [Final candidate review](../../evidence/lean-20260923/legal-final-review-20260923/receipt.json):
-  all four renderers and strict seven-page release check pass with Android code12. The stage
-  allowlist and PR draft are prepared, not staged or submitted.
+- [Current local visual and metadata review](../../evidence/lean-20260923/legal-help-brand-visual-20260923/receipt.json):
+  both support pages at 320px, all 34 locale answers match source and fit horizontally;
+  Korean light and Arabic RTL dark screenshots show the changed copy and current brand.
+  All 284 declared local links/assets/anchors resolve. Four stale catalog hashes were corrected
+  with a focused validator; the iOS source/Debug17 note was also reconciled with root readback.
+  No renderer rerun was needed. Initial collapsed-FAQ observations,
+  a locator timeout and the corrected bundle-path check are retained separately from PASS.
+- [Committed food/help update](../../evidence/lean-20260923/legal-food-release-20260923/receipt.json):
+  four renderers and strict seven-page release check passed. Current HTML matches that receipt;
+  five pages were unchanged by the food update. Both 22-file food bundles still match its hashes.
 - [Earlier help/site inputs](../../evidence/lean-20260923/legal-help-20260923/final-inputs.json):
-  after the metadata update, five HTML pages and shared CSS remain byte-identical. Android
-  privacy/support changed only versionCode11 to12 paragraphs; reuse visual evidence only for
-  matching content/style scope. No new browser check was run. The final review records that
-  comparison; earlier CSS-clipping failures and corrected screenshots remain preserved.
+  shared CSS and the unaffected page content retain their earlier coverage. The new icon pixels
+  are covered by the current support-header checks, not by old screenshots. Earlier clipping
+  failures and corrected screenshots remain preserved; no new full-site or no-JavaScript sweep.
 - [Policy integration](../../evidence/lean-20260923/privacy-operations-candidate/actual-policy-integration/validation.json):
   17-language source/generation review. Local structure and browser observations are separate
   from native-speaker review, accessibility certification and public deployment.
@@ -48,21 +65,24 @@ continue release work. An unchecked amendment checkbox alone does not establish 
   server deletion or anonymous long-term retention.
 - [Store declaration candidate](../../evidence/lean-20260923/store-privacy-final-declarations/MATRIX.md):
   candidate App Privacy/Data Safety mapping and SDK evidence limits, not a store publication.
-- [Documentation receipt](../../evidence/lean-20260923/legal-docs-final-20260923/receipt.json):
-  this four-file edit, exact hashes and focused validation. No page, JSON, CSS or script change.
+- [Earlier documentation receipt](../../evidence/lean-20260923/legal-docs-final-20260923/receipt.json):
+  the historical four-file documentation edit and its focused validation.
 
 Existing public URLs remain stable. Earlier live GET receipts describe the pages observed then;
-they do not prove this candidate is deployed. No new live-site check, native run, server request,
-store mutation or publication was performed for this documentation update.
+they do not prove this candidate is deployed. This review used a loopback-only server and a new
+owned browser tab, both now closed; temporary viewport/media overrides were cleared. Public
+availability is `LIVE_SITE_NOT_VERIFIED` for this review. No native, store or publication action.
 
 ## Owner and next action
 
-Observed legal branch: `codex/privacy-completion-20260920`; HEAD:
-`2a140d5c77767c1e6827d86ddd18a4a1d19bdb5a`. Existing unrelated dirty work is preserved.
-This documentation task owns no active process/device; root owns the live native/store work.
+Review-base legal branch: `codex/help-privacy-20260923`; HEAD:
+`0ec408e6233cda2c8361c28c71121d0491fe3242`. Root reports the normal push to draft
+[PR #4](https://github.com/wonyoungb/doseweek-legal/pull/4); this review did not query or change
+GitHub. Reviewed files: README, two brand PNGs, this handoff and `legal-release-map.json`.
+Other owners' work is preserved. This task owns no active process/device.
 
-Next: root reconcile final build metadata and actual SDK/consent evidence with the release map
-and store answers. Keep the current authorised order: required native notices before final
+Next: root commit/push the reviewed brand/documentation/metadata changes and reconcile final build
+metadata and SDK/consent evidence with store answers. Keep the authorised order: native notices before final
 build/signing, both accepted immutable uploads before site publication. After publication,
 record real URL/version/content readback. Do not re-run matching site/native evidence merely
 because these documentation links changed, or copy the full policies back into app catalogs.
