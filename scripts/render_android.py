@@ -192,6 +192,15 @@ def home_panels(catalog: dict[str, object]) -> str:
     return "\n\n".join(rendered)
 
 
+def paragraph_blocks(value: str) -> list[str]:
+    """Split one source string into its blank-line ("\\n\\n") separated display paragraphs.
+
+    Sources keep one string per policy paragraph or FAQ answer; each block renders as its own <p>.
+    A single "\\n" inside a block is left unchanged.
+    """
+    return value.split("\n\n")
+
+
 def privacy_paragraph(value: str) -> str:
     """Keep policy text escaped; link only the reviewed processor-source URLs."""
     rendered = escaped(value)
@@ -209,7 +218,8 @@ def privacy_paragraph(value: str) -> str:
 def render_policy_section(locale: str, section: dict[str, object]) -> str:
     body = []
     for paragraph in section["paragraphs"]:
-        body.append(f"<p>{privacy_paragraph(paragraph)}</p>")
+        for block in paragraph_blocks(paragraph):
+            body.append(f"<p>{privacy_paragraph(block)}</p>")
     if section.get("items"):
         items = "".join(f"<li>{escaped(item)}</li>" for item in section["items"])
         body.append(f"<ul>{items}</ul>")
@@ -267,7 +277,11 @@ def support_panels(catalog: dict[str, object]) -> str:
         arrow = "←" if entry["direction"] == "rtl" else "→"
         faq = []
         for item in content["faq"]:
-            answers = "".join(f"<p>{escaped(answer)}</p>" for answer in item["answers"])
+            answers = "".join(
+                f"<p>{escaped(block)}</p>"
+                for answer in item["answers"]
+                for block in paragraph_blocks(answer)
+            )
             import_guide = "doseweek-legal.wonyoungchoi.dev/import/"
             answers = answers.replace(
                 import_guide,

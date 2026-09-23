@@ -78,6 +78,15 @@ def escaped(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
+def paragraph_blocks(value: str) -> list[str]:
+    """Split one source string into its blank-line ("\\n\\n") separated display paragraphs.
+
+    Sources keep one string per policy section or FAQ answer; each block renders as its own <p>.
+    A single "\\n" inside a block is left unchanged.
+    """
+    return value.split("\n\n")
+
+
 def privacy_paragraph(value: str) -> str:
     """Keep policy text escaped; link only the reviewed processor-source URLs."""
     rendered = escaped(value)
@@ -263,7 +272,11 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         + (f' id="{escaped(locale)}-analytics-overseas-transfer" data-skip-target tabindex="-1"'
            if section["id"] == "tracking" else "")
         + f'>{escaped(section["title"])}</h2><div>'
-        + "".join(f"<p>{privacy_paragraph(paragraph)}</p>" for paragraph in section["paragraphs"])
+        + "".join(
+            f"<p>{privacy_paragraph(block)}</p>"
+            for paragraph in section["paragraphs"]
+            for block in paragraph_blocks(paragraph)
+        )
         + "</div></section>"
         for section in privacy["sections"]
     )
@@ -300,7 +313,11 @@ def faq_answer(text: str, locale: str) -> str:
 
 def faq_details(locale: str, identifier: str, item: dict, candidate: bool) -> str:
     status = ' data-release-status="candidate"' if candidate else ""
-    answers = "".join(f"<p>{faq_answer(answer, locale)}</p>" for answer in item["answers"])
+    answers = "".join(
+        f"<p>{faq_answer(block, locale)}</p>"
+        for answer in item["answers"]
+        for block in paragraph_blocks(answer)
+    )
     return (
         f'              <details id="{escaped(locale)}-{escaped(identifier)}"{status}>'
         f'<summary><span>{escaped(item["question"])}</span>'
