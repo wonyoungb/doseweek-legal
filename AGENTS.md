@@ -1,5 +1,13 @@
 # DoseWeek public-page working agreement
 
+## Canonical workspace entry
+
+Before repository work, read the [canonical current handoff](../release/CURRENT_HANDOFF.md),
+[workspace entry](../START_HERE.md), and relevant [release journal](../release/release-journal.json) entries.
+They own recorded live status across repositories. Honor an `OWNER_PAUSE_RELAUNCH` stop;
+historical local notes do not authorize restarting code, native tests or release actions.
+The current user request remains authoritative. Keep the technical contracts below intact.
+
 ## Work without repeating completed work
 
 1. Read `docs/CURRENT_HANDOFF.md`, inspect Git status, and verify any recorded live process or
@@ -8,7 +16,10 @@
    family before another whole suite. A second unexplained failure needs a new evidence-backed
    hypothesis or an explicit blocker. Preserve assertions and failed evidence. Change time budgets
    only from measured execution and retained scope; never hide failures with retries or more time.
-   Do not erase caches without evidence of corruption.
+   Do not erase caches without evidence of corruption, unless the user explicitly authorizes
+   cleanup and an exact inactive-cache allowlist plus source/proof-preservation receipts define
+   its scope. Preserve sources, secrets, signed artifacts, unique results and device data; record
+   the actual cleanup outcome without claiming an estimated size as reclaimed space.
 3. Freeze source, tests, runners, SDK and fixtures for a gate. Run the agreed release scope.
    Reuse completed coverage; do not restart a full matrix for an isolated test or documentation
    change. Record owner-approved scope reductions and unresolved failures explicitly. Never
