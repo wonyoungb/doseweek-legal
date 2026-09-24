@@ -1,37 +1,34 @@
 # Documentation index
 
-Start with [the product README](../README.md), [AGENTS](../AGENTS.md) and
-[CURRENT_HANDOFF](CURRENT_HANDOFF.md). The handoff owns live execution state.
-Read one relevant source; historical plans do not override current contracts.
+Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
+[CURRENT_HANDOFF.md](CURRENT_HANDOFF.md). The handoff points to the live workspace status.
 
-## Current sources
+## Content sources
 
-- [Release map](../legal-release-map.json): website-source provenance and release decisions.
-- [Release-date contract](../scripts/legal_release.py): effective date and publication gate.
-- [iOS website policy/support source](ios-content.json) and [iOS renderer](../scripts/render_ios.py).
-- [Android website policy/page source](android-content.candidate.json) and [Android renderer](../scripts/render_android.py).
-- [Help navigation and short steps](help-navigation.json), [home copy](home-content.json)
-  and [home renderer](../scripts/render_home.py).
-- [Import guide source](../import/content.json) and [import renderer](../scripts/render_import.py).
-- [Site checks](../scripts/check_site.py): generated content, links and release consistency.
-- [Analytics operations](ANALYTICS_OPERATIONS.md): private monthly export preparation,
-  retention review and the separate user-deletion procedure; no live execution implied.
+- [iOS policy and support](ios-content.json), rendered by [render_ios.py](../scripts/render_ios.py).
+- [Android policy and pages](android-content.candidate.json), rendered by
+  [render_android.py](../scripts/render_android.py).
+- [Home copy](home-content.json) and [help navigation](help-navigation.json), rendered by
+  [render_home.py](../scripts/render_home.py). The platform renderers share the help navigation.
+- [Import guide](../import/content.json), rendered by [render_import.py](../scripts/render_import.py).
+- [Release constants](../scripts/legal_release.py): the effective date and the food-data
+  attribution lines.
 
-The website owns the full policies; apps retain required consent and minimum instructions.
-The product README lists validation commands using these local sources. Legacy app-policy
-copies are not inputs for new website edits. CHANGELOG records history, not the current store version.
-Use the operator guide for credentials, commands and activation steps rather than copying them
-into public pages. The current handoff separates local verification, live-page observations,
-store drafts and publication receipts.
+## Checks and records
 
-## Historical references
+- [Site checks](../scripts/check_site.py): generated pages, local links, locales and
+  disclosures. `--release` also requires the effective date.
+- [Release map](../legal-release-map.json): where the website sources came from, and the
+  release decisions.
+- [CHANGELOG](../CHANGELOG.md): site history.
 
-The following are preserved snapshots, not current execution instructions:
+## Operations
 
-- [September15 evening handoff](CONTINUATION_2026-09-15_EVENING.md).
-- [September15 continuation prompt](CONTINUATION_2026-09-15_NEXT_PROMPT.md).
-- [Original second-release candidate decisions](SECOND_RELEASE_CANDIDATE.md).
-- [Historical README](history/README-2026-09-21.md).
+- [Analytics operations](ANALYTICS_OPERATIONS.md): operator guide for the apps' optional
+  analytics, covering monthly exports, retention review and deletion requests. It is not a
+  website feature, and it does not mean any of these operations have been run. Keep
+  credentials and user request codes out of Git.
 
-Do not restart their old launch commands, pending tasks or branches. Keep their original
-observations and failed outcomes as evidence; use CURRENT_HANDOFF for what remains today.
+The website owns the full policy text. The apps keep the required consent screens and short
+instructions. Old app-policy copies are not inputs for website edits. Past handoffs and snapshots
+were removed from the tree and are kept in Git history.
