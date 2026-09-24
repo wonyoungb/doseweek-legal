@@ -10,6 +10,7 @@ import re
 from pathlib import Path
 
 from site_assets import stylesheet_path
+from help_navigation import COPY as HELP_COPY, HOME as HELP_HOME, task_cards, support_start
 
 from legal_release import (
     CURRENT_ANDROID_EFFECTIVE_DATE,
@@ -45,7 +46,7 @@ REQUIRED_BACKUP_SECURITY_PHRASES = {
 SECOND_RELEASE_TOPICS = (
     "meals", "dates", "charts", "calendar", "backup", "devices", "import",
 )
-SECOND_RELEASE_VERSION = "versionCode 11"
+SECOND_RELEASE_VERSION = "versionCode 12"
 REQUIRED_EMERGENCY_SERVICE_PHRASES = {
     "es": "servicios de emergencia locales",
     "it": "servizi di emergenza locali",
@@ -169,26 +170,19 @@ def home_panels(catalog: dict[str, object]) -> str:
         entry = catalog["locales"][locale]
         content = entry["home"]
         title = f"{content['title']} — DoseWeek Android"
-        badges = "".join(f"<li>{escaped(value)}</li>" for value in content["featureBadges"])
         rendered.append(
             f"""        <article {panel_attributes(locale, entry, title)}>
-          <header class="hero home-hero">
+          <header class="hero help-home-hero">
             <div>
               <p class="eyebrow">DoseWeek · Android {escaped(catalog['versionName'])}</p>
               <h1 id="{escaped(locale)}-content" data-skip-target tabindex="-1">{escaped(content['title'])}</h1>
-              <p class="hero-copy">{escaped(content['intro'])}</p>
-              <ul class="hero-meta">{badges}</ul>
-              <p class="quiet-note">{escaped(content['versionScope'])}</p>
+              <p class="hero-copy">{escaped(HELP_HOME[locale]['androidBody'])}</p>
             </div>
-            <img class="hero-app-icon" src="../assets/android-app-icon.png" alt="" width="512" height="512">
           </header>
 
-          <section class="content-section">
-            <div class="card-grid">
-              <a class="link-card" href="privacy/#{escaped(locale)}"><h2>{escaped(content['privacyLinkTitle'])}</h2><p>{escaped(content['privacyLinkBody'])}</p></a>
-              <a class="link-card" href="support/#{escaped(locale)}"><h2>{escaped(content['supportLinkTitle'])}</h2><p>{escaped(content['supportLinkBody'])}</p></a>
-            </div>
-          </section>
+          {task_cards(locale, 'support/', '../import/')}
+          <a class="help-privacy" href="privacy/#{escaped(locale)}"><strong>{escaped(content['privacyLinkTitle'])}</strong><span>{escaped(HELP_COPY[locale]['privacyBody'])}</span></a>
+          <a class="help-platform" href="../#{escaped(locale)}">{escaped(HELP_HOME[locale]['iosTitle'])} <span aria-hidden="true">{"←" if locale == "ar" else "→"}</span></a>
 
           <section class="content-section">
             <div class="info-card medical-notice"><h2>{escaped(content['medicalNoticeTitle'])}</h2><p>{escaped(content['medicalNoticeBody'])}</p></div>
@@ -198,16 +192,58 @@ def home_panels(catalog: dict[str, object]) -> str:
     return "\n\n".join(rendered)
 
 
+def paragraph_blocks(value: str) -> list[str]:
+    """Split one source string into its blank-line ("\\n\\n") separated display paragraphs.
+
+    Sources keep one string per policy paragraph or FAQ answer; each block renders as its own <p>.
+    A single "\\n" inside a block is left in the block; privacy_paragraph renders it as <br>.
+    """
+    return value.split("\n\n")
+
+
+def breakable_url(safe_url: str) -> str:
+    """Link text for a long URL: allow a line break after each path "/" (never inside "://")."""
+    scheme, separator, rest = safe_url.partition("://")
+    return scheme + separator + re.sub(r"/(?=.)", "/<wbr>", rest)
+
+
+def privacy_paragraph(value: str) -> str:
+    """Keep policy text escaped; link only the reviewed processor-source URLs.
+
+    Link text is isolated left-to-right, so a trailing "/" stays at the end of the URL in RTL text.
+
+    A single "\\n" left inside a block is a line break within that paragraph, rendered as <br>.
+    """
+    rendered = escaped(value)
+    for url in (
+        "https://privacy.google.com/businesses/processorsupport",
+        "https://datacenters.google/locations/",
+        "https://business.safety.google/adssubprocessors/",
+        "https://business.safety.google/adsprocessorterms/",
+    ):
+        safe_url = escaped(url)
+        rendered = rendered.replace(
+            safe_url,
+            f'<a href="{safe_url}"><bdi dir="ltr">{breakable_url(safe_url)}</bdi></a>',
+        )
+    return rendered.replace("\n", "<br>")
+
+
 def render_policy_section(locale: str, section: dict[str, object]) -> str:
+    """Render a policy section; its list follows the first paragraph, which introduces it."""
     body = []
-    for paragraph in section["paragraphs"]:
-        body.append(f"<p>{escaped(paragraph)}</p>")
-    if section.get("items"):
-        items = "".join(f"<li>{escaped(item)}</li>" for item in section["items"])
-        body.append(f"<ul>{items}</ul>")
+    for index, paragraph in enumerate(section["paragraphs"]):
+        for block in paragraph_blocks(paragraph):
+            body.append(f"<p>{privacy_paragraph(block)}</p>")
+        if index == 0 and section.get("items"):
+            items = "".join(f"<li>{escaped(item)}</li>" for item in section["items"])
+            body.append(f"<ul>{items}</ul>")
     return (
         f'              <section id="{escaped(locale)}-{escaped(section["id"])}" class="policy-section">'
-        f"<h2>{escaped(section['title'])}</h2><div>{''.join(body)}</div></section>"
+        + "<h2"
+        + (f' id="{escaped(locale)}-analytics-overseas-transfer" data-skip-target tabindex="-1"'
+           if section["id"] == "no-collection" else "")
+        + f">{escaped(section['title'])}</h2><div>{''.join(body)}</div></section>"
     )
 
 
@@ -246,6 +282,27 @@ def privacy_panels(catalog: dict[str, object]) -> str:
     return "\n\n".join(rendered)
 
 
+def guide_steps(locale: str, entry: dict[str, object]) -> list[tuple[str, str, str, str]]:
+    """The getting-started steps as (title, body, href, link text).
+
+    A step links to its FAQ answer by id, or to a privacy section as "privacy:<section id>".
+    """
+    faq = {item["id"]: item for item in entry["support"]["faq"]}
+    sections = {section["id"]: section for section in entry["privacy"]["sections"]}
+    steps = []
+    for step in entry["support"]["guide"]["steps"]:
+        link = step["link"]
+        if link.startswith("privacy:"):
+            section = sections[link.removeprefix("privacy:")]
+            # link text drops the section number ("3. ..."), which reads oddly inline
+            href = f"../privacy/#{locale}-{section['id']}"
+            text = re.sub(r"^\d+\.\s*", "", section["title"])
+        else:
+            href, text = f"#{locale}-{link}", faq[link]["question"]
+        steps.append((step["title"], step["body"], href, text))
+    return steps
+
+
 def support_panels(catalog: dict[str, object]) -> str:
     rendered = []
     email = escaped(catalog["supportEmail"])
@@ -256,7 +313,16 @@ def support_panels(catalog: dict[str, object]) -> str:
         arrow = "←" if entry["direction"] == "rtl" else "→"
         faq = []
         for item in content["faq"]:
-            answers = "".join(f"<p>{escaped(answer)}</p>" for answer in item["answers"])
+            answers = "".join(
+                f"<p>{escaped(block)}</p>"
+                for answer in item["answers"]
+                for block in paragraph_blocks(answer)
+            )
+            import_guide = "doseweek-legal.wonyoungchoi.dev/import/"
+            answers = answers.replace(
+                import_guide,
+                f'<a href="../../import/#{escaped(locale)}"><bdi dir="ltr">{import_guide}</bdi></a>',
+            )
             faq.append(
                 f'<details id="{escaped(locale)}-{escaped(item["id"])}"><summary><span>{escaped(item["question"])}</span>'
                 '<span class="summary-symbol" aria-hidden="true"></span></summary>'
@@ -270,9 +336,11 @@ def support_panels(catalog: dict[str, object]) -> str:
             <p class="hero-copy">{escaped(content['intro'])}</p>
           </header>
 
+          {support_start(locale, '../', '../../import/', '../privacy/', entry['home']['privacyLinkTitle'], guide_steps(locale, entry))}
+
           <div class="notice"><span class="notice-symbol" aria-hidden="true">!</span><div><strong>{escaped(content['privacyWarning'])}</strong></div></div>
 
-          <section class="content-section"><div class="faq-list">{''.join(faq)}</div></section>
+          <section class="content-section" aria-labelledby="{escaped(locale)}-faq"><h2 id="{escaped(locale)}-faq">{escaped(HELP_COPY[locale]['solveTitle'])}</h2><div class="faq-list">{''.join(faq)}</div></section>
 
           <section class="content-section">
             <div class="contact-card"><div><h2>{escaped(content['contact']['title'])}</h2><p>{escaped(content['contact']['body'])}</p></div><a class="button primary" href="mailto:{email}?subject=DoseWeek%20Android%20Support">{email}</a></div>
@@ -408,7 +476,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             "title", "scope", "sections", "medicalDisclaimer",
         }, locale
         assert set(entry["support"]) == {
-            "title", "intro", "privacyWarning", "faq", "contact", "emergency",
+            "title", "intro", "privacyWarning", "guide", "faq", "contact", "emergency",
         }, locale
         require_string(entry["privacy"]["title"], f"{locale}.privacy.title")
         require_string(entry["privacy"]["scope"], f"{locale}.privacy.scope")
@@ -469,6 +537,25 @@ def validate_catalog(catalog: dict[str, object]) -> None:
                 expected_length=expected_faq_answer_lengths[item["id"]],
             )
 
+        guide = entry["support"]["guide"]
+        assert isinstance(guide, dict) and set(guide) == {"steps"}, f"{locale}.support.guide"
+        assert isinstance(guide["steps"], list) and len(guide["steps"]) == 6, (
+            f"{locale}: the getting-started guide has six steps"
+        )
+        section_ids = {section["id"] for section in entry["privacy"]["sections"]}
+        for index, step in enumerate(guide["steps"], start=1):
+            assert isinstance(step, dict) and set(step) == {"title", "body", "link"}, (
+                f"{locale}: guide step {index}"
+            )
+            for key in ("title", "body", "link"):
+                require_string(step[key], f"{locale}.support.guide.steps[{index}].{key}")
+            link = step["link"]
+            target_ok = (
+                link.removeprefix("privacy:") in section_ids if link.startswith("privacy:")
+                else link in expected_faq_ids
+            )
+            assert target_ok, f"{locale}: guide step {index} links to nothing"
+
         locale_text = json.dumps(entry, ensure_ascii=False)
         for invariant in (
             "DoseWeek", "Android", "AES-256-GCM", "Health Connect",
@@ -499,10 +586,10 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         for topic in SECOND_RELEASE_TOPICS:
             notice = faq_by_id[f"candidate2-{topic}"]["answers"][0]
             assert SECOND_RELEASE_VERSION in notice, (
-                f"{locale}: second-release FAQ {topic} must name the unreleased version"
+                f"{locale}: second-release FAQ {topic} must name the version it applies to"
             )
         assert SECOND_RELEASE_VERSION in policy_by_id["next-release"]["paragraphs"][0], (
-            f"{locale}: candidate policy section must name the unreleased version"
+            f"{locale}: section 8 must name the version it describes"
         )
         # the bundled food data ships in this release, so its attribution lines are verbatim
         food_paragraph = policy_by_id["next-release"]["paragraphs"][4]
@@ -606,9 +693,8 @@ CANDIDATE_CONTENT_PATH = ROOT / "docs/android-content.candidate.json"
 def source_icon(content_path: Path) -> Path | None:
     resolved = content_path.resolve()
     if resolved == CANDIDATE_CONTENT_PATH.resolve():
-        # Unpublished mirror of the Android app catalog kept in this repository while the
-        # second-release copy is reviewed. The icon still comes from the app repository, so
-        # rendering from the candidate never rewrites assets/android-app-icon.png.
+        # Website-owned full policy/page source. The historical filename remains stable.
+        # Its existing icon is not rewritten during ordinary content changes.
         return None
     assert resolved.parent.name == "legal" and resolved.parent.parent.name == "docs", (
         "Android content must be DoseweekPlayStore/docs/legal/android-content.json"
@@ -620,7 +706,10 @@ def source_icon(content_path: Path) -> Path | None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--content", required=True, type=Path)
+    parser.add_argument(
+        "--content", type=Path, default=CANDIDATE_CONTENT_PATH,
+        help="website source (defaults to docs/android-content.candidate.json)",
+    )
     parser.add_argument("--check", action="store_true")
     arguments = parser.parse_args()
 

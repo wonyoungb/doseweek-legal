@@ -1,61 +1,116 @@
-# DoseWeek public pages
+# DoseWeek help and privacy site
 
-Static product, support, privacy and record-import pages for DoseWeek on iOS and Android.
-No third-party scripts, analytics, remote fonts, cookies, accounts or form backend.
+Static help, support, privacy and record-import pages for the DoseWeek iOS and Android apps,
+served at <https://doseweek-legal.wonyoungchoi.dev/>.
 
-## Content ownership
+GitHub Pages publishes the root of `main`. Any other branch, a pushed commit or a local render is
+a candidate only: it is not public until it is merged to `main` and the live page is checked.
+[docs/CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md) points to the live status and publication order.
 
-| Content | Canonical source | Mirror / renderer |
+## Pages
+
+| Route | Content |
+|---|---|
+| `/` | Shared home: choose a platform, short help tasks |
+| `/support/`, `/privacy/` | iOS support (six-step getting-started guide, then FAQ) and privacy policy |
+| `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
+| `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
+
+Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
+zh-Hans, zh-Hant and tr. The URL hash selects the locale (for example `/support/#ar`). Keep
+Arabic right-to-left, the separate Portuguese and Chinese variants, stable hash links and the
+no-JavaScript fallback.
+
+## Privacy stance
+
+- **This website** is plain HTML and CSS with two small local scripts (`assets/language.js`,
+  `assets/import.js`). It has no analytics, trackers, third-party scripts, remote fonts,
+  cookies, accounts or form backend.
+- **The apps** need no DoseWeek account and show no ads. As the policy sources in `docs/`
+  describe, the upcoming app releases add optional usage analytics (Google Analytics for
+  Firebase). It is off by default and starts only after the user agrees to analytics and,
+  separately, to overseas transfer.
+- The website owns the full policy text. The apps keep the required consent screens and short
+  instructions, and link here. Policy text must match what the apps actually do.
+
+## Requirements
+
+- Python 3, standard library only. There is no package install and no build step. Checked
+  with Python 3.14.
+- A browser for visual review. The scripts check structure, not appearance.
+
+## Generate and check
+
+Edit the source first, then render. Do not hand-edit generated HTML.
+
+| Source | Renderer | Output |
 |---|---|---|
-| Shared home | `docs/home-content.json` and `templates/home.html` | `scripts/render_home.py`; versions, locale names and medical notices from the platform catalogs |
-| iOS policy | iOS `DoseDay/Resources/Localizable.xcstrings` | `docs/ios-content.json`, `scripts/render_ios.py` |
-| Android pages | Android `docs/legal/android-content.json` | `docs/android-content.candidate.json`, `scripts/render_android.py` |
-| Import guide and downloads | `import/content.json` and templates | `scripts/render_import.py` |
-| Effective date and attributions | Owner decisions and bundled data notices | `scripts/legal_release.py` |
+| `docs/home-content.json`, `templates/home.html` | `scripts/render_home.py` | `index.html` |
+| `docs/help-navigation.json` | shared by the home and platform renderers | help cards and guide headings; the guide steps live in each platform source (`support.guide`) |
+| `docs/ios-content.json` | `scripts/render_ios.py` | `privacy/`, `support/` |
+| `docs/android-content.candidate.json` | `scripts/render_android.py` | `android/**` |
+| `import/content.json` | `scripts/render_import.py` | `import/index.html`, `import/*.md`, `import/draft-v1.schema.json`, `import/draft.example.json` |
+| effective date, food-data attributions | `scripts/legal_release.py` | used by the iOS and Android renderers and `check_site.py` |
 
-Change app behavior and its canonical policy together, then mirror and regenerate. Public
-privacy text is not an independent source. Android's consented food-label ML Kit diagnostics
-exception must not be described as zero SDK traffic or copied into iOS policy.
+Render (writes files). After changing CSS or shared navigation, run all four:
 
-## Locales and routes
+```bash
+python3 scripts/render_home.py
+python3 scripts/render_ios.py
+python3 scripts/render_android.py
+python3 scripts/render_import.py --require-all-locales
+```
 
-The shared home, iOS privacy/support, Android pages and the import guide all use the same
-17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT,
-pl, sv, hi, pt-BR, ar, zh-Hans, zh-Hant and tr. In-app help supports that same locale set.
-
-Stable paths: `/`, `/privacy/`, `/support/`, `/android/`, `/android/privacy/`,
-`/android/support/` and `/import/`. Hashes choose locale, such as `/support/#ar`.
-Preserve Arabic RTL, distinct Portuguese/Chinese variants, keyboard focus and the no-JavaScript
-fallback. Every home guide/privacy/import link must retain its selected locale.
-
-## Verify
-
-From this repository, substitute the actual neighboring checkout paths when necessary:
+Check (read-only):
 
 ```bash
 python3 scripts/render_home.py --check
-python3 scripts/render_ios.py --check --catalog ../ios/DoseDay/Resources/Localizable.xcstrings
-python3 scripts/render_android.py --content ../android/docs/legal/android-content.json --check
+python3 scripts/render_ios.py --check
+python3 scripts/render_android.py --check
 python3 scripts/render_import.py --check --require-all-locales
-python3 scripts/check_site.py --catalog ../ios/DoseDay/Resources/Localizable.xcstrings --android-content ../android/docs/legal/android-content.json
-# Before final app builds, validate the fixed policy date:
-python3 scripts/check_site.py --release
+python3 scripts/check_site.py            # pages, local links, locales, disclosures
+python3 scripts/check_site.py --release  # also requires the policy effective date
+(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops)
 ```
 
-Shared typography uses relative sizes, gradual viewport scaling and natural CJK/connected-script
-spacing. Generated pages version the stylesheet by content hash; after a CSS change regenerate
-all pages, including the shared home. The site check rejects missing locales and stale output.
+`render_ios.py --catalog <path>` is an optional legacy comparison against old app resources. It
+is not a release gate.
 
-Structural checks do not prove browser appearance, screen-reader use or native-speaker review.
-Keep those evidence categories distinct in [the current handoff](docs/CURRENT_HANDOFF.md).
+## Repository layout
 
-## Release and documentation
+```text
+index.html, privacy/, support/, android/, import/   generated pages (served)
+assets/          stylesheets, local scripts, app icons
+docs/            content sources (*.json) and maintainer docs
+templates/       home page template
+scripts/         renderers, site checks, analytics-operations tool, unit tests
+legal-release-map.json   release provenance and decisions
+CNAME            custom domain for GitHub Pages
+```
 
-[legal-release-map.json](legal-release-map.json) binds candidate catalogs and release decisions.
-Owner decision 2026-09-22 fixes the policy date and mirrors before final app builds/signing.
-Both immutable builds must be accepted by their stores before main publication.
-The policy date does not assert app availability; a pushed branch is not a published policy.
+## Brand assets
 
-Read [AGENTS.md](AGENTS.md), [the documentation index](docs/README.md) and
-[CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md). Dated continuation files are historical only.
-Original documentation is retained under docs/history and in Git.
+`assets/app-icon.png` is an Icon Composer render of the iOS app icon.
+`assets/android-app-icon.png` is the Google Play icon. `render_android.py` compares it with (or
+copies) the Play icon only when `--content` points to the Play catalog
+(`DoseweekPlayStore/docs/legal/android-content.json`). With the default source it neither compares
+nor rewrites the icon. No script in this repository writes `assets/app-icon.png`.
+
+## Documentation
+
+- [AGENTS.md](AGENTS.md): working rules for people and AI agents
+- [docs/README.md](docs/README.md): documentation index
+- [docs/CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md): pointer to the live workspace handoff
+- [docs/ANALYTICS_OPERATIONS.md](docs/ANALYTICS_OPERATIONS.md): operator guide for the apps'
+  analytics exports and deletion requests (not a website feature)
+- [CHANGELOG.md](CHANGELOG.md): site history
+
+Older handoffs, continuation prompts and snapshots were removed from the tree. They remain in
+Git history.
+
+## Notices
+
+- Food-data attribution lines (USDA FoodData Central, PHE CoFID, Japan MEXT, Korea MFDS) are
+  kept verbatim in `scripts/legal_release.py` and rendered on both privacy policies.
+- Support contact: wonyoung@wonyoungchoi.dev.
+- This repository has no LICENSE file.

@@ -1,0 +1,138 @@
+{
+  "ko": {
+    "startTitle": "처음 시작하기",
+    "startBody": "설정부터 첫 기록, 백업까지 DoseWeek 사용 방법을 6단계로 안내합니다.",
+    "solveTitle": "자주 묻는 질문·문제 해결",
+    "solveBody": "알림, 백업, 찾지 못한 기록이 궁금하신가요?",
+    "backHome": "도움말 홈",
+    "privacyBody": "선택 기능과 개인정보 처리 방식을 확인하세요."
+  },
+  "en": {
+    "startTitle": "Getting started",
+    "startBody": "How to use DoseWeek in six steps, from setup to your first record and backup.",
+    "solveTitle": "FAQ and troubleshooting",
+    "solveBody": "Find help with reminders, backups and missing records.",
+    "backHome": "Help home",
+    "privacyBody": "Learn about optional features and how your data is handled."
+  },
+  "ja": {
+    "startTitle": "はじめに",
+    "startBody": "設定から最初の記録、バックアップまで、DoseWeekの使い方を6つの手順でご案内します。",
+    "solveTitle": "よくある質問・困ったとき",
+    "solveBody": "通知、バックアップ、見つからない記録について確認できます。",
+    "backHome": "ヘルプのホーム",
+    "privacyBody": "任意の機能と個人情報の取り扱いを確認できます。"
+  },
+  "de": {
+    "startTitle": "Erste Schritte",
+    "startBody": "So nutzen Sie DoseWeek in sechs Schritten – von der Einrichtung bis zum ersten Eintrag und Backup.",
+    "solveTitle": "Häufige Fragen und Problemlösung",
+    "solveBody": "Hilfe zu Erinnerungen, Backups und fehlenden Einträgen.",
+    "backHome": "Hilfe-Startseite",
+    "privacyBody": "Erfahren Sie mehr über optionale Funktionen und den Umgang mit Ihren Daten."
+  },
+  "fr": {
+    "startTitle": "Bien démarrer",
+    "startBody": "Comment utiliser DoseWeek en six étapes, de la configuration au premier enregistrement et à la sauvegarde.",
+    "solveTitle": "Questions fréquentes et dépannage",
+    "solveBody": "Trouvez de l’aide pour les rappels, sauvegardes et données introuvables.",
+    "backHome": "Accueil de l’aide",
+    "privacyBody": "Découvrez les fonctions facultatives et le traitement de vos données."
+  },
+  "es": {
+    "startTitle": "Primeros pasos",
+    "startBody": "Cómo usar DoseWeek en seis pasos, desde la configuración hasta el primer registro y la copia de seguridad.",
+    "solveTitle": "Preguntas frecuentes y solución de problemas",
+    "solveBody": "Encuentra ayuda con recordatorios, copias de seguridad y registros que no encuentras.",
+    "backHome": "Inicio de ayuda",
+    "privacyBody": "Consulta las funciones opcionales y cómo se tratan tus datos."
+  },
+  "it": {
+    "startTitle": "Per iniziare",
+    "startBody": "Come usare DoseWeek in sei passi, dalla configurazione alla prima registrazione e al backup.",
+    "solveTitle": "Domande frequenti e risoluzione dei problemi",
+    "solveBody": "Trova aiuto per promemoria, backup e dati che non trovi.",
+    "backHome": "Pagina iniziale della guida",
+    "privacyBody": "Scopri le funzioni facoltative e come vengono trattati i tuoi dati."
+  },
+  "nl": {
+    "startTitle": "Aan de slag",
+    "startBody": "Zo gebruik je DoseWeek in zes stappen, van instellen tot je eerste registratie en back-up.",
+    "solveTitle": "Veelgestelde vragen en probleemoplossing",
+    "solveBody": "Hulp bij herinneringen, back-ups en gegevens die je niet kunt vinden.",
+    "backHome": "Beginpagina van de hulp",
+    "privacyBody": "Lees over optionele functies en hoe je gegevens worden verwerkt."
+  },
+  "pt-PT": {
+    "startTitle": "Primeiros passos",
+    "startBody": "Como usar o DoseWeek em seis passos, da configuração ao primeiro registo e à cópia de segurança.",
+    "solveTitle": "Perguntas frequentes e resolução de problemas",
+    "solveBody": "Encontre ajuda com lembretes, cópias de segurança e registos em falta.",
+    "backHome": "Página inicial da ajuda",
+    "privacyBody": "Saiba mais sobre as funcionalidades opcionais e o tratamento dos seus dados."
+  },
+  "pl": {
+    "startTitle": "Pierwsze kroki",
+    "startBody": "Jak korzystać z DoseWeek w sześciu krokach — od konfiguracji po pierwszy wpis i kopię zapasową.",
+    "solveTitle": "Najczęstsze pytania i rozwiązywanie problemów",
+    "solveBody": "Pomoc dotycząca przypomnień, kopii zapasowych i brakujących zapisów.",
+    "backHome": "Strona główna pomocy",
+    "privacyBody": "Poznaj opcjonalne funkcje i sposób przetwarzania Twoich danych."
+  },
+  "sv": {
+    "startTitle": "Kom igång",
+    "startBody": "Så använder du DoseWeek i sex steg, från inställning till din första registrering och säkerhetskopia.",
+    "solveTitle": "Vanliga frågor och felsökning",
+    "solveBody": "Hjälp med påminnelser, säkerhetskopior och uppgifter du inte hittar.",
+    "backHome": "Hjälpens startsida",
+    "privacyBody": "Läs om frivilliga funktioner och hur dina uppgifter hanteras."
+  },
+  "hi": {
+    "startTitle": "शुरू करें",
+    "startBody": "सेटअप से लेकर पहले रिकॉर्ड और बैकअप तक, छह चरणों में DoseWeek का उपयोग करना सीखें।",
+    "solveTitle": "अक्सर पूछे जाने वाले प्रश्न और समस्या समाधान",
+    "solveBody": "रिमाइंडर, बैकअप और न मिल रहे रिकॉर्ड के लिए मदद पाएँ।",
+    "backHome": "मदद का मुख्य पेज",
+    "privacyBody": "वैकल्पिक सुविधाओं और आपके डेटा के उपयोग के बारे में जानें।"
+  },
+  "pt-BR": {
+    "startTitle": "Primeiros passos",
+    "startBody": "Como usar o DoseWeek em seis passos, da configuração ao primeiro registro e ao backup.",
+    "solveTitle": "Perguntas frequentes e solução de problemas",
+    "solveBody": "Encontre ajuda com lembretes, backups e registros que não encontra.",
+    "backHome": "Página inicial da ajuda",
+    "privacyBody": "Saiba mais sobre os recursos opcionais e como seus dados são tratados."
+  },
+  "ar": {
+    "startTitle": "ابدأ من هنا",
+    "startBody": "تعلّم استخدام DoseWeek في ست خطوات، من الإعداد إلى سجلك الأول والنسخة الاحتياطية.",
+    "solveTitle": "الأسئلة الشائعة وحل المشكلات",
+    "solveBody": "اعثر على مساعدة للتذكيرات والنسخ الاحتياطية والسجلات التي لا تجدها.",
+    "backHome": "الرئيسية للمساعدة",
+    "privacyBody": "تعرّف على الميزات الاختيارية وكيفية التعامل مع بياناتك."
+  },
+  "zh-Hans": {
+    "startTitle": "开始使用",
+    "startBody": "从设置到第一条记录和备份，分六步介绍 DoseWeek 的使用方法。",
+    "solveTitle": "常见问题与故障排除",
+    "solveBody": "查找提醒、备份和找不到记录等问题的帮助。",
+    "backHome": "帮助首页",
+    "privacyBody": "了解可选功能和您的数据如何处理。"
+  },
+  "zh-Hant": {
+    "startTitle": "開始使用",
+    "startBody": "從設定到第一筆紀錄和備份，分六個步驟介紹 DoseWeek 的使用方法。",
+    "solveTitle": "常見問題與疑難排解",
+    "solveBody": "查看提醒、備份和找不到紀錄等問題的說明。",
+    "backHome": "說明首頁",
+    "privacyBody": "瞭解選用功能和您的資料如何處理。"
+  },
+  "tr": {
+    "startTitle": "Başlarken",
+    "startBody": "Kurulumdan ilk kaydınıza ve yedeğe kadar DoseWeek’i altı adımda nasıl kullanacağınızı öğrenin.",
+    "solveTitle": "Sık sorulan sorular ve sorun giderme",
+    "solveBody": "Hatırlatıcılar, yedekler ve bulamadığınız kayıtlar için yardım alın.",
+    "backHome": "Yardım ana sayfası",
+    "privacyBody": "İsteğe bağlı özellikleri ve verilerinizin nasıl işlendiğini öğrenin."
+  }
+}

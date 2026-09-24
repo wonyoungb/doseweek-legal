@@ -1,15 +1,16 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-24",
   "purpose": "Per-platform publication record for the doseweek-legal second-release candidate (LEGAL_TWO_RELEASES.md section 5). Null means not assigned or not decided; nothing here is a placeholder version or date.",
   "legal": {
     "repository": "wonyoungb/doseweek-legal",
-    "branch": "codex/privacy-completion-20260920",
+    "branch": "codex/help-privacy-20260923",
     "baseCommit": "8a615a1",
     "headCommit": null,
-    "publishStatus": "Unpublished. Owner 2026-09-22: date/catalog alignment before final builds/signing; both accepted store uploads and release checks before site publication.",
-    "sourceStatus": "Current Android canonical catalog and legal mirror are byte-identical; 17 generated in-app policy locales match. Current iOS policy strings (sections 1-10 and medical text) match the legal mirror verbatim in all 17 locales. All generated pages pass deterministic checks on 2026-09-21; this does not certify translation or browser accessibility.",
+    "publishStatus": "Unpublished. Current owner-approved order: final required native notices and immutable builds/signing, both accepted store uploads and release checks, then site publication.",
+    "sourceStatus": "Website-owned full policy sources and all seven generated pages pass source/link/locale/release checks on 2026-09-23. Scoped 320px EN/AR privacy and no-JavaScript checks pass after the documented wrap fix. Native full-policy duplication is being retired by native owners; legacy resources remain. This does not certify real SDK behavior, translation or publication.",
     "generatedPages": [
+      "index.html",
       "privacy/index.html",
       "support/index.html",
       "android/index.html",
@@ -18,36 +19,47 @@
       "import/index.html"
     ],
     "handoff": "docs/CURRENT_HANDOFF.md",
-    "headCommitNote": "the branch head is recorded by the final gate; this file cannot name its own commit",
-    "observedHeadCommit": "8aee312"
+    "headCommitNote": "the branch head is recorded by the final gate; this file cannot name its own commit. observedHeadCommit is the branch head observed before the 2026-09-24 getting-started guide and audit text edit, not the commit that contains it",
+    "observedHeadCommit": "2694bd3f65d573addab93049914be67a716279b2"
   },
   "platforms": {
     "android": {
       "liveApp": "DoseWeek 1.0.0 for Android on Google Play; per the app repository ledger versionCode 9 (submitted 2026-09-11) is the live Production build, and versionCode 10 was accepted by Play on 2026-09-15 but its review submission was withheld for stage 2, so it is never released",
-      "candidateApp": "DoseWeek 1.0.0/code11; integrated candidate 79a1fd416d75ed3bbeb21440055c1e6126d42b78; not uploaded in this continuation",
-      "catalogSource": "../android/docs/legal/android-content.json; current integrated worktree",
-      "catalogSourceSha256": "28946a2bb250a852dd3cab76f99b71b974f9c047771fad0fcd5ee1736098c924",
+      "candidateApp": "DoseWeek 1.0.0/code12; current source versionCode 12, not proof of a signed artifact, accepted upload or publication",
+      "catalogSource": "docs/android-content.candidate.json",
+      "catalogSourceSha256": "7a1edc055ee72b1a80750bb274b6fc2899014d841716927e6ac7b9196478f055",
       "candidateCatalog": "docs/android-content.candidate.json",
-      "candidateCatalogSha256": "28946a2bb250a852dd3cab76f99b71b974f9c047771fad0fcd5ee1736098c924",
-      "effectiveDate": "2026-09-22",
-      "effectiveDateDecision": "Owner 2026-09-22: fixed before final builds/signing, superseding after-upload date order.",
-      "candidateWording": "Current 17-locale catalog includes selected-image-only food-label ML Kit consent, Google diagnostics/usage metrics, possible queued transmission, manual fallback, readable Drive metadata and distinct local/Drive/SDK retention boundaries; no Android generative AI.",
-      "publishCondition": "Align catalogs and date before final builds/signing; both accepted store uploads plus exact catalog/render/release checks before site publication.",
-      "previousCandidateCatalogSha256": "81149a99a30928b0674e9f62c56d5c91e4176e54b0e8f4d80d0d1f9f3180d955"
+      "candidateCatalogSha256": "7a1edc055ee72b1a80750bb274b6fc2899014d841716927e6ac7b9196478f055",
+      "effectiveDate": "2026-09-23",
+      "effectiveDateDecision": "Owner 2026-09-23: website-owned full policy and generated date aligned; no full-policy copy into native catalogs.",
+      "candidateWording": "Optional analytics with separate overseas-transfer consent, declared technical telemetry, two-month user/event retention, source-labelled potential geographic scope and user-prepared deletion requests. Raw data is not anonymous and withdrawal is not server deletion. Android is for users aged 18 or older; eligibility and analytics/transfer/AI choices remain distinct.",
+      "publishCondition": "Current website-source/date/render/link checks plus root-owned final release conditions; no Google reply or legacy native full-policy parity prerequisite.",
+      "previousCandidateCatalogSha256": "81149a99a30928b0674e9f62c56d5c91e4176e54b0e8f4d80d0d1f9f3180d955",
+      "legacyAppCatalogSource": {
+        "path": "../android/docs/legal/android-content.json; current integrated worktree",
+        "sha256": "28946a2bb250a852dd3cab76f99b71b974f9c047771fad0fcd5ee1736098c924",
+        "status": "historical input; not upstream for current website changes"
+      },
+      "candidateAppNote": "Owner-confirmed current Android candidate code12, 2026-09-23. Historical code11 observations are not the final candidate."
     },
     "ios": {
       "liveApp": "Root current App Store Connect readback on 2026-09-21 reports live 1.0.4 (build 15); candidate build 16 has not been submitted. This field is attributed to parent readback, not a new API query by this reviewer.",
-      "candidateApp": "DoseWeek 1.0.5/build16; integrated candidate a4636882d32e56441d993655df161f5a64ad9e99; not uploaded in this continuation",
-      "candidateAppNote": "Current source project has MARKETING_VERSION 1.0.5 and CURRENT_PROJECT_VERSION 16; store upload/submission remains separate.",
-      "catalogSource": "../ios/DoseDay/Resources/Localizable.xcstrings; current integrated worktree",
-      "catalogSourceSha256": "12dbe479869a5544ecfbb42541519026617e5f9b43303409a0ef06f3d62d1d0f",
+      "candidateApp": "DoseWeek 1.0.5/build17 planned; final candidate build/signing/upload pending",
+      "candidateAppNote": "Owner current readback, 2026-09-23: native source uses MARKETING_VERSION 1.0.5 and CURRENT_PROJECT_VERSION 17, and Debug simulator build17 has compiled. Final Release archive, export/signing and accepted upload remain pending. Existing App Store Connect build16 is a separate prior candidate; Debug compilation is not an uploaded or released build.",
+      "catalogSource": "docs/ios-content.json",
+      "catalogSourceSha256": "79af4ee91e06b72e2d5bcc4446dcf7146801ff2b31586defb3a6598cbf879ea7",
       "candidateCatalog": "docs/ios-content.json",
-      "candidateCatalogSha256": "ad8fe7b5e2f391102dc909afa36a49764b48792001b5fe6defee7ceac205762f",
-      "effectiveDate": "2026-09-22",
-      "effectiveDateDecision": "Owner 2026-09-22: fixed before final builds/signing, superseding after-upload date order.",
-      "candidateWording": "Current 17-locale mirror includes app policy sections 1-10 (including consented voice and selected label processing), medical text, and separately maintained candidate section 11 naming iOS 1.0.5. Android ML Kit telemetry exception does not apply to iOS.",
-      "publishCondition": "Align catalogs and date before final builds/signing; both accepted store uploads plus exact catalog/render/release checks before site publication.",
-      "catalogParityCheckedAgainst": "Current source hash 7f0c811bdbca64811cbcb93ec51ac7129da8824875a6fcb6a499e9881e90485c; scripts/render_ios.py --check --catalog and scripts/check_site.py both passed 2026-09-21."
+      "candidateCatalogSha256": "79af4ee91e06b72e2d5bcc4446dcf7146801ff2b31586defb3a6598cbf879ea7",
+      "effectiveDate": "2026-09-23",
+      "effectiveDateDecision": "Owner 2026-09-23: website-owned full policy and generated date aligned; no full-policy copy into native catalogs.",
+      "candidateWording": "Optional analytics with separate overseas-transfer consent, declared technical telemetry, two-month user/event retention, source-labelled potential geographic scope and user-prepared deletion requests. Raw data is not anonymous and withdrawal is not server deletion.",
+      "publishCondition": "Current website-source/date/render/link checks plus root-owned final release conditions; no Google reply or legacy native full-policy parity prerequisite.",
+      "legacyAppCatalogSource": {
+        "path": "../ios/DoseDay/Resources/Localizable.xcstrings; current integrated worktree",
+        "sha256": "12dbe479869a5544ecfbb42541519026617e5f9b43303409a0ef06f3d62d1d0f",
+        "status": "historical input; not upstream for current website changes"
+      },
+      "historicalAppCatalogParity": "Current source hash 7f0c811bdbca64811cbcb93ec51ac7129da8824875a6fcb6a499e9881e90485c; scripts/render_ios.py --check --catalog and scripts/check_site.py both passed 2026-09-21."
     }
   },
   "versionLedgerReserved": {
@@ -63,7 +75,7 @@
     "pageWording": "format numbers are not printed on the pages because the integrator renumbers in merge order"
   },
   "foodData": {
-    "release": "Integrated candidate release 680bce02fff6f08ab25e27b18caef32f0b978becaec13fa4e7e97e349e0f387b; reviewed alias update; original provider attribution text unchanged",
+    "release": "Current candidate release 291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697; both app bundle locks and manifest hashes match; original provider attribution text unchanged",
     "bundledInCandidateApps": true,
     "providers": {
       "usda_fdc_foundation": "CC0 1.0, attribution requested",
@@ -72,9 +84,71 @@
       "kr_mfds_food_standard": "data.go.kr grant with no use restriction; no KOGL mark on the dataset pages; MFDS not consulted"
     },
     "decision": "NUTRITION-CATALOG-RELEASE-20260917: catalog search ships in this release on both platforms",
-    "attributionSource": "notices/NOTICE.txt of the release; the attribution lines and the MEXT change statement are kept verbatim in scripts/legal_release.py FOOD_DATA_ATTRIBUTIONS and required in both candidate policy sections"
+    "attributionSource": "notices/NOTICE.txt of the release; the attribution lines and the MEXT change statement are kept verbatim in scripts/legal_release.py FOOD_DATA_ATTRIBUTIONS and required in both candidate policy sections",
+    "sourceVerification": {
+      "checkedOn": "2026-09-23",
+      "dataReleaseId": "291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697",
+      "iosLock": "../ios/DoseDay/Resources/FoodData/RELEASE_LOCK.json",
+      "androidLock": "../android/app/src/main/assets/fooddata/RELEASE_LOCK.json",
+      "bothManifestSha256": "291c3210df94d6f9f6f470122b2ffefcfd40d04e23051948c9e4874d35b53697",
+      "bothNoticeSha256": "90589c656fa55e1cf732d06db15c150019c6b0b841d4de5ca7989a697cdb7d6b",
+      "scope": "Read-only comparison of both 22-file bundles, locks, manifest and NOTICE; 200 foods have names in 17 languages within the 9,913-record catalog. Legal attribution strings are unchanged. Native verification remains separate.",
+      "bothBundleFileCount": 22,
+      "bothBundleTotalBytes": 16008984,
+      "catalogRecordCount": 9913,
+      "foodNamesWith17LocaleSupport": 200
+    }
   },
   "checks": {
+    "status": "PASS website source/render/link/locale checks and release-date gate after the 2026-09-24 guide, audit text and review-fix edits; scoped 320px browser check (en/ar guide on both support pages) PASS; no native check was run for this edit",
+    "passedOn": "2026-09-24",
+    "commands": [
+      "python3 scripts/render_home.py --check",
+      "python3 scripts/render_ios.py --check",
+      "python3 scripts/render_android.py --check",
+      "python3 scripts/render_import.py --check --require-all-locales",
+      "python3 scripts/check_site.py --release",
+      "(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops)"
+    ],
+    "notRun": [
+      "current native builds/real SDK behavior by this agent",
+      "deployment/publication",
+      "fresh public-page readback",
+      "native-speaker or screen-reader certification"
+    ],
+    "proof": "../evidence/lean-20260923/website-guide-20260924/edit-report.json",
+    "releaseGate": "PASS website source/date/render/link/version checks. Android candidate code12; iOS marketing1.0.5 with future build17 still awaiting root native bump/final artifact. No native/publication claim.",
+    "browserReview": {
+      "proof": "../evidence/lean-20260923/legal-help-20260923/privacy-browser-fixed.json",
+      "noJavaScriptProof": "../evidence/lean-20260923/legal-help-20260923/privacy-nojs.json",
+      "inputProof": "../evidence/lean-20260923/privacy-operations-candidate/actual-policy-integration/final-input-comparison.json",
+      "scope": "EN/AR, both privacy routes, 320px: headings/links/paragraphs remain within section; four official links each; no-JS 17 panels, AR RTL, valid anchor and no escaped children. This is a scoped visual check, not full accessibility/native-speaker certification.",
+      "retainedFailure": "Four pre-fix screenshots retained; scoped CSS wrap fix verified.",
+      "currentReuse": "The 2026-09-24 edit changed assets/site.css and all seven generated pages (getting-started guide, FAQ headings, pre-release labels removed, audit text). Earlier browser and no-JavaScript visuals do not cover those changes. A scoped 2026-09-24 check (currentProof) covers only the guide block, FAQ heading and reworded scope lines on /support/ and /android/support/ for en and ar at 320px, plus the ar no-JavaScript view; other locales, widths and the changed privacy paragraphs were not re-checked in a browser.",
+      "currentInputComparison": "../evidence/lean-20260923/legal-final-review-20260923/page-comparison.json",
+      "currentProof": "../evidence/lean-20260923/website-guide-20260924/browser-check.json"
+    },
+    "previousSourceCheckProof": "../evidence/lean-20260923/privacy-operations-candidate/actual-policy-integration/validation.json"
+  },
+  "importGuide": {
+    "status": "supported",
+    "decisions": [
+      "TRANSFER-20260913-08",
+      "TRANSFER-20260913-10"
+    ],
+    "steps": "new AI chat, attach files, paste the copied prompt, save the JSON, review in Import records from another app, add the selected records",
+    "requiredApps": "DoseWeek 1.0.5 or later on iPhone and iPad; the Android candidate that shows Import records from another app (versionCode 12). Candidate capability, not publication proof."
+  },
+  "sourceOwnership": {
+    "decisionDate": "2026-09-23",
+    "fullPolicyOwner": "website",
+    "ios": "docs/ios-content.json",
+    "android": "docs/android-content.candidate.json",
+    "native": "required consent and minimum instructions; platform website home link; full-policy legacy inputs retained pending native owner retirement",
+    "migrationEvidence": "../evidence/lean-20260923/privacy-operations-candidate/actual-policy-integration/OWNERSHIP-MIGRATION.md",
+    "priorAppVersionObservations": "liveApp fields are explicitly attributed historical observations. candidateApp fields identify the 2026-09-23 plan; root must reconcile them with final accepted artifacts and new public readback."
+  },
+  "historicalChecksBeforeWebsiteOwnership": {
     "passedOn": "2026-09-22",
     "commands": [
       "python3 scripts/generate_privacy_strings.py --check",
@@ -95,14 +169,5 @@
       "proof": "../evidence/continuation-20260921/homepage/locales17-progress.json",
       "scope": "Home17 locales at320/390/768/1280=68 DOM checks; representative KO/DE/AR screens; home-to-import/Android-guide and import-to-home retain Arabic; Arabic home renders without JavaScript. Shared-CSS18 secondary route checks retained in earlier browser-proof.json. Not native-speaker/screen-reader certification."
     }
-  },
-  "importGuide": {
-    "status": "supported",
-    "decisions": [
-      "TRANSFER-20260913-08",
-      "TRANSFER-20260913-10"
-    ],
-    "steps": "new AI chat, attach files, paste the copied prompt, save the JSON, review in Import records from another app, add the selected records",
-    "requiredApps": "DoseWeek 1.0.5 or later on iPhone and iPad; the Android release that shows Import records from another app (versionCode 11)"
   }
 }

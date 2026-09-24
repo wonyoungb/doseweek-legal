@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Render the iOS public privacy policy from the vendored iOS legal catalog.
+"""Render iOS policy/support from the website-owned docs/ios-content.json.
 
-`docs/ios-content.json` mirrors the iOS app catalog
-(`DoseDay/Resources/Localizable.xcstrings`) verbatim for every policy string, plus the
-repository-local second-release candidate section. Pass `--catalog` to prove the mirror,
-which is what `check_site.py --catalog` does.
+Apps retain required consent and minimum instructions; full website policies are no longer
+copied into app catalogs. --catalog is an explicit legacy comparison for historical inputs,
+not the current website release gate.
 """
 
 from __future__ import annotations
@@ -12,9 +11,11 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 from pathlib import Path
 
 from site_assets import stylesheet_path
+from help_navigation import support_start
 
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
@@ -31,8 +32,8 @@ SUPPORT_PATH = ROOT / "support/index.html"
 SUPPORT_CANONICAL = f"{SITE_BASE}support/"
 SUPPORT_TITLE = "DoseWeek Support"
 SUPPORT_DESCRIPTION = (
-    "Help with records, Apple Health, notifications, encrypted backups, plaintext exports, "
-    "App Lock, on-device AI, and the unreleased candidate features."
+    "Getting started with DoseWeek, plus help with records, Apple Health, notifications, "
+    "encrypted backups, plaintext exports, App Lock, on-device AI, meals and record import."
 )
 RELEASED_FAQ = [
     "storage", "health", "notifications", "backup", "exports", "ai", "applock", "deletion",
@@ -62,10 +63,12 @@ SECTION_IDS = [
 ]
 CANDIDATE_SECTION_ID = "next-release"
 # Owner decision IOS-VERSION-104-20260917: the pending 1.0.4 (build 15) review is cancelled and the
-# stage-2 release ships as iOS 1.0.5. Every candidate notice (five bugfix-candidate answers, seven
-# second-release answers and the candidate policy section) names that marketing version, and the
-# page eyebrow and footer carry it too. No notice names a build: the store build number is chosen
-# at upload, and build 16 has never been uploaded.
+# stage-2 release ships as iOS 1.0.5. Owner decision 2026-09-24: these features ship, so the FAQ
+# carries no pre-release notice; each of the twelve answers added for 1.0.5 opens with a one-line
+# version scope ("available in" / "this applies to" DoseWeek iOS 1.0.5 and later), and section 11
+# describes what 1.0.5 adds. The page eyebrow and footer carry the version too. No scope line names
+# a build: the store build number is chosen for the final artifact. Build planning and upload state
+# live in the map.
 CANDIDATE_VERSION = "1.0.5"
 PAGE_VERSION = "1.0.5"
 CATALOG_KEYS = {
@@ -76,6 +79,44 @@ CATALOG_KEYS = {
 
 def escaped(value: object) -> str:
     return html.escape(str(value), quote=True)
+
+
+def paragraph_blocks(value: str) -> list[str]:
+    """Split one source string into its blank-line ("\\n\\n") separated display paragraphs.
+
+    Sources keep one string per policy section or FAQ answer; each block renders as its own <p>.
+    A single "\\n" inside a block is left in the block; privacy_paragraph renders it as <br>.
+    """
+    return value.split("\n\n")
+
+
+def breakable_url(safe_url: str) -> str:
+    """Link text for a long URL: allow a line break after each path "/" (never inside "://")."""
+    scheme, separator, rest = safe_url.partition("://")
+    return scheme + separator + re.sub(r"/(?=.)", "/<wbr>", rest)
+
+
+def privacy_paragraph(value: str) -> str:
+    """Keep policy text escaped; link only the reviewed processor-source URLs.
+
+    Link text is isolated left-to-right, so a trailing "/" stays at the end of the URL in RTL text.
+
+    A single "\\n" left inside a block is a line break within that paragraph (the contact
+    sentence and its email address), so it renders as <br>.
+    """
+    rendered = escaped(value)
+    for url in (
+        "https://privacy.google.com/businesses/processorsupport",
+        "https://datacenters.google/locations/",
+        "https://business.safety.google/adssubprocessors/",
+        "https://business.safety.google/adsprocessorterms/",
+    ):
+        safe_url = escaped(url)
+        rendered = rendered.replace(
+            safe_url,
+            f'<a href="{safe_url}"><bdi dir="ltr">{breakable_url(safe_url)}</bdi></a>',
+        )
+    return rendered.replace("\n", "<br>")
 
 
 def validate(content: dict) -> None:
@@ -147,10 +188,37 @@ def validate(content: dict) -> None:
             assert isinstance(string, str) and string.strip(), locale
 
 
+def faq_items(support: dict) -> dict[str, dict]:
+    """FAQ items by their anchor suffix: faq-<key>, candidate-<key>, candidate2-<key>."""
+    return {
+        **{f"faq-{key}": support["released"][key] for key in RELEASED_FAQ},
+        **{f"candidate-{key}": support["candidate"][key] for key in BUGFIX_CANDIDATE_FAQ},
+        **{f"candidate2-{key}": support["secondRelease"][key] for key in SECOND_RELEASE_FAQ},
+    }
+
+
+def guide_steps(locale: str, support: dict) -> list[tuple[str, str, str, str]]:
+    """The getting-started steps as (title, body, href, link text); each links to its FAQ answer."""
+    items = faq_items(support)
+    return [
+        (step["title"], step["body"], f"#{locale}-{step['link']}", items[step["link"]]["question"])
+        for step in support["guide"]["steps"]
+    ]
+
+
 def validate_support(locale: str, support: dict) -> None:
     assert set(support) == {
-        "labels", "safetyCards", "released", "candidate", "secondRelease",
+        "labels", "guide", "safetyCards", "released", "candidate", "secondRelease",
     }, locale
+    assert set(support["guide"]) == {"steps"} and len(support["guide"]["steps"]) == 6, (
+        f"{locale}: the getting-started guide has six steps"
+    )
+    for index, step in enumerate(support["guide"]["steps"], start=1):
+        assert set(step) == {"title", "body", "link"}, f"{locale}: guide step {index}"
+        assert all(isinstance(step[key], str) and step[key].strip() for key in step), (
+            f"{locale}: guide step {index}"
+        )
+        assert step["link"] in faq_items(support), f"{locale}: guide step {index} links to no FAQ"
     assert set(support["labels"]) == set(SUPPORT_LABELS), locale
     for key, value in support["labels"].items():
         assert isinstance(value, str) and value.strip(), f"{locale}: labels.{key}"
@@ -177,7 +245,7 @@ def validate_support(locale: str, support: dict) -> None:
             assert item["answers"] and all(a.strip() for a in item["answers"]), (
                 f"{locale}: {group}.{key}"
             )
-    # every candidate answer opens with the notice that names the version it belongs to
+    # every answer added for 1.0.5 opens with a version-scope line that names the version
     for key in BUGFIX_CANDIDATE_FAQ:
         notice = support["candidate"][key]["answers"][0]
         assert f"iOS {CANDIDATE_VERSION}" in notice and "build" not in notice.lower(), (
@@ -186,7 +254,7 @@ def validate_support(locale: str, support: dict) -> None:
     for key in SECOND_RELEASE_FAQ:
         notice = support["secondRelease"][key]["answers"][0]
         assert f"iOS {PAGE_VERSION}" in notice and "build" not in notice.lower(), (
-            f"{locale}: second-release {key} must name unreleased iOS {PAGE_VERSION}, without a build"
+            f"{locale}: second-release {key} must name iOS {PAGE_VERSION}, without a build"
         )
     ai_answer = support["released"]["ai"]["answers"][0]
     assert ai_answer.count(AI_MODEL_TOKEN) == 1, f"{locale}: AI answer must name the model once"
@@ -198,7 +266,7 @@ def validate_support(locale: str, support: dict) -> None:
 
 
 def catalog_parity(content: dict, catalog_path: Path) -> None:
-    """Every policy string except the repository-local candidate section is verbatim."""
+    """Legacy diagnostic for a historical policy and its matching app catalog."""
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))["strings"]
 
     def value(key: str, locale: str) -> str:
@@ -243,10 +311,15 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
     )
     sections = "\n".join(
         f'              <section id="{escaped(locale)}-{escaped(section["id"])}" '
-        f'class="policy-section"'
-        + (' data-release-status="candidate"' if section["id"] == CANDIDATE_SECTION_ID else "")
-        + f'><h2>{escaped(section["title"])}</h2><div>'
-        + "".join(f"<p>{escaped(paragraph)}</p>" for paragraph in section["paragraphs"])
+        f'class="policy-section"><h2'
+        + (f' id="{escaped(locale)}-analytics-overseas-transfer" data-skip-target tabindex="-1"'
+           if section["id"] == "tracking" else "")
+        + f'>{escaped(section["title"])}</h2><div>'
+        + "".join(
+            f"<p>{privacy_paragraph(block)}</p>"
+            for paragraph in section["paragraphs"]
+            for block in paragraph_blocks(paragraph)
+        )
         + "</div></section>"
         for section in privacy["sections"]
     )
@@ -270,17 +343,28 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         </article>"""
 
 
-def faq_answer(text: str) -> str:
+def faq_answer(text: str, locale: str) -> str:
     """Escape an answer and wrap the on-device model name in <code>, as the published page did."""
     escaped_text = escaped(text)
-    return escaped_text.replace(AI_MODEL_TOKEN, f"<code>{AI_MODEL_TOKEN}</code>")
+    escaped_text = escaped_text.replace(AI_MODEL_TOKEN, f"<code>{AI_MODEL_TOKEN}</code>")
+    import_guide = "doseweek-legal.wonyoungchoi.dev/import/"
+    return escaped_text.replace(
+        import_guide,
+        f'<a href="../import/#{escaped(locale)}"><bdi dir="ltr">{import_guide}</bdi></a>',
+    )
 
 
 def faq_details(locale: str, identifier: str, item: dict, candidate: bool) -> str:
-    status = ' data-release-status="candidate"' if candidate else ""
-    answers = "".join(f"<p>{faq_answer(answer)}</p>" for answer in item["answers"])
+    # `candidate` marks the twelve answers added for 1.0.5; since they ship, the rendered
+    # markup no longer carries a release-status attribute (kept for callers and tests).
+    del candidate
+    answers = "".join(
+        f"<p>{faq_answer(block, locale)}</p>"
+        for answer in item["answers"]
+        for block in paragraph_blocks(answer)
+    )
     return (
-        f'              <details id="{escaped(locale)}-{escaped(identifier)}"{status}>'
+        f'              <details id="{escaped(locale)}-{escaped(identifier)}">'
         f'<summary><span>{escaped(item["question"])}</span>'
         '<span class="summary-symbol" aria-hidden="true"></span></summary>'
         f'<div class="faq-answer">{answers}</div></details>'
@@ -312,6 +396,8 @@ def support_panel(locale: str, entry: dict, bundle_version: str, email: str) -> 
             <h1 id="{escaped(locale)}-content" data-skip-target tabindex="-1">{escaped(labels['title'])}</h1>
             <p class="hero-copy">{escaped(labels['lead'])}</p>
           </header>
+
+          {support_start(locale, '../', '../import/', '../privacy/', privacy_title, guide_steps(locale, support))}
 
           <section class="content-section" aria-labelledby="{escaped(locale)}-before-email">
             <div class="section-heading"><p class="section-kicker">{escaped(labels['beforeEmailKicker'])}</p><h2 id="{escaped(locale)}-before-email">{escaped(labels['beforeEmailTitle'])}</h2></div>
@@ -504,7 +590,7 @@ def main() -> None:
     parser.add_argument(
         "--catalog",
         type=Path,
-        help="optional path to DoseDay/Resources/Localizable.xcstrings for verbatim parity",
+        help="legacy diagnostic: compare a matching historical app policy; not a current website gate",
     )
     arguments = parser.parse_args()
 

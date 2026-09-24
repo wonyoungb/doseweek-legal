@@ -7,6 +7,7 @@ import argparse
 import copy
 import json
 import re
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -41,6 +42,12 @@ SECOND_RELEASE_TOPICS = [
 SITE_BASE = "https://doseweek-legal.wonyoungchoi.dev/"
 SOCIAL_IMAGE = f"{SITE_BASE}assets/app-icon.png"
 ANDROID_SOCIAL_IMAGE = f"{SITE_BASE}assets/android-app-icon.png"
+POLICY_SOURCE_LINKS = {
+    "https://privacy.google.com/businesses/processorsupport",
+    "https://datacenters.google/locations/",
+    "https://business.safety.google/adssubprocessors/",
+    "https://business.safety.google/adsprocessorterms/",
+}
 
 
 class PageParser(HTMLParser):
@@ -121,10 +128,17 @@ def parse(path: Path) -> PageParser:
     return parser
 
 
-def local_target(source: Path, reference: str) -> tuple[Path, str] | None:
+def local_target(source: Path, reference: str, *, attribute: str | None = None) -> tuple[Path, str] | None:
     split = urlsplit(reference)
     if split.scheme or split.netloc:
         if split.scheme == "mailto":
+            return None
+        if (
+            attribute == "href"
+            and source in {ROOT / "privacy/index.html", ROOT / "android/privacy/index.html"}
+            and reference in POLICY_SOURCE_LINKS
+        ):
+            # Deliberate navigation to reviewed processor evidence, never a remote asset.
             return None
         if reference.startswith(SITE_BASE):
             relative_path = unquote(split.path.removeprefix("/doseweek-legal/").lstrip("/"))
@@ -155,6 +169,35 @@ def catalog_check(catalog_path: Path, privacy_text: str) -> None:
             assert normalized in privacy_text, (
                 f"privacy/index.html: {key} ({language}) does not match the app catalog"
             )
+
+
+def android_claims_text(path: Path) -> str:
+    """Exclude only verified navigation to the other platform, not Android feature claims."""
+    source = path.read_text(encoding="utf-8")
+    if path == ROOT / "android/index.html":
+        home = json.loads((ROOT / "docs/home-content.json").read_text(encoding="utf-8"))
+        seen: list[str] = []
+
+        def platform_link(match: re.Match[str]) -> str:
+            locale, title = match.group(1), unescape(match.group(2))
+            assert locale in ALL_LANGUAGES and title == home[locale]["iosTitle"], (
+                "Android platform navigation must name the linked iOS home exactly"
+            )
+            seen.append(locale)
+            return ""
+
+        source = re.sub(
+            r'<a class="help-platform" href="\.\./#([^"]+)">([^<]+) '
+            r'<span aria-hidden="true">[←→]</span></a>',
+            platform_link, source,
+        )
+        assert len(seen) == len(ALL_LANGUAGES) and set(seen) == set(ALL_LANGUAGES), (
+            "Android home must keep one verified other-platform link per locale"
+        )
+    page = PageParser()
+    page.feed(source)
+    page.close()
+    return " ".join(page.text)
 
 
 def assert_css_minimum(css: str, selector: str, property_name: str, minimum: int) -> None:
@@ -236,12 +279,13 @@ def main() -> None:
     argument_parser.add_argument(
         "--catalog",
         type=Path,
-        help="optional path to the iOS Localizable.xcstrings for verbatim policy comparison",
+        help="legacy diagnostic: compare a matching historical iOS full-policy catalog; not a current website gate",
     )
     argument_parser.add_argument(
         "--android-content",
         type=Path,
-        help="optional path to DoseweekPlayStore/docs/legal/android-content.json",
+        default=ROOT / "docs/android-content.candidate.json",
+        help="Android website source (defaults to docs/android-content.candidate.json)",
     )
     argument_parser.add_argument(
         "--release",
@@ -341,7 +385,7 @@ def main() -> None:
         assert page.metadata.get("twitter:image") == social_image, f"{label}: wrong twitter:image"
 
         for attribute, reference in page.references:
-            resolved = local_target(path, reference)
+            resolved = local_target(path, reference, attribute=attribute)
             if resolved is None:
                 continue
             target, fragment = resolved
@@ -456,6 +500,7 @@ def main() -> None:
 
     android_pages = [pages[path.resolve()] for path in ANDROID_HTML_FILES]
     android_text = " ".join(text for page in android_pages for text in page.text)
+    android_feature_claims = " ".join(android_claims_text(path) for path in ANDROID_HTML_FILES)
     android_support = pages[(ROOT / "android/support/index.html").resolve()]
     assert len(android_support.summary_markers) == 19 * len(ANDROID_LANGUAGES), (
         "android/support/index.html: expected seven existing, five bugfix-candidate and "
@@ -469,11 +514,11 @@ def main() -> None:
         (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
          f"iOS {render_ios.CANDIDATE_VERSION}"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
-         "Android 1.0.0 (versionCode 11)"),
+         "Android 1.0.0 (versionCode 12)"),
     ):
-        # the five bugfix-candidate topics name the release they ship in: iOS 1.0.5 (owner
-        # decision IOS-VERSION-104-20260917) or the first Play build after live code 9
-        # (Android; code 10 was withheld)
+        # the five bugfix topics open with a version-scope line naming the release they ship in:
+        # iOS 1.0.5 (owner decision IOS-VERSION-104-20260917) or Android code 12. Owner decision
+        # 2026-09-24: no pre-release notice; the scope line is not a claim of store availability.
         source = path.read_text(encoding="utf-8")
         for language in languages:
             for topic in ("dates", "edit", "past", "health", "sites"):
@@ -485,7 +530,7 @@ def main() -> None:
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == (3 if topic == "sites" else 2), identifier
                 assert candidate_version in paragraphs[0], (
-                    f"{identifier}: candidate notice must identify the exact version"
+                    f"{identifier}: the version-scope line must identify the exact version"
                 )
 
     for path, page, languages, second_release_version in (
@@ -494,7 +539,7 @@ def main() -> None:
         (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
          f"iOS {render_ios.PAGE_VERSION}"),
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
-         "versionCode 11"),
+         "versionCode 12"),
     ):
         source = path.read_text(encoding="utf-8")
         for language in languages:
@@ -507,12 +552,40 @@ def main() -> None:
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == 2, identifier
                 assert second_release_version in paragraphs[0], (
-                    f"{identifier}: the notice must name the version this candidate belongs to"
+                    f"{identifier}: the version-scope line must name the version it applies to"
                 )
                 if path.parent.name == "support" and path.parent.parent == ROOT:
                     assert "build" not in paragraphs[0].lower(), (
                         f"{identifier}: the notice must not name an unreleased build"
                     )
+
+    # Owner decision 2026-09-24: these features ship, so help and policy pages carry no
+    # pre-release label, and each support page opens with the six-step getting-started guide.
+    pre_release_labels = (
+        "출시 전 안내", "Candidate guidance", "公開前のご案内", "Hinweise zur Vorabversion",
+        "Guide de la version candidate", "Guía de la versión candidata",
+        "Guida alla versione candidata", "Uitleg bij de testversie", "Guia da versão candidata",
+        "Wskazówki dotyczące wersji testowej", "Hjälp för testversionen",
+        "परीक्षण संस्करण की जानकारी", "إرشادات الإصدار التجريبي", "未发布版本指南", "未發布版本指南",
+        "Aday sürüm kılavuzu", "unreleased candidate", "is not released yet",
+    )
+    for relative in ("support/index.html", "android/support/index.html",
+                     "privacy/index.html", "android/privacy/index.html"):
+        page_text = " ".join(pages[(ROOT / relative).resolve()].text)
+        for label in pre_release_labels:
+            assert label not in page_text, f"{relative}: pre-release label {label!r} is back"
+    for relative in ("support/index.html", "android/support/index.html"):
+        source = (ROOT / relative).read_text(encoding="utf-8")
+        guides = re.findall(r'<section class="help-start" aria-labelledby="([^"]+)-start">(.*?)</section>',
+                            source, flags=re.DOTALL)
+        assert [language for language, _ in guides] == ANDROID_LANGUAGES, (
+            f"{relative}: every locale needs the getting-started guide"
+        )
+        for language, body in guides:
+            assert body.count("<li>") == 6, f"{relative}: {language} guide must have six steps"
+            assert source.index(f'id="{language}-start"') < source.index(f'id="{language}-faq"'), (
+                f"{relative}: {language} guide must come before the FAQ"
+            )
 
     for prohibited in (
         "iPhone",
@@ -531,7 +604,7 @@ def main() -> None:
         pattern = (
             rf"(?<![A-Za-z0-9_]){re.escape(prohibited.casefold())}(?![A-Za-z0-9_])"
         )
-        assert not re.search(pattern, android_text.casefold()), (
+        assert not re.search(pattern, android_feature_claims.casefold()), (
             f"Android pages contain prohibited iOS-only claim/token {prohibited!r}"
         )
 
