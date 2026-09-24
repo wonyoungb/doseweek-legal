@@ -12,8 +12,8 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | Route | Content |
 |---|---|
 | `/` | Shared home: choose a platform, short help tasks |
-| `/support/`, `/privacy/` | iOS support and privacy policy |
-| `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support and privacy policy |
+| `/support/`, `/privacy/` | iOS support (six-step getting-started guide, then FAQ) and privacy policy |
+| `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
@@ -46,7 +46,7 @@ Edit the source first, then render. Do not hand-edit generated HTML.
 | Source | Renderer | Output |
 |---|---|---|
 | `docs/home-content.json`, `templates/home.html` | `scripts/render_home.py` | `index.html` |
-| `docs/help-navigation.json` | shared by the home and platform renderers | help cards and steps |
+| `docs/help-navigation.json` | shared by the home and platform renderers | help cards and guide headings; the guide steps live in each platform source (`support.guide`) |
 | `docs/ios-content.json` | `scripts/render_ios.py` | `privacy/`, `support/` |
 | `docs/android-content.candidate.json` | `scripts/render_android.py` | `android/**` |
 | `import/content.json` | `scripts/render_import.py` | `import/index.html`, `import/*.md`, `import/draft-v1.schema.json`, `import/draft.example.json` |

@@ -9,7 +9,8 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
 - [Android policy and pages](android-content.candidate.json), rendered by
   [render_android.py](../scripts/render_android.py).
 - [Home copy](home-content.json) and [help navigation](help-navigation.json), rendered by
-  [render_home.py](../scripts/render_home.py). The platform renderers share the help navigation.
+  [render_home.py](../scripts/render_home.py). The platform renderers share the help navigation;
+  each platform source holds its own six-step getting-started guide (`support.guide`).
 - [Import guide](../import/content.json), rendered by [render_import.py](../scripts/render_import.py).
 - [Release constants](../scripts/legal_release.py): the effective date and the food-data
   attribution lines.

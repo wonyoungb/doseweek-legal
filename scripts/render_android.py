@@ -282,6 +282,27 @@ def privacy_panels(catalog: dict[str, object]) -> str:
     return "\n\n".join(rendered)
 
 
+def guide_steps(locale: str, entry: dict[str, object]) -> list[tuple[str, str, str, str]]:
+    """The getting-started steps as (title, body, href, link text).
+
+    A step links to its FAQ answer by id, or to a privacy section as "privacy:<section id>".
+    """
+    faq = {item["id"]: item for item in entry["support"]["faq"]}
+    sections = {section["id"]: section for section in entry["privacy"]["sections"]}
+    steps = []
+    for step in entry["support"]["guide"]["steps"]:
+        link = step["link"]
+        if link.startswith("privacy:"):
+            section = sections[link.removeprefix("privacy:")]
+            # link text drops the section number ("3. ..."), which reads oddly inline
+            href = f"../privacy/#{locale}-{section['id']}"
+            text = re.sub(r"^\d+\.\s*", "", section["title"])
+        else:
+            href, text = f"#{locale}-{link}", faq[link]["question"]
+        steps.append((step["title"], step["body"], href, text))
+    return steps
+
+
 def support_panels(catalog: dict[str, object]) -> str:
     rendered = []
     email = escaped(catalog["supportEmail"])
@@ -315,7 +336,7 @@ def support_panels(catalog: dict[str, object]) -> str:
             <p class="hero-copy">{escaped(content['intro'])}</p>
           </header>
 
-          {support_start(locale, '../', '../../import/', '../privacy/', entry['home']['privacyLinkTitle'])}
+          {support_start(locale, '../', '../../import/', '../privacy/', entry['home']['privacyLinkTitle'], guide_steps(locale, entry))}
 
           <div class="notice"><span class="notice-symbol" aria-hidden="true">!</span><div><strong>{escaped(content['privacyWarning'])}</strong></div></div>
 
@@ -455,7 +476,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             "title", "scope", "sections", "medicalDisclaimer",
         }, locale
         assert set(entry["support"]) == {
-            "title", "intro", "privacyWarning", "faq", "contact", "emergency",
+            "title", "intro", "privacyWarning", "guide", "faq", "contact", "emergency",
         }, locale
         require_string(entry["privacy"]["title"], f"{locale}.privacy.title")
         require_string(entry["privacy"]["scope"], f"{locale}.privacy.scope")
@@ -516,6 +537,25 @@ def validate_catalog(catalog: dict[str, object]) -> None:
                 expected_length=expected_faq_answer_lengths[item["id"]],
             )
 
+        guide = entry["support"]["guide"]
+        assert isinstance(guide, dict) and set(guide) == {"steps"}, f"{locale}.support.guide"
+        assert isinstance(guide["steps"], list) and len(guide["steps"]) == 6, (
+            f"{locale}: the getting-started guide has six steps"
+        )
+        section_ids = {section["id"] for section in entry["privacy"]["sections"]}
+        for index, step in enumerate(guide["steps"], start=1):
+            assert isinstance(step, dict) and set(step) == {"title", "body", "link"}, (
+                f"{locale}: guide step {index}"
+            )
+            for key in ("title", "body", "link"):
+                require_string(step[key], f"{locale}.support.guide.steps[{index}].{key}")
+            link = step["link"]
+            target_ok = (
+                link.removeprefix("privacy:") in section_ids if link.startswith("privacy:")
+                else link in expected_faq_ids
+            )
+            assert target_ok, f"{locale}: guide step {index} links to nothing"
+
         locale_text = json.dumps(entry, ensure_ascii=False)
         for invariant in (
             "DoseWeek", "Android", "AES-256-GCM", "Health Connect",
@@ -546,10 +586,10 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         for topic in SECOND_RELEASE_TOPICS:
             notice = faq_by_id[f"candidate2-{topic}"]["answers"][0]
             assert SECOND_RELEASE_VERSION in notice, (
-                f"{locale}: second-release FAQ {topic} must name the unreleased version"
+                f"{locale}: second-release FAQ {topic} must name the version it applies to"
             )
         assert SECOND_RELEASE_VERSION in policy_by_id["next-release"]["paragraphs"][0], (
-            f"{locale}: candidate policy section must name the unreleased version"
+            f"{locale}: section 8 must name the version it describes"
         )
         # the bundled food data ships in this release, so its attribution lines are verbatim
         food_paragraph = policy_by_id["next-release"]["paragraphs"][4]

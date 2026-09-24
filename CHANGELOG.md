@@ -20,6 +20,10 @@ live.
 - An operator tool and guide for the apps' analytics exports and deletion requests
   (`scripts/privacy_ops.py`, `docs/ANALYTICS_OPERATIONS.md`). It runs as a dry run unless told
   otherwise, and has unit tests (c9ce28f).
+- Both support pages open with a six-step "Getting started" guide in 17 locales (setup,
+  schedule, recording, meals, import, settings), each step linking to the matching answer. The
+  home "Getting started" card opens it (`#<locale>-start`). The FAQ below is titled "FAQ and
+  troubleshooting" (2026-09-24).
 
 ### Changed
 
@@ -35,6 +39,16 @@ live.
 - Easier to read in all locales. The contact address sits on its own line. The Android policy
   list follows the sentence that introduces it. The iOS deletion FAQ gives the delete-all
   instruction once. Long support URLs wrap. Korean list items no longer break mid-word (d459c90).
+- The shipped 1.0.5 / versionCode 12 features are no longer labelled "Candidate guidance" or
+  unreleased. Each of those FAQ answers now opens with a one-line version scope ("This applies
+  to ..." for backups between versions and supported devices), and the last policy section on
+  each platform is titled "Features added in ..." (2026-09-24).
+- Audit text fixes in all locales: iOS backups and Android backups cannot be restored on the other
+  platform; the Android Drive recovery code can be shown again until confirmed, a pending file
+  backup code stays wrapped on the device, and each Drive backup is a separate file that is kept
+  until deleted; the estimate's reference medication is not in a backup; the iOS policy discloses
+  the one pre-upgrade copy of records; the iOS calendar example names Exchange instead of
+  Samsung; the Polish date no longer ends in a double period (2026-09-24).
 
 ### Removed
 

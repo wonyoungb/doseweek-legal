@@ -516,9 +516,9 @@ def main() -> None:
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
          "Android 1.0.0 (versionCode 12)"),
     ):
-        # the five bugfix-candidate topics name the release they ship in: iOS 1.0.5 (owner
-        # decision IOS-VERSION-104-20260917) or the current Android candidate code 12.
-        # These are candidate notices, not assertions of public app availability.
+        # the five bugfix topics open with a version-scope line naming the release they ship in:
+        # iOS 1.0.5 (owner decision IOS-VERSION-104-20260917) or Android code 12. Owner decision
+        # 2026-09-24: no pre-release notice; the scope line is not a claim of store availability.
         source = path.read_text(encoding="utf-8")
         for language in languages:
             for topic in ("dates", "edit", "past", "health", "sites"):
@@ -530,7 +530,7 @@ def main() -> None:
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == (3 if topic == "sites" else 2), identifier
                 assert candidate_version in paragraphs[0], (
-                    f"{identifier}: candidate notice must identify the exact version"
+                    f"{identifier}: the version-scope line must identify the exact version"
                 )
 
     for path, page, languages, second_release_version in (
@@ -552,12 +552,40 @@ def main() -> None:
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == 2, identifier
                 assert second_release_version in paragraphs[0], (
-                    f"{identifier}: the notice must name the version this candidate belongs to"
+                    f"{identifier}: the version-scope line must name the version it applies to"
                 )
                 if path.parent.name == "support" and path.parent.parent == ROOT:
                     assert "build" not in paragraphs[0].lower(), (
                         f"{identifier}: the notice must not name an unreleased build"
                     )
+
+    # Owner decision 2026-09-24: these features ship, so help and policy pages carry no
+    # pre-release label, and each support page opens with the six-step getting-started guide.
+    pre_release_labels = (
+        "출시 전 안내", "Candidate guidance", "公開前のご案内", "Hinweise zur Vorabversion",
+        "Guide de la version candidate", "Guía de la versión candidata",
+        "Guida alla versione candidata", "Uitleg bij de testversie", "Guia da versão candidata",
+        "Wskazówki dotyczące wersji testowej", "Hjälp för testversionen",
+        "परीक्षण संस्करण की जानकारी", "إرشادات الإصدار التجريبي", "未发布版本指南", "未發布版本指南",
+        "Aday sürüm kılavuzu", "unreleased candidate", "is not released yet",
+    )
+    for relative in ("support/index.html", "android/support/index.html",
+                     "privacy/index.html", "android/privacy/index.html"):
+        page_text = " ".join(pages[(ROOT / relative).resolve()].text)
+        for label in pre_release_labels:
+            assert label not in page_text, f"{relative}: pre-release label {label!r} is back"
+    for relative in ("support/index.html", "android/support/index.html"):
+        source = (ROOT / relative).read_text(encoding="utf-8")
+        guides = re.findall(r'<section class="help-start" aria-labelledby="([^"]+)-start">(.*?)</section>',
+                            source, flags=re.DOTALL)
+        assert [language for language, _ in guides] == ANDROID_LANGUAGES, (
+            f"{relative}: every locale needs the getting-started guide"
+        )
+        for language, body in guides:
+            assert body.count("<li>") == 6, f"{relative}: {language} guide must have six steps"
+            assert source.index(f'id="{language}-start"') < source.index(f'id="{language}-faq"'), (
+                f"{relative}: {language} guide must come before the FAQ"
+            )
 
     for prohibited in (
         "iPhone",

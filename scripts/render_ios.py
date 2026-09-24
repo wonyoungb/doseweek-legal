@@ -32,8 +32,8 @@ SUPPORT_PATH = ROOT / "support/index.html"
 SUPPORT_CANONICAL = f"{SITE_BASE}support/"
 SUPPORT_TITLE = "DoseWeek Support"
 SUPPORT_DESCRIPTION = (
-    "Help with records, Apple Health, notifications, encrypted backups, plaintext exports, "
-    "App Lock, on-device AI, and the unreleased candidate features."
+    "Getting started with DoseWeek, plus help with records, Apple Health, notifications, "
+    "encrypted backups, plaintext exports, App Lock, on-device AI, meals and record import."
 )
 RELEASED_FAQ = [
     "storage", "health", "notifications", "backup", "exports", "ai", "applock", "deletion",
@@ -63,10 +63,12 @@ SECTION_IDS = [
 ]
 CANDIDATE_SECTION_ID = "next-release"
 # Owner decision IOS-VERSION-104-20260917: the pending 1.0.4 (build 15) review is cancelled and the
-# stage-2 release ships as iOS 1.0.5. Every candidate notice (five bugfix-candidate answers, seven
-# second-release answers and the candidate policy section) names that marketing version, and the
-# page eyebrow and footer carry it too. No notice names a build: the store build number is chosen
-# for the final artifact. Candidate build planning and actual upload state live in the release map.
+# stage-2 release ships as iOS 1.0.5. Owner decision 2026-09-24: these features ship, so the FAQ
+# carries no pre-release notice; each of the twelve answers added for 1.0.5 opens with a one-line
+# version scope ("available in" / "this applies to" DoseWeek iOS 1.0.5 and later), and section 11
+# describes what 1.0.5 adds. The page eyebrow and footer carry the version too. No scope line names
+# a build: the store build number is chosen for the final artifact. Build planning and upload state
+# live in the map.
 CANDIDATE_VERSION = "1.0.5"
 PAGE_VERSION = "1.0.5"
 CATALOG_KEYS = {
@@ -186,10 +188,37 @@ def validate(content: dict) -> None:
             assert isinstance(string, str) and string.strip(), locale
 
 
+def faq_items(support: dict) -> dict[str, dict]:
+    """FAQ items by their anchor suffix: faq-<key>, candidate-<key>, candidate2-<key>."""
+    return {
+        **{f"faq-{key}": support["released"][key] for key in RELEASED_FAQ},
+        **{f"candidate-{key}": support["candidate"][key] for key in BUGFIX_CANDIDATE_FAQ},
+        **{f"candidate2-{key}": support["secondRelease"][key] for key in SECOND_RELEASE_FAQ},
+    }
+
+
+def guide_steps(locale: str, support: dict) -> list[tuple[str, str, str, str]]:
+    """The getting-started steps as (title, body, href, link text); each links to its FAQ answer."""
+    items = faq_items(support)
+    return [
+        (step["title"], step["body"], f"#{locale}-{step['link']}", items[step["link"]]["question"])
+        for step in support["guide"]["steps"]
+    ]
+
+
 def validate_support(locale: str, support: dict) -> None:
     assert set(support) == {
-        "labels", "safetyCards", "released", "candidate", "secondRelease",
+        "labels", "guide", "safetyCards", "released", "candidate", "secondRelease",
     }, locale
+    assert set(support["guide"]) == {"steps"} and len(support["guide"]["steps"]) == 6, (
+        f"{locale}: the getting-started guide has six steps"
+    )
+    for index, step in enumerate(support["guide"]["steps"], start=1):
+        assert set(step) == {"title", "body", "link"}, f"{locale}: guide step {index}"
+        assert all(isinstance(step[key], str) and step[key].strip() for key in step), (
+            f"{locale}: guide step {index}"
+        )
+        assert step["link"] in faq_items(support), f"{locale}: guide step {index} links to no FAQ"
     assert set(support["labels"]) == set(SUPPORT_LABELS), locale
     for key, value in support["labels"].items():
         assert isinstance(value, str) and value.strip(), f"{locale}: labels.{key}"
@@ -216,7 +245,7 @@ def validate_support(locale: str, support: dict) -> None:
             assert item["answers"] and all(a.strip() for a in item["answers"]), (
                 f"{locale}: {group}.{key}"
             )
-    # every candidate answer opens with the notice that names the version it belongs to
+    # every answer added for 1.0.5 opens with a version-scope line that names the version
     for key in BUGFIX_CANDIDATE_FAQ:
         notice = support["candidate"][key]["answers"][0]
         assert f"iOS {CANDIDATE_VERSION}" in notice and "build" not in notice.lower(), (
@@ -225,7 +254,7 @@ def validate_support(locale: str, support: dict) -> None:
     for key in SECOND_RELEASE_FAQ:
         notice = support["secondRelease"][key]["answers"][0]
         assert f"iOS {PAGE_VERSION}" in notice and "build" not in notice.lower(), (
-            f"{locale}: second-release {key} must name unreleased iOS {PAGE_VERSION}, without a build"
+            f"{locale}: second-release {key} must name iOS {PAGE_VERSION}, without a build"
         )
     ai_answer = support["released"]["ai"]["answers"][0]
     assert ai_answer.count(AI_MODEL_TOKEN) == 1, f"{locale}: AI answer must name the model once"
@@ -282,9 +311,7 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
     )
     sections = "\n".join(
         f'              <section id="{escaped(locale)}-{escaped(section["id"])}" '
-        f'class="policy-section"'
-        + (' data-release-status="candidate"' if section["id"] == CANDIDATE_SECTION_ID else "")
-        + "><h2"
+        f'class="policy-section"><h2'
         + (f' id="{escaped(locale)}-analytics-overseas-transfer" data-skip-target tabindex="-1"'
            if section["id"] == "tracking" else "")
         + f'>{escaped(section["title"])}</h2><div>'
@@ -328,14 +355,16 @@ def faq_answer(text: str, locale: str) -> str:
 
 
 def faq_details(locale: str, identifier: str, item: dict, candidate: bool) -> str:
-    status = ' data-release-status="candidate"' if candidate else ""
+    # `candidate` marks the twelve answers added for 1.0.5; since they ship, the rendered
+    # markup no longer carries a release-status attribute (kept for callers and tests).
+    del candidate
     answers = "".join(
         f"<p>{faq_answer(block, locale)}</p>"
         for answer in item["answers"]
         for block in paragraph_blocks(answer)
     )
     return (
-        f'              <details id="{escaped(locale)}-{escaped(identifier)}"{status}>'
+        f'              <details id="{escaped(locale)}-{escaped(identifier)}">'
         f'<summary><span>{escaped(item["question"])}</span>'
         '<span class="summary-symbol" aria-hidden="true"></span></summary>'
         f'<div class="faq-answer">{answers}</div></details>'
@@ -368,7 +397,7 @@ def support_panel(locale: str, entry: dict, bundle_version: str, email: str) -> 
             <p class="hero-copy">{escaped(labels['lead'])}</p>
           </header>
 
-          {support_start(locale, '../', '../import/', '../privacy/', privacy_title)}
+          {support_start(locale, '../', '../import/', '../privacy/', privacy_title, guide_steps(locale, support))}
 
           <section class="content-section" aria-labelledby="{escaped(locale)}-before-email">
             <div class="section-heading"><p class="section-kicker">{escaped(labels['beforeEmailKicker'])}</p><h2 id="{escaped(locale)}-before-email">{escaped(labels['beforeEmailTitle'])}</h2></div>

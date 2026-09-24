@@ -1155,6 +1155,10 @@ code {
 .help-start h2 { margin: 0 0 12px; font-size: 1.3rem; }
 .help-start ol { margin: 0; padding-inline-start: 24px; }
 .help-start li { padding-inline-start: 5px; margin: 10px 0; line-height: 1.75; }
+.help-start > p { margin: 0 0 8px; color: var(--secondary); line-height: 1.65; }
+.help-start li strong { display: block; }
+.help-start li p { margin: 2px 0 0; }
+.help-start li a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; overflow-wrap: anywhere; }
 [id$="-start"], [id$="-faq"] { scroll-margin-top: 24px; }
 @media (max-width: 700px) {
   .help-tasks { grid-template-columns: 1fr; }
