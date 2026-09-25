@@ -533,13 +533,14 @@ def main() -> None:
                     f"{identifier}: the version-scope line must identify the exact version"
                 )
 
-    for path, page, languages, second_release_version in (
+    for path, page, languages, second_release_version, scope_overrides in (
         # iOS: the notice names the marketing version 1.0.5 but no build, because the store build
         # number is chosen at upload
         (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
-         f"iOS {render_ios.PAGE_VERSION}"),
+         f"iOS {render_ios.PAGE_VERSION}", {}),
+        # Android: owner decision 2026-09-25, Android 14 is the minimum from versionCode 13
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
-         "versionCode 12"),
+         "versionCode 12", {"devices": "versionCode 13"}),
     ):
         source = path.read_text(encoding="utf-8")
         for language in languages:
@@ -551,7 +552,7 @@ def main() -> None:
                 assert entry is not None, identifier
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == 2, identifier
-                assert second_release_version in paragraphs[0], (
+                assert scope_overrides.get(topic, second_release_version) in paragraphs[0], (
                     f"{identifier}: the version-scope line must name the version it applies to"
                 )
                 if path.parent.name == "support" and path.parent.parent == ROOT:
