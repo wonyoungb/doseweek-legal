@@ -49,6 +49,11 @@ live.
   until deleted; the estimate's reference medication is not in a backup; the iOS policy discloses
   the one pre-upgrade copy of records; the iOS calendar example names Exchange instead of
   Samsung; the Polish date no longer ends in a double period (2026-09-24).
+- Android support FAQ, all 17 locales: DoseWeek needs Android 14 or later from versionCode 13.
+  Android 8.0 to 13 devices keep their installed versionCode 12 without updates, and Google
+  Play offers no new installs on them. The renderer and site check expect versionCode 13 in
+  that answer's scope line (owner decision 2026-09-25; on
+  `claude/android14-minimum-20260925`, stacked on this branch).
 
 ### Removed
 

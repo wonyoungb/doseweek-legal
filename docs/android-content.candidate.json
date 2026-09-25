@@ -329,8 +329,8 @@
             "id": "candidate2-devices",
             "question": "어떤 기기와 Android 버전을 지원하나요?",
             "answers": [
-              "DoseWeek Android 1.0.0 (versionCode 12) 이상 기준입니다.",
-              "Android 8.0 이상에서 사용할 수 있습니다. 일부 선택형 AI 기능은 호환되는 기기가 필요하며, 사용할 수 없는 경우에도 직접 기록할 수 있습니다."
+              "DoseWeek Android versionCode 13 이상 기준입니다.",
+              "Android 14 이상에서 사용할 수 있습니다. Android 8.0~13 기기에서는 이미 설치된 버전(versionCode 12)을 계속 사용할 수 있지만, 업데이트는 더 이상 제공되지 않고 Google Play에서 새로 설치할 수도 없습니다. 일부 선택형 AI 기능은 호환되는 기기가 필요하며, 사용할 수 없는 경우에도 직접 기록할 수 있습니다."
             ]
           },
           {
@@ -656,8 +656,8 @@
             "id": "candidate2-devices",
             "question": "Which devices and Android versions are supported?",
             "answers": [
-              "This applies to DoseWeek Android 1.0.0 (versionCode 12) and later.",
-              "Use DoseWeek on Android 8.0 or later. Some optional AI features need a compatible device; you can still enter records yourself if they are unavailable."
+              "This applies to DoseWeek Android versionCode 13 and later.",
+              "Use DoseWeek on Android 14 or later. On Android 8.0 to Android 13, you can keep using the version already installed (versionCode 12), but it will not receive updates, and Google Play will not offer new installs on those devices. Some optional AI features need a compatible device; you can still enter records yourself if they are unavailable."
             ]
           },
           {
@@ -983,8 +983,8 @@
             "id": "candidate2-devices",
             "question": "対応する端末とAndroidのバージョンは？",
             "answers": [
-              "DoseWeek Android 1.0.0 (versionCode 12) 以降が対象です。",
-              "Android 8.0以降で使えます。一部の任意のAI機能には対応端末が必要ですが、使えない場合も手入力で記録できます。"
+              "DoseWeek Android versionCode 13 以降が対象です。",
+              "Android 14以降で使えます。Android 8.0〜13の端末では、インストール済みのバージョン（versionCode 12）を引き続き使えますが、アップデートは届かず、Google Playから新しくインストールすることもできません。一部の任意のAI機能には対応端末が必要ですが、使えない場合も手入力で記録できます。"
             ]
           },
           {
@@ -1310,8 +1310,8 @@
             "id": "candidate2-devices",
             "question": "Welche Geräte und Android-Versionen werden unterstützt?",
             "answers": [
-              "Gilt für DoseWeek Android 1.0.0 (versionCode 12) und neuer.",
-              "Nutzen Sie DoseWeek mit Android 8.0 oder neuer. Einige optionale KI-Funktionen benötigen ein kompatibles Gerät. Sind sie nicht verfügbar, können Sie Einträge weiterhin selbst eingeben."
+              "Gilt für DoseWeek Android versionCode 13 und neuer.",
+              "Nutzen Sie DoseWeek mit Android 14 oder neuer. Auf Geräten mit Android 8.0 bis Android 13 können Sie die bereits installierte Version (versionCode 12) weiter nutzen. Sie erhält jedoch keine Updates mehr, und Google Play bietet auf diesen Geräten keine Neuinstallation an. Einige optionale KI-Funktionen benötigen ein kompatibles Gerät. Sind sie nicht verfügbar, können Sie Einträge weiterhin selbst eingeben."
             ]
           },
           {
@@ -1637,8 +1637,8 @@
             "id": "candidate2-devices",
             "question": "Quels appareils et quelles versions d’Android sont pris en charge ?",
             "answers": [
-              "Concerne DoseWeek Android 1.0.0 (versionCode 12) et les versions ultérieures.",
-              "Utilisez DoseWeek avec Android 8.0 ou ultérieur. Certaines fonctions d’IA facultatives nécessitent un appareil compatible. Si elles sont indisponibles, vous pouvez toujours saisir vos données vous-même."
+              "Concerne DoseWeek Android versionCode 13 et les versions ultérieures.",
+              "Utilisez DoseWeek avec Android 14 ou ultérieur. Sur les appareils sous Android 8.0 à Android 13, vous pouvez continuer à utiliser la version déjà installée (versionCode 12), mais elle ne recevra plus de mises à jour et Google Play n’y proposera pas de nouvelle installation. Certaines fonctions d’IA facultatives nécessitent un appareil compatible. Si elles sont indisponibles, vous pouvez toujours saisir vos données vous-même."
             ]
           },
           {
@@ -1964,8 +1964,8 @@
             "id": "candidate2-devices",
             "question": "¿Qué dispositivos y versiones de Android se admiten?",
             "answers": [
-              "Se aplica a DoseWeek Android 1.0.0 (versionCode 12) y versiones posteriores.",
-              "Usa DoseWeek con Android 8.0 o posterior. Algunas funciones opcionales de IA necesitan un dispositivo compatible. Si no están disponibles, puedes seguir introduciendo registros manualmente."
+              "Se aplica a DoseWeek Android versionCode 13 y versiones posteriores.",
+              "Usa DoseWeek con Android 14 o posterior. En dispositivos con Android 8.0 a Android 13, puedes seguir usando la versión que ya tienes instalada (versionCode 12), pero no recibirá actualizaciones y Google Play no ofrecerá nuevas instalaciones en esos dispositivos. Algunas funciones opcionales de IA necesitan un dispositivo compatible. Si no están disponibles, puedes seguir introduciendo registros manualmente."
             ]
           },
           {
@@ -2291,8 +2291,8 @@
             "id": "candidate2-devices",
             "question": "Quali dispositivi e versioni di Android sono supportati?",
             "answers": [
-              "Vale per DoseWeek Android 1.0.0 (versionCode 12) e versioni successive.",
-              "Usa DoseWeek con Android 8.0 o successivo. Alcune funzioni facoltative di IA richiedono un dispositivo compatibile. Se non sono disponibili, puoi comunque inserire i dati manualmente."
+              "Vale per DoseWeek Android versionCode 13 e versioni successive.",
+              "Usa DoseWeek con Android 14 o successivo. Sui dispositivi con Android da 8.0 a 13 puoi continuare a usare la versione già installata (versionCode 12), ma non riceverà aggiornamenti e Google Play non offrirà nuove installazioni su questi dispositivi. Alcune funzioni facoltative di IA richiedono un dispositivo compatibile. Se non sono disponibili, puoi comunque inserire i dati manualmente."
             ]
           },
           {
@@ -2618,8 +2618,8 @@
             "id": "candidate2-devices",
             "question": "Welke apparaten en Android-versies worden ondersteund?",
             "answers": [
-              "Geldt voor DoseWeek Android 1.0.0 (versionCode 12) en nieuwer.",
-              "Gebruik DoseWeek met Android 8.0 of nieuwer. Sommige optionele AI-functies vereisen een geschikt apparaat. Als ze niet beschikbaar zijn, kun je gegevens nog steeds zelf invoeren."
+              "Geldt voor DoseWeek Android versionCode 13 en nieuwer.",
+              "Gebruik DoseWeek met Android 14 of nieuwer. Op apparaten met Android 8.0 tot en met Android 13 kun je de al geïnstalleerde versie (versionCode 12) blijven gebruiken, maar die krijgt geen updates meer en Google Play biedt er geen nieuwe installaties aan. Sommige optionele AI-functies vereisen een geschikt apparaat. Als ze niet beschikbaar zijn, kun je gegevens nog steeds zelf invoeren."
             ]
           },
           {
@@ -2945,8 +2945,8 @@
             "id": "candidate2-devices",
             "question": "Que dispositivos e versões do Android são suportados?",
             "answers": [
-              "Aplica-se ao DoseWeek Android 1.0.0 (versionCode 12) e versões posteriores.",
-              "Use o DoseWeek com Android 8.0 ou posterior. Algumas funcionalidades opcionais de IA precisam de um dispositivo compatível. Se não estiverem disponíveis, pode continuar a introduzir os registos manualmente."
+              "Aplica-se ao DoseWeek Android versionCode 13 e versões posteriores.",
+              "Use o DoseWeek com Android 14 ou posterior. Em dispositivos com Android 8.0 a Android 13, pode continuar a utilizar a versão já instalada (versionCode 12), mas esta deixa de receber atualizações e o Google Play não disponibiliza novas instalações nesses dispositivos. Algumas funcionalidades opcionais de IA precisam de um dispositivo compatível. Se não estiverem disponíveis, pode continuar a introduzir os registos manualmente."
             ]
           },
           {
@@ -3272,8 +3272,8 @@
             "id": "candidate2-devices",
             "question": "Jakie urządzenia i wersje Androida są obsługiwane?",
             "answers": [
-              "Dotyczy DoseWeek Android 1.0.0 (versionCode 12) i nowszych wersji.",
-              "Używaj DoseWeek z Androidem 8.0 lub nowszym. Niektóre opcjonalne funkcje AI wymagają zgodnego urządzenia. Jeśli są niedostępne, nadal możesz wprowadzać zapisy ręcznie."
+              "Dotyczy DoseWeek Android versionCode 13 i nowszych wersji.",
+              "Używaj DoseWeek z Androidem 14 lub nowszym. Na urządzeniach z Androidem od 8.0 do 13 możesz nadal korzystać z już zainstalowanej wersji (versionCode 12), ale nie będzie ona otrzymywać aktualizacji, a Google Play nie zaoferuje na nich nowych instalacji. Niektóre opcjonalne funkcje AI wymagają zgodnego urządzenia. Jeśli są niedostępne, nadal możesz wprowadzać zapisy ręcznie."
             ]
           },
           {
@@ -3599,8 +3599,8 @@
             "id": "candidate2-devices",
             "question": "Vilka enheter och Android-versioner stöds?",
             "answers": [
-              "Gäller DoseWeek Android 1.0.0 (versionCode 12) och senare.",
-              "Använd DoseWeek med Android 8.0 eller senare. Vissa frivilliga AI-funktioner kräver en kompatibel enhet. Om de inte är tillgängliga kan du fortfarande skriva in uppgifter själv."
+              "Gäller DoseWeek Android versionCode 13 och senare.",
+              "Använd DoseWeek med Android 14 eller senare. På enheter med Android 8.0 till Android 13 kan du fortsätta använda den version som redan är installerad (versionCode 12), men den får inga uppdateringar och Google Play erbjuder inte nya installationer på dem. Vissa frivilliga AI-funktioner kräver en kompatibel enhet. Om de inte är tillgängliga kan du fortfarande skriva in uppgifter själv."
             ]
           },
           {
@@ -3926,8 +3926,8 @@
             "id": "candidate2-devices",
             "question": "कौन-से डिवाइस और Android संस्करण समर्थित हैं?",
             "answers": [
-              "यह DoseWeek Android 1.0.0 (versionCode 12) और उसके बाद के संस्करणों पर लागू होता है।",
-              "Android 8.0 या उसके बाद के संस्करण पर DoseWeek इस्तेमाल करें। कुछ वैकल्पिक AI सुविधाओं के लिए संगत डिवाइस चाहिए। वे उपलब्ध न हों तो भी आप रिकॉर्ड खुद दर्ज कर सकते हैं।"
+              "यह DoseWeek Android versionCode 13 और उसके बाद के संस्करणों पर लागू होता है।",
+              "Android 14 या उसके बाद के संस्करण पर DoseWeek इस्तेमाल करें। Android 8.0 से Android 13 वाले डिवाइस पर आप पहले से इंस्टॉल किया गया संस्करण (versionCode 12) इस्तेमाल करते रह सकते हैं, लेकिन उसे अपडेट नहीं मिलेंगे और Google Play उन डिवाइस पर नया इंस्टॉल उपलब्ध नहीं कराएगा। कुछ वैकल्पिक AI सुविधाओं के लिए संगत डिवाइस चाहिए। वे उपलब्ध न हों तो भी आप रिकॉर्ड खुद दर्ज कर सकते हैं।"
             ]
           },
           {
@@ -4253,8 +4253,8 @@
             "id": "candidate2-devices",
             "question": "Quais aparelhos e versões do Android são suportados?",
             "answers": [
-              "Vale para o DoseWeek Android 1.0.0 (versionCode 12) e versões posteriores.",
-              "Use o DoseWeek com Android 8.0 ou posterior. Alguns recursos opcionais de IA precisam de um dispositivo compatível. Se não estiverem disponíveis, você ainda pode inserir os registros manualmente."
+              "Vale para o DoseWeek Android versionCode 13 e versões posteriores.",
+              "Use o DoseWeek com Android 14 ou posterior. Em aparelhos com Android 8.0 a Android 13, você pode continuar usando a versão já instalada (versionCode 12), mas ela não vai receber atualizações e o Google Play não vai oferecer novas instalações nesses aparelhos. Alguns recursos opcionais de IA precisam de um dispositivo compatível. Se não estiverem disponíveis, você ainda pode inserir os registros manualmente."
             ]
           },
           {
@@ -4580,8 +4580,8 @@
             "id": "candidate2-devices",
             "question": "ما الأجهزة وإصدارات Android المدعومة؟",
             "answers": [
-              "ينطبق هذا على DoseWeek Android 1.0.0 (versionCode 12) والإصدارات الأحدث.",
-              "استخدم DoseWeek على Android 8.0 أو أحدث. تحتاج بعض ميزات الذكاء الاصطناعي الاختيارية إلى جهاز متوافق. إذا لم تكن متاحة، فلا يزال بإمكانك إدخال السجلات بنفسك."
+              "ينطبق هذا على DoseWeek Android versionCode 13 والإصدارات الأحدث.",
+              "استخدم DoseWeek على Android 14 أو أحدث. على الأجهزة التي تعمل بنظام Android 8.0 حتى Android 13، يمكنك الاستمرار في استخدام الإصدار المثبّت بالفعل (versionCode 12)، لكنه لن يتلقى تحديثات، ولن يوفّر Google Play عمليات تثبيت جديدة على هذه الأجهزة. تحتاج بعض ميزات الذكاء الاصطناعي الاختيارية إلى جهاز متوافق. إذا لم تكن متاحة، فلا يزال بإمكانك إدخال السجلات بنفسك."
             ]
           },
           {
@@ -4907,8 +4907,8 @@
             "id": "candidate2-devices",
             "question": "支持哪些设备和 Android 版本？",
             "answers": [
-              "适用于 DoseWeek Android 1.0.0 (versionCode 12) 及更高版本。",
-              "可在Android 8.0或更高版本上使用DoseWeek。部分可选AI功能需要兼容的设备；即使无法使用这些功能，您仍可手动输入记录。"
+              "适用于 DoseWeek Android versionCode 13 及更高版本。",
+              "可在Android 14或更高版本上使用DoseWeek。Android 8.0至Android 13的设备可继续使用已安装的版本（versionCode 12），但不会再收到更新，Google Play也不会在这些设备上提供新安装。部分可选AI功能需要兼容的设备；即使无法使用这些功能，您仍可手动输入记录。"
             ]
           },
           {
@@ -5234,8 +5234,8 @@
             "id": "candidate2-devices",
             "question": "支援哪些裝置與 Android 版本？",
             "answers": [
-              "適用於 DoseWeek Android 1.0.0 (versionCode 12) 及更新版本。",
-              "可在Android 8.0或更新版本上使用DoseWeek。部分選用AI功能需要相容的裝置；即使無法使用這些功能，您仍可手動輸入紀錄。"
+              "適用於 DoseWeek Android versionCode 13 及更新版本。",
+              "可在Android 14或更新版本上使用DoseWeek。Android 8.0至Android 13的裝置可繼續使用已安裝的版本（versionCode 12），但不會再收到更新，Google Play也不會在這些裝置上提供新安裝。部分選用AI功能需要相容的裝置；即使無法使用這些功能，您仍可手動輸入紀錄。"
             ]
           },
           {
@@ -5561,8 +5561,8 @@
             "id": "candidate2-devices",
             "question": "Hangi cihazlar ve Android sürümleri destekleniyor?",
             "answers": [
-              "DoseWeek Android 1.0.0 (versionCode 12) ve sonraki sürümler için geçerlidir.",
-              "DoseWeek’i Android 8.0 veya sonraki bir sürümde kullanın. Bazı isteğe bağlı yapay zekâ özellikleri uyumlu bir cihaz gerektirir. Kullanılamıyorlarsa kayıtları yine kendiniz girebilirsiniz."
+              "DoseWeek Android versionCode 13 ve sonraki sürümler için geçerlidir.",
+              "DoseWeek’i Android 14 veya sonraki bir sürümde kullanın. Android 8.0 ile Android 13 arasındaki cihazlarda yüklü olan sürümü (versionCode 12) kullanmaya devam edebilirsiniz; ancak bu sürüm güncelleme almaz ve Google Play bu cihazlarda yeni yükleme sunmaz. Bazı isteğe bağlı yapay zekâ özellikleri uyumlu bir cihaz gerektirir. Kullanılamıyorlarsa kayıtları yine kendiniz girebilirsiniz."
             ]
           },
           {
