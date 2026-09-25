@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "description": "Reviewed exceptions for scripts/korean_tone.py. Each entry needs key, rule and reason; file and match narrow it. Unused entries fail the check.",
+  "entries": [
+    {
+      "file": "docs/ios-content.json",
+      "key": "locales.ko.support.safetyCards[0].body",
+      "rule": "glossary",
+      "match": "증상, 투여 시점, 놓친 투여, 치료 변경은 의사 또는 약사와 상의하세요",
+      "reason": "Clinical safety advice about the person's actual symptoms, not the 컨디션 feature or its records; owner rule 4 keeps legitimate symptom uses (reviewed 2026-09-25)."
+    }
+  ]
+}

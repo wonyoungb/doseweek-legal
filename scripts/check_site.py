@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import io
 import re
+import unittest
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -14,6 +16,7 @@ from pathlib import Path
 from site_assets import stylesheet_path
 from urllib.parse import unquote, urlsplit
 
+import korean_tone
 import legal_release
 import render_ios
 import render_home
@@ -272,6 +275,29 @@ def android_guard_regression_check(catalog: dict[str, object]) -> None:
         "types, weakened backup/version/emergency wording, and ambiguous Spanish decryption "
         "copy without rejecting Spanish propios"
     )
+
+
+def korean_tone_check() -> str:
+    """Run the Korean 해요체 self-tests, then require zero non-allow-listed violations."""
+    suite = unittest.defaultTestLoader.loadTestsFromName("test_korean_tone")
+    result = unittest.TextTestRunner(stream=io.StringIO(), verbosity=0).run(suite)
+    assert result.wasSuccessful() and result.testsRun, (
+        f"scripts/test_korean_tone.py: {len(result.failures)} failures, {len(result.errors)} errors; "
+        "run python3 -m unittest discover -s scripts -p test_korean_tone.py"
+    )
+    entries, files = korean_tone.load_entries()
+    report = korean_tone.build_report(entries, files)
+    first = report["violations"][:5]
+    assert not report["violations"], (
+        f"Korean tone: {report['counts']['total']} violations, e.g. "
+        + "; ".join(f"{item['file']} {item['key']} [{item['rule']}] {item['sentence']}" for item in first)
+        + "; run python3 scripts/korean_tone.py"
+    )
+    assert not report["allowlist"]["stale"], (
+        f"scripts/korean_tone_allowlist.json: stale entries {report['allowlist']['stale']}"
+    )
+    return (f"Korean tone ({result.testsRun} self-tests, {report['scanned']['sentences']} sentences, "
+            f"{report['allowlist']['suppressed']} allow-listed)")
 
 
 def main() -> None:
@@ -724,6 +750,8 @@ def main() -> None:
     assert len(import_page.summary_markers) == 3 * 17
     assert all(markers == ["true"] for markers in import_page.summary_markers)
 
+    tone = korean_tone_check()
+
     parity = []
     if arguments.catalog:
         parity.append("iOS app-catalog parity")
@@ -732,7 +760,7 @@ def main() -> None:
     suffix = f", and {' + '.join(parity)}" if parity else ""
     print(
         f"OK: {len(HTML_FILES)} pages, local links, locale panels, social metadata, "
-        f"accessible FAQ markers, 44px key targets, critical disclosures{suffix}"
+        f"accessible FAQ markers, 44px key targets, critical disclosures, {tone}{suffix}"
     )
 
 
