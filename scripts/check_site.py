@@ -472,8 +472,8 @@ def main() -> None:
         "Deleted records are not restored.",
         "DoseWeekを再起動",
         "削除した記録が復元されることはありません。",
-        "DoseWeek를 재실행",
-        "삭제된 기록은 복원되지 않습니다.",
+        "DoseWeek를 다시 실행",
+        "삭제된 기록은 복원되지 않아요.",
     ):
         assert support_disclosure in support_text, (
             f"support/index.html: missing cleanup recovery guidance {support_disclosure!r}"
@@ -495,6 +495,8 @@ def main() -> None:
         "immediately deletes every record stored on your device",
         "デバイスに保存されたすべての記録が直ちに削除されます",
         "기기에 저장된 모든 기록이 즉시 삭제됩니다",
+        "기기에 저장된 모든 기록이 즉시 삭제돼요",
+        "기기에 저장된 모든 기록이 바로 삭제돼요",
     ):
         assert overclaim not in privacy_text and overclaim not in support_text, (
             f"site must not overclaim physical deletion timing: {overclaim!r}"
@@ -503,7 +505,7 @@ def main() -> None:
     for app_lock_guidance in (
         "App Lock cannot be turned off without authentication.",
         "認証せずにアプリロックをオフにすることはできません。",
-        "인증 없이는 앱 잠금을 끌 수 없습니다.",
+        "인증 없이는 앱 잠금을 끌 수 없어요.",
     ):
         assert app_lock_guidance in support_text, (
             f"support/index.html: missing App Lock recovery guidance {app_lock_guidance!r}"
