@@ -15,6 +15,13 @@
       "rule": "glossary",
       "match": "컨디션 기록(증상, 심각도, 시각, 선택 메모)",
       "reason": "Privacy-policy data category: the 컨디션 record stores the symptom the user picks; naming 증상 keeps the disclosed data category (en: symptom) legally exact (reviewed 2026-09-25)."
+    },
+    {
+      "file": "import/content.json",
+      "key": "locales.ko.prompt_preamble",
+      "rule": "glossary",
+      "match": "증상 기록만",
+      "reason": "Transcription instruction pasted into an external AI: it names the source app's symptom records, which map to record_type symptom (en: symptom records); not the in-app 컨디션 feature name (reviewed 2026-09-25)."
     }
   ]
 }
