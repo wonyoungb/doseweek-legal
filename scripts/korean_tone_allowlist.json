@@ -8,6 +8,13 @@
       "rule": "glossary",
       "match": "증상, 투여 시점, 놓친 투여, 치료 변경은 의사 또는 약사와 상의하세요",
       "reason": "Clinical safety advice about the person's actual symptoms, not the 컨디션 feature or its records; owner rule 4 keeps legitimate symptom uses (reviewed 2026-09-25)."
+    },
+    {
+      "file": "docs/android-content.candidate.json",
+      "key": "locales.ko.privacy.sections[1].items[5]",
+      "rule": "glossary",
+      "match": "컨디션 기록(증상, 심각도, 시각, 선택 메모)",
+      "reason": "Privacy-policy data category: the 컨디션 record stores the symptom the user picks; naming 증상 keeps the disclosed data category (en: symptom) legally exact (reviewed 2026-09-25)."
     }
   ]
 }

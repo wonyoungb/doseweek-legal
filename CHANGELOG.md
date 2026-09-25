@@ -5,6 +5,26 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
+## [Unreleased] — Korean voice and legal alignment
+
+On branch `claude/ko-tone-legal-20260925` (draft PR into `main`, based on the Android 14
+minimum branch). Not merged, so not live. Stays unmerged until both apps ship the matching text.
+
+### Changed
+
+- All Korean copy on every page (help, privacy, import, home) uses plain 해요체. Legal facts,
+  numbers, processors, recipients and retention periods are unchanged.
+- Android privacy policy and FAQ, all 17 locales: the file backup is one you make yourself, and
+  the only automatic backup is the optional Google Drive backup (off by default); on-device
+  processing is stated with the exception of optional integrations, backups and exports; copies
+  kept separately include CSV exports; Korean and Chinese meal answers no longer say meals stay
+  only on the device.
+
+### Added
+
+- `scripts/korean_tone.py` with shared rules, a reviewed allow-list and self-tests.
+  `check_site.py` runs them and fails on any Korean tone violation.
+
 ## [Unreleased]
 
 On branch `codex/help-privacy-20260923` (draft PR #4 into `main`). Not merged to `main`, so not

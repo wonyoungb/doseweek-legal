@@ -68,13 +68,19 @@ python3 scripts/render_home.py --check
 python3 scripts/render_ios.py --check
 python3 scripts/render_android.py --check
 python3 scripts/render_import.py --check --require-all-locales
-python3 scripts/check_site.py            # pages, local links, locales, disclosures
+python3 scripts/check_site.py            # pages, local links, locales, disclosures, Korean tone
+python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
 python3 scripts/check_site.py --release  # also requires the policy effective date
-(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops)
+(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone)
 ```
 
 `render_ios.py --catalog <path>` is an optional legacy comparison against old app resources. It
 is not a release gate.
+
+Korean copy follows the owner's plain 해요체 voice (2026-09-25). `check_site.py` runs the
+`korean_tone.py` self-tests and fails on any Korean sentence that breaks the shared rules in
+`scripts/korean_tone_rules.json`. Add an entry to `scripts/korean_tone_allowlist.json` only for a
+reviewed exception, with its key, rule, match and reason.
 
 ## Repository layout
 
