@@ -401,7 +401,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["schemaVersion"] == 1
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
-    assert catalog["versionName"] == "1.0.0"
+    assert catalog["versionName"] == "1.0.5"
     assert catalog["effectiveDate"] == expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)

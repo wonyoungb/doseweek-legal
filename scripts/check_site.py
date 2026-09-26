@@ -249,7 +249,7 @@ def android_guard_regression_check(catalog: dict[str, object]) -> None:
     missing_version_scope = copy.deepcopy(catalog)
     scoped_answer = missing_version_scope["locales"]["ja"]["support"]["faq"][2]["answers"][0]
     missing_version_scope["locales"]["ja"]["support"]["faq"][2]["answers"][0] = (
-        scoped_answer.replace("DoseWeek 1.0.0", "DoseWeek")
+        scoped_answer.replace("DoseWeek 1.0.5", "DoseWeek")
     )
     expect_rejected(missing_version_scope, "a localized AI/Health FAQ without version scope")
 

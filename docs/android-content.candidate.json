@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "platform": "android",
   "applicationId": "com.wonyoungchoi.doseweek",
-  "versionName": "1.0.0",
+  "versionName": "1.0.5",
   "effectiveDate": "2026-09-23",
   "supportEmail": "wonyoung@wonyoungchoi.dev",
   "localeOrder": [
@@ -34,7 +34,7 @@
       },
       "home": {
         "title": "Android용 DoseWeek",
-        "versionScope": "이 안내는 Android용 DoseWeek 1.0.0에만 적용돼요.",
+        "versionScope": "이 안내는 Android용 DoseWeek 1.0.0 (versionCode 12) 이상에 적용돼요. 현재 버전은 1.0.5예요.",
         "intro": "DoseWeek는 주 1회 주사 일정, 실제 투여와 건너뛴 기록, 재고 수량, 체중과 허리둘레를 Android 앱 전용 저장소에서 관리하는 로컬 기록 앱이에요. 이 기록은 사용자가 직접 입력하고 확인해요. 선택 연동을 켜지 않는 한 기록은 기기에 머물러요.",
         "featureBadges": [
           "앱 전용 로컬 저장소",
@@ -50,8 +50,8 @@
         "medicalNoticeBody": "DoseWeek는 개인 기록 도구이고, 의료기기가 아니에요. 진단, 치료, 용량·투여 시점 결정을 제공하지 않아요. 의약품과 치료에 관한 결정은 처방 정보와 자격을 갖춘 의료 전문가의 안내를 따르세요. 응급 상황이라고 생각되면 바로 지역 응급 서비스에 연락하세요."
       },
       "privacy": {
-        "title": "Android용 DoseWeek 1.0.0 개인정보처리방침",
-        "scope": "이 방침은 Android용 DoseWeek 1.0.0에만 적용돼요.",
+        "title": "Android용 DoseWeek 개인정보처리방침",
+        "scope": "이 방침은 Android용 DoseWeek 1.0.0 (versionCode 12) 이상에 적용돼요. 현재 버전은 1.0.5예요.",
         "sections": [
           {
             "id": "scope",
@@ -81,7 +81,7 @@
             "id": "no-collection",
             "title": "3. 선택 서비스와 사용 분석",
             "paragraphs": [
-              "DoseWeek 1.0.0은 기본 상태에서 아래 기능이나 자동 처리를 쓰지 않아요. 모든 기록은 사용자가 직접 입력하고 확인해요.",
+              "DoseWeek 1.0.5는 기본 상태에서 아래 기능이나 자동 처리를 쓰지 않아요. 모든 기록은 사용자가 직접 입력하고 확인해요.",
               "일정, 투여 기록, 메모, 신체 측정값 같은 건강 기록은 기본적으로 기기에 저장돼요. 개발자는 이 기록을 받지 않아요. 내보내기, 백업, 선택 연동은 따로 설명해요. 선택 사용 분석에는 아래 규칙이 적용돼요.\n\n필수 개인정보 고지를 확인했다고 분석을 허용한 것은 아니에요. 사용 분석과 국외 이전에 각각 따로 동의한 경우에만 분석을 켜요. 두 선택 동의는 기본적으로 꺼져 있어요. 하나라도 거절하거나 철회하면 분석을 꺼요.\n\n사용 분석은 선택 사항이고 처음에는 꺼져 있어요. 필수 개인정보 고지를 확인해도 분석에 동의한 것은 아니에요. 따로 허용한 뒤에만 Google Analytics for Firebase가 시작돼요. 그러면 최초 실행, 세션, 사용 빈도, 사용 시간, 앱·운영체제 업데이트 같은 자동 수명 주기·기술 이벤트를 Google에 보내요. 개발자는 사용 현황을 파악하려고 보고서를 봐요. DoseWeek는 맞춤 이벤트를 추가하지 않아요.\n\n분석에는 Firebase가 만든 앱 인스턴스·설치 식별자, 이벤트 시각, 앱 버전, 언어, 기기 브랜드·모델·유형, 마이너 버전을 포함한 운영체제 정보, 화면 해상도가 들어갈 수 있어요. Google은 서비스 운영과 도시 같은 대략적인 위치 산출을 위해 IP 주소를 처리해요. 도시에서 도출한 좌표는 사용자의 GPS 위치가 아니에요. 분석에는 GPS나 위치 권한을 쓰지 않아요. Google은 해외에 있을 수 있는 자사 서버에서 처리하고, 개발자는 보고서를 볼 수 있어요. 이 기록 자체가 익명 정보인 것은 아니에요.\n\nDoseWeek는 건강 기록, 약물명, 용량, 메모, 입력한 글·음성, 화면 이름이나 경로를 분석에 보내지 않아요. 사용자 ID나 맞춤 사용자 속성도 설정하지 않아요. 광고 ID·Android ID (SSAID) 수집, 자동 화면 보고, Google 신호, 광고 개인화는 꺼져 있어요. Crashlytics와 Performance Monitoring은 쓰지 않아요.\n\nGoogle Analytics의 사용자·이벤트 수준 보존 기간은 2개월이에요. 새 활동이 있어도 기간을 다시 시작하지 않아요. 설정 변경은 24시간 뒤에 적용돼요. 만료된 데이터는 정확히 2개월이 되는 순간이 아니라 Google의 월별 절차에서 삭제돼요. 이 설정은 표준 집계 보고서에는 적용되지 않고, 보고서를 영구히 제공한다는 보장도 아니에요.\n\n익명 월별 합계는 식별 가능성을 없애는 개인정보 검토와 검증된 내보내기를 거친 뒤에만 오래 보관할 계획이에요. 아직 실제 데이터로 이런 내보내기를 한 적은 없어요. 원시 분석 데이터는 익명으로 취급하지 않아요.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google 개인정보 보호 문의: https://privacy.google.com/businesses/processorsupport\n\n선택 앱 사용 분석, 통계 보고서 제공, 이 서비스 운영을 위한 처리위탁·보관이에요. 광고나 개인화에는 쓰지 않아요.\n\n분석 수집·이용과 국외 이전에 모두 동의해 분석을 켜면, 앱을 쓰는 동안 Firebase Analytics SDK가 HTTPS로 수집센터에 보내고 Google Analytics 처리서버로 전달해요. 전송은 비동기로 이뤄질 수 있어요.\n\n국외 이전 가능 범위(2026년 9월 23일 공개 자료 기준): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. 이 범위는 Google 약관이 허용하는 시설 소재국 처리와, Google이 공개한 시설·이 서비스 하위처리자 목록을 근거로 해요. 이용자마다 정해진 경로가 있다거나 모든 국가로 전송한다는 뜻은 아니에요. 시설 목록에는 개발 중인 시설도 들어 있고, 하위처리자 국가는 법인 소재국이에요. 동의받은 이전 국가·수령인 등을 바꿀 때는 알리고 따로 동의를 받아요.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\n사용 분석 동의는 선택 식품 라벨 인식, 그리고 따로 알린 Google ML Kit 측정 정보에 대한 동의와 달라요. 한쪽 선택을 바꿔도 다른 쪽은 바뀌지 않아요.",
               "Health Connect 연동은 읽기 전용이에요. DoseWeek는 사용자가 공유한 체중, 키, 체지방률, 제지방량을 읽기만 해요. 쓰기나 삭제 권한은 요청하지 않아서 다른 앱이 가진 기록을 바꿀 수 없어요. 읽은 정보는 앱 전용 저장소에 보관하고 개발자에게 보내지 않아요.",
               "Google Drive 연동을 켜면 앱이 암호화된 백업을 사용자 본인의 Drive 앱 데이터 폴더에 올릴 수 있어요. 개발자는 사본도 키도 갖지 않아요. Drive가 볼 수 있는 정보와 복구 코드 처리는 4항에서 설명해요.",
@@ -205,21 +205,21 @@
             "id": "accounts",
             "question": "로그인이나 계정이 필요한가요?",
             "answers": [
-              "DoseWeek 1.0.0에는 계정도 개발자 서버도 없고, 앱을 쓰는 데 둘 중 어느 것도 필요하지 않아요. 선택 사항인 Google Drive 백업은 사용자 본인의 Google 계정을 쓰고, 설정에서 직접 연결하기 전까지 꺼져 있어요. 어느 경우에도 개발자는 사용자의 기록을 볼 수 없어요."
+              "DoseWeek 1.0.5에는 계정도 개발자 서버도 없고, 앱을 쓰는 데 둘 중 어느 것도 필요하지 않아요. 선택 사항인 Google Drive 백업은 사용자 본인의 Google 계정을 쓰고, 설정에서 직접 연결하기 전까지 꺼져 있어요. 어느 경우에도 개발자는 사용자의 기록을 볼 수 없어요."
             ]
           },
           {
             "id": "ai-health",
             "question": "AI 또는 Health Connect를 사용하나요?",
             "answers": [
-              "Android용 DoseWeek 1.0.0에는 생성형 AI가 없어요. 선택 사항인 기기 내 음성 인식과 식품 라벨 인식이 입력을 도와요. Google 식품 라벨 SDK 진단정보 처리에는 개인정보처리방침에서 설명한 별도 동의가 필요해요. Health Connect는 이제 체중, 키, 체지방률, 제지방량을 가져오는 선택 읽기 전용 연동이에요. 읽기 권한만 요청하고, 쓰기나 삭제 권한은 요청하지 않아요. 사용자가 권한을 허용하기 전에는 아무것도 가져오지 않아요. 모든 투여 기록은 지금도 사용자가 직접 입력하고 확인해요."
+              "Android용 DoseWeek 1.0.5에는 생성형 AI가 없어요. 선택 사항인 기기 내 음성 인식과 식품 라벨 인식이 입력을 도와요. Google 식품 라벨 SDK 진단정보 처리에는 개인정보처리방침에서 설명한 별도 동의가 필요해요. Health Connect는 이제 체중, 키, 체지방률, 제지방량을 가져오는 선택 읽기 전용 연동이에요. 읽기 권한만 요청하고, 쓰기나 삭제 권한은 요청하지 않아요. 사용자가 권한을 허용하기 전에는 아무것도 가져오지 않아요. 모든 투여 기록은 지금도 사용자가 직접 입력하고 확인해요."
             ]
           },
           {
             "id": "notifications",
             "question": "알림이나 위젯을 제공하나요?",
             "answers": [
-              "선택 사항인 알림과 홈 화면 위젯을 제공해요. DoseWeek 1.0.0은 다음 투여, 놓친 투여 후속 안내, 재고 부족 알림을 기기 안에서 예약할 수 있어요. 알림은 사용자가 켜고 알림 권한을 허용하기 전까지 꺼져 있어요. 기본 문구는 치료 내용을 드러내지 않아요. 약 이름은 사용자가 켠 경우에만 보이고, 용량은 보이지 않아요. 알림을 눌러도 앱이 열리기만 해서, 알림으로 기록이 남는 일은 없어요. 워치 앱은 없어요."
+              "선택 사항인 알림과 홈 화면 위젯을 제공해요. DoseWeek 1.0.5는 다음 투여, 놓친 투여 후속 안내, 재고 부족 알림을 기기 안에서 예약할 수 있어요. 알림은 사용자가 켜고 알림 권한을 허용하기 전까지 꺼져 있어요. 기본 문구는 치료 내용을 드러내지 않아요. 약 이름은 사용자가 켠 경우에만 보이고, 용량은 보이지 않아요. 알림을 눌러도 앱이 열리기만 해서, 알림으로 기록이 남는 일은 없어요. 워치 앱은 없어요."
             ]
           },
           {
@@ -361,7 +361,7 @@
       },
       "home": {
         "title": "DoseWeek for Android",
-        "versionScope": "This information applies only to DoseWeek 1.0.0 for Android.",
+        "versionScope": "This information applies to DoseWeek 1.0.0 (versionCode 12) and later for Android, including the current version, 1.0.5.",
         "intro": "DoseWeek is a local record-keeping app for weekly injection schedules, actual administrations and skipped entries, inventory count, weight, and waist circumference that you manually enter and confirm. Records stay on the device unless you turn on an optional integration.",
         "featureBadges": [
           "Local app-private storage",
@@ -377,8 +377,8 @@
         "medicalNoticeBody": "DoseWeek is a personal record-keeping tool, not a medical device. It does not provide diagnosis, treatment, or dose or timing decisions. Follow prescribing information and guidance from a qualified healthcare professional when making medication or treatment decisions. If you think you may be experiencing an emergency, contact your local emergency service immediately."
       },
       "privacy": {
-        "title": "Privacy Policy for DoseWeek 1.0.0 on Android",
-        "scope": "This policy applies only to DoseWeek 1.0.0 on Android.",
+        "title": "Privacy Policy for DoseWeek on Android",
+        "scope": "This policy applies to DoseWeek 1.0.0 (versionCode 12) and later on Android, including the current version, 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -408,7 +408,7 @@
             "id": "no-collection",
             "title": "3. Optional services and usage analytics",
             "paragraphs": [
-              "DoseWeek 1.0.0 does not use the following features or automatic processing in its default state. Every record is entered and confirmed manually by the user.",
+              "DoseWeek 1.0.5 does not use the following features or automatic processing in its default state. Every record is entered and confirmed manually by the user.",
               "Health records, including schedules, administrations, notes and body measurements, stay on your device by default. The developer does not receive these records. Exports, backups and optional integrations are described separately. Optional usage analytics follows the rules below.\n\nAcknowledging the required privacy notice does not permit analytics. Analytics is enabled only after separate consent to usage analytics and overseas transfer. Both optional choices are off by default, and analytics is disabled if either is refused or withdrawn.\n\nUsage analytics is optional and initially off. Acknowledging the required privacy notice does not grant permission. Only after you opt in does Google Analytics for Firebase start and send automatic lifecycle and technical events, such as first opens, sessions, activity frequency, engagement time and app or operating-system updates, to Google. The developer uses usage reports to understand app use. DoseWeek adds no custom events.\n\nAnalytics can include Firebase-generated app-instance or installation identifiers, event times, app version, language, device brand, model and class, operating-system details including minor versions, and screen resolution. Google processes IP addresses for service operation and approximate location, including city; a city's derived coordinates are not your GPS location. No GPS or location permission is used for analytics. Google processes the data on its servers, potentially outside your country, and the developer can access reports. These records are not inherently anonymous.\n\nDoseWeek does not send health records, medication names, doses, notes, typed or voice input, screen names or routes to analytics. It sets no user ID or custom user properties. Advertising IDs and Android ID (SSAID) collection, automatic screen reporting, Google signals and advertising personalization are disabled. Crashlytics and Performance Monitoring are not used.\n\nGoogle Analytics user-level and event-level retention is set to 2 months, with reset on new activity off. Setting changes take 24 hours to apply; expired data is deleted in Google's monthly process, not exactly at the two-month instant. This setting does not govern standard aggregated reports and does not guarantee permanent availability of those reports.\n\nLong-term storage of anonymous monthly totals is planned only after a privacy review and verified export that prevents identification. No such export has been made with real data yet; raw analytics is not treated as anonymous.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google data-protection contact: https://privacy.google.com/businesses/processorsupport\n\nDelegated processing and storage for optional app-use analytics, statistical reports and operation of that service. Not used for advertising or personalization.\n\nAfter you agree to both analytics collection/use and overseas transfer and enable analytics, the Firebase Analytics SDK sends data over HTTPS to a collection centre during app use, and it is forwarded to Google Analytics processing servers. Transmission may be asynchronous.\n\nPotential overseas-transfer scope (public information as of 23 September 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. This reflects the facility-country processing permitted by Google's terms and its published facility and applicable service-subprocessor lists. It does not identify a fixed route for each user or transfers to every country. Facility listings include developments, and subprocessor countries are corporate locations. We will notify you and seek separate consent when changing agreed transfer details, including countries or recipients.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nConsent to usage analytics is separate from consent to optional food-label recognition and its disclosed Google ML Kit metrics. Changing one choice does not change the other.",
               "The Health Connect integration is read-only. DoseWeek reads the weight, height, body fat percentage, and lean body mass that you have shared, and requests no write or delete permission, so it cannot change records another app owns. What it reads is kept in app-private storage and is not sent to the developer.",
               "With the Google Drive integration on, the app can upload an encrypted backup to your own Drive app-data folder. The developer holds no copy and no key. Section 4 describes what Drive can see and how the recovery code is handled.",
@@ -532,21 +532,21 @@
             "id": "accounts",
             "question": "Do I need to sign in or create an account?",
             "answers": [
-              "DoseWeek 1.0.0 has no account of its own and no developer server, and you need neither to use the app. The optional Google Drive backup uses your own Google account and stays off until you connect it in Settings. In either case the developer cannot view your records."
+              "DoseWeek 1.0.5 has no account of its own and no developer server, and you need neither to use the app. The optional Google Drive backup uses your own Google account and stays off until you connect it in Settings. In either case the developer cannot view your records."
             ]
           },
           {
             "id": "ai-health",
             "question": "Does DoseWeek use AI or Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 for Android has no generative AI. Optional on-device voice and food-label recognition help with input; Google food-label SDK diagnostics require separate consent, as described in the Privacy Policy. Health Connect is now an optional read-only import of weight, height, body fat percentage, and lean body mass: the app asks for read permissions only, never write or delete, and imports nothing until you grant that permission. Every administration record is still entered and confirmed by hand."
+              "DoseWeek 1.0.5 for Android has no generative AI. Optional on-device voice and food-label recognition help with input; Google food-label SDK diagnostics require separate consent, as described in the Privacy Policy. Health Connect is now an optional read-only import of weight, height, body fat percentage, and lean body mass: the app asks for read permissions only, never write or delete, and imports nothing until you grant that permission. Every administration record is still entered and confirmed by hand."
             ]
           },
           {
             "id": "notifications",
             "question": "Does DoseWeek provide notifications, reminders, or widgets?",
             "answers": [
-              "Optional reminders and a home-screen widget are available. DoseWeek 1.0.0 can schedule local reminders on your device for the next dose, a follow-up after a missed dose, and low supply. They stay off until you turn them on and grant the notification permission. By default the reminder text reveals nothing about your treatment; the medication name appears only if you enable it, and dose amounts never appear. Tapping a reminder only opens the app, so nothing is ever recorded from a notification. There are no wearable apps."
+              "Optional reminders and a home-screen widget are available. DoseWeek 1.0.5 can schedule local reminders on your device for the next dose, a follow-up after a missed dose, and low supply. They stay off until you turn them on and grant the notification permission. By default the reminder text reveals nothing about your treatment; the medication name appears only if you enable it, and dose amounts never appear. Tapping a reminder only opens the app, so nothing is ever recorded from a notification. There are no wearable apps."
             ]
           },
           {
@@ -688,7 +688,7 @@
       },
       "home": {
         "title": "Android版DoseWeek",
-        "versionScope": "この案内はAndroid版DoseWeek 1.0.0にのみ適用されます。",
+        "versionScope": "この案内はAndroid版DoseWeek 1.0.0 (versionCode 12) 以降に適用されます。現在のバージョンは1.0.5です。",
         "intro": "DoseWeekは、ユーザーが手動で入力・確認した週1回の注射スケジュール、実際の投与とスキップ、在庫数、体重、腹囲をAndroidのアプリ専用領域で管理するローカル記録アプリです。記録は、任意の連携をオンにしない限り端末内にとどまります。",
         "featureBadges": [
           "アプリ専用のローカル保存領域",
@@ -704,8 +704,8 @@
         "medicalNoticeBody": "DoseWeekは個人用の記録ツールであり、医療機器ではありません。診断、治療、用量または投与時期の判断を提供しません。医薬品の添付文書と資格を持つ医療従事者の指示に従ってください。緊急事態の可能性がある場合は、直ちに地域の救急サービスへ連絡してください。"
       },
       "privacy": {
-        "title": "Android版DoseWeek 1.0.0 プライバシーポリシー",
-        "scope": "このポリシーはAndroid版DoseWeek 1.0.0にのみ適用されます。",
+        "title": "Android版DoseWeek プライバシーポリシー",
+        "scope": "このポリシーはAndroid版DoseWeek 1.0.0 (versionCode 12) 以降に適用されます。現在のバージョンは1.0.5です。",
         "sections": [
           {
             "id": "scope",
@@ -735,7 +735,7 @@
             "id": "no-collection",
             "title": "3. 任意のサービスと利用状況分析",
             "paragraphs": [
-              "DoseWeek 1.0.0は既定の状態で以下の機能や自動処理を使用しません。すべての記録はユーザーが手動で入力・確認します。",
+              "DoseWeek 1.0.5は既定の状態で以下の機能や自動処理を使用しません。すべての記録はユーザーが手動で入力・確認します。",
               "スケジュール、投与記録、メモ、身体測定値などの健康記録は、初期設定では端末内に保存されます。開発者はこれらの記録を受け取りません。書き出し、バックアップ、任意の連携は別途説明します。任意の利用状況分析には以下のルールが適用されます。\n\n必須のプライバシー通知を確認しても、分析を許可したことにはなりません。利用状況の分析と国外移転にそれぞれ別途同意した場合のみ、分析が有効になります。両方の任意の選択は初期状態でオフになっており、いずれかを拒否または撤回すると分析は無効になります。\n\n利用状況分析は任意で、初めはオフです。必須のプライバシー通知を確認しても、分析への同意にはなりません。別途許可した後にだけ Google Analytics for Firebase が起動し、初回起動、セッション、利用頻度、利用時間、アプリやOSの更新など、自動的なライフサイクル・技術イベントを Google に送信します。開発者は利用状況の把握にレポートを使います。DoseWeek は独自のイベントを追加しません。\n\n分析には Firebase が生成するアプリインスタンス・インストール識別子、イベント時刻、アプリのバージョン、言語、端末のブランド・モデル・種類、マイナーバージョンを含むOS情報、画面解像度が含まれる場合があります。Google はサービス運用と都市などのおおよその位置の推定にIPアドレスを処理します。都市から導出される座標は利用者のGPS位置ではありません。分析にGPSや位置情報の権限は使いません。Google は国外を含む可能性のある自社サーバーで処理し、開発者はレポートを閲覧できます。これらの記録は、それ自体が匿名情報というわけではありません。\n\nDoseWeek は健康記録、薬名、用量、メモ、文字・音声入力、画面名や経路を分析に送りません。ユーザーIDや独自のユーザー属性を設定しません。広告ID・Android ID (SSAID)の収集、自動画面レポート、Google シグナル、広告のパーソナライズは無効です。Crashlytics と Performance Monitoring は使いません。\n\nGoogle Analytics のユーザー・イベント単位の保存期間は2か月で、新しいアクティビティによる期間のリセットはオフです。設定変更は24時間後に反映され、期限を過ぎたデータは2か月ちょうどの時点ではなく Google の月次処理で削除されます。この設定は標準の集計レポートには適用されず、その永久的な提供を保証するものではありません。\n\n匿名の月別合計の長期保存は、識別を防ぐプライバシー審査と検証済みの書き出しを経た後にのみ計画しています。実際のデータでこの書き出しを行ったことはまだなく、分析の元データを匿名情報として扱いません。\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Googleのデータ保護に関するお問い合わせ：https://privacy.google.com/businesses/processorsupport\n\n任意のアプリ利用状況分析、統計レポートの提供、および当該サービスの運営のための委託処理・保管です。広告やパーソナライズには使用しません。\n\n分析データの収集・利用と国外移転の両方に同意して分析を有効にすると、アプリの利用中にFirebase Analytics SDKがHTTPS経由で収集センターにデータを送信し、その後Google Analyticsの処理サーバーに転送されます。送信は非同期で行われる場合があります。\n\n国外移転の可能性がある範囲（2026年9月23日時点の公開情報に基づく）：Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay。これは、Googleの規約で認められる施設所在国での処理と、Googleが公開する施設および該当サービスのサブプロセッサの一覧に基づく範囲です。利用者ごとの固定された経路や、すべての国への移転を示すものではありません。施設一覧には開発中の施設も含まれ、サブプロセッサの国は法人の所在地を示します。同意を得た移転先の国や受領者などの事項を変更する場合は、お知らせしたうえで別途同意を求めます。\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\n利用状況分析への同意は、任意の食品ラベル認識と別途開示された Google ML Kit の指標への同意とは別です。一方の選択を変更しても他方は変わりません。",
               "Health Connect連携は読み取り専用です。DoseWeekは、ユーザーが共有した体重、身長、体脂肪率、除脂肪体重を読み取るだけで、書き込みや削除の権限を要求しないため、他のアプリが所有する記録を変更できません。読み取った情報はアプリ専用領域に保存され、開発者へは送信されません。",
               "Googleドライブ連携をオンにすると、アプリは暗号化されたバックアップをユーザー自身のGoogleドライブのアプリデータフォルダへアップロードできます。開発者は複製も鍵も保持しません。ドライブから見える情報と復旧コードの扱いは第4項で説明します。",
@@ -859,21 +859,21 @@
             "id": "accounts",
             "question": "アカウントやログインは必要ですか？",
             "answers": [
-              "DoseWeek 1.0.0にはアカウントも開発者サーバーも存在せず、アプリの利用にどちらも必要ありません。任意のGoogleドライブへのバックアップはユーザー自身のGoogleアカウントを使い、設定で接続するまではオフのままです。いずれの場合も開発者が記録を閲覧することはできません。"
+              "DoseWeek 1.0.5にはアカウントも開発者サーバーも存在せず、アプリの利用にどちらも必要ありません。任意のGoogleドライブへのバックアップはユーザー自身のGoogleアカウントを使い、設定で接続するまではオフのままです。いずれの場合も開発者が記録を閲覧することはできません。"
             ]
           },
           {
             "id": "ai-health",
             "question": "AIやHealth Connectを使用しますか？",
             "answers": [
-              "Android版DoseWeek 1.0.0には生成AIはありません。任意の端末内音声・食品ラベル認識が入力を補助し、Google食品ラベルSDKの診断データ処理にはプライバシーポリシーに記載した別途の同意が必要です。 Health Connectは、体重、身長、体脂肪率、除脂肪体重を取り込む任意の読み取り専用連携になりました。要求するのは読み取り権限だけで、書き込みや削除の権限は求めず、ユーザーが許可するまで何も取り込みません。投与の記録は今も手動で入力・確認します。"
+              "Android版DoseWeek 1.0.5には生成AIはありません。任意の端末内音声・食品ラベル認識が入力を補助し、Google食品ラベルSDKの診断データ処理にはプライバシーポリシーに記載した別途の同意が必要です。 Health Connectは、体重、身長、体脂肪率、除脂肪体重を取り込む任意の読み取り専用連携になりました。要求するのは読み取り権限だけで、書き込みや削除の権限は求めず、ユーザーが許可するまで何も取り込みません。投与の記録は今も手動で入力・確認します。"
             ]
           },
           {
             "id": "notifications",
             "question": "通知、リマインダー、ウィジェットはありますか？",
             "answers": [
-              "任意のリマインダーとホーム画面ウィジェットを利用できます。DoseWeek 1.0.0は、次回の投与、投与を逃した後のフォローアップ、残数不足について端末内のローカルリマインダーを予約できます。ユーザーがオンにして通知の権限を許可するまでは無効です。既定の文言は治療内容を表示せず、薬の名前は有効にした場合にのみ表示され、用量は表示されません。リマインダーをタップしてもアプリが開くだけで、通知から記録が作成されることはありません。ウェアラブルアプリはありません。"
+              "任意のリマインダーとホーム画面ウィジェットを利用できます。DoseWeek 1.0.5は、次回の投与、投与を逃した後のフォローアップ、残数不足について端末内のローカルリマインダーを予約できます。ユーザーがオンにして通知の権限を許可するまでは無効です。既定の文言は治療内容を表示せず、薬の名前は有効にした場合にのみ表示され、用量は表示されません。リマインダーをタップしてもアプリが開くだけで、通知から記録が作成されることはありません。ウェアラブルアプリはありません。"
             ]
           },
           {
@@ -1015,7 +1015,7 @@
       },
       "home": {
         "title": "DoseWeek für Android",
-        "versionScope": "Diese Informationen gelten nur für DoseWeek 1.0.0 auf Android.",
+        "versionScope": "Diese Informationen gelten für DoseWeek auf Android ab Version 1.0.0 (versionCode 12), einschließlich der aktuellen Version 1.0.5.",
         "intro": "DoseWeek ist eine lokale App zur manuellen Dokumentation wöchentlicher Injektionspläne, tatsächlicher und ausgelassener Verabreichungen, des Bestands, des Gewichts und des Taillenumfangs. Die Daten bleiben auf dem Gerät, solange Sie keine optionale Integration einschalten.",
         "featureBadges": [
           "Lokaler privater App-Speicher",
@@ -1031,8 +1031,8 @@
         "medicalNoticeBody": "DoseWeek ist ein persönliches Dokumentationswerkzeug und kein Medizinprodukt. Die App stellt keine Diagnose und trifft keine Entscheidungen zu Behandlung, Dosis oder Verabreichungszeitpunkt. Befolgen Sie die Fachinformation und den Rat einer qualifizierten medizinischen Fachperson. Wenden Sie sich bei einem möglichen Notfall sofort an den örtlichen Rettungsdienst."
       },
       "privacy": {
-        "title": "Datenschutzerklärung für DoseWeek 1.0.0 auf Android",
-        "scope": "Diese Erklärung gilt nur für DoseWeek 1.0.0 auf Android.",
+        "title": "Datenschutzerklärung für DoseWeek auf Android",
+        "scope": "Diese Erklärung gilt für DoseWeek auf Android ab Version 1.0.0 (versionCode 12), einschließlich der aktuellen Version 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -1062,7 +1062,7 @@
             "id": "no-collection",
             "title": "3. Optionale Dienste und Nutzungsanalyse",
             "paragraphs": [
-              "DoseWeek 1.0.0 verwendet die folgenden Funktionen oder automatischen Verarbeitungen im Standardzustand nicht. Jeder Eintrag wird vom Nutzer manuell eingegeben und bestätigt.",
+              "DoseWeek 1.0.5 verwendet die folgenden Funktionen oder automatischen Verarbeitungen im Standardzustand nicht. Jeder Eintrag wird vom Nutzer manuell eingegeben und bestätigt.",
               "Gesundheitsdaten wie Zeitpläne, Verabreichungen, Notizen und Körpermesswerte bleiben standardmäßig auf Ihrem Gerät. Der Entwickler erhält diese Einträge nicht. Exporte, Sicherungen und optionale Integrationen werden gesondert erläutert. Für die optionale Nutzungsanalyse gelten die folgenden Regeln.\n\nDie Bestätigung des erforderlichen Datenschutzhinweises erlaubt keine Analyse. Die Analyse wird nur nach gesonderter Einwilligung zur Nutzungsanalyse und zur Auslandsübermittlung aktiviert. Beide optionalen Auswahlmöglichkeiten sind standardmäßig deaktiviert. Wird eine davon abgelehnt oder widerrufen, wird die Analyse deaktiviert.\n\nDie Nutzungsanalyse ist freiwillig und anfangs ausgeschaltet. Die erforderliche Bestätigung des Datenschutzhinweises ist keine Einwilligung. Erst nach Ihrer gesonderten Zustimmung startet Google Analytics for Firebase und sendet automatische Lebenszyklus- und technische Ereignisse wie erste Starts, Sitzungen, Nutzungshäufigkeit, Nutzungsdauer sowie App- oder Betriebssystemupdates an Google. Der Entwickler nutzt Berichte, um die App-Nutzung zu verstehen. DoseWeek ergänzt keine eigenen Ereignisse.\n\nDie Analyse kann von Firebase erzeugte App-Instanz- oder Installationskennungen, Ereigniszeiten, App-Version, Sprache, Gerätemarke, Modell und Geräteklasse, Betriebssystemdaten einschließlich Unterversionen und Bildschirmauflösung enthalten. Google verarbeitet IP-Adressen für den Betrieb des Dienstes und die ungefähre Standortbestimmung einschließlich der Stadt. Daraus abgeleitete Stadtkoordinaten sind nicht Ihr GPS-Standort. Die Analyse nutzt weder GPS noch eine Standortberechtigung. Google verarbeitet die Daten auf eigenen Servern, möglicherweise außerhalb Ihres Landes; der Entwickler kann Berichte einsehen. Diese Datensätze sind nicht von sich aus anonym.\n\nDoseWeek sendet keine Gesundheitsdaten, Medikamentennamen, Dosen, Notizen, Text- oder Spracheingaben, Bildschirmnamen oder Routen an die Analyse. Es setzt weder Nutzer-IDs noch eigene Nutzereigenschaften. Werbe-IDs, Android ID (SSAID)-Erfassung, automatische Bildschirmberichte, Google-Signale und personalisierte Werbung sind deaktiviert. Crashlytics und Performance Monitoring werden nicht verwendet.\n\nDie Aufbewahrung von Nutzer- und Ereignisdaten in Google Analytics ist auf 2 Monate eingestellt, ohne Zurücksetzen bei neuer Aktivität. Änderungen greifen nach 24 Stunden; abgelaufene Daten werden im monatlichen Verfahren von Google gelöscht, nicht exakt nach zwei Monaten. Diese Einstellung gilt nicht für standardmäßige aggregierte Berichte und garantiert deren dauerhafte Verfügbarkeit nicht.\n\nEine langfristige Speicherung anonymer Monatssummen ist erst nach einer Datenschutzprüfung und einem geprüften Export vorgesehen, der eine Identifizierung verhindert. Ein solcher Export wurde bisher noch nicht mit echten Daten durchgeführt; Analysedaten im Rohformat gelten nicht als anonym.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Datenschutzkontakt von Google: https://privacy.google.com/businesses/processorsupport\n\nBeauftragte Verarbeitung und Speicherung für die optionale Analyse der App-Nutzung, statistische Berichte und den Betrieb dieses Dienstes. Keine Nutzung für Werbung oder Personalisierung.\n\nNachdem Sie sowohl der Erhebung und Nutzung von Analysedaten als auch der Auslandsübermittlung zugestimmt und die Analyse aktiviert haben, sendet das Firebase Analytics SDK während der App-Nutzung Daten per HTTPS an eine Erfassungsstelle. Von dort werden sie an die Verarbeitungsserver von Google Analytics weitergeleitet. Die Übermittlung kann asynchron erfolgen.\n\nMöglicher Umfang der Auslandsübermittlung (öffentlich verfügbare Informationen vom 23. September 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Dieser Umfang beruht auf der nach den Bedingungen von Google zulässigen Verarbeitung in den Ländern seiner Einrichtungen sowie auf den veröffentlichten Listen dieser Einrichtungen und der Unterauftragsverarbeiter des betreffenden Dienstes. Er beschreibt weder einen festen Übermittlungsweg für jede Person noch eine Übermittlung in jedes Land. Die Einrichtungslisten enthalten auch Standorte in Entwicklung; bei Unterauftragsverarbeitern bezeichnen die Länder deren Unternehmensstandorte. Wenn wir vereinbarte Übermittlungsdetails, einschließlich Ländern oder Empfängern, ändern, informieren wir Sie und holen eine gesonderte Einwilligung ein.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nDie Einwilligung in die Nutzungsanalyse ist getrennt von der Einwilligung in die optionale Erkennung von Lebensmitteletiketten und deren offengelegte Google-ML-Kit-Messdaten. Eine Änderung beeinflusst die andere Wahl nicht.",
               "Die Health-Connect-Integration liest nur. DoseWeek liest Gewicht, Körpergröße, Körperfettanteil und fettfreie Masse, die Sie freigegeben haben, und fordert keine Schreib- oder Löschberechtigung an; es kann daher keine Daten ändern, die einer anderen App gehören. Gelesene Werte bleiben im privaten App-Speicher und werden nicht an den Entwickler gesendet.",
               "Ist die Google-Drive-Integration eingeschaltet, kann die App eine verschlüsselte Sicherung in Ihren eigenen Drive-App-Datenordner hochladen. Der Entwickler hat weder eine Kopie noch einen Schlüssel. Abschnitt 4 beschreibt, was Drive sehen kann und wie der Wiederherstellungscode behandelt wird.",
@@ -1186,21 +1186,21 @@
             "id": "accounts",
             "question": "Brauche ich eine Anmeldung oder ein Konto?",
             "answers": [
-              "DoseWeek 1.0.0 hat kein eigenes Konto und keinen Entwickler-Server, und für die Nutzung der App brauchen Sie beides nicht. Die optionale Google-Drive-Sicherung nutzt Ihr eigenes Google-Konto und bleibt aus, bis Sie sie in den Einstellungen verbinden. Der Entwickler kann Ihre Aufzeichnungen in keinem Fall einsehen."
+              "DoseWeek 1.0.5 hat kein eigenes Konto und keinen Entwickler-Server, und für die Nutzung der App brauchen Sie beides nicht. Die optionale Google-Drive-Sicherung nutzt Ihr eigenes Google-Konto und bleibt aus, bis Sie sie in den Einstellungen verbinden. Der Entwickler kann Ihre Aufzeichnungen in keinem Fall einsehen."
             ]
           },
           {
             "id": "ai-health",
             "question": "Verwendet DoseWeek KI oder Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 für Android enthält keine generative KI. Optionale Spracherkennung und Erkennung von Lebensmitteletiketten auf dem Gerät helfen bei der Eingabe; die Diagnostik des Google-SDKs für Lebensmitteletiketten erfordert eine gesonderte Einwilligung gemäß Datenschutzerklärung. Health Connect ist jetzt ein optionaler, rein lesender Import von Gewicht, Körpergröße, Körperfettanteil und fettfreier Masse: Die App fordert ausschließlich Leseberechtigungen an, niemals Schreib- oder Löschrechte, und importiert nichts, bevor Sie die Berechtigung erteilen. Jede Verabreichung wird nach wie vor von Hand eingegeben und bestätigt."
+              "DoseWeek 1.0.5 für Android enthält keine generative KI. Optionale Spracherkennung und Erkennung von Lebensmitteletiketten auf dem Gerät helfen bei der Eingabe; die Diagnostik des Google-SDKs für Lebensmitteletiketten erfordert eine gesonderte Einwilligung gemäß Datenschutzerklärung. Health Connect ist jetzt ein optionaler, rein lesender Import von Gewicht, Körpergröße, Körperfettanteil und fettfreier Masse: Die App fordert ausschließlich Leseberechtigungen an, niemals Schreib- oder Löschrechte, und importiert nichts, bevor Sie die Berechtigung erteilen. Jede Verabreichung wird nach wie vor von Hand eingegeben und bestätigt."
             ]
           },
           {
             "id": "notifications",
             "question": "Gibt es Benachrichtigungen, Erinnerungen oder Widgets?",
             "answers": [
-              "Optionale Erinnerungen und ein Startbildschirm-Widget sind verfügbar. DoseWeek 1.0.0 kann lokale Erinnerungen auf Ihrem Gerät für die nächste Anwendung, eine Nachfrage nach einer verpassten Anwendung und einen niedrigen Vorrat planen. Sie bleiben aus, bis Sie sie einschalten und die Benachrichtigungsberechtigung erteilen. Standardmäßig verrät der Erinnerungstext nichts über Ihre Behandlung; der Medikamentenname erscheint nur, wenn Sie das aktivieren, und Dosismengen erscheinen nie. Tippen auf eine Erinnerung öffnet nur die App, sodass aus einer Benachrichtigung nie etwas dokumentiert wird. Es gibt keine Wearable-Apps."
+              "Optionale Erinnerungen und ein Startbildschirm-Widget sind verfügbar. DoseWeek 1.0.5 kann lokale Erinnerungen auf Ihrem Gerät für die nächste Anwendung, eine Nachfrage nach einer verpassten Anwendung und einen niedrigen Vorrat planen. Sie bleiben aus, bis Sie sie einschalten und die Benachrichtigungsberechtigung erteilen. Standardmäßig verrät der Erinnerungstext nichts über Ihre Behandlung; der Medikamentenname erscheint nur, wenn Sie das aktivieren, und Dosismengen erscheinen nie. Tippen auf eine Erinnerung öffnet nur die App, sodass aus einer Benachrichtigung nie etwas dokumentiert wird. Es gibt keine Wearable-Apps."
             ]
           },
           {
@@ -1342,7 +1342,7 @@
       },
       "home": {
         "title": "DoseWeek pour Android",
-        "versionScope": "Ces informations s’appliquent uniquement à DoseWeek 1.0.0 pour Android.",
+        "versionScope": "Ces informations s’appliquent à DoseWeek pour Android à partir de la version 1.0.0 (versionCode 12), y compris la version actuelle 1.0.5.",
         "intro": "DoseWeek est une application locale permettant de consigner manuellement les calendriers d’injections hebdomadaires, les administrations effectuées ou ignorées, le stock, le poids et le tour de taille. Les données restent sur l’appareil tant que vous n’activez pas une intégration facultative.",
         "featureBadges": [
           "Stockage local privé de l’application",
@@ -1358,8 +1358,8 @@
         "medicalNoticeBody": "DoseWeek est un outil personnel de tenue de dossier, et non un dispositif médical. Il ne fournit aucun diagnostic, traitement ni décision concernant la dose ou le moment de l’administration. Suivez les informations de prescription et les conseils d’un professionnel de santé qualifié. En cas d’urgence possible, contactez immédiatement les services d’urgence locaux."
       },
       "privacy": {
-        "title": "Politique de confidentialité de DoseWeek 1.0.0 pour Android",
-        "scope": "Cette politique s’applique uniquement à DoseWeek 1.0.0 pour Android.",
+        "title": "Politique de confidentialité de DoseWeek pour Android",
+        "scope": "Cette politique s’applique à DoseWeek pour Android à partir de la version 1.0.0 (versionCode 12), y compris la version actuelle 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -1389,7 +1389,7 @@
             "id": "no-collection",
             "title": "3. Services facultatifs et analyse de l’utilisation",
             "paragraphs": [
-              "Dans son état par défaut, DoseWeek 1.0.0 n’utilise pas les fonctions ni traitements automatiques suivants. Chaque enregistrement est saisi et confirmé par l’utilisateur.",
+              "Dans son état par défaut, DoseWeek 1.0.5 n’utilise pas les fonctions ni traitements automatiques suivants. Chaque enregistrement est saisi et confirmé par l’utilisateur.",
               "Les données de santé, dont les plannings, administrations, notes et mesures corporelles, restent par défaut sur votre appareil. Le développeur ne reçoit pas ces données. Les exports, sauvegardes et intégrations facultatives sont décrits séparément. L’analyse facultative de l’utilisation suit les règles ci-dessous.\n\nLa confirmation de lecture de l’avis de confidentialité obligatoire n’autorise pas l’analyse. L’analyse n’est activée qu’après des consentements distincts à l’analyse de l’utilisation et au transfert à l’étranger. Ces deux choix facultatifs sont désactivés par défaut, et l’analyse est désactivée si l’un d’eux est refusé ou retiré.\n\nL’analyse de l’utilisation est facultative et initialement désactivée. La confirmation obligatoire de lecture de l’avis ne vaut pas consentement. Google Analytics for Firebase ne démarre qu’après votre accord distinct et transmet à Google des événements automatiques de cycle de vie et techniques : premières ouvertures, sessions, fréquence et durée d’utilisation, mises à jour de l’app ou du système. Le développeur consulte les rapports pour comprendre l’utilisation de l’app. DoseWeek n’ajoute aucun événement personnalisé.\n\nL’analyse peut inclure des identifiants d’instance de l’app ou d’installation créés par Firebase, les heures des événements, la version de l’app, la langue, la marque, le modèle et la catégorie d’appareil, les détails du système dont les versions mineures, et la résolution d’écran. Google traite les adresses IP pour faire fonctionner le service et estimer une localisation approximative, dont la ville. Les coordonnées déduites de la ville ne sont pas votre position GPS. L’analyse n’utilise ni GPS ni autorisation de localisation. Google traite ces données sur ses serveurs, éventuellement hors de votre pays ; le développeur peut consulter les rapports. Ces données ne sont pas intrinsèquement anonymes.\n\nDoseWeek n’envoie à l’analyse ni données de santé, noms de médicaments, doses, notes, saisies écrites ou vocales, noms d’écrans ou chemins de navigation. Aucun identifiant utilisateur ni propriété utilisateur personnalisée n’est défini. Les identifiants publicitaires, la collecte Android ID (SSAID), les rapports automatiques d’écrans, les signaux Google et la publicité personnalisée sont désactivés. Crashlytics et Performance Monitoring ne sont pas utilisés.\n\nLa conservation des données utilisateur et événement de Google Analytics est réglée sur 2 mois, sans réinitialisation lors d’une nouvelle activité. Les modifications s’appliquent après 24 heures ; les données expirées sont supprimées lors du traitement mensuel de Google, pas à l’instant précis des deux mois. Ce réglage ne régit pas les rapports agrégés standards et ne garantit pas leur disponibilité permanente.\n\nLa conservation à long terme de totaux mensuels anonymes n’est prévue qu’après un examen de confidentialité et un export vérifié empêchant l’identification. Aucun export de ce type n’a encore été réalisé avec des données réelles ; les données brutes d’analyse ne sont pas considérées comme anonymes.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contact de Google pour la protection des données : https://privacy.google.com/businesses/processorsupport\n\nTraitement délégué et stockage pour l’analyse facultative de l’utilisation de l’application, les rapports statistiques et le fonctionnement de ce service. Aucune utilisation à des fins publicitaires ou de personnalisation.\n\nAprès votre consentement à la collecte et à l’utilisation des données d’analyse ainsi qu’à leur transfert à l’étranger, et une fois l’analyse activée, le SDK Firebase Analytics envoie des données par HTTPS à un centre de collecte pendant l’utilisation de l’application. Elles sont ensuite transmises aux serveurs de traitement de Google Analytics. La transmission peut être asynchrone.\n\nPérimètre potentiel du transfert à l’étranger (informations publiques au 23 septembre 2026) : Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Ce périmètre reflète le traitement dans les pays où se trouvent les installations, autorisé par les conditions de Google, ainsi que les listes publiées de ses installations et des sous-traitants ultérieurs du service concerné. Il ne définit ni un itinéraire fixe pour chaque utilisateur ni un transfert vers tous les pays. Les listes d’installations comprennent des sites en cours de développement, et les pays des sous-traitants ultérieurs correspondent à leurs implantations d’entreprise. Nous vous informerons et solliciterons un consentement distinct en cas de modification des modalités de transfert acceptées, notamment les pays ou les destinataires.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nLe consentement à l’analyse est distinct de celui à la reconnaissance facultative des étiquettes alimentaires et aux mesures Google ML Kit divulguées séparément. Modifier un choix ne change pas l’autre.",
               "L’intégration Health Connect est en lecture seule. DoseWeek lit le poids, la taille, le pourcentage de masse grasse et la masse maigre que vous avez partagés, et ne demande aucune autorisation d’écriture ou de suppression ; il ne peut donc pas modifier les données appartenant à une autre application. Ce qu’il lit reste dans le stockage privé de l’application et n’est pas envoyé au développeur.",
               "Lorsque l’intégration Google Drive est activée, l’application peut téléverser une sauvegarde chiffrée dans votre propre dossier de données d’application Drive. Le développeur n’en détient ni copie ni clé. La section 4 décrit ce que Drive peut voir et comment le code de récupération est traité.",
@@ -1513,21 +1513,21 @@
             "id": "accounts",
             "question": "Dois-je me connecter ou créer un compte ?",
             "answers": [
-              "DoseWeek 1.0.0 n’a ni compte propre ni serveur du développeur, et aucun des deux n’est nécessaire pour utiliser l’application. La sauvegarde Google Drive facultative utilise votre propre compte Google et reste désactivée tant que vous ne la connectez pas dans les réglages. Dans tous les cas, le développeur ne peut pas consulter vos données."
+              "DoseWeek 1.0.5 n’a ni compte propre ni serveur du développeur, et aucun des deux n’est nécessaire pour utiliser l’application. La sauvegarde Google Drive facultative utilise votre propre compte Google et reste désactivée tant que vous ne la connectez pas dans les réglages. Dans tous les cas, le développeur ne peut pas consulter vos données."
             ]
           },
           {
             "id": "ai-health",
             "question": "DoseWeek utilise-t-il l’IA ou Health Connect ?",
             "answers": [
-              "DoseWeek 1.0.0 pour Android ne contient pas d’IA générative. La reconnaissance facultative de la voix et des étiquettes alimentaires sur l’appareil aide à la saisie ; les diagnostics du SDK Google pour les étiquettes nécessitent un consentement distinct, décrit dans la politique de confidentialité. Health Connect est désormais un import facultatif en lecture seule du poids, de la taille, du pourcentage de masse grasse et de la masse maigre : l’application demande uniquement des autorisations de lecture, jamais d’écriture ni de suppression, et n’importe rien tant que vous n’avez pas accordé cette autorisation. Chaque administration reste saisie et confirmée à la main."
+              "DoseWeek 1.0.5 pour Android ne contient pas d’IA générative. La reconnaissance facultative de la voix et des étiquettes alimentaires sur l’appareil aide à la saisie ; les diagnostics du SDK Google pour les étiquettes nécessitent un consentement distinct, décrit dans la politique de confidentialité. Health Connect est désormais un import facultatif en lecture seule du poids, de la taille, du pourcentage de masse grasse et de la masse maigre : l’application demande uniquement des autorisations de lecture, jamais d’écriture ni de suppression, et n’importe rien tant que vous n’avez pas accordé cette autorisation. Chaque administration reste saisie et confirmée à la main."
             ]
           },
           {
             "id": "notifications",
             "question": "Y a-t-il des notifications, rappels ou widgets ?",
             "answers": [
-              "Des rappels facultatifs et un widget d’écran d’accueil sont disponibles. DoseWeek 1.0.0 peut programmer sur votre appareil des rappels locaux pour la prochaine administration, une relance après une administration manquée et un stock faible. Ils restent désactivés tant que vous ne les activez pas et n’accordez pas l’autorisation de notification. Par défaut, le texte du rappel ne révèle rien de votre traitement ; le nom du médicament n’apparaît que si vous l’activez, et les doses n’apparaissent jamais. Un appui sur un rappel ne fait qu’ouvrir l’app : rien n’est jamais enregistré depuis une notification. Il n’y a pas d’applications pour montre."
+              "Des rappels facultatifs et un widget d’écran d’accueil sont disponibles. DoseWeek 1.0.5 peut programmer sur votre appareil des rappels locaux pour la prochaine administration, une relance après une administration manquée et un stock faible. Ils restent désactivés tant que vous ne les activez pas et n’accordez pas l’autorisation de notification. Par défaut, le texte du rappel ne révèle rien de votre traitement ; le nom du médicament n’apparaît que si vous l’activez, et les doses n’apparaissent jamais. Un appui sur un rappel ne fait qu’ouvrir l’app : rien n’est jamais enregistré depuis une notification. Il n’y a pas d’applications pour montre."
             ]
           },
           {
@@ -1669,7 +1669,7 @@
       },
       "home": {
         "title": "DoseWeek para Android",
-        "versionScope": "Esta información se aplica únicamente a DoseWeek 1.0.0 para Android.",
+        "versionScope": "Esta información se aplica a DoseWeek para Android a partir de la versión 1.0.0 (versionCode 12), incluida la versión actual 1.0.5.",
         "intro": "DoseWeek es una aplicación local para registrar manualmente calendarios de inyecciones semanales, administraciones realizadas u omitidas, existencias, peso y perímetro de cintura. Los datos permanecen en el dispositivo mientras no active una integración opcional.",
         "featureBadges": [
           "Almacenamiento local privado de la aplicación",
@@ -1685,8 +1685,8 @@
         "medicalNoticeBody": "DoseWeek es una herramienta personal de registro, no un producto sanitario. No ofrece diagnóstico, tratamiento ni decisiones sobre dosis o momento de administración. Siga la información de prescripción y las indicaciones de un profesional sanitario cualificado. Si cree que puede tratarse de una urgencia, contacte inmediatamente con los servicios de emergencia locales."
       },
       "privacy": {
-        "title": "Política de privacidad de DoseWeek 1.0.0 para Android",
-        "scope": "Esta política se aplica únicamente a DoseWeek 1.0.0 para Android.",
+        "title": "Política de privacidad de DoseWeek para Android",
+        "scope": "Esta política se aplica a DoseWeek para Android a partir de la versión 1.0.0 (versionCode 12), incluida la versión actual 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -1716,7 +1716,7 @@
             "id": "no-collection",
             "title": "3. Servicios opcionales y análisis del uso",
             "paragraphs": [
-              "En su estado predeterminado, DoseWeek 1.0.0 no utiliza las siguientes funciones ni procesos automáticos. Cada registro lo introduce y confirma el usuario.",
+              "En su estado predeterminado, DoseWeek 1.0.5 no utiliza las siguientes funciones ni procesos automáticos. Cada registro lo introduce y confirma el usuario.",
               "Los registros de salud, como horarios, administraciones, notas y medidas corporales, permanecen por defecto en el dispositivo. El desarrollador no recibe estos registros. Las exportaciones, copias e integraciones opcionales se explican por separado. El análisis opcional del uso sigue las reglas siguientes.\n\nConfirmar la lectura del aviso de privacidad obligatorio no autoriza el análisis. El análisis solo se activa tras dar consentimientos separados para el análisis de uso y la transferencia al extranjero. Ambas opciones son opcionales y están desactivadas por defecto; el análisis se desactiva si se rechaza o retira cualquiera de ellas.\n\nEl análisis del uso es opcional y comienza desactivado. Confirmar obligatoriamente la lectura del aviso no otorga consentimiento. Solo después de aceptarlo por separado se inicia Google Analytics for Firebase y envía a Google eventos automáticos del ciclo de vida y técnicos, como primeras aperturas, sesiones, frecuencia y tiempo de uso y actualizaciones de la app o del sistema. El desarrollador utiliza los informes para conocer el uso de la app. DoseWeek no añade eventos personalizados.\n\nEl análisis puede incluir identificadores de instancia de la app o de instalación generados por Firebase, horas de eventos, versión de la app, idioma, marca, modelo y tipo de dispositivo, información del sistema incluidas versiones menores y resolución de pantalla. Google procesa direcciones IP para operar el servicio y estimar la ubicación aproximada, incluida la ciudad. Las coordenadas derivadas de una ciudad no son su ubicación GPS. El análisis no utiliza GPS ni permisos de ubicación. Google procesa los datos en sus servidores, posiblemente fuera de su país, y el desarrollador puede consultar informes. Estos registros no son intrínsecamente anónimos.\n\nDoseWeek no envía al análisis registros de salud, nombres de medicamentos, dosis, notas, entradas escritas o de voz, nombres de pantallas ni rutas. No establece ID de usuario ni propiedades de usuario personalizadas. Los ID publicitarios, la recopilación de Android ID (SSAID), los informes automáticos de pantallas, las señales de Google y la personalización de anuncios están desactivados. No se utilizan Crashlytics ni Performance Monitoring.\n\nLa retención de datos de usuarios y eventos de Google Analytics está configurada en 2 meses, sin restablecimiento por nueva actividad. Los cambios se aplican tras 24 horas; Google elimina los datos caducados en su proceso mensual, no exactamente al cumplirse dos meses. Este ajuste no rige los informes agregados estándar ni garantiza su disponibilidad permanente.\n\nLa conservación prolongada de totales mensuales anónimos solo se prevé tras una revisión de privacidad y una exportación verificada que impida identificar a las personas. Todavía no se ha hecho ninguna exportación de este tipo con datos reales; los datos brutos de análisis no se consideran anónimos.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contacto de protección de datos de Google: https://privacy.google.com/businesses/processorsupport\n\nTratamiento delegado y almacenamiento para el análisis opcional del uso de la aplicación, los informes estadísticos y el funcionamiento de ese servicio. No se utilizan para publicidad ni personalización.\n\nDespués de que aceptes tanto la recopilación y el uso de datos de análisis como la transferencia al extranjero y actives el análisis, el SDK de Firebase Analytics enviará datos por HTTPS a un centro de recopilación durante el uso de la aplicación. Desde allí se reenviarán a los servidores de procesamiento de Google Analytics. La transmisión puede ser asíncrona.\n\nÁmbito potencial de la transferencia al extranjero (información pública a 23 de septiembre de 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Este ámbito refleja el tratamiento en los países donde se encuentran las instalaciones permitido por las condiciones de Google y sus listas publicadas de instalaciones y subencargados del tratamiento del servicio correspondiente. No identifica una ruta fija para cada usuario ni transferencias a todos los países. Las listas de instalaciones incluyen emplazamientos en desarrollo, y los países de los subencargados corresponden a sus ubicaciones corporativas. Te informaremos y solicitaremos un consentimiento aparte si cambian los detalles de transferencia acordados, incluidos los países o destinatarios.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nEl consentimiento para el análisis es independiente del reconocimiento opcional de etiquetas alimentarias y de las métricas de Google ML Kit descritas por separado. Cambiar una elección no cambia la otra.",
               "La integración con Health Connect es de solo lectura. DoseWeek lee el peso, la estatura, el porcentaje de grasa corporal y la masa magra que usted haya compartido, y no solicita permiso de escritura ni de borrado, por lo que no puede modificar registros de otra aplicación. Lo que lee se guarda en el almacenamiento privado de la aplicación y no se envía al desarrollador.",
               "Con la integración de Google Drive activada, la aplicación puede subir una copia de seguridad cifrada a su propia carpeta de datos de aplicación en Drive. El desarrollador no conserva copia ni clave. La sección 4 describe qué puede ver Drive y cómo se trata el código de recuperación.",
@@ -1840,21 +1840,21 @@
             "id": "accounts",
             "question": "¿Debo iniciar sesión o crear una cuenta?",
             "answers": [
-              "DoseWeek 1.0.0 no tiene cuenta propia ni servidor del desarrollador, y no hace falta ninguno de los dos para usar la aplicación. La copia opcional en Google Drive utiliza su propia cuenta de Google y permanece desactivada hasta que usted la conecte en Ajustes. En cualquier caso, el desarrollador no puede ver sus datos."
+              "DoseWeek 1.0.5 no tiene cuenta propia ni servidor del desarrollador, y no hace falta ninguno de los dos para usar la aplicación. La copia opcional en Google Drive utiliza su propia cuenta de Google y permanece desactivada hasta que usted la conecte en Ajustes. En cualquier caso, el desarrollador no puede ver sus datos."
             ]
           },
           {
             "id": "ai-health",
             "question": "¿DoseWeek utiliza IA o Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 para Android no incluye IA generativa. El reconocimiento opcional de voz y etiquetas alimentarias en el dispositivo facilita la entrada; los diagnósticos del SDK de Google para etiquetas requieren un consentimiento separado, descrito en la política de privacidad. Health Connect es ahora una importación opcional de solo lectura de peso, estatura, porcentaje de grasa corporal y masa magra: la aplicación pide únicamente permisos de lectura, nunca de escritura ni de borrado, y no importa nada hasta que usted concede ese permiso. Cada administración se sigue introduciendo y confirmando a mano."
+              "DoseWeek 1.0.5 para Android no incluye IA generativa. El reconocimiento opcional de voz y etiquetas alimentarias en el dispositivo facilita la entrada; los diagnósticos del SDK de Google para etiquetas requieren un consentimiento separado, descrito en la política de privacidad. Health Connect es ahora una importación opcional de solo lectura de peso, estatura, porcentaje de grasa corporal y masa magra: la aplicación pide únicamente permisos de lectura, nunca de escritura ni de borrado, y no importa nada hasta que usted concede ese permiso. Cada administración se sigue introduciendo y confirmando a mano."
             ]
           },
           {
             "id": "notifications",
             "question": "¿Hay notificaciones, recordatorios o widgets?",
             "answers": [
-              "Hay recordatorios opcionales y un widget para la pantalla de inicio. DoseWeek 1.0.0 puede programar en su dispositivo recordatorios locales para la próxima administración, un aviso posterior a una administración omitida y las existencias bajas. Permanecen desactivados hasta que usted los active y conceda el permiso de notificaciones. Por defecto, el texto del recordatorio no revela nada de su tratamiento; el nombre del medicamento solo aparece si usted lo activa, y las dosis nunca aparecen. Tocar un recordatorio solo abre la aplicación, de modo que nunca se registra nada desde una notificación. No hay aplicaciones para reloj."
+              "Hay recordatorios opcionales y un widget para la pantalla de inicio. DoseWeek 1.0.5 puede programar en su dispositivo recordatorios locales para la próxima administración, un aviso posterior a una administración omitida y las existencias bajas. Permanecen desactivados hasta que usted los active y conceda el permiso de notificaciones. Por defecto, el texto del recordatorio no revela nada de su tratamiento; el nombre del medicamento solo aparece si usted lo activa, y las dosis nunca aparecen. Tocar un recordatorio solo abre la aplicación, de modo que nunca se registra nada desde una notificación. No hay aplicaciones para reloj."
             ]
           },
           {
@@ -1996,7 +1996,7 @@
       },
       "home": {
         "title": "DoseWeek per Android",
-        "versionScope": "Queste informazioni si applicano solo a DoseWeek 1.0.0 per Android.",
+        "versionScope": "Queste informazioni si applicano a DoseWeek per Android dalla versione 1.0.0 (versionCode 12) in poi, inclusa la versione attuale 1.0.5.",
         "intro": "DoseWeek è un’app locale per registrare manualmente programmi di iniezioni settimanali, somministrazioni effettuate o saltate, scorte, peso e circonferenza vita. I dati restano sul dispositivo finché non attivi un’integrazione facoltativa.",
         "featureBadges": [
           "Archiviazione locale privata dell’app",
@@ -2012,8 +2012,8 @@
         "medicalNoticeBody": "DoseWeek è uno strumento personale di registrazione, non un dispositivo medico. Non fornisce diagnosi, trattamenti o decisioni su dose o momento della somministrazione. Segui le informazioni di prescrizione e le indicazioni di un professionista sanitario qualificato. In una possibile emergenza, contatta subito i servizi di emergenza locali."
       },
       "privacy": {
-        "title": "Informativa sulla privacy di DoseWeek 1.0.0 per Android",
-        "scope": "Questa informativa si applica solo a DoseWeek 1.0.0 per Android.",
+        "title": "Informativa sulla privacy di DoseWeek per Android",
+        "scope": "Questa informativa si applica a DoseWeek per Android dalla versione 1.0.0 (versionCode 12) in poi, inclusa la versione attuale 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -2043,7 +2043,7 @@
             "id": "no-collection",
             "title": "3. Servizi facoltativi e analisi dell’utilizzo",
             "paragraphs": [
-              "Nello stato predefinito DoseWeek 1.0.0 non usa le seguenti funzioni o elaborazioni automatiche. Ogni record è inserito e confermato dall’utente.",
+              "Nello stato predefinito DoseWeek 1.0.5 non usa le seguenti funzioni o elaborazioni automatiche. Ogni record è inserito e confermato dall’utente.",
               "I dati sanitari, inclusi programmi, somministrazioni, note e misurazioni corporee, restano sul dispositivo per impostazione predefinita. Lo sviluppatore non riceve questi dati. Esportazioni, backup e integrazioni facoltative sono descritti separatamente. L’analisi facoltativa dell’utilizzo segue le regole riportate sotto.\n\nConfermare la lettura dell’informativa sulla privacy obbligatoria non autorizza l’analisi. L’analisi viene attivata solo dopo consensi separati all’analisi dell’utilizzo e al trasferimento all’estero. Entrambe le scelte facoltative sono disattivate per impostazione predefinita e l’analisi viene disattivata se una delle due viene rifiutata o revocata.\n\nL’analisi dell’utilizzo è facoltativa e inizialmente disattivata. La conferma obbligatoria di lettura dell’informativa non costituisce consenso. Solo dopo un’autorizzazione separata si avvia Google Analytics for Firebase, che invia a Google eventi automatici tecnici e del ciclo di vita, come primi avvii, sessioni, frequenza e durata d’uso e aggiornamenti dell’app o del sistema. Lo sviluppatore usa i rapporti per comprendere l’utilizzo dell’app. DoseWeek non aggiunge eventi personalizzati.\n\nL’analisi può includere identificatori dell’istanza dell’app o dell’installazione generati da Firebase, orari degli eventi, versione dell’app, lingua, marca, modello e categoria del dispositivo, dettagli del sistema comprese le versioni minori e risoluzione dello schermo. Google tratta gli indirizzi IP per il funzionamento del servizio e la stima della posizione approssimativa, inclusa la città. Le coordinate derivate dalla città non sono la tua posizione GPS. L’analisi non usa GPS né autorizzazioni di localizzazione. Google tratta i dati sui propri server, eventualmente fuori dal tuo Paese, e lo sviluppatore può consultare i rapporti. Questi dati non sono intrinsecamente anonimi.\n\nDoseWeek non invia all’analisi dati sanitari, nomi di farmaci, dosi, note, input scritti o vocali, nomi delle schermate o percorsi. Non imposta ID utente né proprietà utente personalizzate. ID pubblicitari, raccolta Android ID (SSAID), rapporti automatici delle schermate, Google Signals e personalizzazione degli annunci sono disattivati. Non si usano Crashlytics né Performance Monitoring.\n\nLa conservazione dei dati utente e degli eventi di Google Analytics è impostata su 2 mesi, senza ripristino del periodo per nuove attività. Le modifiche si applicano dopo 24 ore; Google elimina i dati scaduti nel processo mensile, non nell’istante esatto in cui scadono i due mesi. L’impostazione non riguarda i rapporti aggregati standard e non ne garantisce la disponibilità permanente.\n\nLa conservazione a lungo termine di totali mensili anonimi è prevista solo dopo una verifica della privacy e un’esportazione verificata che impedisca l’identificazione. Finora non è stata effettuata alcuna esportazione di questo tipo con dati reali; i dati grezzi di analisi non sono considerati anonimi.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contatto di Google per la protezione dei dati: https://privacy.google.com/businesses/processorsupport\n\nTrattamento delegato e conservazione per l’analisi facoltativa dell’utilizzo dell’app, i rapporti statistici e il funzionamento di tale servizio. Nessun utilizzo per pubblicità o personalizzazione.\n\nDopo che hai acconsentito sia alla raccolta e all’utilizzo dei dati di analisi sia al trasferimento all’estero e hai attivato l’analisi, l’SDK Firebase Analytics invia i dati tramite HTTPS a un centro di raccolta durante l’utilizzo dell’app. I dati vengono poi inoltrati ai server di elaborazione di Google Analytics. La trasmissione può essere asincrona.\n\nAmbito potenziale del trasferimento all’estero (informazioni pubbliche al 23 settembre 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Questo ambito riflette il trattamento nei paesi in cui si trovano le strutture consentito dai termini di Google e gli elenchi pubblicati delle sue strutture e dei sub-responsabili del trattamento del servizio pertinente. Non indica un percorso fisso per ciascun utente né trasferimenti verso tutti i paesi. Gli elenchi delle strutture comprendono siti in fase di sviluppo e i paesi dei sub-responsabili indicano le sedi delle rispettive società. Ti informeremo e chiederemo un consenso separato in caso di modifica dei dettagli di trasferimento concordati, inclusi i paesi o i destinatari.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nIl consenso all’analisi è separato da quello al riconoscimento facoltativo delle etichette alimentari e alle metriche di Google ML Kit descritte a parte. Cambiare una scelta non modifica l’altra.",
               "L’integrazione con Health Connect è in sola lettura. DoseWeek legge peso, altezza, percentuale di massa grassa e massa magra che hai condiviso e non richiede alcun permesso di scrittura o eliminazione, quindi non può modificare i record di un’altra app. Ciò che legge resta nell’archiviazione privata dell’app e non viene inviato allo sviluppatore.",
               "Con l’integrazione Google Drive attiva, l’app può caricare un backup crittografato nella tua cartella dati app di Drive. Lo sviluppatore non ne conserva copia né chiave. La sezione 4 descrive che cosa può vedere Drive e come viene trattato il codice di recupero.",
@@ -2167,21 +2167,21 @@
             "id": "accounts",
             "question": "Devo accedere o creare un account?",
             "answers": [
-              "DoseWeek 1.0.0 non ha un account proprio né un server dello sviluppatore, e per usare l’app non serve nessuno dei due. Il backup facoltativo su Google Drive usa il tuo account Google e resta disattivato finché non lo colleghi nelle Impostazioni. In ogni caso lo sviluppatore non può vedere i tuoi dati."
+              "DoseWeek 1.0.5 non ha un account proprio né un server dello sviluppatore, e per usare l’app non serve nessuno dei due. Il backup facoltativo su Google Drive usa il tuo account Google e resta disattivato finché non lo colleghi nelle Impostazioni. In ogni caso lo sviluppatore non può vedere i tuoi dati."
             ]
           },
           {
             "id": "ai-health",
             "question": "DoseWeek usa IA o Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 per Android non include IA generativa. Il riconoscimento facoltativo di voce ed etichette alimentari sul dispositivo aiuta l’inserimento; la diagnostica del SDK Google per etichette richiede un consenso separato, descritto nell’informativa sulla privacy. Health Connect è ora un’importazione facoltativa in sola lettura di peso, altezza, percentuale di massa grassa e massa magra: l’app chiede soltanto permessi di lettura, mai di scrittura o eliminazione, e non importa nulla finché non concedi il permesso. Ogni somministrazione resta inserita e confermata a mano."
+              "DoseWeek 1.0.5 per Android non include IA generativa. Il riconoscimento facoltativo di voce ed etichette alimentari sul dispositivo aiuta l’inserimento; la diagnostica del SDK Google per etichette richiede un consenso separato, descritto nell’informativa sulla privacy. Health Connect è ora un’importazione facoltativa in sola lettura di peso, altezza, percentuale di massa grassa e massa magra: l’app chiede soltanto permessi di lettura, mai di scrittura o eliminazione, e non importa nulla finché non concedi il permesso. Ogni somministrazione resta inserita e confermata a mano."
             ]
           },
           {
             "id": "notifications",
             "question": "Sono disponibili notifiche, promemoria o widget?",
             "answers": [
-              "Sono disponibili promemoria facoltativi e un widget per la schermata iniziale. DoseWeek 1.0.0 può pianificare sul dispositivo promemoria locali per la prossima somministrazione, un sollecito dopo una somministrazione mancata e le scorte in esaurimento. Restano disattivati finché non li attivi e concedi l’autorizzazione alle notifiche. Per impostazione predefinita il testo del promemoria non rivela nulla della tua terapia; il nome del farmaco compare solo se lo attivi e le dosi non compaiono mai. Toccare un promemoria apre soltanto l’app, quindi da una notifica non viene mai registrato nulla. Non ci sono app per smartwatch."
+              "Sono disponibili promemoria facoltativi e un widget per la schermata iniziale. DoseWeek 1.0.5 può pianificare sul dispositivo promemoria locali per la prossima somministrazione, un sollecito dopo una somministrazione mancata e le scorte in esaurimento. Restano disattivati finché non li attivi e concedi l’autorizzazione alle notifiche. Per impostazione predefinita il testo del promemoria non rivela nulla della tua terapia; il nome del farmaco compare solo se lo attivi e le dosi non compaiono mai. Toccare un promemoria apre soltanto l’app, quindi da una notifica non viene mai registrato nulla. Non ci sono app per smartwatch."
             ]
           },
           {
@@ -2323,7 +2323,7 @@
       },
       "home": {
         "title": "DoseWeek voor Android",
-        "versionScope": "Deze informatie geldt alleen voor DoseWeek 1.0.0 op Android.",
+        "versionScope": "Deze informatie geldt voor DoseWeek op Android vanaf versie 1.0.0 (versionCode 12), inclusief de huidige versie 1.0.5.",
         "intro": "DoseWeek is een lokale app voor het handmatig vastleggen van wekelijkse injectieschema’s, uitgevoerde of overgeslagen toedieningen, voorraad, gewicht en middelomtrek. De gegevens blijven op het apparaat, tenzij u een optionele integratie inschakelt.",
         "featureBadges": [
           "Lokale privéopslag van de app",
@@ -2339,14 +2339,14 @@
         "medicalNoticeBody": "DoseWeek is een persoonlijk hulpmiddel voor het bijhouden van gegevens en geen medisch hulpmiddel. De app biedt geen diagnose, behandeling of beslissingen over dosis of toedieningstijdstip. Volg de voorschrijfinformatie en het advies van een bevoegde zorgverlener. Neem bij een mogelijke noodsituatie onmiddellijk contact op met de plaatselijke hulpdiensten."
       },
       "privacy": {
-        "title": "Privacybeleid van DoseWeek 1.0.0 voor Android",
-        "scope": "Dit beleid geldt alleen voor DoseWeek 1.0.0 op Android.",
+        "title": "Privacybeleid van DoseWeek voor Android",
+        "scope": "Dit beleid geldt voor DoseWeek op Android vanaf versie 1.0.0 (versionCode 12), inclusief de huidige versie 1.0.5.",
         "sections": [
           {
             "id": "scope",
             "title": "1. Toepassingsgebied en verantwoordelijken",
             "paragraphs": [
-              "De app DoseWeek en dit privacybeleid worden beheerd door Wonyoung Choi, een individuele ontwikkelaar gevestigd in de Republiek Korea. Vragen over gegevensverwerking kunt u sturen naar wonyoung@wonyoungchoi.dev.\n\nDoseWeek voor Android is bedoeld voor mensen van 18 jaar of ouder. Er wordt niet om een geboortedatum of leeftijd in cijfers gevraagd en deze worden niet verstuurd; alleen een keuze over de gebruiksgerechtigdheid met versieaanduiding wordt op het apparaat opgeslagen. Als je weigert of niet bevestigt dat je aan de voorwaarden voldoet, zijn de normale appfuncties en AI niet beschikbaar. Bestaande lokale gegevens worden niet verwijderd; alleen het exporteren van een versleuteld back-upbestand en een herstelcode blijft beschikbaar, na authenticatie als Appvergrendeling is ingeschakeld. Toestemming voor gebruiksanalyse, doorgifte naar het buitenland en AI-functies wordt afzonderlijk gegeven.",
+              "De app DoseWeek en dit privacybeleid worden beheerd door Wonyoung Choi, een individuele ontwikkelaar gevestigd in de Republiek Korea. Vragen over gegevensverwerking kunt u sturen naar wonyoung@wonyoungchoi.dev.\n\nDoseWeek voor Android is bedoeld voor mensen van 18 jaar of ouder. Er wordt niet om een geboortedatum of leeftijd in cijfers gevraagd en deze worden niet verstuurd; alleen een keuze over de gebruiksgerechtigdheid met versieaanduiding wordt op het apparaat opgeslagen. Als u weigert of niet bevestigt dat u aan de voorwaarden voldoet, zijn de normale appfuncties en AI niet beschikbaar. Bestaande lokale gegevens worden niet verwijderd; alleen het exporteren van een versleuteld back-upbestand en een herstelcode blijft beschikbaar, na authenticatie als Appvergrendeling is ingeschakeld. Toestemming voor gebruiksanalyse, doorgifte naar het buitenland en AI-functies wordt afzonderlijk gegeven.",
               "Google Play distribueert de app en Android verzorgt installatie, privéopslag, back-upbeheer en verwijdering. Afzonderlijke verwerking door Google Play, Android of een gekozen documentprovider valt onder diens voorwaarden. Dit beleid beschrijft alleen DoseWeek; de app stuurt gezondheidsregistraties niet naar de ontwikkelaar of Google Play. Uw gegevens blijven op het apparaat, tenzij u een optionele integratie inschakelt; de paragrafen 3 en 4 beschrijven wat elke integratie doet."
             ]
           },
@@ -2370,8 +2370,8 @@
             "id": "no-collection",
             "title": "3. Optionele diensten en gebruiksanalyse",
             "paragraphs": [
-              "In de standaardtoestand gebruikt DoseWeek 1.0.0 de volgende functies of automatische verwerking niet. Elke registratie wordt handmatig ingevoerd en bevestigd.",
-              "Gezondheidsgegevens, waaronder schema’s, toedieningen, notities en lichaamsmetingen, blijven standaard op uw apparaat. De ontwikkelaar ontvangt deze gegevens niet. Export, back-ups en optionele koppelingen worden apart beschreven. Voor optionele gebruiksanalyse gelden de onderstaande regels.\n\nHet bevestigen van de verplichte privacykennisgeving geeft geen toestemming voor analyse. Analyse wordt alleen ingeschakeld na afzonderlijke toestemming voor gebruiksanalyse en doorgifte naar het buitenland. Beide optionele keuzes staan standaard uit, en analyse wordt uitgeschakeld als een van beide wordt geweigerd of ingetrokken.\n\nGebruiksanalyse is optioneel en staat aanvankelijk uit. De verplichte bevestiging dat u de privacykennisgeving hebt gelezen, is geen toestemming. Pas na uw afzonderlijke toestemming start Google Analytics for Firebase en stuurt het automatische levenscyclus- en technische gebeurtenissen naar Google, zoals eerste starts, sessies, gebruiksfrequentie, gebruiksduur en updates van de app of het besturingssysteem. De ontwikkelaar gebruikt rapporten om appgebruik te begrijpen. DoseWeek voegt geen eigen gebeurtenissen toe.\n\nDe analyse kan door Firebase gegenereerde app-instantie- of installatie-ID’s, gebeurtenistijden, appversie, taal, merk, model en klasse van het apparaat, besturingssysteemgegevens inclusief subversies en schermresolutie bevatten. Google verwerkt IP-adressen voor de werking van de dienst en een geschatte locatie, waaronder de stad. Van de stad afgeleide coördinaten zijn niet uw GPS-locatie. De analyse gebruikt geen GPS of locatietoestemming. Google verwerkt gegevens op eigen servers, mogelijk buiten uw land; de ontwikkelaar kan rapporten bekijken. Deze gegevens zijn niet vanzelf anoniem.\n\nDoseWeek stuurt geen gezondheidsgegevens, medicijnnamen, doses, notities, getypte of gesproken invoer, schermnamen of routes naar de analyse. Er worden geen gebruikers-ID’s of eigen gebruikerseigenschappen ingesteld. Advertentie-ID’s, Android ID (SSAID)-verzameling, automatische schermrapportage, Google-signalen en advertentiepersonalisatie staan uit. Crashlytics en Performance Monitoring worden niet gebruikt.\n\nDe bewaartermijn voor gebruikers- en gebeurtenisgegevens in Google Analytics staat op 2 maanden, zonder opnieuw beginnen bij nieuwe activiteit. Wijzigingen gelden na 24 uur; verlopen gegevens worden via Googles maandelijkse proces verwijderd, niet op het precieze moment na twee maanden. Deze instelling geldt niet voor standaard geaggregeerde rapporten en garandeert geen permanente beschikbaarheid daarvan.\n\nLangdurige opslag van anonieme maandtotalen is pas gepland na een privacybeoordeling en een gecontroleerde export die identificatie voorkomt. Zo’n export is nog niet met echte gegevens uitgevoerd; ruwe analysegegevens worden niet als anoniem beschouwd.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contact voor gegevensbescherming bij Google: https://privacy.google.com/businesses/processorsupport\n\nUitbestede verwerking en opslag voor optionele analyse van het appgebruik, statistische rapporten en de werking van die dienst. Niet gebruikt voor reclame of personalisatie.\n\nNadat je toestemming hebt gegeven voor zowel het verzamelen en gebruiken van analysegegevens als de doorgifte naar het buitenland en je analyse hebt ingeschakeld, stuurt de Firebase Analytics SDK tijdens het appgebruik gegevens via HTTPS naar een verzamelcentrum. Van daaruit worden ze doorgestuurd naar de verwerkingsservers van Google Analytics. De overdracht kan asynchroon plaatsvinden.\n\nMogelijk bereik van de doorgifte naar het buitenland (openbare informatie per 23 september 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Dit bereik is gebaseerd op de verwerking in de landen waar de faciliteiten zich bevinden die is toegestaan volgens de voorwaarden van Google, en op de gepubliceerde lijsten van faciliteiten en subverwerkers voor de betreffende dienst. Het geeft geen vaste route per gebruiker aan en betekent niet dat gegevens naar elk land worden doorgegeven. De faciliteitenlijsten bevatten ook locaties in ontwikkeling; de landen van subverwerkers zijn hun bedrijfslocaties. Als we afgesproken doorgiftedetails wijzigen, waaronder landen of ontvangers, stellen we je hiervan op de hoogte en vragen we afzonderlijk toestemming.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nToestemming voor gebruiksanalyse staat los van toestemming voor optionele herkenning van voedseletiketten en de apart beschreven Google ML Kit-meetgegevens. Het wijzigen van de ene keuze verandert de andere niet.",
+              "In de standaardtoestand gebruikt DoseWeek 1.0.5 de volgende functies of automatische verwerking niet. Elke registratie wordt handmatig ingevoerd en bevestigd.",
+              "Gezondheidsgegevens, waaronder schema’s, toedieningen, notities en lichaamsmetingen, blijven standaard op uw apparaat. De ontwikkelaar ontvangt deze gegevens niet. Export, back-ups en optionele koppelingen worden apart beschreven. Voor optionele gebruiksanalyse gelden de onderstaande regels.\n\nHet bevestigen van de verplichte privacykennisgeving geeft geen toestemming voor analyse. Analyse wordt alleen ingeschakeld na afzonderlijke toestemming voor gebruiksanalyse en doorgifte naar het buitenland. Beide optionele keuzes staan standaard uit, en analyse wordt uitgeschakeld als een van beide wordt geweigerd of ingetrokken.\n\nGebruiksanalyse is optioneel en staat aanvankelijk uit. De verplichte bevestiging dat u de privacykennisgeving hebt gelezen, is geen toestemming. Pas na uw afzonderlijke toestemming start Google Analytics for Firebase en stuurt het automatische levenscyclus- en technische gebeurtenissen naar Google, zoals eerste starts, sessies, gebruiksfrequentie, gebruiksduur en updates van de app of het besturingssysteem. De ontwikkelaar gebruikt rapporten om appgebruik te begrijpen. DoseWeek voegt geen eigen gebeurtenissen toe.\n\nDe analyse kan door Firebase gegenereerde app-instantie- of installatie-ID’s, gebeurtenistijden, appversie, taal, merk, model en klasse van het apparaat, besturingssysteemgegevens inclusief subversies en schermresolutie bevatten. Google verwerkt IP-adressen voor de werking van de dienst en een geschatte locatie, waaronder de stad. Van de stad afgeleide coördinaten zijn niet uw GPS-locatie. De analyse gebruikt geen GPS of locatietoestemming. Google verwerkt gegevens op eigen servers, mogelijk buiten uw land; de ontwikkelaar kan rapporten bekijken. Deze gegevens zijn niet vanzelf anoniem.\n\nDoseWeek stuurt geen gezondheidsgegevens, medicijnnamen, doses, notities, getypte of gesproken invoer, schermnamen of routes naar de analyse. Er worden geen gebruikers-ID’s of eigen gebruikerseigenschappen ingesteld. Advertentie-ID’s, Android ID (SSAID)-verzameling, automatische schermrapportage, Google-signalen en advertentiepersonalisatie staan uit. Crashlytics en Performance Monitoring worden niet gebruikt.\n\nDe bewaartermijn voor gebruikers- en gebeurtenisgegevens in Google Analytics staat op 2 maanden, zonder opnieuw beginnen bij nieuwe activiteit. Wijzigingen gelden na 24 uur; verlopen gegevens worden via Googles maandelijkse proces verwijderd, niet op het precieze moment na twee maanden. Deze instelling geldt niet voor standaard geaggregeerde rapporten en garandeert geen permanente beschikbaarheid daarvan.\n\nLangdurige opslag van anonieme maandtotalen is pas gepland na een privacybeoordeling en een gecontroleerde export die identificatie voorkomt. Zo’n export is nog niet met echte gegevens uitgevoerd; ruwe analysegegevens worden niet als anoniem beschouwd.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contact voor gegevensbescherming bij Google: https://privacy.google.com/businesses/processorsupport\n\nUitbestede verwerking en opslag voor optionele analyse van het appgebruik, statistische rapporten en de werking van die dienst. Niet gebruikt voor reclame of personalisatie.\n\nNadat u toestemming hebt gegeven voor zowel het verzamelen en gebruiken van analysegegevens als de doorgifte naar het buitenland en u analyse hebt ingeschakeld, stuurt de Firebase Analytics SDK tijdens het appgebruik gegevens via HTTPS naar een verzamelcentrum. Van daaruit worden ze doorgestuurd naar de verwerkingsservers van Google Analytics. De overdracht kan asynchroon plaatsvinden.\n\nMogelijk bereik van de doorgifte naar het buitenland (openbare informatie per 23 september 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Dit bereik is gebaseerd op de verwerking in de landen waar de faciliteiten zich bevinden die is toegestaan volgens de voorwaarden van Google, en op de gepubliceerde lijsten van faciliteiten en subverwerkers voor de betreffende dienst. Het geeft geen vaste route per gebruiker aan en betekent niet dat gegevens naar elk land worden doorgegeven. De faciliteitenlijsten bevatten ook locaties in ontwikkeling; de landen van subverwerkers zijn hun bedrijfslocaties. Als we afgesproken doorgiftedetails wijzigen, waaronder landen of ontvangers, stellen we u hiervan op de hoogte en vragen we afzonderlijk toestemming.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nToestemming voor gebruiksanalyse staat los van toestemming voor optionele herkenning van voedseletiketten en de apart beschreven Google ML Kit-meetgegevens. Het wijzigen van de ene keuze verandert de andere niet.",
               "De Health Connect-integratie leest alleen. DoseWeek leest het gewicht, de lengte, het vetpercentage en de vetvrije massa die u hebt gedeeld en vraagt geen schrijf- of verwijderrechten, en kan dus geen gegevens wijzigen die van een andere app zijn. Wat wordt gelezen, blijft in de privéopslag van de app en wordt niet naar de ontwikkelaar gestuurd.",
               "Met de Google Drive-integratie aan kan de app een versleutelde back-up uploaden naar uw eigen Drive-app-gegevensmap. De ontwikkelaar heeft geen kopie en geen sleutel. Paragraaf 4 beschrijft wat Drive kan zien en hoe de herstelcode wordt behandeld.",
               "Met de agenda-integratie aan schrijft DoseWeek voor elke komende injectiedag een afspraak van 30 minuten in de ene agenda die u kiest, met alleen een titel en een tijd. De titel is standaard ‘Persoonlijke herinnering’ en wordt alleen ‘Injectiedag’ als u zelf de beschrijvende titel kiest. Medicatie, dosis, injectieplaats en notities worden nooit geschreven. De app leest de lijst met agenda’s en alleen de afspraken die hij als de zijne heeft gemarkeerd, en werkt alleen die bij of verwijdert alleen die. Hoort de agenda bij een account zoals Google of Samsung, dan slaat die aanbieder de afspraken op en synchroniseert ze volgens zijn eigen privacybeleid, ook naar mensen met wie de agenda is gedeeld. De ontwikkelaar ontvangt niets. De integratie uitschakelen kan de komende afspraken verwijderen; afspraken die na het verwijderen van de app in de agenda achterblijven, blijven daar staan."
@@ -2406,7 +2406,7 @@
               "Gegevens blijven op het apparaat totdat u ze verwijdert. Gebruik Alle gegevens verwijderen in Instellingen of verwijder de app, waarna Android de lokale gegevens wist. Er is geen kopie op een ontwikkelaarsserver.",
               "Back-ups en CSV-exportbestanden buiten de app worden niet automatisch verwijderd. Verwijder ze apart via de Android-bestandsapp of de documentprovider.",
               "Hebt u de Google Drive-back-up gebruikt, verwijder die kopieën dan via de back-uplijst in de app of door de app-gegevens uit uw Google-account te verwijderen. DoseWeek verwijderen wist ze niet.",
-              "Lokale appgegevens en Drive-back-ups kunt u afzonderlijk verwijderen. Back-ups en exports die bij een andere provider zijn opgeslagen, vallen onder de instellingen van die provider. DoseWeek verwijderen of Drive ontkoppelen vraagt niet zelf om verwijdering van Drive-back-ups of diagnostische en gebruiksstatistieken van de Google-SDK voor voedseletiketten. Googles verwerking en bewaring van die statistieken volgen de voorwaarden van Google; DoseWeek kan ze niet rechtstreeks verwijderen of een bewaartermijn van Google noemen.\n\nAls je een van beide optionele toestemmingen weigert, blijft analyse uitgeschakeld en blijven de kernfuncties beschikbaar. Je kunt beide toestemmingen afzonderlijk intrekken in Instellingen. Intrekken stopt het verzamelen van toekomstige analysegegevens, maar verwijdert niet automatisch de gegevens die al naar Google zijn verzonden.\n\nHet intrekken van toestemming voor analyse stopt toekomstige verzameling en verzoekt om het resetten van lokale analysegegevens en de bijbehorende ID als de SDK al is geïnitialiseerd. Als een gegevensverwijdering wordt hervat voordat de SDK is geïnitialiseerd, wordt eerst om een lokale reset verzocht wanneer je later opnieuw toestemming geeft voor analyse en doorgifte naar het buitenland en de SDK activeert. Dit bevestigt niet dat gegevens op de servers van Google zijn verwijderd of dat het opschonen van de schijf is voltooid.\n\nZolang analyse aan staat, kan de app je een code voor een verzoek tot verwijdering van analysegegevens tonen: open Instellingen > Gebruiksanalyse (optioneel), open ‘Code voor een verzoek tot verwijdering van analysegegevens’ en tik op ‘Code voor verwijderingsverzoek bekijken’. Als Instellingen een lijst met onderdelen toont, zoals op sommige brede schermen, kies je eerst ‘Gegevensbeheer’. Deze code bevat de app-instantie-ID waarmee analysegegevens voor de huidige installatie kunnen worden gevonden. Als je wilt, kopieer je de code voordat je analyse uitschakelt of appgegevens verwijdert en vraag je om verwijdering via wonyoung@wonyoungchoi.dev. Het bekijken of kopiëren van de code verstuurt geen verwijderingsverzoek. Verstuur geen gezondheidsgegevens.\n\nDe code kan alleen worden getoond zolang analyse aan staat. Nadat je analyse hebt uitgeschakeld of appgegevens hebt verwijderd, kan die code niet meer worden getoond of hersteld. Zonder de vorige ID kunnen we de gegevens die al voor die installatie zijn verzonden mogelijk niet vinden. Je kunt je toestemming voor analyse nog steeds op elk moment intrekken."
+              "Lokale appgegevens en Drive-back-ups kunt u afzonderlijk verwijderen. Back-ups en exports die bij een andere provider zijn opgeslagen, vallen onder de instellingen van die provider. DoseWeek verwijderen of Drive ontkoppelen vraagt niet zelf om verwijdering van Drive-back-ups of diagnostische en gebruiksstatistieken van de Google-SDK voor voedseletiketten. Googles verwerking en bewaring van die statistieken volgen de voorwaarden van Google; DoseWeek kan ze niet rechtstreeks verwijderen of een bewaartermijn van Google noemen.\n\nAls u een van beide optionele toestemmingen weigert, blijft analyse uitgeschakeld en blijven de kernfuncties beschikbaar. U kunt beide toestemmingen afzonderlijk intrekken in Instellingen. Intrekken stopt het verzamelen van toekomstige analysegegevens, maar verwijdert niet automatisch de gegevens die al naar Google zijn verzonden.\n\nHet intrekken van toestemming voor analyse stopt toekomstige verzameling en verzoekt om het resetten van lokale analysegegevens en de bijbehorende ID als de SDK al is geïnitialiseerd. Als een gegevensverwijdering wordt hervat voordat de SDK is geïnitialiseerd, wordt eerst om een lokale reset verzocht wanneer u later opnieuw toestemming geeft voor analyse en doorgifte naar het buitenland en de SDK activeert. Dit bevestigt niet dat gegevens op de servers van Google zijn verwijderd of dat het opschonen van de schijf is voltooid.\n\nZolang analyse aan staat, kan de app u een code voor een verzoek tot verwijdering van analysegegevens tonen: open Instellingen > Gebruiksanalyse (optioneel), open ‘Code voor een verzoek tot verwijdering van analysegegevens’ en tik op ‘Code voor verwijderingsverzoek bekijken’. Als Instellingen een lijst met onderdelen toont, zoals op sommige brede schermen, kiest u eerst ‘Gegevensbeheer’. Deze code bevat de app-instantie-ID waarmee analysegegevens voor de huidige installatie kunnen worden gevonden. Als u wilt, kopieert u de code voordat u analyse uitschakelt of appgegevens verwijdert en vraagt u om verwijdering via wonyoung@wonyoungchoi.dev. Het bekijken of kopiëren van de code verstuurt geen verwijderingsverzoek. Verstuur geen gezondheidsgegevens.\n\nDe code kan alleen worden getoond zolang analyse aan staat. Nadat u analyse hebt uitgeschakeld of appgegevens hebt verwijderd, kan die code niet meer worden getoond of hersteld. Zonder de vorige ID kunnen we de gegevens die al voor die installatie zijn verzonden mogelijk niet vinden. U kunt uw toestemming voor analyse nog steeds op elk moment intrekken."
             ]
           },
           {
@@ -2414,7 +2414,7 @@
             "title": "6. Beveiliging",
             "paragraphs": [
               "DoseWeek gebruikt privéopslag, sluit gegevens uit van systeemback-up en overdracht en verzendt gezondheidsregistraties niet via een eigen netwerkverbinding, tenzij u de Google Drive-back-up inschakelt; dan wordt alleen de in paragraaf 4 beschreven versleutelde envelop geüpload. Back-ups gebruiken AES-256-GCM, maar de veiligheid hangt ook af van bescherming van bestand en code. Houd apparaatvergrendeling en Android-updates actief en verwijder gegevens voordat u het apparaat overdraagt.",
-              "De optionele appvergrendeling gebruikt via de systeemprompt van Android de schermvergrendeling of biometrie van uw eigen apparaat; DoseWeek slaat geen biometrische gegevens op en verbergt de inhoud in de app-wisselaar zolang de vergrendeling aanstaat. Optionele herinneringen worden alleen op het apparaat gepland: standaard verraadt de tekst niets over uw behandeling, de medicijnnaam verschijnt alleen als u dat inschakelt, doseringen verschijnen nooit en op een herinnering tikken opent alleen de app.\n\nDe widget op het startscherm toont een geplande datum, de status en het aantal dagen. Andere mensen die je ontgrendelde startscherm kunnen zien, kunnen ook deze informatie zien. Als je appvergrendeling inschakelt, verbergt de widget de planning. Een medicijnnaam verschijnt alleen als je zowel herinneringsdetails als de weergave van medicijnnamen inschakelt; dosishoeveelheden verschijnen nooit. De widget is alleen-lezen: erop tikken opent alleen de app en registreert nooit een toediening. De verwerking blijft op het apparaat en veroorzaakt geen afzonderlijke netwerkoverdracht.",
+              "De optionele appvergrendeling gebruikt via de systeemprompt van Android de schermvergrendeling of biometrie van uw eigen apparaat; DoseWeek slaat geen biometrische gegevens op en verbergt de inhoud in de app-wisselaar zolang de vergrendeling aanstaat. Optionele herinneringen worden alleen op het apparaat gepland: standaard verraadt de tekst niets over uw behandeling, de medicijnnaam verschijnt alleen als u dat inschakelt, doseringen verschijnen nooit en op een herinnering tikken opent alleen de app.\n\nDe widget op het startscherm toont een geplande datum, de status en het aantal dagen. Andere mensen die uw ontgrendelde startscherm kunnen zien, kunnen ook deze informatie zien. Als u appvergrendeling inschakelt, verbergt de widget de planning. Een medicijnnaam verschijnt alleen als u zowel herinneringsdetails als de weergave van medicijnnamen inschakelt; dosishoeveelheden verschijnen nooit. De widget is alleen-lezen: erop tikken opent alleen de app en registreert nooit een toediening. De verwerking blijft op het apparaat en veroorzaakt geen afzonderlijke netwerkoverdracht.",
               "Als de cloudback-up aanstaat, wordt de kopie van de herstelcode op dit apparaat verzegeld met een niet-exporteerbare sleutel in de Android-hardwarekeystore, en verloopt het transport via TLS uitsluitend naar de API-hosts van Google."
             ]
           },
@@ -2434,8 +2434,8 @@
               "Schema’s en lichaamsgrafieken: een schema kan een lijst met door u gekozen injectiedata bewaren in plaats van een herhalend interval, en de grafieken voor wekelijkse gewichtsverandering en BMI kunnen een gepubliceerde algemene referentie of een door u ingesteld persoonlijk doel tonen. De gekozen referentie en de doelwaarde staan op het apparaat en zitten in de versleutelde back-up. Een referentie is algemene bevolkingsinformatie, geen advies over uw behandeling.",
               "Back-upformaat: door de nieuwe functies stijgt het formaatnummer van het versleutelde back-upbestand. Back-ups van eerdere versies blijven te herstellen, maar een back-up van de nieuwe versie kan niet worden hersteld door een eerdere versie. Koppelingen naar agenda-afspraken en niet-opgeslagen concepten zitten niet in de back-up. Uw keuze van het referentiegeneesmiddel voor de schatting zit niet in de back-up; kies het na het terugzetten opnieuw.",
               "Voedingsdatatabellen: deze versie bevat een offline, alleen-lezen voedingstabel op basis van openbare data (USDA FoodData Central, publiek domein onder CC0 1.0 met verzochte bronvermelding; CoFID uit het Verenigd Koninkrijk onder de Open Government Licence v3.0; de Japanse MEXT-standaardtabellen voor voedingsmiddelensamenstelling volgens de MEXT-verklaring over datagebruik en de sitevoorwaarden; gegevens van het Koreaanse MFDS onder de verlening van data.go.kr zonder gebruiksbeperking). Zoeken naar voedingsmiddelen gebeurt alleen op het apparaat: wat u typt en de resultaten worden nergens heen gestuurd, en de tabel wordt niet via het netwerk gedownload of bijgewerkt. Uw keuze van markt en zoektaal en de voedingsmiddelen uit de tabel die u als favoriet bewaart, worden op het apparaat opgeslagen en in de versleutelde back-up opgenomen. Waarden verschijnen zoals de bron ze publiceert en zijn algemene referentie-informatie. De app noemt elke bron, licentie en bronvermelding. DoseWeek heeft deze data geselecteerd en omgezet; geen enkele aanbieder heeft deze bewerking gemaakt, gecontroleerd of goedgekeurd. Bronvermeldingen: U.S. Department of Agriculture, Agricultural Research Service. FoodData Central: Foundation Foods, April 2026 bulk release. https://fdc.nal.usda.gov/ · PHE (Public Health England) (2021). Composition of foods integrated dataset (CoFID). © Crown copyright 2021. Contains public sector information licensed under the Open Government Licence v3.0. · 出典：日本食品標準成分表（八訂）増補2023年（文部科学省） 「日本食品標準成分表（八訂）増補2023年」（文部科学省）を基にDoseWeekが編集・加工（文部科学省が作成したものではありません）。 · 출처: 식품의약품안전처, 전국통합식품영양성분정보(음식)표준데이터 (공공데이터포털 data.go.kr, 데이터기준일자 2026-08-28). 일부 항목 원출처: 농촌진흥청 국가표준식품성분표. DoseWeek geeft nooit een dieetvoorschrift of een voorschrijfbeslissing.",
-              "Optionele spraakinvoer: pas nadat je deze start, de uitleg accepteert en microfoontoestemming geeft, gebruikt DoseWeek Android-spraakherkenning op het apparaat, op ondersteunde apparaten en in ondersteunde talen. Als lokale herkenning niet beschikbaar is, voer je tekst handmatig in; er is geen terugval op spraakherkenning in de cloud. DoseWeek slaat geen audio op. Het bewerkbare transcript in het controlepaneel is tijdelijk, wordt niet opgenomen in back-ups of logboeken en wordt gewist wanneer je het scherm verlaat, de app vergrendelt of naar de achtergrond verplaatst. Klinische velden worden niet automatisch ingevuld of opgeslagen: voer feiten in het handmatige formulier in en bevestig ze. Toetsenborddicteren is een aparte systeemfunctie waarvan de verwerking kan verschillen; DoseWeek belooft niet dat die altijd lokaal is.",
-              "Optionele herkenning van voedseletiketten: na aparte uitleg en toestemming gebruikt DoseWeek alleen voor een door jou geselecteerde foto de meegeleverde tekst- en barcodeherkenning van Google ML Kit. Foto-inhoud en resultaten worden op het apparaat verwerkt en door ML Kit niet naar Google gestuurd. De SDK stuurt wel diagnostische en gebruiksgegevens via HTTPS naar Google: een installatie-ID, apparaat-, hardware- en appgegevens, vertraging, API-instellingen zoals beeldformaat en resolutie, invoer-/uitvoergroottes, functieversies, gebeurtenistypen en foutcodes. Onderhoudsverbindingen en wachtende diagnostische uploads kunnen na het sluiten van het paneel plaatsvinden. Deze uitzondering geldt alleen voor voedseletiketten, niet voor andere AI-functies of ontwikkelaarsanalyses. Bij weigering blijft handmatige invoer beschikbaar. Installeren of openen van de app start geen herkenning."
+              "Optionele spraakinvoer: pas nadat u deze start, de uitleg accepteert en microfoontoestemming geeft, gebruikt DoseWeek Android-spraakherkenning op het apparaat, op ondersteunde apparaten en in ondersteunde talen. Als lokale herkenning niet beschikbaar is, voert u tekst handmatig in; er is geen terugval op spraakherkenning in de cloud. DoseWeek slaat geen audio op. Het bewerkbare transcript in het controlepaneel is tijdelijk, wordt niet opgenomen in back-ups of logboeken en wordt gewist wanneer u het scherm verlaat, de app vergrendelt of naar de achtergrond verplaatst. Klinische velden worden niet automatisch ingevuld of opgeslagen: voer feiten in het handmatige formulier in en bevestig ze. Toetsenborddicteren is een aparte systeemfunctie waarvan de verwerking kan verschillen; DoseWeek belooft niet dat die altijd lokaal is.",
+              "Optionele herkenning van voedseletiketten: na aparte uitleg en toestemming gebruikt DoseWeek alleen voor een door u geselecteerde foto de meegeleverde tekst- en barcodeherkenning van Google ML Kit. Foto-inhoud en resultaten worden op het apparaat verwerkt en door ML Kit niet naar Google gestuurd. De SDK stuurt wel diagnostische en gebruiksgegevens via HTTPS naar Google: een installatie-ID, apparaat-, hardware- en appgegevens, vertraging, API-instellingen zoals beeldformaat en resolutie, invoer-/uitvoergroottes, functieversies, gebeurtenistypen en foutcodes. Onderhoudsverbindingen en wachtende diagnostische uploads kunnen na het sluiten van het paneel plaatsvinden. Deze uitzondering geldt alleen voor voedseletiketten, niet voor andere AI-functies of ontwikkelaarsanalyses. Bij weigering blijft handmatige invoer beschikbaar. Installeren of openen van de app start geen herkenning."
             ]
           }
         ],
@@ -2494,21 +2494,21 @@
             "id": "accounts",
             "question": "Moet ik inloggen of een account maken?",
             "answers": [
-              "DoseWeek 1.0.0 heeft geen eigen account en geen ontwikkelaarsserver, en u hebt beide niet nodig om de app te gebruiken. De optionele Google Drive-back-up gebruikt uw eigen Google-account en blijft uit totdat u die in Instellingen verbindt. De ontwikkelaar kan uw gegevens in geen geval bekijken."
+              "DoseWeek 1.0.5 heeft geen eigen account en geen ontwikkelaarsserver, en u hebt beide niet nodig om de app te gebruiken. De optionele Google Drive-back-up gebruikt uw eigen Google-account en blijft uit totdat u die in Instellingen verbindt. De ontwikkelaar kan uw gegevens in geen geval bekijken."
             ]
           },
           {
             "id": "ai-health",
             "question": "Gebruikt DoseWeek AI of Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 voor Android bevat geen generatieve AI. Optionele stem- en voedseletikettenherkenning op het apparaat helpt bij de invoer; diagnostiek van Googles SDK voor voedseletiketten vereist aparte toestemming, zoals beschreven in het privacybeleid. Health Connect is nu een optionele, alleen-lezen import van gewicht, lengte, vetpercentage en vetvrije massa: de app vraagt uitsluitend leesrechten, nooit schrijf- of verwijderrechten, en importeert niets totdat u die toestemming geeft. Elke toediening wordt nog altijd met de hand ingevoerd en bevestigd."
+              "DoseWeek 1.0.5 voor Android bevat geen generatieve AI. Optionele stem- en voedseletikettenherkenning op het apparaat helpt bij de invoer; diagnostiek van Googles SDK voor voedseletiketten vereist aparte toestemming, zoals beschreven in het privacybeleid. Health Connect is nu een optionele, alleen-lezen import van gewicht, lengte, vetpercentage en vetvrije massa: de app vraagt uitsluitend leesrechten, nooit schrijf- of verwijderrechten, en importeert niets totdat u die toestemming geeft. Elke toediening wordt nog altijd met de hand ingevoerd en bevestigd."
             ]
           },
           {
             "id": "notifications",
             "question": "Zijn er meldingen, herinneringen of widgets?",
             "answers": [
-              "Optionele herinneringen en een widget voor het startscherm zijn beschikbaar. DoseWeek 1.0.0 kan op uw apparaat lokale herinneringen plannen voor de volgende toediening, een opvolging na een gemiste toediening en een lage voorraad. Ze blijven uit totdat u ze inschakelt en de meldingstoestemming geeft. Standaard verraadt de herinneringstekst niets over uw behandeling; de medicijnnaam verschijnt alleen als u dat inschakelt, en doseringen verschijnen nooit. Op een herinnering tikken opent alleen de app, dus vanuit een melding wordt nooit iets geregistreerd. Er zijn geen apps voor wearables."
+              "Optionele herinneringen en een widget voor het startscherm zijn beschikbaar. DoseWeek 1.0.5 kan op uw apparaat lokale herinneringen plannen voor de volgende toediening, een opvolging na een gemiste toediening en een lage voorraad. Ze blijven uit totdat u ze inschakelt en de meldingstoestemming geeft. Standaard verraadt de herinneringstekst niets over uw behandeling; de medicijnnaam verschijnt alleen als u dat inschakelt, en doseringen verschijnen nooit. Op een herinnering tikken opent alleen de app, dus vanuit een melding wordt nooit iets geregistreerd. Er zijn geen apps voor wearables."
             ]
           },
           {
@@ -2619,7 +2619,7 @@
             "question": "Welke apparaten en Android-versies worden ondersteund?",
             "answers": [
               "Geldt voor DoseWeek Android versionCode 13 en nieuwer.",
-              "Gebruik DoseWeek met Android 14 of nieuwer. Op apparaten met Android 8.0 tot en met Android 13 kun je de al geïnstalleerde versie (versionCode 12) blijven gebruiken, maar die krijgt geen updates meer en Google Play biedt er geen nieuwe installaties aan. Sommige optionele AI-functies vereisen een geschikt apparaat. Als ze niet beschikbaar zijn, kun je gegevens nog steeds zelf invoeren."
+              "Gebruik DoseWeek met Android 14 of nieuwer. Op apparaten met Android 8.0 tot en met Android 13 kunt u de al geïnstalleerde versie (versionCode 12) blijven gebruiken, maar die krijgt geen updates meer en Google Play biedt er geen nieuwe installaties aan. Sommige optionele AI-functies vereisen een geschikt apparaat. Als ze niet beschikbaar zijn, kunt u gegevens nog steeds zelf invoeren."
             ]
           },
           {
@@ -2650,7 +2650,7 @@
       },
       "home": {
         "title": "DoseWeek para Android",
-        "versionScope": "Esta informação aplica-se apenas ao DoseWeek 1.0.0 para Android.",
+        "versionScope": "Esta informação aplica-se ao DoseWeek para Android a partir da versão 1.0.0 (versionCode 12), incluindo a versão atual 1.0.5.",
         "intro": "O DoseWeek é uma aplicação local para registar horários de injeções semanais, administrações efetuadas e omitidas, inventário, peso e perímetro da cintura introduzidos e confirmados pelo utilizador. Os registos permanecem no dispositivo, exceto se ativar uma integração opcional.",
         "featureBadges": [
           "Armazenamento local privado da aplicação",
@@ -2666,8 +2666,8 @@
         "medicalNoticeBody": "O DoseWeek é uma ferramenta de registo pessoal, não um dispositivo médico. Não fornece diagnósticos, tratamentos nem decisões sobre dose ou momento da administração. Siga a informação de prescrição e a orientação de um profissional de saúde qualificado. Em caso de possível emergência, contacte imediatamente o serviço de emergência local."
       },
       "privacy": {
-        "title": "Política de Privacidade do DoseWeek 1.0.0 para Android",
-        "scope": "Esta política aplica-se apenas ao DoseWeek 1.0.0 para Android.",
+        "title": "Política de Privacidade do DoseWeek para Android",
+        "scope": "Esta política aplica-se ao DoseWeek para Android a partir da versão 1.0.0 (versionCode 12), incluindo a versão atual 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -2697,7 +2697,7 @@
             "id": "no-collection",
             "title": "3. Serviços opcionais e análise da utilização",
             "paragraphs": [
-              "No estado predefinido, o DoseWeek 1.0.0 não utiliza as seguintes funcionalidades ou tratamentos automáticos. Cada registo é introduzido e confirmado pelo utilizador.",
+              "No estado predefinido, o DoseWeek 1.0.5 não utiliza as seguintes funcionalidades ou tratamentos automáticos. Cada registo é introduzido e confirmado pelo utilizador.",
               "Os dados de saúde, incluindo horários, administrações, notas e medidas corporais, ficam por predefinição no dispositivo. O programador não recebe estes registos. Exportações, cópias de segurança e integrações opcionais são descritas separadamente. A análise opcional da utilização segue as regras abaixo.\n\nConfirmar a leitura do aviso de privacidade obrigatório não autoriza a análise. A análise só é ativada após consentimentos separados para a análise de utilização e a transferência para o estrangeiro. Ambas as opções facultativas estão desativadas por predefinição e a análise é desativada se qualquer uma for recusada ou retirada.\n\nA análise da utilização é opcional e começa desativada. A confirmação obrigatória de leitura do aviso não constitui consentimento. Só após a sua autorização separada é iniciado o Google Analytics for Firebase, que envia à Google eventos automáticos técnicos e do ciclo de vida, como primeiras aberturas, sessões, frequência e tempo de utilização e atualizações da aplicação ou do sistema. O programador utiliza relatórios para compreender a utilização. O DoseWeek não acrescenta eventos personalizados.\n\nA análise pode incluir identificadores de instância da aplicação ou de instalação gerados pelo Firebase, horas dos eventos, versão da aplicação, idioma, marca, modelo e categoria do dispositivo, detalhes do sistema incluindo versões secundárias e resolução do ecrã. A Google trata endereços IP para operar o serviço e estimar a localização aproximada, incluindo a cidade. As coordenadas derivadas da cidade não são a sua localização GPS. A análise não usa GPS nem permissões de localização. A Google trata os dados nos seus servidores, eventualmente fora do seu país, e o programador pode consultar relatórios. Estes registos não são intrinsecamente anónimos.\n\nO DoseWeek não envia à análise dados de saúde, nomes de medicamentos, doses, notas, texto ou voz introduzidos, nomes de ecrãs ou percursos. Não define IDs de utilizador nem propriedades de utilizador personalizadas. IDs publicitários, recolha de Android ID (SSAID), relatórios automáticos de ecrãs, sinais Google e personalização de anúncios estão desativados. Não são usados Crashlytics nem Performance Monitoring.\n\nA retenção de dados de utilizadores e eventos no Google Analytics está definida em 2 meses, sem reinício por nova atividade. As alterações aplicam-se após 24 horas; a Google elimina dados expirados no processo mensal, não exatamente no instante em que passam dois meses. A definição não abrange relatórios agregados padrão nem garante a sua disponibilidade permanente.\n\nA conservação prolongada de totais mensais anónimos só está prevista após uma revisão de privacidade e uma exportação verificada que impeça a identificação. Ainda não foi feita nenhuma exportação deste tipo com dados reais; os dados brutos de análise não são considerados anónimos.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contacto de proteção de dados da Google: https://privacy.google.com/businesses/processorsupport\n\nTratamento subcontratado e armazenamento para a análise opcional da utilização da aplicação, relatórios estatísticos e funcionamento desse serviço. Sem utilização para publicidade ou personalização.\n\nDepois de concordar tanto com a recolha e utilização de dados de análise como com a transferência para o estrangeiro e de ativar a análise, o SDK do Firebase Analytics envia dados por HTTPS para um centro de recolha durante a utilização da aplicação. Os dados são depois encaminhados para os servidores de processamento do Google Analytics. A transmissão pode ser assíncrona.\n\nÂmbito potencial da transferência para o estrangeiro (informações públicas à data de 23 de setembro de 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Este âmbito reflete o tratamento nos países onde se situam as instalações, permitido pelos termos da Google, e as listas publicadas das suas instalações e dos subcontratantes ulteriores do serviço em causa. Não identifica um percurso fixo para cada utilizador nem transferências para todos os países. As listas de instalações incluem locais em desenvolvimento, e os países dos subcontratantes ulteriores correspondem às localizações das respetivas empresas. Iremos informá-lo e solicitar um consentimento separado ao alterar os detalhes de transferência acordados, incluindo países ou destinatários.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nO consentimento para a análise é separado do consentimento para o reconhecimento opcional de rótulos alimentares e das métricas Google ML Kit divulgadas à parte. Alterar uma escolha não altera a outra.",
               "A integração com o Health Connect é apenas de leitura. O DoseWeek lê o peso, a altura, a percentagem de massa gorda e a massa magra que partilhou e não pede autorização de escrita nem de eliminação, pelo que não pode alterar registos de outra aplicação. O que lê fica no armazenamento privado da aplicação e não é enviado ao programador.",
               "Com a integração do Google Drive ativada, a aplicação pode carregar uma cópia de segurança encriptada para a sua própria pasta de dados de aplicação no Drive. O programador não guarda cópia nem chave. A secção 4 descreve o que o Drive consegue ver e como é tratado o código de recuperação.",
@@ -2821,21 +2821,21 @@
             "id": "accounts",
             "question": "Preciso de iniciar sessão ou criar uma conta?",
             "answers": [
-              "O DoseWeek 1.0.0 não tem conta própria nem servidor do programador e não precisa de nenhum deles para usar a aplicação. A cópia de segurança opcional no Google Drive usa a sua própria Conta Google e permanece desativada até a ligar nas Definições. Em qualquer dos casos, o programador não consegue ver os seus registos."
+              "O DoseWeek 1.0.5 não tem conta própria nem servidor do programador e não precisa de nenhum deles para usar a aplicação. A cópia de segurança opcional no Google Drive usa a sua própria Conta Google e permanece desativada até a ligar nas Definições. Em qualquer dos casos, o programador não consegue ver os seus registos."
             ]
           },
           {
             "id": "ai-health",
             "question": "O DoseWeek utiliza IA ou Health Connect?",
             "answers": [
-              "O DoseWeek 1.0.0 para Android não inclui IA generativa. O reconhecimento opcional de voz e rótulos alimentares no dispositivo ajuda na introdução; os diagnósticos do SDK Google de rótulos exigem consentimento separado, descrito na Política de Privacidade. O Health Connect é agora uma importação opcional, apenas de leitura, de peso, altura, percentagem de massa gorda e massa magra: a aplicação pede apenas autorizações de leitura, nunca de escrita ou de eliminação, e não importa nada até que conceda essa autorização. Cada administração continua a ser introduzida e confirmada à mão."
+              "O DoseWeek 1.0.5 para Android não inclui IA generativa. O reconhecimento opcional de voz e rótulos alimentares no dispositivo ajuda na introdução; os diagnósticos do SDK Google de rótulos exigem consentimento separado, descrito na Política de Privacidade. O Health Connect é agora uma importação opcional, apenas de leitura, de peso, altura, percentagem de massa gorda e massa magra: a aplicação pede apenas autorizações de leitura, nunca de escrita ou de eliminação, e não importa nada até que conceda essa autorização. Cada administração continua a ser introduzida e confirmada à mão."
             ]
           },
           {
             "id": "notifications",
             "question": "Existem notificações, lembretes ou widgets?",
             "answers": [
-              "Estão disponíveis lembretes opcionais e um widget para o ecrã inicial. O DoseWeek 1.0.0 pode agendar no dispositivo lembretes locais para a próxima administração, um aviso após uma administração falhada e stock reduzido. Ficam desativados até os ativar e conceder a permissão de notificações. Por predefinição, o texto do lembrete não revela nada sobre o seu tratamento; o nome do medicamento só aparece se o ativar e as doses nunca aparecem. Tocar num lembrete apenas abre a app, pelo que nunca é registado nada a partir de uma notificação. Não existem aplicações para relógio."
+              "Estão disponíveis lembretes opcionais e um widget para o ecrã inicial. O DoseWeek 1.0.5 pode agendar no dispositivo lembretes locais para a próxima administração, um aviso após uma administração falhada e stock reduzido. Ficam desativados até os ativar e conceder a permissão de notificações. Por predefinição, o texto do lembrete não revela nada sobre o seu tratamento; o nome do medicamento só aparece se o ativar e as doses nunca aparecem. Tocar num lembrete apenas abre a app, pelo que nunca é registado nada a partir de uma notificação. Não existem aplicações para relógio."
             ]
           },
           {
@@ -2977,7 +2977,7 @@
       },
       "home": {
         "title": "DoseWeek na Androida",
-        "versionScope": "Te informacje dotyczą wyłącznie aplikacji DoseWeek 1.0.0 na Androida.",
+        "versionScope": "Te informacje dotyczą aplikacji DoseWeek na Androida od wersji 1.0.0 (versionCode 12), w tym obecnej wersji 1.0.5.",
         "intro": "DoseWeek to lokalna aplikacja do ręcznego zapisywania i potwierdzania tygodniowych harmonogramów iniekcji, wykonanych i pominiętych podań, zapasu, masy ciała oraz obwodu talii. Dane pozostają na urządzeniu, dopóki nie włączysz opcjonalnej integracji.",
         "featureBadges": [
           "Lokalna prywatna pamięć aplikacji",
@@ -2993,8 +2993,8 @@
         "medicalNoticeBody": "DoseWeek jest narzędziem do prowadzenia osobistych zapisów, a nie wyrobem medycznym. Nie stawia diagnoz, nie prowadzi leczenia i nie podejmuje decyzji o dawce ani terminie podania. Kieruj się informacją o leku i zaleceniami wykwalifikowanego personelu medycznego. W razie podejrzenia nagłego zagrożenia skontaktuj się natychmiast z lokalnymi służbami ratunkowymi."
       },
       "privacy": {
-        "title": "Polityka prywatności DoseWeek 1.0.0 na Androida",
-        "scope": "Niniejsza polityka dotyczy wyłącznie aplikacji DoseWeek 1.0.0 na Androida.",
+        "title": "Polityka prywatności DoseWeek na Androida",
+        "scope": "Niniejsza polityka dotyczy aplikacji DoseWeek na Androida od wersji 1.0.0 (versionCode 12), w tym obecnej wersji 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -3024,7 +3024,7 @@
             "id": "no-collection",
             "title": "3. Opcjonalne usługi i analiza użytkowania",
             "paragraphs": [
-              "W stanie domyślnym DoseWeek 1.0.0 nie korzysta z poniższych funkcji ani automatycznego przetwarzania. Każdy zapis wprowadza i potwierdza użytkownik.",
+              "W stanie domyślnym DoseWeek 1.0.5 nie korzysta z poniższych funkcji ani automatycznego przetwarzania. Każdy zapis wprowadza i potwierdza użytkownik.",
               "Dane zdrowotne, w tym harmonogramy, podania, notatki i pomiary ciała, domyślnie pozostają na urządzeniu. Deweloper nie otrzymuje tych danych. Eksport, kopie zapasowe i opcjonalne integracje opisano osobno. Opcjonalna analiza użytkowania podlega poniższym zasadom.\n\nPotwierdzenie zapoznania się z wymaganym powiadomieniem o prywatności nie zezwala na analitykę. Analityka jest włączana dopiero po udzieleniu oddzielnych zgód na analitykę użytkowania i przekazywanie za granicę. Obie opcjonalne zgody są domyślnie wyłączone, a analityka zostaje wyłączona, jeśli któraś z nich zostanie odrzucona lub wycofana.\n\nAnaliza użytkowania jest dobrowolna i początkowo wyłączona. Obowiązkowe potwierdzenie przeczytania informacji nie oznacza zgody. Dopiero po odrębnej zgodzie uruchamia się Google Analytics for Firebase i wysyła do Google automatyczne zdarzenia techniczne i cyklu życia: pierwsze uruchomienia, sesje, częstotliwość i czas używania oraz aktualizacje aplikacji lub systemu. Deweloper korzysta z raportów, aby poznać sposób korzystania z aplikacji. DoseWeek nie dodaje własnych zdarzeń.\n\nAnaliza może obejmować identyfikatory instancji aplikacji lub instalacji utworzone przez Firebase, czas zdarzeń, wersję aplikacji, język, markę, model i kategorię urządzenia, dane systemu wraz z wersjami podrzędnymi oraz rozdzielczość ekranu. Google przetwarza adresy IP na potrzeby działania usługi i przybliżonej lokalizacji, w tym miasta. Współrzędne wyznaczone dla miasta nie są lokalizacją GPS użytkownika. Analiza nie korzysta z GPS ani uprawnień lokalizacji. Google przetwarza dane na swoich serwerach, także potencjalnie poza Twoim krajem, a deweloper może odczytywać raporty. Te dane nie są z samej swojej natury anonimowe.\n\nDoseWeek nie wysyła do analizy danych zdrowotnych, nazw leków, dawek, notatek, tekstu ani głosu użytkownika, nazw ekranów ani ścieżek. Nie ustawia ID użytkownika ani własnych właściwości użytkownika. Identyfikatory reklamowe, zbieranie Android ID (SSAID), automatyczne raportowanie ekranów, sygnały Google i personalizacja reklam są wyłączone. Crashlytics i Performance Monitoring nie są używane.\n\nOkres przechowywania danych użytkownika i zdarzeń w Google Analytics wynosi 2 miesiące, bez resetowania po nowej aktywności. Zmiany zaczynają obowiązywać po 24 godzinach; Google usuwa przeterminowane dane w cyklu miesięcznym, nie dokładnie w chwili upływu dwóch miesięcy. Ustawienie nie dotyczy standardowych raportów zbiorczych i nie gwarantuje ich stałej dostępności.\n\nDługotrwałe przechowywanie anonimowych sum miesięcznych jest planowane dopiero po przeglądzie prywatności i zweryfikowanym eksporcie zapobiegającym identyfikacji. Taki eksport nie został jeszcze wykonany na prawdziwych danych; surowe dane analizy nie są traktowane jako anonimowe.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Kontakt z Google w sprawie ochrony danych: https://privacy.google.com/businesses/processorsupport\n\nPowierzone przetwarzanie i przechowywanie na potrzeby opcjonalnej analityki korzystania z aplikacji, raportów statystycznych i działania tej usługi. Dane nie są wykorzystywane do reklamy ani personalizacji.\n\nPo wyrażeniu zgody zarówno na zbieranie i wykorzystywanie danych analitycznych, jak i na ich przekazywanie za granicę oraz po włączeniu analityki pakiet SDK Firebase Analytics wysyła dane przez HTTPS do centrum zbierania danych podczas korzystania z aplikacji. Następnie dane są przekazywane do serwerów przetwarzania Google Analytics. Przesyłanie może odbywać się asynchronicznie.\n\nPotencjalny zakres przekazywania za granicę (informacje publiczne na dzień 23 września 2026 r.): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Zakres ten odzwierciedla przetwarzanie w krajach, w których znajdują się obiekty, dozwolone przez warunki Google, oraz opublikowane listy obiektów i dalszych podmiotów przetwarzających właściwych dla tej usługi. Nie określa stałej trasy dla każdego użytkownika ani przekazywania do wszystkich krajów. Listy obiektów obejmują także lokalizacje w fazie rozwoju, a kraje dalszych podmiotów przetwarzających oznaczają lokalizacje ich firm. O zmianach uzgodnionych szczegółów przekazywania, w tym krajów lub odbiorców, poinformujemy Cię i poprosimy o osobną zgodę.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nZgoda na analizę jest odrębna od zgody na opcjonalne rozpoznawanie etykiet żywności i osobno ujawnione wskaźniki Google ML Kit. Zmiana jednego wyboru nie zmienia drugiego.",
               "Integracja z Health Connect działa tylko do odczytu. DoseWeek odczytuje udostępnioną przez Ciebie masę ciała, wzrost, zawartość tkanki tłuszczowej i masę beztłuszczową, a nie prosi o uprawnienie do zapisu ani usuwania, więc nie może zmienić zapisów należących do innej aplikacji. Odczytane dane pozostają w prywatnej pamięci aplikacji i nie są wysyłane do dewelopera.",
               "Po włączeniu integracji z Dyskiem Google aplikacja może przesłać zaszyfrowaną kopię zapasową do Twojego własnego folderu danych aplikacji na Dysku. Deweloper nie ma jej kopii ani klucza. Punkt 4 opisuje, co widzi Dysk i jak traktowany jest kod odzyskiwania.",
@@ -3148,21 +3148,21 @@
             "id": "accounts",
             "question": "Czy muszę się logować lub tworzyć konto?",
             "answers": [
-              "DoseWeek 1.0.0 nie ma własnego konta ani serwera dewelopera i żadne z nich nie jest potrzebne do korzystania z aplikacji. Opcjonalna kopia zapasowa na Dysku Google korzysta z Twojego własnego konta Google i pozostaje wyłączona, dopóki nie połączysz jej w Ustawieniach. W żadnym przypadku deweloper nie może oglądać Twoich zapisów."
+              "DoseWeek 1.0.5 nie ma własnego konta ani serwera dewelopera i żadne z nich nie jest potrzebne do korzystania z aplikacji. Opcjonalna kopia zapasowa na Dysku Google korzysta z Twojego własnego konta Google i pozostaje wyłączona, dopóki nie połączysz jej w Ustawieniach. W żadnym przypadku deweloper nie może oglądać Twoich zapisów."
             ]
           },
           {
             "id": "ai-health",
             "question": "Czy DoseWeek używa AI lub Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 na Androida nie zawiera generatywnej AI. Opcjonalne rozpoznawanie głosu i etykiet żywności na urządzeniu ułatwia wprowadzanie; diagnostyka SDK Google dla etykiet wymaga oddzielnej zgody, opisanej w polityce prywatności. Health Connect to teraz opcjonalny import wyłącznie do odczytu masy ciała, wzrostu, zawartości tkanki tłuszczowej i masy beztłuszczowej: aplikacja prosi tylko o uprawnienia odczytu, nigdy o zapis ani usuwanie, i nie importuje niczego, dopóki nie udzielisz tej zgody. Każde podanie nadal wprowadzasz i potwierdzasz ręcznie."
+              "DoseWeek 1.0.5 na Androida nie zawiera generatywnej AI. Opcjonalne rozpoznawanie głosu i etykiet żywności na urządzeniu ułatwia wprowadzanie; diagnostyka SDK Google dla etykiet wymaga oddzielnej zgody, opisanej w polityce prywatności. Health Connect to teraz opcjonalny import wyłącznie do odczytu masy ciała, wzrostu, zawartości tkanki tłuszczowej i masy beztłuszczowej: aplikacja prosi tylko o uprawnienia odczytu, nigdy o zapis ani usuwanie, i nie importuje niczego, dopóki nie udzielisz tej zgody. Każde podanie nadal wprowadzasz i potwierdzasz ręcznie."
             ]
           },
           {
             "id": "notifications",
             "question": "Czy aplikacja oferuje powiadomienia, przypomnienia lub widżety?",
             "answers": [
-              "Dostępne są opcjonalne przypomnienia i widżet ekranu głównego. DoseWeek 1.0.0 może planować na urządzeniu lokalne przypomnienia o następnym podaniu, o pominiętym podaniu i o niskim zapasie. Pozostają wyłączone, dopóki ich nie włączysz i nie udzielisz uprawnienia do powiadomień. Domyślnie treść przypomnienia nie zdradza niczego o leczeniu; nazwa leku pojawia się tylko po włączeniu tej opcji, a dawki nigdy się nie pojawiają. Dotknięcie przypomnienia jedynie otwiera aplikację, więc z powiadomienia nigdy nic nie jest zapisywane. Nie ma aplikacji na urządzenia ubieralne."
+              "Dostępne są opcjonalne przypomnienia i widżet ekranu głównego. DoseWeek 1.0.5 może planować na urządzeniu lokalne przypomnienia o następnym podaniu, o pominiętym podaniu i o niskim zapasie. Pozostają wyłączone, dopóki ich nie włączysz i nie udzielisz uprawnienia do powiadomień. Domyślnie treść przypomnienia nie zdradza niczego o leczeniu; nazwa leku pojawia się tylko po włączeniu tej opcji, a dawki nigdy się nie pojawiają. Dotknięcie przypomnienia jedynie otwiera aplikację, więc z powiadomienia nigdy nic nie jest zapisywane. Nie ma aplikacji na urządzenia ubieralne."
             ]
           },
           {
@@ -3304,7 +3304,7 @@
       },
       "home": {
         "title": "DoseWeek för Android",
-        "versionScope": "Den här informationen gäller endast DoseWeek 1.0.0 för Android.",
+        "versionScope": "Den här informationen gäller DoseWeek för Android från version 1.0.0 (versionCode 12), inklusive den nuvarande versionen 1.0.5.",
         "intro": "DoseWeek är en lokal registreringsapp för veckovisa injektionsscheman, faktiska administreringar och överhoppade registreringar, lagerantal, vikt och midjemått som du själv matar in och bekräftar. Registreringarna stannar på enheten om du inte slår på en valfri integration.",
         "featureBadges": [
           "Lokal lagring i appens privata utrymme",
@@ -3320,8 +3320,8 @@
         "medicalNoticeBody": "DoseWeek är ett verktyg för personlig registrering, inte en medicinteknisk produkt. Appen tillhandahåller inte diagnoser, behandling eller beslut om dos eller tidpunkt. Följ produktens förskrivningsinformation och råd från legitimerad hälso- och sjukvårdspersonal. Om du tror att det kan vara en akut situation ska du omedelbart ringa det lokala nödnumret."
       },
       "privacy": {
-        "title": "Integritetspolicy för DoseWeek 1.0.0 på Android",
-        "scope": "Den här policyn gäller endast DoseWeek 1.0.0 på Android.",
+        "title": "Integritetspolicy för DoseWeek på Android",
+        "scope": "Den här policyn gäller DoseWeek på Android från version 1.0.0 (versionCode 12), inklusive den nuvarande versionen 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -3351,7 +3351,7 @@
             "id": "no-collection",
             "title": "3. Valfria tjänster och användningsanalys",
             "paragraphs": [
-              "I standardläget använder DoseWeek 1.0.0 inte följande funktioner eller automatiska behandlingar. Varje registrering matas in och bekräftas manuellt av användaren.",
+              "I standardläget använder DoseWeek 1.0.5 inte följande funktioner eller automatiska behandlingar. Varje registrering matas in och bekräftas manuellt av användaren.",
               "Hälsouppgifter, bland annat scheman, administreringar, anteckningar och kroppsmått, stannar som standard på enheten. Utvecklaren får inte dessa uppgifter. Export, säkerhetskopior och valfria integrationer beskrivs separat. Den valfria användningsanalysen följer reglerna nedan.\n\nAtt bekräfta det obligatoriska integritetsmeddelandet tillåter inte analys. Analys aktiveras först efter separata samtycken till användningsanalys och överföring utomlands. Båda valfria alternativen är avstängda som standard, och analys stängs av om något av dem avböjs eller återkallas.\n\nAnvändningsanalys är valfri och avstängd från början. Den obligatoriska bekräftelsen av integritetsinformationen är inte ett samtycke. Först efter ditt separata godkännande startar Google Analytics for Firebase och skickar automatiska livscykel- och tekniska händelser till Google, såsom första starter, sessioner, användningsfrekvens, användningstid och uppdateringar av appen eller operativsystemet. Utvecklaren använder rapporter för att förstå appens användning. DoseWeek lägger inte till egna händelser.\n\nAnalysen kan innehålla Firebase-genererade appinstans- eller installationsidentifierare, händelsetider, appversion, språk, enhetens märke, modell och kategori, operativsystemets uppgifter inklusive underversioner samt skärmupplösning. Google behandlar IP-adresser för tjänstens drift och ungefärlig plats, inklusive stad. Koordinater som härleds från staden är inte din GPS-position. Analysen använder varken GPS eller platsbehörighet. Google behandlar data på sina servrar, eventuellt utanför ditt land, och utvecklaren kan se rapporter. Dessa uppgifter är inte i sig anonyma.\n\nDoseWeek skickar inte hälsouppgifter, läkemedelsnamn, doser, anteckningar, text- eller röstinmatning, skärmnamn eller navigeringsvägar till analysen. Inga användar-ID:n eller egna användaregenskaper anges. Annons-ID:n, Android ID (SSAID)-insamling, automatisk skärmrapportering, Google-signaler och personanpassade annonser är avstängda. Crashlytics och Performance Monitoring används inte.\n\nLagringstiden för användar- och händelsedata i Google Analytics är 2 månader, utan återställning vid ny aktivitet. Ändringar börjar gälla efter 24 timmar; utgångna data raderas i Googles månatliga process, inte exakt när två månader har gått. Inställningen gäller inte standardiserade sammanställda rapporter och garanterar inte att de är tillgängliga för alltid.\n\nLångtidslagring av anonyma månadssummor planeras först efter en integritetsgranskning och en verifierad export som förhindrar identifiering. Någon sådan export har ännu inte gjorts med riktiga data; råa analysdata betraktas inte som anonyma.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Googles kontakt för dataskydd: https://privacy.google.com/businesses/processorsupport\n\nBehandling och lagring på uppdrag för valfri analys av appanvändning, statistiska rapporter och drift av tjänsten. Används inte för reklam eller personanpassning.\n\nNär du har samtyckt till både insamling och användning av analysdata och överföring utomlands samt aktiverat analys, skickar Firebase Analytics SDK data via HTTPS till ett insamlingscenter när appen används. Därifrån vidarebefordras uppgifterna till Google Analytics behandlingsservrar. Överföringen kan ske asynkront.\n\nMöjlig omfattning av överföring utomlands (offentlig information per den 23 september 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Omfattningen bygger på den behandling i anläggningsländer som Googles villkor tillåter samt på dess publicerade listor över anläggningar och underbiträden för den aktuella tjänsten. Den anger inte en fast överföringsväg för varje användare eller överföringar till samtliga länder. Anläggningslistorna omfattar även platser under utveckling, och underbiträdenas länder avser företagens verksamhetsorter. Vi informerar dig och ber om separat samtycke när överenskomna överföringsuppgifter ändras, inklusive länder eller mottagare.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nSamtycke till analys är separat från samtycke till valfri igenkänning av livsmedelsetiketter och dess separat beskrivna Google ML Kit-mätdata. Att ändra det ena valet ändrar inte det andra.",
               "Health Connect-integrationen är skrivskyddad. DoseWeek läser den vikt, längd, kroppsfettprocent och fettfria massa som du har delat och begär ingen behörighet att skriva eller radera, så den kan inte ändra registreringar som tillhör en annan app. Det som läses stannar i appens privata lagringsutrymme och skickas inte till utvecklaren.",
               "Med Google Drive-integrationen påslagen kan appen ladda upp en krypterad säkerhetskopia till din egen appdatamapp i Drive. Utvecklaren har varken kopia eller nyckel. Avsnitt 4 beskriver vad Drive kan se och hur återställningskoden hanteras.",
@@ -3475,21 +3475,21 @@
             "id": "accounts",
             "question": "Behöver jag logga in eller skapa ett konto?",
             "answers": [
-              "DoseWeek 1.0.0 har inget eget konto och ingen server hos utvecklaren, och du behöver inget av dem för att använda appen. Den valfria säkerhetskopieringen till Google Drive använder ditt eget Google-konto och är avstängd tills du ansluter den i Inställningar. Utvecklaren kan i inget fall se dina registreringar."
+              "DoseWeek 1.0.5 har inget eget konto och ingen server hos utvecklaren, och du behöver inget av dem för att använda appen. Den valfria säkerhetskopieringen till Google Drive använder ditt eget Google-konto och är avstängd tills du ansluter den i Inställningar. Utvecklaren kan i inget fall se dina registreringar."
             ]
           },
           {
             "id": "ai-health",
             "question": "Använder DoseWeek AI eller Health Connect?",
             "answers": [
-              "DoseWeek 1.0.0 för Android innehåller ingen generativ AI. Valfri röst- och livsmedelsetikettigenkänning på enheten hjälper vid inmatning; diagnostik från Googles SDK för etiketter kräver separat samtycke enligt integritetspolicyn. Health Connect är nu en valfri import som bara läser vikt, längd, kroppsfettprocent och fettfri massa: appen begär enbart läsbehörighet, aldrig behörighet att skriva eller radera, och importerar ingenting förrän du har gett den behörigheten. Varje administrering matas fortfarande in och bekräftas för hand."
+              "DoseWeek 1.0.5 för Android innehåller ingen generativ AI. Valfri röst- och livsmedelsetikettigenkänning på enheten hjälper vid inmatning; diagnostik från Googles SDK för etiketter kräver separat samtycke enligt integritetspolicyn. Health Connect är nu en valfri import som bara läser vikt, längd, kroppsfettprocent och fettfri massa: appen begär enbart läsbehörighet, aldrig behörighet att skriva eller radera, och importerar ingenting förrän du har gett den behörigheten. Varje administrering matas fortfarande in och bekräftas för hand."
             ]
           },
           {
             "id": "notifications",
             "question": "Har DoseWeek aviseringar, påminnelser eller widgetar?",
             "answers": [
-              "Valfria påminnelser och en widget för hemskärmen finns. DoseWeek 1.0.0 kan schemalägga lokala påminnelser på din enhet för nästa dos, en uppföljning efter en missad dos och lågt lager. De är avstängda tills du slår på dem och ger aviseringsbehörighet. Som standard avslöjar påminnelsetexten inget om din behandling; läkemedlets namn visas bara om du aktiverar det, och doser visas aldrig. Ett tryck på en påminnelse öppnar bara appen, så inget registreras någonsin från en avisering. Det finns inga appar för wearables."
+              "Valfria påminnelser och en widget för hemskärmen finns. DoseWeek 1.0.5 kan schemalägga lokala påminnelser på din enhet för nästa dos, en uppföljning efter en missad dos och lågt lager. De är avstängda tills du slår på dem och ger aviseringsbehörighet. Som standard avslöjar påminnelsetexten inget om din behandling; läkemedlets namn visas bara om du aktiverar det, och doser visas aldrig. Ett tryck på en påminnelse öppnar bara appen, så inget registreras någonsin från en avisering. Det finns inga appar för wearables."
             ]
           },
           {
@@ -3631,7 +3631,7 @@
       },
       "home": {
         "title": "Android के लिए DoseWeek",
-        "versionScope": "यह जानकारी केवल Android के लिए DoseWeek 1.0.0 पर लागू होती है।",
+        "versionScope": "यह जानकारी Android के लिए DoseWeek 1.0.0 (versionCode 12) और उसके बाद के संस्करणों पर लागू होती है, जिसमें मौजूदा संस्करण 1.0.5 भी शामिल है।",
         "intro": "DoseWeek एक स्थानीय रिकॉर्ड ऐप है, जिसमें आप साप्ताहिक इंजेक्शन समय-सारणी, दी गई और छोड़ी गई खुराक, स्टॉक, वज़न और कमर की माप स्वयं दर्ज और पुष्टि करते हैं। जब तक आप कोई वैकल्पिक इंटीग्रेशन चालू नहीं करते, रिकॉर्ड डिवाइस पर ही रहते हैं।",
         "featureBadges": [
           "ऐप का निजी स्थानीय स्टोरेज",
@@ -3647,8 +3647,8 @@
         "medicalNoticeBody": "DoseWeek व्यक्तिगत रिकॉर्ड रखने का टूल है, चिकित्सा उपकरण नहीं। यह निदान, उपचार या खुराक अथवा समय के निर्णय नहीं देता। दवा की निर्धारित जानकारी और योग्य स्वास्थ्य पेशेवर की सलाह मानें। संभावित आपातकाल में स्थानीय आपातकालीन सेवा से तुरंत संपर्क करें।"
       },
       "privacy": {
-        "title": "Android के लिए DoseWeek 1.0.0 गोपनीयता नीति",
-        "scope": "यह नीति केवल Android के लिए DoseWeek 1.0.0 पर लागू होती है।",
+        "title": "Android के लिए DoseWeek गोपनीयता नीति",
+        "scope": "यह नीति Android के लिए DoseWeek 1.0.0 (versionCode 12) और उसके बाद के संस्करणों पर लागू होती है, जिसमें मौजूदा संस्करण 1.0.5 भी शामिल है।",
         "sections": [
           {
             "id": "scope",
@@ -3678,7 +3678,7 @@
             "id": "no-collection",
             "title": "3. वैकल्पिक सेवाएँ और उपयोग विश्लेषण",
             "paragraphs": [
-              "डिफ़ॉल्ट स्थिति में DoseWeek 1.0.0 निम्न सुविधाओं या स्वचालित प्रसंस्करण का उपयोग नहीं करता। हर रिकॉर्ड उपयोगकर्ता स्वयं दर्ज और पुष्टि करता है।",
+              "डिफ़ॉल्ट स्थिति में DoseWeek 1.0.5 निम्न सुविधाओं या स्वचालित प्रसंस्करण का उपयोग नहीं करता। हर रिकॉर्ड उपयोगकर्ता स्वयं दर्ज और पुष्टि करता है।",
               "शेड्यूल, दवा देने के रिकॉर्ड, नोट्स और शरीर के माप सहित स्वास्थ्य रिकॉर्ड डिफ़ॉल्ट रूप से आपके डिवाइस पर रहते हैं। डेवलपर को ये रिकॉर्ड नहीं मिलते। निर्यात, बैकअप और वैकल्पिक इंटीग्रेशन का विवरण अलग है। वैकल्पिक उपयोग विश्लेषण पर नीचे दिए नियम लागू होते हैं।\n\nआवश्यक गोपनीयता सूचना पढ़ने की पुष्टि करने से विश्लेषण की अनुमति नहीं मिलती है। उपयोग विश्लेषण और विदेश में स्थानांतरण के लिए अलग-अलग सहमति मिलने के बाद ही विश्लेषण चालू होता है। दोनों वैकल्पिक विकल्प डिफ़ॉल्ट रूप से बंद होते हैं और किसी एक को भी अस्वीकार करने या वापस लेने पर विश्लेषण बंद हो जाता है।\n\nउपयोग विश्लेषण वैकल्पिक है और शुरू में बंद रहता है। ज़रूरी निजता सूचना पढ़ने की पुष्टि, विश्लेषण की सहमति नहीं है। आपकी अलग अनुमति के बाद ही Google Analytics for Firebase शुरू होता है और पहली बार खोलना, सत्र, उपयोग की आवृत्ति, उपयोग का समय तथा ऐप या ऑपरेटिंग सिस्टम अपडेट जैसी स्वचालित जीवनचक्र और तकनीकी घटनाएँ Google को भेजता है। डेवलपर ऐप के उपयोग को समझने के लिए रिपोर्ट देखता है। DoseWeek अपनी कस्टम घटनाएँ नहीं जोड़ता।\n\nविश्लेषण में Firebase द्वारा बनाए ऐप-इंस्टेंस या इंस्टॉलेशन पहचानकर्ता, घटना का समय, ऐप संस्करण, भाषा, डिवाइस का ब्रांड, मॉडल और श्रेणी, छोटे संस्करणों सहित ऑपरेटिंग सिस्टम की जानकारी और स्क्रीन रिज़ॉल्यूशन शामिल हो सकते हैं। Google सेवा संचालन और शहर सहित अनुमानित स्थान के लिए IP पते संसाधित करता है। शहर से निकाले निर्देशांक आपका GPS स्थान नहीं हैं। विश्लेषण GPS या स्थान अनुमति का उपयोग नहीं करता। Google अपने सर्वर पर, संभवतः आपके देश के बाहर, डेटा संसाधित करता है और डेवलपर रिपोर्ट देख सकता है। ये रिकॉर्ड अपने आप में अनाम नहीं हैं।\n\nDoseWeek स्वास्थ्य रिकॉर्ड, दवा के नाम, खुराक, नोट्स, लिखी या बोली गई सामग्री, स्क्रीन के नाम या मार्ग विश्लेषण में नहीं भेजता। यह यूज़र ID या कस्टम यूज़र प्रॉपर्टी सेट नहीं करता। विज्ञापन ID, Android ID (SSAID) संग्रह, स्वचालित स्क्रीन रिपोर्ट, Google सिग्नल और विज्ञापनों का वैयक्तिकरण बंद हैं। Crashlytics और Performance Monitoring का उपयोग नहीं होता।\n\nGoogle Analytics में यूज़र और घटना स्तर का डेटा रखने की अवधि 2 महीने है और नई गतिविधि पर अवधि रीसेट करना बंद है। बदलाव 24 घंटे बाद लागू होते हैं; अवधि पार कर चुका डेटा Google की मासिक प्रक्रिया में मिटता है, ठीक दो महीने पूरे होते ही नहीं। यह सेटिंग मानक समेकित रिपोर्ट पर लागू नहीं होती और उनकी स्थायी उपलब्धता की गारंटी नहीं देती।\n\nअनाम मासिक योग लंबे समय तक रखना तभी प्रस्तावित है जब निजता समीक्षा और सत्यापित निर्यात पहचान को रोकें। असली डेटा के साथ ऐसा निर्यात अभी तक नहीं किया गया है; कच्चे विश्लेषण डेटा को अनाम नहीं माना जाता।\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google का डेटा सुरक्षा संपर्क: https://privacy.google.com/businesses/processorsupport\n\nऐप के उपयोग के वैकल्पिक विश्लेषण, सांख्यिकीय रिपोर्ट और उस सेवा के संचालन के लिए सौंपा गया प्रसंस्करण और भंडारण। विज्ञापन या वैयक्तिकरण के लिए उपयोग नहीं किया जाता है।\n\nजब आप विश्लेषण डेटा के संग्रह/उपयोग और विदेश में स्थानांतरण, दोनों के लिए सहमति देकर विश्लेषण चालू करते हैं, तब ऐप के उपयोग के दौरान Firebase Analytics SDK, HTTPS के ज़रिए डेटा संग्रह केंद्र को भेजता है। वहाँ से डेटा Google Analytics के प्रसंस्करण सर्वरों को भेजा जाता है। यह प्रेषण असमकालिक रूप से हो सकता है।\n\nविदेश में संभावित स्थानांतरण का दायरा (23 सितंबर 2026 को उपलब्ध सार्वजनिक जानकारी के अनुसार): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. यह दायरा Google की शर्तों के तहत अनुमत, सुविधाओं के स्थान वाले देशों में प्रसंस्करण और उसकी प्रकाशित सुविधाओं तथा संबंधित सेवा के उप-प्रसंस्कर्ताओं की सूचियों पर आधारित है। यह हर उपयोगकर्ता के लिए कोई निश्चित मार्ग या हर देश में स्थानांतरण नहीं दर्शाता है। सुविधाओं की सूचियों में विकासाधीन सुविधाएँ भी शामिल हैं और उप-प्रसंस्कर्ताओं के देश उनकी कंपनियों के स्थान हैं। सहमत स्थानांतरण विवरण, जिनमें देश या प्राप्तकर्ता शामिल हैं, बदलने पर हम आपको सूचित करेंगे और अलग से सहमति लेंगे।\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nउपयोग विश्लेषण की सहमति, वैकल्पिक खाद्य-लेबल पहचान और अलग से बताए Google ML Kit मेट्रिक्स की सहमति से अलग है। एक विकल्प बदलने से दूसरा नहीं बदलता।",
               "Health Connect इंटीग्रेशन केवल पढ़ने के लिए है। DoseWeek आपके साझा किए गए वज़न, कद, शरीर में वसा का प्रतिशत और वसा-रहित द्रव्यमान पढ़ता है और लिखने या मिटाने की अनुमति नहीं माँगता, इसलिए यह किसी दूसरे ऐप के रिकॉर्ड नहीं बदल सकता। पढ़ी गई जानकारी ऐप-निजी स्टोरेज में रहती है और डेवलपर को नहीं भेजी जाती।",
               "Google Drive इंटीग्रेशन चालू होने पर ऐप एक एन्क्रिप्टेड बैकअप आपके अपने Drive ऐप-डेटा फ़ोल्डर में अपलोड कर सकता है। डेवलपर के पास न कोई प्रति है और न कोई कुंजी। Drive क्या देख सकता है और रिकवरी कोड कैसे संभाला जाता है, यह खंड 4 में बताया गया है।",
@@ -3802,21 +3802,21 @@
             "id": "accounts",
             "question": "क्या खाता या लॉगिन चाहिए?",
             "answers": [
-              "DoseWeek 1.0.0 में न कोई अपना खाता है और न कोई डेवलपर सर्वर, और ऐप चलाने के लिए इनमें से कोई ज़रूरी भी नहीं। वैकल्पिक Google Drive बैकअप आपके अपने Google खाते का उपयोग करता है और तब तक बंद रहता है जब तक आप सेटिंग में उसे जोड़ नहीं देते। किसी भी स्थिति में डेवलपर आपके रिकॉर्ड नहीं देख सकता।"
+              "DoseWeek 1.0.5 में न कोई अपना खाता है और न कोई डेवलपर सर्वर, और ऐप चलाने के लिए इनमें से कोई ज़रूरी भी नहीं। वैकल्पिक Google Drive बैकअप आपके अपने Google खाते का उपयोग करता है और तब तक बंद रहता है जब तक आप सेटिंग में उसे जोड़ नहीं देते। किसी भी स्थिति में डेवलपर आपके रिकॉर्ड नहीं देख सकता।"
             ]
           },
           {
             "id": "ai-health",
             "question": "क्या DoseWeek AI या Health Connect उपयोग करता है?",
             "answers": [
-              "Android के लिए DoseWeek 1.0.0 में जनरेटिव AI नहीं है। डिवाइस पर वैकल्पिक वॉइस और खाद्य लेबल पहचान इनपुट में सहायता करती है; Google के खाद्य लेबल SDK निदान के लिए गोपनीयता नीति में बताई गई अलग सहमति आवश्यक है।  Health Connect अब वज़न, कद, शरीर में वसा का प्रतिशत और वसा-रहित द्रव्यमान का वैकल्पिक, केवल-पढ़ने वाला आयात है: ऐप केवल पढ़ने की अनुमति माँगता है, लिखने या मिटाने की कभी नहीं, और जब तक आप वह अनुमति नहीं देते तब तक कुछ भी आयात नहीं करता। हर खुराक का रिकॉर्ड अब भी आप स्वयं दर्ज और पुष्टि करते हैं।"
+              "Android के लिए DoseWeek 1.0.5 में जनरेटिव AI नहीं है। डिवाइस पर वैकल्पिक वॉइस और खाद्य लेबल पहचान इनपुट में सहायता करती है; Google के खाद्य लेबल SDK निदान के लिए गोपनीयता नीति में बताई गई अलग सहमति आवश्यक है।  Health Connect अब वज़न, कद, शरीर में वसा का प्रतिशत और वसा-रहित द्रव्यमान का वैकल्पिक, केवल-पढ़ने वाला आयात है: ऐप केवल पढ़ने की अनुमति माँगता है, लिखने या मिटाने की कभी नहीं, और जब तक आप वह अनुमति नहीं देते तब तक कुछ भी आयात नहीं करता। हर खुराक का रिकॉर्ड अब भी आप स्वयं दर्ज और पुष्टि करते हैं।"
             ]
           },
           {
             "id": "notifications",
             "question": "क्या सूचनाएँ, रिमाइंडर या विजेट मिलते हैं?",
             "answers": [
-              "वैकल्पिक रिमाइंडर और होम स्क्रीन विजेट उपलब्ध हैं। DoseWeek 1.0.0 आपके डिवाइस पर अगली खुराक, छूटी खुराक के बाद फ़ॉलो-अप और कम स्टॉक के लिए स्थानीय रिमाइंडर शेड्यूल कर सकता है। जब तक आप उन्हें चालू नहीं करते और सूचना अनुमति नहीं देते, वे बंद रहते हैं। डिफ़ॉल्ट रूप से रिमाइंडर का पाठ आपके उपचार के बारे में कुछ नहीं बताता; दवा का नाम केवल आपके चालू करने पर दिखता है और खुराक की मात्रा कभी नहीं दिखती। रिमाइंडर पर टैप करने से केवल ऐप खुलता है, इसलिए किसी सूचना से कभी कुछ दर्ज नहीं होता। पहनने योग्य डिवाइस का कोई ऐप नहीं है।"
+              "वैकल्पिक रिमाइंडर और होम स्क्रीन विजेट उपलब्ध हैं। DoseWeek 1.0.5 आपके डिवाइस पर अगली खुराक, छूटी खुराक के बाद फ़ॉलो-अप और कम स्टॉक के लिए स्थानीय रिमाइंडर शेड्यूल कर सकता है। जब तक आप उन्हें चालू नहीं करते और सूचना अनुमति नहीं देते, वे बंद रहते हैं। डिफ़ॉल्ट रूप से रिमाइंडर का पाठ आपके उपचार के बारे में कुछ नहीं बताता; दवा का नाम केवल आपके चालू करने पर दिखता है और खुराक की मात्रा कभी नहीं दिखती। रिमाइंडर पर टैप करने से केवल ऐप खुलता है, इसलिए किसी सूचना से कभी कुछ दर्ज नहीं होता। पहनने योग्य डिवाइस का कोई ऐप नहीं है।"
             ]
           },
           {
@@ -3958,7 +3958,7 @@
       },
       "home": {
         "title": "DoseWeek para Android",
-        "versionScope": "Estas informações se aplicam somente ao DoseWeek 1.0.0 para Android.",
+        "versionScope": "Estas informações se aplicam ao DoseWeek para Android a partir da versão 1.0.0 (versionCode 12), incluindo a versão atual 1.0.5.",
         "intro": "O DoseWeek é um aplicativo local para registrar agendas de injeções semanais, administrações realizadas ou ignoradas, estoque, peso e circunferência da cintura inseridos e confirmados pelo usuário. Os registros permanecem no dispositivo, a menos que você ative uma integração opcional.",
         "featureBadges": [
           "Armazenamento local privado do aplicativo",
@@ -3974,8 +3974,8 @@
         "medicalNoticeBody": "O DoseWeek é uma ferramenta de registro pessoal, não um dispositivo médico. Ele não fornece diagnóstico, tratamento nem decisões sobre dose ou momento da administração. Siga as informações de prescrição e a orientação de um profissional de saúde qualificado. Se acreditar que está diante de uma emergência, entre imediatamente em contato com o serviço de emergência local."
       },
       "privacy": {
-        "title": "Política de Privacidade do DoseWeek 1.0.0 para Android",
-        "scope": "Esta política se aplica somente ao DoseWeek 1.0.0 para Android.",
+        "title": "Política de Privacidade do DoseWeek para Android",
+        "scope": "Esta política se aplica ao DoseWeek para Android a partir da versão 1.0.0 (versionCode 12), incluindo a versão atual 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -4005,7 +4005,7 @@
             "id": "no-collection",
             "title": "3. Serviços opcionais e análise de uso",
             "paragraphs": [
-              "No estado padrão, o DoseWeek 1.0.0 não utiliza os seguintes recursos nem tratamentos automáticos. Todos os registros são inseridos e confirmados manualmente.",
+              "No estado padrão, o DoseWeek 1.0.5 não utiliza os seguintes recursos nem tratamentos automáticos. Todos os registros são inseridos e confirmados manualmente.",
               "Os dados de saúde, incluindo horários, administrações, notas e medidas corporais, ficam por padrão no dispositivo. O desenvolvedor não recebe esses registros. Exportações, backups e integrações opcionais são descritos separadamente. A análise opcional de uso segue as regras abaixo.\n\nConfirmar a leitura do aviso de privacidade obrigatório não autoriza a análise. A análise só é ativada após consentimentos separados para análise de uso e transferência para o exterior. As duas escolhas opcionais ficam desativadas por padrão, e a análise é desativada se qualquer uma for recusada ou retirada.\n\nA análise de uso é opcional e começa desativada. A confirmação obrigatória de leitura do aviso não é consentimento. Só após sua autorização separada o Google Analytics for Firebase inicia e envia ao Google eventos automáticos técnicos e do ciclo de vida, como primeiras aberturas, sessões, frequência e duração de uso e atualizações do aplicativo ou sistema. O desenvolvedor usa relatórios para entender o uso. O DoseWeek não adiciona eventos personalizados.\n\nA análise pode incluir identificadores de instância do aplicativo ou instalação gerados pelo Firebase, horários dos eventos, versão do aplicativo, idioma, marca, modelo e categoria do dispositivo, detalhes do sistema incluindo versões secundárias e resolução da tela. O Google processa endereços IP para operar o serviço e estimar a localização aproximada, incluindo a cidade. As coordenadas derivadas da cidade não são sua localização GPS. A análise não usa GPS nem permissão de localização. O Google processa os dados em seus servidores, possivelmente fora do seu país, e o desenvolvedor pode consultar relatórios. Esses registros não são inerentemente anônimos.\n\nO DoseWeek não envia à análise dados de saúde, nomes de medicamentos, doses, notas, texto ou voz inseridos, nomes de telas ou rotas. Não define IDs de usuário nem propriedades personalizadas de usuário. IDs de publicidade, coleta de Android ID (SSAID), relatórios automáticos de telas, sinais do Google e personalização de anúncios estão desativados. Crashlytics e Performance Monitoring não são usados.\n\nA retenção de dados de usuários e eventos no Google Analytics está definida em 2 meses, sem redefinição por nova atividade. As alterações valem após 24 horas; o Google exclui dados vencidos no processo mensal, não exatamente quando os dois meses se completam. Esse ajuste não abrange relatórios agregados padrão nem garante sua disponibilidade permanente.\n\nA conservação prolongada de totais mensais anônimos só está planejada após uma revisão de privacidade e uma exportação verificada que impeça a identificação. Ainda não foi feita nenhuma exportação desse tipo com dados reais; os dados brutos de análise não são considerados anônimos.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Contato de proteção de dados do Google: https://privacy.google.com/businesses/processorsupport\n\nTratamento delegado e armazenamento para a análise opcional do uso do app, relatórios estatísticos e operação desse serviço. Não são usados para publicidade ou personalização.\n\nDepois que você concordar tanto com a coleta e o uso de dados de análise quanto com a transferência para o exterior e ativar a análise, o SDK do Firebase Analytics enviará dados por HTTPS a um centro de coleta durante o uso do app. De lá, os dados serão encaminhados aos servidores de processamento do Google Analytics. A transmissão pode ser assíncrona.\n\nEscopo potencial da transferência para o exterior (informações públicas em 23 de setembro de 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Esse escopo reflete o tratamento nos países onde se encontram as instalações permitido pelos termos do Google e suas listas publicadas de instalações e suboperadores do serviço correspondente. Ele não identifica uma rota fixa para cada usuário nem transferências para todos os países. As listas de instalações incluem locais em desenvolvimento, e os países dos suboperadores correspondem às localizações de suas empresas. Avisaremos você e pediremos um consentimento separado ao alterar os detalhes de transferência acordados, incluindo países ou destinatários.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nO consentimento para a análise é separado do consentimento para o reconhecimento opcional de rótulos de alimentos e suas métricas do Google ML Kit divulgadas à parte. Mudar uma escolha não muda a outra.",
               "A integração com o Health Connect é somente leitura. O DoseWeek lê o peso, a altura, o percentual de gordura corporal e a massa magra que você compartilhou e não solicita permissão de gravação nem de exclusão, portanto não pode alterar registros de outro aplicativo. O que é lido fica no armazenamento privado do aplicativo e não é enviado ao desenvolvedor.",
               "Com a integração do Google Drive ativada, o aplicativo pode enviar um backup criptografado para a sua própria pasta de dados de aplicativo no Drive. O desenvolvedor não guarda cópia nem chave. A seção 4 descreve o que o Drive consegue ver e como o código de recuperação é tratado.",
@@ -4129,21 +4129,21 @@
             "id": "accounts",
             "question": "Preciso fazer login ou criar uma conta?",
             "answers": [
-              "O DoseWeek 1.0.0 não tem conta própria nem servidor do desenvolvedor, e você não precisa de nenhum dos dois para usar o aplicativo. O backup opcional no Google Drive usa a sua própria Conta do Google e fica desativado até você conectá-lo nas configurações. Em nenhum dos casos o desenvolvedor consegue visualizar os seus registros."
+              "O DoseWeek 1.0.5 não tem conta própria nem servidor do desenvolvedor, e você não precisa de nenhum dos dois para usar o aplicativo. O backup opcional no Google Drive usa a sua própria Conta do Google e fica desativado até você conectá-lo nas configurações. Em nenhum dos casos o desenvolvedor consegue visualizar os seus registros."
             ]
           },
           {
             "id": "ai-health",
             "question": "O DoseWeek usa IA ou Health Connect?",
             "answers": [
-              "O DoseWeek 1.0.0 para Android não inclui IA generativa. O reconhecimento opcional de voz e rótulos no dispositivo ajuda na entrada; os diagnósticos do SDK do Google para rótulos exigem consentimento separado, descrito na Política de Privacidade. O Health Connect agora é uma importação opcional e somente de leitura de peso, altura, percentual de gordura corporal e massa magra: o aplicativo pede apenas permissões de leitura, nunca de gravação ou exclusão, e não importa nada até você conceder essa permissão. Cada administração continua sendo inserida e confirmada manualmente."
+              "O DoseWeek 1.0.5 para Android não inclui IA generativa. O reconhecimento opcional de voz e rótulos no dispositivo ajuda na entrada; os diagnósticos do SDK do Google para rótulos exigem consentimento separado, descrito na Política de Privacidade. O Health Connect agora é uma importação opcional e somente de leitura de peso, altura, percentual de gordura corporal e massa magra: o aplicativo pede apenas permissões de leitura, nunca de gravação ou exclusão, e não importa nada até você conceder essa permissão. Cada administração continua sendo inserida e confirmada manualmente."
             ]
           },
           {
             "id": "notifications",
             "question": "O aplicativo oferece notificações, lembretes ou widgets?",
             "answers": [
-              "Estão disponíveis lembretes opcionais e um widget para a tela inicial. O DoseWeek 1.0.0 pode agendar no dispositivo lembretes locais para a próxima administração, um acompanhamento após uma administração perdida e estoque baixo. Eles ficam desativados até você ativá-los e conceder a permissão de notificação. Por padrão, o texto do lembrete não revela nada sobre o seu tratamento; o nome do medicamento só aparece se você ativar, e as doses nunca aparecem. Tocar em um lembrete apenas abre o aplicativo, então nada é registrado a partir de uma notificação. Não há aplicativos para relógio."
+              "Estão disponíveis lembretes opcionais e um widget para a tela inicial. O DoseWeek 1.0.5 pode agendar no dispositivo lembretes locais para a próxima administração, um acompanhamento após uma administração perdida e estoque baixo. Eles ficam desativados até você ativá-los e conceder a permissão de notificação. Por padrão, o texto do lembrete não revela nada sobre o seu tratamento; o nome do medicamento só aparece se você ativar, e as doses nunca aparecem. Tocar em um lembrete apenas abre o aplicativo, então nada é registrado a partir de uma notificação. Não há aplicativos para relógio."
             ]
           },
           {
@@ -4285,7 +4285,7 @@
       },
       "home": {
         "title": "DoseWeek لنظام Android",
-        "versionScope": "تنطبق هذه المعلومات فقط على DoseWeek 1.0.0 لنظام Android.",
+        "versionScope": "تنطبق هذه المعلومات على DoseWeek لنظام Android من الإصدار 1.0.0 (versionCode 12) وما بعده، بما في ذلك الإصدار الحالي 1.0.5.",
         "intro": "DoseWeek تطبيق محلي لتسجيل جداول الحقن الأسبوعية والجرعات الفعلية أو المتخطاة والمخزون والوزن ومحيط الخصر التي تدخلها وتؤكدها يدويًا. تبقى السجلات على الجهاز ما لم تفعّل تكاملًا اختياريًا.",
         "featureBadges": [
           "تخزين محلي خاص بالتطبيق",
@@ -4301,8 +4301,8 @@
         "medicalNoticeBody": "DoseWeek أداة لحفظ السجلات الشخصية وليست جهازًا طبيًا. لا تقدّم تشخيصًا أو علاجًا أو قرارات بشأن الجرعة أو توقيت الإعطاء. اتبع معلومات وصف الدواء وإرشادات مختص صحي مؤهل. إذا اعتقدت بوجود حالة طارئة، فاتصل فورًا بخدمة الطوارئ المحلية."
       },
       "privacy": {
-        "title": "سياسة خصوصية DoseWeek 1.0.0 لنظام Android",
-        "scope": "تنطبق هذه السياسة فقط على DoseWeek 1.0.0 لنظام Android.",
+        "title": "سياسة خصوصية DoseWeek لنظام Android",
+        "scope": "تنطبق هذه السياسة على DoseWeek لنظام Android من الإصدار 1.0.0 (versionCode 12) وما بعده، بما في ذلك الإصدار الحالي 1.0.5.",
         "sections": [
           {
             "id": "scope",
@@ -4332,7 +4332,7 @@
             "id": "no-collection",
             "title": "3. الخدمات الاختيارية وتحليلات الاستخدام",
             "paragraphs": [
-              "في الحالة الافتراضية، لا يستخدم DoseWeek 1.0.0 الميزات أو المعالجة التلقائية التالية. يُدخل المستخدم كل سجل ويؤكده يدويًا.",
+              "في الحالة الافتراضية، لا يستخدم DoseWeek 1.0.5 الميزات أو المعالجة التلقائية التالية. يُدخل المستخدم كل سجل ويؤكده يدويًا.",
               "تبقى السجلات الصحية، ومنها الجداول وعمليات إعطاء الدواء والملاحظات وقياسات الجسم، على جهازك افتراضيًا. لا يتلقى المطوّر هذه السجلات. تُشرح عمليات التصدير والنسخ الاحتياطي والتكاملات الاختيارية بشكل منفصل. تخضع تحليلات الاستخدام الاختيارية للقواعد التالية.\n\nالإقرار بالاطلاع على إشعار الخصوصية المطلوب لا يسمح بالتحليلات. لا تُفعَّل التحليلات إلا بعد موافقتين منفصلتين على تحليلات الاستخدام والنقل إلى الخارج. كلا الخيارين اختياري ومتوقف افتراضيًا، وتُعطَّل التحليلات إذا رُفض أيٌّ منهما أو سُحبت الموافقة عليه.\n\nتحليلات الاستخدام اختيارية وتكون متوقفة أولًا. الإقرار الإلزامي بقراءة إشعار الخصوصية ليس موافقةً عليها. لا يبدأ Google Analytics for Firebase إلا بعد موافقتك المنفصلة، ثم يرسل إلى Google أحداثًا تلقائية تقنية وأحداث دورة حياة، مثل مرات الفتح الأولى والجلسات وتكرار الاستخدام ومدته وتحديثات التطبيق أو نظام التشغيل. يستخدم المطوّر التقارير لفهم استخدام التطبيق. لا يضيف DoseWeek أحداثًا مخصّصة.\n\nقد تشمل التحليلات معرّفات نسخة التطبيق أو التثبيت التي ينشئها Firebase، وأوقات الأحداث وإصدار التطبيق واللغة وعلامة الجهاز وطرازه وفئته وتفاصيل نظام التشغيل بما فيها الإصدارات الفرعية ودقة الشاشة. تعالج Google عناوين IP لتشغيل الخدمة وتقدير الموقع التقريبي، بما فيه المدينة. الإحداثيات المستنتجة للمدينة ليست موقعك عبر GPS. لا تستخدم التحليلات GPS أو إذن الموقع. تعالج Google البيانات على خوادمها، وقد تكون خارج بلدك، ويمكن للمطوّر الاطلاع على التقارير. هذه السجلات ليست مجهولة الهوية بطبيعتها.\n\nلا يرسل DoseWeek إلى التحليلات السجلات الصحية أو أسماء الأدوية أو الجرعات أو الملاحظات أو المدخلات المكتوبة أو الصوتية أو أسماء الشاشات أو مسارات التنقل. ولا يعيّن معرّف مستخدم أو خصائص مستخدم مخصّصة. معرّفات الإعلانات وجمع Android ID (SSAID) وتقارير الشاشات التلقائية وإشارات Google وتخصيص الإعلانات معطّلة. لا يُستخدم Crashlytics أو Performance Monitoring.\n\nمدة الاحتفاظ ببيانات المستخدمين والأحداث في Google Analytics مضبوطة على شهرين، مع تعطيل إعادة المدة عند نشاط جديد. تسري التغييرات بعد 24 ساعة؛ وتحذف Google البيانات المنتهية في المعالجة الشهرية، وليس لحظة اكتمال الشهرين تمامًا. لا يشمل هذا الإعداد التقارير المجمّعة القياسية ولا يضمن إتاحتها إلى الأبد.\n\nلا يُخطط للاحتفاظ الطويل بإجماليات شهرية مجهولة الهوية إلا بعد مراجعة للخصوصية وتصدير متحقق منه يمنع التعرف على الهوية. لم يُجرَ أي تصدير من هذا النوع باستخدام بيانات حقيقية بعد؛ ولا تُعامل بيانات التحليلات الخام على أنها مجهولة الهوية.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. جهة الاتصال لدى Google لحماية البيانات: https://privacy.google.com/businesses/processorsupport\n\nمعالجة وتخزين بتكليف لتوفير تحليلات اختيارية لاستخدام التطبيق وتقارير إحصائية وتشغيل هذه الخدمة. لا تُستخدم البيانات للإعلانات أو التخصيص.\n\nبعد موافقتك على كلٍّ من جمع بيانات التحليلات واستخدامها ونقلها إلى الخارج، وتفعيل التحليلات، ترسل حزمة SDK الخاصة بـ Firebase Analytics البيانات عبر HTTPS إلى مركز لجمع البيانات أثناء استخدام التطبيق، ثم تُحوَّل إلى خوادم معالجة Google Analytics. قد يتم الإرسال بصورة غير متزامنة.\n\nالنطاق المحتمل للنقل إلى الخارج (استنادًا إلى المعلومات العامة المتاحة في 23 سبتمبر 2026): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. يعكس هذا النطاق المعالجة في البلدان التي توجد فيها المرافق وفقًا لما تسمح به شروط Google، وقوائم مرافقها المنشورة والمعالجين الفرعيين التابعين للخدمة المعنية. ولا يحدد مسارًا ثابتًا لكل مستخدم، ولا يعني نقل البيانات إلى جميع البلدان. تتضمن قوائم المرافق مواقع قيد التطوير، أما بلدان المعالجين الفرعيين فتشير إلى مواقع شركاتهم. سنُخطرك ونطلب موافقة منفصلة عند تغيير تفاصيل النقل المتفق عليها، بما في ذلك البلدان أو الجهات المستلمة.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nالموافقة على تحليلات الاستخدام منفصلة عن الموافقة على التعرّف الاختياري على ملصقات الطعام ومقاييس Google ML Kit الموضّحة منفصلًا. تغيير أحد الخيارين لا يغيّر الآخر.",
               "تكامل Health Connect للقراءة فقط. يقرأ DoseWeek الوزن والطول ونسبة دهون الجسم والكتلة الخالية من الدهون التي شاركتها، ولا يطلب إذن الكتابة أو الحذف، لذا لا يمكنه تغيير سجلات يملكها تطبيق آخر. وتُحفظ البيانات المقروءة في التخزين الخاص بالتطبيق ولا تُرسل إلى المطوّر.",
               "عند تفعيل تكامل Google Drive، يمكن للتطبيق رفع نسخة احتياطية مشفّرة إلى مجلد بيانات التطبيق الخاص بك في Drive. لا يحتفظ المطوّر بنسخة ولا بمفتاح. ويوضّح البند 4 ما يمكن أن يراه Drive وكيفية التعامل مع رمز الاسترداد.",
@@ -4456,21 +4456,21 @@
             "id": "accounts",
             "question": "هل أحتاج إلى حساب أو تسجيل دخول؟",
             "answers": [
-              "لا يوجد في DoseWeek 1.0.0 حساب خاص به ولا خادم للمطوّر، ولا يلزم أي منهما لاستخدام التطبيق. ويستخدم النسخ الاحتياطي الاختياري على Google Drive حساب Google الخاص بك، ويظل متوقفًا حتى تربطه بنفسك من الإعدادات. وفي كل الأحوال لا يستطيع المطوّر عرض سجلاتك."
+              "لا يوجد في DoseWeek 1.0.5 حساب خاص به ولا خادم للمطوّر، ولا يلزم أي منهما لاستخدام التطبيق. ويستخدم النسخ الاحتياطي الاختياري على Google Drive حساب Google الخاص بك، ويظل متوقفًا حتى تربطه بنفسك من الإعدادات. وفي كل الأحوال لا يستطيع المطوّر عرض سجلاتك."
             ]
           },
           {
             "id": "ai-health",
             "question": "هل يستخدم DoseWeek الذكاء الاصطناعي أو Health Connect؟",
             "answers": [
-              "لا يتضمن DoseWeek 1.0.0 لنظام Android ذكاءً اصطناعيًا توليديًا. يساعد التعرف الاختياري على الصوت وملصقات الطعام على الجهاز في الإدخال؛ وتتطلب تشخيصات SDK من Google للملصقات موافقة منفصلة كما هو موضح في سياسة الخصوصية. أما Health Connect فصار استيرادًا اختياريًا للقراءة فقط للوزن والطول ونسبة دهون الجسم والكتلة الخالية من الدهون: يطلب التطبيق أذونات قراءة فقط، ولا يطلب الكتابة أو الحذف أبدًا، ولا يستورد شيئًا قبل أن تمنحه ذلك الإذن. ولا يزال المستخدم يُدخل كل سجل جرعة ويؤكده يدويًا."
+              "لا يتضمن DoseWeek 1.0.5 لنظام Android ذكاءً اصطناعيًا توليديًا. يساعد التعرف الاختياري على الصوت وملصقات الطعام على الجهاز في الإدخال؛ وتتطلب تشخيصات SDK من Google للملصقات موافقة منفصلة كما هو موضح في سياسة الخصوصية. أما Health Connect فصار استيرادًا اختياريًا للقراءة فقط للوزن والطول ونسبة دهون الجسم والكتلة الخالية من الدهون: يطلب التطبيق أذونات قراءة فقط، ولا يطلب الكتابة أو الحذف أبدًا، ولا يستورد شيئًا قبل أن تمنحه ذلك الإذن. ولا يزال المستخدم يُدخل كل سجل جرعة ويؤكده يدويًا."
             ]
           },
           {
             "id": "notifications",
             "question": "هل توجد إشعارات أو تذكيرات أو أدوات مصغّرة؟",
             "answers": [
-              "تتوفر تذكيرات اختيارية وأداة مصغّرة للشاشة الرئيسية. يستطيع DoseWeek 1.0.0 جدولة تذكيرات محلية على جهازك للجرعة التالية، ولمتابعة بعد جرعة فائتة، ولانخفاض المخزون. تبقى متوقفة حتى تفعّلها وتمنح إذن الإشعارات. لا يكشف نص التذكير الافتراضي شيئًا عن علاجك؛ ولا يظهر اسم الدواء إلا إذا فعّلت ذلك، ولا تظهر الجرعات مطلقًا. النقر على التذكير لا يفعل سوى فتح التطبيق، لذا لا يُسجَّل أي شيء من الإشعار أبدًا. لا توجد تطبيقات للأجهزة القابلة للارتداء."
+              "تتوفر تذكيرات اختيارية وأداة مصغّرة للشاشة الرئيسية. يستطيع DoseWeek 1.0.5 جدولة تذكيرات محلية على جهازك للجرعة التالية، ولمتابعة بعد جرعة فائتة، ولانخفاض المخزون. تبقى متوقفة حتى تفعّلها وتمنح إذن الإشعارات. لا يكشف نص التذكير الافتراضي شيئًا عن علاجك؛ ولا يظهر اسم الدواء إلا إذا فعّلت ذلك، ولا تظهر الجرعات مطلقًا. النقر على التذكير لا يفعل سوى فتح التطبيق، لذا لا يُسجَّل أي شيء من الإشعار أبدًا. لا توجد تطبيقات للأجهزة القابلة للارتداء."
             ]
           },
           {
@@ -4612,7 +4612,7 @@
       },
       "home": {
         "title": "DoseWeek Android 版",
-        "versionScope": "本信息仅适用于 DoseWeek 1.0.0 Android 版。",
+        "versionScope": "本信息适用于 DoseWeek Android 版 1.0.0 (versionCode 12) 及更高版本，包括当前版本 1.0.5。",
         "intro": "DoseWeek 是一款本地记录应用，用于手动输入并确认每周注射计划、实际给药和跳过记录、库存数量、体重及腰围。除非您开启可选集成，记录都留在设备上。",
         "featureBadges": [
           "应用专属本地存储",
@@ -4628,8 +4628,8 @@
         "medicalNoticeBody": "DoseWeek 是个人记录工具，不是医疗器械。它不提供诊断、治疗或剂量及给药时间决策。请遵循处方信息和具备资质的医疗专业人员的指导。如认为可能发生紧急情况，请立即联系当地急救服务。"
       },
       "privacy": {
-        "title": "DoseWeek 1.0.0 Android 版隐私政策",
-        "scope": "本政策仅适用于 DoseWeek 1.0.0 Android 版。",
+        "title": "DoseWeek Android 版隐私政策",
+        "scope": "本政策适用于 DoseWeek Android 版 1.0.0 (versionCode 12) 及更高版本，包括当前版本 1.0.5。",
         "sections": [
           {
             "id": "scope",
@@ -4659,7 +4659,7 @@
             "id": "no-collection",
             "title": "3. 可选服务和使用情况分析",
             "paragraphs": [
-              "在默认状态下，DoseWeek 1.0.0 不使用以下功能或自动处理。每条记录均由用户手动输入并确认。",
+              "在默认状态下，DoseWeek 1.0.5 不使用以下功能或自动处理。每条记录均由用户手动输入并确认。",
               "日程、给药记录、备注、身体测量等健康记录默认保存在设备上。开发者不会收到这些记录。导出、备份和可选集成另有说明。可选使用情况分析遵循以下规则。\n\n确认阅读必需的隐私告知不代表允许分析。仅在您分别同意使用情况分析和境外传输后才会启用分析。两项可选设置默认均为关闭；拒绝或撤回其中任一项，都会关闭分析。\n\n使用情况分析为可选功能，初始关闭。必须确认已阅读隐私告知，但这不等于同意分析。只有另行允许后，Google Analytics for Firebase 才会启动，并向 Google 发送首次打开、会话、使用频率、使用时长以及应用或操作系统更新等自动生命周期和技术事件。开发者通过报告了解应用使用情况。DoseWeek 不添加自定义事件。\n\n分析可能包含 Firebase 生成的应用实例或安装标识符、事件时间、应用版本、语言、设备品牌、型号和类别、含次要版本号的操作系统信息及屏幕分辨率。Google 会为服务运行和包括城市在内的大致位置推断处理 IP 地址。由城市推导的坐标不是您的 GPS 位置。分析不使用 GPS 或位置权限。Google 在其服务器上处理数据，服务器可能位于您所在国家或地区之外；开发者可以查看报告。这些记录本身并非匿名数据。\n\nDoseWeek 不向分析发送健康记录、药物名称、剂量、备注、文字或语音输入、页面名称或路径。不设置用户 ID 或自定义用户属性。广告 ID、Android ID (SSAID) 收集、自动页面报告、Google 信号及广告个性化均已关闭。不使用 Crashlytics 或 Performance Monitoring。\n\nGoogle Analytics 的用户级和事件级数据保留期设为 2 个月，不因新活动而重置。设置变更在 24 小时后生效；到期数据会在 Google 的每月处理过程中删除，并非恰好满两个月就立即删除。此设置不适用于标准汇总报告，也不保证这些报告永久可用。\n\n只有经过隐私审查，并通过经验证的导出确保无法识别个人后，才计划长期保存匿名月度总计。目前尚未使用真实数据进行过这种导出，也不将原始分析数据视为匿名数据。\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google 数据保护联系渠道：https://privacy.google.com/businesses/processorsupport\n\n为可选的应用使用情况分析、统计报告及该服务的运营进行受托处理和存储。不用于广告或个性化。\n\n在您同时同意分析数据的收集和使用及境外传输，并开启分析后，Firebase Analytics SDK 会在应用使用过程中通过 HTTPS 向收集中心发送数据，再转发至 Google Analytics 处理服务器。传输可能以异步方式进行。\n\n可能涉及的境外传输范围（依据截至 2026 年 9 月 23 日的公开信息）：Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay。此范围基于 Google 条款所允许的在设施所在国家进行的处理，以及其公开的设施列表和相关服务的分包处理者列表。它并不代表每位用户的固定传输路径，也不表示数据会传输至所有国家。设施列表包含开发中的设施，分包处理者的国家指其公司所在地。如需变更已获同意的传输事项，包括国家或接收方，我们将通知您并另行征求同意。\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\n使用情况分析的同意与可选食品标签识别及另行披露的 Google ML Kit 指标的同意相互独立。更改其中一项不会改变另一项。",
               "Health Connect 集成为只读。DoseWeek 读取您已共享的体重、身高、体脂率和去脂体重，不申请写入或删除权限，因此无法更改其他应用拥有的记录。读取到的信息保存在应用专属存储空间，不会发送给开发者。",
               "开启 Google 云端硬盘集成后，应用可将加密备份上传至您本人的云端硬盘应用数据文件夹。开发者既无副本也无密钥。第 4 节说明云端硬盘能看到什么，以及恢复码如何处理。",
@@ -4783,21 +4783,21 @@
             "id": "accounts",
             "question": "需要登录或创建账号吗？",
             "answers": [
-              "DoseWeek 1.0.0 没有自己的账号，也没有开发者服务器，使用本应用两者都不需要。可选的 Google 云端硬盘备份使用您本人的 Google 账号，在您于设置中连接之前一直处于关闭状态。无论哪种情况，开发者都无法查看您的记录。"
+              "DoseWeek 1.0.5 没有自己的账号，也没有开发者服务器，使用本应用两者都不需要。可选的 Google 云端硬盘备份使用您本人的 Google 账号，在您于设置中连接之前一直处于关闭状态。无论哪种情况，开发者都无法查看您的记录。"
             ]
           },
           {
             "id": "ai-health",
             "question": "DoseWeek 是否使用 AI 或 Health Connect？",
             "answers": [
-              "Android 版 DoseWeek 1.0.0 不包含生成式AI。可选的设备端语音和食品标签识别辅助输入；Google食品标签SDK的诊断数据处理需另行征得同意，详情见隐私政策。 Health Connect 现在是可选的只读导入，读取体重、身高、体脂率和去脂体重：应用只申请读取权限，绝不申请写入或删除权限，在您授予该权限之前不会导入任何内容。每条给药记录仍由用户手动输入并确认。"
+              "Android 版 DoseWeek 1.0.5 不包含生成式AI。可选的设备端语音和食品标签识别辅助输入；Google食品标签SDK的诊断数据处理需另行征得同意，详情见隐私政策。 Health Connect 现在是可选的只读导入，读取体重、身高、体脂率和去脂体重：应用只申请读取权限，绝不申请写入或删除权限，在您授予该权限之前不会导入任何内容。每条给药记录仍由用户手动输入并确认。"
             ]
           },
           {
             "id": "notifications",
             "question": "是否提供通知、提醒或小组件？",
             "answers": [
-              "提供可选提醒和主屏幕小组件。DoseWeek 1.0.0 可在您的设备上安排本地提醒，用于下一次给药、错过给药后的跟进以及余量不足。在您开启提醒并授予通知权限之前，提醒保持关闭。默认提醒文字不显示任何治疗内容；药物名称仅在您开启后才显示，剂量绝不显示。点按提醒只会打开应用，因此通知本身不会记录任何内容。没有穿戴设备应用。"
+              "提供可选提醒和主屏幕小组件。DoseWeek 1.0.5 可在您的设备上安排本地提醒，用于下一次给药、错过给药后的跟进以及余量不足。在您开启提醒并授予通知权限之前，提醒保持关闭。默认提醒文字不显示任何治疗内容；药物名称仅在您开启后才显示，剂量绝不显示。点按提醒只会打开应用，因此通知本身不会记录任何内容。没有穿戴设备应用。"
             ]
           },
           {
@@ -4939,7 +4939,7 @@
       },
       "home": {
         "title": "DoseWeek Android 版",
-        "versionScope": "本資訊僅適用於 DoseWeek 1.0.0 Android 版。",
+        "versionScope": "本資訊適用於 DoseWeek Android 版 1.0.0 (versionCode 12) 及更新版本，包括目前版本 1.0.5。",
         "intro": "DoseWeek 是一款本機紀錄應用程式，用於手動輸入並確認每週注射排程、實際給藥與略過紀錄、庫存數量、體重及腰圍。除非您開啟可選整合，紀錄都留在裝置上。",
         "featureBadges": [
           "應用程式專用本機儲存",
@@ -4955,8 +4955,8 @@
         "medicalNoticeBody": "DoseWeek 是個人紀錄工具，不是醫療器材。它不提供診斷、治療或劑量與給藥時間的決策。請遵循仿單資訊與合格醫療專業人員的指導。如果您認為可能發生緊急狀況，請立即聯絡當地緊急服務。"
       },
       "privacy": {
-        "title": "DoseWeek 1.0.0 Android 版隱私權政策",
-        "scope": "本政策僅適用於 DoseWeek 1.0.0 Android 版。",
+        "title": "DoseWeek Android 版隱私權政策",
+        "scope": "本政策適用於 DoseWeek Android 版 1.0.0 (versionCode 12) 及更新版本，包括目前版本 1.0.5。",
         "sections": [
           {
             "id": "scope",
@@ -4986,7 +4986,7 @@
             "id": "no-collection",
             "title": "3. 選用服務和使用情形分析",
             "paragraphs": [
-              "在預設狀態下，DoseWeek 1.0.0 不使用下列功能或自動處理。每筆紀錄均由使用者手動輸入並確認。",
+              "在預設狀態下，DoseWeek 1.0.5 不使用下列功能或自動處理。每筆紀錄均由使用者手動輸入並確認。",
               "排程、給藥紀錄、備註、身體測量等健康紀錄預設保存在裝置上。開發者不會收到這些紀錄。匯出、備份和選用整合另有說明。選用的使用情形分析遵循以下規則。\n\n確認閱讀必要的隱私告知不代表允許分析。只有在您分別同意使用情況分析與境外傳輸後，才會啟用分析。兩項選擇性設定預設皆為關閉；拒絕或撤回其中任一項，都會關閉分析。\n\n使用情形分析是選用功能，初始為關閉。必須確認已閱讀隱私告知，但這不等於同意分析。只有另行允許後，Google Analytics for Firebase 才會啟動，並向 Google 傳送首次開啟、工作階段、使用頻率、使用時間及 App 或作業系統更新等自動生命週期與技術事件。開發者透過報表瞭解 App 使用情形。DoseWeek 不加入自訂事件。\n\n分析可能包含 Firebase 產生的 App 執行個體或安裝識別碼、事件時間、App 版本、語言、裝置品牌、型號和類別、含次要版本號的作業系統資訊及螢幕解析度。Google 會為服務運作及包含城市在內的概略位置推估處理 IP 位址。由城市推導的座標不是您的 GPS 位置。分析不使用 GPS 或位置權限。Google 在其伺服器上處理資料，伺服器可能位於您所在國家或地區以外；開發者可以查看報表。這些紀錄本身並非匿名資料。\n\nDoseWeek 不會將健康紀錄、藥物名稱、劑量、備註、文字或語音輸入、畫面名稱或路徑傳送至分析。不設定使用者 ID 或自訂使用者屬性。廣告 ID、Android ID (SSAID) 蒐集、自動畫面報表、Google 信號和廣告個人化均已關閉。不使用 Crashlytics 或 Performance Monitoring。\n\nGoogle Analytics 的使用者層級與事件層級資料保留期限設為 2 個月，不因新活動而重設。設定變更於 24 小時後生效；到期資料會在 Google 的每月處理程序中刪除，並非剛滿兩個月就立即刪除。此設定不適用於標準彙總報表，也不保證這些報表永久可用。\n\n只有經過隱私審查，並以經驗證的匯出確保無法識別個人後，才計畫長期保存匿名月度總計。目前尚未使用真實資料進行過這項匯出，也不將原始分析資料視為匿名資料。\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google 資料保護聯絡管道：https://privacy.google.com/businesses/processorsupport\n\n為選擇性的 App 使用情況分析、統計報告及該服務的營運進行受託處理與儲存。不用於廣告或個人化。\n\n當您同時同意分析資料的蒐集與使用及境外傳輸，並開啟分析後，Firebase Analytics SDK 會在使用 App 的過程中透過 HTTPS 將資料傳送至蒐集中心，再轉送至 Google Analytics 處理伺服器。傳輸可能以非同步方式進行。\n\n可能涉及的境外傳輸範圍（依據截至 2026 年 9 月 23 日的公開資訊）：Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay。此範圍依據 Google 條款允許在設施所在國家進行的處理，以及其公開的設施清單和相關服務的次處理者清單。這並不代表每位使用者的固定傳輸路徑，也不表示資料會傳輸至所有國家。設施清單包含開發中的設施，次處理者的國家則指其公司所在地。若要變更已取得同意的傳輸事項，包括國家或接收者，我們會通知您並另外徵求同意。\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\n使用情形分析的同意，與選用食品標籤辨識及另行揭露的 Google ML Kit 指標的同意相互獨立。變更其中一項不會改變另一項。",
               "Health Connect 整合為唯讀。DoseWeek 讀取您已分享的體重、身高、體脂率與去脂體重，不要求寫入或刪除權限，因此無法變更其他應用程式擁有的紀錄。讀取到的資訊保存在應用程式專用儲存空間，不會傳送給開發者。",
               "開啟 Google 雲端硬碟整合後，應用程式可將加密備份上傳至您本人的雲端硬碟應用程式資料夾。開發者既無副本也無金鑰。第 4 節說明雲端硬碟能看到什麼，以及復原碼如何處理。",
@@ -5110,21 +5110,21 @@
             "id": "accounts",
             "question": "需要登入或建立帳號嗎？",
             "answers": [
-              "DoseWeek 1.0.0 沒有自己的帳號，也沒有開發者伺服器，使用本應用程式兩者都不需要。可選的 Google 雲端硬碟備份使用您本人的 Google 帳號，在您於設定中連線之前一直保持關閉。無論哪一種情況，開發者都無法查看您的紀錄。"
+              "DoseWeek 1.0.5 沒有自己的帳號，也沒有開發者伺服器，使用本應用程式兩者都不需要。可選的 Google 雲端硬碟備份使用您本人的 Google 帳號，在您於設定中連線之前一直保持關閉。無論哪一種情況，開發者都無法查看您的紀錄。"
             ]
           },
           {
             "id": "ai-health",
             "question": "DoseWeek 是否使用 AI 或 Health Connect？",
             "answers": [
-              "Android 版 DoseWeek 1.0.0 不包含生成式AI。選用的裝置端語音與食品標籤辨識協助輸入；Google食品標籤SDK的診斷資料處理需另行取得同意，詳見隱私政策。 Health Connect 現在是可選的唯讀匯入，讀取體重、身高、體脂率與去脂體重：應用程式只要求讀取權限，絕不要求寫入或刪除權限，在您授予該權限之前不會匯入任何內容。每筆給藥紀錄仍由使用者手動輸入並確認。"
+              "Android 版 DoseWeek 1.0.5 不包含生成式AI。選用的裝置端語音與食品標籤辨識協助輸入；Google食品標籤SDK的診斷資料處理需另行取得同意，詳見隱私政策。 Health Connect 現在是可選的唯讀匯入，讀取體重、身高、體脂率與去脂體重：應用程式只要求讀取權限，絕不要求寫入或刪除權限，在您授予該權限之前不會匯入任何內容。每筆給藥紀錄仍由使用者手動輸入並確認。"
             ]
           },
           {
             "id": "notifications",
             "question": "是否提供通知、提醒或小工具？",
             "answers": [
-              "提供可選提醒和主畫面小工具。DoseWeek 1.0.0 可在您的裝置上排程本機提醒，用於下一次給藥、錯過給藥後的追蹤以及餘量不足。在您開啟提醒並授予通知權限之前，提醒維持關閉。預設提醒文字不會顯示任何治療內容；藥物名稱僅在您開啟後才顯示，劑量絕不顯示。點按提醒只會開啟應用程式，因此通知本身不會記錄任何內容。沒有穿戴裝置應用程式。"
+              "提供可選提醒和主畫面小工具。DoseWeek 1.0.5 可在您的裝置上排程本機提醒，用於下一次給藥、錯過給藥後的追蹤以及餘量不足。在您開啟提醒並授予通知權限之前，提醒維持關閉。預設提醒文字不會顯示任何治療內容；藥物名稱僅在您開啟後才顯示，劑量絕不顯示。點按提醒只會開啟應用程式，因此通知本身不會記錄任何內容。沒有穿戴裝置應用程式。"
             ]
           },
           {
@@ -5266,7 +5266,7 @@
       },
       "home": {
         "title": "Android için DoseWeek",
-        "versionScope": "Bu bilgiler yalnızca Android için DoseWeek 1.0.0 sürümü için geçerlidir.",
+        "versionScope": "Bu bilgiler, Android için DoseWeek 1.0.0 (versionCode 12) ve sonraki sürümler için geçerlidir; güncel sürüm 1.0.5 de buna dahildir.",
         "intro": "DoseWeek; kullanıcının girip onayladığı haftalık enjeksiyon planlarını, gerçekleşen ve atlanan uygulamaları, stok sayısını, ağırlığı ve bel çevresini yerel olarak kaydeden bir uygulamadır. İsteğe bağlı bir entegrasyonu açmadığınız sürece kayıtlar cihazda kalır.",
         "featureBadges": [
           "Uygulamaya özel yerel depolama",
@@ -5282,8 +5282,8 @@
         "medicalNoticeBody": "DoseWeek kişisel bir kayıt aracıdır; tıbbi cihaz değildir. Tanı, tedavi ya da doz veya uygulama zamanı kararı sağlamaz. Ürünün reçete bilgilerini ve nitelikli bir sağlık uzmanının yönlendirmesini izleyin. Acil bir durum olabileceğini düşünüyorsanız derhâl yerel acil yardım hizmetine başvurun."
       },
       "privacy": {
-        "title": "Android için DoseWeek 1.0.0 Gizlilik Politikası",
-        "scope": "Bu politika yalnızca Android için DoseWeek 1.0.0 sürümü için geçerlidir.",
+        "title": "Android için DoseWeek Gizlilik Politikası",
+        "scope": "Bu politika, Android için DoseWeek 1.0.0 (versionCode 12) ve sonraki sürümler için geçerlidir; güncel sürüm 1.0.5 de buna dahildir.",
         "sections": [
           {
             "id": "scope",
@@ -5313,7 +5313,7 @@
             "id": "no-collection",
             "title": "3. İsteğe bağlı hizmetler ve kullanım analizi",
             "paragraphs": [
-              "DoseWeek 1.0.0 varsayılan durumunda aşağıdaki özellikleri veya otomatik işlemleri kullanmaz. Her kayıt kullanıcı tarafından elle girilir ve onaylanır.",
+              "DoseWeek 1.0.5 varsayılan durumunda aşağıdaki özellikleri veya otomatik işlemleri kullanmaz. Her kayıt kullanıcı tarafından elle girilir ve onaylanır.",
               "Programlar, ilaç uygulama kayıtları, notlar ve vücut ölçümleri dahil sağlık kayıtları varsayılan olarak cihazınızda kalır. Geliştirici bu kayıtları almaz. Dışa aktarma, yedekleme ve isteğe bağlı entegrasyonlar ayrı açıklanır. İsteğe bağlı kullanım analizi aşağıdaki kurallara tabidir.\n\nZorunlu gizlilik bildirimini okuduğunuzu onaylamak analize izin vermez. Analiz, yalnızca kullanım analizi ve yurt dışına aktarım için ayrı ayrı onay verildikten sonra etkinleştirilir. İsteğe bağlı iki seçenek de varsayılan olarak kapalıdır ve bunlardan biri reddedilirse veya geri çekilirse analiz devre dışı bırakılır.\n\nKullanım analizi isteğe bağlıdır ve başlangıçta kapalıdır. Zorunlu gizlilik bildirimini okuduğunuzu onaylamak, analiz izni vermez. Yalnızca ayrıca izin verdikten sonra Google Analytics for Firebase başlar; ilk açılışlar, oturumlar, kullanım sıklığı ve süresi ile uygulama veya işletim sistemi güncellemeleri gibi otomatik yaşam döngüsü ve teknik olayları Google'a gönderir. Geliştirici uygulama kullanımını anlamak için raporlardan yararlanır. DoseWeek özel olay eklemez.\n\nAnaliz; Firebase'in oluşturduğu uygulama örneği veya kurulum tanımlayıcılarını, olay zamanlarını, uygulama sürümünü, dili, cihaz markasını, modelini ve sınıfını, alt sürümler dahil işletim sistemi bilgilerini ve ekran çözünürlüğünü içerebilir. Google, hizmeti işletmek ve şehir dahil yaklaşık konumu çıkarmak için IP adreslerini işler. Şehirden türetilen koordinatlar sizin GPS konumunuz değildir. Analiz GPS veya konum izni kullanmaz. Google verileri ülkeniz dışında da bulunabilen sunucularında işler; geliştirici raporları görebilir. Bu kayıtlar kendiliğinden anonim değildir.\n\nDoseWeek sağlık kayıtlarını, ilaç adlarını, dozları, notları, yazılı veya sesli girdileri, ekran adlarını veya yolları analize göndermez. Kullanıcı kimliği ya da özel kullanıcı özellikleri ayarlamaz. Reklam kimlikleri, Android ID (SSAID) toplama, otomatik ekran raporlama, Google sinyalleri ve reklam kişiselleştirme kapalıdır. Crashlytics ve Performance Monitoring kullanılmaz.\n\nGoogle Analytics kullanıcı ve olay düzeyindeki veriler için saklama süresi 2 aydır; yeni etkinlikte süreyi sıfırlama kapalıdır. Değişiklikler 24 saat sonra uygulanır. Süresi dolan veriler tam iki ayın dolduğu anda değil, Google'ın aylık işleminde silinir. Bu ayar standart toplu raporları kapsamaz ve raporların kalıcı kullanılabilirliğini garanti etmez.\n\nAnonim aylık toplamların uzun süre saklanması yalnızca kimlik belirlemeyi önleyen gizlilik incelemesi ve doğrulanmış dışa aktarmadan sonra planlanmaktadır. Bu tür bir dışa aktarma henüz gerçek verilerle yapılmamıştır; ham analiz verileri anonim sayılmaz.\n\nGoogle LLC — 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google veri koruma iletişim adresi: https://privacy.google.com/businesses/processorsupport\n\nİsteğe bağlı uygulama kullanım analizi, istatistik raporları ve bu hizmetin işletilmesi için yetki verilen işleme ve saklama. Reklam veya kişiselleştirme amacıyla kullanılmaz.\n\nHem analiz verilerinin toplanmasına ve kullanılmasına hem de yurt dışına aktarılmasına izin verip analizi etkinleştirdikten sonra Firebase Analytics SDK, uygulama kullanımı sırasında verileri HTTPS üzerinden bir toplama merkezine gönderir. Veriler buradan Google Analytics işleme sunucularına iletilir. İletim eşzamansız olabilir.\n\nOlası yurt dışı aktarım kapsamı (23 Eylül 2026 itibarıyla kamuya açık bilgiler): Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Croatia, Czech Republic, Denmark, Finland, France, Germany, India, Ireland, Israel, Italy, Japan, Kenya, Malaysia, Mexico, Netherlands, Norway, Peru, Philippines, Poland, Portugal, Singapore, Spain, Sweden, Switzerland, Taiwan, Thailand, Turkey, United Arab Emirates, United Kingdom, United States, Uruguay. Bu kapsam, Google şartlarının izin verdiği tesislerin bulunduğu ülkelerdeki işleme ile Google’ın yayımladığı tesis ve ilgili hizmetin alt işleyen listelerine dayanır. Her kullanıcı için sabit bir aktarım yolu veya tüm ülkelere aktarım anlamına gelmez. Tesis listelerinde geliştirme aşamasındaki tesisler de bulunur; alt işleyen ülkeleri ise şirketlerin bulunduğu yerleri belirtir. Ülkeler veya alıcılar dahil, onay verdiğiniz aktarım ayrıntıları değiştiğinde sizi bilgilendirir ve ayrıca onayınızı isteriz.\n\nPIPA Article 28-8(1)(1)\n\nhttps://business.safety.google/adsprocessorterms/\n\nhttps://datacenters.google/locations/\n\nhttps://business.safety.google/adssubprocessors/\n\nKullanım analizi izni, isteğe bağlı gıda etiketi tanıma ve ayrıca açıklanan Google ML Kit ölçümleri için verilen izinden ayrıdır. Bir seçimi değiştirmek diğerini değiştirmez.",
               "Health Connect entegrasyonu yalnızca okumadır. DoseWeek, paylaştığınız ağırlık, boy, vücut yağ oranı ve yağsız vücut kütlesini okur; yazma veya silme izni istemez, bu nedenle başka bir uygulamaya ait kayıtları değiştiremez. Okuduğu veriler uygulamaya özel depolamada kalır ve geliştiriciye gönderilmez.",
               "Google Drive entegrasyonu açıkken uygulama, şifrelenmiş bir yedeği kendi Drive uygulama verileri klasörünüze yükleyebilir. Geliştiricide ne kopya ne de anahtar bulunur. Drive'ın neleri görebildiği ve kurtarma kodunun nasıl ele alındığı 4. bölümde açıklanır.",
@@ -5437,21 +5437,21 @@
             "id": "accounts",
             "question": "Oturum açmam veya hesap oluşturmam gerekir mi?",
             "answers": [
-              "DoseWeek 1.0.0'ın kendi hesabı da geliştirici sunucusu da yoktur ve uygulamayı kullanmak için ikisi de gerekmez. İsteğe bağlı Google Drive yedeklemesi kendi Google Hesabınızı kullanır ve siz Ayarlar'da bağlayana kadar kapalı kalır. Her durumda geliştirici kayıtlarınızı göremez."
+              "DoseWeek 1.0.5'in kendi hesabı da geliştirici sunucusu da yoktur ve uygulamayı kullanmak için ikisi de gerekmez. İsteğe bağlı Google Drive yedeklemesi kendi Google Hesabınızı kullanır ve siz Ayarlar'da bağlayana kadar kapalı kalır. Her durumda geliştirici kayıtlarınızı göremez."
             ]
           },
           {
             "id": "ai-health",
             "question": "DoseWeek yapay zekâ veya Health Connect kullanıyor mu?",
             "answers": [
-              "Android için DoseWeek 1.0.0 sürümünde üretken yapay zekâ yoktur. İsteğe bağlı cihaz içi ses ve gıda etiketi tanıma girişe yardımcı olur; Google gıda etiketi SDK tanılaması, Gizlilik Politikası’nda açıklandığı üzere ayrı onay gerektirir. Health Connect artık ağırlık, boy, vücut yağ oranı ve yağsız vücut kütlesinin isteğe bağlı, yalnızca okuyan bir içe aktarımıdır: uygulama sadece okuma izni ister, hiçbir zaman yazma veya silme izni istemez ve siz bu izni verene kadar hiçbir şey içe aktarmaz. Her ilaç uygulaması kaydı yine elle girilir ve onaylanır."
+              "Android için DoseWeek 1.0.5 sürümünde üretken yapay zekâ yoktur. İsteğe bağlı cihaz içi ses ve gıda etiketi tanıma girişe yardımcı olur; Google gıda etiketi SDK tanılaması, Gizlilik Politikası’nda açıklandığı üzere ayrı onay gerektirir. Health Connect artık ağırlık, boy, vücut yağ oranı ve yağsız vücut kütlesinin isteğe bağlı, yalnızca okuyan bir içe aktarımıdır: uygulama sadece okuma izni ister, hiçbir zaman yazma veya silme izni istemez ve siz bu izni verene kadar hiçbir şey içe aktarmaz. Her ilaç uygulaması kaydı yine elle girilir ve onaylanır."
             ]
           },
           {
             "id": "notifications",
             "question": "Bildirimler, hatırlatıcılar veya widget'lar var mı?",
             "answers": [
-              "İsteğe bağlı hatırlatıcılar ve bir ana ekran widget’ı mevcuttur. DoseWeek 1.0.0, cihazınızda bir sonraki uygulama, kaçırılan bir uygulamanın ardından takip ve düşük stok için yerel hatırlatıcılar planlayabilir. Siz açıp bildirim iznini verene kadar kapalı kalırlar. Varsayılan olarak hatırlatıcı metni tedaviniz hakkında hiçbir şey açıklamaz; ilaç adı yalnızca siz etkinleştirirseniz görünür ve doz miktarları hiçbir zaman görünmez. Bir hatırlatıcıya dokunmak yalnızca uygulamayı açar; dolayısıyla bir bildirimden asla hiçbir şey kaydedilmez. Giyilebilir cihaz uygulaması yoktur."
+              "İsteğe bağlı hatırlatıcılar ve bir ana ekran widget’ı mevcuttur. DoseWeek 1.0.5, cihazınızda bir sonraki uygulama, kaçırılan bir uygulamanın ardından takip ve düşük stok için yerel hatırlatıcılar planlayabilir. Siz açıp bildirim iznini verene kadar kapalı kalırlar. Varsayılan olarak hatırlatıcı metni tedaviniz hakkında hiçbir şey açıklamaz; ilaç adı yalnızca siz etkinleştirirseniz görünür ve doz miktarları hiçbir zaman görünmez. Bir hatırlatıcıya dokunmak yalnızca uygulamayı açar; dolayısıyla bir bildirimden asla hiçbir şey kaydedilmez. Giyilebilir cihaz uygulaması yoktur."
             ]
           },
           {
