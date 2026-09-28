@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import io
 import re
+import unittest
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -14,6 +16,7 @@ from pathlib import Path
 from site_assets import stylesheet_path
 from urllib.parse import unquote, urlsplit
 
+import korean_tone
 import legal_release
 import render_ios
 import render_home
@@ -246,7 +249,7 @@ def android_guard_regression_check(catalog: dict[str, object]) -> None:
     missing_version_scope = copy.deepcopy(catalog)
     scoped_answer = missing_version_scope["locales"]["ja"]["support"]["faq"][2]["answers"][0]
     missing_version_scope["locales"]["ja"]["support"]["faq"][2]["answers"][0] = (
-        scoped_answer.replace("DoseWeek 1.0.0", "DoseWeek")
+        scoped_answer.replace("DoseWeek 1.0.5", "DoseWeek")
     )
     expect_rejected(missing_version_scope, "a localized AI/Health FAQ without version scope")
 
@@ -272,6 +275,29 @@ def android_guard_regression_check(catalog: dict[str, object]) -> None:
         "types, weakened backup/version/emergency wording, and ambiguous Spanish decryption "
         "copy without rejecting Spanish propios"
     )
+
+
+def korean_tone_check() -> str:
+    """Run the Korean 해요체 self-tests, then require zero non-allow-listed violations."""
+    suite = unittest.defaultTestLoader.loadTestsFromName("test_korean_tone")
+    result = unittest.TextTestRunner(stream=io.StringIO(), verbosity=0).run(suite)
+    assert result.wasSuccessful() and result.testsRun, (
+        f"scripts/test_korean_tone.py: {len(result.failures)} failures, {len(result.errors)} errors; "
+        "run python3 -m unittest discover -s scripts -p test_korean_tone.py"
+    )
+    entries, files = korean_tone.load_entries()
+    report = korean_tone.build_report(entries, files)
+    first = report["violations"][:5]
+    assert not report["violations"], (
+        f"Korean tone: {report['counts']['total']} violations, e.g. "
+        + "; ".join(f"{item['file']} {item['key']} [{item['rule']}] {item['sentence']}" for item in first)
+        + "; run python3 scripts/korean_tone.py"
+    )
+    assert not report["allowlist"]["stale"], (
+        f"scripts/korean_tone_allowlist.json: stale entries {report['allowlist']['stale']}"
+    )
+    return (f"Korean tone ({result.testsRun} self-tests, {report['scanned']['sentences']} sentences, "
+            f"{report['allowlist']['suppressed']} allow-listed)")
 
 
 def main() -> None:
@@ -446,8 +472,8 @@ def main() -> None:
         "Deleted records are not restored.",
         "DoseWeekを再起動",
         "削除した記録が復元されることはありません。",
-        "DoseWeek를 재실행",
-        "삭제된 기록은 복원되지 않습니다.",
+        "DoseWeek를 다시 실행",
+        "삭제된 기록은 복원되지 않아요.",
     ):
         assert support_disclosure in support_text, (
             f"support/index.html: missing cleanup recovery guidance {support_disclosure!r}"
@@ -469,6 +495,8 @@ def main() -> None:
         "immediately deletes every record stored on your device",
         "デバイスに保存されたすべての記録が直ちに削除されます",
         "기기에 저장된 모든 기록이 즉시 삭제됩니다",
+        "기기에 저장된 모든 기록이 즉시 삭제돼요",
+        "기기에 저장된 모든 기록이 바로 삭제돼요",
     ):
         assert overclaim not in privacy_text and overclaim not in support_text, (
             f"site must not overclaim physical deletion timing: {overclaim!r}"
@@ -477,7 +505,7 @@ def main() -> None:
     for app_lock_guidance in (
         "App Lock cannot be turned off without authentication.",
         "認証せずにアプリロックをオフにすることはできません。",
-        "인증 없이는 앱 잠금을 끌 수 없습니다.",
+        "인증 없이는 앱 잠금을 끌 수 없어요.",
     ):
         assert app_lock_guidance in support_text, (
             f"support/index.html: missing App Lock recovery guidance {app_lock_guidance!r}"
@@ -533,13 +561,14 @@ def main() -> None:
                     f"{identifier}: the version-scope line must identify the exact version"
                 )
 
-    for path, page, languages, second_release_version in (
+    for path, page, languages, second_release_version, scope_overrides in (
         # iOS: the notice names the marketing version 1.0.5 but no build, because the store build
         # number is chosen at upload
         (ROOT / "support/index.html", support_page, ALL_LANGUAGES,
-         f"iOS {render_ios.PAGE_VERSION}"),
+         f"iOS {render_ios.PAGE_VERSION}", {}),
+        # Android: owner decision 2026-09-25, Android 14 is the minimum from versionCode 13
         (ROOT / "android/support/index.html", android_support, ANDROID_LANGUAGES,
-         "versionCode 12"),
+         "versionCode 12", {"devices": "versionCode 13"}),
     ):
         source = path.read_text(encoding="utf-8")
         for language in languages:
@@ -551,7 +580,7 @@ def main() -> None:
                 assert entry is not None, identifier
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
                 assert len(paragraphs) == 2, identifier
-                assert second_release_version in paragraphs[0], (
+                assert scope_overrides.get(topic, second_release_version) in paragraphs[0], (
                     f"{identifier}: the version-scope line must name the version it applies to"
                 )
                 if path.parent.name == "support" and path.parent.parent == ROOT:
@@ -723,6 +752,8 @@ def main() -> None:
     assert len(import_page.summary_markers) == 3 * 17
     assert all(markers == ["true"] for markers in import_page.summary_markers)
 
+    tone = korean_tone_check()
+
     parity = []
     if arguments.catalog:
         parity.append("iOS app-catalog parity")
@@ -731,7 +762,7 @@ def main() -> None:
     suffix = f", and {' + '.join(parity)}" if parity else ""
     print(
         f"OK: {len(HTML_FILES)} pages, local links, locale panels, social metadata, "
-        f"accessible FAQ markers, 44px key targets, critical disclosures{suffix}"
+        f"accessible FAQ markers, 44px key targets, critical disclosures, {tone}{suffix}"
     )
 
 

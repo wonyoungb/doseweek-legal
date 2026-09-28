@@ -47,6 +47,11 @@ SECOND_RELEASE_TOPICS = (
     "meals", "dates", "charts", "calendar", "backup", "devices", "import",
 )
 SECOND_RELEASE_VERSION = "versionCode 12"
+# owner decision 2026-09-25: Android 14 is the minimum from versionCode 13, so the devices answer
+# is scoped to that release; the other second-release topics still describe versionCode 12
+MINIMUM_ANDROID_VERSION_CODE = "versionCode 13"
+# the release number follows the word Android, which Polish inflects (Androidem 14)
+MINIMUM_ANDROID_RELEASE = re.compile(r"Android\w* 14(?!\d)")
 REQUIRED_EMERGENCY_SERVICE_PHRASES = {
     "es": "servicios de emergencia locales",
     "it": "servizi di emergenza locali",
@@ -396,7 +401,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["schemaVersion"] == 1
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
-    assert catalog["versionName"] == "1.0.0"
+    assert catalog["versionName"] == "1.0.5"
     assert catalog["effectiveDate"] == expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
@@ -585,9 +590,13 @@ def validate_catalog(catalog: dict[str, object]) -> None:
 
         for topic in SECOND_RELEASE_TOPICS:
             notice = faq_by_id[f"candidate2-{topic}"]["answers"][0]
-            assert SECOND_RELEASE_VERSION in notice, (
+            scope = MINIMUM_ANDROID_VERSION_CODE if topic == "devices" else SECOND_RELEASE_VERSION
+            assert scope in notice, (
                 f"{locale}: second-release FAQ {topic} must name the version it applies to"
             )
+        assert MINIMUM_ANDROID_RELEASE.search(faq_by_id["candidate2-devices"]["answers"][1]), (
+            f"{locale}: the devices answer must name the minimum Android version"
+        )
         assert SECOND_RELEASE_VERSION in policy_by_id["next-release"]["paragraphs"][0], (
             f"{locale}: section 8 must name the version it describes"
         )
