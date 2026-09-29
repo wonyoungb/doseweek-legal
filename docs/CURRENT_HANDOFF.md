@@ -31,19 +31,23 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
   support pages, and the new Terms of Use route `/terms/` (`docs/terms-content.json`,
   `scripts/render_terms.py`). The live 1.0.5 apps have none of these features. Nothing is merged
   to `main`, pushed for publication or deployed.
-- Locales other than en and ko hold English placeholders in the new and changed fields (the
-  per-language titles and descriptions hold interim wording); a translation step replaces them.
-  No native-speaker review is claimed.
-- Local checks on 2026-09-29: every renderer `--check`, `check_site.py`, `korean_tone.py` and the
-  four unit-test modules pass. `check_site.py --release` fails by design (date not set).
+- The new and changed fields are translated into the 15 locales other than en and ko (2026-09-29;
+  no native-speaker review is claimed). The per-language titles and descriptions keep interim
+  wording. The translated server-location and retention placeholders are registered in
+  `legal_release.RELEASE_PLACEHOLDERS`; `check_site.py` keeps every locale's placeholder count
+  equal to en.
+- Local checks on 2026-09-29 after the translation: every renderer `--check`, `check_site.py`,
+  `korean_tone.py` and the four unit-test modules pass. `check_site.py --release` fails by design
+  (date not set).
 - BLOCKED: (1) the owner sets `NEXT_RELEASE_EFFECTIVE_DATE` in `scripts/legal_release.py` and
   the matching dates in the three content files; (2) the purchase-verification server's location,
-  operator and retention replace `legal_release.RELEASE_PLACEHOLDERS` (Android section 6, iOS
-  section 12); (3) the app version for the monetization release replaces the 1.0.5 page version;
-  (4) app UI labels quoted here ("Privacy choices for ads", "Report an ad", "Restore purchases",
-  "Settings > About > What's new") are matched to the final app strings; (5) the owner and counsel
-  review the Terms and the section 1.1 items of the monetization policy; (6) translation of the
-  placeholder fields; (7) browser review of the new pages (not run).
+  operator and retention replace `legal_release.RELEASE_PLACEHOLDERS` in all 17 locales (Android
+  section 6, iOS section 12); (3) the app version for the monetization release replaces the 1.0.5
+  page version; (4) app UI labels quoted here ("Privacy choices for ads", "Report an ad", "Restore
+  purchases", "Settings > About > What's new", and their translations) are matched to the final
+  app strings in each locale; (5) the owner and counsel review the Terms and the section 1.1 items
+  of the monetization policy; (6) native-speaker review of the translations (not done);
+  (7) browser review of the new pages (not run).
 
 ## Historical (2026-09-23 to 2026-09-28)
 

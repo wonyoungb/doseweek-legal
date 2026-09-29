@@ -26,8 +26,9 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
 ## Checks and records
 
 - [Site checks](../scripts/check_site.py): generated pages, hreflang clusters, the sitemap,
-  local links, locales and disclosures. `--release` also requires the effective date and refuses
-  the release placeholders.
+  local links, locales and disclosures, and that every locale carries the same release
+  placeholders as en. `--release` also requires the effective date and refuses the release
+  placeholders in every locale.
 - [Release map](../legal-release-map.json): where the website sources came from, and the
   release decisions.
 - [CHANGELOG](../CHANGELOG.md): site history.

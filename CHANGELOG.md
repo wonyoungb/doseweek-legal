@@ -31,9 +31,14 @@ branch is not merged or published.
 - `legal_release.py`: the live effective date is 2026-09-23 for both platforms;
   `NEXT_RELEASE_EFFECTIVE_DATE` is unset, so `check_site.py --release` fails until the owner sets
   the release date, then also fails while the purchase-verification server placeholders remain.
-- Locales other than en and ko carry English placeholders in the new and changed fields (the
-  per-language titles and descriptions carry interim wording), pending translation. No
-  native-speaker review is claimed.
+- The new and changed fields are translated into the other 15 locales (90 fields each: iOS 26,
+  Android 37, Terms 27; German uses Sie, Dutch u). The translations are not reviewed by native
+  speakers, and none is claimed. The per-language page titles and descriptions keep their interim
+  wording.
+- `legal_release.RELEASE_PLACEHOLDERS` also lists the translated server-location and retention
+  placeholder sentences, and `check_site.py` requires every locale to carry as many registered
+  placeholders as en, so `--release` keeps refusing a translated placeholder and no locale keeps
+  one after en and ko are filled in.
 
 ## Unreleased: per-language URLs
 
