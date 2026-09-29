@@ -9,7 +9,8 @@ import json
 import re
 from pathlib import Path
 
-from site_assets import stylesheet_path
+from site_assets import script_path, stylesheet_path
+import locale_pages
 from help_navigation import COPY as HELP_COPY, HOME as HELP_HOME, task_cards, support_start
 
 from legal_release import (
@@ -116,6 +117,7 @@ def page_shell(
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
     <title>{escaped(title)}</title>
     <link rel="canonical" href="{canonical}">
+{locale_pages.alternate_links(canonical_path)}
     <link rel="icon" type="image/png" href="{asset_prefix}assets/android-app-icon.png">
     <link rel="apple-touch-icon" href="{asset_prefix}assets/android-app-icon.png">
     <meta property="og:type" content="website">
@@ -131,7 +133,7 @@ def page_shell(
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek Android app icon">
     <link rel="stylesheet" href="{stylesheet_path(asset_prefix)}">
-    <script src="{asset_prefix}assets/language.js" defer></script>
+    <script src="{script_path('language.js', asset_prefix)}" defer></script>
   </head>
   <body data-platform="android" data-page="{escaped(page)}">
 {skips}
@@ -170,12 +172,14 @@ def panel_attributes(locale: str, entry: dict[str, object], document_title: str)
 
 
 def home_panels(catalog: dict[str, object]) -> str:
-    rendered = []
-    for locale in catalog["localeOrder"]:
-        entry = catalog["locales"][locale]
-        content = entry["home"]
-        title = f"{content['title']} — DoseWeek Android"
-        rendered.append(
+    return "\n\n".join(home_panel(catalog, locale) for locale in catalog["localeOrder"])
+
+
+def home_panel(catalog: dict[str, object], locale: str) -> str:
+    entry = catalog["locales"][locale]
+    content = entry["home"]
+    title = f"{content['title']} — DoseWeek Android"
+    return (
             f"""        <article {panel_attributes(locale, entry, title)}>
           <header class="hero help-home-hero">
             <div>
@@ -193,8 +197,7 @@ def home_panels(catalog: dict[str, object]) -> str:
             <div class="info-card medical-notice"><h2>{escaped(content['medicalNoticeTitle'])}</h2><p>{escaped(content['medicalNoticeBody'])}</p></div>
           </section>
         </article>"""
-        )
-    return "\n\n".join(rendered)
+    )
 
 
 def paragraph_blocks(value: str) -> list[str]:
@@ -253,19 +256,21 @@ def render_policy_section(locale: str, section: dict[str, object]) -> str:
 
 
 def privacy_panels(catalog: dict[str, object]) -> str:
-    rendered = []
-    for locale in catalog["localeOrder"]:
-        entry = catalog["locales"][locale]
-        content = entry["privacy"]
-        title = f"{content['title']} — DoseWeek Android"
-        toc = "".join(
-            f'<li><a href="#{escaped(locale)}-{escaped(section["id"])}">{escaped(section["title"])}</a></li>'
-            for section in content["sections"]
-        )
-        sections = "\n".join(render_policy_section(locale, section) for section in content["sections"])
-        medical = content["medicalDisclaimer"]
-        arrow = "←" if entry["direction"] == "rtl" else "→"
-        rendered.append(
+    return "\n\n".join(privacy_panel(catalog, locale) for locale in catalog["localeOrder"])
+
+
+def privacy_panel(catalog: dict[str, object], locale: str) -> str:
+    entry = catalog["locales"][locale]
+    content = entry["privacy"]
+    title = f"{content['title']} — DoseWeek Android"
+    toc = "".join(
+        f'<li><a href="#{escaped(locale)}-{escaped(section["id"])}">{escaped(section["title"])}</a></li>'
+        for section in content["sections"]
+    )
+    sections = "\n".join(render_policy_section(locale, section) for section in content["sections"])
+    medical = content["medicalDisclaimer"]
+    arrow = "←" if entry["direction"] == "rtl" else "→"
+    return (
             f"""        <article {panel_attributes(locale, entry, title)}>
           <header class="hero">
             <p class="eyebrow">DoseWeek · Android {escaped(catalog['versionName'])}</p>
@@ -283,8 +288,7 @@ def privacy_panels(catalog: dict[str, object]) -> str:
           </div>
           <a class="page-link" href="../support/#{escaped(locale)}">{escaped(entry['home']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
         </article>"""
-        )
-    return "\n\n".join(rendered)
+    )
 
 
 def guide_steps(locale: str, entry: dict[str, object]) -> list[tuple[str, str, str, str]]:
@@ -309,31 +313,33 @@ def guide_steps(locale: str, entry: dict[str, object]) -> list[tuple[str, str, s
 
 
 def support_panels(catalog: dict[str, object]) -> str:
-    rendered = []
+    return "\n\n".join(support_panel(catalog, locale) for locale in catalog["localeOrder"])
+
+
+def support_panel(catalog: dict[str, object], locale: str) -> str:
     email = escaped(catalog["supportEmail"])
-    for locale in catalog["localeOrder"]:
-        entry = catalog["locales"][locale]
-        content = entry["support"]
-        title = f"{content['title']} — DoseWeek Android"
-        arrow = "←" if entry["direction"] == "rtl" else "→"
-        faq = []
-        for item in content["faq"]:
-            answers = "".join(
-                f"<p>{escaped(block)}</p>"
-                for answer in item["answers"]
-                for block in paragraph_blocks(answer)
-            )
-            import_guide = "doseweek-legal.wonyoungchoi.dev/import/"
-            answers = answers.replace(
-                import_guide,
-                f'<a href="../../import/#{escaped(locale)}"><bdi dir="ltr">{import_guide}</bdi></a>',
-            )
-            faq.append(
-                f'<details id="{escaped(locale)}-{escaped(item["id"])}"><summary><span>{escaped(item["question"])}</span>'
-                '<span class="summary-symbol" aria-hidden="true"></span></summary>'
-                f'<div class="faq-answer">{answers}</div></details>'
-            )
-        rendered.append(
+    entry = catalog["locales"][locale]
+    content = entry["support"]
+    title = f"{content['title']} — DoseWeek Android"
+    arrow = "←" if entry["direction"] == "rtl" else "→"
+    faq = []
+    for item in content["faq"]:
+        answers = "".join(
+            f"<p>{escaped(block)}</p>"
+            for answer in item["answers"]
+            for block in paragraph_blocks(answer)
+        )
+        import_guide = "doseweek-legal.wonyoungchoi.dev/import/"
+        answers = answers.replace(
+            import_guide,
+            f'<a href="../../import/#{escaped(locale)}"><bdi dir="ltr">{import_guide}</bdi></a>',
+        )
+        faq.append(
+            f'<details id="{escaped(locale)}-{escaped(item["id"])}"><summary><span>{escaped(item["question"])}</span>'
+            '<span class="summary-symbol" aria-hidden="true"></span></summary>'
+            f'<div class="faq-answer">{answers}</div></details>'
+        )
+    return (
             f"""        <article {panel_attributes(locale, entry, title)}>
           <header class="hero">
             <p class="eyebrow">DoseWeek · Android {escaped(catalog['versionName'])}</p>
@@ -353,8 +359,7 @@ def support_panels(catalog: dict[str, object]) -> str:
           </section>
           <a class="page-link" href="../privacy/#{escaped(locale)}">{escaped(entry['home']['privacyLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
         </article>"""
-        )
-    return "\n\n".join(rendered)
+    )
 
 
 def validate_catalog(catalog: dict[str, object]) -> None:
@@ -693,7 +698,42 @@ def rendered_pages(catalog: dict[str, object]) -> dict[Path, str]:
             description="Support for DoseWeek on Android, including local records and encrypted backup and restore.",
             panels=support_panels(catalog),
         ),
+        **rendered_locale_pages(catalog),
     }
+
+
+def rendered_locale_pages(catalog: dict[str, object]) -> dict[Path, str]:
+    """/<locale>/android/, .../support/ and .../privacy/: one hash-page panel each.
+
+    Descriptions reuse existing copy: the home hero line and the home's support and privacy
+    link descriptions.
+    """
+    names = {locale: entry["languageName"] for locale, entry in catalog["locales"].items()}
+    footer = (
+        '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span>'
+        f'<span>DoseWeek · Android {escaped(catalog["versionName"])}</span></footer>'
+    )
+    routes = (
+        ("android/", "home", "./", home_panel, lambda locale, entry: HELP_HOME[locale]["androidBody"]),
+        ("android/support/", "support", "../", support_panel,
+         lambda locale, entry: entry["home"]["supportLinkBody"]),
+        ("android/privacy/", "privacy", "../", privacy_panel,
+         lambda locale, entry: entry["home"]["privacyLinkBody"]),
+    )
+    pages = {}
+    for locale in catalog["localeOrder"]:
+        entry = catalog["locales"][locale]
+        for route, page, brand_href, panel, description in routes:
+            pages[locale_pages.page_path(route, locale)] = locale_pages.locale_page(
+                route=route, locale=locale, names=names, description=description(locale, entry),
+                panel=panel(catalog, locale), icon="assets/android-app-icon.png",
+                social_image=SOCIAL_IMAGE, image_alt="DoseWeek Android app icon",
+                brand_href=brand_href, brand_aria="DoseWeek for Android",
+                brand_label='DoseWeek <span class="platform-label">Android</span>',
+                skip_label=entry["common"]["skipToContent"], skip_target=f"{locale}-content",
+                body_attributes=f' data-platform="android" data-page="{page}"', footer=footer,
+            )
+    return pages
 
 
 CANDIDATE_CONTENT_PATH = ROOT / "docs/android-content.candidate.json"
