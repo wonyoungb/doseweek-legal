@@ -17,6 +17,9 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
   live yet. The site already states the Android 14 minimum for versionCode 13.
 - 1.0.6 planning for both apps: [release/1.0.6/HANDOFF-1.0.6.md](../../release/1.0.6/HANDOFF-1.0.6.md)
   (being prepared on 2026-09-29).
+- Per-language URLs (1.0.6 search work, 2026-09-29): 119 static pages `/<locale>/<route>/` (7 routes x 17 locales)
+  with hreflang + x-default on all 126 pages and a sitemap with alternates; the hash pages (`/privacy/#ko`)
+  stay canonical and keep working. Receipt: `release/evidence/1.0.6/W0/`.
 - Branch and PR tidy: `release/evidence/lean-20260923/workspace-cleanup-20260923/repo-tidy-20260929-website.json`.
 
 ## Historical (2026-09-23 to 2026-09-28)
