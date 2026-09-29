@@ -7,6 +7,7 @@ Before repository work, read the [canonical current handoff](../release/CURRENT_
 They own recorded live status across repositories. Honor an `OWNER_PAUSE_RELAUNCH` stop;
 historical local notes do not authorize restarting code, native tests or release actions.
 The current user request remains authoritative. Keep the technical contracts below intact.
+1.0.6 planning for both apps lives in [release/1.0.6/HANDOFF-1.0.6.md](../release/1.0.6/HANDOFF-1.0.6.md).
 
 ## Work without repeating completed work
 
