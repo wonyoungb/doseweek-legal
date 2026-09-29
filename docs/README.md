@@ -12,17 +12,22 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
   [render_home.py](../scripts/render_home.py). The platform renderers share the help navigation;
   each platform source holds its own six-step getting-started guide (`support.guide`).
 - [Import guide](../import/content.json), rendered by [render_import.py](../scripts/render_import.py).
+- [Terms of Use](terms-content.json) for both apps (candidate for the monetization release), rendered
+  by [render_terms.py](../scripts/render_terms.py). Its medical section reuses the iOS disclaimer
+  wording verbatim.
 - Per-language pages (`/<locale>/<route>`), hreflang links and the sitemap:
   [locale_pages.py](../scripts/locale_pages.py), used by every renderer, and
   [render_sitemap.py](../scripts/render_sitemap.py). The README explains the hash pages and the
   language pages.
-- [Release constants](../scripts/legal_release.py): the effective date and the food-data
-  attribution lines.
+- [Release constants](../scripts/legal_release.py): the live and next effective dates, the
+  release placeholders that must be replaced before publication, and the food-data attribution
+  lines.
 
 ## Checks and records
 
 - [Site checks](../scripts/check_site.py): generated pages, hreflang clusters, the sitemap,
-  local links, locales and disclosures. `--release` also requires the effective date.
+  local links, locales and disclosures. `--release` also requires the effective date and refuses
+  the release placeholders.
 - [Release map](../legal-release-map.json): where the website sources came from, and the
   release decisions.
 - [CHANGELOG](../CHANGELOG.md): site history.

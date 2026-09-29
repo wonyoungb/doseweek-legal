@@ -11,6 +11,7 @@ from pathlib import Path
 
 from site_assets import script_path, stylesheet_path
 import locale_pages
+import render_terms
 from help_navigation import COPY as HELP_COPY, HOME as HELP_HOME, task_cards, support_start
 
 from legal_release import (
@@ -53,6 +54,16 @@ SECOND_RELEASE_VERSION = "versionCode 12"
 MINIMUM_ANDROID_VERSION_CODE = "versionCode 13"
 # the release number follows the word Android, which Polish inflects (Androidem 14)
 MINIMUM_ANDROID_RELEASE = re.compile(r"Android\w* 14(?!\d)")
+# Monetization candidate (owner instruction 2026-09-29): free download with ads, Plus subscription.
+# These FAQ answers are appended after the existing ones, so earlier positions stay stable.
+PLUS_FAQ_IDS = (
+    "plus-free", "plus-features", "plus-cancel", "plus-restore", "plus-ads", "plus-earlier",
+)
+# Tokens every locale keeps in the monetization sections (names are not translated).
+MONETIZATION_SECTION_TOKENS = {
+    "ads": ("AdMob", "UMP"),
+    "purchases": ("Google Play", "Plus"),
+}
 REQUIRED_EMERGENCY_SERVICE_PHRASES = {
     "es": "servicios de emergencia locales",
     "it": "servizi di emergenza locali",
@@ -287,6 +298,7 @@ def privacy_panel(catalog: dict[str, object], locale: str) -> str:
             </div>
           </div>
           <a class="page-link" href="../support/#{escaped(locale)}">{escaped(entry['home']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
+          {render_terms.page_link(locale, '../../', entry['direction'])}
         </article>"""
     )
 
@@ -358,6 +370,7 @@ def support_panel(catalog: dict[str, object], locale: str) -> str:
             <div class="info-card medical-notice"><h2>{escaped(content['emergency']['title'])}</h2><p>{escaped(content['emergency']['body'])}</p></div>
           </section>
           <a class="page-link" href="../privacy/#{escaped(locale)}">{escaped(entry['home']['privacyLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
+          {render_terms.page_link(locale, '../../', entry['direction'])}
         </article>"""
     )
 
@@ -425,20 +438,25 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "privacyLinkBody", "supportLinkTitle", "supportLinkBody", "medicalNoticeTitle",
         "medicalNoticeBody",
     }
+    # "ads" and "purchases" follow "backup", which stays at sections[3] (the guard regressions
+    # in check_site.py address it by index).
     expected_section_ids = [
-        "scope", "stored-data", "no-collection", "backup", "retention", "security", "changes",
-        "next-release",
+        "scope", "stored-data", "no-collection", "backup", "ads", "purchases", "retention",
+        "security", "changes", "next-release",
     ]
     expected_faq_ids = [
         "storage", "accounts", "ai-health", "notifications", "backup", "deletion", "recovery",
         "candidate-dates", "candidate-edit", "candidate-past", "candidate-health", "candidate-sites",
         *(f"candidate2-{topic}" for topic in SECOND_RELEASE_TOPICS),
+        *PLUS_FAQ_IDS,
     ]
     expected_policy_lengths = {
         "scope": (2, None),
         "stored-data": (1, 7),
         "no-collection": (5, 7),  # the fifth paragraph is the optional calendar integration
         "backup": (7, None),
+        "ads": (6, None),  # scope, non-personalized, processing, consent, never sent, separation
+        "purchases": (6, None),  # billing, verification, server storage, offline, device, manage
         "retention": (4, None),
         "security": (3, None),
         "changes": (1, None),
@@ -458,6 +476,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "candidate-health": 2,
         "candidate-sites": 3,
         **{f"candidate2-{topic}": 2 for topic in SECOND_RELEASE_TOPICS},
+        **{identifier: 2 for identifier in PLUS_FAQ_IDS},
     }
     for locale, entry in catalog["locales"].items():
         assert isinstance(entry, dict), f"{locale}: locale entry must be an object"
@@ -518,7 +537,10 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         for group in ("contact", "emergency"):
             for key, value in entry["support"][group].items():
                 require_string(value, f"{locale}.support.{group}.{key}")
-        for section in entry["privacy"]["sections"]:
+        for number, section in enumerate(entry["privacy"]["sections"], start=1):
+            assert isinstance(section.get("title"), str) and section["title"].startswith(f"{number}. "), (
+                f"{locale}:{section['id']} title must start with its number {number}."
+            )
             expected_keys = {"id", "title", "paragraphs"}
             if section["id"] in {"stored-data", "no-collection"}:
                 expected_keys.add("items")
@@ -617,6 +639,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
                 f"{locale}: food-label disclosure is missing {token!r}"
             )
 
+        for section_id, tokens in MONETIZATION_SECTION_TOKENS.items():
+            section_text = " ".join(policy_by_id[section_id]["paragraphs"])
+            for token in tokens:
+                assert token in section_text, f"{locale}: section {section_id} is missing {token!r}"
+
         backup_answer = faq_by_id["backup"]["answers"][0]
         for phrase in REQUIRED_BACKUP_SECURITY_PHRASES[locale]:
             assert phrase in backup_answer, (
@@ -643,12 +670,28 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "Advertising, analytics, tracking, or remote crash reporting",
         "Runtime internet access or network features, until you turn on the optional Google Drive backup",
         "Generative, online, or on-device AI",
+        # monetization candidate 2026-09-29: Free users see ads, and Plus purchases are verified
+        # by a developer server, so these 1.0.5 claims are obsolete
+        "No ads; usage analytics is optional",
+        "Advertising and crash-reporting SDKs",
+        "No DoseWeek account or developer server",
     )
     policy = {section["id"]: section for section in english["privacy"]["sections"]}
     claims = english["home"]["featureBadges"] + policy["no-collection"]["items"]
     assert not set(obsolete_claims).intersection(claims), (
-        "Android candidate still contains a blanket AI, analytics, or network denial"
+        "Android candidate still contains a blanket AI, analytics, network, ads or server denial"
     )
+    assert "Crash-reporting SDKs" in policy["no-collection"]["items"], (
+        "Android candidate must keep crash reporting in the not-used list"
+    )
+    english_faq = {item["id"]: item for item in english["support"]["faq"]}
+    for label, text in (
+        ("support intro", english["support"]["intro"]),
+        ("accounts FAQ", " ".join(english_faq["accounts"]["answers"])),
+    ):
+        assert "no developer server for health records" in text and (
+            "purchase-verification server" in text
+        ), f"Android {label} must scope 'no developer server' to health records and name the purchase-verification server"
     faq = {item["id"]: item for item in english["support"]["faq"]}
     assert "still has no generative, online, or on-device AI" not in " ".join(
         faq["ai-health"]["answers"]
@@ -685,7 +728,7 @@ def rendered_pages(catalog: dict[str, object]) -> dict[Path, str]:
             asset_prefix="../../",
             home_prefix="../",
             title="DoseWeek Android Privacy Policy",
-            description="Privacy policy for DoseWeek on Android: local records and user-directed encrypted backups.",
+            description="Privacy policy for DoseWeek on Android: local records, user-directed encrypted backups, ads in the free version and Plus purchases.",
             panels=privacy_panels(catalog),
         ),
         ROOT / "android/support/index.html": page_shell(
@@ -695,7 +738,7 @@ def rendered_pages(catalog: dict[str, object]) -> dict[Path, str]:
             asset_prefix="../../",
             home_prefix="../",
             title="DoseWeek Android Support",
-            description="Support for DoseWeek on Android, including local records and encrypted backup and restore.",
+            description="Support for DoseWeek on Android, including local records, encrypted backup and restore, the Plus subscription and ads.",
             panels=support_panels(catalog),
         ),
         **rendered_locale_pages(catalog),

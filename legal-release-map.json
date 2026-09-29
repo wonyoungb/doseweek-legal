@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-24",
+  "updatedAt": "2026-09-29",
   "purpose": "Per-platform publication record for the doseweek-legal second-release candidate (LEGAL_TWO_RELEASES.md section 5). Null means not assigned or not decided; nothing here is a placeholder version or date.",
   "legal": {
     "repository": "wonyoungb/doseweek-legal",
@@ -16,7 +16,8 @@
       "android/index.html",
       "android/privacy/index.html",
       "android/support/index.html",
-      "import/index.html"
+      "import/index.html",
+      "terms/index.html"
     ],
     "handoff": "docs/CURRENT_HANDOFF.md",
     "headCommitNote": "the branch head is recorded by the final gate; this file cannot name its own commit. observedHeadCommit is the branch head observed before the 2026-09-24 getting-started guide and audit text edit, not the commit that contains it",
@@ -27,12 +28,12 @@
       "liveApp": "DoseWeek 1.0.0 for Android on Google Play; per the app repository ledger versionCode 9 (submitted 2026-09-11) is the live Production build, and versionCode 10 was accepted by Play on 2026-09-15 but its review submission was withheld for stage 2, so it is never released",
       "candidateApp": "DoseWeek 1.0.0/code12; current source versionCode 12, not proof of a signed artifact, accepted upload or publication",
       "catalogSource": "docs/android-content.candidate.json",
-      "catalogSourceSha256": "7a1edc055ee72b1a80750bb274b6fc2899014d841716927e6ac7b9196478f055",
+      "catalogSourceSha256": "09a9f91a0902fc4a807d7257b0073f20d35af866c6926de362cce5677c85faad",
       "candidateCatalog": "docs/android-content.candidate.json",
-      "candidateCatalogSha256": "7a1edc055ee72b1a80750bb274b6fc2899014d841716927e6ac7b9196478f055",
+      "candidateCatalogSha256": "09a9f91a0902fc4a807d7257b0073f20d35af866c6926de362cce5677c85faad",
       "effectiveDate": "2026-09-23",
-      "effectiveDateDecision": "Owner 2026-09-23: website-owned full policy and generated date aligned; no full-policy copy into native catalogs.",
-      "candidateWording": "Optional analytics with separate overseas-transfer consent, declared technical telemetry, two-month user/event retention, source-labelled potential geographic scope and user-prepared deletion requests. Raw data is not anonymous and withdrawal is not server deletion. Android is for users aged 18 or older; eligibility and analytics/transfer/AI choices remain distinct.",
+      "effectiveDateDecision": "Owner 2026-09-23: website-owned full policy and generated date aligned; no full-policy copy into native catalogs. Monetization candidate (2026-09-29): next effective date not set; legal_release.NEXT_RELEASE_EFFECTIVE_DATE is None, so check_site.py --release fails (BLOCKED until the owner sets the release date). The pages keep the live 2026-09-23 date meanwhile.",
+      "candidateWording": "Optional analytics with separate overseas-transfer consent, declared technical telemetry, two-month user/event retention, source-labelled potential geographic scope and user-prepared deletion requests. Raw data is not anonymous and withdrawal is not server deletion. Android is for users aged 18 or older; eligibility and analytics/transfer/AI choices remain distinct. Monetization candidate (2026-09-29, unpublished): section 5 ads (AdMob and UMP, advertising ID permission removed, what Google still processes, consent where required, 18+ gate unchanged), section 6 Plus through Google Play Billing and the purchase-verification server (package, product and token only; token hash, state and times stored; location, operator and retention BLOCKED), 'Advertising' removed from the not-used list, 'no developer server' scoped to health records, six Plus/ads FAQ answers.",
       "publishCondition": "Current website-source/date/render/link checks plus root-owned final release conditions; no Google reply or legacy native full-policy parity prerequisite.",
       "previousCandidateCatalogSha256": "81149a99a30928b0674e9f62c56d5c91e4176e54b0e8f4d80d0d1f9f3180d955",
       "legacyAppCatalogSource": {
@@ -40,26 +41,30 @@
         "sha256": "28946a2bb250a852dd3cab76f99b71b974f9c047771fad0fcd5ee1736098c924",
         "status": "historical input; not upstream for current website changes"
       },
-      "candidateAppNote": "Owner-confirmed current Android candidate code12, 2026-09-23. Historical code11 observations are not the final candidate."
+      "candidateAppNote": "Owner-confirmed current Android candidate code12, 2026-09-23. Historical code11 observations are not the final candidate.",
+      "preMonetizationCatalogSha256": "4c32fb7d369ce86df1b2ad16a95b29f750d50c584a2ce5492241ce05346cb8b8",
+      "nextEffectiveDate": null
     },
     "ios": {
       "liveApp": "Root current App Store Connect readback on 2026-09-21 reports live 1.0.4 (build 15); candidate build 16 has not been submitted. This field is attributed to parent readback, not a new API query by this reviewer.",
       "candidateApp": "DoseWeek 1.0.5/build17 planned; final candidate build/signing/upload pending",
       "candidateAppNote": "Owner current readback, 2026-09-23: native source uses MARKETING_VERSION 1.0.5 and CURRENT_PROJECT_VERSION 17, and Debug simulator build17 has compiled. Final Release archive, export/signing and accepted upload remain pending. Existing App Store Connect build16 is a separate prior candidate; Debug compilation is not an uploaded or released build.",
       "catalogSource": "docs/ios-content.json",
-      "catalogSourceSha256": "79af4ee91e06b72e2d5bcc4446dcf7146801ff2b31586defb3a6598cbf879ea7",
+      "catalogSourceSha256": "0f865502a554ab768bd1489501b9baef3f3fd793477c2a843ecc4f2984b1edf4",
       "candidateCatalog": "docs/ios-content.json",
-      "candidateCatalogSha256": "79af4ee91e06b72e2d5bcc4446dcf7146801ff2b31586defb3a6598cbf879ea7",
+      "candidateCatalogSha256": "0f865502a554ab768bd1489501b9baef3f3fd793477c2a843ecc4f2984b1edf4",
       "effectiveDate": "2026-09-23",
-      "effectiveDateDecision": "Owner 2026-09-23: website-owned full policy and generated date aligned; no full-policy copy into native catalogs.",
-      "candidateWording": "Optional analytics with separate overseas-transfer consent, declared technical telemetry, two-month user/event retention, source-labelled potential geographic scope and user-prepared deletion requests. Raw data is not anonymous and withdrawal is not server deletion.",
+      "effectiveDateDecision": "Owner 2026-09-23: website-owned full policy and generated date aligned; no full-policy copy into native catalogs. Monetization candidate (2026-09-29): next effective date not set; legal_release.NEXT_RELEASE_EFFECTIVE_DATE is None, so check_site.py --release fails (BLOCKED until the owner sets the release date). The pages keep the live 2026-09-23 date meanwhile.",
+      "candidateWording": "Optional analytics with separate overseas-transfer consent, declared technical telemetry, two-month user/event retention, source-labelled potential geographic scope and user-prepared deletion requests. Raw data is not anonymous and withdrawal is not server deletion. Monetization candidate (2026-09-29, unpublished): section 11 ads in the free version (Google Mobile Ads SDK and UMP, non-personalized ads without App Tracking Transparency, what Google still processes, consent where required, nothing from records sent to the ad SDK, AdMob not linked to Firebase, reporting an ad), section 12 Plus through the App Store (on-device StoreKit verification, no purchase data sent by the app, Apple notices to the purchase-verification server with its location BLOCKED, device-local cache and counters, Plus tool data, cancel/restore, earlier buyers), analytics scope lead, Delete All and Plus data, six Plus/ads FAQ answers.",
       "publishCondition": "Current website-source/date/render/link checks plus root-owned final release conditions; no Google reply or legacy native full-policy parity prerequisite.",
       "legacyAppCatalogSource": {
         "path": "../ios/DoseDay/Resources/Localizable.xcstrings; current integrated worktree",
         "sha256": "12dbe479869a5544ecfbb42541519026617e5f9b43303409a0ef06f3d62d1d0f",
         "status": "historical input; not upstream for current website changes"
       },
-      "historicalAppCatalogParity": "Current source hash 7f0c811bdbca64811cbcb93ec51ac7129da8824875a6fcb6a499e9881e90485c; scripts/render_ios.py --check --catalog and scripts/check_site.py both passed 2026-09-21."
+      "historicalAppCatalogParity": "Current source hash 7f0c811bdbca64811cbcb93ec51ac7129da8824875a6fcb6a499e9881e90485c; scripts/render_ios.py --check --catalog and scripts/check_site.py both passed 2026-09-21.",
+      "preMonetizationCatalogSha256": "98dcfd0b15fba9a699d4cc8c5572b9cec58e8dcd1df5f32cd53841f3aa9281b2",
+      "nextEffectiveDate": null
     }
   },
   "versionLedgerReserved": {
@@ -169,5 +174,31 @@
       "proof": "../evidence/continuation-20260921/homepage/locales17-progress.json",
       "scope": "Home17 locales at320/390/768/1280=68 DOM checks; representative KO/DE/AR screens; home-to-import/Android-guide and import-to-home retain Arabic; Arabic home renders without JavaScript. Shared-CSS18 secondary route checks retained in earlier browser-proof.json. Not native-speaker/screen-reader certification."
     }
+  },
+  "terms": {
+    "source": "docs/terms-content.json",
+    "sha256": "ccc8f9bb8a120b09e29bb23dfb5d89cc0a0acf689f3a91cde41867d9bcbf96f8",
+    "renderer": "scripts/render_terms.py",
+    "routes": [
+      "terms/",
+      "<locale>/terms/"
+    ],
+    "effectiveDate": null,
+    "status": "Candidate Terms of Use for both apps (2026-09-29): service, Free and Plus, App Store and Google Play billing subsections, Apple standard EULA link, optional ad-free pass, medical disclaimer reused from docs/ios-content.json, records, changes, contact. Unpublished; owner and counsel review pending; effective date BLOCKED with the monetization release date."
+  },
+  "monetizationCandidate": {
+    "decision": "Owner instruction 2026-09-29; binding policy docs/MONETIZATION_POLICY.md in both app repositories",
+    "branch": "claude/doseweek-free-ads-plus-himvw9",
+    "publishStatus": "Not merged, not pushed for publication, not deployed. The live 1.0.5 apps have no ads or Plus.",
+    "translation": "en and ko are final candidate copy; the other 15 locales hold English placeholders in new and changed fields (per-language titles and descriptions hold interim wording) until the translation step. No native-speaker review is claimed.",
+    "blocked": [
+      "NEXT_RELEASE_EFFECTIVE_DATE and the matching content dates (owner)",
+      "purchase-verification server location, operator and retention (legal_release.RELEASE_PLACEHOLDERS)",
+      "monetization release app version (pages still show 1.0.5)",
+      "final app UI labels for the quoted settings rows",
+      "owner and counsel review of the Terms and MONETIZATION_POLICY section 1.1",
+      "translation of placeholder fields",
+      "browser review of the new and changed pages"
+    ]
   }
 }

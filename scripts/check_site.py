@@ -22,6 +22,7 @@ import legal_release
 import locale_pages
 import render_ios
 import render_home
+import render_terms
 from render_android import rendered_pages, validate_catalog
 from render_import import rendered as rendered_import, validate as validate_import
 
@@ -34,7 +35,8 @@ ANDROID_HTML_FILES = [
     ROOT / "android/privacy/index.html",
 ]
 IMPORT_HTML_FILES = [ROOT / "import/index.html"]
-HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES + IMPORT_HTML_FILES
+TERMS_HTML_FILES = [ROOT / "terms/index.html"]
+HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES + IMPORT_HTML_FILES + TERMS_HTML_FILES
 ANDROID_LANGUAGES = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
@@ -58,6 +60,19 @@ PRIVACY_PAGES = {
     locale_pages.page_path(route, locale).resolve()
     for route in ("privacy/", "android/privacy/") for locale in (None, *locale_pages.LOCALES)
 }
+# The Terms pages (hash page and language pages) may link Apple's standard EULA, deliberately
+# added 2026-09-29 for the iOS subscription terms; no other page may.
+TERMS_SOURCE_LINKS = set(render_terms.LINKED_URLS)
+TERMS_PAGES = {
+    locale_pages.page_path("terms/", locale).resolve() for locale in (None, *locale_pages.LOCALES)
+}
+# Monetization copy (owner instruction 2026-09-29) must not reuse the 1.0.5 claims or state an
+# unapproved price or trial on any page, in any language panel.
+MONETIZATION_OVERCLAIMS = (
+    "we collect no data", "collects no data", "no data is collected", "show no ads",
+    "No ads;", "one-time purchase", "no in-app purchase", "free trial", "KRW", "₩",
+    "2,900", "19,900", "광고 없음 ·",
+)
 SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 XHTML_NS = "{http://www.w3.org/1999/xhtml}"
 
@@ -172,6 +187,13 @@ def local_target(source: Path, reference: str, *, attribute: str | None = None) 
             and reference in POLICY_SOURCE_LINKS
         ):
             # Deliberate navigation to reviewed processor evidence, never a remote asset.
+            return None
+        if (
+            attribute == "href"
+            and source.resolve() in TERMS_PAGES
+            and reference in TERMS_SOURCE_LINKS
+        ):
+            # Deliberate navigation to Apple's standard EULA from the Terms, never a remote asset.
             return None
         if reference.startswith(SITE_BASE):
             relative_path = unquote(split.path.removeprefix("/doseweek-legal/").lstrip("/"))
@@ -297,13 +319,31 @@ def android_guard_regression_check(catalog: dict[str, object]) -> None:
     )
     expect_rejected(ambiguous_antecedent, "an ambiguous Spanish decryption antecedent")
 
+    missing_ad_sdk = copy.deepcopy(catalog)
+    ads_section = missing_ad_sdk["locales"]["fr"]["privacy"]["sections"][4]
+    assert ads_section["id"] == "ads", "the ads section follows backup at sections[4]"
+    ads_section["paragraphs"] = [text.replace("AdMob", "SDK") for text in ads_section["paragraphs"]]
+    expect_rejected(missing_ad_sdk, "a localized ads section that no longer names AdMob")
+
+    withdrawn_badge = copy.deepcopy(catalog)
+    withdrawn_badge["locales"]["en"]["home"]["featureBadges"][2] = "No ads; usage analytics is optional"
+    expect_rejected(withdrawn_badge, "the withdrawn 'No ads' badge")
+
+    unscoped_server = copy.deepcopy(catalog)
+    unscoped_server["locales"]["en"]["support"]["intro"] = (
+        "DoseWeek works without a DoseWeek account or a developer server, so support cannot "
+        "remotely view or recover records on your device."
+    )
+    expect_rejected(unscoped_server, "an unscoped 'no developer server' support intro")
+
     spanish_word = copy.deepcopy(catalog)
     spanish_word["locales"]["es"]["home"]["intro"] += " datos propios"
     validate_catalog(spanish_word)
     print(
         "OK: Android catalog guard regressions reject CJK-suffixed iOS copy, wrong nested "
-        "types, weakened backup/version/emergency wording, and ambiguous Spanish decryption "
-        "copy without rejecting Spanish propios"
+        "types, weakened backup/version/emergency wording, ambiguous Spanish decryption copy, "
+        "an ads section without AdMob, the withdrawn 'No ads' badge and an unscoped "
+        "'no developer server' claim, without rejecting Spanish propios"
     )
 
 
@@ -500,12 +540,16 @@ def main() -> None:
     argument_parser.add_argument(
         "--release",
         action="store_true",
-        help="publish gate: also require the release step to have filled "
-        "legal_release.SECOND_RELEASE_EFFECTIVE_DATE",
+        help="publish gate: also require the owner to have filled "
+        "legal_release.NEXT_RELEASE_EFFECTIVE_DATE and replaced legal_release.RELEASE_PLACEHOLDERS",
     )
     arguments = argument_parser.parse_args()
     if arguments.release:
         legal_release.require_release_date()
+        for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",
+                         "docs/terms-content.json"):
+            left = legal_release.release_placeholders((ROOT / relative).read_text(encoding="utf-8"))
+            assert not left, f"{relative}: release placeholder still present: {left[0]!r}"
 
     assert (ROOT / "index.html").read_text() == render_home.rendered(), "index.html is stale; rerun render_home.py"
     pages = {path.resolve(): parse(path) for path in HTML_FILES}
@@ -539,6 +583,10 @@ def main() -> None:
             f"{SITE_BASE}android/privacy/", "../../assets/android-app-icon.png",
             ANDROID_SOCIAL_IMAGE, ANDROID_LANGUAGES, ANDROID_LANGUAGES,
         ),
+        (ROOT / "terms/index.html").resolve(): (
+            f"{SITE_BASE}terms/", "../assets/app-icon.png", SOCIAL_IMAGE,
+            ALL_LANGUAGES, ALL_LANGUAGES,
+        ),
     }
 
     for path, page in pages.items():
@@ -558,7 +606,7 @@ def main() -> None:
         current = [language for language, state, _ in page.language_links if state == "true"]
         assert current == [], f"{label}: static markup must not misstate aria-current before JS"
 
-        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + [
+        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + TERMS_HTML_FILES + [
             ROOT / "privacy/index.html", ROOT / "support/index.html", ROOT / "index.html",
         ]
         if path in {candidate.resolve() for candidate in multilingual}:
@@ -706,9 +754,9 @@ def main() -> None:
         "support/index.html: missing corrected Korean deterministic fallback"
     )
 
-    assert len(support_page.summary_markers) == 20 * len(ALL_LANGUAGES), (
-        "support/index.html: expected eight existing, five bugfix-candidate and seven "
-        "second-release FAQ disclosures per language"
+    assert len(support_page.summary_markers) == 26 * len(ALL_LANGUAGES), (
+        "support/index.html: expected eight existing, five bugfix-candidate, seven "
+        "second-release and six Plus/ads FAQ disclosures per language"
     )
     assert all(markers == ["true"] for markers in support_page.summary_markers), (
         "support/index.html: every summary needs one aria-hidden summary-symbol"
@@ -718,9 +766,9 @@ def main() -> None:
     android_text = " ".join(text for page in android_pages for text in page.text)
     android_feature_claims = " ".join(android_claims_text(path) for path in ANDROID_HTML_FILES)
     android_support = pages[(ROOT / "android/support/index.html").resolve()]
-    assert len(android_support.summary_markers) == 19 * len(ANDROID_LANGUAGES), (
-        "android/support/index.html: expected seven existing, five bugfix-candidate and "
-        "seven second-release FAQ disclosures per language"
+    assert len(android_support.summary_markers) == 25 * len(ANDROID_LANGUAGES), (
+        "android/support/index.html: expected seven existing, five bugfix-candidate, seven "
+        "second-release and six Plus/ads FAQ disclosures per language"
     )
     assert all(markers == ["true"] for markers in android_support.summary_markers), (
         "android/support/index.html: every summary needs one aria-hidden summary-symbol"
@@ -787,10 +835,41 @@ def main() -> None:
         "Aday sürüm kılavuzu", "unreleased candidate", "is not released yet",
     )
     for relative in ("support/index.html", "android/support/index.html",
-                     "privacy/index.html", "android/privacy/index.html"):
+                     "privacy/index.html", "android/privacy/index.html", "terms/index.html"):
         page_text = " ".join(pages[(ROOT / relative).resolve()].text)
         for label in pre_release_labels:
             assert label not in page_text, f"{relative}: pre-release label {label!r} is back"
+
+    # Monetization candidate (owner instruction 2026-09-29, MONETIZATION_POLICY.md): the ads,
+    # purchase and Terms disclosures are present, and no page reuses a withdrawn claim or states
+    # an unapproved price or trial.
+    for path, page in pages.items():
+        page_text = " ".join(page.text)
+        for claim in MONETIZATION_OVERCLAIMS:
+            assert claim not in page_text, f"{path.relative_to(ROOT)}: withdrawn or unapproved claim {claim!r}"
+    for required in (
+        "Google Mobile Ads SDK (AdMob)",
+        "User Messaging Platform (UMP)",
+        "App Tracking Transparency",
+        "Non-personalized ads still involve processing.",
+        "Settings > Privacy choices for ads",
+        "In this version the iOS app sends no purchase data to the developer.",
+        "It does not cancel a Plus subscription, which you manage in the App Store.",
+        "This section covers optional usage analytics only.",
+        "개인 맞춤형이 아닌 광고에도 정보 처리가 필요해요.",
+        "설정 > 광고 개인정보 선택",
+    ):
+        assert required in privacy_text, f"privacy/index.html: missing monetization disclosure {required!r}"
+    terms_text = " ".join(pages[(ROOT / "terms/index.html").resolve()].text)
+    for required in (
+        "at least 24 hours before the end of the current period",
+        "Payments & subscriptions > Subscriptions",
+        "has no cash value",
+        "This app is not a medical device.",
+        "이 앱은 의료기기가 아니에요.",
+        "wonyoung@wonyoungchoi.dev",
+    ):
+        assert required in terms_text, f"terms/index.html: missing required term {required!r}"
     for relative in ("support/index.html", "android/support/index.html"):
         source = (ROOT / relative).read_text(encoding="utf-8")
         guides = re.findall(r'<section class="help-start" aria-labelledby="([^"]+)-start">(.*?)</section>',
@@ -826,6 +905,11 @@ def main() -> None:
         )
 
     for required in (
+        "only the app's package name, the product and the purchase token",
+        "reads the advertising ID as zeros",
+        "Google Play Billing",
+        "Non-personalized ads still involve processing.",
+        "no developer server for health records",
         "system file picker",
         "AES-256-GCM",
         "app-private storage",
@@ -911,6 +995,10 @@ def main() -> None:
                            **render_home.rendered_locale_pages()}.items():
         assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
             f"{path.relative_to(ROOT)} does not match its source; rerun render_ios.py and render_home.py"
+        )
+    for path, expected in render_terms.rendered_pages(*render_terms.load()).items():
+        assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+            f"{path.relative_to(ROOT)} does not match docs/terms-content.json; rerun render_terms.py"
         )
 
     if arguments.catalog:

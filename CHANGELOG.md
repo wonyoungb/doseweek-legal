@@ -5,6 +5,36 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
+## Unreleased candidate: free version with ads, Plus and Terms of Use (not published)
+
+Candidate copy for the monetization release (owner instruction 2026-09-29,
+`docs/MONETIZATION_POLICY.md` in both app repositories), prepared on branch
+`claude/doseweek-free-ads-plus-himvw9`. The live 1.0.5 apps have none of these features, and this
+branch is not merged or published.
+
+- iOS privacy: new sections 11 (ads in the free version: Google Mobile Ads SDK and UMP,
+  non-personalized ads without App Tracking Transparency, what Google still processes, consent,
+  what DoseWeek never sends, AdMob not linked to Firebase, reporting an ad) and 12 (Plus through
+  the App Store, on-device verification, device-local cache and counters, Plus tool data, cancel
+  and restore, earlier buyers); the 1.0.5 section is now 13. The analytics section opens with a
+  paragraph that scopes its advertising-ID statements to analytics; the deletion section adds what
+  Delete All does with Plus data. The intro no longer claims to describe the app "exactly".
+- iOS support: six Plus and ads answers (`#<locale>-plus-<key>`).
+- Android privacy: new sections 5 (ads) and 6 (Plus, Google Play Billing, purchase-verification
+  server); retention, security, changes and the 1.0.0 section move to 7 to 10, backup stays 4.
+  "Advertising" leaves the not-used list (crash reporting stays); the support intro, accounts
+  answer and feature badges scope "no developer server" to health records. Six Plus and ads
+  answers are appended to the FAQ.
+- New route `/terms/` (Terms of Use for both apps, 17 locales, App Store and Google Play
+  subsections, Apple's standard EULA linked) rendered by `scripts/render_terms.py`; the privacy
+  and support pages link to it. The sitemap now lists 144 URLs (8 routes).
+- `legal_release.py`: the live effective date is 2026-09-23 for both platforms;
+  `NEXT_RELEASE_EFFECTIVE_DATE` is unset, so `check_site.py --release` fails until the owner sets
+  the release date, then also fails while the purchase-verification server placeholders remain.
+- Locales other than en and ko carry English placeholders in the new and changed fields (the
+  per-language titles and descriptions carry interim wording), pending translation. No
+  native-speaker review is claimed.
+
 ## Unreleased: per-language URLs
 
 - Every route now also has one static page per locale at `/<locale>/<route>` (7 routes x 17

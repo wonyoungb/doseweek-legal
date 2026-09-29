@@ -2646,4 +2646,382 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/import/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/import/"/>
   </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/ko/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/en/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/ja/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/de/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/fr/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/es/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/it/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/nl/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/pl/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/sv/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/hi/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/ar/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
+  <url>
+    <loc>https://doseweek-legal.wonyoungchoi.dev/tr/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://doseweek-legal.wonyoungchoi.dev/ko/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doseweek-legal.wonyoungchoi.dev/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://doseweek-legal.wonyoungchoi.dev/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://doseweek-legal.wonyoungchoi.dev/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://doseweek-legal.wonyoungchoi.dev/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://doseweek-legal.wonyoungchoi.dev/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://doseweek-legal.wonyoungchoi.dev/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doseweek-legal.wonyoungchoi.dev/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://doseweek-legal.wonyoungchoi.dev/pt-PT/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://doseweek-legal.wonyoungchoi.dev/pl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://doseweek-legal.wonyoungchoi.dev/sv/terms/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://doseweek-legal.wonyoungchoi.dev/hi/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://doseweek-legal.wonyoungchoi.dev/pt-BR/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://doseweek-legal.wonyoungchoi.dev/ar/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hans/terms/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://doseweek-legal.wonyoungchoi.dev/zh-Hant/terms/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://doseweek-legal.wonyoungchoi.dev/tr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doseweek-legal.wonyoungchoi.dev/terms/"/>
+  </url>
 </urlset>

@@ -23,7 +23,10 @@ LOCALES = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 ]
-ROUTES = ["", "support/", "privacy/", "android/", "android/support/", "android/privacy/", "import/"]
+ROUTES = [
+    "", "support/", "privacy/", "android/", "android/support/", "android/privacy/", "import/",
+    "terms/",
+]
 SITEMAP = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 XHTML = "{http://www.w3.org/1999/xhtml}"
 
@@ -124,6 +127,7 @@ def sources() -> dict[str, dict]:
         "ios": read("docs/ios-content.json")["locales"],
         "android": read("docs/android-content.candidate.json")["locales"],
         "import": read("import/content.json")["locales"],
+        "terms": read("docs/terms-content.json")["locales"],
     }
 
 
@@ -137,6 +141,7 @@ def expected_description(route: str, locale: str, data: dict[str, dict]) -> str:
         "android/support/": data["android"][locale]["home"]["supportLinkBody"],
         "android/privacy/": data["android"][locale]["home"]["privacyLinkBody"],
         "import/": data["import"][locale]["lead"],
+        "terms/": data["terms"][locale]["intro"],
     }[route])
 
 

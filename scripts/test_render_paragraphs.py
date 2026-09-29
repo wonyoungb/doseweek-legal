@@ -13,6 +13,7 @@ import unittest
 
 import render_android
 import render_ios
+import render_terms
 
 
 PARAGRAPH = re.compile(r"<p>(.*?)</p>", flags=re.DOTALL)
@@ -192,7 +193,7 @@ class GeneratedContentTests(unittest.TestCase):
         for locale, entry in self.ios["locales"].items():
             support = entry["support"]
             groups = (("released", "faq"), ("candidate", "candidate"),
-                      ("secondRelease", "candidate2"))
+                      ("secondRelease", "candidate2"), ("plus", "plus"))
             for group, prefix in groups:
                 for key, item in support[group].items():
                     identifier = f"{locale}-{prefix}-{key}"
@@ -252,6 +253,31 @@ class GeneratedContentTests(unittest.TestCase):
             self.assertEqual(text.count(label.casefold()), 1, locale)
             self.assertIn(label.casefold(), answers[0].casefold(), locale)
             self.assertIn("iOS", answers[1].split("\n\n", 1)[0], locale)
+
+    def test_terms_sections_and_subsections(self):
+        content, ios = render_terms.load()
+        page = render_terms.rendered(content, ios)
+        for locale, entry in content["locales"].items():
+            for section in entry["sections"]:
+                identifier = f"{locale}-{section['id']}"
+                fragment = element(page, "section", identifier)
+                self.assert_blocks(fragment, render_terms.paragraphs(section), identifier)
+                for sub in section.get("subsections", []):
+                    self.assertIn(f'<h3 id="{locale}-{sub["id"]}">', fragment, identifier)
+
+    def test_terms_link_the_eula_once_per_language(self):
+        content, ios = render_terms.load()
+        page = render_terms.rendered(content, ios)
+        url = render_terms.EULA_URL
+        links = re.findall(rf'<a href="{re.escape(url)}">(.*?)</a>', page)
+        self.assertEqual(len(links), len(content["locales"]))
+        for text in links:
+            self.assertTrue(text.startswith('<bdi dir="ltr">'))
+            self.assertEqual(TAG.sub("", text), url)
+        self.assertEqual(
+            render_terms.terms_paragraph(f"EULA.\n{url}"),
+            f'EULA.<br><a href="{url}"><bdi dir="ltr">{render_terms.breakable_url(url)}</bdi></a>',
+        )
 
     def test_android_support_answers(self):
         for locale, entry in self.android["locales"].items():

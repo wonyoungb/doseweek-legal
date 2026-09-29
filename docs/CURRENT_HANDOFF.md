@@ -22,6 +22,29 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
   stay canonical and keep working. Receipt: `release/evidence/1.0.6/W0/`.
 - Branch and PR tidy: `release/evidence/lean-20260923/workspace-cleanup-20260923/repo-tidy-20260929-website.json`.
 
+## Monetization candidate (2026-09-29, not published)
+
+- Branch `claude/doseweek-free-ads-plus-himvw9` holds candidate copy for the free download with
+  ads and the Plus subscription (owner instruction 2026-09-29; binding policy
+  `docs/MONETIZATION_POLICY.md` in both app repositories): iOS privacy sections 11 (ads) and 12
+  (purchases), Android sections 5 (ads) and 6 (purchases), Plus and ads FAQ answers on both
+  support pages, and the new Terms of Use route `/terms/` (`docs/terms-content.json`,
+  `scripts/render_terms.py`). The live 1.0.5 apps have none of these features. Nothing is merged
+  to `main`, pushed for publication or deployed.
+- Locales other than en and ko hold English placeholders in the new and changed fields (the
+  per-language titles and descriptions hold interim wording); a translation step replaces them.
+  No native-speaker review is claimed.
+- Local checks on 2026-09-29: every renderer `--check`, `check_site.py`, `korean_tone.py` and the
+  four unit-test modules pass. `check_site.py --release` fails by design (date not set).
+- BLOCKED: (1) the owner sets `NEXT_RELEASE_EFFECTIVE_DATE` in `scripts/legal_release.py` and
+  the matching dates in the three content files; (2) the purchase-verification server's location,
+  operator and retention replace `legal_release.RELEASE_PLACEHOLDERS` (Android section 6, iOS
+  section 12); (3) the app version for the monetization release replaces the 1.0.5 page version;
+  (4) app UI labels quoted here ("Privacy choices for ads", "Report an ad", "Restore purchases",
+  "Settings > About > What's new") are matched to the final app strings; (5) the owner and counsel
+  review the Terms and the section 1.1 items of the monetization policy; (6) translation of the
+  placeholder fields; (7) browser review of the new pages (not run).
+
 ## Historical (2026-09-23 to 2026-09-28)
 
 The paragraph below described the state before PR #4 and PR #6 were merged. It is kept as

@@ -17,6 +17,7 @@ from pathlib import Path
 from site_assets import script_path, stylesheet_path
 from help_navigation import support_start
 import locale_pages
+import render_terms
 
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
@@ -33,14 +34,18 @@ SUPPORT_PATH = ROOT / "support/index.html"
 SUPPORT_CANONICAL = f"{SITE_BASE}support/"
 SUPPORT_TITLE = "DoseWeek Support"
 SUPPORT_DESCRIPTION = (
-    "Getting started with DoseWeek, plus help with records, Apple Health, notifications, "
-    "encrypted backups, plaintext exports, App Lock, on-device AI, meals and record import."
+    "Getting started with DoseWeek, and help with records, Apple Health, notifications, "
+    "encrypted backups, plaintext exports, App Lock, on-device AI, meals, record import, the "
+    "Plus subscription and ads."
 )
 RELEASED_FAQ = [
     "storage", "health", "notifications", "backup", "exports", "ai", "applock", "deletion",
 ]
 BUGFIX_CANDIDATE_FAQ = ["dates", "edit", "past", "health", "sites"]
 SECOND_RELEASE_FAQ = ["meals", "dates", "charts", "calendar", "backup", "devices", "import"]
+# Monetization candidate (owner instruction 2026-09-29): free download with ads, Plus subscription.
+# Anchors are #<locale>-plus-<key>; each answer has two paragraphs.
+PLUS_FAQ = ["free", "features", "manage", "ads", "earlier", "adprivacy"]
 SUPPORT_LABELS = [
     "title", "lead", "beforeEmailKicker", "beforeEmailTitle", "noticeStrong", "noticeBody",
     "faqKicker", "faqTitle", "faqDescription", "safetyKicker", "safetyTitle",
@@ -52,7 +57,8 @@ CANONICAL = f"{SITE_BASE}privacy/"
 TITLE = "DoseWeek Privacy Policy"
 DESCRIPTION = (
     "Privacy policy for DoseWeek on iPhone and iPad: local records, read-only Apple Health "
-    "access, user-directed encrypted backups, and optional calendar sync."
+    "access, user-directed encrypted backups, optional calendar sync, ads in the free version "
+    "and Plus purchases."
 )
 LOCALE_ORDER = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
@@ -60,14 +66,26 @@ LOCALE_ORDER = [
 ]
 SECTION_IDS = [
     "storage", "health", "backups", "notifications", "tracking", "deletion", "contact", "ai",
-    "calendar", "meals", "next-release",
+    "calendar", "meals", "ads", "purchases", "next-release",
 ]
 CANDIDATE_SECTION_ID = "next-release"
+# Paragraph strings per section (default 1). The monetization candidate (2026-09-29) adds a
+# leading analytics-scope paragraph to "tracking" and a Plus/subscription paragraph to
+# "deletion" as separate strings, so the existing localized text stays untouched; the 1.0.5
+# candidate section keeps its six paragraphs.
+SECTION_PARAGRAPHS = {"tracking": 2, "deletion": 2, CANDIDATE_SECTION_ID: 6}
+# Tokens every locale keeps in the monetization sections (names are not translated).
+SECTION_TOKENS = {
+    "ads": ("AdMob", "UMP", "IDFA"),
+    "purchases": ("App Store", "Plus"),
+}
+# Legacy catalog parity compares the pre-monetization paragraph of each section.
+LEGACY_PARAGRAPH_INDEX = {"tracking": 1}
 # Owner decision IOS-VERSION-104-20260917: the pending 1.0.4 (build 15) review is cancelled and the
 # stage-2 release ships as iOS 1.0.5. Owner decision 2026-09-24: these features ship, so the FAQ
 # carries no pre-release notice; each of the twelve answers added for 1.0.5 opens with a one-line
-# version scope ("available in" / "this applies to" DoseWeek iOS 1.0.5 and later), and section 11
-# describes what 1.0.5 adds. The page eyebrow and footer carry the version too. No scope line names
+# version scope ("available in" / "this applies to" DoseWeek iOS 1.0.5 and later), and the last
+# section (13 since the monetization candidate added sections 11 and 12) describes what 1.0.5 adds. The page eyebrow and footer carry the version too. No scope line names
 # a build: the store build number is chosen for the final artifact. Build planning and upload state
 # live in the map.
 CANDIDATE_VERSION = "1.0.5"
@@ -146,18 +164,27 @@ def validate(content: dict) -> None:
             "title", "body", "notAMedicalDevice",
         }, locale
         assert [section["id"] for section in privacy["sections"]] == SECTION_IDS, locale
-        for section in privacy["sections"]:
+        for number, section in enumerate(privacy["sections"], start=1):
             assert set(section) == {"id", "title", "paragraphs"}, f"{locale}:{section['id']}"
-            expected = 6 if section["id"] == CANDIDATE_SECTION_ID else 1
+            assert section["title"].startswith(f"{number}. "), (
+                f"{locale}:{section['id']} title must start with its number {number}."
+            )
+            expected = SECTION_PARAGRAPHS.get(section["id"], 1)
             assert len(section["paragraphs"]) == expected, f"{locale}:{section['id']}"
             for paragraph in section["paragraphs"]:
                 assert isinstance(paragraph, str) and paragraph.strip(), (
                     f"{locale}:{section['id']}"
                 )
-        candidate = privacy["sections"][-1]
-        assert candidate["title"].startswith("11. "), (
-            f"{locale}: candidate section follows the ten app policy sections"
-        )
+        by_id = {section["id"]: section for section in privacy["sections"]}
+        for section_id, tokens in SECTION_TOKENS.items():
+            for token in tokens:
+                assert token in by_id[section_id]["paragraphs"][0], (
+                    f"{locale}: section {section_id} is missing {token!r}"
+                )
+        candidate = by_id[CANDIDATE_SECTION_ID]
+        assert candidate is privacy["sections"][-1] and candidate["title"].startswith(
+            f"{len(SECTION_IDS)}. "
+        ), f"{locale}: candidate section stays last, after the app policy sections"
         # The candidate section names the version it belongs to, never a build: the store build
         # number is chosen at upload.
         assert "build" not in candidate["paragraphs"][0].lower(), (
@@ -190,11 +217,12 @@ def validate(content: dict) -> None:
 
 
 def faq_items(support: dict) -> dict[str, dict]:
-    """FAQ items by their anchor suffix: faq-<key>, candidate-<key>, candidate2-<key>."""
+    """FAQ items by their anchor suffix: faq-<key>, candidate-<key>, candidate2-<key>, plus-<key>."""
     return {
         **{f"faq-{key}": support["released"][key] for key in RELEASED_FAQ},
         **{f"candidate-{key}": support["candidate"][key] for key in BUGFIX_CANDIDATE_FAQ},
         **{f"candidate2-{key}": support["secondRelease"][key] for key in SECOND_RELEASE_FAQ},
+        **{f"plus-{key}": support["plus"][key] for key in PLUS_FAQ},
     }
 
 
@@ -209,7 +237,7 @@ def guide_steps(locale: str, support: dict) -> list[tuple[str, str, str, str]]:
 
 def validate_support(locale: str, support: dict) -> None:
     assert set(support) == {
-        "labels", "guide", "safetyCards", "released", "candidate", "secondRelease",
+        "labels", "guide", "safetyCards", "released", "candidate", "secondRelease", "plus",
     }, locale
     assert set(support["guide"]) == {"steps"} and len(support["guide"]["steps"]) == 6, (
         f"{locale}: the getting-started guide has six steps"
@@ -232,6 +260,7 @@ def validate_support(locale: str, support: dict) -> None:
         ("released", RELEASED_FAQ, None),
         ("candidate", BUGFIX_CANDIDATE_FAQ, 2),
         ("secondRelease", SECOND_RELEASE_FAQ, 2),
+        ("plus", PLUS_FAQ, 2),
     )
     for group, keys, answer_count in groups:
         assert list(support[group]) == keys, f"{locale}: {group}"
@@ -285,13 +314,14 @@ def catalog_parity(content: dict, catalog_path: Path) -> None:
         assert disclaimer["body"] == value("privacy.medical.body", locale), locale
         assert disclaimer["notAMedicalDevice"] == value("common.notAMedicalDevice", locale), locale
         for section in privacy["sections"]:
-            if section["id"] == CANDIDATE_SECTION_ID:
-                continue
+            if section["id"] not in CATALOG_KEYS:
+                continue  # the 1.0.5 candidate and the monetization sections have no app key
             number = CATALOG_KEYS[section["id"]]
             assert section["title"] == value(f"privacy.section{number}.title", locale), (
                 f"{locale}: privacy.section{number}.title does not match the app catalog"
             )
-            assert section["paragraphs"][0] == value(f"privacy.section{number}.body", locale), (
+            legacy = section["paragraphs"][LEGACY_PARAGRAPH_INDEX.get(section["id"], 0)]
+            assert legacy == value(f"privacy.section{number}.body", locale), (
                 f"{locale}: privacy.section{number}.body does not match the app catalog"
             )
 
@@ -341,6 +371,7 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
             </div>
           </div>
           <a class="page-link" href="../support/#{escaped(locale)}">{escaped(entry['common']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
+          {render_terms.page_link(locale, '../', direction)}
         </article>"""
 
 
@@ -385,6 +416,8 @@ def support_panel(locale: str, entry: dict, bundle_version: str, email: str) -> 
         faq.append(faq_details(locale, f"candidate-{key}", support["candidate"][key], True))
     for key in SECOND_RELEASE_FAQ:
         faq.append(faq_details(locale, f"candidate2-{key}", support["secondRelease"][key], True))
+    for key in PLUS_FAQ:
+        faq.append(faq_details(locale, f"plus-{key}", support["plus"][key], False))
     cards = "".join(
         f'<div class="info-card"><h3>{escaped(card["title"])}</h3><p>{escaped(card["body"])}</p></div>'
         for card in support["safetyCards"]
@@ -421,6 +454,7 @@ def support_panel(locale: str, entry: dict, bundle_version: str, email: str) -> 
             <div class="contact-card"><div><p class="section-kicker">{escaped(labels['contactKicker'])}</p><h2 id="{escaped(locale)}-contact">{escaped(labels['contactTitle'])}</h2><p>{escaped(labels['contactBody'])}</p></div><a class="button primary" href="{escaped(mailto)}">{escaped(email)}</a></div>
           </section>
           <a class="page-link" href="../privacy/#{escaped(locale)}">{escaped(privacy_title)} <span aria-hidden="true">{arrow}</span></a>
+          {render_terms.page_link(locale, '../', direction)}
         </article>"""
 
 

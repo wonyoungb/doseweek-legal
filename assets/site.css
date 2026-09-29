@@ -925,6 +925,12 @@ code {
   margin-top: 12px;
 }
 
+.policy-section div h3 {
+  margin: 22px 0 8px;
+  font-size: 1rem;
+  font-weight: 720;
+}
+
 .policy-section.medical {
   background: var(--danger-soft);
 }
@@ -947,6 +953,10 @@ code {
   margin-top: 24px;
   color: var(--accent-strong);
   font-weight: 680;
+}
+
+.page-link + .page-link {
+  margin-inline-start: 24px;
 }
 
 .site-footer {

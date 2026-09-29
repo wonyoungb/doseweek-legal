@@ -1,6 +1,6 @@
 # DoseWeek help and privacy site
 
-Static help, support, privacy and record-import pages for the DoseWeek iOS and Android apps,
+Static help, support, privacy, terms and record-import pages for the DoseWeek iOS and Android apps,
 served at <https://doseweek-legal.wonyoungchoi.dev/>.
 
 GitHub Pages publishes the root of `main`. Any other branch, a pushed commit or a local render is
@@ -15,8 +15,9 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/support/`, `/privacy/` | iOS support (six-step getting-started guide, then FAQ) and privacy policy |
 | `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
-| `/<locale>/…` | The same seven routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
-| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 126 pages (7 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
+| `/terms/` | Terms of Use for both apps (free version with ads, Plus subscription, App Store and Google Play billing). Candidate for the monetization release; not published |
+| `/<locale>/…` | The same eight routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
+| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 144 pages (8 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
 zh-Hans, zh-Hant and tr. Keep Arabic right-to-left, the separate Portuguese and Chinese
@@ -48,16 +49,20 @@ reuse existing localized copy, one field per route:
 | `/<locale>/android/` | `docs/home-content.json` `androidBody` |
 | `/<locale>/android/support/`, `/<locale>/android/privacy/` | `docs/android-content.candidate.json` `home.supportLinkBody`, `home.privacyLinkBody` |
 | `/<locale>/import/` | `import/content.json` `lead` |
+| `/<locale>/terms/` | `docs/terms-content.json` `intro` |
 
 ## Privacy stance
 
 - **This website** is plain HTML and CSS with two small local scripts (`assets/language.js`,
   `assets/import.js`). It has no analytics, trackers, third-party scripts, remote fonts,
   cookies, accounts or form backend.
-- **The apps** need no DoseWeek account and show no ads. As the policy sources in `docs/`
-  describe, the 1.0.5 app releases add optional usage analytics (Google Analytics for
-  Firebase). It is off by default and starts only after the user agrees to analytics and,
-  separately, to overseas transfer.
+- **The apps** need no DoseWeek account. As the policy sources in `docs/` describe, the 1.0.5
+  app releases add optional usage analytics (Google Analytics for Firebase). It is off by default
+  and starts only after the user agrees to analytics and, separately, to overseas transfer. The
+  live 1.0.5 apps are paid downloads without ads. The candidate sources on this branch describe
+  the next release, a free download that shows non-personalized ads (Google Mobile Ads SDK with
+  Google's consent platform) to Free users, with an optional Plus subscription; that copy is not
+  published.
 - The website owns the full policy text. The apps keep the required consent screens and short
   instructions, and link here. Policy text must match what the apps actually do.
 
@@ -77,18 +82,20 @@ Edit the source first, then render. Do not hand-edit generated HTML.
 | `docs/help-navigation.json` | shared by the home and platform renderers | help cards and guide headings; the guide steps live in each platform source (`support.guide`) |
 | `docs/ios-content.json` | `scripts/render_ios.py` | `privacy/`, `support/`, `<locale>/privacy/`, `<locale>/support/` |
 | `docs/android-content.candidate.json` | `scripts/render_android.py` | `android/**`, `<locale>/android/**` |
+| `docs/terms-content.json` (medical section reuses `docs/ios-content.json` wording) | `scripts/render_terms.py` | `terms/index.html`, `<locale>/terms/index.html` |
 | `import/content.json` | `scripts/render_import.py` | `import/index.html`, `<locale>/import/index.html`, `import/*.md`, `import/draft-v1.schema.json`, `import/draft.example.json` |
 | locales, routes, hreflang links, language-page shell | `scripts/locale_pages.py` (shared) and `scripts/render_sitemap.py` | the language pages' head and navigation, `sitemap.xml` |
-| effective date, food-data attributions | `scripts/legal_release.py` | used by the iOS and Android renderers and `check_site.py` |
+| effective dates, release placeholders, food-data attributions | `scripts/legal_release.py` | used by the iOS, Android and Terms renderers and `check_site.py` |
 
 Render (writes files). After changing CSS, `assets/language.js` or shared navigation, run all
-five:
+six:
 
 ```bash
 python3 scripts/render_home.py
 python3 scripts/render_ios.py
 python3 scripts/render_android.py
 python3 scripts/render_import.py --require-all-locales
+python3 scripts/render_terms.py
 python3 scripts/render_sitemap.py
 ```
 
@@ -99,10 +106,11 @@ python3 scripts/render_home.py --check
 python3 scripts/render_ios.py --check
 python3 scripts/render_android.py --check
 python3 scripts/render_import.py --check --require-all-locales
+python3 scripts/render_terms.py --check
 python3 scripts/render_sitemap.py --check
 python3 scripts/check_site.py            # pages, hreflang, sitemap, local links, locales, disclosures, Korean tone
 python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
-python3 scripts/check_site.py --release  # also requires the policy effective date
+python3 scripts/check_site.py --release  # also requires the release effective date and no release placeholders
 (cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone test_locale_pages)
 ```
 

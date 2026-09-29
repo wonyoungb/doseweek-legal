@@ -24,7 +24,10 @@ LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
-ROUTES = ("", "support/", "privacy/", "android/", "android/support/", "android/privacy/", "import/")
+ROUTES = (
+    "", "support/", "privacy/", "android/", "android/support/", "android/privacy/", "import/",
+    "terms/",
+)
 PANEL_CLASS = 'class="language-panel"'
 
 

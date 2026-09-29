@@ -6,50 +6,71 @@ the site after both uploads are accepted. A policy date is not proof of app avai
 This supersedes the 2026-09-17 after-upload date order and avoids duplicate signing.
 
 Owner instruction 2026-09-23 makes the website the full-policy source. App consent notices and
-minimum instructions remain native, but full-policy app-catalog parity is retired. Setting an
-ISO date (`YYYY-MM-DD`) must align these website fields:
+minimum instructions remain native, but full-policy app-catalog parity is retired.
+
+Monetization release (owner instruction 2026-09-29, docs/MONETIZATION_POLICY.md in both app
+repositories): the free download with ads and the Plus subscription add the "ads" and
+"purchases" policy sections, new FAQ answers and the Terms of Use page (/terms/). Their
+publication date is not decided, so NEXT_RELEASE_EFFECTIVE_DATE stays None: the policy pages keep
+the live effective date (CURRENT_*), the Terms page shows no date, and
+`python3 scripts/check_site.py --release` fails. Setting an ISO date (`YYYY-MM-DD`) must align:
 
 - `docs/ios-content.json` `effectiveDate` and every locale's `privacy.effectiveDate`;
 - `docs/android-content.candidate.json` `effectiveDate`;
-- the sentence in both candidate policy sections that says the effective date is set when the
-  version is released;
+- `docs/terms-content.json` `effectiveDate`;
 - `effectiveDateDecision` for both platforms in `legal-release-map.json`.
 
-`python3 scripts/check_site.py --release` refuses to pass while the date is not filled.
+`--release` then also refuses RELEASE_PLACEHOLDERS: the purchase-verification server's
+location, operator and retention must be written into the sources first.
 """
 
 from __future__ import annotations
 
 import datetime
 
-# Owner-approved order: fix the policy date before final build and signing.
-SECOND_RELEASE_EFFECTIVE_DATE: str | None = "2026-09-23"
+# The owner sets the monetization release date. None: not decided (BLOCKED for --release).
+NEXT_RELEASE_EFFECTIVE_DATE: str | None = None
 
-# Effective dates of the policies that are live now (main 8a615a1).
-CURRENT_IOS_EFFECTIVE_DATE = "2026-08-22"
-CURRENT_ANDROID_EFFECTIVE_DATE = "2026-09-08"
+# Effective dates of the policies that are live now: main 8b53cf0, whose pages matched the live
+# site on 2026-09-29 (the 1.0.5 policy date, formerly SECOND_RELEASE_EFFECTIVE_DATE).
+CURRENT_IOS_EFFECTIVE_DATE = "2026-09-23"
+CURRENT_ANDROID_EFFECTIVE_DATE = "2026-09-23"
+
+# Candidate sentences that must be replaced with facts before release (en and ko sources; the
+# translations of the same paths are replaced in the same step).
+RELEASE_PLACEHOLDERS = (
+    "The server location and operator details are listed here before this version is released.",
+    "How long the server keeps these records is also listed here before this version is released.",
+    "서버 위치와 운영자 정보는 이 버전을 출시하기 전에 여기에 공개해요.",
+    "서버가 이 기록을 얼마나 보관하는지도 이 버전을 출시하기 전에 여기에 공개해요.",
+)
 
 
 def expected_effective_date(current: str) -> str:
     """The effective date a catalog must carry: the filled release date, else the live one."""
-    if SECOND_RELEASE_EFFECTIVE_DATE is None:
+    if NEXT_RELEASE_EFFECTIVE_DATE is None:
         return current
-    release_date = datetime.date.fromisoformat(SECOND_RELEASE_EFFECTIVE_DATE)
-    assert release_date.isoformat() == SECOND_RELEASE_EFFECTIVE_DATE, (
-        "SECOND_RELEASE_EFFECTIVE_DATE must be written as YYYY-MM-DD"
+    release_date = datetime.date.fromisoformat(NEXT_RELEASE_EFFECTIVE_DATE)
+    assert release_date.isoformat() == NEXT_RELEASE_EFFECTIVE_DATE, (
+        "NEXT_RELEASE_EFFECTIVE_DATE must be written as YYYY-MM-DD"
     )
-    assert SECOND_RELEASE_EFFECTIVE_DATE > current, (
-        "SECOND_RELEASE_EFFECTIVE_DATE must be later than the effective date it replaces"
+    assert NEXT_RELEASE_EFFECTIVE_DATE > current, (
+        "NEXT_RELEASE_EFFECTIVE_DATE must be later than the effective date it replaces"
     )
-    return SECOND_RELEASE_EFFECTIVE_DATE
+    return NEXT_RELEASE_EFFECTIVE_DATE
 
 
 def require_release_date() -> str:
-    assert SECOND_RELEASE_EFFECTIVE_DATE is not None, (
-        "scripts/legal_release.py: SECOND_RELEASE_EFFECTIVE_DATE is not filled; the release step "
-        "sets it before final builds/signing (owner decision 2026-09-22)"
+    assert NEXT_RELEASE_EFFECTIVE_DATE is not None, (
+        "scripts/legal_release.py: NEXT_RELEASE_EFFECTIVE_DATE is not filled; the owner sets the "
+        "monetization release date before final builds/signing (BLOCKED)"
     )
     return expected_effective_date("0000-00-00")
+
+
+def release_placeholders(text: str) -> list[str]:
+    """Candidate placeholder sentences still present in text."""
+    return [sentence for sentence in RELEASE_PLACEHOLDERS if sentence in text]
 
 
 # Food data bundled with the second release (owner decision NUTRITION-CATALOG-RELEASE-20260917):
