@@ -32,7 +32,7 @@ def rendered() -> str:
         direction = ios["locales"][locale]["direction"]
         privacy = escaped(android["locales"][locale]["home"]["privacyLinkTitle"])
         medical = policy["medicalDisclaimer"]
-        panels.append(f'''      <article id="{locale}" class="language-panel" lang="{locale}" dir="{direction}" data-language="{locale}" data-document-title="DoseWeek — {c['title']}" aria-labelledby="{locale}-title">
+        panels.append(f'''      <article id="{locale}" class="language-panel" lang="{locale}" dir="{direction}" data-language="{locale}" data-document-title="DoseWeek {c['guide']}" aria-labelledby="{locale}-title">
         <div id="{locale}-content" tabindex="-1" data-skip-target>
           <header class="hero home-hero help-home-hero"><p class="eyebrow">DoseWeek · iPhone / iPad</p><h1 id="{locale}-title">{c['guide']}</h1><p class="hero-copy">{c['iosBody']}</p></header>
           {task_cards(locale, 'support/', 'import/')}

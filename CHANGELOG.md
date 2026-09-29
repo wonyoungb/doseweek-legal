@@ -5,6 +5,14 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
+## Unreleased: search discovery
+
+- Added `robots.txt` and `sitemap.xml` for the seven pages. `check_site.py` now fails when the
+  sitemap and the canonical pages differ, or when `robots.txt` does not name the sitemap.
+- The home page title is now the localized guide label (for example "DoseWeek 이용 안내",
+  "DoseWeek Guide") instead of the product slogan. The description and social metadata describe
+  the help content.
+
 ## 2026-09-28: license (`8b53cf0`)
 
 - Added `LICENSE`: proprietary, all rights reserved.
