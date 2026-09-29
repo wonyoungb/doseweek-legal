@@ -9,15 +9,17 @@ import json
 import io
 import re
 import unittest
+import xml.etree.ElementTree as ET
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 
-from site_assets import stylesheet_path
+from site_assets import script_path, stylesheet_path
 from urllib.parse import unquote, urlsplit
 
 import korean_tone
 import legal_release
+import locale_pages
 import render_ios
 import render_home
 from render_android import rendered_pages, validate_catalog
@@ -51,6 +53,13 @@ POLICY_SOURCE_LINKS = {
     "https://business.safety.google/adssubprocessors/",
     "https://business.safety.google/adsprocessorterms/",
 }
+# The hash pages and the per-language pages of both privacy policies may link the processor sources.
+PRIVACY_PAGES = {
+    locale_pages.page_path(route, locale).resolve()
+    for route in ("privacy/", "android/privacy/") for locale in (None, *locale_pages.LOCALES)
+}
+SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+XHTML_NS = "{http://www.w3.org/1999/xhtml}"
 
 
 class PageParser(HTMLParser):
@@ -68,6 +77,13 @@ class PageParser(HTMLParser):
         self.summary_markers: list[list[str | None]] = []
         self._summary_marker_values: list[str | None] | None = None
         self.text: list[str] = []
+        self.html_attributes: dict[str, str | None] = {}
+        self.alternates: list[tuple[str, str]] = []
+        self.title = ""
+        self._in_title = False
+        self.panel_classes: list[set[str]] = []
+        self.panel_titles: dict[str, str | None] = {}
+        self.navigation: list[dict[str, str | None]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
@@ -76,6 +92,12 @@ class PageParser(HTMLParser):
             self.ids.append(element_id)
 
         classes = set((values.get("class") or "").split())
+        if tag == "html":
+            self.html_attributes = values
+        elif tag == "title":
+            self._in_title = True
+        if tag == "a" and "language-link" in classes:
+            self.navigation.append(values)
         if tag == "meta":
             key = values.get("property") or values.get("name")
             content = values.get("content")
@@ -87,6 +109,8 @@ class PageParser(HTMLParser):
             for relation in (values.get("rel") or "").split():
                 if href:
                     self.link_relations[relation] = href
+            if "alternate" in (values.get("rel") or "").split() and values.get("hreflang"):
+                self.alternates.append((values["hreflang"], href or ""))
 
         if tag == "summary":
             assert self._summary_marker_values is None, "nested summary elements are invalid"
@@ -100,6 +124,8 @@ class PageParser(HTMLParser):
                 self.panel_languages.append(language)
                 self.panel_declared_languages[language] = values.get("lang")
                 self.panel_directions[language] = values.get("dir")
+                self.panel_classes.append(classes)
+                self.panel_titles[language] = values.get("data-document-title")
 
         language_link = values.get("data-language-link")
         if language_link:
@@ -114,11 +140,15 @@ class PageParser(HTMLParser):
                 self.references.append((attribute, reference))
 
     def handle_endtag(self, tag: str) -> None:
+        if tag == "title":
+            self._in_title = False
         if tag == "summary" and self._summary_marker_values is not None:
             self.summary_markers.append(self._summary_marker_values)
             self._summary_marker_values = None
 
     def handle_data(self, data: str) -> None:
+        if self._in_title:
+            self.title += data
         stripped = " ".join(data.split())
         if stripped:
             self.text.append(stripped)
@@ -138,7 +168,7 @@ def local_target(source: Path, reference: str, *, attribute: str | None = None) 
             return None
         if (
             attribute == "href"
-            and source in {ROOT / "privacy/index.html", ROOT / "android/privacy/index.html"}
+            and source.resolve() in PRIVACY_PAGES
             and reference in POLICY_SOURCE_LINKS
         ):
             # Deliberate navigation to reviewed processor evidence, never a remote asset.
@@ -300,6 +330,160 @@ def korean_tone_check() -> str:
             f"{report['allowlist']['suppressed']} allow-listed)")
 
 
+def check_references(path: Path, page: PageParser, known: dict[Path, PageParser]) -> None:
+    """Every local href/src resolves, including #fragments, from this page."""
+    label = path.relative_to(ROOT)
+    for attribute, reference in page.references:
+        resolved = local_target(path, reference, attribute=attribute)
+        if resolved is None:
+            continue
+        target, fragment = resolved
+        assert target.exists(), f"{label}: broken {attribute}={reference!r}"
+        if fragment and target.suffix == ".html":
+            target_page = known.get(target.resolve()) or parse(target)
+            assert fragment in target_page.ids, f"{label}: missing target for {reference!r}"
+
+
+def panel_markup(source: str, locale: str, label: object) -> str:
+    panels = re.findall(rf'<article id="{re.escape(locale)}"[^>]*>.*?</article>', source, flags=re.DOTALL)
+    assert len(panels) == 1, f"{label}: expected one {locale} panel"
+    return panels[0]
+
+
+def check_language_pages(hash_pages: dict[Path, PageParser]) -> dict[Path, PageParser]:
+    """/<locale>/<route>: one static panel per URL with its own language, canonical URL,
+    alternates and navigation, and exactly the text of the hash page's panel."""
+    language_pages: dict[Path, PageParser] = {}
+    for route in locale_pages.ROUTES:
+        hash_path = locale_pages.page_path(route).resolve()
+        hash_source = hash_path.read_text(encoding="utf-8")
+        descriptions = set()
+        for locale in ALL_LANGUAGES:
+            path = locale_pages.page_path(route, locale).resolve()
+            label = path.relative_to(ROOT)
+            assert path.is_file(), f"{label}: missing language page; rerun the renderers"
+            source = path.read_text(encoding="utf-8")
+            page = parse(path)
+            language_pages[path] = page
+            direction = "rtl" if locale == "ar" else "ltr"
+
+            assert (page.html_attributes.get("lang"), page.html_attributes.get("dir")) == (locale, direction), (
+                f"{label}: <html> must declare lang={locale} dir={direction}"
+            )
+            assert "data-locale-page" in page.html_attributes, f"{label}: missing data-locale-page"
+            assert page.panel_languages == [locale], f"{label}: one {locale} panel per URL"
+            assert page.panel_declared_languages == {locale: locale}, f"{label}: panel lang"
+            assert page.panel_directions == {locale: direction}, f"{label}: panel direction"
+            assert page.panel_classes == [{"language-panel", "is-active"}], (
+                f"{label}: the panel must be visible without JavaScript (is-active)"
+            )
+            duplicates = sorted({item for item in page.ids if page.ids.count(item) > 1})
+            assert not duplicates, f"{label}: duplicate IDs {duplicates}"
+
+            canonical = locale_pages.page_url(route, locale)
+            assert page.link_relations.get("canonical") == canonical, f"{label}: wrong canonical URL"
+            assert page.metadata.get("og:url") == canonical, f"{label}: wrong og:url"
+            assert page.alternates == locale_pages.alternates(route), (
+                f"{label}: hreflang must list the 17 language pages and x-default of {route or '/'}"
+            )
+            title = page.panel_titles[locale]
+            assert title and page.title == title, f"{label}: <title> must be the panel's document title"
+            assert page.metadata.get("og:title") == title and page.metadata.get("twitter:title") == title, (
+                f"{label}: social titles must match <title>"
+            )
+            description = page.metadata.get("description")
+            assert description and description == page.metadata.get("og:description") == (
+                page.metadata.get("twitter:description")
+            ), f"{label}: descriptions must be present and equal"
+            descriptions.add(description)
+            for key in ("og:image", "og:image:alt", "twitter:image", "twitter:image:alt"):
+                assert page.metadata.get(key), f"{label}: missing {key}"
+
+            assert page.language_links == [] and page.language_skips == [], (
+                f"{label}: a language page has no hash switch (data-language-link/skip)"
+            )
+            navigation = [link.get("hreflang") for link in page.navigation]
+            assert navigation == ALL_LANGUAGES, f"{label}: language links must follow {ALL_LANGUAGES}"
+            assert [link.get("lang") for link in page.navigation] == ALL_LANGUAGES, f"{label}: link lang"
+            targets = [(path.parent / (link.get("href") or "")).resolve() / "index.html" for link in page.navigation]
+            assert targets == [locale_pages.page_path(route, other).resolve() for other in ALL_LANGUAGES], (
+                f"{label}: each language link must open the same page in that language"
+            )
+            current = [link.get("hreflang") for link in page.navigation if link.get("aria-current") == "true"]
+            assert current == [locale], f"{label}: aria-current must mark {locale} only"
+            assert script_path("language.js") in source and stylesheet_path() in source, (
+                f"{label}: stale language.js or site.css version"
+            )
+
+            # Same localized text as the hash page; only the static class and download paths differ.
+            panel = panel_markup(source, locale, label).replace(
+                'class="language-panel is-active"', 'class="language-panel"', 1
+            )
+            panel = re.sub(
+                r'href="\.\./\.\./import/((?:prompt|format)\.[^"/]+\.md|draft[^"/]*\.json)"', r'href="\1"', panel
+            )
+            assert panel == panel_markup(hash_source, locale, hash_path.relative_to(ROOT)), (
+                f"{label}: panel differs from the {locale} panel of {hash_path.relative_to(ROOT)}"
+            )
+        assert len(descriptions) == len(ALL_LANGUAGES), (
+            f"{route or '/'}: every language page needs its own localized description"
+        )
+    known = {**hash_pages, **language_pages}
+    for path, page in language_pages.items():
+        check_references(path, page, known)
+    return language_pages
+
+
+def check_hreflang_clusters(all_pages: dict[Path, PageParser]) -> int:
+    """Each route's 18 pages list the same alternates, including themselves, and x-default."""
+    clusters: dict[str, tuple[str, list[tuple[str, str]]]] = {}
+    for route in locale_pages.ROUTES:
+        for locale in (None, *ALL_LANGUAGES):
+            page = all_pages[locale_pages.page_path(route, locale).resolve()]
+            clusters[locale_pages.page_url(route, locale)] = (locale or "x-default", page.alternates)
+    for url, (code, alternates) in clusters.items():
+        codes = [item for item, _ in alternates]
+        assert len(codes) == len(set(codes)), f"{url}: duplicate hreflang values"
+        assert "x-default" in codes, f"{url}: missing hreflang x-default"
+        assert (code, url) in alternates, f"{url}: must list itself as hreflang {code}"
+        for other_code, other_url in alternates:
+            assert other_url in clusters, f"{url}: hreflang {other_code} points to {other_url}, not a page"
+            own, back = clusters[other_url]
+            assert own == other_code, f"{url}: hreflang {other_code} points to the {own} page {other_url}"
+            assert (code, url) in back, f"{other_url} does not link back to {url} as hreflang {code}"
+    return len(clusters)
+
+
+def check_sitemap(all_pages: dict[Path, PageParser]) -> int:
+    """sitemap.xml lists every page once, each with the same alternates as the page itself."""
+    text = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    assert text == locale_pages.sitemap_xml(), "sitemap.xml is stale; run scripts/render_sitemap.py"
+    root = ET.fromstring(text)
+    assert root.tag == f"{SITEMAP_NS}urlset", "sitemap.xml: not a sitemap urlset"
+    entries: dict[str, list[tuple[str | None, str | None]]] = {}
+    for url in root.findall(f"{SITEMAP_NS}url"):
+        loc = url.findtext(f"{SITEMAP_NS}loc")
+        assert loc and loc not in entries, f"sitemap.xml: missing or repeated <loc> {loc!r}"
+        entries[loc] = [
+            (link.get("hreflang"), link.get("href"))
+            for link in url.findall(f"{XHTML_NS}link") if link.get("rel") == "alternate"
+        ]
+    expected = {
+        locale_pages.page_url(route, locale): locale_pages.page_path(route, locale).resolve()
+        for route in locale_pages.ROUTES for locale in (None, *ALL_LANGUAGES)
+    }
+    missing, extra = sorted(set(expected) - set(entries)), sorted(set(entries) - set(expected))
+    assert not missing and not extra, f"sitemap.xml: missing {missing[:3]}, extra {extra[:3]}"
+    for loc, links in entries.items():
+        assert links == all_pages[expected[loc]].alternates, (
+            f"sitemap.xml: alternates of {loc} differ from the page's hreflang links"
+        )
+    assert f"Sitemap: {SITE_BASE}sitemap.xml" in (ROOT / "robots.txt").read_text().splitlines(), (
+        "robots.txt must name the sitemap"
+    )
+    return len(entries)
+
+
 def main() -> None:
     argument_parser = argparse.ArgumentParser()
     argument_parser.add_argument(
@@ -390,6 +574,12 @@ def main() -> None:
             }, f"{label}: Android panel language mismatch"
 
         assert page.link_relations.get("canonical") == canonical, f"{label}: wrong canonical URL"
+        # the hash page stays canonical and is the x-default of its route's language pages
+        route = canonical.removeprefix(SITE_BASE)
+        assert page.alternates == locale_pages.alternates(route), (
+            f"{label}: hreflang must list the 17 language pages and x-default"
+        )
+        assert "data-locale-page" not in page.html_attributes, f"{label}: hash pages keep the switch"
         assert page.link_relations.get("apple-touch-icon") == touch_icon, (
             f"{label}: missing app-icon apple-touch-icon"
         )
@@ -410,15 +600,7 @@ def main() -> None:
         assert page.metadata.get("twitter:card") == "summary", f"{label}: wrong twitter:card"
         assert page.metadata.get("twitter:image") == social_image, f"{label}: wrong twitter:image"
 
-        for attribute, reference in page.references:
-            resolved = local_target(path, reference, attribute=attribute)
-            if resolved is None:
-                continue
-            target, fragment = resolved
-            assert target.exists(), f"{label}: broken {attribute}={reference!r}"
-            if fragment and target.suffix == ".html":
-                target_page = pages.get(target.resolve()) or parse(target)
-                assert fragment in target_page.ids, f"{label}: missing target for {reference!r}"
+        check_references(path, page, pages)
 
     privacy_text = " ".join(pages[(ROOT / "privacy/index.html").resolve()].text)
     support_page = pages[(ROOT / "support/index.html").resolve()]
@@ -428,7 +610,13 @@ def main() -> None:
         assert stylesheet_path() in path.read_text(encoding="utf-8"), (
             f"{path.relative_to(ROOT)}: stale stylesheet version; regenerate pages and update index.html"
         )
+        assert script_path("language.js") in path.read_text(encoding="utf-8"), (
+            f"{path.relative_to(ROOT)}: stale language.js version; regenerate pages"
+        )
     javascript = (ROOT / "assets/language.js").read_text(encoding="utf-8")
+    assert javascript.find("data-locale-page") != -1 and (
+        javascript.find("data-locale-page") < javascript.find("panel.hidden")
+    ), "assets/language.js: language pages must return before any panel is hidden"
 
     policy_dates = json.loads((ROOT / "docs/ios-content.json").read_text(encoding="utf-8"))
     for required in (
@@ -719,6 +907,11 @@ def main() -> None:
     assert render_ios.rendered_support(ios_content) == (ROOT / "support/index.html").read_text(
         encoding="utf-8"
     ), "support/index.html does not match docs/ios-content.json; rerun render_ios.py"
+    for path, expected in {**render_ios.rendered_locale_pages(ios_content),
+                           **render_home.rendered_locale_pages()}.items():
+        assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+            f"{path.relative_to(ROOT)} does not match its source; rerun render_ios.py and render_home.py"
+        )
 
     if arguments.catalog:
         catalog_check(arguments.catalog.resolve(), privacy_text)
@@ -754,16 +947,12 @@ def main() -> None:
 
     tone = korean_tone_check()
 
-    # Search engines find the pages through sitemap.xml; keep it equal to the canonical pages.
-    sitemap = re.findall(r"<loc>([^<]+)</loc>", (ROOT / "sitemap.xml").read_text())
-    canonical_pages = sorted(
-        SITE_BASE + path.relative_to(ROOT).parent.as_posix().removeprefix(".") + ("/" if path.parent != ROOT else "")
-        for path in HTML_FILES
-    )
-    assert sorted(sitemap) == canonical_pages, f"sitemap.xml must list exactly {canonical_pages}, got {sorted(sitemap)}"
-    assert f"Sitemap: {SITE_BASE}sitemap.xml" in (ROOT / "robots.txt").read_text().splitlines(), (
-        "robots.txt must name the sitemap"
-    )
+    # Per-language URLs: 17 static pages per route next to the multilingual hash page, one
+    # hreflang cluster per route, and a sitemap that lists every page with its alternates.
+    language_pages = check_language_pages(pages)
+    all_pages = {**pages, **language_pages}
+    cluster_pages = check_hreflang_clusters(all_pages)
+    sitemap_urls = check_sitemap(all_pages)
 
     parity = []
     if arguments.catalog:
@@ -772,8 +961,10 @@ def main() -> None:
         parity.append("Android legal-catalog parity")
     suffix = f", and {' + '.join(parity)}" if parity else ""
     print(
-        f"OK: {len(HTML_FILES)} pages, sitemap/robots, local links, locale panels, social metadata, "
-        f"accessible FAQ markers, 44px key targets, critical disclosures, {tone}{suffix}"
+        f"OK: {len(HTML_FILES)} hash pages and {len(language_pages)} language pages, hreflang "
+        f"({cluster_pages} pages, 17 languages + x-default, reciprocal), sitemap ({sitemap_urls} URLs "
+        f"with alternates)/robots, local links, locale panels, social metadata, accessible FAQ "
+        f"markers, 44px key targets, critical disclosures, {tone}{suffix}"
     )
 
 

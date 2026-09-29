@@ -15,12 +15,39 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/support/`, `/privacy/` | iOS support (six-step getting-started guide, then FAQ) and privacy policy |
 | `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
-| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists the seven pages above; `check_site.py` keeps it equal to the canonical pages |
+| `/<locale>/…` | The same seven routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
+| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 126 pages (7 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
-zh-Hans, zh-Hant and tr. The URL hash selects the locale (for example `/support/#ar`). Keep
-Arabic right-to-left, the separate Portuguese and Chinese variants, stable hash links and the
-no-JavaScript fallback.
+zh-Hans, zh-Hant and tr. Keep Arabic right-to-left, the separate Portuguese and Chinese
+variants, stable hash links and the no-JavaScript fallback.
+
+Each route has two kinds of page:
+
+- **The hash page** (`/support/`, `/privacy/#ko`, …) holds all 17 languages. The URL hash
+  selects the locale (for example `/support/#ar`); without JavaScript it shows Korean, and a
+  hash link still opens its language. The apps and store listings link to these pages, so their
+  URLs and hash links must keep working. Each hash page stays canonical and is the `x-default`
+  of its route.
+- **The language pages** (`/<locale>/<route>`) show one language each, so search engines see
+  one language per URL: `<html lang>` (and `dir="rtl"` for Arabic), a self-referencing canonical
+  link, a localized title and description, and links to the same page in the other languages.
+  They need no JavaScript; `assets/language.js` only scrolls the current language into view.
+
+Every page of a route lists the same 18 `<link rel="alternate" hreflang>` links: the 17 language
+pages and `x-default` (the hash page). Language folders use the exact locale tags of the hash
+links (`pt-PT`, `zh-Hans`); GitHub Pages is case-sensitive, so `/pt-pt/` is not an alias.
+
+A language page's title is the title the hash page's script sets for that panel. Descriptions
+reuse existing localized copy, one field per route:
+
+| Route | Description source |
+|---|---|
+| `/<locale>/` | `docs/home-content.json` `intro` |
+| `/<locale>/support/`, `/<locale>/privacy/` | `docs/ios-content.json` `support.labels.lead`, `privacy.intro` |
+| `/<locale>/android/` | `docs/home-content.json` `androidBody` |
+| `/<locale>/android/support/`, `/<locale>/android/privacy/` | `docs/android-content.candidate.json` `home.supportLinkBody`, `home.privacyLinkBody` |
+| `/<locale>/import/` | `import/content.json` `lead` |
 
 ## Privacy stance
 
@@ -46,20 +73,23 @@ Edit the source first, then render. Do not hand-edit generated HTML.
 
 | Source | Renderer | Output |
 |---|---|---|
-| `docs/home-content.json`, `templates/home.html` | `scripts/render_home.py` | `index.html` |
+| `docs/home-content.json`, `templates/home.html` | `scripts/render_home.py` | `index.html`, `<locale>/index.html` |
 | `docs/help-navigation.json` | shared by the home and platform renderers | help cards and guide headings; the guide steps live in each platform source (`support.guide`) |
-| `docs/ios-content.json` | `scripts/render_ios.py` | `privacy/`, `support/` |
-| `docs/android-content.candidate.json` | `scripts/render_android.py` | `android/**` |
-| `import/content.json` | `scripts/render_import.py` | `import/index.html`, `import/*.md`, `import/draft-v1.schema.json`, `import/draft.example.json` |
+| `docs/ios-content.json` | `scripts/render_ios.py` | `privacy/`, `support/`, `<locale>/privacy/`, `<locale>/support/` |
+| `docs/android-content.candidate.json` | `scripts/render_android.py` | `android/**`, `<locale>/android/**` |
+| `import/content.json` | `scripts/render_import.py` | `import/index.html`, `<locale>/import/index.html`, `import/*.md`, `import/draft-v1.schema.json`, `import/draft.example.json` |
+| locales, routes, hreflang links, language-page shell | `scripts/locale_pages.py` (shared) and `scripts/render_sitemap.py` | the language pages' head and navigation, `sitemap.xml` |
 | effective date, food-data attributions | `scripts/legal_release.py` | used by the iOS and Android renderers and `check_site.py` |
 
-Render (writes files). After changing CSS or shared navigation, run all four:
+Render (writes files). After changing CSS, `assets/language.js` or shared navigation, run all
+five:
 
 ```bash
 python3 scripts/render_home.py
 python3 scripts/render_ios.py
 python3 scripts/render_android.py
 python3 scripts/render_import.py --require-all-locales
+python3 scripts/render_sitemap.py
 ```
 
 Check (read-only):
@@ -69,10 +99,11 @@ python3 scripts/render_home.py --check
 python3 scripts/render_ios.py --check
 python3 scripts/render_android.py --check
 python3 scripts/render_import.py --check --require-all-locales
-python3 scripts/check_site.py            # pages, local links, locales, disclosures, Korean tone
+python3 scripts/render_sitemap.py --check
+python3 scripts/check_site.py            # pages, hreflang, sitemap, local links, locales, disclosures, Korean tone
 python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
 python3 scripts/check_site.py --release  # also requires the policy effective date
-(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone)
+(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone test_locale_pages)
 ```
 
 `render_ios.py --catalog <path>` is an optional legacy comparison against old app resources. It
@@ -86,7 +117,8 @@ reviewed exception, with its key, rule, match and reason.
 ## Repository layout
 
 ```text
-index.html, privacy/, support/, android/, import/   generated pages (served)
+index.html, privacy/, support/, android/, import/   generated hash pages (served)
+ko/, en/, … zh-Hant/, tr/                           generated language pages (served)
 assets/          stylesheets, local scripts, app icons
 docs/            content sources (*.json) and maintainer docs
 templates/       home page template

@@ -14,8 +14,9 @@ import json
 import re
 from pathlib import Path
 
-from site_assets import stylesheet_path
+from site_assets import script_path, stylesheet_path
 from help_navigation import support_start
+import locale_pages
 
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
@@ -450,6 +451,7 @@ def page_shell(content: dict, *, page: str, canonical: str, title: str, descript
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
     <title>{escaped(document_title)}</title>
     <link rel="canonical" href="{canonical}">
+{locale_pages.alternate_links(page + "/")}
     <link rel="icon" type="image/png" href="../assets/app-icon.png">
     <link rel="apple-touch-icon" href="../assets/app-icon.png">
     <meta property="og:type" content="website">
@@ -465,7 +467,7 @@ def page_shell(content: dict, *, page: str, canonical: str, title: str, descript
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek app icon">
     <link rel="stylesheet" href="{stylesheet_path('../')}">
-    <script src="../assets/language.js" defer></script>
+    <script src="{script_path('language.js', '../')}" defer></script>
   </head>
   <body data-platform="ios" data-page="{escaped(page)}">
 {skips}
@@ -540,6 +542,7 @@ def rendered(content: dict) -> str:
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d11">
     <title>{escaped(locales['ko']['privacy']['title'])}</title>
     <link rel="canonical" href="{CANONICAL}">
+{locale_pages.alternate_links("privacy/")}
     <link rel="icon" type="image/png" href="../assets/app-icon.png">
     <link rel="apple-touch-icon" href="../assets/app-icon.png">
     <meta property="og:type" content="website">
@@ -555,7 +558,7 @@ def rendered(content: dict) -> str:
     <meta name="twitter:image" content="{SOCIAL_IMAGE}">
     <meta name="twitter:image:alt" content="DoseWeek app icon">
     <link rel="stylesheet" href="{stylesheet_path('../')}">
-    <script src="../assets/language.js" defer></script>
+    <script src="{script_path('language.js', '../')}" defer></script>
   </head>
   <body data-platform="ios" data-page="privacy">
 {skips}
@@ -584,6 +587,39 @@ def rendered(content: dict) -> str:
 """
 
 
+def rendered_locale_pages(content: dict) -> dict[Path, str]:
+    """/<locale>/privacy/ and /<locale>/support/: the hash pages' panels, one language each.
+
+    Descriptions reuse existing copy: the policy intro and the support lead.
+    """
+    validate(content)
+    names = {locale: entry["languageName"] for locale, entry in content["locales"].items()}
+    footer = (
+        '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span>'
+        f'<span>DoseWeek · iOS {escaped(content["bundleVersion"])}</span></footer>'
+    )
+    pages = {}
+    for locale in content["localeOrder"]:
+        entry = content["locales"][locale]
+        shared = dict(
+            locale=locale, names=names, icon="assets/app-icon.png", social_image=SOCIAL_IMAGE,
+            image_alt="DoseWeek app icon", brand_href="../", brand_aria="DoseWeek",
+            brand_label="DoseWeek", skip_label=entry["common"]["skipToContent"],
+            skip_target=f"{locale}-content", footer=footer,
+        )
+        pages[locale_pages.page_path("privacy/", locale)] = locale_pages.locale_page(
+            route="privacy/", description=entry["privacy"]["intro"],
+            panel=panel(locale, entry, content["bundleVersion"], content["effectiveDate"]),
+            body_attributes=' data-platform="ios" data-page="privacy"', **shared,
+        )
+        pages[locale_pages.page_path("support/", locale)] = locale_pages.locale_page(
+            route="support/", description=entry["support"]["labels"]["lead"],
+            panel=support_panel(locale, entry, content["bundleVersion"], content["supportEmail"]),
+            body_attributes=' data-platform="ios" data-page="support"', **shared,
+        )
+    return pages
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
@@ -595,23 +631,19 @@ def main() -> None:
     arguments = parser.parse_args()
 
     content = json.loads(CONTENT_PATH.read_text(encoding="utf-8"))
-    pages = {PAGE_PATH: rendered(content), SUPPORT_PATH: rendered_support(content)}
+    pages = {PAGE_PATH: rendered(content), SUPPORT_PATH: rendered_support(content),
+             **rendered_locale_pages(content)}
     if arguments.catalog:
         catalog_parity(content, arguments.catalog.resolve())
 
+    locale_pages.write_pages(pages, arguments.check, "rerun render_ios.py")
     if arguments.check:
-        for path, page in pages.items():
-            assert path.is_file(), f"missing generated page {path.relative_to(ROOT)}"
-            assert path.read_text(encoding="utf-8") == page, (
-                f"stale {path.relative_to(ROOT)}; rerun render_ios.py"
-            )
         suffix = " and app-catalog parity" if arguments.catalog else ""
-        print(f"OK: iOS privacy and support pages ({len(content['locales'])} locales){suffix}")
+        print(f"OK: iOS privacy and support pages ({len(content['locales'])} locales) "
+              f"and {len(pages) - 2} language pages{suffix}")
         return
-
-    for path, page in pages.items():
-        path.write_text(page, encoding="utf-8")
-    print(f"Rendered privacy/index.html and support/index.html from {CONTENT_PATH.relative_to(ROOT)}")
+    print(f"Rendered privacy/index.html, support/index.html and {len(pages) - 2} language pages "
+          f"from {CONTENT_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

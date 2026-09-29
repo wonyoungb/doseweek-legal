@@ -1,6 +1,25 @@
 (() => {
   "use strict";
 
+  // A per-language page (/<locale>/...) is already complete: one panel, its language in
+  // <html lang>, and links to the other languages. Never rewrite its hash or hide its panel;
+  // only scroll the language list sideways so the current language is visible. The list is
+  // scrolled directly, so a deep link keeps its own vertical position.
+  if (document.documentElement.hasAttribute("data-locale-page")) {
+    const current = document.querySelector('.language-link[aria-current="true"]');
+    const list = current?.closest(".many-languages");
+    if (list) {
+      const listBox = list.getBoundingClientRect();
+      const linkBox = current.getBoundingClientRect();
+      if (linkBox.left < listBox.left) {
+        list.scrollLeft -= listBox.left - linkBox.left;
+      } else if (linkBox.right > listBox.right) {
+        list.scrollLeft += linkBox.right - listBox.right;
+      }
+    }
+    return;
+  }
+
   const panels = Array.from(document.querySelectorAll(".language-panel"));
   const languageLinks = Array.from(document.querySelectorAll("[data-language-link]"));
   const localizedSkipLinks = Array.from(document.querySelectorAll("[data-language-skip]"));
