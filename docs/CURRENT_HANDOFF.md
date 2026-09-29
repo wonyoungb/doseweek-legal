@@ -39,14 +39,30 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
 - Local checks on 2026-09-29 after the translation: every renderer `--check`, `check_site.py`,
   `korean_tone.py` and the four unit-test modules pass. `check_site.py --release` fails by design
   (date not set).
+- Review fixes (2026-09-29, findings 14, 15, 26 and 31; all 17 locales, no native-speaker review
+  claimed): both ads sections (iOS 11, Android 5) list the overseas-transfer details of the Google
+  Mobile Ads SDK and UMP (recipient Google LLC, Google Ireland Limited for the EEA and Switzerland,
+  contact, countries, items, timing and method, purpose, retention, how to refuse) and state
+  plainly that where Google shows no consent message, for example in Korea, neither Google nor
+  DoseWeek offers a refusal, so Plus is the only way to avoid ad processing. No legal basis is
+  named: the Korean consent question stays with counsel (monetization policy section 1.1). The
+  Android ads section names the app set ID; the Android purchases section says the server confirms
+  the purchase with Google Play (no on-device signature check in release builds); iOS section 12
+  gained the retention placeholder, and `legal_release.purchase_placeholder_parity_errors` (run
+  by `check_site.py`, tested in `scripts/test_monetization_copy.py`) keeps the two purchase
+  sections' server placeholders aligned. The Android catalog and its 17 `privacy_policy.xml`
+  files in DoseweekPlayStore were regenerated from the same candidate. Checks: every renderer
+  `--check`, `check_site.py`, `korean_tone.py` and the five unit-test modules pass;
+  `check_site.py --release` still fails by design.
 - BLOCKED: (1) the owner sets `NEXT_RELEASE_EFFECTIVE_DATE` in `scripts/legal_release.py` and
   the matching dates in the three content files; (2) the purchase-verification server's location,
   operator and retention replace `legal_release.RELEASE_PLACEHOLDERS` in all 17 locales (Android
-  section 6, iOS section 12); (3) the app version for the monetization release replaces the 1.0.5
-  page version; (4) app UI labels quoted here ("Privacy choices for ads", "Report an ad", "Restore
-  purchases", "Settings > About > What's new", and their translations) are matched to the final
-  app strings in each locale; (5) the owner and counsel review the Terms and the section 1.1 items
-  of the monetization policy; (6) native-speaker review of the translations (not done);
+  section 6 and iOS section 12 both carry the location and the retention sentences); (3) the app
+  version for the monetization release replaces the 1.0.5 page version; (4) app UI labels quoted
+  here ("Privacy choices for ads", "Report an ad", "Restore purchases", "Settings > About >
+  What's new", and their translations) are matched to the final app strings in each locale;
+  (5) the owner and counsel review the Terms, the ads overseas-transfer details and the section
+  1.1 items of the monetization policy; (6) native-speaker review of the translations (not done);
   (7) browser review of the new pages (not run).
 
 ## Historical (2026-09-23 to 2026-09-28)

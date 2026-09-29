@@ -23,6 +23,8 @@ POLICY_URLS = (
     "https://datacenters.google/locations/",
     "https://business.safety.google/adssubprocessors/",
     "https://business.safety.google/adsprocessorterms/",
+    "https://policies.google.com/privacy",
+    "https://policies.google.com/technologies/partner-sites",
 )
 # settings.deleteAll in the iOS app catalog (apps/ios DoseDay/Resources/Localizable.xcstrings)
 IOS_DELETE_ALL_LABELS = {
@@ -223,7 +225,9 @@ class GeneratedContentTests(unittest.TestCase):
         for page in (self.ios_privacy, self.android_privacy):
             links = re.findall(r'<a href="(https://[^"]+)">(.*?)</a>', page)
             policy_links = [(href, text) for href, text in links if href in POLICY_URLS]
-            self.assertEqual(len(policy_links), 4 * 17)
+            # four analytics processor sources, and three ad SDK transfer sources (Google's privacy
+            # policy, its data-centre list and its partner-sites page; review finding 14)
+            self.assertEqual(len(policy_links), (4 + 3) * 17)
             for href, text in policy_links:
                 self.assertTrue(text.startswith('<bdi dir="ltr">'), href)
                 self.assertIn("<wbr>", text)

@@ -21,7 +21,11 @@ the live effective date (CURRENT_*), the Terms page shows no date, and
 - `effectiveDateDecision` for both platforms in `legal-release-map.json`.
 
 `--release` then also refuses RELEASE_PLACEHOLDERS: the purchase-verification server's
-location, operator and retention must be written into the sources first.
+location, operator and retention must be written into the sources first. Both purchase sections
+(iOS privacy section 12, Android privacy section 6) describe the same server, so they carry the
+same placeholders and are replaced together (review finding 26, 2026-09-29: iOS section 12 had no
+retention placeholder, so `--release` could pass without a retention period for the server's
+Apple records). `purchase_placeholder_parity_errors` keeps them aligned.
 """
 
 from __future__ import annotations
@@ -37,10 +41,11 @@ CURRENT_IOS_EFFECTIVE_DATE = "2026-09-23"
 CURRENT_ANDROID_EFFECTIVE_DATE = "2026-09-23"
 
 # Candidate sentences that must be replaced with facts before release: the en and ko sources and
-# the translations of the same sentences (Android privacy section 6 carries both, iOS privacy
-# section 12 the first). Replace every locale in the same step; `check_site.py` requires each
-# locale to carry as many registered placeholders as en, so an edited translation must be
-# registered here again.
+# the translations of the same sentences (Android privacy section 6 and iOS privacy section 12 both
+# carry both: the iOS app sends the server nothing, but Apple sends it subscription notices whose
+# records it keeps). Replace every locale in the same step; `check_site.py` requires each locale to
+# carry as many registered placeholders as en, and each locale's two purchase sections to carry the
+# same ones, so an edited translation must be registered here again.
 RELEASE_PLACEHOLDERS = (
     "The server location and operator details are listed here before this version is released.",
     "How long the server keeps these records is also listed here before this version is released.",
@@ -140,6 +145,35 @@ def placeholder_parity_errors(catalog: dict[str, object]) -> list[str]:
         found = len(release_placeholders("\n".join(_strings(entry))))
         if found != expected:
             errors.append(f"{locale}: {found} registered release placeholders, en has {expected}")
+    return errors
+
+
+def purchase_placeholder_parity_errors(
+    ios_catalog: dict[str, object], android_catalog: dict[str, object]
+) -> list[str]:
+    """Locales whose iOS and Android purchase sections carry different release placeholders.
+
+    Both sections describe the one purchase-verification server, so its location, operator and
+    retention stay pending, or are written, on both platforms together.
+    """
+    def placeholders(catalog: dict[str, object], locale: str) -> list[str]:
+        locales = catalog["locales"]
+        assert isinstance(locales, dict)
+        sections = locales[locale]["privacy"]["sections"]
+        purchases = next(section for section in sections if section["id"] == "purchases")
+        return release_placeholders("\n".join(_strings(purchases["paragraphs"])))
+
+    ios_locales = ios_catalog["locales"]
+    assert isinstance(ios_locales, dict)
+    errors = []
+    for locale in ios_locales:
+        ios, android = placeholders(ios_catalog, locale), placeholders(android_catalog, locale)
+        if ios != android:
+            errors.append(
+                f"{locale}: iOS purchases carries {len(ios)} release placeholders, Android "
+                f"purchases {len(android)} (missing on iOS: "
+                f"{[sentence for sentence in android if sentence not in ios]})"
+            )
     return errors
 
 

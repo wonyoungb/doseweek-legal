@@ -74,9 +74,16 @@ CANDIDATE_SECTION_ID = "next-release"
 # "deletion" as separate strings, so the existing localized text stays untouched; the 1.0.5
 # candidate section keeps its six paragraphs.
 SECTION_PARAGRAPHS = {"tracking": 2, "deletion": 2, CANDIDATE_SECTION_ID: 6}
-# Tokens every locale keeps in the monetization sections (names are not translated).
+# Tokens every locale keeps in the monetization sections (names are not translated). The ads
+# section also lists the overseas-transfer particulars of the ad SDKs as the analytics section does
+# (review finding 14, 2026-09-29): recipient, contact, countries and Google's own purposes.
+ADS_TRANSFER_TOKENS = (
+    "Google LLC", "Google Ireland Limited", "https://policies.google.com/privacy",
+    "https://datacenters.google/locations/",
+    "https://policies.google.com/technologies/partner-sites",
+)
 SECTION_TOKENS = {
-    "ads": ("AdMob", "UMP", "IDFA"),
+    "ads": ("AdMob", "UMP", "IDFA", *ADS_TRANSFER_TOKENS),
     "purchases": ("App Store", "Plus"),
 }
 # Legacy catalog parity compares the pre-monetization paragraph of each section.
@@ -129,6 +136,8 @@ def privacy_paragraph(value: str) -> str:
         "https://datacenters.google/locations/",
         "https://business.safety.google/adssubprocessors/",
         "https://business.safety.google/adsprocessorterms/",
+        "https://policies.google.com/privacy",
+        "https://policies.google.com/technologies/partner-sites",
     ):
         safe_url = escaped(url)
         rendered = rendered.replace(

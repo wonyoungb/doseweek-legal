@@ -54,6 +54,9 @@ POLICY_SOURCE_LINKS = {
     "https://datacenters.google/locations/",
     "https://business.safety.google/adssubprocessors/",
     "https://business.safety.google/adsprocessorterms/",
+    # ad SDK overseas-transfer particulars (review finding 14, 2026-09-29)
+    "https://policies.google.com/privacy",
+    "https://policies.google.com/technologies/partner-sites",
 }
 # The hash pages and the per-language pages of both privacy policies may link the processor sources.
 PRIVACY_PAGES = {
@@ -72,6 +75,8 @@ MONETIZATION_OVERCLAIMS = (
     "we collect no data", "collects no data", "no data is collected", "show no ads",
     "No ads;", "one-time purchase", "no in-app purchase", "free trial", "KRW", "₩",
     "2,900", "19,900", "광고 없음 ·",
+    # release builds verify Plus only through the purchase-verification server (finding 31)
+    "checks the signed purchase data",
 )
 SITEMAP_NS = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 XHTML_NS = "{http://www.w3.org/1999/xhtml}"
@@ -561,6 +566,16 @@ def main() -> None:
             f"{relative}: release placeholders differ from en ({'; '.join(drift)}); register the "
             "translated sentence in legal_release.RELEASE_PLACEHOLDERS or replace it with en"
         )
+    # One purchase-verification server: both purchase sections keep the same pending (or written)
+    # location, operator and retention sentences in every locale (review finding 26).
+    purchase_drift = legal_release.purchase_placeholder_parity_errors(
+        json.loads((ROOT / "docs/ios-content.json").read_text(encoding="utf-8")),
+        json.loads((ROOT / "docs/android-content.candidate.json").read_text(encoding="utf-8")),
+    )
+    assert not purchase_drift, (
+        "iOS and Android purchase sections describe the same server but differ: "
+        + "; ".join(purchase_drift)
+    )
 
     assert (ROOT / "index.html").read_text() == render_home.rendered(), "index.html is stale; rerun render_home.py"
     pages = {path.resolve(): parse(path) for path in HTML_FILES}

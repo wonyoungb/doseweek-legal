@@ -59,9 +59,16 @@ MINIMUM_ANDROID_RELEASE = re.compile(r"Android\w* 14(?!\d)")
 PLUS_FAQ_IDS = (
     "plus-free", "plus-features", "plus-cancel", "plus-restore", "plus-ads", "plus-earlier",
 )
-# Tokens every locale keeps in the monetization sections (names are not translated).
+# Tokens every locale keeps in the monetization sections (names are not translated). The ads
+# section lists the overseas-transfer particulars of the ad SDKs as the analytics section does
+# (review finding 14) and names the app set ID the Mobile Ads SDK reads (finding 15, 2026-09-29).
+ADS_TRANSFER_TOKENS = (
+    "Google LLC", "Google Ireland Limited", "https://policies.google.com/privacy",
+    "https://datacenters.google/locations/",
+    "https://policies.google.com/technologies/partner-sites",
+)
 MONETIZATION_SECTION_TOKENS = {
-    "ads": ("AdMob", "UMP"),
+    "ads": ("AdMob", "UMP", "app set ID", *ADS_TRANSFER_TOKENS),
     "purchases": ("Google Play", "Plus"),
 }
 REQUIRED_EMERGENCY_SERVICE_PHRASES = {
@@ -239,6 +246,8 @@ def privacy_paragraph(value: str) -> str:
         "https://datacenters.google/locations/",
         "https://business.safety.google/adssubprocessors/",
         "https://business.safety.google/adsprocessorterms/",
+        "https://policies.google.com/privacy",
+        "https://policies.google.com/technologies/partner-sites",
     ):
         safe_url = escaped(url)
         rendered = rendered.replace(
@@ -455,7 +464,8 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "stored-data": (1, 7),
         "no-collection": (5, 7),  # the fifth paragraph is the optional calendar integration
         "backup": (7, None),
-        "ads": (6, None),  # scope, non-personalized, processing, consent, never sent, separation
+        # scope, non-personalized, processing, consent, never sent, separation, overseas transfer
+        "ads": (7, None),
         "purchases": (6, None),  # billing, verification, server storage, offline, device, manage
         "retention": (4, None),
         "security": (3, None),

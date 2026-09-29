@@ -111,7 +111,7 @@ python3 scripts/render_sitemap.py --check
 python3 scripts/check_site.py            # pages, hreflang, sitemap, local links, locales, disclosures, Korean tone
 python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
 python3 scripts/check_site.py --release  # also requires the release effective date and no release placeholders
-(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone test_locale_pages)
+(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone test_locale_pages test_monetization_copy)
 ```
 
 `render_ios.py --catalog <path>` is an optional legacy comparison against old app resources. It
