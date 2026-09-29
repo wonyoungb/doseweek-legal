@@ -5,10 +5,16 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
-## [Unreleased] — Korean voice and legal alignment
+## 2026-09-28: license (`8b53cf0`)
 
-On branch `claude/ko-tone-legal-20260925` (draft PR into `main`, based on the Android 14
-minimum branch). Not merged, so not live. Stays unmerged until both apps ship the matching text.
+- Added `LICENSE`: proprietary, all rights reserved.
+
+## 2026-09-28: Korean voice and legal alignment (PR #6, merge `efaf1ff`)
+
+Merged to `main` on 2026-09-28. The merge also brought the Android 14 minimum (2823234, listed in
+the next section), the Android policy and help scoped to 1.0.0 (versionCode 12) and later with
+1.0.5 as the current version (90fb129), and the formal register in the iOS German and Dutch
+text (7d9a87b).
 
 ### Changed
 
@@ -25,10 +31,9 @@ minimum branch). Not merged, so not live. Stays unmerged until both apps ship th
 - `scripts/korean_tone.py` with shared rules, a reviewed allow-list and self-tests.
   `check_site.py` runs them and fails on any Korean tone violation.
 
-## [Unreleased]
+## 2026-09-24: help, privacy and syringe branding (PR #4, merge `40d0359`)
 
-On branch `codex/help-privacy-20260923` (draft PR #4 into `main`). Not merged to `main`, so not
-live.
+Merged to `main` on 2026-09-24. The Android 14 minimum entry below came later, with PR #6.
 
 ### Added
 
@@ -72,8 +77,8 @@ live.
 - Android support FAQ, all 17 locales: DoseWeek needs Android 14 or later from versionCode 13.
   Android 8.0 to 13 devices keep their installed versionCode 12 without updates, and Google
   Play offers no new installs on them. The renderer and site check expect versionCode 13 in
-  that answer's scope line (owner decision 2026-09-25; on
-  `claude/android14-minimum-20260925`, stacked on this branch).
+  that answer's scope line (owner decision 2026-09-25; 2823234, merged with PR #6 on
+  2026-09-28).
 
 ### Removed
 

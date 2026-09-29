@@ -27,7 +27,7 @@ no-JavaScript fallback.
   `assets/import.js`). It has no analytics, trackers, third-party scripts, remote fonts,
   cookies, accounts or form backend.
 - **The apps** need no DoseWeek account and show no ads. As the policy sources in `docs/`
-  describe, the upcoming app releases add optional usage analytics (Google Analytics for
+  describe, the 1.0.5 app releases add optional usage analytics (Google Analytics for
   Firebase). It is off by default and starts only after the user agrees to analytics and,
   separately, to overseas transfer.
 - The website owns the full policy text. The apps keep the required consent screens and short
@@ -106,7 +106,8 @@ nor rewrites the icon. No script in this repository writes `assets/app-icon.png`
 
 - [AGENTS.md](AGENTS.md): working rules for people and AI agents
 - [docs/README.md](docs/README.md): documentation index
-- [docs/CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md): pointer to the live workspace handoff
+- [docs/CURRENT_HANDOFF.md](docs/CURRENT_HANDOFF.md): pointer to the live workspace handoff,
+  a short dated site status and the link to the 1.0.6 plan
 - [docs/ANALYTICS_OPERATIONS.md](docs/ANALYTICS_OPERATIONS.md): operator guide for the apps'
   analytics exports and deletion requests (not a website feature)
 - [CHANGELOG.md](CHANGELOG.md): site history
@@ -119,4 +120,5 @@ Git history.
 - Food-data attribution lines (USDA FoodData Central, PHE CoFID, Japan MEXT, Korea MFDS) are
   kept verbatim in `scripts/legal_release.py` and rendered on both privacy policies.
 - Support contact: wonyoung@wonyoungchoi.dev.
-- This repository has no LICENSE file.
+- [LICENSE](LICENSE): proprietary, all rights reserved. Third-party material keeps its own
+  license.
