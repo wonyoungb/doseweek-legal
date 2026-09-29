@@ -550,6 +550,17 @@ def main() -> None:
                          "docs/terms-content.json"):
             left = legal_release.release_placeholders((ROOT / relative).read_text(encoding="utf-8"))
             assert not left, f"{relative}: release placeholder still present: {left[0]!r}"
+    # Every locale carries the release placeholders exactly as en does, so a translated
+    # placeholder is registered (and caught by --release) and no locale keeps one after en changes.
+    for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",
+                     "docs/terms-content.json"):
+        drift = legal_release.placeholder_parity_errors(
+            json.loads((ROOT / relative).read_text(encoding="utf-8"))
+        )
+        assert not drift, (
+            f"{relative}: release placeholders differ from en ({'; '.join(drift)}); register the "
+            "translated sentence in legal_release.RELEASE_PLACEHOLDERS or replace it with en"
+        )
 
     assert (ROOT / "index.html").read_text() == render_home.rendered(), "index.html is stale; rerun render_home.py"
     pages = {path.resolve(): parse(path) for path in HTML_FILES}

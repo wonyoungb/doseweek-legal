@@ -203,54 +203,54 @@
     "ja": {
       "title": "利用規約",
       "intro": "iPhone、iPad、Android版DoseWeekの利用規約です。広告付きの無料版、任意のPlusサブスクリプション、App StoreとGoogle Playでの支払い、記録アプリとしての限界について説明します。",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "施行日",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. サービス",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "本規約は、iPhone、iPad、Android向けのDoseWeekアプリと、このヘルプウェブサイトに適用されます。DoseWeekは、注射のスケジュール、投与、関連するメモを記録するための個人用の記録ツールで、大韓民国を拠点とする個人開発者Wonyoung Choiが運営しています。DoseWeekを利用することで、本規約に同意したものとみなされます。情報の取り扱いについては、ご利用のプラットフォームのプライバシーポリシーで説明しています。"
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. 無料版とPlus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeekは無料でダウンロードでき、無料版では無料版のユーザーに広告が表示されます。Plusは月額または年額で自動更新される任意のサブスクリプションで、広告を非表示にし、期間サマリーと比較、受診レポートエディター、「今日」画面のレイアウトプリセット、食事テンプレートを追加します。",
+            "Plusの導入前からDoseWeekにあった機能は引き続き無料で、Plusに移されることはありません。Plusが終了しても、記録、テンプレート、保存した設定は保持されます。すべての方に同じ無料版のポリシーが適用され、以前の有料版のDoseWeekを購入していてもPlusは含まれません。",
+            "価格と請求期間は、購入前にアプリとストアに表示されます。"
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. 支払い、更新、解約",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plusは、iPhoneとiPadではApp Storeが、AndroidではGoogle Playが、サインインしているアカウントで販売・請求します。サブスクリプションは、解約するまで各期間の終了時に自動的に更新されます。解約はストアのサブスクリプション設定で行え、この設定はDoseWeekの「設定」から開けます。解約した後も、支払い済みの期間が終わるまでPlusは有効のままです。アプリやそのデータを削除しても、サブスクリプションは解約されません。",
+            "返金は、AppleまたはGoogleがそれぞれの返金ポリシーに基づいて処理します。Plusの価格が変更される場合は、ストアが自社のルールに従って事前にお知らせし、そのルールで求められる場合は、新しい価格が適用される前に同意を求めます。あるストアで購入したPlusは、そのプラットフォームのDoseWeekでのみ使えます。プラットフォーム間でPlusを共有するためのDoseWeekアカウントはありません。"
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "iPhoneとiPadの場合（App Store）",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "購入を確定すると、Appleアカウントに請求されます。現在の期間が終わる24時間以上前に自動更新をオフにしない限り、サブスクリプションは自動的に更新され、現在の期間が終わる前の24時間以内に更新料金がアカウントに請求されます。サブスクリプションの管理やキャンセルは、Appleアカウントのサブスクリプション設定で行えます。月額と年額の間の変更は、次回の更新日から適用されます。返金はAppleに申請してください。",
+                "iOSアプリには、Appleの標準の使用許諾契約（Licensed Application End User License Agreement、EULA）も適用されます。\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Androidの場合（Google Play）",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "購入を確定すると、Google Playアカウントのお支払い方法に請求されます。サブスクリプションは、Google Playの「お支払いと定期購入 > 定期購入」で解約するまで自動的に更新されます。次回の請求を避けるには、更新日より前に解約してください。月額から年額への変更はすぐに適用され、月額プランの未使用期間はGoogle Playが年額プランに充当します。年額から月額への変更は次回の更新日から適用されます。返金はGoogle Playの返金ポリシーに従い、購入にはGoogle Playの利用規約も適用されます。"
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. 任意の広告なしパス",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "無料版では、希望すればリワード広告を1本視聴した後、30分間DoseWeekを広告なしで使えます。条件は広告が始まる前に表示されます。このパスは、広告が特典の獲得を報告した場合にのみ付与され、広告を途中で閉じると付与されません。このパスの利用は任意で、購入ではなく、換金価値はなく、譲渡もできません。断っても無料版の機能は何も変わりません。"
           ]
         },
         {
@@ -264,82 +264,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. ご自身の記録",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "記録はご自身の端末に保存され、ご自身のものです。DoseWeekにはアカウントがなく、開発者が健康記録を受け取ることはありません。端末、バックアップ、書き出したファイル、復旧コードは、ご自身で安全に管理してください。開発者は、失われた記録、ファイル、コードを復元できません。Plusを利用しても、記録の保存場所は変わりません。"
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. 本規約の変更",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "本規約を変更する場合は、新しい施行日とともに変更後の規約をこのページに掲載します。価格の変更は、第3項で説明したストアのルールに従います。変更に同意しない場合は、いつでもDoseWeekの利用をやめ、ストアでPlusを解約できます。"
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. お問い合わせ",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "本規約に関するご質問は、下記のメールアドレスまでお問い合わせください。健康情報、バックアップファイル、復旧コードは含めないでください。\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "iPhone・iPad版プライバシーポリシー",
+        "privacyAndroid": "Android版プライバシーポリシー"
       }
     },
     "de": {
       "title": "Nutzungsbedingungen",
       "intro": "Die Bedingungen für die Nutzung von DoseWeek auf iPhone, iPad und Android: die kostenlose Version mit Werbung, das optionale Plus-Abo, die Abrechnung über den App Store und Google Play sowie die Grenzen einer App zur Dokumentation.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Gültig ab",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. Der Dienst",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Diese Bedingungen gelten für die DoseWeek-Apps für iPhone, iPad und Android sowie für diese Hilfe-Website. DoseWeek ist ein persönliches Werkzeug zur Dokumentation von Injektionsplänen, Verabreichungen und zugehörigen Notizen und wird von Wonyoung Choi betrieben, einem Einzelentwickler mit Sitz in der Republik Korea. Mit der Nutzung von DoseWeek stimmen Sie diesen Bedingungen zu. Die Datenschutzerklärung für Ihre Plattform erläutert, wie Informationen verarbeitet werden."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Kostenlos und Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek kann kostenlos heruntergeladen werden, und in der kostenlosen Version wird Werbung angezeigt. Plus ist ein optionales, sich automatisch verlängerndes Abo mit monatlicher oder jährlicher Laufzeit, das die Werbung entfernt und Zeitraumzusammenfassungen und -vergleiche, einen Editor für den Bericht zum Arztbesuch, Layoutvorlagen für „Heute“ und Mahlzeitenvorlagen hinzufügt.",
+            "Funktionen, die vor Plus in DoseWeek enthalten waren, bleiben kostenlos und werden nicht zu Plus verschoben. Endet Plus, bleiben Ihre Einträge, Vorlagen und gespeicherten Einstellungen erhalten. Für alle gilt dieselbe Regelung der kostenlosen Version: Der Kauf einer früheren kostenpflichtigen Version von DoseWeek umfasst Plus nicht.",
+            "Preis und Abrechnungszeitraum werden vor dem Kauf in der App und im Store angezeigt."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Abrechnung, Verlängerung und Kündigung",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus wird auf iPhone und iPad vom App Store und auf Android von Google Play verkauft und abgerechnet, und zwar über das Konto, mit dem Sie angemeldet sind. Das Abo verlängert sich am Ende jedes Zeitraums automatisch, bis Sie es kündigen. Kündigen Sie in den Abo-Einstellungen des Stores, die Sie über die Einstellungen in DoseWeek öffnen können. Nach der Kündigung bleibt Plus bis zum Ende des bezahlten Zeitraums aktiv. Das Löschen der App oder ihrer Daten kündigt kein Abo.",
+            "Erstattungen bearbeiten Apple oder Google nach ihren eigenen Erstattungsrichtlinien. Ändert sich der Preis von Plus, informiert Sie der Store nach seinen eigenen Regeln im Voraus und holt, wo diese Regeln es verlangen, Ihre Zustimmung ein, bevor der neue Preis gilt. In einem Store gekauftes Plus funktioniert nur in DoseWeek auf der jeweiligen Plattform; es gibt kein DoseWeek-Konto, um es plattformübergreifend zu nutzen."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "Auf iPhone und iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "Die Zahlung wird Ihrem Apple Account belastet, wenn Sie den Kauf bestätigen. Das Abo verlängert sich automatisch, sofern Sie die automatische Verlängerung nicht spätestens 24 Stunden vor Ende des aktuellen Zeitraums deaktivieren, und die Verlängerung wird Ihrem Account innerhalb der 24 Stunden vor Ende des aktuellen Zeitraums belastet. Verwalten oder kündigen Sie das Abo in den Abo-Einstellungen Ihres Apple Account. Ein Wechsel zwischen monatlich und jährlich wird zu Ihrem nächsten Verlängerungsdatum wirksam. Erstattungen beantragen Sie bei Apple.",
+                "Für die iOS-App gilt außerdem Apples Standard-Endbenutzer-Lizenzvertrag für lizenzierte Anwendungen (Licensed Application End User License Agreement, EULA).\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Auf Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "Die Zahlung wird der Zahlungsmethode in Ihrem Google Play-Konto belastet, wenn Sie den Kauf bestätigen. Das Abo verlängert sich automatisch, bis Sie es bei Google Play unter „Zahlungen und Abos > Abos“ kündigen; kündigen Sie vor dem Verlängerungsdatum, um die nächste Abbuchung zu vermeiden. Ein Wechsel von monatlich zu jährlich wird sofort wirksam, und Google Play rechnet die ungenutzte Zeit des Monatsabos auf den Jahrestarif an; ein Wechsel von jährlich zu monatlich wird zu Ihrem nächsten Verlängerungsdatum wirksam. Für Erstattungen gelten die Erstattungsrichtlinien von Google Play, und für Ihren Kauf gelten außerdem die Nutzungsbedingungen von Google Play."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Optionale werbefreie Zeit",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "In der kostenlosen Version können Sie wählen, eine Anzeige mit Prämie anzusehen und DoseWeek danach 30 Minuten lang ohne Werbung zu nutzen. Die Bedingung wird angezeigt, bevor die Anzeige startet. Die werbefreie Zeit wird nur gewährt, wenn die Anzeige meldet, dass die Prämie verdient wurde; wird die Anzeige vorzeitig geschlossen, wird nichts gewährt. Die werbefreie Zeit ist freiwillig, kein Kauf, hat keinen Geldwert und ist nicht übertragbar. Eine Ablehnung ändert keine Funktion der kostenlosen Version."
           ]
         },
         {
@@ -353,82 +353,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Ihre Einträge",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Ihre Einträge bleiben auf Ihrem Gerät und gehören Ihnen. DoseWeek hat kein Konto, und der Entwickler erhält Ihre Gesundheitsdaten nicht. Sie sind dafür verantwortlich, Ihr Gerät, Ihre Sicherungen, Exporte und Wiederherstellungscodes sicher aufzubewahren; der Entwickler kann verlorene Einträge, Dateien oder Codes nicht wiederherstellen. Plus ändert nichts daran, wo Ihre Einträge gespeichert werden."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Änderungen dieser Bedingungen",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Ändern sich diese Bedingungen, werden die aktualisierten Bedingungen mit einem neuen Gültigkeitsdatum auf dieser Seite veröffentlicht. Preisänderungen folgen den in Abschnitt 3 beschriebenen Regeln des Stores. Wenn Sie mit einer Änderung nicht einverstanden sind, können Sie die Nutzung von DoseWeek jederzeit beenden und Plus im Store kündigen."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Kontakt",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Bei Fragen zu diesen Bedingungen erreichen Sie uns unter der folgenden E-Mail-Adresse. Senden Sie keine Gesundheitsdaten, keine Sicherungsdatei und keinen Wiederherstellungscode.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Datenschutzerklärung für iPhone und iPad",
+        "privacyAndroid": "Datenschutzerklärung für Android"
       }
     },
     "fr": {
       "title": "Conditions d’utilisation",
       "intro": "Les conditions d’utilisation de DoseWeek sur iPhone, iPad et Android : la version gratuite avec publicités, l’abonnement Plus facultatif, la facturation par l’App Store et Google Play, et les limites d’une app d’enregistrement.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Date d’entrée en vigueur",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. Le service",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Les présentes conditions s’appliquent aux apps DoseWeek pour iPhone, iPad et Android ainsi qu’à ce site d’aide. DoseWeek est un outil personnel d’enregistrement des calendriers d’injection, des administrations et des notes associées, exploité par Wonyoung Choi, développeur individuel établi en République de Corée. En utilisant DoseWeek, vous acceptez les présentes conditions. La politique de confidentialité de votre plateforme explique comment les informations sont traitées."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Version gratuite et Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek se télécharge gratuitement, et la version gratuite affiche des publicités à ses utilisateurs. Plus est un abonnement facultatif à renouvellement automatique, mensuel ou annuel, qui supprime les publicités et ajoute des résumés et comparaisons de périodes, un éditeur du rapport de consultation, des préréglages de disposition d’« Aujourd’hui » et des modèles de repas.",
+            "Les fonctions présentes dans DoseWeek avant Plus restent gratuites et ne sont pas déplacées vers Plus. Si Plus prend fin, vos enregistrements, modèles et réglages enregistrés sont conservés. La même règle de la version gratuite s’applique à tous : l’achat d’une ancienne version payante de DoseWeek n’inclut pas Plus.",
+            "Le prix et la période de facturation sont indiqués dans l’app et dans la boutique avant l’achat."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Facturation, renouvellement et résiliation",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus est vendu et facturé par l’App Store sur iPhone et iPad et par Google Play sur Android, avec le compte auquel vous êtes connecté. L’abonnement se renouvelle automatiquement à la fin de chaque période jusqu’à sa résiliation. Résiliez-le dans les réglages d’abonnement de la boutique, que vous pouvez ouvrir depuis les réglages de DoseWeek. Après la résiliation, Plus reste actif jusqu’à la fin de la période payée. Supprimer l’app ou ses données ne résilie pas un abonnement.",
+            "Les remboursements sont traités par Apple ou Google selon leurs propres règles de remboursement. Si le prix de Plus change, la boutique vous en informe à l’avance selon ses propres règles et, lorsque ces règles l’exigent, vous demande votre accord avant l’application du nouveau prix. Plus acheté dans une boutique ne fonctionne que dans DoseWeek sur la plateforme correspondante ; il n’existe pas de compte DoseWeek permettant de le partager entre plateformes."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "Sur iPhone et iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "Le paiement est débité de votre compte Apple lorsque vous confirmez l’achat. L’abonnement se renouvelle automatiquement, sauf si vous désactivez le renouvellement automatique au moins 24 heures avant la fin de la période en cours, et le renouvellement est débité de votre compte dans les 24 heures précédant la fin de la période en cours. Gérez ou résiliez l’abonnement dans les réglages d’abonnement de votre compte Apple. Un passage entre la formule mensuelle et la formule annuelle prend effet à votre prochaine date de renouvellement. Demandez les remboursements à Apple.",
+                "Le contrat de licence utilisateur final standard d’Apple pour les applications sous licence (Licensed Application End User License Agreement, EULA) s’applique également à l’app iOS.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Sur Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "Le paiement est débité du mode de paiement de votre compte Google Play lorsque vous confirmez l’achat. L’abonnement se renouvelle automatiquement jusqu’à sa résiliation dans Google Play, sous Paiements et abonnements > Abonnements ; résiliez avant la date de renouvellement pour éviter le prochain prélèvement. Le passage de la formule mensuelle à la formule annuelle prend effet immédiatement, et Google Play crédite la durée mensuelle non utilisée sur la formule annuelle ; le passage de la formule annuelle à la formule mensuelle prend effet à votre prochaine date de renouvellement. Les remboursements suivent les règles de remboursement de Google Play, et les conditions de Google Play s’appliquent également à votre achat."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Période sans publicité facultative",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "Dans la version gratuite, vous pouvez choisir de regarder une publicité avec récompense, puis d’utiliser DoseWeek sans publicité pendant 30 minutes. La condition est indiquée avant le début de la publicité. La période sans publicité n’est accordée que lorsque la publicité signale que la récompense a été obtenue ; fermer la publicité avant la fin n’accorde rien. La période sans publicité est facultative, n’est pas un achat, n’a aucune valeur monétaire et ne peut pas être transférée. La refuser ne modifie aucune fonction de la version gratuite."
           ]
         },
         {
@@ -442,82 +442,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Vos enregistrements",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Vos enregistrements restent sur votre appareil et vous appartiennent. DoseWeek n’a pas de compte, et le développeur ne reçoit pas vos données de santé. Il vous incombe de protéger votre appareil, vos sauvegardes, vos exportations et vos codes de récupération ; le développeur ne peut pas récupérer des enregistrements, fichiers ou codes perdus. Plus ne modifie pas l’endroit où vos enregistrements sont stockés."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Modification des présentes conditions",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Si les présentes conditions changent, les conditions mises à jour sont publiées sur cette page avec une nouvelle date d’entrée en vigueur. Les changements de prix suivent les règles des boutiques décrites à la section 3. Si vous n’acceptez pas une modification, vous pouvez à tout moment cesser d’utiliser DoseWeek et résilier Plus dans la boutique."
           ]
         },
         {
           "id": "contact",
           "title": "8. Contact",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Pour toute question sur les présentes conditions, contactez-nous à l’adresse e-mail ci-dessous. N’incluez ni données de santé, ni fichier de sauvegarde, ni code de récupération.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Politique de confidentialité pour iPhone et iPad",
+        "privacyAndroid": "Politique de confidentialité pour Android"
       }
     },
     "es": {
       "title": "Condiciones de uso",
       "intro": "Las condiciones para usar DoseWeek en iPhone, iPad y Android: la versión gratuita con anuncios, la suscripción opcional Plus, la facturación a través del App Store y Google Play, y los límites de una app de registro.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Fecha de entrada en vigor",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. El servicio",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Estas condiciones se aplican a las apps de DoseWeek para iPhone, iPad y Android y a este sitio web de ayuda. DoseWeek es una herramienta personal para registrar pautas de inyección, administraciones y notas relacionadas, gestionada por Wonyoung Choi, desarrollador individual con sede en la República de Corea. Al usar DoseWeek, usted acepta estas condiciones. La política de privacidad de su plataforma explica cómo se trata la información."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Versión gratuita y Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek se descarga gratis, y la versión gratuita muestra anuncios a sus usuarios. Plus es una suscripción opcional de renovación automática, mensual o anual, que elimina los anuncios y añade resúmenes y comparaciones por periodo, un editor del informe para la consulta, ajustes predefinidos del diseño de «Hoy» y plantillas de comidas.",
+            "Las funciones que ya estaban en DoseWeek antes de Plus siguen siendo gratis y no se trasladan a Plus. Si Plus termina, sus registros, plantillas y ajustes guardados se conservan. Se aplica la misma política de la versión gratuita a todos: la compra de una versión de pago anterior de DoseWeek no incluye Plus.",
+            "El precio y el periodo de facturación se muestran en la app y en la tienda antes de comprar."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Facturación, renovación y cancelación",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus lo venden y facturan el App Store en iPhone y iPad y Google Play en Android, con la cuenta con la que usted haya iniciado sesión. La suscripción se renueva automáticamente al final de cada periodo hasta que usted la cancele. Cancélela en los ajustes de suscripciones de la tienda, que puede abrir desde Ajustes en DoseWeek. Tras cancelarla, Plus sigue activo hasta el final del periodo que pagó. Eliminar la app o sus datos no cancela una suscripción.",
+            "Los reembolsos los tramitan Apple o Google según sus propias políticas de reembolso. Si el precio de Plus cambia, la tienda se lo comunica con antelación según sus propias normas y, cuando esas normas lo exigen, le pide su conformidad antes de aplicar el nuevo precio. Plus comprado en una tienda solo funciona en DoseWeek en esa plataforma; no existe una cuenta DoseWeek para compartirlo entre plataformas."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "En iPhone y iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "El pago se carga en su cuenta de Apple cuando confirma la compra. La suscripción se renueva automáticamente salvo que desactive la renovación automática al menos 24 horas antes del final del periodo actual, y la renovación se cobra en su cuenta dentro de las 24 horas previas al final del periodo actual. Gestione o cancele la suscripción en los ajustes de suscripciones de su cuenta de Apple. Un cambio entre el plan mensual y el anual se aplica en su próxima fecha de renovación. Solicite los reembolsos a Apple.",
+                "El Contrato de licencia de usuario final estándar de Apple para aplicaciones con licencia (Licensed Application End User License Agreement, EULA) también se aplica a la app de iOS.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "En Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "El pago se carga en el método de pago de su cuenta de Google Play cuando confirma la compra. La suscripción se renueva automáticamente hasta que la cancele en Google Play, en Pagos y suscripciones > Suscripciones; cancele antes de la fecha de renovación para evitar el siguiente cargo. El cambio del plan mensual al anual se aplica de inmediato, y Google Play abona el tiempo mensual no utilizado al plan anual; el cambio del plan anual al mensual se aplica en su próxima fecha de renovación. Los reembolsos se rigen por las políticas de reembolso de Google Play, y a su compra también se aplican las condiciones de Google Play."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Periodo opcional sin anuncios",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "En la versión gratuita, puede elegir ver un anuncio bonificado y después usar DoseWeek sin anuncios durante 30 minutos. La condición se muestra antes de que empiece el anuncio. El periodo sin anuncios solo se concede cuando el anuncio indica que se ha obtenido la recompensa; cerrar el anuncio antes de tiempo no concede nada. El periodo sin anuncios es opcional, no es una compra, no tiene valor monetario y no puede transferirse. Rechazarlo no cambia ninguna función de la versión gratuita."
           ]
         },
         {
@@ -531,82 +531,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Sus registros",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Sus registros permanecen en su dispositivo y le pertenecen. DoseWeek no tiene cuenta, y el desarrollador no recibe sus registros de salud. Usted es responsable de mantener seguros su dispositivo, sus copias de seguridad, sus exportaciones y sus códigos de recuperación; el desarrollador no puede recuperar registros, archivos ni códigos perdidos. Plus no cambia el lugar donde se guardan sus registros."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Cambios en estas condiciones",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Si estas condiciones cambian, las condiciones actualizadas se publican en esta página con una nueva fecha de entrada en vigor. Los cambios de precio siguen las normas de la tienda descritas en la sección 3. Si no está de acuerdo con un cambio, puede dejar de usar DoseWeek y cancelar Plus en la tienda en cualquier momento."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Contacto",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Para consultas sobre estas condiciones, escríbanos a la dirección de correo electrónico que figura a continuación. No incluya datos de salud, un archivo de copia de seguridad ni un código de recuperación.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Política de privacidad para iPhone y iPad",
+        "privacyAndroid": "Política de privacidad para Android"
       }
     },
     "it": {
       "title": "Condizioni d’uso",
       "intro": "Le condizioni per usare DoseWeek su iPhone, iPad e Android: la versione gratuita con annunci, l’abbonamento Plus facoltativo, la fatturazione tramite App Store e Google Play e i limiti di un’app di registrazione.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Data di entrata in vigore",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. Il servizio",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Queste condizioni si applicano alle app DoseWeek per iPhone, iPad e Android e a questo sito di assistenza. DoseWeek è uno strumento personale per registrare programmi di iniezione, somministrazioni e note correlate, gestito da Wonyoung Choi, sviluppatore individuale con sede nella Repubblica di Corea. Usando DoseWeek accetti queste condizioni. L’informativa sulla privacy della tua piattaforma spiega come vengono trattate le informazioni."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Versione gratuita e Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek si scarica gratis e la versione gratuita mostra annunci a chi la usa. Plus è un abbonamento facoltativo a rinnovo automatico, mensile o annuale, che rimuove gli annunci e aggiunge riepiloghi e confronti del periodo, un editor del report per la visita, preimpostazioni del layout di «Oggi» e modelli di pasto.",
+            "Le funzioni presenti in DoseWeek prima di Plus restano gratuite e non vengono spostate in Plus. Se Plus termina, le tue registrazioni, i modelli e le impostazioni salvate vengono conservati. La stessa politica della versione gratuita vale per tutti: l’acquisto di una precedente versione a pagamento di DoseWeek non include Plus.",
+            "Il prezzo e il periodo di fatturazione sono indicati nell’app e nello store prima dell’acquisto."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Fatturazione, rinnovo e annullamento",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus è venduto e fatturato dall’App Store su iPhone e iPad e da Google Play su Android, tramite l’account con cui hai effettuato l’accesso. L’abbonamento si rinnova automaticamente alla fine di ogni periodo finché non lo annulli. Annullalo nelle impostazioni degli abbonamenti dello store, che puoi aprire dalle Impostazioni di DoseWeek. Dopo l’annullamento, Plus resta attivo fino alla fine del periodo pagato. Eliminare l’app o i suoi dati non annulla un abbonamento.",
+            "I rimborsi sono gestiti da Apple o Google secondo le rispettive politiche di rimborso. Se il prezzo di Plus cambia, lo store ti avvisa in anticipo secondo le proprie regole e, se tali regole lo richiedono, chiede il tuo consenso prima che si applichi il nuovo prezzo. Plus acquistato in uno store funziona solo in DoseWeek su quella piattaforma; non esiste un account DoseWeek per condividerlo tra piattaforme."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "Su iPhone e iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "Il pagamento viene addebitato sul tuo Account Apple quando confermi l’acquisto. L’abbonamento si rinnova automaticamente a meno che tu non disattivi il rinnovo automatico almeno 24 ore prima della fine del periodo in corso, e il rinnovo viene addebitato sul tuo account nelle 24 ore precedenti la fine del periodo in corso. Gestisci o annulla l’abbonamento nelle impostazioni degli abbonamenti del tuo Account Apple. Il passaggio tra piano mensile e annuale ha effetto dalla prossima data di rinnovo. Richiedi i rimborsi ad Apple.",
+                "Il Contratto di licenza con l’utente finale standard di Apple per le applicazioni concesse in licenza (Licensed Application End User License Agreement, EULA) si applica anche all’app iOS.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Su Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "Il pagamento viene addebitato sul metodo di pagamento del tuo account Google Play quando confermi l’acquisto. L’abbonamento si rinnova automaticamente finché non lo annulli in Google Play, in Pagamenti e abbonamenti > Abbonamenti; annulla prima della data di rinnovo per evitare l’addebito successivo. Il passaggio dal piano mensile a quello annuale ha effetto subito e Google Play accredita il tempo mensile non usato sul piano annuale; il passaggio dal piano annuale a quello mensile ha effetto dalla prossima data di rinnovo. I rimborsi seguono le politiche di rimborso di Google Play, e al tuo acquisto si applicano anche i termini di Google Play."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Periodo facoltativo senza annunci",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "Nella versione gratuita puoi scegliere di guardare un annuncio con premio e poi usare DoseWeek senza annunci per 30 minuti. La condizione viene mostrata prima che l’annuncio inizi. Il periodo senza annunci viene concesso solo quando l’annuncio segnala che il premio è stato ottenuto; chiudere l’annuncio prima della fine non dà diritto a nulla. Il periodo senza annunci è facoltativo, non è un acquisto, non ha valore monetario e non è trasferibile. Rifiutarlo non cambia nessuna funzione della versione gratuita."
           ]
         },
         {
@@ -620,82 +620,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Le tue registrazioni",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Le tue registrazioni restano sul tuo dispositivo e sono tue. DoseWeek non ha account e lo sviluppatore non riceve i tuoi dati sanitari. Sei responsabile della sicurezza del tuo dispositivo, dei backup, delle esportazioni e dei codici di recupero; lo sviluppatore non può recuperare registrazioni, file o codici persi. Plus non cambia il luogo in cui sono archiviate le tue registrazioni."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Modifiche a queste condizioni",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Se queste condizioni cambiano, le condizioni aggiornate vengono pubblicate in questa pagina con una nuova data di entrata in vigore. Le modifiche di prezzo seguono le regole degli store descritte nella sezione 3. Se non accetti una modifica, puoi smettere di usare DoseWeek e annullare Plus nello store in qualsiasi momento."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Contatti",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Per domande su queste condizioni, scrivici all’indirizzo e-mail qui sotto. Non includere dati sanitari, un file di backup o un codice di recupero.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Informativa sulla privacy per iPhone e iPad",
+        "privacyAndroid": "Informativa sulla privacy per Android"
       }
     },
     "nl": {
       "title": "Gebruiksvoorwaarden",
       "intro": "De voorwaarden voor het gebruik van DoseWeek op iPhone, iPad en Android: de gratis versie met advertenties, het optionele Plus-abonnement, betaling via de App Store en Google Play, en de grenzen van een registratie-app.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Ingangsdatum",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. De dienst",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Deze voorwaarden gelden voor de DoseWeek-apps voor iPhone, iPad en Android en voor deze helpwebsite. DoseWeek is een persoonlijk registratiehulpmiddel voor injectieschema’s, toedieningen en bijbehorende notities, beheerd door Wonyoung Choi, een individuele ontwikkelaar gevestigd in de Republiek Korea. Door DoseWeek te gebruiken, gaat u akkoord met deze voorwaarden. Het privacybeleid voor uw platform legt uit hoe gegevens worden verwerkt."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Gratis en Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek is gratis te downloaden, en in de gratis versie zien gebruikers advertenties. Plus is een optioneel, automatisch verlengend abonnement per maand of per jaar dat advertenties verwijdert en periodeoverzichten en -vergelijkingen, een editor voor het consultrapport, indelingsvoorinstellingen voor ‘Vandaag’ en maaltijdsjablonen toevoegt.",
+            "Functies die vóór Plus al in DoseWeek zaten, blijven gratis en worden niet naar Plus verplaatst. Als Plus eindigt, blijven uw registraties, sjablonen en opgeslagen instellingen bewaard. Voor iedereen geldt hetzelfde beleid van de gratis versie: de aankoop van een eerdere betaalde versie van DoseWeek omvat geen Plus.",
+            "De prijs en de factureringsperiode worden vóór aankoop in de app en in de store getoond."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Facturering, verlenging en opzegging",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus wordt verkocht en gefactureerd door de App Store op iPhone en iPad en door Google Play op Android, via het account waarmee u bent aangemeld. Het abonnement wordt aan het einde van elke periode automatisch verlengd totdat u het opzegt. Zeg op in de abonnementsinstellingen van de store, die u vanuit Instellingen in DoseWeek kunt openen. Na opzegging blijft Plus actief tot het einde van de periode waarvoor u hebt betaald. Het verwijderen van de app of de appgegevens zegt een abonnement niet op.",
+            "Terugbetalingen worden door Apple of Google afgehandeld volgens hun eigen terugbetalingsbeleid. Als de prijs van Plus verandert, informeert de store u vooraf volgens zijn eigen regels en vraagt de store, waar die regels dat vereisen, om uw toestemming voordat de nieuwe prijs geldt. Plus dat in de ene store is gekocht, werkt alleen in DoseWeek op dat platform; er is geen DoseWeek-account om het tussen platforms te delen."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "Op iPhone en iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "De betaling wordt bij bevestiging van de aankoop in rekening gebracht op uw Apple Account. Het abonnement wordt automatisch verlengd, tenzij u automatische verlenging minstens 24 uur vóór het einde van de huidige periode uitschakelt, en de verlenging wordt binnen de 24 uur vóór het einde van de huidige periode op uw account in rekening gebracht. Beheer of zeg het abonnement op in de abonnementsinstellingen van uw Apple Account. Een wissel tussen maand- en jaarabonnement gaat in op uw volgende verlengingsdatum. Vraag terugbetalingen aan bij Apple.",
+                "De standaard licentieovereenkomst voor eindgebruikers van Apple voor gelicentieerde applicaties (Licensed Application End User License Agreement, EULA) is ook van toepassing op de iOS-app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Op Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "De betaling wordt bij bevestiging van de aankoop in rekening gebracht via de betaalmethode in uw Google Play-account. Het abonnement wordt automatisch verlengd totdat u het opzegt in Google Play via Betalingen en abonnementen > Abonnementen; zeg vóór de verlengingsdatum op om de volgende afschrijving te voorkomen. Overstappen van een maand- naar een jaarabonnement gaat direct in, en Google Play verrekent de ongebruikte tijd van het maandabonnement met het jaarabonnement; overstappen van een jaar- naar een maandabonnement gaat in op uw volgende verlengingsdatum. Voor terugbetalingen geldt het terugbetalingsbeleid van Google Play, en op uw aankoop zijn ook de voorwaarden van Google Play van toepassing."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Optionele advertentievrije periode",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "In de gratis versie kunt u ervoor kiezen één advertentie met beloning te bekijken en DoseWeek daarna 30 minuten zonder advertenties te gebruiken. De voorwaarde wordt getoond voordat de advertentie begint. De advertentievrije periode wordt alleen toegekend wanneer de advertentie meldt dat de beloning is verdiend; als u de advertentie voortijdig sluit, wordt niets toegekend. De advertentievrije periode is optioneel, is geen aankoop, heeft geen geldwaarde en is niet overdraagbaar. Weigeren verandert geen enkele functie van de gratis versie."
           ]
         },
         {
@@ -709,82 +709,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Uw registraties",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Uw registraties blijven op uw apparaat en zijn van u. DoseWeek heeft geen account, en de ontwikkelaar ontvangt uw gezondheidsgegevens niet. U bent zelf verantwoordelijk voor het veilig bewaren van uw apparaat, back-ups, exports en herstelcodes; de ontwikkelaar kan verloren registraties, bestanden of codes niet herstellen. Plus verandert niets aan de plek waar uw registraties worden opgeslagen."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Wijzigingen van deze voorwaarden",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Als deze voorwaarden veranderen, worden de bijgewerkte voorwaarden op deze pagina gepubliceerd met een nieuwe ingangsdatum. Prijswijzigingen volgen de regels van de store die in paragraaf 3 zijn beschreven. Als u het niet eens bent met een wijziging, kunt u op elk moment stoppen met het gebruik van DoseWeek en Plus opzeggen in de store."
           ]
         },
         {
           "id": "contact",
           "title": "8. Contact",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Voor vragen over deze voorwaarden kunt u contact met ons opnemen via het onderstaande e-mailadres. Voeg geen gezondheidsgegevens, back-upbestand of herstelcode toe.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Privacybeleid voor iPhone en iPad",
+        "privacyAndroid": "Privacybeleid voor Android"
       }
     },
     "pt-PT": {
       "title": "Termos de Utilização",
       "intro": "Os termos de utilização do DoseWeek no iPhone, iPad e Android: a versão gratuita com anúncios, a subscrição opcional Plus, a faturação através da App Store e do Google Play, e os limites de uma aplicação de registo.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Data de entrada em vigor",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. O serviço",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Estes termos aplicam-se às aplicações DoseWeek para iPhone, iPad e Android e a este site de ajuda. O DoseWeek é uma ferramenta pessoal de registo de agendas de injeção, administrações e notas relacionadas, gerida por Wonyoung Choi, programador individual sediado na República da Coreia. Ao utilizar o DoseWeek, aceita estes termos. A política de privacidade da sua plataforma explica como as informações são tratadas."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Versão gratuita e Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "A transferência do DoseWeek é gratuita e a versão gratuita mostra anúncios aos respetivos utilizadores. O Plus é uma subscrição opcional com renovação automática, mensal ou anual, que remove os anúncios e acrescenta resumos e comparações por período, um editor do relatório da consulta, predefinições de disposição do ecrã Hoje e modelos de refeição.",
+            "As funcionalidades que existiam no DoseWeek antes do Plus continuam gratuitas e não passam para o Plus. Se o Plus terminar, os seus registos, modelos e definições guardadas são mantidos. A mesma política da versão gratuita aplica-se a todos: ter comprado uma versão paga anterior do DoseWeek não inclui o Plus.",
+            "O preço e o período de faturação são apresentados na aplicação e na loja antes da compra."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Faturação, renovação e cancelamento",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "O Plus é vendido e faturado pela App Store no iPhone e no iPad e pelo Google Play no Android, através da conta com que tem sessão iniciada. A subscrição renova-se automaticamente no fim de cada período até a cancelar. Cancele nas definições de subscrições da loja, que pode abrir a partir das Definições do DoseWeek. Depois de cancelar, o Plus mantém-se ativo até ao fim do período que pagou. Eliminar a aplicação ou os respetivos dados não cancela uma subscrição.",
+            "Os reembolsos são tratados pela Apple ou pela Google de acordo com as respetivas políticas de reembolso. Se o preço do Plus mudar, a loja informa-o com antecedência segundo as suas próprias regras e, quando essas regras o exigirem, pede a sua aceitação antes de o novo preço se aplicar. O Plus comprado numa loja funciona apenas no DoseWeek dessa plataforma; não existe uma conta DoseWeek para o partilhar entre plataformas."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "No iPhone e no iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "O pagamento é cobrado na sua Conta Apple quando confirma a compra. A subscrição renova-se automaticamente, a menos que desative a renovação automática pelo menos 24 horas antes do fim do período atual, e a renovação é cobrada na sua conta nas 24 horas anteriores ao fim do período atual. Faça a gestão ou o cancelamento da subscrição nas definições de subscrições da sua Conta Apple. Uma mudança entre mensal e anual entra em vigor na data da próxima renovação. Peça os reembolsos à Apple.",
+                "O contrato de licença padrão da Apple, Licensed Application End User License Agreement (EULA), também se aplica à aplicação iOS.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "No Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "O pagamento é cobrado no método de pagamento da sua conta Google Play quando confirma a compra. A subscrição renova-se automaticamente até a cancelar no Google Play, em Pagamentos e subscrições > Subscrições; cancele antes da data de renovação para evitar a cobrança seguinte. Mudar de mensal para anual produz efeito de imediato, e o Google Play credita o tempo mensal não utilizado no plano anual; mudar de anual para mensal produz efeito na data da próxima renovação. Os reembolsos seguem as políticas de reembolso do Google Play, e os termos do Google Play também se aplicam à sua compra."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Passe opcional sem anúncios",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "Na versão gratuita, pode optar por ver um anúncio com recompensa e depois usar o DoseWeek sem anúncios durante 30 minutos. A condição é apresentada antes de o anúncio começar. O passe só é concedido quando o anúncio indica que a recompensa foi obtida; fechar o anúncio antes do fim não concede nada. O passe é opcional, não é uma compra, não tem valor monetário e não pode ser transferido. Recusá-lo não altera nenhuma funcionalidade gratuita."
           ]
         },
         {
@@ -798,82 +798,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Os seus registos",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Os seus registos ficam no seu dispositivo e são seus. O DoseWeek não tem conta e o programador não recebe os seus registos de saúde. É responsável por manter em segurança o seu dispositivo, as cópias de segurança, as exportações e os códigos de recuperação; o programador não pode recuperar registos, ficheiros ou códigos perdidos. O Plus não altera o local onde os seus registos são guardados."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Alterações a estes termos",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Se estes termos mudarem, os termos atualizados são publicados nesta página com uma nova data de entrada em vigor. As alterações de preço seguem as regras da loja descritas na secção 3. Se não concordar com uma alteração, pode deixar de usar o DoseWeek e cancelar o Plus na loja a qualquer momento."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Contacto",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Para questões sobre estes termos, contacte-nos através do endereço de e-mail abaixo. Não inclua dados de saúde, um ficheiro de cópia de segurança nem um código de recuperação.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Política de Privacidade para iPhone e iPad",
+        "privacyAndroid": "Política de Privacidade para Android"
       }
     },
     "pl": {
       "title": "Warunki korzystania",
       "intro": "Warunki korzystania z DoseWeek na iPhonie, iPadzie i Androidzie: bezpłatna wersja z reklamami, opcjonalna subskrypcja Plus, płatności przez App Store i Google Play oraz ograniczenia aplikacji do prowadzenia zapisów.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Data wejścia w życie",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. Usługa",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Niniejsze warunki dotyczą aplikacji DoseWeek na iPhone'a, iPada i Androida oraz tej witryny pomocy. DoseWeek to osobiste narzędzie do zapisywania harmonogramów wstrzyknięć, podań i powiązanych notatek, prowadzone przez Wonyoung Choi, indywidualnego dewelopera z siedzibą w Republice Korei. Korzystając z DoseWeek, akceptujesz niniejsze warunki. Polityka prywatności dla Twojej platformy wyjaśnia, jak przetwarzane są informacje."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Wersja bezpłatna i Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek można pobrać bezpłatnie, a wersja bezpłatna wyświetla reklamy swoim użytkownikom. Plus to opcjonalna, automatycznie odnawiana subskrypcja miesięczna lub roczna, która usuwa reklamy i dodaje podsumowania i porównania okresów, edytor raportu na wizytę, gotowe układy ekranu „Dziś” oraz szablony posiłków.",
+            "Funkcje, które były w DoseWeek przed wprowadzeniem Plus, pozostają bezpłatne i nie są przenoszone do Plus. Gdy Plus się zakończy, Twoje zapisy, szablony i zapisane ustawienia zostają zachowane. Te same zasady wersji bezpłatnej obowiązują wszystkich: zakup wcześniejszej, płatnej wersji DoseWeek nie obejmuje Plus.",
+            "Cena i okres rozliczeniowy są wyświetlane w aplikacji i w sklepie przed zakupem."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Płatności, odnawianie i anulowanie",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus jest sprzedawany i rozliczany przez App Store na iPhonie i iPadzie oraz przez Google Play na Androidzie, z użyciem konta zalogowanego w danym sklepie. Subskrypcja odnawia się automatycznie na koniec każdego okresu, dopóki jej nie anulujesz. Anuluj ją w ustawieniach subskrypcji w sklepie, które możesz otworzyć z Ustawień w DoseWeek. Po anulowaniu Plus pozostaje aktywny do końca opłaconego okresu. Usunięcie aplikacji lub jej danych nie anuluje subskrypcji.",
+            "Zwroty środków obsługuje Apple lub Google zgodnie z własnymi zasadami zwrotów. Jeśli cena Plus się zmieni, sklep powiadomi Cię o tym z wyprzedzeniem zgodnie ze swoimi zasadami, a jeśli te zasady tego wymagają, poprosi o Twoją zgodę, zanim zacznie obowiązywać nowa cena. Plus kupiony w jednym sklepie działa tylko w DoseWeek na tej platformie; nie ma konta DoseWeek, które pozwalałoby korzystać z niego na różnych platformach."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "Na iPhonie i iPadzie (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "Płatność jest pobierana z Twojego Konta Apple po potwierdzeniu zakupu. Subskrypcja odnawia się automatycznie, chyba że wyłączysz automatyczne odnawianie co najmniej 24 godziny przed końcem bieżącego okresu; opłata za odnowienie jest pobierana z konta w ciągu 24 godzin przed końcem bieżącego okresu. Subskrypcją zarządzasz i anulujesz ją w ustawieniach subskrypcji swojego Konta Apple. Zmiana między planem miesięcznym a rocznym zaczyna obowiązywać od następnej daty odnowienia. O zwrot środków należy prosić Apple.",
+                "Do aplikacji na iOS ma również zastosowanie standardowa umowa licencyjna Apple dla użytkownika końcowego (Licensed Application End User License Agreement, EULA).\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Na Androidzie (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "Płatność jest pobierana z formy płatności przypisanej do Twojego konta Google Play po potwierdzeniu zakupu. Subskrypcja odnawia się automatycznie, dopóki nie anulujesz jej w Google Play, w sekcji Płatności i subskrypcje > Subskrypcje; anuluj przed datą odnowienia, aby uniknąć kolejnej opłaty. Zmiana z planu miesięcznego na roczny obowiązuje od razu, a Google Play zalicza niewykorzystany czas miesięczny na poczet planu rocznego; zmiana z rocznego na miesięczny obowiązuje od następnej daty odnowienia. Zwroty środków podlegają zasadom zwrotów Google Play, a do zakupu mają również zastosowanie warunki Google Play."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Opcjonalny okres bez reklam",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "W wersji bezpłatnej możesz obejrzeć jedną reklamę z nagrodą, a potem korzystać z DoseWeek bez reklam przez 30 minut. Warunek jest pokazywany przed rozpoczęciem reklamy. Okres bez reklam jest przyznawany tylko wtedy, gdy reklama zgłosi, że nagroda została zdobyta; zamknięcie reklamy przed końcem nic nie daje. Okres bez reklam jest opcjonalny, nie jest zakupem, nie ma wartości pieniężnej i nie można go przenieść. Odmowa nie zmienia żadnej funkcji wersji bezpłatnej."
           ]
         },
         {
@@ -887,82 +887,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Twoje zapisy",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Twoje zapisy pozostają na Twoim urządzeniu i należą do Ciebie. DoseWeek nie ma kont, a deweloper nie otrzymuje Twoich zapisów zdrowotnych. Odpowiadasz za bezpieczeństwo swojego urządzenia, kopii zapasowych, eksportów i kodów odzyskiwania; deweloper nie może odzyskać utraconych zapisów, plików ani kodów. Plus nie zmienia miejsca przechowywania Twoich zapisów."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Zmiany warunków",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Jeśli niniejsze warunki się zmienią, zaktualizowane warunki zostaną opublikowane na tej stronie z nową datą wejścia w życie. Zmiany cen podlegają zasadom sklepów opisanym w punkcie 3. Jeśli nie zgadzasz się ze zmianą, możesz w każdej chwili przestać korzystać z DoseWeek i anulować Plus w sklepie."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Kontakt",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Pytania dotyczące niniejszych warunków kieruj na poniższy adres e-mail. Nie podawaj danych zdrowotnych, pliku kopii zapasowej ani kodu odzyskiwania.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Polityka prywatności dla iPhone'a i iPada",
+        "privacyAndroid": "Polityka prywatności dla Androida"
       }
     },
     "sv": {
       "title": "Användarvillkor",
-      "intro": "Villkoren för att använda DoseWeek på iPhone, iPad och Android: gratisversionen med annonser, det valfria Plus-abonnemanget, betalning via App Store och Google Play samt begränsningarna hos en app för registrering.",
-      "effectiveDateLabel": "Effective date",
+      "intro": "Villkoren för att använda DoseWeek på iPhone, iPad och Android: gratisversionen med annonser, den valfria Plus-prenumerationen, betalning via App Store och Google Play samt begränsningarna hos en app för registrering.",
+      "effectiveDateLabel": "Ikraftträdandedatum",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. Tjänsten",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Dessa villkor gäller DoseWeek-apparna för iPhone, iPad och Android och den här hjälpwebbplatsen. DoseWeek är ett personligt verktyg för att registrera injektionsscheman, administreringar och tillhörande anteckningar och drivs av Wonyoung Choi, en enskild utvecklare med säte i Republiken Korea. Genom att använda DoseWeek godkänner du dessa villkor. Integritetspolicyn för din plattform förklarar hur information hanteras."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Gratisversionen och Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek är gratis att ladda ned, och gratisversionen visar annonser för sina användare. Plus är en valfri prenumeration som förnyas automatiskt, månadsvis eller årsvis, och som tar bort annonser och lägger till periodsammanfattningar och jämförelser, en redigerare för besöksrapporten, layoutförval för I dag och måltidsmallar.",
+            "Funktioner som fanns i DoseWeek före Plus förblir gratis och flyttas inte till Plus. Om Plus upphör behålls dina registreringar, mallar och sparade inställningar. Samma regler för gratisversionen gäller för alla: ett köp av en tidigare betalversion av DoseWeek inkluderar inte Plus.",
+            "Priset och faktureringsperioden visas i appen och i butiken innan du köper."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Betalning, förnyelse och uppsägning",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus säljs och debiteras av App Store på iPhone och iPad och av Google Play på Android, via det konto du är inloggad med. Prenumerationen förnyas automatiskt i slutet av varje period tills du säger upp den. Säg upp den i butikens prenumerationsinställningar, som du kan öppna från Inställningar i DoseWeek. När du har sagt upp den är Plus kvar till slutet av den period du har betalat för. Att radera appen eller dess data säger inte upp en prenumeration.",
+            "Återbetalningar hanteras av Apple eller Google enligt deras egna återbetalningsregler. Om priset på Plus ändras meddelar butiken dig i förväg enligt sina egna regler och ber, där reglerna kräver det, om ditt godkännande innan det nya priset börjar gälla. Plus som köpts i en butik fungerar bara i DoseWeek på den plattformen; det finns inget DoseWeek-konto för att dela det mellan plattformar."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "På iPhone och iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "Betalningen debiteras ditt Apple-konto när du bekräftar köpet. Prenumerationen förnyas automatiskt om du inte stänger av automatisk förnyelse minst 24 timmar innan den aktuella perioden slutar, och ditt konto debiteras för förnyelsen inom 24 timmar innan den aktuella perioden slutar. Hantera eller säg upp prenumerationen i prenumerationsinställningarna för ditt Apple-konto. Ett byte mellan månads- och årsplan gäller från nästa förnyelsedatum. Begär återbetalning hos Apple.",
+                "Apples standardlicensavtal för slutanvändare, Licensed Application End User License Agreement (EULA), gäller också för iOS-appen.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "På Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "Betalningen debiteras betalningsmetoden i ditt Google Play-konto när du bekräftar köpet. Prenumerationen förnyas automatiskt tills du säger upp den på Google Play under Betalningar och prenumerationer > Prenumerationer; säg upp före förnyelsedatumet för att undvika nästa debitering. Ett byte från månads- till årsplan gäller direkt, och Google Play tillgodoräknar den oanvända månadstiden i årsplanen; ett byte från års- till månadsplan gäller från nästa förnyelsedatum. Återbetalningar följer Google Plays återbetalningsregler, och Google Plays villkor gäller också för ditt köp."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Valfri annonsfri period",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "I gratisversionen kan du välja att titta på en annons med belöning och sedan använda DoseWeek utan annonser i 30 minuter. Villkoret visas innan annonsen startar. Den annonsfria perioden ges bara när annonsen rapporterar att belöningen har tjänats in; om du stänger annonsen i förtid får du ingenting. Den annonsfria perioden är valfri, är inget köp, har inget kontantvärde och kan inte överlåtas. Om du avböjer den ändras ingen funktion i gratisversionen."
           ]
         },
         {
@@ -976,82 +976,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Dina registreringar",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Dina registreringar stannar på din enhet och tillhör dig. DoseWeek har inga konton, och utvecklaren tar inte emot dina hälsoregistreringar. Du ansvarar för att skydda din enhet, dina säkerhetskopior, exporter och återställningskoder; utvecklaren kan inte återställa förlorade registreringar, filer eller koder. Plus ändrar inte var dina registreringar lagras."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Ändringar av villkoren",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Om dessa villkor ändras publiceras de uppdaterade villkoren på den här sidan med ett nytt ikraftträdandedatum. Prisändringar följer de butiksregler som beskrivs i avsnitt 3. Om du inte godkänner en ändring kan du när som helst sluta använda DoseWeek och säga upp Plus i butiken."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Kontakt",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Frågor om dessa villkor kan skickas till e-postadressen nedan. Ta inte med hälsouppgifter, en säkerhetskopia eller en återställningskod.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Integritetspolicy för iPhone och iPad",
+        "privacyAndroid": "Integritetspolicy för Android"
       }
     },
     "hi": {
       "title": "उपयोग की शर्तें",
       "intro": "iPhone, iPad और Android पर DoseWeek के उपयोग की शर्तें: विज्ञापनों वाला मुफ़्त संस्करण, वैकल्पिक Plus सदस्यता, App Store और Google Play के ज़रिए भुगतान, और रिकॉर्ड रखने वाले ऐप की सीमाएँ।",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "प्रभावी तिथि",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. सेवा",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "ये शर्तें iPhone, iPad और Android के लिए DoseWeek ऐप और इस सहायता वेबसाइट पर लागू होती हैं। DoseWeek इंजेक्शन के शेड्यूल, दवा दिए जाने और उनसे जुड़े नोट्स के रिकॉर्ड रखने का एक व्यक्तिगत साधन है, जिसे कोरिया गणराज्य में स्थित व्यक्तिगत डेवलपर Wonyoung Choi संचालित करते हैं। DoseWeek का उपयोग करके आप इन शर्तों से सहमत होते हैं। जानकारी को कैसे संभाला जाता है, यह आपके प्लेटफ़ॉर्म की गोपनीयता नीति में बताया गया है।"
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. मुफ़्त और Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek मुफ़्त में डाउनलोड किया जा सकता है, और मुफ़्त संस्करण मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखाता है। Plus एक वैकल्पिक, अपने-आप रिन्यू होने वाली मासिक या वार्षिक सदस्यता है, जो विज्ञापन हटाती है और अवधि सारांश व तुलना, विज़िट रिपोर्ट संपादक, “आज” स्क्रीन के लेआउट प्रीसेट और भोजन टेम्पलेट जोड़ती है।",
+            "Plus से पहले DoseWeek में मौजूद सुविधाएँ मुफ़्त रहती हैं और Plus में नहीं ले जाई जातीं। Plus समाप्त होने पर आपके रिकॉर्ड, टेम्पलेट और सहेजी गई सेटिंग बनी रहती हैं। सभी पर एक ही मुफ़्त नीति लागू होती है: DoseWeek का पहले का कोई सशुल्क संस्करण ख़रीदने में Plus शामिल नहीं है।",
+            "कीमत और बिलिंग अवधि खरीदने से पहले ऐप और स्टोर में दिखाई जाती है।"
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. बिलिंग, रिन्यूअल और रद्द करना",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus को iPhone और iPad पर App Store और Android पर Google Play बेचते हैं और उसका बिल लेते हैं, उसी खाते से जिससे आपने साइन इन किया है। जब तक आप सदस्यता रद्द नहीं करते, वह हर अवधि के अंत में अपने-आप रिन्यू होती है। रद्द करने के लिए स्टोर की सदस्यता सेटिंग का उपयोग करें, जिसे आप DoseWeek की सेटिंग्स से खोल सकते हैं। रद्द करने के बाद, जिस अवधि का आपने भुगतान किया है, उसके अंत तक Plus चालू रहता है। ऐप या उसका डेटा हटाने से सदस्यता रद्द नहीं होती।",
+            "रिफ़ंड Apple या Google अपनी-अपनी रिफ़ंड नीतियों के अनुसार संभालते हैं। यदि Plus की कीमत बदलती है, तो स्टोर अपने नियमों के अनुसार आपको पहले से सूचित करता है और, जहाँ वे नियम ऐसा माँगते हैं, नई कीमत लागू होने से पहले आपकी सहमति लेता है। किसी एक स्टोर में ख़रीदा गया Plus केवल उसी प्लेटफ़ॉर्म के DoseWeek में काम करता है; प्लेटफ़ॉर्मों के बीच इसे साझा करने के लिए कोई DoseWeek खाता नहीं है।"
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "iPhone और iPad पर (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "खरीदारी की पुष्टि करते ही आपके Apple खाते से भुगतान लिया जाता है। जब तक आप मौजूदा अवधि समाप्त होने से कम से कम 24 घंटे पहले ऑटो-रिन्यूअल बंद नहीं करते, सदस्यता अपने-आप रिन्यू होती है, और मौजूदा अवधि समाप्त होने से पहले के 24 घंटों के भीतर रिन्यूअल का शुल्क आपके खाते से लिया जाता है। सदस्यता प्रबंधित करने या रद्द करने के लिए अपने Apple खाते की सदस्यता सेटिंग का उपयोग करें। मासिक और वार्षिक के बीच बदलाव आपकी अगली रिन्यूअल तारीख़ से लागू होता है। रिफ़ंड के लिए Apple से अनुरोध करें।",
+                "iOS ऐप पर Apple का मानक Licensed Application End User License Agreement (EULA), यानी लाइसेंस प्राप्त ऐप्लिकेशन का अंतिम उपयोगकर्ता लाइसेंस अनुबंध, भी लागू होता है।\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Android पर (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "खरीदारी की पुष्टि करते ही आपके Google Play खाते में मौजूद भुगतान के तरीके से भुगतान लिया जाता है। सदस्यता तब तक अपने-आप रिन्यू होती है जब तक आप उसे Google Play में भुगतान और सदस्यताएँ (Payments & subscriptions) > सदस्यताएँ (Subscriptions) में रद्द नहीं करते; अगले शुल्क से बचने के लिए रिन्यूअल की तारीख़ से पहले रद्द करें। मासिक से वार्षिक पर जाना तुरंत लागू होता है, और Google Play मासिक प्लान के बिना इस्तेमाल हुए समय को वार्षिक प्लान में समायोजित कर देता है; वार्षिक से मासिक पर जाना आपकी अगली रिन्यूअल तारीख़ से लागू होता है। रिफ़ंड Google Play की रिफ़ंड नीतियों के अनुसार होते हैं, और आपकी खरीदारी पर Google Play की शर्तें भी लागू होती हैं।"
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. वैकल्पिक विज्ञापन-मुक्त पास",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "मुफ़्त संस्करण में आप चाहें तो इनाम वाला एक विज्ञापन देखकर 30 मिनट तक बिना विज्ञापन के DoseWeek इस्तेमाल कर सकते हैं। शर्त विज्ञापन शुरू होने से पहले दिखाई जाती है। पास तभी मिलता है जब विज्ञापन बताता है कि इनाम अर्जित हो गया है; विज्ञापन बीच में बंद करने पर कुछ नहीं मिलता। यह पास वैकल्पिक है, कोई खरीदारी नहीं है, इसका कोई नकद मूल्य नहीं है और इसे किसी और को हस्तांतरित नहीं किया जा सकता। इसे मना करने से मुफ़्त संस्करण की कोई सुविधा नहीं बदलती।"
           ]
         },
         {
@@ -1065,82 +1065,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. आपके रिकॉर्ड",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "आपके रिकॉर्ड आपके डिवाइस पर रहते हैं और आपके हैं। DoseWeek में कोई खाता नहीं है, और डेवलपर को आपके स्वास्थ्य रिकॉर्ड नहीं मिलते। अपने डिवाइस, बैकअप, निर्यात और रिकवरी कोड को सुरक्षित रखना आपकी ज़िम्मेदारी है; डेवलपर खोए हुए रिकॉर्ड, फ़ाइलें या कोड वापस नहीं ला सकता। Plus से यह नहीं बदलता कि आपके रिकॉर्ड कहाँ सेव होते हैं।"
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. इन शर्तों में बदलाव",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "यदि ये शर्तें बदलती हैं, तो अपडेट की गई शर्तें नई प्रभावी तिथि के साथ इसी पेज पर प्रकाशित की जाती हैं। कीमत में बदलाव अनुभाग 3 में बताए गए स्टोर नियमों के अनुसार होते हैं। यदि आप किसी बदलाव से सहमत नहीं हैं, तो आप किसी भी समय DoseWeek का उपयोग बंद कर सकते हैं और स्टोर में Plus रद्द कर सकते हैं।"
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. संपर्क",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "इन शर्तों के बारे में प्रश्नों के लिए नीचे दिए गए ईमेल पर हमसे संपर्क करें। स्वास्थ्य जानकारी, बैकअप फ़ाइल या रिकवरी कोड शामिल न करें।\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "iPhone और iPad के लिए गोपनीयता नीति",
+        "privacyAndroid": "Android के लिए गोपनीयता नीति"
       }
     },
     "pt-BR": {
       "title": "Termos de Uso",
       "intro": "Os termos para usar o DoseWeek no iPhone, iPad e Android: a versão gratuita com anúncios, a assinatura opcional Plus, a cobrança pela App Store e pelo Google Play e os limites de um aplicativo de registro.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Data de vigência",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. O serviço",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Estes termos se aplicam aos aplicativos DoseWeek para iPhone, iPad e Android e a este site de ajuda. O DoseWeek é uma ferramenta pessoal de registro de agendas de injeção, aplicações e notas relacionadas, operada por Wonyoung Choi, desenvolvedor individual baseado na República da Coreia. Ao usar o DoseWeek, você concorda com estes termos. A política de privacidade da sua plataforma explica como as informações são tratadas."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Versão gratuita e Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "O download do DoseWeek é gratuito, e a versão gratuita exibe anúncios aos seus usuários. O Plus é uma assinatura opcional com renovação automática, mensal ou anual, que remove os anúncios e adiciona resumos e comparações por período, um editor do relatório da consulta, predefinições de layout da tela Hoje e modelos de refeição.",
+            "Os recursos que existiam no DoseWeek antes do Plus continuam gratuitos e não são transferidos para o Plus. Se o Plus terminar, seus registros, modelos e configurações salvas são mantidos. A mesma política da versão gratuita vale para todos: ter comprado uma versão paga anterior do DoseWeek não inclui o Plus.",
+            "O preço e o período de cobrança aparecem no aplicativo e na loja antes da compra."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Cobrança, renovação e cancelamento",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "O Plus é vendido e cobrado pela App Store no iPhone e no iPad e pelo Google Play no Android, usando a conta com a qual você está conectado. A assinatura é renovada automaticamente ao fim de cada período até você cancelá-la. Cancele nas configurações de assinaturas da loja, que você pode abrir em Ajustes no DoseWeek. Depois de cancelar, o Plus continua ativo até o fim do período pago. Excluir o aplicativo ou os dados dele não cancela uma assinatura.",
+            "Reembolsos são tratados pela Apple ou pelo Google conforme as respectivas políticas de reembolso. Se o preço do Plus mudar, a loja avisará você com antecedência conforme as próprias regras e, quando essas regras exigirem, pedirá sua concordância antes que o novo preço seja aplicado. O Plus comprado em uma loja funciona apenas no DoseWeek dessa plataforma; não existe conta DoseWeek para compartilhá-lo entre plataformas."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "No iPhone e no iPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "O pagamento é cobrado na sua Conta Apple quando você confirma a compra. A assinatura é renovada automaticamente, a menos que você desative a renovação automática pelo menos 24 horas antes do fim do período atual, e a renovação é cobrada na sua conta nas 24 horas anteriores ao fim do período atual. Gerencie ou cancele a assinatura nas configurações de assinaturas da sua Conta Apple. Uma mudança entre mensal e anual passa a valer na próxima data de renovação. Solicite reembolsos à Apple.",
+                "O contrato de licença padrão da Apple, Licensed Application End User License Agreement (EULA), também se aplica ao aplicativo para iOS.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "No Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "O pagamento é cobrado na forma de pagamento da sua conta do Google Play quando você confirma a compra. A assinatura é renovada automaticamente até você cancelá-la no Google Play, em Pagamentos e assinaturas > Assinaturas; cancele antes da data de renovação para evitar a próxima cobrança. Mudar de mensal para anual vale na hora, e o Google Play credita o tempo mensal não usado no plano anual; mudar de anual para mensal passa a valer na próxima data de renovação. Os reembolsos seguem as políticas de reembolso do Google Play, e os termos do Google Play também se aplicam à sua compra."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. Passe opcional sem anúncios",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "Na versão gratuita, você pode optar por assistir a um anúncio premiado e depois usar o DoseWeek sem anúncios por 30 minutos. A condição aparece antes de o anúncio começar. O passe só é concedido quando o anúncio informa que a recompensa foi obtida; fechar o anúncio antes do fim não concede nada. O passe é opcional, não é uma compra, não tem valor em dinheiro e não pode ser transferido. Recusá-lo não muda nenhum recurso gratuito."
           ]
         },
         {
@@ -1154,82 +1154,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Seus registros",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Seus registros ficam no seu dispositivo e são seus. O DoseWeek não tem conta, e o desenvolvedor não recebe seus registros de saúde. Você é responsável por manter seguros seu dispositivo, backups, exportações e códigos de recuperação; o desenvolvedor não pode recuperar registros, arquivos ou códigos perdidos. O Plus não muda o local onde seus registros são armazenados."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Alterações nestes termos",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Se estes termos mudarem, os termos atualizados serão publicados nesta página com uma nova data de vigência. Mudanças de preço seguem as regras da loja descritas na seção 3. Se você não concordar com uma mudança, pode parar de usar o DoseWeek e cancelar o Plus na loja a qualquer momento."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. Contato",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Para dúvidas sobre estes termos, entre em contato pelo e-mail abaixo. Não inclua dados de saúde, arquivo de backup nem código de recuperação.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "Política de Privacidade para iPhone e iPad",
+        "privacyAndroid": "Política de Privacidade para Android"
       }
     },
     "ar": {
       "title": "شروط الاستخدام",
       "intro": "شروط استخدام DoseWeek على iPhone وiPad وAndroid: الإصدار المجاني مع الإعلانات، واشتراك Plus الاختياري، والدفع عبر App Store وGoogle Play، وحدود تطبيق مخصص للتسجيل.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "تاريخ السريان",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. الخدمة",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "تنطبق هذه الشروط على تطبيقات DoseWeek لأجهزة iPhone وiPad وAndroid وعلى موقع المساعدة هذا. DoseWeek أداة شخصية لحفظ سجلات جداول الحقن وعمليات إعطاء الدواء والملاحظات المتعلقة بها، ويديرها Wonyoung Choi، وهو مطوّر فردي مقيم في جمهورية كوريا. باستخدامك DoseWeek فإنك توافق على هذه الشروط. وتوضح سياسة الخصوصية الخاصة بمنصتك كيفية التعامل مع المعلومات."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. الإصدار المجاني وPlus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "يمكن تنزيل DoseWeek مجانًا، ويعرض الإصدار المجاني إعلانات لمستخدميه. وPlus اشتراك اختياري يتجدد تلقائيًا، شهريًا أو سنويًا، يزيل الإعلانات ويضيف ملخصات الفترات والمقارنات ومحرر تقرير الزيارة وإعدادات مسبقة لتخطيط شاشة «اليوم» وقوالب الوجبات.",
+            "تبقى الميزات التي كانت في DoseWeek قبل Plus مجانية ولا تُنقل إلى Plus. وإذا انتهى Plus، تبقى سجلاتك وقوالبك وإعداداتك المحفوظة. وتنطبق سياسة الإصدار المجاني نفسها على الجميع: شراء إصدار مدفوع سابق من DoseWeek لا يشمل Plus.",
+            "يُعرض السعر ومدة الفوترة في التطبيق وفي المتجر قبل الشراء."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. الفوترة والتجديد والإلغاء",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "يبيع App Store اشتراك Plus ويفوتره على iPhone وiPad، وتبيعه Google Play وتفوتره على Android، باستخدام الحساب الذي سجّلت الدخول به. يتجدد الاشتراك تلقائيًا في نهاية كل فترة حتى تلغيه. يمكنك الإلغاء من إعدادات الاشتراكات في المتجر، والتي يمكنك فتحها من الإعدادات في DoseWeek. وبعد الإلغاء، يظل Plus مفعّلًا حتى نهاية الفترة التي دفعت مقابلها. ولا يؤدي حذف التطبيق أو بياناته إلى إلغاء الاشتراك.",
+            "تتولى Apple أو Google معالجة المبالغ المستردة وفق سياسات الاسترداد الخاصة بكل منهما. وإذا تغيّر سعر Plus، يُبلغك المتجر مسبقًا وفق قواعده، ويطلب موافقتك قبل تطبيق السعر الجديد حيث تشترط تلك القواعد ذلك. ولا يعمل Plus المشترى من متجر ما إلا في DoseWeek على تلك المنصة؛ ولا يوجد حساب DoseWeek لمشاركته بين المنصات."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "على iPhone وiPad (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "يُحصَّل المبلغ من حساب Apple الخاص بك عند تأكيد الشراء. يتجدد الاشتراك تلقائيًا ما لم توقف التجديد التلقائي قبل 24 ساعة على الأقل من نهاية الفترة الحالية، ويُحصَّل رسم التجديد من حسابك خلال الـ 24 ساعة السابقة لنهاية الفترة الحالية. يمكنك إدارة الاشتراك أو إلغاؤه من إعدادات الاشتراكات في حساب Apple الخاص بك. ويسري التغيير بين الخطة الشهرية والسنوية في تاريخ التجديد التالي. اطلب المبالغ المستردة من Apple.",
+                "تنطبق أيضًا على تطبيق iOS اتفاقية ترخيص المستخدم النهائي القياسية من Apple للتطبيقات المرخّصة (Licensed Application End User License Agreement، EULA).\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "على Android (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "يُحصَّل المبلغ من طريقة الدفع في حساب Google Play الخاص بك عند تأكيد الشراء. يتجدد الاشتراك تلقائيًا حتى تلغيه في Google Play من الدفعات والاشتراكات > الاشتراكات؛ ولتجنّب الرسوم التالية، ألغِ الاشتراك قبل تاريخ التجديد. يسري التبديل من الخطة الشهرية إلى السنوية فورًا، وتحتسب Google Play الوقت غير المستخدم من الخطة الشهرية لصالح الخطة السنوية؛ ويسري التبديل من السنوية إلى الشهرية في تاريخ التجديد التالي. وتخضع المبالغ المستردة لسياسات الاسترداد في Google Play، وتنطبق شروط Google Play أيضًا على عملية الشراء."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. فترة اختيارية بلا إعلانات",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "في الإصدار المجاني، يمكنك اختيار مشاهدة إعلان واحد بمكافأة ثم استخدام DoseWeek دون إعلانات لمدة 30 دقيقة. ويُعرض الشرط قبل بدء الإعلان. ولا تُمنح هذه الفترة إلا عندما يُفيد الإعلان بأن المكافأة قد اكتُسبت؛ وإغلاق الإعلان مبكرًا لا يمنح شيئًا. هذه الفترة اختيارية، وليست عملية شراء، ولا قيمة نقدية لها، ولا يمكن نقلها إلى غيرك. ورفضها لا يغيّر أي ميزة من ميزات الإصدار المجاني."
           ]
         },
         {
@@ -1243,82 +1243,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. سجلاتك",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "تبقى سجلاتك على جهازك وهي ملكك. لا يوجد في DoseWeek حساب، ولا يتلقى المطوّر سجلاتك الصحية. وأنت مسؤول عن الحفاظ على أمان جهازك ونسخك الاحتياطية والملفات المصدّرة ورموز الاسترداد؛ ولا يستطيع المطوّر استعادة السجلات أو الملفات أو الرموز المفقودة. ولا يغيّر Plus مكان تخزين سجلاتك."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. التغييرات على هذه الشروط",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "إذا تغيّرت هذه الشروط، تُنشر الشروط المحدّثة في هذه الصفحة مع تاريخ سريان جديد. وتتبع تغييرات الأسعار قواعد المتجر الموضحة في القسم 3. وإذا لم توافق على أي تغيير، يمكنك التوقف عن استخدام DoseWeek وإلغاء Plus من المتجر في أي وقت."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. التواصل",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "للاستفسار عن هذه الشروط، راسلنا على عنوان البريد الإلكتروني أدناه. لا تُرفق بيانات صحية أو ملف نسخة احتياطية أو رمز استرداد.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "سياسة الخصوصية لـ iPhone وiPad",
+        "privacyAndroid": "سياسة الخصوصية لـ Android"
       }
     },
     "zh-Hans": {
       "title": "使用条款",
       "intro": "在 iPhone、iPad 和 Android 上使用 DoseWeek 的条款：含广告的免费版、可选的 Plus 订阅、通过 App Store 和 Google Play 付费，以及记录类应用的局限。",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "生效日期",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. 服务",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "本条款适用于 iPhone、iPad 和 Android 版 DoseWeek 应用以及本帮助网站。DoseWeek 是用于记录注射日程、给药情况及相关备注的个人记录工具，由位于大韩民国的个人开发者 Wonyoung Choi 运营。使用 DoseWeek 即表示您同意本条款。有关信息的处理方式，请参阅您所用平台的隐私政策。"
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. 免费版与 Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek 可免费下载，免费版会向免费版用户展示广告。Plus 是可选的自动续订订阅，分为按月和按年两种，可移除广告，并增加时段摘要与比较、就诊报告编辑器、“今天”页面布局预设和用餐模板。",
+            "推出 Plus 之前 DoseWeek 已有的功能仍然免费，不会移入 Plus。Plus 结束后，您的记录、模板和已保存的设置都会保留。同一免费政策适用于所有人：购买过 DoseWeek 早期付费版本并不包含 Plus。",
+            "价格和计费周期会在购买前显示在应用和商店中。"
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. 付款、续订与取消",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus 在 iPhone 和 iPad 上由 App Store 销售和收费，在 Android 上由 Google Play 销售和收费，使用您登录的账户。订阅会在每个周期结束时自动续订，直到您取消为止。您可以在商店的订阅设置中取消，也可以从 DoseWeek 的“设置”中直接打开该设置。取消后，在您已付费的期限结束前，Plus 仍保持开启。删除应用或其数据不会取消订阅。",
+            "退款由 Apple 或 Google 依据各自的退款政策处理。如果 Plus 的价格发生变化，商店会依据其自身规则提前通知您；如果这些规则有要求，还会在新价格生效前征得您的同意。在一个商店购买的 Plus 只能在该平台上的 DoseWeek 中使用；没有可在不同平台间共享 Plus 的 DoseWeek 账户。"
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "在 iPhone 和 iPad 上（App Store）",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "确认购买时，将从您的 Apple 账户扣款。除非您至少在当前周期结束前 24 小时关闭自动续订，否则订阅会自动续订，并在当前周期结束前 24 小时内从您的账户扣取续订费用。您可以在 Apple 账户的订阅设置中管理或取消订阅。按月与按年方案之间的更改将从下一个续订日起生效。退款请向 Apple 申请。",
+                "iOS 应用还适用 Apple 的标准许可应用程序最终用户许可协议（Licensed Application End User License Agreement，EULA）。\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "在 Android 上（Google Play）",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "确认购买时，将从您 Google Play 账号中的付款方式扣款。订阅会自动续订，直到您在 Google Play 的“付款和订阅 > 订阅”中取消为止；如需避免下一次扣费，请在续订日期之前取消。从按月改为按年会立即生效，Google Play 会将按月方案中未使用的时间折抵到按年方案；从按年改为按月则从下一个续订日起生效。退款遵循 Google Play 的退款政策，您的购买同时适用 Google Play 的条款。"
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. 可选的免广告时段",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "在免费版中，您可以选择观看一则激励广告，然后在 30 分钟内无广告地使用 DoseWeek。条件会在广告开始前显示。只有当广告报告已获得奖励时，才会授予该时段；提前关闭广告则不会获得任何内容。该时段为可选功能，不属于购买，没有现金价值，也不能转让。拒绝不会改变任何免费功能。"
           ]
         },
         {
@@ -1332,82 +1332,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. 您的记录",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "您的记录保存在您的设备上，归您所有。DoseWeek 没有账户，开发者也不会收到您的健康记录。您有责任妥善保管您的设备、备份、导出文件和恢复码；开发者无法恢复丢失的记录、文件或恢复码。使用 Plus 不会改变记录的存储位置。"
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. 条款变更",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "如果本条款发生变更，更新后的条款将连同新的生效日期发布在此页面上。价格变更遵循第 3 节所述的商店规则。如果您不同意某项变更，可以随时停止使用 DoseWeek，并在商店中取消 Plus。"
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. 联系方式",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "如对本条款有任何疑问，请发送电子邮件至以下地址。请勿包含健康信息、备份文件或恢复码。\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "iPhone 和 iPad 版隐私政策",
+        "privacyAndroid": "Android 版隐私政策"
       }
     },
     "zh-Hant": {
       "title": "使用條款",
       "intro": "在 iPhone、iPad 和 Android 上使用 DoseWeek 的條款：含廣告的免費版、可選的 Plus 訂閱、透過 App Store 和 Google Play 付費，以及記錄類 App 的限制。",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "生效日期",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. 服務",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "本條款適用於 iPhone、iPad 和 Android 版 DoseWeek App，以及本說明網站。DoseWeek 是用來記錄注射排程、給藥情形及相關備註的個人記錄工具，由位於大韓民國的個人開發者 Wonyoung Choi 營運。使用 DoseWeek 即表示您同意本條款。資訊的處理方式請參閱您所用平台的隱私權政策。"
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. 免費版與 Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek 可免費下載，免費版會向免費版使用者顯示廣告。Plus 是選用的自動續訂訂閱，提供月費方案和年費方案，可移除廣告，並新增期間摘要與比較、就診報告編輯器、「今天」畫面版面配置組合和用餐範本。",
+            "推出 Plus 之前 DoseWeek 已有的功能仍然免費，不會移入 Plus。Plus 結束後，您的紀錄、範本和已儲存的設定都會保留。相同的免費政策適用於所有人：購買過 DoseWeek 先前的付費版本，並不包含 Plus。",
+            "價格與計費週期會在購買前顯示於 App 和商店中。"
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. 付款、續訂與取消",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus 在 iPhone 和 iPad 上由 App Store 販售及收費，在 Android 上由 Google Play 販售及收費，並使用您登入的帳號。訂閱會在每個期間結束時自動續訂，直到您取消為止。您可以在商店的訂閱設定中取消，也可以從 DoseWeek 的「設定」直接開啟該設定。取消後，在您已付費的期間結束前，Plus 仍會保持開啟。刪除 App 或其資料不會取消訂閱。",
+            "退款由 Apple 或 Google 依各自的退款政策處理。如果 Plus 的價格有所變更，商店會依其自身規則事先通知您；如果這些規則有所要求，也會在新價格適用前徵求您的同意。在某一商店購買的 Plus 只能在該平台的 DoseWeek 中使用；沒有可在不同平台間共用 Plus 的 DoseWeek 帳號。"
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "在 iPhone 和 iPad 上（App Store）",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "確認購買時，將向您的 Apple 帳號收費。除非您至少在目前期間結束前 24 小時關閉自動續訂，否則訂閱會自動續訂，並在目前期間結束前的 24 小時內向您的帳號收取續訂費用。您可以在 Apple 帳號的訂閱設定中管理或取消訂閱。月費方案與年費方案之間的變更會從下一個續訂日起生效。退款請向 Apple 申請。",
+                "iOS App 也適用 Apple 的標準授權應用程式終端使用者授權合約（Licensed Application End User License Agreement，EULA）。\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "在 Android 上（Google Play）",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "確認購買時，將向您 Google Play 帳號中的付款方式收費。訂閱會自動續訂，直到您在 Google Play 的「付款和訂閱 > 訂閱」中取消為止；若要避免下一次收費，請在續訂日之前取消。從月費方案改為年費方案會立即生效，Google Play 會將月費方案未使用的時間折抵至年費方案；從年費方案改為月費方案則會從下一個續訂日起生效。退款依循 Google Play 的退款政策，您的購買也適用 Google Play 的條款。"
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. 選用的免廣告時段",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "在免費版中，您可以選擇觀看一則獎勵廣告，然後在 30 分鐘內不看廣告使用 DoseWeek。條件會在廣告開始前顯示。只有在廣告回報已獲得獎勵時，才會提供此時段；提早關閉廣告則不會獲得任何內容。此時段為選用，不屬於購買，沒有現金價值，也無法轉讓。拒絕不會改變任何免費功能。"
           ]
         },
         {
@@ -1421,82 +1421,82 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. 您的紀錄",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "您的紀錄保存在您的裝置上，屬於您所有。DoseWeek 沒有帳號，開發者也不會收到您的健康紀錄。您有責任妥善保管您的裝置、備份、匯出檔案和復原碼；開發者無法找回遺失的紀錄、檔案或復原碼。使用 Plus 不會改變紀錄的儲存位置。"
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. 條款變更",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "如果本條款有所變更，更新後的條款會連同新的生效日期公布在此頁面。價格變更依循第 3 節所述的商店規則。如果您不同意某項變更，可以隨時停止使用 DoseWeek，並在商店中取消 Plus。"
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. 聯絡方式",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "如對本條款有任何疑問，請寄送電子郵件至下方地址。請勿包含健康資訊、備份檔或復原碼。\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "iPhone 和 iPad 版隱私權政策",
+        "privacyAndroid": "Android 版隱私權政策"
       }
     },
     "tr": {
       "title": "Kullanım Koşulları",
       "intro": "DoseWeek'i iPhone, iPad ve Android'de kullanma koşulları: reklamlı ücretsiz sürüm, isteğe bağlı Plus aboneliği, App Store ve Google Play üzerinden ödeme ve bir kayıt uygulamasının sınırları.",
-      "effectiveDateLabel": "Effective date",
+      "effectiveDateLabel": "Yürürlük tarihi",
       "sections": [
         {
           "id": "service",
-          "title": "1. The service",
+          "title": "1. Hizmet",
           "paragraphs": [
-            "These terms apply to the DoseWeek apps for iPhone, iPad and Android and to this help website. DoseWeek is a personal record-keeping tool for injection schedules, administrations and related notes, run by Wonyoung Choi, an individual developer based in the Republic of Korea. By using DoseWeek you agree to these terms. The privacy policy for your platform explains how information is handled."
+            "Bu koşullar iPhone, iPad ve Android için DoseWeek uygulamalarına ve bu yardım web sitesine uygulanır. DoseWeek; enjeksiyon programları, yapılan enjeksiyonlar ve ilgili notlar için kişisel bir kayıt tutma aracıdır ve Kore Cumhuriyeti'nde bulunan bireysel geliştirici Wonyoung Choi tarafından işletilir. DoseWeek'i kullanarak bu koşulları kabul etmiş olursunuz. Bilgilerin nasıl işlendiği, platformunuza ait gizlilik politikasında açıklanır."
           ]
         },
         {
           "id": "free-plus",
-          "title": "2. Free and Plus",
+          "title": "2. Ücretsiz sürüm ve Plus",
           "paragraphs": [
-            "DoseWeek is a free download, and the free version shows ads to Free users. Plus is an optional auto-renewing subscription, monthly or annual, that removes ads and adds period summaries and comparisons, a visit report editor, Today layout presets and meal templates.",
-            "Features that were in DoseWeek before Plus remain free and are not moved into Plus. If Plus ends, your records, templates and saved settings are kept. The same Free policy applies to everyone: buying an earlier paid version of DoseWeek does not include Plus.",
-            "The price and billing period are shown in the app and in the store before you buy."
+            "DoseWeek ücretsiz olarak indirilebilir ve ücretsiz sürüm, kullanıcılarına reklam gösterir. Plus; reklamları kaldıran ve dönem özetleri ile karşılaştırmaları, muayene raporu düzenleyicisini, Bugün düzeni ön ayarlarını ve öğün şablonlarını ekleyen, aylık veya yıllık, otomatik yenilenen isteğe bağlı bir aboneliktir.",
+            "Plus'tan önce DoseWeek'te bulunan özellikler ücretsiz kalır ve Plus'a taşınmaz. Plus sona ererse kayıtlarınız, şablonlarınız ve kaydedilmiş ayarlarınız korunur. Herkes için aynı ücretsiz sürüm politikası geçerlidir: DoseWeek'in daha önceki ücretli bir sürümünü satın almış olmak Plus'ı içermez.",
+            "Fiyat ve fatura dönemi satın almadan önce uygulamada ve mağazada gösterilir."
           ]
         },
         {
           "id": "billing",
-          "title": "3. Billing, renewal and cancellation",
+          "title": "3. Ödeme, yenileme ve iptal",
           "paragraphs": [
-            "Plus is sold and billed by the App Store on iPhone and iPad and by Google Play on Android, using the account you are signed in with. The subscription renews automatically at the end of each period until you cancel it. Cancel in the store's subscription settings, which you can open from Settings in DoseWeek. After you cancel, Plus stays on until the end of the period you paid for. Deleting the app or its data does not cancel a subscription.",
-            "Refunds are handled by Apple or Google under their own refund policies. If the price of Plus changes, the store tells you in advance under its own rules and, where those rules require it, asks for your agreement before the new price applies. Plus bought in one store works only in DoseWeek on that platform; there is no DoseWeek account to share it across platforms."
+            "Plus; iPhone ve iPad'de App Store tarafından, Android'de Google Play tarafından, oturum açtığınız hesap kullanılarak satılır ve faturalandırılır. Abonelik, siz iptal edene kadar her dönemin sonunda otomatik olarak yenilenir. Mağazanın abonelik ayarlarından iptal edin; bu ayarları DoseWeek'teki Ayarlar'dan açabilirsiniz. İptal ettikten sonra Plus, ödediğiniz dönemin sonuna kadar açık kalır. Uygulamayı veya verilerini silmek bir aboneliği iptal etmez.",
+            "Para iadeleri Apple veya Google tarafından kendi iade politikalarına göre işlenir. Plus'ın fiyatı değişirse mağaza bunu kendi kurallarına göre önceden size bildirir ve bu kurallar gerektirdiğinde yeni fiyat uygulanmadan önce onayınızı ister. Bir mağazada satın alınan Plus yalnızca o platformdaki DoseWeek'te çalışır; onu platformlar arasında paylaşmak için bir DoseWeek hesabı yoktur."
           ],
           "subsections": [
             {
               "id": "billing-ios",
-              "title": "On iPhone and iPad (App Store)",
+              "title": "iPhone ve iPad'de (App Store)",
               "paragraphs": [
-                "Payment is charged to your Apple Account when you confirm the purchase. The subscription renews automatically unless you turn off auto-renewal at least 24 hours before the end of the current period, and your account is charged for the renewal within the 24 hours before the current period ends. Manage or cancel the subscription in your Apple Account's subscription settings. A change between monthly and annual takes effect at your next renewal date. Request refunds from Apple.",
-                "Apple's standard Licensed Application End User License Agreement (EULA) also applies to the iOS app.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                "Satın almayı onayladığınızda ödeme Apple Hesabınızdan alınır. Otomatik yenilemeyi geçerli dönemin bitiminden en az 24 saat önce kapatmadığınız sürece abonelik otomatik olarak yenilenir ve yenileme ücreti, geçerli dönem bitmeden önceki 24 saat içinde hesabınızdan alınır. Aboneliği Apple Hesabınızın abonelik ayarlarından yönetin veya iptal edin. Aylık ve yıllık arasındaki değişiklik bir sonraki yenileme tarihinizde geçerli olur. Para iadesini Apple'dan isteyin.",
+                "Apple'ın standart Lisanslı Uygulama Son Kullanıcı Lisans Sözleşmesi (Licensed Application End User License Agreement, EULA) iOS uygulaması için de geçerlidir.\nhttps://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
               ]
             },
             {
               "id": "billing-android",
-              "title": "On Android (Google Play)",
+              "title": "Android'de (Google Play)",
               "paragraphs": [
-                "Payment is charged to the payment method in your Google Play account when you confirm the purchase. The subscription renews automatically until you cancel it in Google Play under Payments & subscriptions > Subscriptions; cancel before the renewal date to avoid the next charge. Switching from monthly to annual takes effect immediately, and Google Play credits the unused monthly time toward the annual plan; switching from annual to monthly takes effect at your next renewal date. Refunds follow Google Play's refund policies, and Google Play's terms also apply to your purchase."
+                "Satın almayı onayladığınızda ödeme, Google Play hesabınızdaki ödeme yönteminden alınır. Abonelik, siz Google Play'de Ödemeler ve abonelikler > Abonelikler bölümünden iptal edene kadar otomatik olarak yenilenir; bir sonraki ücretlendirmeyi önlemek için yenileme tarihinden önce iptal edin. Aylıktan yıllığa geçiş hemen geçerli olur ve Google Play kullanılmayan aylık süreyi yıllık plana mahsup eder; yıllıktan aylığa geçiş bir sonraki yenileme tarihinizde geçerli olur. Para iadeleri Google Play'in iade politikalarına tabidir ve satın alımınıza Google Play şartları da uygulanır."
               ]
             }
           ]
         },
         {
           "id": "ad-free-pass",
-          "title": "4. Optional ad-free pass",
+          "title": "4. İsteğe bağlı reklamsız süre",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "Ücretsiz sürümde isterseniz ödüllü bir reklam izleyip ardından DoseWeek'i 30 dakika boyunca reklamsız kullanabilirsiniz. Koşul, reklam başlamadan önce gösterilir. Reklamsız süre yalnızca reklam, ödülün kazanıldığını bildirdiğinde verilir; reklamı erken kapatmak hiçbir şey kazandırmaz. Reklamsız süre isteğe bağlıdır, bir satın alma değildir, nakit değeri yoktur ve devredilemez. Bunu reddetmek hiçbir ücretsiz özelliği değiştirmez."
           ]
         },
         {
@@ -1510,29 +1510,29 @@
         },
         {
           "id": "records",
-          "title": "6. Your records",
+          "title": "6. Kayıtlarınız",
           "paragraphs": [
-            "Your records stay on your device and are yours. DoseWeek has no account, and the developer does not receive your health records. You are responsible for keeping your device, backups, exports and recovery codes safe; the developer cannot recover lost records, files or codes. Plus does not change where your records are stored."
+            "Kayıtlarınız cihazınızda kalır ve size aittir. DoseWeek'in hesap sistemi yoktur ve geliştirici sağlık kayıtlarınızı almaz. Cihazınızı, yedeklerinizi, dışa aktarmalarınızı ve kurtarma kodlarınızı güvende tutmak sizin sorumluluğunuzdadır; geliştirici kaybolan kayıtları, dosyaları veya kodları kurtaramaz. Plus, kayıtlarınızın saklandığı yeri değiştirmez."
           ]
         },
         {
           "id": "changes",
-          "title": "7. Changes to these terms",
+          "title": "7. Koşullardaki değişiklikler",
           "paragraphs": [
-            "If these terms change, the updated terms are published on this page with a new effective date. Price changes follow the store rules described in section 3. If you do not agree with a change, you can stop using DoseWeek and cancel Plus in the store at any time."
+            "Bu koşullar değişirse güncellenmiş koşullar yeni bir yürürlük tarihiyle bu sayfada yayımlanır. Fiyat değişiklikleri 3. bölümde açıklanan mağaza kurallarına tabidir. Bir değişikliği kabul etmiyorsanız istediğiniz zaman DoseWeek'i kullanmayı bırakabilir ve Plus'ı mağazadan iptal edebilirsiniz."
           ]
         },
         {
           "id": "contact",
-          "title": "8. Contact",
+          "title": "8. İletişim",
           "paragraphs": [
-            "For questions about these terms, contact us at the email below. Do not include health details, a backup file or a recovery code.\nwonyoung@wonyoungchoi.dev"
+            "Bu koşullarla ilgili sorularınızı aşağıdaki e-posta adresine gönderebilirsiniz. Sağlık bilgilerini, yedek dosyasını veya kurtarma kodunu eklemeyin.\nwonyoung@wonyoungchoi.dev"
           ]
         }
       ],
       "links": {
-        "privacyIos": "Privacy Policy for iPhone and iPad",
-        "privacyAndroid": "Privacy Policy for Android"
+        "privacyIos": "iPhone ve iPad için Gizlilik Politikası",
+        "privacyAndroid": "Android için Gizlilik Politikası"
       }
     }
   }

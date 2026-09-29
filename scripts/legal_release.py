@@ -36,13 +36,59 @@ NEXT_RELEASE_EFFECTIVE_DATE: str | None = None
 CURRENT_IOS_EFFECTIVE_DATE = "2026-09-23"
 CURRENT_ANDROID_EFFECTIVE_DATE = "2026-09-23"
 
-# Candidate sentences that must be replaced with facts before release (en and ko sources; the
-# translations of the same paths are replaced in the same step).
+# Candidate sentences that must be replaced with facts before release: the en and ko sources and
+# the translations of the same sentences (Android privacy section 6 carries both, iOS privacy
+# section 12 the first). Replace every locale in the same step; `check_site.py` requires each
+# locale to carry as many registered placeholders as en, so an edited translation must be
+# registered here again.
 RELEASE_PLACEHOLDERS = (
     "The server location and operator details are listed here before this version is released.",
     "How long the server keeps these records is also listed here before this version is released.",
     "서버 위치와 운영자 정보는 이 버전을 출시하기 전에 여기에 공개해요.",
     "서버가 이 기록을 얼마나 보관하는지도 이 버전을 출시하기 전에 여기에 공개해요.",
+    # translations (monetization candidate, 2026-09-29; no native-speaker review claimed)
+    "サーバーの所在地と運営者の情報は、このバージョンの公開前にここに記載します。",
+    "サーバーがこれらの記録を保管する期間も、このバージョンの公開前にここに記載します。",
+    "Standort und Betreiber des Servers werden hier vor der Veröffentlichung dieser Version angegeben.",
+    "Wie lange der Server diese Datensätze aufbewahrt, wird hier ebenfalls vor der "
+    "Veröffentlichung dieser Version angegeben.",
+    "L’emplacement du serveur et les coordonnées de son exploitant sont indiqués ici avant la "
+    "sortie de cette version.",
+    "La durée pendant laquelle le serveur conserve ces enregistrements est également indiquée ici "
+    "avant la sortie de cette version.",
+    "La ubicación del servidor y los datos de su operador se indican aquí antes de publicar esta versión.",
+    "El tiempo durante el que el servidor conserva estos datos también se indica aquí antes de "
+    "publicar esta versión.",
+    "L’ubicazione del server e i dati del gestore vengono indicati qui prima del rilascio di "
+    "questa versione.",
+    "Anche per quanto tempo il server conserva questi dati viene indicato qui prima del rilascio "
+    "di questa versione.",
+    "De locatie van de server en de gegevens van de beheerder worden hier vermeld voordat deze "
+    "versie wordt uitgebracht.",
+    "Hoe lang de server deze gegevens bewaart, wordt hier eveneens vermeld voordat deze versie "
+    "wordt uitgebracht.",
+    "A localização do servidor e os dados do operador são indicados aqui antes do lançamento "
+    "desta versão.",
+    "O tempo durante o qual o servidor conserva estes registos também é indicado aqui antes do "
+    "lançamento desta versão.",
+    "Lokalizacja serwera i dane operatora zostaną podane tutaj przed wydaniem tej wersji.",
+    "Przed wydaniem tej wersji zostanie tu też podane, jak długo serwer przechowuje te rekordy.",
+    "Serverns plats och uppgifter om operatören anges här innan den här versionen släpps.",
+    "Hur länge servern sparar dessa poster anges också här innan den här versionen släpps.",
+    "सर्वर के स्थान और संचालक का विवरण इस संस्करण के रिलीज़ होने से पहले यहाँ दिया जाएगा।",
+    "सर्वर ये रिकॉर्ड कितने समय तक रखता है, यह भी इस संस्करण के रिलीज़ होने से पहले यहाँ दिया जाएगा।",
+    "A localização do servidor e os dados do operador serão informados aqui antes do lançamento "
+    "desta versão.",
+    "Por quanto tempo o servidor mantém esses registros também será informado aqui antes do "
+    "lançamento desta versão.",
+    "وستُدرج هنا تفاصيل موقع الخادم والجهة المشغّلة له قبل إطلاق هذا الإصدار.",
+    "كما ستُدرج هنا مدة احتفاظ الخادم بهذه السجلات قبل إطلاق هذا الإصدار.",
+    "服务器所在地和运营方信息将在此版本发布前在此列出。",
+    "服务器保存这些记录的期限也将在此版本发布前在此列出。",
+    "伺服器所在地與營運者資訊會在此版本發布前列於此處。",
+    "伺服器保存這些紀錄的期限，也會在此版本發布前列於此處。",
+    "Sunucunun konumu ve işletmeci bilgileri bu sürüm yayımlanmadan önce burada belirtilir.",
+    "Sunucunun bu kayıtları ne kadar süre sakladığı da bu sürüm yayımlanmadan önce burada belirtilir.",
 )
 
 
@@ -71,6 +117,30 @@ def require_release_date() -> str:
 def release_placeholders(text: str) -> list[str]:
     """Candidate placeholder sentences still present in text."""
     return [sentence for sentence in RELEASE_PLACEHOLDERS if sentence in text]
+
+
+def _strings(value: object) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, dict):
+        return [text for item in value.values() for text in _strings(item)]
+    if isinstance(value, list):
+        return [text for item in value for text in _strings(item)]
+    return []
+
+
+def placeholder_parity_errors(catalog: dict[str, object]) -> list[str]:
+    """Locales whose registered placeholder count differs from en (translation drift or a
+    locale left behind when en was replaced)."""
+    locales = catalog["locales"]
+    assert isinstance(locales, dict)
+    expected = len(release_placeholders("\n".join(_strings(locales["en"]))))
+    errors = []
+    for locale, entry in locales.items():
+        found = len(release_placeholders("\n".join(_strings(entry))))
+        if found != expected:
+            errors.append(f"{locale}: {found} registered release placeholders, en has {expected}")
+    return errors
 
 
 # Food data bundled with the second release (owner decision NUTRITION-CATALOG-RELEASE-20260917):
