@@ -754,6 +754,17 @@ def main() -> None:
 
     tone = korean_tone_check()
 
+    # Search engines find the pages through sitemap.xml; keep it equal to the canonical pages.
+    sitemap = re.findall(r"<loc>([^<]+)</loc>", (ROOT / "sitemap.xml").read_text())
+    canonical_pages = sorted(
+        SITE_BASE + path.relative_to(ROOT).parent.as_posix().removeprefix(".") + ("/" if path.parent != ROOT else "")
+        for path in HTML_FILES
+    )
+    assert sorted(sitemap) == canonical_pages, f"sitemap.xml must list exactly {canonical_pages}, got {sorted(sitemap)}"
+    assert f"Sitemap: {SITE_BASE}sitemap.xml" in (ROOT / "robots.txt").read_text().splitlines(), (
+        "robots.txt must name the sitemap"
+    )
+
     parity = []
     if arguments.catalog:
         parity.append("iOS app-catalog parity")
@@ -761,7 +772,7 @@ def main() -> None:
         parity.append("Android legal-catalog parity")
     suffix = f", and {' + '.join(parity)}" if parity else ""
     print(
-        f"OK: {len(HTML_FILES)} pages, local links, locale panels, social metadata, "
+        f"OK: {len(HTML_FILES)} pages, sitemap/robots, local links, locale panels, social metadata, "
         f"accessible FAQ markers, 44px key targets, critical disclosures, {tone}{suffix}"
     )
 

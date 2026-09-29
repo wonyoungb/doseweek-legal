@@ -15,6 +15,7 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/support/`, `/privacy/` | iOS support (six-step getting-started guide, then FAQ) and privacy policy |
 | `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
+| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists the seven pages above; `check_site.py` keeps it equal to the canonical pages |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
 zh-Hans, zh-Hant and tr. The URL hash selects the locale (for example `/support/#ar`). Keep
