@@ -134,5 +134,43 @@ class PurchaseServerPlaceholderTest(unittest.TestCase):
             )
 
 
+class RewardPassCopyTest(unittest.TestCase):
+    def test_every_locale_describes_the_24_hour_reward_and_48_hour_cap(self):
+        ios = load("ios-content.json")
+        android = load("android-content.candidate.json")
+        terms = load("terms-content.json")
+        self.assertEqual(ios["localeOrder"], android["localeOrder"])
+        self.assertEqual(ios["localeOrder"], terms["localeOrder"])
+        for locale in ios["localeOrder"]:
+            ios_entry = ios["locales"][locale]
+            android_entry = android["locales"][locale]
+            terms_entry = terms["locales"][locale]
+            ios_support = ios_entry["support"]["plus"]["ads"]
+            android_support = next(
+                item for item in android_entry["support"]["faq"]
+                if item["id"] == "plus-ads"
+            )
+            terms_pass = next(
+                item for item in terms_entry["sections"]
+                if item["id"] == "ad-free-pass"
+            )
+            for label, value in (
+                ("iOS support question", ios_support["question"]),
+                ("iOS support answer", " ".join(ios_support["answers"])),
+                ("Android support answer", " ".join(android_support["answers"])),
+                ("Terms", " ".join(terms_pass["paragraphs"])),
+            ):
+                self.assertNotIn("30", value, f"{locale}: stale 30-minute {label}")
+                if label != "iOS support question":
+                    self.assertIn("24", value, f"{locale}: missing 24-hour {label}")
+                    self.assertIn("48", value, f"{locale}: missing 48-hour {label}")
+            for label, value in (
+                ("iOS ads privacy", section_text(ios, locale, "ads")),
+                ("iOS purchases privacy", section_text(ios, locale, "purchases")),
+                ("Android purchases privacy", section_text(android, locale, "purchases")),
+            ):
+                self.assertNotIn("30", value, f"{locale}: stale 30-minute {label}")
+
+
 if __name__ == "__main__":
     unittest.main()

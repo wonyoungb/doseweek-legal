@@ -72,7 +72,7 @@
           "id": "ad-free-pass",
           "title": "4. 선택 사항인 광고 없는 시간",
           "paragraphs": [
-            "무료 버전에서는 원하면 보상형 광고 한 편을 본 뒤 30분 동안 광고 없이 DoseWeek를 쓸 수 있어요. 조건은 광고가 시작되기 전에 먼저 보여 줘요. 이 혜택은 광고가 보상 획득을 알린 경우에만 주어지고, 광고를 중간에 닫으면 주어지지 않아요. 원할 때만 쓰는 기능이고, 구매가 아니며, 현금 가치가 없고, 다른 사람에게 넘길 수 없어요. 거절해도 무료 기능은 바뀌지 않아요."
+            "무료 버전에서는 원하면 보상형 광고 한 편을 본 뒤 24시간 동안 광고 없이 DoseWeek를 쓸 수 있어요. 조건은 광고가 시작되기 전에 먼저 보여 줘요. 이 혜택은 광고가 보상 획득을 알린 경우에만 주어지고, 광고를 중간에 닫으면 주어지지 않아요. 원할 때만 쓰는 기능이고, 구매가 아니며, 현금 가치가 없고, 다른 사람에게 넘길 수 없어요. 거절해도 무료 기능은 바뀌지 않아요. 최근 24시간 동안 보상은 최대 두 번 받을 수 있고, 남은 광고 없는 시간은 최대 48시간이에요. 이용권이 유효한 동안에는 남은 시간이 24시간 이하일 때에만 보상형 광고를 제안해요. 기기 시각을 마지막으로 확인한 시각보다 5분 넘게 되돌리면 이용권이 일시 중지돼요. 이용권이 유효한 동안에는 자동으로 나오는 광고와 Plus 구독 권유를 모두 숨겨요."
           ]
         },
         {
@@ -161,7 +161,7 @@
           "id": "ad-free-pass",
           "title": "4. Optional ad-free pass",
           "paragraphs": [
-            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 30 minutes. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature."
+            "In the free version you can choose to watch one rewarded ad and then use DoseWeek without ads for 24 hours. The condition is shown before the ad starts. The pass is granted only when the ad reports that the reward was earned; closing the ad early grants nothing. The pass is optional, is not a purchase, has no cash value and cannot be transferred. Declining it changes no Free feature. You can earn at most two rewards in any rolling 24 hours, and remaining ad-free time never exceeds 48 hours. While a pass is active, another rewarded ad is offered only when 24 hours or less remain. The pass pauses if the device clock is set back more than five minutes from the latest time the app has seen. While the pass is active, automatic ads and Plus subscription offers are hidden."
           ]
         },
         {
@@ -250,7 +250,7 @@
           "id": "ad-free-pass",
           "title": "4. 任意の広告なしパス",
           "paragraphs": [
-            "無料版では、希望すればリワード広告を1本視聴した後、30分間DoseWeekを広告なしで使えます。条件は広告が始まる前に表示されます。このパスは、広告が特典の獲得を報告した場合にのみ付与され、広告を途中で閉じると付与されません。このパスの利用は任意で、購入ではなく、換金価値はなく、譲渡もできません。断っても無料版の機能は何も変わりません。"
+            "無料版では、希望すればリワード広告を1本視聴した後、24時間DoseWeekを広告なしで使えます。条件は広告が始まる前に表示されます。このパスは、広告が特典の獲得を報告した場合にのみ付与され、広告を途中で閉じると付与されません。このパスの利用は任意で、購入ではなく、換金価値はなく、譲渡もできません。断っても無料版の機能は何も変わりません。 直近24時間で特典を得られるのは最大2回で、広告なしの残り時間は最大48時間です。パスが有効な間は、残りが24時間以下になった場合にだけ次のリワード広告を案内します。端末の時計をアプリが最後に確認した時刻より5分を超えて戻すと、パスは一時停止します。 パスが有効な間は、自動的に表示される広告とPlusの案内をすべて非表示にします。"
           ]
         },
         {
@@ -339,7 +339,7 @@
           "id": "ad-free-pass",
           "title": "4. Optionale werbefreie Zeit",
           "paragraphs": [
-            "In der kostenlosen Version können Sie wählen, eine Anzeige mit Prämie anzusehen und DoseWeek danach 30 Minuten lang ohne Werbung zu nutzen. Die Bedingung wird angezeigt, bevor die Anzeige startet. Die werbefreie Zeit wird nur gewährt, wenn die Anzeige meldet, dass die Prämie verdient wurde; wird die Anzeige vorzeitig geschlossen, wird nichts gewährt. Die werbefreie Zeit ist freiwillig, kein Kauf, hat keinen Geldwert und ist nicht übertragbar. Eine Ablehnung ändert keine Funktion der kostenlosen Version."
+            "In der kostenlosen Version können Sie wählen, eine Anzeige mit Prämie anzusehen und DoseWeek danach 24 Stunden lang ohne Werbung zu nutzen. Die Bedingung wird angezeigt, bevor die Anzeige startet. Die werbefreie Zeit wird nur gewährt, wenn die Anzeige meldet, dass die Prämie verdient wurde; wird die Anzeige vorzeitig geschlossen, wird nichts gewährt. Die werbefreie Zeit ist freiwillig, kein Kauf, hat keinen Geldwert und ist nicht übertragbar. Eine Ablehnung ändert keine Funktion der kostenlosen Version. Innerhalb eines gleitenden Zeitraums von 24 Stunden sind höchstens zwei Prämien möglich; die verbleibende werbefreie Zeit beträgt höchstens 48 Stunden. Während die werbefreie Zeit läuft, wird eine weitere Anzeige mit Prämie nur angeboten, wenn höchstens 24 Stunden verbleiben. Wird die Geräteuhr um mehr als fünf Minuten hinter die zuletzt von der App beobachtete Zeit zurückgestellt, wird die werbefreie Zeit angehalten. Während die werbefreie Zeit läuft, werden automatisch eingeblendete Werbung und Angebote für ein Plus-Abonnement ausgeblendet."
           ]
         },
         {
@@ -428,7 +428,7 @@
           "id": "ad-free-pass",
           "title": "4. Période sans publicité facultative",
           "paragraphs": [
-            "Dans la version gratuite, vous pouvez choisir de regarder une publicité avec récompense, puis d’utiliser DoseWeek sans publicité pendant 30 minutes. La condition est indiquée avant le début de la publicité. La période sans publicité n’est accordée que lorsque la publicité signale que la récompense a été obtenue ; fermer la publicité avant la fin n’accorde rien. La période sans publicité est facultative, n’est pas un achat, n’a aucune valeur monétaire et ne peut pas être transférée. La refuser ne modifie aucune fonction de la version gratuite."
+            "Dans la version gratuite, vous pouvez choisir de regarder une publicité avec récompense, puis d’utiliser DoseWeek sans publicité pendant 24 heures. La condition est indiquée avant le début de la publicité. La période sans publicité n’est accordée que lorsque la publicité signale que la récompense a été obtenue ; fermer la publicité avant la fin n’accorde rien. La période sans publicité est facultative, n’est pas un achat, n’a aucune valeur monétaire et ne peut pas être transférée. La refuser ne modifie aucune fonction de la version gratuite. Vous pouvez obtenir au maximum deux récompenses sur toute période glissante de 24 heures ; le temps sans publicité restant ne dépasse jamais 48 heures. Tant qu’une période est active, une autre publicité avec récompense n’est proposée que s’il reste 24 heures ou moins. La période est suspendue si l’horloge de l’appareil recule de plus de cinq minutes par rapport à la dernière heure observée par l’app. Pendant que la période est active, les publicités automatiques et les propositions d’abonnement Plus sont masquées."
           ]
         },
         {
@@ -517,7 +517,7 @@
           "id": "ad-free-pass",
           "title": "4. Periodo opcional sin anuncios",
           "paragraphs": [
-            "En la versión gratuita, puede elegir ver un anuncio bonificado y después usar DoseWeek sin anuncios durante 30 minutos. La condición se muestra antes de que empiece el anuncio. El periodo sin anuncios solo se concede cuando el anuncio indica que se ha obtenido la recompensa; cerrar el anuncio antes de tiempo no concede nada. El periodo sin anuncios es opcional, no es una compra, no tiene valor monetario y no puede transferirse. Rechazarlo no cambia ninguna función de la versión gratuita."
+            "En la versión gratuita, puede elegir ver un anuncio bonificado y después usar DoseWeek sin anuncios durante 24 horas. La condición se muestra antes de que empiece el anuncio. El periodo sin anuncios solo se concede cuando el anuncio indica que se ha obtenido la recompensa; cerrar el anuncio antes de tiempo no concede nada. El periodo sin anuncios es opcional, no es una compra, no tiene valor monetario y no puede transferirse. Rechazarlo no cambia ninguna función de la versión gratuita. Puede obtener como máximo dos recompensas en cualquier periodo móvil de 24 horas; el tiempo restante sin anuncios nunca supera las 48 horas. Mientras el periodo esté activo, solo se ofrece otro anuncio bonificado si quedan 24 horas o menos. El periodo se suspende si el reloj del dispositivo se retrasa más de cinco minutos respecto a la última hora observada por la app. Mientras el periodo esté activo, se ocultan los anuncios automáticos y las ofertas de suscripción a Plus."
           ]
         },
         {
@@ -606,7 +606,7 @@
           "id": "ad-free-pass",
           "title": "4. Periodo facoltativo senza annunci",
           "paragraphs": [
-            "Nella versione gratuita puoi scegliere di guardare un annuncio con premio e poi usare DoseWeek senza annunci per 30 minuti. La condizione viene mostrata prima che l’annuncio inizi. Il periodo senza annunci viene concesso solo quando l’annuncio segnala che il premio è stato ottenuto; chiudere l’annuncio prima della fine non dà diritto a nulla. Il periodo senza annunci è facoltativo, non è un acquisto, non ha valore monetario e non è trasferibile. Rifiutarlo non cambia nessuna funzione della versione gratuita."
+            "Nella versione gratuita puoi scegliere di guardare un annuncio con premio e poi usare DoseWeek senza annunci per 24 ore. La condizione viene mostrata prima che l’annuncio inizi. Il periodo senza annunci viene concesso solo quando l’annuncio segnala che il premio è stato ottenuto; chiudere l’annuncio prima della fine non dà diritto a nulla. Il periodo senza annunci è facoltativo, non è un acquisto, non ha valore monetario e non è trasferibile. Rifiutarlo non cambia nessuna funzione della versione gratuita. Puoi ottenere al massimo due premi in qualsiasi periodo mobile di 24 ore; il tempo residuo senza annunci non supera mai 48 ore. Mentre il periodo è attivo, un altro annuncio con premio viene proposto solo se restano 24 ore o meno. Il periodo viene sospeso se l’orologio del dispositivo viene riportato indietro di oltre cinque minuti rispetto all’ultimo orario osservato dall’app. Mentre il periodo è attivo, gli annunci automatici e le proposte di abbonamento Plus vengono nascosti."
           ]
         },
         {
@@ -695,7 +695,7 @@
           "id": "ad-free-pass",
           "title": "4. Optionele advertentievrije periode",
           "paragraphs": [
-            "In de gratis versie kunt u ervoor kiezen één advertentie met beloning te bekijken en DoseWeek daarna 30 minuten zonder advertenties te gebruiken. De voorwaarde wordt getoond voordat de advertentie begint. De advertentievrije periode wordt alleen toegekend wanneer de advertentie meldt dat de beloning is verdiend; als u de advertentie voortijdig sluit, wordt niets toegekend. De advertentievrije periode is optioneel, is geen aankoop, heeft geen geldwaarde en is niet overdraagbaar. Weigeren verandert geen enkele functie van de gratis versie."
+            "In de gratis versie kunt u ervoor kiezen één advertentie met beloning te bekijken en DoseWeek daarna 24 uur zonder advertenties te gebruiken. De voorwaarde wordt getoond voordat de advertentie begint. De advertentievrije periode wordt alleen toegekend wanneer de advertentie meldt dat de beloning is verdiend; als u de advertentie voortijdig sluit, wordt niets toegekend. De advertentievrije periode is optioneel, is geen aankoop, heeft geen geldwaarde en is niet overdraagbaar. Weigeren verandert geen enkele functie van de gratis versie. U kunt maximaal twee beloningen verdienen in een voortschrijdende periode van 24 uur; de resterende advertentievrije tijd is nooit meer dan 48 uur. Zolang een periode actief is, wordt een volgende advertentie met beloning alleen aangeboden wanneer er 24 uur of minder resteert. De periode wordt onderbroken als de apparaatklok meer dan vijf minuten wordt teruggezet ten opzichte van de laatst door de app waargenomen tijd. Zolang de periode actief is, worden automatisch getoonde advertenties en aanbiedingen voor een Plus-abonnement verborgen."
           ]
         },
         {
@@ -784,7 +784,7 @@
           "id": "ad-free-pass",
           "title": "4. Passe opcional sem anúncios",
           "paragraphs": [
-            "Na versão gratuita, pode optar por ver um anúncio com recompensa e depois usar o DoseWeek sem anúncios durante 30 minutos. A condição é apresentada antes de o anúncio começar. O passe só é concedido quando o anúncio indica que a recompensa foi obtida; fechar o anúncio antes do fim não concede nada. O passe é opcional, não é uma compra, não tem valor monetário e não pode ser transferido. Recusá-lo não altera nenhuma funcionalidade gratuita."
+            "Na versão gratuita, pode optar por ver um anúncio com recompensa e depois usar o DoseWeek sem anúncios durante 24 horas. A condição é apresentada antes de o anúncio começar. O passe só é concedido quando o anúncio indica que a recompensa foi obtida; fechar o anúncio antes do fim não concede nada. O passe é opcional, não é uma compra, não tem valor monetário e não pode ser transferido. Recusá-lo não altera nenhuma funcionalidade gratuita. Pode obter, no máximo, duas recompensas em qualquer período móvel de 24 horas; o tempo restante sem anúncios nunca excede 48 horas. Enquanto o passe estiver ativo, outro anúncio com recompensa só é proposto quando restam 24 horas ou menos. O passe é suspenso se o relógio do dispositivo recuar mais de cinco minutos em relação à última hora observada pela aplicação. Enquanto o passe estiver ativo, os anúncios automáticos e as propostas de subscrição do Plus ficam ocultos."
           ]
         },
         {
@@ -873,7 +873,7 @@
           "id": "ad-free-pass",
           "title": "4. Opcjonalny okres bez reklam",
           "paragraphs": [
-            "W wersji bezpłatnej możesz obejrzeć jedną reklamę z nagrodą, a potem korzystać z DoseWeek bez reklam przez 30 minut. Warunek jest pokazywany przed rozpoczęciem reklamy. Okres bez reklam jest przyznawany tylko wtedy, gdy reklama zgłosi, że nagroda została zdobyta; zamknięcie reklamy przed końcem nic nie daje. Okres bez reklam jest opcjonalny, nie jest zakupem, nie ma wartości pieniężnej i nie można go przenieść. Odmowa nie zmienia żadnej funkcji wersji bezpłatnej."
+            "W wersji bezpłatnej możesz obejrzeć jedną reklamę z nagrodą, a potem korzystać z DoseWeek bez reklam przez 24 godziny. Warunek jest pokazywany przed rozpoczęciem reklamy. Okres bez reklam jest przyznawany tylko wtedy, gdy reklama zgłosi, że nagroda została zdobyta; zamknięcie reklamy przed końcem nic nie daje. Okres bez reklam jest opcjonalny, nie jest zakupem, nie ma wartości pieniężnej i nie można go przenieść. Odmowa nie zmienia żadnej funkcji wersji bezpłatnej. W dowolnym ruchomym okresie 24 godzin można otrzymać najwyżej dwie nagrody, a pozostały czas bez reklam nigdy nie przekracza 48 godzin. Gdy okres bez reklam trwa, kolejna reklama z nagrodą jest proponowana tylko wtedy, gdy zostały najwyżej 24 godziny. Okres zostaje wstrzymany, jeśli zegar urządzenia cofnie się o ponad pięć minut względem ostatniego czasu odnotowanego przez aplikację. Gdy okres jest aktywny, automatyczne reklamy i propozycje subskrypcji Plus są ukryte."
           ]
         },
         {
@@ -962,7 +962,7 @@
           "id": "ad-free-pass",
           "title": "4. Valfri annonsfri period",
           "paragraphs": [
-            "I gratisversionen kan du välja att titta på en annons med belöning och sedan använda DoseWeek utan annonser i 30 minuter. Villkoret visas innan annonsen startar. Den annonsfria perioden ges bara när annonsen rapporterar att belöningen har tjänats in; om du stänger annonsen i förtid får du ingenting. Den annonsfria perioden är valfri, är inget köp, har inget kontantvärde och kan inte överlåtas. Om du avböjer den ändras ingen funktion i gratisversionen."
+            "I gratisversionen kan du välja att titta på en annons med belöning och sedan använda DoseWeek utan annonser i 24 timmar. Villkoret visas innan annonsen startar. Den annonsfria perioden ges bara när annonsen rapporterar att belöningen har tjänats in; om du stänger annonsen i förtid får du ingenting. Den annonsfria perioden är valfri, är inget köp, har inget kontantvärde och kan inte överlåtas. Om du avböjer den ändras ingen funktion i gratisversionen. Du kan få högst två belöningar under en rullande period på 24 timmar, och återstående annonsfri tid överstiger aldrig 48 timmar. Medan perioden är aktiv erbjuds en ny annons med belöning bara om högst 24 timmar återstår. Perioden pausas om enhetens klocka ställs tillbaka mer än fem minuter från den senaste tid som appen har sett. När perioden är aktiv döljs automatiska annonser och erbjudanden om Plus-prenumeration."
           ]
         },
         {
@@ -1051,7 +1051,7 @@
           "id": "ad-free-pass",
           "title": "4. वैकल्पिक विज्ञापन-मुक्त पास",
           "paragraphs": [
-            "मुफ़्त संस्करण में आप चाहें तो इनाम वाला एक विज्ञापन देखकर 30 मिनट तक बिना विज्ञापन के DoseWeek इस्तेमाल कर सकते हैं। शर्त विज्ञापन शुरू होने से पहले दिखाई जाती है। पास तभी मिलता है जब विज्ञापन बताता है कि इनाम अर्जित हो गया है; विज्ञापन बीच में बंद करने पर कुछ नहीं मिलता। यह पास वैकल्पिक है, कोई खरीदारी नहीं है, इसका कोई नकद मूल्य नहीं है और इसे किसी और को हस्तांतरित नहीं किया जा सकता। इसे मना करने से मुफ़्त संस्करण की कोई सुविधा नहीं बदलती।"
+            "मुफ़्त संस्करण में आप चाहें तो इनाम वाला एक विज्ञापन देखकर 24 घंटे तक बिना विज्ञापन के DoseWeek इस्तेमाल कर सकते हैं। शर्त विज्ञापन शुरू होने से पहले दिखाई जाती है। पास तभी मिलता है जब विज्ञापन बताता है कि इनाम अर्जित हो गया है; विज्ञापन बीच में बंद करने पर कुछ नहीं मिलता। यह पास वैकल्पिक है, कोई खरीदारी नहीं है, इसका कोई नकद मूल्य नहीं है और इसे किसी और को हस्तांतरित नहीं किया जा सकता। इसे मना करने से मुफ़्त संस्करण की कोई सुविधा नहीं बदलती। किसी भी चलती 24 घंटे की अवधि में अधिकतम दो इनाम मिल सकते हैं और बचा हुआ विज्ञापन-मुक्त समय कभी 48 घंटे से ज़्यादा नहीं होता। पास सक्रिय होने पर दूसरा इनाम वाला विज्ञापन तभी दिखाया जाता है जब 24 घंटे या उससे कम समय बचा हो। डिवाइस की घड़ी ऐप द्वारा आख़िरी बार देखे गए समय से पाँच मिनट से अधिक पीछे की जाए तो पास रुक जाता है। पास सक्रिय रहने पर अपने-आप दिखने वाले विज्ञापन और Plus सदस्यता के प्रस्ताव छिपे रहते हैं।"
           ]
         },
         {
@@ -1140,7 +1140,7 @@
           "id": "ad-free-pass",
           "title": "4. Passe opcional sem anúncios",
           "paragraphs": [
-            "Na versão gratuita, você pode optar por assistir a um anúncio premiado e depois usar o DoseWeek sem anúncios por 30 minutos. A condição aparece antes de o anúncio começar. O passe só é concedido quando o anúncio informa que a recompensa foi obtida; fechar o anúncio antes do fim não concede nada. O passe é opcional, não é uma compra, não tem valor em dinheiro e não pode ser transferido. Recusá-lo não muda nenhum recurso gratuito."
+            "Na versão gratuita, você pode optar por assistir a um anúncio premiado e depois usar o DoseWeek sem anúncios por 24 horas. A condição aparece antes de o anúncio começar. O passe só é concedido quando o anúncio informa que a recompensa foi obtida; fechar o anúncio antes do fim não concede nada. O passe é opcional, não é uma compra, não tem valor em dinheiro e não pode ser transferido. Recusá-lo não muda nenhum recurso gratuito. Você pode receber no máximo duas recompensas em qualquer período móvel de 24 horas; o tempo restante sem anúncios nunca passa de 48 horas. Enquanto o passe estiver ativo, outro anúncio premiado só é oferecido quando restarem 24 horas ou menos. O passe é pausado se o relógio do aparelho voltar mais de cinco minutos em relação ao último horário observado pelo app. Enquanto o passe estiver ativo, os anúncios automáticos e as ofertas de assinatura Plus ficam ocultos."
           ]
         },
         {
@@ -1229,7 +1229,7 @@
           "id": "ad-free-pass",
           "title": "4. فترة اختيارية بلا إعلانات",
           "paragraphs": [
-            "في الإصدار المجاني، يمكنك اختيار مشاهدة إعلان واحد بمكافأة ثم استخدام DoseWeek دون إعلانات لمدة 30 دقيقة. ويُعرض الشرط قبل بدء الإعلان. ولا تُمنح هذه الفترة إلا عندما يُفيد الإعلان بأن المكافأة قد اكتُسبت؛ وإغلاق الإعلان مبكرًا لا يمنح شيئًا. هذه الفترة اختيارية، وليست عملية شراء، ولا قيمة نقدية لها، ولا يمكن نقلها إلى غيرك. ورفضها لا يغيّر أي ميزة من ميزات الإصدار المجاني."
+            "في الإصدار المجاني، يمكنك اختيار مشاهدة إعلان واحد بمكافأة ثم استخدام DoseWeek دون إعلانات لمدة 24 ساعة. ويُعرض الشرط قبل بدء الإعلان. ولا تُمنح هذه الفترة إلا عندما يُفيد الإعلان بأن المكافأة قد اكتُسبت؛ وإغلاق الإعلان مبكرًا لا يمنح شيئًا. هذه الفترة اختيارية، وليست عملية شراء، ولا قيمة نقدية لها، ولا يمكن نقلها إلى غيرك. ورفضها لا يغيّر أي ميزة من ميزات الإصدار المجاني. يمكن الحصول على مكافأتين كحد أقصى خلال أي فترة متحركة من 24 ساعة، ولا تتجاوز المدة المتبقية دون إعلانات 48 ساعة. أثناء سريان الفترة، لا يُعرض إعلان آخر بمكافأة إلا إذا بقيت 24 ساعة أو أقل. وتُعلَّق الفترة إذا أُعيدت ساعة الجهاز إلى ما قبل آخر وقت رصده التطبيق بأكثر من خمس دقائق. أثناء سريان الفترة، تُخفى الإعلانات التلقائية وعروض الاشتراك في Plus."
           ]
         },
         {
@@ -1318,7 +1318,7 @@
           "id": "ad-free-pass",
           "title": "4. 可选的免广告时段",
           "paragraphs": [
-            "在免费版中，您可以选择观看一则激励广告，然后在 30 分钟内无广告地使用 DoseWeek。条件会在广告开始前显示。只有当广告报告已获得奖励时，才会授予该时段；提前关闭广告则不会获得任何内容。该时段为可选功能，不属于购买，没有现金价值，也不能转让。拒绝不会改变任何免费功能。"
+            "在免费版中，您可以选择观看一则激励广告，然后在 24 小时内无广告地使用 DoseWeek。条件会在广告开始前显示。只有当广告报告已获得奖励时，才会授予该时段；提前关闭广告则不会获得任何内容。该时段为可选功能，不属于购买，没有现金价值，也不能转让。拒绝不会改变任何免费功能。 任意连续 24 小时内最多可获得两次奖励，剩余免广告时间不会超过 48 小时。在时段仍有效时，只有剩余时间不超过 24 小时才会再次提供激励广告。如果设备时钟比应用最后观察到的时间倒退超过五分钟，该时段会暂停。 免广告时段有效期间，自动广告和 Plus 订阅推荐都会隐藏。"
           ]
         },
         {
@@ -1407,7 +1407,7 @@
           "id": "ad-free-pass",
           "title": "4. 選用的免廣告時段",
           "paragraphs": [
-            "在免費版中，您可以選擇觀看一則獎勵廣告，然後在 30 分鐘內不看廣告使用 DoseWeek。條件會在廣告開始前顯示。只有在廣告回報已獲得獎勵時，才會提供此時段；提早關閉廣告則不會獲得任何內容。此時段為選用，不屬於購買，沒有現金價值，也無法轉讓。拒絕不會改變任何免費功能。"
+            "在免費版中，您可以選擇觀看一則獎勵廣告，然後在 24 小時內不看廣告使用 DoseWeek。條件會在廣告開始前顯示。只有在廣告回報已獲得獎勵時，才會提供此時段；提早關閉廣告則不會獲得任何內容。此時段為選用，不屬於購買，沒有現金價值，也無法轉讓。拒絕不會改變任何免費功能。 任意連續 24 小時內最多可獲得兩次獎勵，剩餘免廣告時間不會超過 48 小時。在時段仍有效時，只有剩餘時間不超過 24 小時才會再次提供獎勵廣告。如果裝置時鐘比 App 最後觀察到的時間倒退超過五分鐘，該時段會暫停。 免廣告時段有效期間，自動廣告和 Plus 訂閱推薦都會隱藏。"
           ]
         },
         {
@@ -1496,7 +1496,7 @@
           "id": "ad-free-pass",
           "title": "4. İsteğe bağlı reklamsız süre",
           "paragraphs": [
-            "Ücretsiz sürümde isterseniz ödüllü bir reklam izleyip ardından DoseWeek'i 30 dakika boyunca reklamsız kullanabilirsiniz. Koşul, reklam başlamadan önce gösterilir. Reklamsız süre yalnızca reklam, ödülün kazanıldığını bildirdiğinde verilir; reklamı erken kapatmak hiçbir şey kazandırmaz. Reklamsız süre isteğe bağlıdır, bir satın alma değildir, nakit değeri yoktur ve devredilemez. Bunu reddetmek hiçbir ücretsiz özelliği değiştirmez."
+            "Ücretsiz sürümde isterseniz ödüllü bir reklam izleyip ardından DoseWeek'i 24 saat boyunca reklamsız kullanabilirsiniz. Koşul, reklam başlamadan önce gösterilir. Reklamsız süre yalnızca reklam, ödülün kazanıldığını bildirdiğinde verilir; reklamı erken kapatmak hiçbir şey kazandırmaz. Reklamsız süre isteğe bağlıdır, bir satın alma değildir, nakit değeri yoktur ve devredilemez. Bunu reddetmek hiçbir ücretsiz özelliği değiştirmez. Herhangi bir kayan 24 saatlik dönemde en fazla iki ödül kazanılabilir; kalan reklamsız süre hiçbir zaman 48 saati aşmaz. Süre etkinken yeni bir ödüllü reklam yalnızca en fazla 24 saat kaldığında sunulur. Cihaz saati, uygulamanın en son gördüğü zamandan beş dakikadan fazla geriye alınırsa süre duraklatılır. Süre etkinken otomatik reklamlar ve Plus abonelik teklifleri gizlenir."
           ]
         },
         {

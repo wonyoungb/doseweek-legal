@@ -5,6 +5,51 @@ Read the [canonical current handoff](../../release/CURRENT_HANDOFF.md) first, th
 These are the single source for recorded live status, repository identities, evidence and
 the current owner stop. This file does not duplicate counts, HEADs or executable next steps.
 
+## Open owner questions (2026-09-30)
+
+- The owner chose to include free + ads + Plus in 1.0.6. The release effective date is still
+  unset, and the app/page version fields still describe 1.0.5; the release coordinator must
+  align them with the final 1.0.6 builds before publication.
+- The purchase-verification server's location, operator and retention, the Korean ad-data
+  overseas-transfer basis, the Terms and ad-transfer legal review, and the final UI-label and
+  native-speaker reviews remain open. `check_site.py --release` must keep failing until the
+  date and registered server placeholders are resolved.
+- The owner wants to give prior paid-app purchasers one month of Plus by promotional code.
+  Issuance, distribution and the subscription's automatic-renewal disclosure are not decided;
+  no candidate page promises that benefit yet.
+
+## Now (2026-09-30) — 1.0.6 rewarded-ad copy candidate
+
+- On `claude/doseweek-free-ads-plus-himvw9` at pre-commit HEAD `21a889b`, the 17-locale iOS,
+  Android and Terms sources now describe one earned reward adding 24 hours, no more than two
+  in a rolling 24 hours, at most 48 hours remaining, and another offer only when at most
+  24 hours remain. The help and Terms copy explains the five-minute clock-rollback pause and
+  that automatic ads and Plus offers are hidden during the pass. The privacy copy replaces
+  the old 30-minute record and describes local reward times, expiry and last-observed device
+  time. The existing earned-reward and early-close conditions remain. No effective date or
+  server placeholder was filled. Sources: `docs/{ios-content.json,android-content.candidate.json,
+  terms-content.json}`; renderer guard and regression test:
+  `scripts/{render_terms.py,test_monetization_copy.py}`; 90 generated HTML pages updated.
+- Source SHA-256: iOS `507576784ad768917d2c8c19c8f028fcd63a98aa9f6442b60c73b30c89e76ece`,
+  Android `98da96328b7ccea419704accd8f22fc6c98d9befafd86a98fe171d3d28a5857b`,
+  Terms `e6774ee2263ad58ec754ff2226345c860c7598d92390c882da39ca1ca2e0e16e`.
+  The six renderer `--check` commands PASS; `check_site.py` PASS (144 pages);
+  `korean_tone.py` PASS (0 violations); the five listed unit modules PASS (105 tests);
+  `git diff --check` PASS. The release coordinator preserved the logs and hashes in
+  `release/evidence/1.0.6/monetization-integration-20260930/legal/receipt.json`.
+  The complete six-renderer log was recaptured with identical inputs and preserved at
+  `release/evidence/1.0.6/monetization-integration-20260930/legal/render-checks-complete.log` (SHA-256
+  `138d675304d118e9b3ff91599ad5c47008ef043be3876b3fcfc8d80bd3ae75a6`);
+  the initial renderer log captured only the final sitemap command and is retained as partial
+  evidence. `check_site.py --release` is BLOCKED by `NEXT_RELEASE_EFFECTIVE_DATE=None`;
+  browser appearance review is NOT_RUN. These are source/render checks, not native app validation.
+- No owned process or device. The branch is unpublished candidate copy; GitHub Pages still
+  serves `main`. The pre-commit dirty set is the three JSON sources, two Python files,
+  this handoff and 90 generated HTML pages; no unrelated files were changed.
+- **Next action:** commit and push this branch, then refresh doseweek-legal draft PR #11.
+  Publication waits for the release-date and server details,
+  legal review, final app-string review and browser review.
+
 ## Status (2026-09-29)
 
 - The site serves help and privacy pages from `main` via GitHub Pages at

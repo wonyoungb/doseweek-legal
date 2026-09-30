@@ -156,7 +156,9 @@ def validate(content: dict, ios: dict) -> None:
             f"{locale}: the iOS subsection links Apple's standard EULA once"
         )
         assert "Google Play" in android_billing, locale
-        assert "30" in " ".join(by_id["ad-free-pass"]["paragraphs"]), f"{locale}: 30-minute pass"
+        pass_text = " ".join(by_id["ad-free-pass"]["paragraphs"])
+        assert "30" not in pass_text, f"{locale}: stale 30-minute pass"
+        assert "24" in pass_text and "48" in pass_text, f"{locale}: rewarded pass limits"
         assert SUPPORT_EMAIL in by_id["contact"]["paragraphs"][0], f"{locale}: contact address"
         assert not PRICE_PATTERN.search(text), f"{locale}: the Terms must not state a price"
 
