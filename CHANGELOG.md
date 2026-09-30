@@ -5,6 +5,10 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
+## 2026-09-30: AdMob seller verification
+
+- Added the root `app-ads.txt` record for Google publisher `pub-9675683489444791`.
+
 ## Unreleased: per-language URLs
 
 - Every route now also has one static page per locale at `/<locale>/<route>` (7 routes x 17
