@@ -20,8 +20,10 @@
   public static announcement feed at `/announcements/v1.json`. The candidate's unresolved list
   now names the closed Plus sync gate, missing shared record graph/merge and unpublished feed.
   `docs/ACCOUNT_SYNC_RELEASE_REVIEW.md` distinguishes those targets from implemented features;
-  it also records that the prior-buyer one-month promo code cannot be promised before a working
-  issuance/distribution path. The effective public pages were not regenerated from this draft.
+  it also records the owner's in-app prior-buyer claim and verification decision. Apple signed
+  AppTransaction and a proposed user-supplied Play order ID are design inputs; claim-data
+  fields, retention, fraud checks and issuance remain unresolved, so no code is promised.
+  The effective public pages were not regenerated from this draft.
   Contract receipt: `release/evidence/1.0.6/legal-sync-contract-20260930/receipt.json`.
 - Verification: candidate source **PASS 17/17 locales**; focused tests **PASS 10/10**;
   `check_site.py` **PASS 144/144 generated pages** and Korean tone **PASS 1493 sentences,
@@ -39,10 +41,12 @@
   locales** and focused tests **PASSed 2/2**; `git diff --check` PASSed. The previous 144-page
   site PASS is reusable because generated pages, renderers and site-check inputs are unchanged;
   no new browser or native check ran. The release gate remains BLOCKED by the unset date and
-  unintegrated candidate. PR #11 description readback is pending GitHub connectivity; no merge
-  or publication. **Next action:** commit/push this verified candidate, update/read back the
-  draft PR description, then await implemented server/native/deletion facts before changing
-  effective 17-locale privacy, Terms, help and store declarations.
+  unintegrated candidate. The one-month-code claim-data addition passed the same focused 17/17
+  validator, 2/2 tests and diff check. PR #11's description now distinguishes the unpublished
+  account/sync draft and in-app promo claim design; final head/body readback follows this
+  commit. No merge or publication. **Next action:** commit/push this verified candidate and
+  read back draft PR #11 head/body, then await implemented server/native/deletion facts before
+  changing effective 17-locale privacy, Terms, help and store declarations.
 
 Read the [canonical current handoff](../../release/CURRENT_HANDOFF.md) first, then the
 [workspace entry](../../START_HERE.md) and relevant [release journal](../../release/release-journal.json) entries.

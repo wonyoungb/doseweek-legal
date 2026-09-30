@@ -14,6 +14,7 @@
     "The common lossless iOS/Android record schema, automatic backup/restore and non-destructive conflict merge are not implemented",
     "Account-bound Apple/Play Plus verification is absent and the candidate sync route remains closed",
     "The public static announcement feed is staged but not published or tested in native apps",
+    "Prior paid-app buyer one-month Plus code claim requires in-app proof, store verification, fraud limits, distribution, renewal terms and claim-data retention design",
     "App Store privacy details and Google Play Data safety need final SDK/network audit and console readback",
     "Effective date and 17-locale native-speaker review are pending"
   ],

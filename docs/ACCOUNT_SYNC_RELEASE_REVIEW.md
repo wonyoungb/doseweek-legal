@@ -45,10 +45,21 @@ backup, merge and restore are not implemented. The public privacy, Terms, help a
 must describe these as available only after the corresponding native, server and operational
 proof exists. The candidate JSON stays unpublished and the release gate rejects it meanwhile.
 
-The existing Terms draft describes monthly and annual auto-renewing Plus. The owner's intended
-one-month promotional code for prior paid-app purchasers needs a deliverable eligibility and
-distribution path and store offer configuration before any public promise. Account deletion must
-remain available without Plus and must clearly say that it does not cancel store billing.
+The existing Terms draft describes monthly and annual auto-renewing Plus. The owner selected an
+**in-app claim followed by purchase verification before** distributing a one-month code to a
+prior paid-app purchaser. This is a design decision, not a live offer. On iOS, a verified signed
+StoreKit `AppTransaction.originalAppVersion` can identify the version first acquired; its
+eligibility cutoff and refund/Family Sharing treatment need a test. On Android, a user-supplied
+paid-app order ID could be verified by the server using the Google Play Orders API's
+`paidAppDetails` and order state; a `LICENSED` result alone does not prove a paid order. Orders
+API access, order-ID discovery by users, duplicate claims, refunds and one-code-per-eligible-
+purchase enforcement still need implementation and sandbox/real-account proof. Claiming would
+process an account-linked app transaction ID or order ID and verification outcome. Define the
+minimum fields, purpose, recipient, storage security, log exclusion, retention and deletion in
+the final policy and store declarations before enabling it. The code's post-month renewal and
+price must be made clear in the actual store offer. No candidate page promises an issued code.
+Account deletion must remain available without Plus and must clearly say that it does not cancel
+store billing.
 
 ## Current-source conflict inventory
 
@@ -122,6 +133,8 @@ inventory and consent-before/after network traces, then read back both consoles.
   and [Apple account deletion guidance](https://developer.apple.com/support/offering-account-deletion-in-your-app/).
 - [Apple Sign in with Apple deletion/token guidance](https://developer.apple.com/documentation/technotes/tn3194-handling-account-deletions-and-revoking-tokens-for-sign-in-with-apple)
   and [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/).
+- [Apple StoreKit AppTransaction business-model change](https://developer.apple.com/documentation/storekit/supporting-business-model-changes-by-using-the-app-transaction)
+  and [Google Play Orders API](https://developers.google.com/android-publisher/api-ref/rest/v3/orders).
 - [Google Play account-deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en),
   [Data safety disclosure rules and E2EE exception](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en),
   [User Data policy](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en).
