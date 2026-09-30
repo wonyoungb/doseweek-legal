@@ -1,3 +1,16 @@
+## OWNER_PAUSE_RELAUNCH — 다른 AI 인수인계 (2026-10-01)
+
+사용자가 다른 AI에게 이어서 맡기도록 요청하여 이 세션의 구현·새 검증을 중지했습니다. 자동 재개 doseweek-1-0-6은 PAUSED입니다. 새 담당자가 이어받기 프롬프트로 재개하면 이 표시를 해제하고 현재 live 상태부터 진행합니다. 전체 작업·출시 준비는 미완료이며 운영 배포·콘솔·상품/광고 활성화·제출·웹 공개·merge는 수행하지 않았습니다.
+
+Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDOFF_OTHER_AI-2026-10-01.md`, `release/NEXT_AI_PROMPT-2026-10-01.md`, `release/evidence/1.0.6/other-ai-transfer-20261001/STATE.json`과 `ready-inputs.json`이 최신 전달 자료입니다. 기존 root journal과 각 failed receipt는 보존합니다. 현재 문서 커밋은 제품 입력을 변경하지 않습니다.
+
+- iOS 제품3056 SDK/current3042/588 seal PASS. Mapping2+6 distinct scoped8 PASS; original19 FAIL 유지. Native24=6PASS18CloudKit134060 INITFAIL/runner65/parser1, owner/persistence assertions 도달0. Product local factories.none; test common makeStore.none 한 인자 수정12f5/review6936704/config4557728 ready지만 primary 통합/새SDK/native NOT_RUN.
+- Android 제품624624 priorbuyer28/17locale544 및 server6 통합·push. Matching JVM32 fakeports, XML17parse, Node unit34+privateHTTP22=56 PASS는 해당 입력만. 새 Gradle/Compose/native NOT_RUN. Native4 start0/executed0/omitted4 FAIL/causeUNKNOWN; forensichelpFAIL1/actualrc-unretained도 유지. Exact drain82119, oldAPKs e8/8eb sealed d342. Baseline2/configd776와 forensicdelta/review3e2 SOURCE_ONLY 준비; 새 device grant 없음.
+- UI finitePID evidence-only review3643868 approved; fresh current representative1→remaining5 NOT_RUN. Authority/bootstrap/full retirement10과 Android causal product14는 미구현. Full19 실제 동기화·자동백업·복원 연결/삭제완결성/provider/payment/consent/release6 gates가 큰 남은 범위입니다.
+- Legal4d9/web72b matching static/visual proof와 store drafts는 기존 범위만 보존; 법률·원어민·provider·public availability를 주장하지 않습니다.
+
+정확한 다음 작업: 최종 STATE의 doc-only HEAD와 기존3056 config의 selected preimage/dependency/review를 대조한 derivative를 만든 뒤, reviewed testfixture1 .none을 exact integrate/commit/push/PR13 갱신합니다. ONE incremental UnitSDK/exact selectors → originalOwnerRead1 먼저 → PASS면 remaining7owner+persistent10. Matching mapping8은 반복하지 않습니다. Android baseline/source 및 forensic binding은 병렬 준비하되 builder/device는 exclusive입니다. 더 큰 계획 문서 대신 기존 실제 코드의 연결과 검증에 집중합니다.
+
 ## ACTIVE — prior-buyer application disclosure SOURCE_OFF5 (2026-10-01)
 
 Changed only candidate JSON three fields across17 locales plus blockers, existing validator/staged renderer/related tests/review. Optional accountbound application/status/appeal has no Plus prerequisite; current routes are unavailable/manual-only and collect no raw order/proof or provide code, price or entitlement. Review approval is not benefit delivery. Claim-evidence server vault is separate from health E2EE and sync retention; missing approved case/evidence/audit/receipt/duplicate-marker policy disables collection, no invented periods/operator/date.
