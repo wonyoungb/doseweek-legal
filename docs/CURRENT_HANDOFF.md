@@ -27,8 +27,12 @@
   now records this. No buyer-submitted order ID, code or receipt was handled, and no public
   candidate page promises issuance. Docs-only diff check **PASSed** and the unchanged
   unpublished candidate still validates 17/17 locales. Existing 2/2 candidate unit and
-  144-page site results retain identical relevant inputs; no native/live check ran. Next action:
-  same-branch commit/push and draft PR #11 description readback.
+  144-page site results retain identical relevant inputs; no native/live check ran. The review
+  and this handoff were committed/pushed on the same draft branch, and PR #11 remained open/draft
+  with the manual-review section appended to its existing body and read back exactly. This
+  doc-only checkpoint records that state; no publication occurred. **Next action:** after
+  actual app/API/offer proof, reconcile the effective 17-locale privacy, Terms and help sources,
+  working deletion route, date and store declarations, then run release/counsel review.
 - Owner scope for 1.0.6: optional Apple/Google/Kakao sign-in, Plus-only automatic encrypted
   records/settings sync across iOS and Android under one DoseWeek account, a recovery code
   needed on a new device, 30-day encrypted-backup retention after Plus expiry, account deletion,
