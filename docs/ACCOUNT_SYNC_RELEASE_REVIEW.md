@@ -92,6 +92,19 @@ reconciled across **all 17 locales** before rendering the new feature into publi
 
 The purchase-verification server and the new account service may share infrastructure, but their
 data uses differ. The new account records cannot be described as only hashed purchase tokens.
+The independently reviewed source candidate now also persists server-only AES-256-GCM
+purchase lookup references (Apple original transaction ID or Play purchase token) under
+separate private vault keys, in addition to keyed purchase digests. The server decrypts
+these references solely to recheck Store status; this is distinct from end-to-end health
+records whose recovery keys never reach it. Account deletion erases the references and
+retains de-identified keyed purchase tombstones to prevent duplicate ownership claims;
+current source prunes references only when a Plus assertion is refreshed, after the
+recorded expiry plus 30 days; no scheduled sweep is installed. Required automatic erasure
+without app requests, tombstone legal basis and retention limit remain release blockers. Source review
+and synthetic/local HTTP tests do not prove real Store calls, cron execution or deletion of
+operational backups. The 17-locale candidate now discloses this distinction; native-speaker
+and counsel review remain pending.
+
 The owner-provided Lightsail address and SSH key do not prove server region, processor terms,
 retention or that the API is live. Record those facts from the actual deployment and contract.
 

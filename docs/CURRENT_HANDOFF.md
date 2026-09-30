@@ -2,6 +2,17 @@
 
 ## Now (2026-09-30) — account, encrypted sync and announcement disclosure draft
 
+- Current unpublished purchase-vault disclosure: all17 locales now distinguish server-only
+  AES-256-GCM encrypted Apple original transaction ID/Play token lookup references from
+  end-to-end health records and separate recovery keys. The source candidate prunes refs
+  only during Plus refresh; request-independent scheduled erasure, keyed tombstone legal
+  basis/retention and operational backup deletion remain BLOCKED. Validator17/17, exact
+  focused tests2/2, diff check PASS; no native/TLS/provider/publication proof. Source SHA
+  `930e2048558d5b25b67e15c9a99d60a49015c20315cb281e94eb6fb295f3e5fe`; receipt
+  `release/evidence/1.0.6/legal-purchase-vault-disclosure-20260930/receipt.json`.
+  Public render inputs/pages remain unchanged. Next: complete source/API/native erasure
+  proof and legal review, then reconcile effective disclosures and deletion route.
+
 - Current release blocker: official Apple §3.1.2(a) requires preserving prior paid buyers'
   primary functionality when moving to subscriptions. The owner is deciding the separate
   perpetual legacy-rights/ad-free boundary; the agreed one-month new Plus code alone does not
