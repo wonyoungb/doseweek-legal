@@ -55,8 +55,11 @@ path before acceptance. This is a design decision, not a live offer. On iOS, a v
 StoreKit `AppTransaction.originalAppVersion` can identify the version first acquired; its
 eligibility cutoff and refund/Family Sharing treatment need a test. On Android, a user-supplied
 paid-app order ID could be verified by the server using the Google Play Orders API's
-`paidAppDetails` and order state; a `LICENSED` result alone does not prove a paid order. Orders
-API access, order-ID discovery by users, duplicate claims, refunds and one-code-per-eligible-
+`paidAppDetails` and order state; a `LICENSED` result alone does not prove a paid order. An
+order ID also does not prove that its submitter was the buyer. The owner decided that if this
+identity link cannot be proved automatically, the request goes to manual review and dispute
+handling without automatic code issuance. Orders API access, order-ID discovery by users,
+duplicate claims, refunds and one-code-per-eligible-
 purchase enforcement still need implementation and sandbox/real-account proof. Claiming would
 process an account-linked app transaction ID or order ID and verification outcome. Define the
 minimum fields, purpose, recipient, storage security, log exclusion, retention and deletion in

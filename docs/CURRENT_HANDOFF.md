@@ -21,6 +21,14 @@
   and store-offer behavior is proved, reconcile the effective 17-locale privacy, Terms and help
   sources, generate the working deletion route, settle the effective date/store declarations
   and run the release gate. Counsel and native-speaker review remain.
+- Subsequent owner decision: when an Android paid-app order lookup cannot prove that the
+  claimant is the original buyer, the in-app code request must go to **manual review and
+  dispute handling**; it cannot automatically issue a code. The unpublished release review
+  now records this. No buyer-submitted order ID, code or receipt was handled, and no public
+  candidate page promises issuance. Docs-only diff check **PASSed** and the unchanged
+  unpublished candidate still validates 17/17 locales. Existing 2/2 candidate unit and
+  144-page site results retain identical relevant inputs; no native/live check ran. Next action:
+  same-branch commit/push and draft PR #11 description readback.
 - Owner scope for 1.0.6: optional Apple/Google/Kakao sign-in, Plus-only automatic encrypted
   records/settings sync across iOS and Android under one DoseWeek account, a recovery code
   needed on a new device, 30-day encrypted-backup retention after Plus expiry, account deletion,
