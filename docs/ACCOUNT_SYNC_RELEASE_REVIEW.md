@@ -175,3 +175,9 @@ inventory and consent-before/after network traces, then read back both consoles.
 - [AWS Lightsail shared-responsibility guidance](https://docs.aws.amazon.com/lightsail/latest/userguide/security.html),
   [FTC Health Breach Notification Rule guidance](https://www.ftc.gov/business-guidance/resources/complying-ftcs-health-breach-notification-rule-0),
   [Washington AG My Health My Data Act guidance](https://www.atg.wa.gov/protecting-washingtonians-personal-health-data-and-privacy).
+
+## 2026-09-30 provider lifecycle disclosure reconciliation
+
+All17 unpublished locales now distinguish Apple server-encrypted refresh capability from health-record E2EE keys, request-only non-retained Kakao unlink access token, and local/account-data deletion from provider-disconnection outcome. A provider failure requires explicit manual instructions; no background retry is promised. This is planned OFF behavior, not a production claim.
+
+Isolated server lifecycle d615 has123 synthetic test passes but independent review blocks activation: concurrent link/delete, multiple provider identities/capability coverage and proxy/client deadlines need repaired immutable review. Existing primary hourly retention sweep is source-only; request-independent deployment, at-most-one-hour sweep lag, monitoring and operational backup erasure remain unproven. Account deletion must erase health ciphertext/account references and show the truthful provider result; no health/recovery data may be sent to support. Counsel, real provider revocation, native response UI, effective date and public deletion route remain release gates.

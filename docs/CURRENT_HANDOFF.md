@@ -1,5 +1,12 @@
 # Website handoff — canonical pointer
 
+## Now (2026-09-30) — provider deletion disclosure candidate
+
+- All17 unpublished locales distinguish server-encrypted Apple refresh capability from health E2EE keys, request-only Kakao unlink token (not retained), and account/server-data erasure from provider disconnection. Failed/unconfirmed disconnection requires manual instructions; no automatic retry is promised. These are planned OFF contracts, not public/live behavior.
+- Independent server review retains concurrent link/delete, multi-identity capability coverage and proxy/client deadline activation blockers. Hourly retention pruning is source-only; operational deployment, monitoring/backup erasure and bounded lag are unproven. Older request-only pruning snapshot below is historical.
+- Verification **PASS17locale validator + existingfocused2/2**, diffPASS; only three owned candidate/review/handoff paths changed, all public/generated/renderer inputs unchanged versus dd711. Prior144-page source parity reused only for rendering. Native/provider/webdelete/live/counsel/date remain NOT_RUN/BLOCKED. Receipt/logs: workspace `release/evidence/1.0.6/legal-provider-lifecycle-20260930/receipt.json`. No process/device or publication.
+- Exact next action: validate this source candidate, publish only to same draft PR11, then integrate repaired reviewed server/native truth into effective17 sources and working deletion page.
+
 ## Now (2026-09-30) — account, encrypted sync and announcement disclosure draft
 
 - Current unpublished purchase-vault disclosure: all17 locales now distinguish server-only
