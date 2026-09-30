@@ -16,6 +16,13 @@
   `check_site.py --release` now refuses an unintegrated candidate, in addition to the existing
   date/server gates. Source SHA and exact dirty files are in
   `release/evidence/1.0.6/legal-sync-candidate-20260930/receipt.json`.
+- The 2026-09-30 contract reconciliation fixes the planned API base to `/v1` and keeps the
+  public static announcement feed at `/announcements/v1.json`. The candidate's unresolved list
+  now names the closed Plus sync gate, missing shared record graph/merge and unpublished feed.
+  `docs/ACCOUNT_SYNC_RELEASE_REVIEW.md` distinguishes those targets from implemented features;
+  it also records that the prior-buyer one-month promo code cannot be promised before a working
+  issuance/distribution path. The effective public pages were not regenerated from this draft.
+  Contract receipt: `release/evidence/1.0.6/legal-sync-contract-20260930/receipt.json`.
 - Verification: candidate source **PASS 17/17 locales**; focused tests **PASS 10/10**;
   `check_site.py` **PASS 144/144 generated pages** and Korean tone **PASS 1493 sentences,
   0 violations**; `git diff --check` **PASS**. Initial validator **FAIL** because it required
@@ -27,9 +34,15 @@
   **Next action:** after the native/API contract is verified, replace conflicting effective
   privacy/terms/help sources in all 17 locales, generate the deletion route and pages, then
   verify store declarations and run the release gate. Counsel and native-speaker review remain.
-- This draft is locally committed as `25e9c95166ebe16e1461fff1a8b7e48420b745a4` on
-  `claude/doseweek-free-ads-plus-himvw9`; the source tree is clean at that commit. Push and PR
-  description update are reserved for the release coordinator's same-branch integration step.
+- The prior source `25e9c95` and handoff `6cbb04e` commits are on local and remote
+  `claude/doseweek-free-ads-plus-himvw9`. The contract edit's source validator **PASSed 17/17
+  locales** and focused tests **PASSed 2/2**; `git diff --check` PASSed. The previous 144-page
+  site PASS is reusable because generated pages, renderers and site-check inputs are unchanged;
+  no new browser or native check ran. The release gate remains BLOCKED by the unset date and
+  unintegrated candidate. PR #11 description readback is pending GitHub connectivity; no merge
+  or publication. **Next action:** commit/push this verified candidate, update/read back the
+  draft PR description, then await implemented server/native/deletion facts before changing
+  effective 17-locale privacy, Terms, help and store declarations.
 
 Read the [canonical current handoff](../../release/CURRENT_HANDOFF.md) first, then the
 [workspace entry](../../START_HERE.md) and relevant [release journal](../../release/release-journal.json) entries.

@@ -27,9 +27,13 @@ def load() -> dict:
     assert candidate["localeOrder"] == list(LOCALES)
     assert list(candidate["locales"]) == list(LOCALES)
     assert candidate["plannedVersion"] == "1.0.6"
-    assert candidate["plannedApiBase"].startswith("https://")
-    assert candidate["plannedAnnouncementFeed"].startswith("https://")
-    assert candidate["plannedDeletionPage"].startswith("https://")
+    assert candidate["plannedApiBase"] == "https://doseweek.wonyoungchoi.dev/v1"
+    assert candidate["plannedAnnouncementFeed"] == (
+        "https://doseweek.wonyoungchoi.dev/announcements/v1.json"
+    )
+    assert candidate["plannedDeletionPage"] == (
+        "https://doseweek-legal.wonyoungchoi.dev/account/delete/"
+    )
     assert candidate["unresolvedBeforePublication"]
     for locale, entry in candidate["locales"].items():
         assert set(entry) == set(FIELDS), f"{locale}: missing disclosure field"

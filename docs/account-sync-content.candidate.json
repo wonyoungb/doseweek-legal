@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "pre-release-candidate-not-published",
   "plannedVersion": "1.0.6",
-  "plannedApiBase": "https://doseweek.wonyoungchoi.dev/api/v1",
+  "plannedApiBase": "https://doseweek.wonyoungchoi.dev/v1",
   "plannedAnnouncementFeed": "https://doseweek.wonyoungchoi.dev/announcements/v1.json",
   "plannedDeletionPage": "https://doseweek-legal.wonyoungchoi.dev/account/delete/",
   "unresolvedBeforePublication": [
@@ -11,6 +11,9 @@
     "Server region, operator, processors, access-log retention and backup deletion timing need evidence",
     "Sensitive health-data consent and international-transfer basis need legal review",
     "Client and server ciphertext, key-loss, merge, deletion and Plus-expiry behavior need native and end-to-end proof",
+    "The common lossless iOS/Android record schema, automatic backup/restore and non-destructive conflict merge are not implemented",
+    "Account-bound Apple/Play Plus verification is absent and the candidate sync route remains closed",
+    "The public static announcement feed is staged but not published or tested in native apps",
     "App Store privacy details and Google Play Data safety need final SDK/network audit and console readback",
     "Effective date and 17-locale native-speaker review are pending"
   ],

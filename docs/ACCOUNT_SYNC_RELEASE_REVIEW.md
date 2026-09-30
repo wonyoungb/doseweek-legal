@@ -25,6 +25,31 @@ review is claimed.
 - Public announcements may appear at launch before onboarding, with a per-ID seven-day local
   snooze. The planned feed is `https://doseweek.wonyoungchoi.dev/announcements/v1.json`.
 
+## Contract checkpoint (2026-09-30)
+
+The candidate API base is `https://doseweek.wonyoungchoi.dev/v1`. The public announcement
+feed is a separate, unauthenticated static resource at
+`https://doseweek.wonyoungchoi.dev/announcements/v1.json`. Its staged file and the iOS/Android
+clients must use the same 17-locale schema and per-notice snooze rules. A network request may
+expose an IP address to the hosting layer even though the feed carries no account or health
+query data. Neither URL is evidence of a deployed DoseWeek feature.
+
+The current `server/doseweek-cloud` candidate's provider verification has been tested only with
+locally generated token fixtures, not real provider configuration. Its
+`GET/PUT /v1/sync/snapshot` routes deliberately return 503 because account-
+bound Apple/Play Plus verification is absent. Account deletion removes live-store state, but
+provider token revocation/unlink, durable backup erasure and a working external deletion flow
+are unverified. The protocol defines 30-day post-expiry ciphertext retention and recovery-code
+encryption, while the shared lossless iOS/Android record graph, native key management, automatic
+backup, merge and restore are not implemented. The public privacy, Terms, help and store forms
+must describe these as available only after the corresponding native, server and operational
+proof exists. The candidate JSON stays unpublished and the release gate rejects it meanwhile.
+
+The existing Terms draft describes monthly and annual auto-renewing Plus. The owner's intended
+one-month promotional code for prior paid-app purchasers needs a deliverable eligibility and
+distribution path and store offer configuration before any public promise. Account deletion must
+remain available without Plus and must clearly say that it does not cancel store billing.
+
 ## Current-source conflict inventory
 
 The current candidate pages were written for the no-account app. These locations must be
