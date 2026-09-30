@@ -10,8 +10,9 @@ review is claimed.
 - Apple, Google and Kakao sign-in is optional. Existing local record features remain usable
   without a DoseWeek account. A sign-in prompt must not interrupt an existing user's records.
 - Only a server-verified Plus account may use automatic cloud sync. Plus bought on either store,
-  when linked to the same DoseWeek account, permits sync on both platforms. The stores continue
-  to sell and manage subscriptions separately.
+  when linked to the same DoseWeek account, grants the full Plus benefits on both platforms:
+  ad removal, Plus tools and encrypted sync. Both apps continue to offer their own store's
+  subscription purchase and management. A sign-in alone does not grant Plus.
 - Sync includes the user's full record graph and supported settings, encrypted **on the device**
   before upload. The server holds account/provider identifiers, verified Plus state, ciphertext,
   revision/access metadata and no plaintext health content or recovery code. A high-entropy code
@@ -46,8 +47,11 @@ must describe these as available only after the corresponding native, server and
 proof exists. The candidate JSON stays unpublished and the release gate rejects it meanwhile.
 
 The existing Terms draft describes monthly and annual auto-renewing Plus. The owner selected an
-**in-app claim followed by purchase verification before** distributing a one-month code to a
-prior paid-app purchaser. This is a design decision, not a live offer. On iOS, a verified signed
+**in-app claim followed by purchase verification before** distributing an individual one-month
+code to an eligible prior paid-app purchaser. After the free month, the code offer is to renew
+as **monthly Plus** unless the buyer cancels through the store. The redemption screen and
+store offer must show the actual monthly price, billing period, renewal date and cancellation
+path before acceptance. This is a design decision, not a live offer. On iOS, a verified signed
 StoreKit `AppTransaction.originalAppVersion` can identify the version first acquired; its
 eligibility cutoff and refund/Family Sharing treatment need a test. On Android, a user-supplied
 paid-app order ID could be verified by the server using the Google Play Orders API's

@@ -2,6 +2,18 @@
 
 ## Now (2026-09-30) — account, encrypted sync and announcement disclosure draft
 
+- Latest owner decision: a server-verified Apple or Google Plus purchase linked to the same
+  DoseWeek account shares **all** Plus benefits across iOS and Android (ad removal, Plus tools
+  and encrypted sync), while each app retains its native store purchase path. The unpublished
+  17-locale account candidate now adds the ad-removal/tools disclosure. The owner also chose
+  in-app prior-buyer application and purchase verification, then an individual one-month code
+  that renews as **monthly Plus** after the free month unless canceled. The review draft records
+  the price/period/date/cancellation disclosure requirement. Candidate source validator
+  **PASSed 17/17 locales**, focused unit tests **PASSed 2/2**, and `git diff --check` PASSed;
+  candidate source SHA-256 is `213d6d90872bbcec0e59940ead34ff1849911b1c54b9db08e82c2ac750ba8acb`.
+  Generated public pages and their renderer inputs are unchanged, so the prior 144/144 site
+  PASS remains input-matched; no new live/browser/native check ran. No public page or store
+  offer changed. Next action: commit/push the same draft branch and update/read back PR #11.
 - Owner scope for 1.0.6: optional Apple/Google/Kakao sign-in, Plus-only automatic encrypted
   records/settings sync across iOS and Android under one DoseWeek account, a recovery code
   needed on a new device, 30-day encrypted-backup retention after Plus expiry, account deletion,
@@ -63,9 +75,10 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
   overseas-transfer basis, the Terms and ad-transfer legal review, and the final UI-label and
   native-speaker reviews remain open. `check_site.py --release` must keep failing until the
   date and registered server placeholders are resolved.
-- The owner wants to give prior paid-app purchasers one month of Plus by promotional code.
-  Issuance, distribution and the subscription's automatic-renewal disclosure are not decided;
-  no candidate page promises that benefit yet.
+- The owner chose in-app application and prior paid-app purchase verification before individual
+  one-month code delivery, followed by monthly Plus auto-renewal unless canceled. Eligibility,
+  fraud controls, actual store price and offer configuration, and issuance are unresolved; no
+  candidate page promises an issued code.
 
 ## Now (2026-09-30) — 1.0.6 rewarded-ad copy candidate
 
