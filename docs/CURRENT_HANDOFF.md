@@ -13,7 +13,9 @@
   candidate source SHA-256 is `213d6d90872bbcec0e59940ead34ff1849911b1c54b9db08e82c2ac750ba8acb`.
   Generated public pages and their renderer inputs are unchanged, so the prior 144/144 site
   PASS remains input-matched; no new live/browser/native check ran. No public page or store
-  offer changed. Next action: commit/push the same draft branch and update/read back PR #11.
+  offer changed. Source/review/handoff are committed at `d3bb6983` on the same draft branch;
+  the remote/PR update is pending. Next action: push, append the scoped PR #11 description
+  and read back the open/draft head/body; then record the final external state here.
 - Owner scope for 1.0.6: optional Apple/Google/Kakao sign-in, Plus-only automatic encrypted
   records/settings sync across iOS and Android under one DoseWeek account, a recovery code
   needed on a new device, 30-day encrypted-backup retention after Plus expiry, account deletion,
