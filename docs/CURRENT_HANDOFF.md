@@ -1,5 +1,21 @@
 # Website handoff — canonical pointer
 
+## OWNER_PAUSE_RELAUNCH — home continuation (2026-09-30)
+
+The owner requested a handoff for continuation from home. Development, new native jobs,
+activation and publication are paused until the owner asks to resume. The canonical live
+state is `release/CURRENT_HANDOFF.md` in the Doseweek workspace; exact heads, owned dirty
+inputs, process cleanup, PASS/FAIL/NOT_RUN/BLOCKED and one next action are in
+`release/evidence/1.0.6/home-continuation-20260930/receipt.json` there. Preserve local isolated
+worktrees and original Claude lanes; do not re-run old start commands or whole suites.
+
+The last iOS instant/journal gate ended65: exact13 executed,12PASS/1FAIL
+(`nativeRoundTrip()`: `.lossyPrecision`), skipped/omitted0; diagnostics timeout retained,
+cleanup0 and owned processes drained. Retained scoped passes do not make the combined
+apps or full encrypted sync validated. After owner resume, diagnose that exact failure,
+then assign separate reviewed full19/signedPlus/provider-repair scopes. This checkpoint
+changes handoff documentation only; previously frozen product inputs are unchanged.
+
 ## Now (2026-09-30) — provider deletion disclosure candidate
 
 - All17 unpublished locales distinguish server-encrypted Apple refresh capability from health E2EE keys, request-only Kakao unlink token (not retained), and account/server-data erasure from provider disconnection. Failed/unconfirmed disconnection requires manual instructions; no automatic retry is promised. These are planned OFF contracts, not public/live behavior.
