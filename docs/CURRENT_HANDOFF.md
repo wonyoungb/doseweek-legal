@@ -1,5 +1,33 @@
 # Website handoff — canonical pointer
 
+## Now (2026-09-30) — account, encrypted sync and announcement disclosure draft
+
+- Owner scope for 1.0.6: optional Apple/Google/Kakao sign-in, Plus-only automatic encrypted
+  records/settings sync across iOS and Android under one DoseWeek account, a recovery code
+  needed on a new device, 30-day encrypted-backup retention after Plus expiry, account deletion,
+  and public start-up notices before onboarding with a per-notice one-week snooze. The planned
+  API and notice feed are under `doseweek.wonyoungchoi.dev`; neither is deployed as a DoseWeek
+  service. The account-deletion web path is only planned.
+- `docs/account-sync-content.candidate.json` is a separate five-topic, 17-locale **unpublished**
+  candidate (account, sync, retention, announcement, deletion web copy). It does not replace the
+  current generated pages, which still describe the existing no-account apps.
+  `docs/ACCOUNT_SYNC_RELEASE_REVIEW.md` has the store privacy/Data safety and account-deletion
+  release draft, source conflicts and primary sources. `scripts/account_sync_candidate.py` validates coverage and
+  `check_site.py --release` now refuses an unintegrated candidate, in addition to the existing
+  date/server gates. Source SHA and exact dirty files are in
+  `release/evidence/1.0.6/legal-sync-candidate-20260930/receipt.json`.
+- Verification: candidate source **PASS 17/17 locales**; focused tests **PASS 10/10**;
+  `check_site.py` **PASS 144/144 generated pages** and Korean tone **PASS 1493 sentences,
+  0 violations**; `git diff --check` **PASS**. Initial validator **FAIL** because it required
+  the English spelling of Kakao in Korean/Japanese; logs are preserved and the narrow related
+  family passed after accepting localized names. `check_site.py --release` is **BLOCKED** by the
+  unset effective date; the new unintegrated-candidate refusal has a passing unit test. Native,
+  browser, live API and account deletion flow are **NOT_RUN**. Logs and source hashes are in the
+  receipt above. No owned process/device, publication, console change or production deployment.
+  **Next action:** after the native/API contract is verified, replace conflicting effective
+  privacy/terms/help sources in all 17 locales, generate the deletion route and pages, then
+  verify store declarations and run the release gate. Counsel and native-speaker review remain.
+
 Read the [canonical current handoff](../../release/CURRENT_HANDOFF.md) first, then the
 [workspace entry](../../START_HERE.md) and relevant [release journal](../../release/release-journal.json) entries.
 These are the single source for recorded live status, repository identities, evidence and

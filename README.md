@@ -63,6 +63,10 @@ reuse existing localized copy, one field per route:
   the next release, a free download that shows non-personalized ads (Google Mobile Ads SDK with
   Google's consent platform) to Free users, with an optional Plus subscription; that copy is not
   published.
+- A separate [1.0.6 account/sync disclosure draft](docs/ACCOUNT_SYNC_RELEASE_REVIEW.md) covers
+  optional sign-in and Plus-only encrypted sync requested by the owner. The API, deletion web
+  flow and updated policy are not public or verified; the release check blocks publication
+  until the draft is reconciled with the implementation and all 17 languages.
 - The website owns the full policy text. The apps keep the required consent screens and short
   instructions, and link here. Policy text must match what the apps actually do.
 

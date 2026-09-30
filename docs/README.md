@@ -15,6 +15,10 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
 - [Terms of Use](terms-content.json) for both apps (candidate for the monetization release), rendered
   by [render_terms.py](../scripts/render_terms.py). Its medical section reuses the iOS disclaimer
   wording verbatim.
+- [Account, encrypted sync and announcement copy](account-sync-content.candidate.json) is an
+  unpublished 17-locale 1.0.6 draft, including the planned account-deletion web-page copy. It is
+  not rendered into the effective pages. [Release review](ACCOUNT_SYNC_RELEASE_REVIEW.md) lists
+  source conflicts, store declarations, primary sources and operational blockers.
 - Per-language pages (`/<locale>/<route>`), hreflang links and the sitemap:
   [locale_pages.py](../scripts/locale_pages.py), used by every renderer, and
   [render_sitemap.py](../scripts/render_sitemap.py). The README explains the hash pages and the
@@ -28,7 +32,7 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
 - [Site checks](../scripts/check_site.py): generated pages, hreflang clusters, the sitemap,
   local links, locales and disclosures, and that every locale carries the same release
   placeholders as en. `--release` also requires the effective date and refuses the release
-  placeholders in every locale.
+  placeholders in every locale. It also refuses an unintegrated account/sync candidate.
 - [Release map](../legal-release-map.json): where the website sources came from, and the
   release decisions.
 - [CHANGELOG](../CHANGELOG.md): site history.

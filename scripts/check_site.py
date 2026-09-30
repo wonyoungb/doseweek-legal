@@ -20,6 +20,7 @@ from urllib.parse import unquote, urlsplit
 import korean_tone
 import legal_release
 import locale_pages
+import account_sync_candidate
 import render_ios
 import render_home
 import render_terms
@@ -551,6 +552,7 @@ def main() -> None:
     arguments = argument_parser.parse_args()
     if arguments.release:
         legal_release.require_release_date()
+        account_sync_candidate.require_release_ready()
         for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",
                          "docs/terms-content.json"):
             left = legal_release.release_placeholders((ROOT / relative).read_text(encoding="utf-8"))
