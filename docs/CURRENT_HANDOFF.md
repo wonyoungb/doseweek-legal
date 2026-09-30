@@ -11,6 +11,28 @@ Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDO
 
 정확한 다음 작업: 최종 STATE의 doc-only HEAD와 기존3056 config의 selected preimage/dependency/review를 대조한 derivative를 만든 뒤, reviewed testfixture1 .none을 exact integrate/commit/push/PR13 갱신합니다. ONE incremental UnitSDK/exact selectors → originalOwnerRead1 먼저 → PASS면 remaining7owner+persistent10. Matching mapping8은 반복하지 않습니다. Android baseline/source 및 forensic binding은 병렬 준비하되 builder/device는 exclusive입니다. 더 큰 계획 문서 대신 기존 실제 코드의 연결과 검증에 집중합니다.
 
+## CANDIDATE — iOS automatic iCloud backup disclosure (2026-10-01)
+
+Branch `next-ai/icloud-disclosure` from `ca1d810`; not pushed, merged or published. Source-only
+change: `docs/ios-content.json` (17 locales: privacy `backups` second paragraph, one exception
+sentence in the manual-backup text, one iCloud sentence in privacy `deletion` and the support
+deletion answer, third support `backup` answer) and `scripts/render_ios.py`
+(`SECTION_PARAGRAPHS["backups"] = 2`); 36 iOS privacy/support pages regenerated. Wording derived
+from iOS source at `87116b87` (`ICloudBackupCoordinator/Scheduler/Transport.swift`,
+`BackupCryptoService.swift`, `backup.icloud.*`); CloudKit native tests are not proof of runtime
+behavior. No version line (the monetization sections carry none).
+
+- PASS: six renderer `--check`s, README unittest set (105) and `test_account_sync_candidate` (10),
+  `render_account_sync.py` staging to a scratch directory (108 pages).
+- FAIL, pre-existing at `ca1d810`: `check_site.py` stops at one Korean tone hit in
+  `account-sync-content.candidate.json` `ko.legacyRights` ("해당"); a diagnostic run excluding only
+  that hit passes all other site checks (144 pages) with 0 new tone violations.
+  `check_site.py --release` stays BLOCKED on the unset effective date.
+- NOT_RUN: native-speaker review for the 15 other languages, browser visual review, iOS Settings
+  menu labels on a device. Open: account-sync `manualBackupScope` says "Google Drive" for iOS and
+  does not name iCloud; Terms `records` says records "stay on your device".
+- Next: owner/coordinator review, then merge with the monetization candidate.
+
 ## ACTIVE — prior-buyer application disclosure SOURCE_OFF5 (2026-10-01)
 
 Changed only candidate JSON three fields across17 locales plus blockers, existing validator/staged renderer/related tests/review. Optional accountbound application/status/appeal has no Plus prerequisite; current routes are unavailable/manual-only and collect no raw order/proof or provide code, price or entitlement. Review approval is not benefit delivery. Claim-evidence server vault is separate from health E2EE and sync retention; missing approved case/evidence/audit/receipt/duplicate-marker policy disables collection, no invented periods/operator/date.
