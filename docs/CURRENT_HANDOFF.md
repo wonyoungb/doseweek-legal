@@ -13,9 +13,14 @@
   candidate source SHA-256 is `213d6d90872bbcec0e59940ead34ff1849911b1c54b9db08e82c2ac750ba8acb`.
   Generated public pages and their renderer inputs are unchanged, so the prior 144/144 site
   PASS remains input-matched; no new live/browser/native check ran. No public page or store
-  offer changed. Source/review/handoff are committed at `d3bb6983` on the same draft branch;
-  the remote/PR update is pending. Next action: push, append the scoped PR #11 description
-  and read back the open/draft head/body; then record the final external state here.
+  offer changed. Source/review were committed at `d3bb6983` and pushed on the same draft
+  branch. PR #11's description was appended without replacing its earlier text and read back
+  exactly while open/draft, with the remote head matching the pushed branch. This follow-on
+  handoff checkpoint records the final state; a further doc-only commit does not change the
+  candidate source or invalidate the focused checks. **Next action:** once server/native account
+  and store-offer behavior is proved, reconcile the effective 17-locale privacy, Terms and help
+  sources, generate the working deletion route, settle the effective date/store declarations
+  and run the release gate. Counsel and native-speaker review remain.
 - Owner scope for 1.0.6: optional Apple/Google/Kakao sign-in, Plus-only automatic encrypted
   records/settings sync across iOS and Android under one DoseWeek account, a recovery code
   needed on a new device, 30-day encrypted-backup retention after Plus expiry, account deletion,
