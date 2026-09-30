@@ -1,3 +1,13 @@
+## Current — reviewed candidate integrated; publication gates pending (2026-09-30)
+
+Owner resumed autonomous safe work. Canonical workspace release/CURRENT_HANDOFF.md owns current cross-platform status; the old pause and pre-integration notes below are historical.
+
+Reviewed account/privacy source packet is committed at product checkpoint3cf3f952 and draft PR11. Independent final SOURCE_OFF approval: workspace release/evidence/1.0.6/legal-effective-sync-20260930/independent-final-review.json. Retained focused8 PASS,108 candidate page checks/5047 links PASS; reviewed17 localized support leads/18 affected pages close the earlier P2. This handoff correction leaves every source/renderer/test/public page byte unchanged, so matching results are reused without rebuilding.
+
+NOT_RUN: actual provider/native/TLS/operational erasure and browser visual. BLOCKED: legal/operator/processing-location/DPA/international-transfer/effective-date, native full19 durability/key custody, retention/backup deletion/store disclosure gates. Candidate remains noindex/unpublished and readinessOFF; public144 pages remain unchanged. No active owned process/device.
+
+Next: continue canonical native verification and resolve the listed release gates before applying candidate content to effective public pages; no publication from this draft push.
+
 # Website handoff — canonical pointer
 
 ## Resumed local effective account integration (2026-09-30)
@@ -14,7 +24,7 @@ Independent review’s P2 iOS support-lead contradiction is repaired in the stag
 
 The checkpoints below retain their original evidence and next-action text as history. The resumed packet above and canonical workspace handoff own current instructions.
 
-## OWNER_PAUSE_RELAUNCH — home continuation (2026-09-30)
+## Historical — OWNER_PAUSE_RELAUNCH home continuation (2026-09-30)
 
 The owner requested a handoff for continuation from home. Development, new native jobs,
 activation and publication are paused until the owner asks to resume. The canonical live
