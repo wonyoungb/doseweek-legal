@@ -17,7 +17,9 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
   wording verbatim.
 - [Account, encrypted sync and announcement copy](account-sync-content.candidate.json) is an
   unpublished 17-locale 1.0.6 draft, including the planned account-deletion web-page copy. It is
-  not rendered into the effective pages. [Release review](ACCOUNT_SYNC_RELEASE_REVIEW.md) lists
+  not rendered into the effective pages. [render_account_sync.py](../scripts/render_account_sync.py)
+  stages separate1.0.6 sources and local pages, including support-email account-deletion initiation
+  without Plus or reinstall; it refuses output into the public checkout. [Release review](ACCOUNT_SYNC_RELEASE_REVIEW.md) lists
   source conflicts, store declarations, primary sources and operational blockers.
 - Per-language pages (`/<locale>/<route>`), hreflang links and the sitemap:
   [locale_pages.py](../scripts/locale_pages.py), used by every renderer, and

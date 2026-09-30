@@ -1,5 +1,19 @@
 # Website handoff — canonical pointer
 
+## Resumed local effective account integration (2026-09-30)
+
+Independent review’s P2 iOS support-lead contradiction is repaired in the staging transform only: all17localized leads now use existing unpublished/OFF + optional-account source. The new regression failed first1/1, then exact related8/8PASS. Regeneration changed exactly18iOSsupport candidate pages; other90candidate page hashes match the before-repair receipt. EN/KO source/output truth PASS,108format/panel/hreflang/byte checks and5047local links PASS; tone1738/0violations. Canonical source JSON/144public pages and baseline renderer dependencies remain byte-matched to earlier36iOS/54Android parity, so no whole144/native rerun. Source SHA28c8ff is unchanged; renderer/test and generated source/page hashes are refreshed in receipt.json. Earlier independent-review receipt remains historical P2 evidence until reviewer recheck; no browser appearance/deployment proof is claimed.
+
+- Ready for coordinator review at legal primary `5fce11f6`, branch `claude/doseweek-free-ads-plus-himvw9`: ten owned source/renderer/test/review/setup/handoff files only. No commit/push/publication by this packet owner. SHA, exact dirty inventory, commands and evidence are in workspace `release/evidence/1.0.6/legal-effective-sync-20260930/receipt.json`; input source SHA28c8ff7199bc84f6027796e8a24aa4d3ad30702f36815fb61251c3a2dccfb655.
+- Source17locales and focused8exact methods PASS (fail/skip/omit0). Separate1.0.6 null-date sources and108pages generated: six routes × (hash+17locales), exact panel/hreflang/output-byte identities PASS,5047local links PASS. Changed baseline renderers preserve original36iOS/54Android bytes; unchanged public144pages were not rehashed or rerun as a whole. Scoped Korean source check1738sentences/0violations,2existing allowed/1uncovered import allowance; no native-speaker review. py_compile/diff check PASS.
+- External `/account/delete/` candidate is a prominent localized email request action using the existing public support address, no Plus/reinstall/subscription-cancellation prerequisite. It requests only provider/known account ID, with identity verification before erasure; passwords/recovery/health/purchase tokens excluded. Email initiation, account/server erasure and provider unlink outcomes are distinct. No real mail/API/provider deletion request, native/TLS/operational proof, browser appearance review or publication ran.
+- All17locales carry unpublished/OFF notices and separate optional analytics/transfer choices. Original primary features stay Free; the owner does not guarantee perpetual ad-free use, and promotional acquisition alone is not paid-purchase proof. Verified1month→monthly Plus program is unimplemented and makes no issuance promise. Owner choice is resolved; prior ad-free purchase-claim counsel/platform review remains BLOCKED. Effective date/operator/location/DPA/international transfer/full19native settings+key custody/provider/retention/backup deletion/store forms remain release gates. Actual provider/health sync stays OFF.
+- First assertion/render/link failures are retained and their related repairs passed. The initial custom tone audit failed before auditing because the wrong Rules type was supplied; its raw file was accidentally overwritten, so only a clearly labelled tool-trace summary is retained. Both release readiness/date guards remain BLOCKED. No active PID/device. **Next action:** coordinator reviews the bounded packet, commits/pushes the same draft PR11, and resolves listed gates before replacing effective public sources or publishing.
+
+## Historical checkpoints before this resumed local packet
+
+The checkpoints below retain their original evidence and next-action text as history. The resumed packet above and canonical workspace handoff own current instructions.
+
 ## OWNER_PAUSE_RELAUNCH — home continuation (2026-09-30)
 
 The owner requested a handoff for continuation from home. Development, new native jobs,
@@ -143,9 +157,7 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
 
 ## Open owner questions (2026-09-30)
 
-- Preserve the prior paid app's original features and ad-free experience permanently, with the
-  one-month code applying to newly added Plus benefits? Apple §3.1.2(a) and consumer-law review
-  make this a release blocker; the owner's answer is pending.
+- Resolved in the resumed packet: original primary features remain Free, perpetual ad-free use is not guaranteed, and promotional acquisition alone is not paid-purchase proof. Counsel/platform assessment of prior ad-free purchase claims remains a release blocker; the owner decision is no longer pending.
 - The owner chose to include free + ads + Plus in 1.0.6. The release effective date is still
   unset, and the app/page version fields still describe 1.0.5; the release coordinator must
   align them with the final 1.0.6 builds before publication.

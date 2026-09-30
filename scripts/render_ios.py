@@ -154,8 +154,12 @@ def validate(content: dict) -> None:
     }
     assert content["schemaVersion"] == 1
     assert content["platform"] == "ios"
-    assert content["bundleVersion"] == PAGE_VERSION
-    assert content["effectiveDate"] == expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE)
+    assert content["bundleVersion"] in (PAGE_VERSION, "1.0.6")
+    # An explicit unpublished 1.0.6 render has no invented effective date.
+    assert content["effectiveDate"] == (
+        None if content["bundleVersion"] == "1.0.6" else
+        expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE)
+    )
     assert content["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert content["localeOrder"] == LOCALE_ORDER
     assert list(content["locales"]) == LOCALE_ORDER
@@ -364,12 +368,16 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         for section in privacy["sections"]
     )
     disclaimer = privacy["medicalDisclaimer"]
+    date = (
+        f'<p class="date"><time datetime="{escaped(effective_date)}">'
+        f'{escaped(privacy["effectiveDate"])}</time></p>' if effective_date else ""
+    )
     return f"""        <article id="{escaped(locale)}" class="language-panel" lang="{escaped(locale)}" dir="{escaped(direction)}" data-language="{escaped(locale)}" data-document-title="{escaped(document_title)}" aria-labelledby="{escaped(locale)}-content">
           <header class="hero">
             <p class="eyebrow">DoseWeek · iOS {escaped(bundle_version)}</p>
             <h1 id="{escaped(locale)}-content" data-skip-target tabindex="-1">{escaped(privacy['title'])}</h1>
             <p class="hero-copy">{escaped(privacy['intro'])}</p>
-            <p class="date"><time datetime="{escaped(effective_date)}">{escaped(privacy['effectiveDate'])}</time></p>
+            {date}
           </header>
 
           <div class="policy-layout">

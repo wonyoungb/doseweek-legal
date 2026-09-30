@@ -35,16 +35,7 @@ clients must use the same 17-locale schema and per-notice snooze rules. A networ
 expose an IP address to the hosting layer even though the feed carries no account or health
 query data. Neither URL is evidence of a deployed DoseWeek feature.
 
-The current `server/doseweek-cloud` candidate's provider verification has been tested only with
-locally generated token fixtures, not real provider configuration. Its
-`GET/PUT /v1/sync/snapshot` routes deliberately return 503 because account-
-bound Apple/Play Plus verification is absent. Account deletion removes live-store state, but
-provider token revocation/unlink, durable backup erasure and a working external deletion flow
-are unverified. The protocol defines 30-day post-expiry ciphertext retention and recovery-code
-encryption, while the shared lossless iOS/Android record graph, native key management, automatic
-backup, merge and restore are not implemented. The public privacy, Terms, help and store forms
-must describe these as available only after the corresponding native, server and operational
-proof exists. The candidate JSON stays unpublished and the release gate rejects it meanwhile.
+The current account/provider/Plus/health-sync service remains **OFF**. Server lifecycle, signed Plus assertions, shared record adapters and retention sweep have source candidates and bounded synthetic checks. They are not a verified production service. Real provider configuration, store/native assertion handling, full record graph/settings cut and restore, native key custody, TLS/deployment, request-independent pruning and backup erasure still require their corresponding proof. The staged17locale sources render target behavior under an explicit unpublished/OFF heading; the public release gate continues to reject them. No local output proves that a URL, provider unlink or server deletion works in production.
 
 The existing Terms draft describes monthly and annual auto-renewing Plus. The owner selected an
 **in-app claim followed by purchase verification before** distributing an individual one-month
@@ -68,20 +59,13 @@ price must be made clear in the actual store offer. No candidate page promises a
 Account deletion must remain available without Plus and must clearly say that it does not cancel
 store billing.
 
-The existing-buyer transition has an additional release gate. Apple's current
-[App Review Guidelines §3.1.2(a)](https://developer.apple.com/app-store/review/guidelines/)
-require a paid-app-to-subscription transition to preserve primary functionality that earlier
-users paid for. A one-month code alone does not establish that those rights are preserved.
-The owner is deciding whether to preserve the original features and ad-free experience as a
-separate perpetual entitlement while the code trials newly added Plus benefits. Do not resolve
-that pending choice by claiming that a former paid buyer becomes ad-bearing Free after the
-code expires. Verify the final entitlement, restore, refund/Family Sharing and consumer-law
-boundary before changing effective public copy or releasing the conversion.
+The owner has resolved the earlier paid-buyer policy question: original primary features remain Free, but **perpetual ad-free use is not guaranteed**. Prior paid acquisition alone starts neither a Plus subscription nor a charge. The requested verified one-month Plus code→monthly auto-renewing program remains a design, with no delivery promise before the actual store offer and claim path can be operated. Acquiring the app by a promotional code alone is not evidence of actual payment; buyer identity and actual paid acquisition must be established, with Android manual review/disputes when they cannot be proved automatically.
 
-## Current-source conflict inventory
+Apple’s [App Review Guidelines §3.1.2(a)](https://developer.apple.com/app-store/review/guidelines/) were reopened on2026-09-30. They say “should not take away the primary functionality existing users have already paid for.” The guideline does not expressly decide whether this app’s past ad-free promise is primary functionality. The owner’s no-perpetual-ad-free choice settles the product decision; **counsel/platform review of the original sales representation and consumer rights remains a release blocker**. A one-month trial alone is not proof of compliance. Verify original-feature restore, paid-versus-promo acquisition, refunds and Family Sharing without assuming the owner choice is legally cleared.
 
-The current candidate pages were written for the no-account app. These locations must be
-reconciled across **all 17 locales** before rendering the new feature into public pages:
+## Historical public-source and staged integration inventory
+
+The preserved public inputs and144pages describe the historical no-account app. The deterministic `scripts/render_account_sync.py` now reconciles the following fields in separate1.0.6 sources and108local review pages (privacy/help for each platform, Terms, deletion; hash +17locales). It uses the existing renderers, keeps effectiveDate null and marks each page unpublished/OFF. This does not replace effective public sources or prove service readiness.
 
 | Source | Fields that currently conflict or omit the new behavior |
 |---|---|
@@ -99,8 +83,7 @@ these references solely to recheck Store status; this is distinct from end-to-en
 records whose recovery keys never reach it. Account deletion erases the references and
 retains keyed purchase tombstones with the account link removed to prevent duplicate
 ownership claims; this is not a claim that the markers are legally anonymous.
-current source prunes references only when a Plus assertion is refreshed, after the
-recorded expiry plus 30 days; no scheduled sweep is installed. Required automatic erasure
+An hourly expiry/pruning sweep is an independently reviewed source candidate. Scheduled execution, bounded lag and actual deployment are unproved. Required automatic erasure
 without app requests, tombstone legal basis and retention limit remain release blockers. Source review
 and synthetic/local HTTP tests do not prove real Store calls, cron execution or deletion of
 operational backups. The 17-locale candidate now discloses this distinction; native-speaker
@@ -109,23 +92,13 @@ and counsel review remain pending.
 The owner-provided Lightsail address and SSH key do not prove server region, processor terms,
 retention or that the API is live. Record those facts from the actual deployment and contract.
 
-## Account deletion web source and release route
+## Account deletion web request source and release route
 
-Planned direct route: `https://doseweek-legal.wonyoungchoi.dev/account/delete/`. The final page
-must provide a **working** authenticated path to request deletion without reinstalling the app.
-The app must also expose Settings → Account → Delete account and confirm the result. The static
-site has no account backend or form today; publishing a dead button or a policy-only link would
-not meet the Play web-resource requirement. Do not ask for health records or recovery codes in
-support mail. A web flow can redirect to the new authenticated API once deployed. It should
-show what is deleted, separate device/export/Drive data, the store subscription cancellation
-link and any legally required retention. For Kakao-linked accounts the service should request
-Kakao unlink and handle provider-initiated unlink webhooks; for Sign in with Apple, revoke
-associated tokens. Provider sign-out alone is not DoseWeek account deletion.
+Target: `https://doseweek-legal.wonyoungchoi.dev/account/delete/`, with17locale routes and stable locale hashes. The staged page prominently identifies DoseWeek and provides the existing public support address `wonyoung@wonyoungchoi.dev` as a working `mailto:` request action and visible address. A user can initiate the request without reinstalling the app, purchasing Plus, or first canceling billing. Only the sign-in provider and known DoseWeek account ID are requested; support explains identity verification before erasure. Passwords, health data, recovery codes and purchase tokens must not be mailed. Drafting/sending mail is not confirmation of account deletion. No real message was sent, no mailbox response or deletion was exercised, and the route is not published.
 
-Before the route is generated for 17 locales, the API owner must supply its exact deletion
-endpoint, auth and reauthentication flow, idempotent deletion receipt, provider revocation
-behavior, audit/log and backup erasure limits, and a tested response. The 17-locale candidate
-`retention` text is a draft **target**; it must not be published as a completed guarantee.
+[Google Play’s official account-deletion guidance](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en), reopened2026-09-30, permits a customer-service email as an external request pathway. A functional, prominent request route naming the app is required even when the app can be used without an account. A deployed authenticated API is **not a prerequisite for an email request page**. Publication, mailbox ownership/handling, identity verification, reasonably prompt actual account-associated-data erasure and final Console URL/readback remain gates. The existing verified public contact link establishes the address only, not operational deletion proof or platform approval.
+
+App initiation still needs Settings→Account→Delete account with a truthful confirmation/result. Account/server erasure is distinct from provider unlinking and store billing cancellation. Apple refresh capability uses a separate server encryption key; Kakao unlink token is request-only and not retained. Show provider results separately and provide manual provider-account removal instructions if disconnection fails or is unconfirmed; no automatic retry is promised. Preserve distinct local/exported/Drive deletion paths,30day Plus-expiry retention, any legally justified retention, and operational backup erasure limits. Native/provider/TLS/backup-deletion proof is NOT_RUN/BLOCKED.
 
 ## Store privacy and Data safety draft
 
@@ -151,7 +124,7 @@ inventory and consent-before/after network traces, then read back both consoles.
 2. Confirm whether the FTC Health Breach Notification Rule and Washington My Health My Data Act
    apply to served users, then document incident/deletion response. E2EE does not by itself
    establish an exemption; classification depends on facts and law.
-3. Record the real Lightsail region/operator, AWS role and subcontractors, IP/access-log fields
+3. Record the real Lightsail region/operator, processor DPA and AWS role/subcontractors, IP/access-log fields
    and retention, ciphertext/object lifecycle, deletion propagation and backups. AWS uses shared
    responsibility; the developer must secure the instance and app data.
 4. Finalize the effective date, all 17 native labels and counsel/native-speaker review. Run every
@@ -181,3 +154,9 @@ inventory and consent-before/after network traces, then read back both consoles.
 All17 unpublished locales now distinguish Apple server-encrypted refresh capability from health-record E2EE keys, request-only non-retained Kakao unlink access token, and local/account-data deletion from provider-disconnection outcome. A provider failure requires explicit manual instructions; no background retry is promised. This is planned OFF behavior, not a production claim.
 
 Isolated server lifecycle d615 has123 synthetic test passes but independent review blocks activation: concurrent link/delete, multiple provider identities/capability coverage and proxy/client deadlines need repaired immutable review. Existing primary hourly retention sweep is source-only; request-independent deployment, at-most-one-hour sweep lag, monitoring and operational backup erasure remain unproven. Account deletion must erase health ciphertext/account references and show the truthful provider result; no health/recovery data may be sent to support. Counsel, real provider revocation, native response UI, effective date and public deletion route remain release gates.
+
+## Local staged renderer packet (2026-09-30)
+
+Run `python3 scripts/render_account_sync.py --output <review-directory-outside-this-checkout>`. The generator refuses the public checkout. Sources are materialized in the review directory’s `sources/`; affected108pages have exact route/locale SHA receipts in `render-receipt.json`. Existing public144outputs are preserved; only the two changed baseline renderers were checked for backward byte parity (36iOS+54Android). No historical whole144site rerun is required solely by this continuation. Final release needs counsel/effective date/operator-DPA-transfers, verified account/Plus/full19native/settings/recovery/provider/deletion/retention behavior, store declarations, final localized UI labels and native-speaker review. Nothing is committed, pushed, deployed or published by this packet owner.
+
+Independent review follow-up: the staged iOS help introduction inherited the original no-account denial. The staging transform now replaces that entire localized lead with the existing OFF and optional-account source in all17locales. The failing-first regression, eight related passing methods, exact18changed help-page hashes, and EN/KO source/output checks are retained in the packet. Original effective sources/pages remain preserved; source verification is not browser visual or production availability.

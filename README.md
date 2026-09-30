@@ -126,6 +126,14 @@ Korean copy follows the owner's plain 해요체 voice (2026-09-25). `check_site.
 `scripts/korean_tone_rules.json`. Add an entry to `scripts/korean_tone_allowlist.json` only for a
 reviewed exception, with its key, rule, match and reason.
 
+Unpublished account/legal integration can be reviewed with
+`python3 scripts/render_account_sync.py --output /absolute/path/to/local-review-directory`.
+The output must be outside this checkout. It materializes separate 1.0.6 privacy/help/Terms
+sources and a localized account-deletion request route using the existing public support
+email. Its effective date stays null, pages carry an unpublished/OFF notice, and requesting
+by email does not prove completed erasure. Original served pages are preserved. See
+[the account release review](docs/ACCOUNT_SYNC_RELEASE_REVIEW.md) for publication gates.
+
 ## Repository layout
 
 ```text

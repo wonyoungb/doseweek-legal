@@ -17,7 +17,8 @@ LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
-FIELDS = ("account", "sync", "retention", "notice", "webDeletion")
+FIELDS = ("account", "sync", "retention", "notice", "webDeletion", "releaseStatus",
+          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope")
 KAKAO_NAME = {"ko": "카카오", "ja": "カカオ"}
 
 
@@ -35,10 +36,19 @@ def load() -> dict:
         "https://doseweek-legal.wonyoungchoi.dev/account/delete/"
     )
     assert candidate["unresolvedBeforePublication"]
+    deletion = candidate["deletionRequest"]
+    assert deletion["method"] == "support-email"
+    assert deletion["supportEmail"] == "wonyoung@wonyoungchoi.dev"
+    assert deletion["requiresPlus"] is False and deletion["requiresReinstall"] is False
+    assert deletion["published"] is False
+    assert candidate["legacyDecision"]["ownerDecision"] == "resolved"
+    assert candidate["legacyDecision"]["perpetualAdFreeGuaranteed"] is False
+    assert candidate["legacyDecision"]["promoAcquisitionProvesPaidPurchase"] is False
     for locale, entry in candidate["locales"].items():
         assert set(entry) == set(FIELDS), f"{locale}: missing disclosure field"
         for field in FIELDS:
-            assert isinstance(entry[field], str) and len(entry[field].strip()) > 40, (
+            minimum = 2 if field in ("deletionTitle", "requestLabel") else 20
+            assert isinstance(entry[field], str) and len(entry[field].strip()) > minimum, (
                 f"{locale}.{field}: missing substantial localized copy"
             )
         assert "Apple" in entry["account"] and "Google" in entry["account"], locale

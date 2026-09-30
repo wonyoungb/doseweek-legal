@@ -290,13 +290,17 @@ def privacy_panel(catalog: dict[str, object], locale: str) -> str:
     sections = "\n".join(render_policy_section(locale, section) for section in content["sections"])
     medical = content["medicalDisclaimer"]
     arrow = "←" if entry["direction"] == "rtl" else "→"
+    date = (
+        f'<p class="date"><time datetime="{escaped(catalog["effectiveDate"])}">'
+        f'{escaped(catalog["effectiveDate"])}</time></p>' if catalog["effectiveDate"] else ""
+    )
     return (
             f"""        <article {panel_attributes(locale, entry, title)}>
           <header class="hero">
             <p class="eyebrow">DoseWeek · Android {escaped(catalog['versionName'])}</p>
             <h1 id="{escaped(locale)}-content" data-skip-target tabindex="-1">{escaped(content['title'])}</h1>
             <p class="hero-copy">{escaped(content['scope'])}</p>
-            <p class="date"><time datetime="{escaped(catalog['effectiveDate'])}">{escaped(catalog['effectiveDate'])}</time></p>
+            {date}
           </header>
 
           <div class="policy-layout">
@@ -428,8 +432,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["schemaVersion"] == 1
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
-    assert catalog["versionName"] == "1.0.5"
-    assert catalog["effectiveDate"] == expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
+    assert catalog["versionName"] in ("1.0.5", "1.0.6")
+    assert catalog["effectiveDate"] == (
+        None if catalog["versionName"] == "1.0.6" else
+        expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
+    )
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
     assert isinstance(catalog["locales"], dict)
@@ -699,9 +706,17 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         ("support intro", english["support"]["intro"]),
         ("accounts FAQ", " ".join(english_faq["accounts"]["answers"])),
     ):
-        assert "no developer server for health records" in text and (
-            "purchase-verification server" in text
-        ), f"Android {label} must scope 'no developer server' to health records and name the purchase-verification server"
+        if catalog["versionName"] == "1.0.6":
+            assert "DoseWeek account" in text and "off until actual verification" in text, (
+                f"Android {label} must disclose optional accounts and the unverified OFF state"
+            )
+            assert "no developer server for health records" not in text, (
+                f"Android {label} retains the obsolete no-account health-server denial"
+            )
+        else:
+            assert "no developer server for health records" in text and (
+                "purchase-verification server" in text
+            ), f"Android {label} must scope 'no developer server' to health records and name the purchase-verification server"
     faq = {item["id"]: item for item in english["support"]["faq"]}
     assert "still has no generative, online, or on-device AI" not in " ".join(
         faq["ai-health"]["answers"]
