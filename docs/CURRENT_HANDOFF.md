@@ -27,6 +27,9 @@
   **Next action:** after the native/API contract is verified, replace conflicting effective
   privacy/terms/help sources in all 17 locales, generate the deletion route and pages, then
   verify store declarations and run the release gate. Counsel and native-speaker review remain.
+- This draft is locally committed as `25e9c95166ebe16e1461fff1a8b7e48420b745a4` on
+  `claude/doseweek-free-ads-plus-himvw9`; the source tree is clean at that commit. Push and PR
+  description update are reserved for the release coordinator's same-branch integration step.
 
 Read the [canonical current handoff](../../release/CURRENT_HANDOFF.md) first, then the
 [workspace entry](../../START_HERE.md) and relevant [release journal](../../release/release-journal.json) entries.
