@@ -10,6 +10,10 @@
   check PASS; candidate SHA `213d6d90872bbcec0e59940ead34ff1849911b1c54b9db08e82c2ac750ba8acb`
   matches the prior 17-locale/2-test/144-page results, which remain reusable. No new native or
   public check ran. Receipt: `release/evidence/1.0.6/legal-legacy-rights-gate-20260930/receipt.json`.
+  Review/handoff source commit `49a58c3` was pushed; local, remote and open/draft PR #11 matched.
+  Its description now states current behavior, exact verification and blockers, with the previous
+  body retained in evidence; the new body was read back exactly. This follow-on doc checkpoint
+  records that completed stage and changes no candidate/render/test input.
   Next action:
   record the owner answer, prove the actual legacy entitlement and restore behavior, then
   reconcile effective disclosures with the completed native/API/store contract.
