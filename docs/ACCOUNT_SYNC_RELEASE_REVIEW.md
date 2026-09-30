@@ -97,7 +97,8 @@ purchase lookup references (Apple original transaction ID or Play purchase token
 separate private vault keys, in addition to keyed purchase digests. The server decrypts
 these references solely to recheck Store status; this is distinct from end-to-end health
 records whose recovery keys never reach it. Account deletion erases the references and
-retains de-identified keyed purchase tombstones to prevent duplicate ownership claims;
+retains keyed purchase tombstones with the account link removed to prevent duplicate
+ownership claims; this is not a claim that the markers are legally anonymous.
 current source prunes references only when a Plus assertion is refreshed, after the
 recorded expiry plus 30 days; no scheduled sweep is installed. Required automatic erasure
 without app requests, tombstone legal basis and retention limit remain release blockers. Source review

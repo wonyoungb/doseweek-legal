@@ -14,6 +14,9 @@
   head match. PR body readback SHA `2a2c295839811d5957bdef4b862493d2ae1f6b405dca766da24cc9c2d1fc858b` matches the saved body.
   First remote-head preflight saw the previous4abb head just after push and FAILED before
   body mutation; refreshed readback showed be891c01, then exact body/head checks passed.
+  Source-backed terminology correction: purchase tombstones retain a keyed digest and
+  store marker with the account link removed; no legal anonymity claim is made. This
+  docs-only correction leaves candidate930e2048/renderer/native inputs unchanged.
   Public render inputs/pages remain unchanged. Next: complete source/API/native erasure
   proof and legal review, then reconcile effective disclosures and deletion route.
 
