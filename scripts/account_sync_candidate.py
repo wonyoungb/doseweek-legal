@@ -18,7 +18,8 @@ LOCALES = (
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
 FIELDS = ("account", "sync", "retention", "notice", "webDeletion", "releaseStatus",
-          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope")
+          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
+          "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
 KAKAO_NAME = {"ko": "카카오", "ja": "カカオ"}
 
 

@@ -1,3 +1,11 @@
+## ACTIVE — prior-buyer application disclosure SOURCE_OFF5 (2026-10-01)
+
+Changed only candidate JSON three fields across17 locales plus blockers, existing validator/staged renderer/related tests/review. Optional accountbound application/status/appeal has no Plus prerequisite; current routes are unavailable/manual-only and collect no raw order/proof or provide code, price or entitlement. Review approval is not benefit delivery. Claim-evidence server vault is separate from health E2EE and sync retention; missing approved case/evidence/audit/receipt/duplicate-marker policy disables collection, no invented periods/operator/date.
+
+- Retained PASS: exact10 focusedmethods,17source locales,108candidate format/panel/hreflang/bytes and5047links;90privacy/help/terms output hashes changed,18deletionoutputs unchanged. Independent78c6d7be source review135 readonly assertions approves5. Root exactpre/post/diff/unselectedpreservation verified; public144/canonical3 sources untouched.
+- FAIL retained: failing-first1; initial10 6PASS4FAIL from existing2-answercontract, responsible renderer correction related1 then final10PASS; parserpackaging failure no test rerun. Native-speaker/legal/browser/native/provider/operational/store proofs NOT_RUN/BLOCKED. Candidate noindex/null-date/OFF, no publication.
+- Next: integrate reviewed priorbuyer backend and typedapp clients, then qualify actual account/retention/reviewer/store-offer disclosure gates before effective publiccopy. Real offer/price/renewal wording requires actual verified code inventory and store terms. Evidence ../../release/evidence/1.0.6/IOS-SYNC-EXPERIENCE/20261001/release-acceptance-next-scope/prior-buyer-claim-proposal/legal-implementation-20261001/.
+
 ## Current — reviewed candidate integrated; publication gates pending (2026-09-30)
 
 Owner resumed autonomous safe work. Canonical workspace release/CURRENT_HANDOFF.md owns current cross-platform status; the old pause and pre-integration notes below are historical.
