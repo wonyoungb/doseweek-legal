@@ -17,6 +17,7 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
 | `/<locale>/…` | The same seven routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
 | `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 126 pages (7 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
+| `/app-ads.txt` | AdMob authorized seller record. Keep the publisher ID equal to the snippet in the owner's AdMob account; publish this plain-text file at the domain root |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
 zh-Hans, zh-Hant and tr. Keep Arabic right-to-left, the separate Portuguese and Chinese
