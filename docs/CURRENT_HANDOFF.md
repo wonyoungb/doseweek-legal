@@ -10,6 +10,10 @@
   focused tests2/2, diff check PASS; no native/TLS/provider/publication proof. Source SHA
   `930e2048558d5b25b67e15c9a99d60a49015c20315cb281e94eb6fb295f3e5fe`; receipt
   `release/evidence/1.0.6/legal-purchase-vault-disclosure-20260930/receipt.json`.
+  Source/review commit `be891c01` is pushed; local, remote-tracking and open/draft PR #11
+  head match. PR body readback SHA `2a2c295839811d5957bdef4b862493d2ae1f6b405dca766da24cc9c2d1fc858b` matches the saved body.
+  First remote-head preflight saw the previous4abb head just after push and FAILED before
+  body mutation; refreshed readback showed be891c01, then exact body/head checks passed.
   Public render inputs/pages remain unchanged. Next: complete source/API/native erasure
   proof and legal review, then reconcile effective disclosures and deletion route.
 
