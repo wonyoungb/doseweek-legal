@@ -68,6 +68,16 @@ price must be made clear in the actual store offer. No candidate page promises a
 Account deletion must remain available without Plus and must clearly say that it does not cancel
 store billing.
 
+The existing-buyer transition has an additional release gate. Apple's current
+[App Review Guidelines §3.1.2(a)](https://developer.apple.com/app-store/review/guidelines/)
+require a paid-app-to-subscription transition to preserve primary functionality that earlier
+users paid for. A one-month code alone does not establish that those rights are preserved.
+The owner is deciding whether to preserve the original features and ad-free experience as a
+separate perpetual entitlement while the code trials newly added Plus benefits. Do not resolve
+that pending choice by claiming that a former paid buyer becomes ad-bearing Free after the
+code expires. Verify the final entitlement, restore, refund/Family Sharing and consumer-law
+boundary before changing effective public copy or releasing the conversion.
+
 ## Current-source conflict inventory
 
 The current candidate pages were written for the no-account app. These locations must be

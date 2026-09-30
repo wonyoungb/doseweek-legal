@@ -2,6 +2,17 @@
 
 ## Now (2026-09-30) — account, encrypted sync and announcement disclosure draft
 
+- Current release blocker: official Apple §3.1.2(a) requires preserving prior paid buyers'
+  primary functionality when moving to subscriptions. The owner is deciding the separate
+  perpetual legacy-rights/ad-free boundary; the agreed one-month new Plus code alone does not
+  resolve it. `docs/ACCOUNT_SYNC_RELEASE_REVIEW.md` records this source-backed question.
+  Candidate JSON and generated pages remain byte-unchanged and unpublished. Docs-only diff
+  check PASS; candidate SHA `213d6d90872bbcec0e59940ead34ff1849911b1c54b9db08e82c2ac750ba8acb`
+  matches the prior 17-locale/2-test/144-page results, which remain reusable. No new native or
+  public check ran. Receipt: `release/evidence/1.0.6/legal-legacy-rights-gate-20260930/receipt.json`.
+  Next action:
+  record the owner answer, prove the actual legacy entitlement and restore behavior, then
+  reconcile effective disclosures with the completed native/API/store contract.
 - Latest owner decision: a server-verified Apple or Google Plus purchase linked to the same
   DoseWeek account shares **all** Plus benefits across iOS and Android (ad removal, Plus tools
   and encrypted sync), while each app retains its native store purchase path. The unpublished
@@ -87,6 +98,9 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
 
 ## Open owner questions (2026-09-30)
 
+- Preserve the prior paid app's original features and ad-free experience permanently, with the
+  one-month code applying to newly added Plus benefits? Apple §3.1.2(a) and consumer-law review
+  make this a release blocker; the owner's answer is pending.
 - The owner chose to include free + ads + Plus in 1.0.6. The release effective date is still
   unset, and the app/page version fields still describe 1.0.5; the release coordinator must
   align them with the final 1.0.6 builds before publication.
