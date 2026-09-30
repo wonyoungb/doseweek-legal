@@ -42,11 +42,12 @@
   site PASS is reusable because generated pages, renderers and site-check inputs are unchanged;
   no new browser or native check ran. The release gate remains BLOCKED by the unset date and
   unintegrated candidate. The one-month-code claim-data addition passed the same focused 17/17
-  validator, 2/2 tests and diff check. PR #11's description now distinguishes the unpublished
-  account/sync draft and in-app promo claim design; final head/body readback follows this
-  commit. No merge or publication. **Next action:** commit/push this verified candidate and
-  read back draft PR #11 head/body, then await implemented server/native/deletion facts before
-  changing effective 17-locale privacy, Terms, help and store declarations.
+  validator, 2/2 tests and diff check. Source commits `db177ad` and `9da5a47` were pushed.
+  PR #11 is open/draft; its head matched local and remote `9da5a47` and its description was
+  read back exactly after updating the unpublished account/sync draft and in-app promo design.
+  No merge or publication. **Next action:** after the server and native contracts are verified,
+  replace conflicting effective 17-locale privacy, Terms and help sources, generate the working
+  deletion route, settle the effective date and store declarations, then run the release gate.
 
 Read the [canonical current handoff](../../release/CURRENT_HANDOFF.md) first, then the
 [workspace entry](../../START_HERE.md) and relevant [release journal](../../release/release-journal.json) entries.
