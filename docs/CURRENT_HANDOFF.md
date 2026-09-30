@@ -20,7 +20,7 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
 
 ## Now (2026-09-30) — 1.0.6 rewarded-ad copy candidate
 
-- On `claude/doseweek-free-ads-plus-himvw9` at pre-commit HEAD `21a889b`, the 17-locale iOS,
+- On `claude/doseweek-free-ads-plus-himvw9`, commit `c97f8582` records the 17-locale iOS,
   Android and Terms sources now describe one earned reward adding 24 hours, no more than two
   in a rolling 24 hours, at most 48 hours remaining, and another offer only when at most
   24 hours remain. The help and Terms copy explains the five-minute clock-rollback pause and
@@ -43,12 +43,15 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
   the initial renderer log captured only the final sitemap command and is retained as partial
   evidence. `check_site.py --release` is BLOCKED by `NEXT_RELEASE_EFFECTIVE_DATE=None`;
   browser appearance review is NOT_RUN. These are source/render checks, not native app validation.
-- No owned process or device. The branch is unpublished candidate copy; GitHub Pages still
-  serves `main`. The pre-commit dirty set is the three JSON sources, two Python files,
-  this handoff and 90 generated HTML pages; no unrelated files were changed.
-- **Next action:** commit and push this branch, then refresh doseweek-legal draft PR #11.
-  Publication waits for the release-date and server details,
-  legal review, final app-string review and browser review.
+- No owned process or device. Commit `c97f8582` was pushed to the same branch and draft
+  PR #11's description now records the new reward rules, verification results and blockers;
+  it remains open and unmerged. The changed set was the three JSON sources, two Python files,
+  this handoff and 90 generated HTML pages; no unrelated files were changed. GitHub Pages still
+  serves `main`, so the candidate copy is not public.
+- **Next action:** once the owner supplies the 1.0.6 effective date and verification-server
+  location/operator/retention, replace the registered placeholders in all 17 locales and
+  align the page versions; then complete counsel, app-string, native-speaker and browser
+  reviews before the release gate. Do not merge or publish on the strength of local checks.
 
 ## Status (2026-09-29)
 
