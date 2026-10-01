@@ -11,6 +11,27 @@ Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDO
 
 정확한 다음 작업: 최종 STATE의 doc-only HEAD와 기존3056 config의 selected preimage/dependency/review를 대조한 derivative를 만든 뒤, reviewed testfixture1 .none을 exact integrate/commit/push/PR13 갱신합니다. ONE incremental UnitSDK/exact selectors → originalOwnerRead1 먼저 → PASS면 remaining7owner+persistent10. Matching mapping8은 반복하지 않습니다. Android baseline/source 및 forensic binding은 병렬 준비하되 builder/device는 exclusive입니다. 더 큰 계획 문서 대신 기존 실제 코드의 연결과 검증에 집중합니다.
 
+## CANDIDATE — account/sync server facts, Cloudflare transfer and D8 retention (2026-10-02)
+
+Lane LEGAL-STORE, branch `next-ai/legal-store-legal` from `33e7f63`; not pushed, merged or
+published. Failing-first `702c296`: `account_sync_candidate.hosting_retention_errors()` (operator,
+AWS Lightsail `ap-northeast-2`, Cloudflare with its PIPA transfer links, 30/7-day figures, D1
+record scope) and `staged_placeholder_errors()` (no release placeholder in the staged 1.0.6
+sources), wired into `check_site.py` and the candidate CLI. On the base: candidate tests 17 run /
+3 FAIL, `check_site.py` exit 1 (170 missing facts), CLI exit 1. Fix: new `processors` field and
+rewritten `sync` lead and `retention` head in all 17 locales; the staged purchase sections use
+`processors` instead of the placeholders; review doc section "2026-10-02 lane LEGAL-STORE".
+
+- PASS: six renderer `--check`s, `check_site.py` (Korean tone 1575 sentences), `korean_tone.py`
+  (0 violations), README unittest set + candidate tests (122), candidate CLI, staged render to a
+  scratch directory (108 pages, no placeholder, Cloudflare/ap-northeast-2 on every privacy panel),
+  `git diff --check`.
+- BLOCKED (unchanged): `check_site.py --release` (effective date unset). NOT_RUN: browser visual
+  review, native-speaker and counsel review, live host/backup readback.
+- Owner/counsel: Cloudflare log retention period, AWS contracting entity, entitlement-verifier
+  host, HOST-07 access logs, PIPA transfer basis; OPS-HOST must make the 7-day backup window true.
+- Evidence: workspace `release/evidence/1.0.6/LEGAL-STORE-20261002/legal/`.
+
 ## CANDIDATE — Kakao sign-in removed; Apple and Google only (2026-10-01)
 
 Owner decision 2026-10-01 ("아니다 카카오 로그인은 빼자"): the account feature keeps only Sign in
