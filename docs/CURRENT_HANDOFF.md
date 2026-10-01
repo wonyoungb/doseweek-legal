@@ -30,6 +30,9 @@ rewritten `sync` lead and `retention` head in all 17 locales; the staged purchas
   review, native-speaker and counsel review, live host/backup readback.
 - Owner/counsel: Cloudflare log retention period, AWS contracting entity, entitlement-verifier
   host, HOST-07 access logs, PIPA transfer basis; OPS-HOST must make the 7-day backup window true.
+- Follow-up `88536b6` (RED: formal German/Dutch address in the candidate, 1 FAIL on nl
+  `webDeletion` "je") and `b7266d9` (fix: "uw"), found because the Android in-app policy now
+  carries this copy. Final: 123 unit tests, check_site/korean_tone/CLI/staged render PASS.
 - Evidence: workspace `release/evidence/1.0.6/LEGAL-STORE-20261002/legal/`.
 
 ## CANDIDATE — Kakao sign-in removed; Apple and Google only (2026-10-01)
