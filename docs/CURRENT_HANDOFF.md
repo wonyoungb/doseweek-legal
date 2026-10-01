@@ -11,6 +11,31 @@ Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDO
 
 정확한 다음 작업: 최종 STATE의 doc-only HEAD와 기존3056 config의 selected preimage/dependency/review를 대조한 derivative를 만든 뒤, reviewed testfixture1 .none을 exact integrate/commit/push/PR13 갱신합니다. ONE incremental UnitSDK/exact selectors → originalOwnerRead1 먼저 → PASS면 remaining7owner+persistent10. Matching mapping8은 반복하지 않습니다. Android baseline/source 및 forensic binding은 병렬 준비하되 builder/device는 exclusive입니다. 더 큰 계획 문서 대신 기존 실제 코드의 연결과 검증에 집중합니다.
 
+## CANDIDATE — Kakao sign-in removed; Apple and Google only (2026-10-01)
+
+Owner decision 2026-10-01 ("아니다 카카오 로그인은 빼자"): the account feature keeps only Sign in
+with Apple and Google. Branch `next-ai/drop-kakao-legal` from `4cd08b3`; not pushed, merged or
+published. Failing-first `003dfe9` added a retired-provider detector (Kakao, 카카오, カカオ) in
+`scripts/account_sync_candidate.py` over the sign-in-bearing sources (account-sync candidate, iOS,
+Android, Terms, home, help navigation; `import/content.json` is excluded because those names also
+mean cacao), a `check_site.py` gate and three unit tests. On the base data it failed:
+`test_account_sync_candidate` 13 run / 2 FAIL, `check_site.py` exit 1 (18 fields), validator CLI
+exit 1. Fix `a3323c2`: 17-locale candidate `account` copy names Apple and Google only and drops the
+Kakao unlink-token sentence; the unresolved provider item covers only Apple refresh capability;
+`load()` refuses any retired-provider mention; the release review lists Apple/Google identifiers.
+Generated public pages are unchanged (the candidate is staged only).
+
+- PASS: six renderer `--check`s, `check_site.py` (144 pages, Korean tone 1550 sentences),
+  `korean_tone.py` (0 violations), validator CLI, README unittest set (105),
+  `test_account_sync_candidate` (13), staged `render_account_sync.py` to a scratch directory
+  (108 pages, no Kakao), `git diff --check`.
+- BLOCKED (unchanged): `check_site.py --release` (effective date unset). NOT_RUN: browser visual
+  review, native-speaker/counsel review, native/provider checks.
+- Kakao entries in the dated 2026-09-30 sections below are historical; they no longer describe
+  the candidate.
+- Next: integrate with the native/server Kakao removal lanes; merge and publication stay owner
+  release gates.
+
 ## CANDIDATE — iOS automatic iCloud backup disclosure withdrawn (2026-10-01)
 
 Commit `3aa200f` on the candidate branch, after `ab8f52e` and `679b03c` (both already pushed as the PR #11 head); a forward revert, so no rebase or force push. Not merged or published. The 1.0.6
