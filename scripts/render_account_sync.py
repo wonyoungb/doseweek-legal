@@ -52,7 +52,9 @@ def integrated_sources(candidate=None):
         assert len(purchase) == 7, (loc, 'ios purchase paragraph boundary changed')
         placeholders = [x for x in legal_release.RELEASE_PLACEHOLDERS if x in purchase[1]]
         assert len(placeholders) == 2, (loc, 'purchase placeholders')
-        purchase[1] = join('account', 'sync') + '\n\n' + ' '.join(placeholders)
+        # The 1.0.6 purchase text describes the account/sync server, so its location, operator,
+        # processors and retention replace the two "listed before release" placeholders.
+        purchase[1] = join('account', 'sync', 'processors')
         # Legacy file backup exclusions stay scoped to that file format; account settings
         # sync is a distinct path. Keep the complete existing offline/cache/tool behavior.
         purchase[3] = text['manualBackupScope'] + '\n\n' + purchase[3] + '\n\n' + text['sync']
@@ -84,7 +86,7 @@ def integrated_sources(candidate=None):
             ap['backup']['paragraphs'][index] = text['manualBackupScope'] + '\n\n' + ap['backup']['paragraphs'][index]
         ap['backup']['paragraphs'][-1] += '\n\n' + text['sync']
         ap['purchases']['paragraphs'][1] = join('account', 'sync')
-        ap['purchases']['paragraphs'][2] = text['sync'] + '\n\n' + ' '.join(placeholders)
+        ap['purchases']['paragraphs'][2] = join('sync', 'processors')
         ap['purchases']['paragraphs'][4] = text['manualBackupScope'] + '\n\n' + ap['purchases']['paragraphs'][4] + '\n\n' + text['sync']
         faq = {f['id']: f for f in a['support']['faq']}
         ap['purchases']['paragraphs'][5] = '\n\n'.join(faq['plus-cancel']['answers']) + '\n\n' + join('legacyRights', 'priorBuyerClaimPrivacy')

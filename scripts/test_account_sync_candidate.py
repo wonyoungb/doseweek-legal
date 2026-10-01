@@ -167,7 +167,8 @@ class AccountSyncCandidateTest(unittest.TestCase):
         errors = account_sync_candidate.hosting_retention_errors({"locales": locales})
         self.assertIn("en.processors: missing 'Cloudflare'", errors)
         self.assertIn("ko.retention: missing the 7-day figure", errors)
-        self.assertIn("ja.sync: missing 'Android' (full cross-platform scope)", errors)
+        self.assertIn("en.sync: missing 'both platforms' (full cross-platform scope)", errors)
+        self.assertIn("ko.sync: missing '가져오기 기록' (full cross-platform scope)", errors)
         self.assertNotIn("en.retention: missing the 30-day figure", errors)
         # 17 or 70 days is not the 7-day figure.
         locales["en"]["retention"] = "Kept 30 days; backups 17 or 70 days."

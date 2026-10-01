@@ -32,7 +32,7 @@ LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
-FIELDS = ("account", "sync", "retention", "notice", "webDeletion", "releaseStatus",
+FIELDS = ("account", "sync", "processors", "retention", "notice", "webDeletion", "releaseStatus",
           "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
 
@@ -52,8 +52,14 @@ CLOUDFLARE_TRANSFER_LINKS = (
     "https://www.cloudflare.com/network/",
 )
 RETENTION_NUMBERS = ("30", "7")
-# D1: the full record graph crosses both platforms.
-SYNC_PLATFORMS = ("iOS", "Android")
+# D1: the full record graph crosses both platforms. The sync text reaches the Android pages,
+# whose catalog guard (render_android.validate_catalog) refuses the token "iOS", so the scope is
+# checked by the record kinds and the "both platforms" wording in the two reviewed languages.
+SYNC_SCOPE = {
+    "en": ("injection plans", "dose records", "meals", "body measurements", "supplies",
+           "import history", "settings", "both platforms"),
+    "ko": ("주사 계획", "투여 기록", "식사", "신체 측정값", "재고", "가져오기 기록", "설정", "두 플랫폼"),
+}
 
 
 def hosting_retention_errors(candidate: dict | None = None) -> list[str]:
@@ -72,8 +78,8 @@ def hosting_retention_errors(candidate: dict | None = None) -> list[str]:
         errors.extend(f"{locale}.retention: missing the {number}-day figure"
                       for number in RETENTION_NUMBERS if not re.search(rf"(?<!\d){number}(?!\d)", retention))
         sync = entry.get("sync", "")
-        errors.extend(f"{locale}.sync: missing {platform!r} (full cross-platform scope)"
-                      for platform in SYNC_PLATFORMS if platform not in sync)
+        errors.extend(f"{locale}.sync: missing {term!r} (full cross-platform scope)"
+                      for term in SYNC_SCOPE.get(locale, ()) if term not in sync)
     return errors
 
 
@@ -138,6 +144,8 @@ def load() -> dict:
     assert candidate["legacyDecision"]["ownerDecision"] == "resolved"
     assert candidate["legacyDecision"]["perpetualAdFreeGuaranteed"] is False
     assert candidate["legacyDecision"]["promoAcquisitionProvesPaidPurchase"] is False
+    hosting = hosting_retention_errors(candidate)
+    assert not hosting, f"{SOURCE.name}: missing account/sync server facts, e.g. {hosting[:3]}"
     retired = retired_provider_mentions(candidate)
     assert not retired, (
         f"{SOURCE.name}: retired sign-in provider named at {retired[:3]}; "

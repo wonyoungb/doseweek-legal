@@ -158,3 +158,31 @@ sentence is removed, and the unresolved provider item covers only Apple refresh 
 `scripts/account_sync_candidate.py` and `check_site.py` now fail if the candidate or a
 sign-in-bearing legal source names Kakao. The 2026-09-30 provider reconciliation and primary-source
 entries above that mention Kakao are historical.
+
+## 2026-10-02 lane LEGAL-STORE: operator, region, Cloudflare transfer, D8 and backups
+
+Drafted in all 17 locales of `account-sync-content.candidate.json` (no native-speaker or counsel
+review claimed). Each fact and its source:
+
+| Fact | Source checked |
+|---|---|
+| Operator: Wonyoung Choi, individual developer in the Republic of Korea | The current iOS/Android policies' contact and scope sections already name him |
+| Account/sync server on AWS Lightsail, Seoul region `ap-northeast-2` | Deploy receipt host `3.36.148.59` (workspace `release/evidence/1.0.6/SERVER-DEPLOY-20261001/receipt.json`) lies in `3.36.0.0/14`, region `ap-northeast-2`, of AWS's published `ip-ranges.json` (createDate `2026-10-01-17-37-06`, read 2026-10-02) |
+| Cloudflare proxies every request, terminates TLS and sees tokens and request bodies; named as processor with the PIPA Art. 28-8 particulars (recipient, countries, items, timing/method, purpose, retention, refusal) | Deploy receipt `owner_decisions[1]` ("Cloudflare 유지 + 처리방침에 명시"); DW-WEB README (Cloudflare DNS/proxy) |
+| E2EE: server keeps only ciphertext snapshots and the account/purchase records it needs; key stays on devices behind the recovery code | Server `PROTOCOL.md` (client encryption, recovery code) and `README.md` ("never receives a recovery code, plaintext record or app settings") on `next-ai/sync-and-integ` |
+| D1: all record kinds (plans and changes, dose records, meals, body measurements, supplies, import history) and supported settings on both platforms | Owner decision D1 (2026-10-01) |
+| D8: deleted 30 days after the last server-verified Store end; Store recheck first; outage defers up to 7 days | Server `src/store.js` (`THIRTY_DAYS`, `RETENTION_OUTAGE_DEFERRAL_MS = 7 days`, `settleSnapshotRetention`) and `src/maintenance.js` (`runSnapshotRetention`) |
+| Reset sync deletes only the server copy; account deletion deletes everything server-side | `PROTOCOL.md` `DELETE /v1/sync/snapshot`; `store.deleteSnapshot`. The HTTP route is not in the server branch yet (listed as unresolved) |
+| Daily Lightsail snapshots, 7 kept: deleted data leaves backups within 7 days | Owner decision round 2 `server_backup` (2026-10-01); `PROTOCOL.md` rollback row. A plan, not a configured readback |
+
+The staged 1.0.6 purchase sections (`render_account_sync.py`) now carry the `processors` text in
+place of the two "listed before release" placeholders, so the staged sources hold no
+`legal_release.RELEASE_PLACEHOLDERS`. The effective public sources keep them (they describe the
+1.0.5 purchase-verification server) until the integrator replaces those sources.
+
+Not stated because not verified, and listed in `unresolvedBeforePublication`: Cloudflare's actual
+log retention period (the text points to its own terms), the AWS contracting entity, the host of
+the standalone Android purchase-verification server, and Nginx access-log fields/retention
+(HOST-07). Counsel must confirm the transfer basis (Articles 23, 28-8 and 30) before publication.
+The sync text names "both platforms" rather than iOS and Android because the Android pages'
+catalog guard refuses the token "iOS".
