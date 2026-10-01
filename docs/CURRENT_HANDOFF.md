@@ -11,27 +11,22 @@ Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDO
 
 정확한 다음 작업: 최종 STATE의 doc-only HEAD와 기존3056 config의 selected preimage/dependency/review를 대조한 derivative를 만든 뒤, reviewed testfixture1 .none을 exact integrate/commit/push/PR13 갱신합니다. ONE incremental UnitSDK/exact selectors → originalOwnerRead1 먼저 → PASS면 remaining7owner+persistent10. Matching mapping8은 반복하지 않습니다. Android baseline/source 및 forensic binding은 병렬 준비하되 builder/device는 exclusive입니다. 더 큰 계획 문서 대신 기존 실제 코드의 연결과 검증에 집중합니다.
 
-## CANDIDATE — iOS automatic iCloud backup disclosure (2026-10-01)
+## CANDIDATE — iOS automatic iCloud backup disclosure withdrawn (2026-10-01)
 
-Branch `next-ai/icloud-disclosure` from `ca1d810`; not pushed, merged or published. Source-only
-change: `docs/ios-content.json` (17 locales: privacy `backups` second paragraph, one exception
-sentence in the manual-backup text, one iCloud sentence in privacy `deletion` and the support
-deletion answer, third support `backup` answer) and `scripts/render_ios.py`
-(`SECTION_PARAGRAPHS["backups"] = 2`); 36 iOS privacy/support pages regenerated. Wording derived
-from iOS source at `87116b87` (`ICloudBackupCoordinator/Scheduler/Transport.swift`,
-`BackupCryptoService.swift`, `backup.icloud.*`); CloudKit native tests are not proof of runtime
-behavior. No version line (the monetization sections carry none).
+Branch `next-ai/icloud-disclosure-revert` from `679b03c`; not pushed, merged or published. The 1.0.6
+iOS app ships with the automatic iCloud backup lane switched OFF (App Store 5.1.3(ii)), so the
+`ab8f52e` disclosure is reverted: `docs/ios-content.json` (17 locales: privacy `backups` second
+paragraph, manual-backup exception sentence, iCloud sentences in privacy `deletion` and the support
+deletion answer, third support `backup` answer), `scripts/render_ios.py`
+(`SECTION_PARAGRAPHS` without `backups`) and the 36 regenerated iOS privacy/support pages now match
+`ca1d810` except the `679b03c` fixes, which stay (ko/ja support lead without "only"; account-sync
+`legacyRights` tone fix). The withdrawn wording is retained in Git history at `ab8f52e`; restore it
+from there, rechecked against iOS source, when a release turns the feature on.
 
-- PASS: six renderer `--check`s, README unittest set (105) and `test_account_sync_candidate` (10),
-  `render_account_sync.py` staging to a scratch directory (108 pages).
-- FAIL, pre-existing at `ca1d810`: `check_site.py` stops at one Korean tone hit in
-  `account-sync-content.candidate.json` `ko.legacyRights` ("해당"); a diagnostic run excluding only
-  that hit passes all other site checks (144 pages) with 0 new tone violations.
-  `check_site.py --release` stays BLOCKED on the unset effective date.
-- NOT_RUN: native-speaker review for the 15 other languages, browser visual review, iOS Settings
-  menu labels on a device. Open: account-sync `manualBackupScope` says "Google Drive" for iOS and
-  does not name iCloud; Terms `records` says records "stay on your device".
-- Next: owner/coordinator review, then merge with the monetization candidate.
+- PASS: six renderer `--check`s, `check_site.py` (144 pages, Korean tone 1551 sentences),
+  `korean_tone.py` (0 violations), README unittest set (105), `test_account_sync_candidate` (10).
+- NOT_RUN: `check_site.py --release` (effective date unset), browser visual review, native review.
+- Next: owner/coordinator review, then merge with the monetization candidate instead of `ab8f52e`.
 
 ## ACTIVE — prior-buyer application disclosure SOURCE_OFF5 (2026-10-01)
 

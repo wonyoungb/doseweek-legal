@@ -72,9 +72,8 @@ CANDIDATE_SECTION_ID = "next-release"
 # Paragraph strings per section (default 1). The monetization candidate (2026-09-29) adds a
 # leading analytics-scope paragraph to "tracking" and a Plus/subscription paragraph to
 # "deletion" as separate strings, so the existing localized text stays untouched; the 1.0.5
-# candidate section keeps its six paragraphs. The optional automatic iCloud backup disclosure
-# (2026-10-01) is its own "backups" string after the manual-backup and export paragraph.
-SECTION_PARAGRAPHS = {"backups": 2, "tracking": 2, "deletion": 2, CANDIDATE_SECTION_ID: 6}
+# candidate section keeps its six paragraphs.
+SECTION_PARAGRAPHS = {"tracking": 2, "deletion": 2, CANDIDATE_SECTION_ID: 6}
 # Tokens every locale keeps in the monetization sections (names are not translated). The ads
 # section also lists the overseas-transfer particulars of the ad SDKs as the analytics section does
 # (review finding 14, 2026-09-29): recipient, contact, countries and Google's own purposes.

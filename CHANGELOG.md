@@ -20,16 +20,13 @@ branch is not merged or published.
   paragraph that scopes its advertising-ID statements to analytics; the deletion section adds what
   Delete All does with Plus data. The intro no longer claims to describe the app "exactly".
 - iOS support: six Plus and ads answers (`#<locale>-plus-<key>`).
-- iOS privacy and support (2026-10-01, branch `next-ai/icloud-disclosure`): optional automatic
-  iCloud backup. Section 3 gets a separate paragraph: off by default, turned on by confirming the
-  recovery code, encrypted on device into the same envelope as a manual backup, uploaded to the
-  user's private CloudKit database (`iCloud.com.wonyoungchoi.doseday`) with minimal record
-  metadata, no DoseWeek server or developer access, uploads when iOS allows, the 3 most recent
-  verified backups kept while on, copies kept after turning off, Delete All or restore (and from
-  earlier periods), a different iCloud account turns it off, and deletion through iOS Settings.
-  The manual-backup sentence names the exception; section 6 and the support deletion answer say
-  iCloud copies are not deleted; the support backup answer gets a third paragraph. Languages
-  other than Korean and English need native review.
+- iOS privacy and support (2026-10-01, branch `next-ai/icloud-disclosure-revert`): the optional
+  automatic iCloud backup disclosure from `ab8f52e` is withdrawn because the 1.0.6 iOS app ships with
+  that feature switched off (App Store Review Guideline 5.1.3(ii)). The privacy `backups` paragraph,
+  the manual-backup exception sentence, the iCloud deletion sentences and the third support backup
+  answer are removed in all 17 locales, and `render_ios.py` again renders `backups` as one paragraph.
+  The Korean and Japanese support leads keep the `679b03c` wording without "only". The withdrawn
+  text stays in Git history at `ab8f52e` for a future release that turns the feature on.
 - Android privacy: new sections 5 (ads) and 6 (Plus, Google Play Billing, purchase-verification
   server); retention, security, changes and the 1.0.0 section move to 7 to 10, backup stays 4.
   "Advertising" leaves the not-used list (crash reporting stays); the support intro, accounts
