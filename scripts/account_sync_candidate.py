@@ -35,7 +35,6 @@ LOCALES = (
 FIELDS = ("account", "sync", "retention", "notice", "webDeletion", "releaseStatus",
           "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
-KAKAO_NAME = {"ko": "카카오", "ja": "カカオ"}
 
 
 def retired_provider_mentions(value: object, where: str = "$") -> list[str]:
@@ -87,6 +86,11 @@ def load() -> dict:
     assert candidate["legacyDecision"]["ownerDecision"] == "resolved"
     assert candidate["legacyDecision"]["perpetualAdFreeGuaranteed"] is False
     assert candidate["legacyDecision"]["promoAcquisitionProvesPaidPurchase"] is False
+    retired = retired_provider_mentions(candidate)
+    assert not retired, (
+        f"{SOURCE.name}: retired sign-in provider named at {retired[:3]}; "
+        f"sign-in is {' and '.join(SIGN_IN_PROVIDERS)} only"
+    )
     for locale, entry in candidate["locales"].items():
         assert set(entry) == set(FIELDS), f"{locale}: missing disclosure field"
         for field in FIELDS:
@@ -94,8 +98,7 @@ def load() -> dict:
             assert isinstance(entry[field], str) and len(entry[field].strip()) > minimum, (
                 f"{locale}.{field}: missing substantial localized copy"
             )
-        assert "Apple" in entry["account"] and "Google" in entry["account"], locale
-        assert KAKAO_NAME.get(locale, "Kakao") in entry["account"], locale
+        assert all(provider in entry["account"] for provider in SIGN_IN_PROVIDERS), locale
         assert "Plus" in entry["account"] and "Plus" in entry["retention"], locale
         assert "30" in entry["retention"], f"{locale}: missing 30-day expiry"
     return candidate

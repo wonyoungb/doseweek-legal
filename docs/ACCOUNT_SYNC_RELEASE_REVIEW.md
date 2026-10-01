@@ -7,8 +7,9 @@ review is claimed.
 
 ## Owner decisions to preserve
 
-- Apple, Google and Kakao sign-in is optional. Existing local record features remain usable
-  without a DoseWeek account. A sign-in prompt must not interrupt an existing user's records.
+- Apple and Google sign-in is optional; these are the only sign-in providers (owner decision
+  2026-10-01). Existing local record features remain usable without a DoseWeek account.
+  A sign-in prompt must not interrupt an existing user's records.
 - Only a server-verified Plus account may use automatic cloud sync. Plus bought on either store,
   when linked to the same DoseWeek account, grants the full Plus benefits on both platforms:
   ad removal, Plus tools and encrypted sync. Both apps continue to offer their own store's
@@ -86,7 +87,7 @@ Target: `https://doseweek-legal.wonyoungchoi.dev/account/delete/`, with17locale 
 
 [Google Play’s official account-deletion guidance](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en), reopened2026-09-30, permits a customer-service email as an external request pathway. A functional, prominent request route naming the app is required even when the app can be used without an account. A deployed authenticated API is **not a prerequisite for an email request page**. Publication, mailbox ownership/handling, identity verification, reasonably prompt actual account-associated-data erasure and final Console URL/readback remain gates. The existing verified public contact link establishes the address only, not operational deletion proof or platform approval.
 
-App initiation still needs Settings→Account→Delete account with a truthful confirmation/result. Account/server erasure is distinct from provider unlinking and store billing cancellation. Apple refresh capability uses a separate server encryption key; Kakao unlink token is request-only and not retained. Show provider results separately and provide manual provider-account removal instructions if disconnection fails or is unconfirmed; no automatic retry is promised. Preserve distinct local/exported/Drive deletion paths,30day Plus-expiry retention, any legally justified retention, and operational backup erasure limits. Native/provider/TLS/backup-deletion proof is NOT_RUN/BLOCKED.
+App initiation still needs Settings→Account→Delete account with a truthful confirmation/result. Account/server erasure is distinct from provider unlinking and store billing cancellation. Apple refresh capability uses a separate server encryption key. Show provider results separately and provide manual provider-account removal instructions if disconnection fails or is unconfirmed; no automatic retry is promised. Preserve distinct local/exported/Drive deletion paths,30day Plus-expiry retention, any legally justified retention, and operational backup erasure limits. Native/provider/TLS/backup-deletion proof is NOT_RUN/BLOCKED.
 
 ## Store privacy and Data safety draft
 
@@ -95,7 +96,7 @@ inventory and consent-before/after network traces, then read back both consoles.
 
 | Area | Candidate treatment / verification |
 |---|---|
-| Account identifiers | DoseWeek account ID and Apple/Google/Kakao subject identifiers are developer-collected and linked to an account. Determine whether name/email is requested at all; Apple private relay email is still contact information if collected. Do not claim anonymity. |
+| Account identifiers | DoseWeek account ID and Apple/Google subject identifiers are developer-collected and linked to an account. Determine whether name/email is requested at all; Apple private relay email is still contact information if collected. Do not claim anonymity. |
 | Purchase state | Verified store/plan/expiry and account link are collected for entitlement, fraud control and cross-platform sync. Payment card details remain with the stores; confirm the exact token path. |
 | Encrypted health payload | Health records/settings are deliberately sent off device as ciphertext. In Play Data safety, the official E2EE exception may apply **only after proof** no developer, intermediary or provider can decrypt and only sender/recipient hold keys. Account, size, timing, revision and access metadata still need assessment. Apple's App Privacy form has its own collection/readability rules; determine classification from the actual implementation and seek counsel/ASC review rather than importing Play's exception. |
 | Ads/analytics | Existing non-personalized GMA/UMP and optional Firebase analytics declarations remain separate. No health data or sync metadata goes to ad targeting. A future tracking/ATT change requires its own owner and legal approval. |
@@ -148,3 +149,12 @@ Isolated server lifecycle d615 has123 synthetic test passes but independent revi
 Run `python3 scripts/render_account_sync.py --output <review-directory-outside-this-checkout>`. The generator refuses the public checkout. Sources are materialized in the review directory’s `sources/`; affected108pages have exact route/locale SHA receipts in `render-receipt.json`. Existing public144outputs are preserved; only the two changed baseline renderers were checked for backward byte parity (36iOS+54Android). No historical whole144site rerun is required solely by this continuation. Final release needs counsel/effective date/operator-DPA-transfers, verified account/Plus/full19native/settings/recovery/provider/deletion/retention behavior, store declarations, final localized UI labels and native-speaker review. Nothing is committed, pushed, deployed or published by this packet owner.
 
 Independent review follow-up: the staged iOS help introduction inherited the original no-account denial. The staging transform now replaces that entire localized lead with the existing OFF and optional-account source in all17locales. The failing-first regression, eight related passing methods, exact18changed help-page hashes, and EN/KO source/output checks are retained in the packet. Original effective sources/pages remain preserved; source verification is not browser visual or production availability.
+
+## 2026-10-01 owner decision: Apple and Google sign-in only
+
+The owner dropped Kakao login ("아니다 카카오 로그인은 빼자"). The
+candidate `account` copy in all 17 locales now names only Apple and Google, the Kakao unlink-token
+sentence is removed, and the unresolved provider item covers only Apple refresh capability.
+`scripts/account_sync_candidate.py` and `check_site.py` now fail if the candidate or a
+sign-in-bearing legal source names Kakao. The 2026-09-30 provider reconciliation and primary-source
+entries above that mention Kakao are historical.
