@@ -8,11 +8,26 @@ operational facts and publication sources are reconciled and verified.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs/account-sync-content.candidate.json"
+# Owner decision 2026-10-01: DoseWeek sign-in uses Apple and Google only; Kakao login was
+# dropped. The sign-in-bearing legal sources must not name it as a provider or data recipient.
+# import/content.json is deliberately out of scope: record-import examples may name foods,
+# and 카카오/カカオ also mean cacao.
+SIGN_IN_PROVIDERS = ("Apple", "Google")
+RETIRED_PROVIDER = re.compile(r"kakao|카카오|カカオ", re.IGNORECASE)
+PROVIDER_SCOPED_SOURCES = (
+    "docs/account-sync-content.candidate.json",
+    "docs/ios-content.json",
+    "docs/android-content.candidate.json",
+    "docs/terms-content.json",
+    "docs/home-content.json",
+    "docs/help-navigation.json",
+)
 LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
@@ -21,6 +36,33 @@ FIELDS = ("account", "sync", "retention", "notice", "webDeletion", "releaseStatu
           "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
 KAKAO_NAME = {"ko": "카카오", "ja": "カカオ"}
+
+
+def retired_provider_mentions(value: object, where: str = "$") -> list[str]:
+    """JSON paths whose key or string value names a retired sign-in provider."""
+    if isinstance(value, str):
+        return [where] if RETIRED_PROVIDER.search(value) else []
+    if isinstance(value, dict):
+        hits = []
+        for key, item in value.items():
+            path = f"{where}.{key}"
+            if RETIRED_PROVIDER.search(str(key)):
+                hits.append(path)
+            hits.extend(retired_provider_mentions(item, path))
+        return hits
+    if isinstance(value, list):
+        return [hit for index, item in enumerate(value)
+                for hit in retired_provider_mentions(item, f"{where}[{index}]")]
+    return []
+
+
+def retired_provider_errors(root: Path = ROOT) -> list[str]:
+    """Every retired-provider mention in the sign-in-bearing legal sources, as file:path."""
+    errors = []
+    for relative in PROVIDER_SCOPED_SOURCES:
+        source = json.loads((root / relative).read_text(encoding="utf-8"))
+        errors.extend(f"{relative}:{hit}" for hit in retired_provider_mentions(source))
+    return errors
 
 
 def load() -> dict:
@@ -71,5 +113,10 @@ def require_release_ready() -> None:
 
 
 if __name__ == "__main__":
+    retired = retired_provider_errors()
+    assert not retired, (
+        f"retired sign-in provider named in {len(retired)} legal source fields, e.g. {retired[:3]}; "
+        f"sign-in is {' and '.join(SIGN_IN_PROVIDERS)} only"
+    )
     candidate = load()
     print(f"OK: {len(candidate['locales'])} account/sync draft locales; status={candidate['status']}")

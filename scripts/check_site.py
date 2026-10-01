@@ -557,6 +557,13 @@ def main() -> None:
                          "docs/terms-content.json"):
             left = legal_release.release_placeholders((ROOT / relative).read_text(encoding="utf-8"))
             assert not left, f"{relative}: release placeholder still present: {left[0]!r}"
+    # Owner decision 2026-10-01: sign-in is Apple and Google only. No live or candidate
+    # sign-in-bearing legal source may name the dropped Kakao login.
+    retired = account_sync_candidate.retired_provider_errors()
+    assert not retired, (
+        f"retired sign-in provider named in {len(retired)} legal source fields, e.g. {retired[:3]}; "
+        "sign-in is Apple and Google only (owner decision 2026-10-01)"
+    )
     # Every locale carries the release placeholders exactly as en does, so a translated
     # placeholder is registered (and caught by --release) and no locale keeps one after en changes.
     for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",

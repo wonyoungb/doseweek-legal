@@ -1,11 +1,35 @@
 """Keep a planned account feature from silently becoming an effective public policy."""
 
+import json
 import unittest
 
 import account_sync_candidate
 
 
 class AccountSyncCandidateTest(unittest.TestCase):
+    def test_sign_in_providers_are_apple_and_google_only(self):
+        # Owner decision 2026-10-01: Kakao login is dropped. Read the raw source so the check
+        # does not depend on load() accepting it.
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        self.assertEqual(account_sync_candidate.retired_provider_mentions(raw), [])
+        for locale, entry in raw["locales"].items():
+            for provider in account_sync_candidate.SIGN_IN_PROVIDERS:
+                self.assertIn(provider, entry["account"], locale)
+
+    def test_live_and_staged_legal_sources_name_no_retired_provider(self):
+        import render_account_sync
+        self.assertEqual(account_sync_candidate.retired_provider_errors(), [])
+        staged = render_account_sync.integrated_sources()
+        hits = {name: account_sync_candidate.retired_provider_mentions(source)
+                for name, source in staged.items()}
+        self.assertEqual({name: found for name, found in hits.items() if found}, {})
+
+    def test_retired_provider_detector_covers_localized_names(self):
+        mentions = account_sync_candidate.retired_provider_mentions
+        for text in ("Kakao", "KAKAO", "카카오로 로그인", "カカオでログイン", {"kakaoId": 1}):
+            self.assertTrue(mentions(text), text)
+        self.assertEqual(mentions({"account": "Apple or Google", "n": 3, "list": ["Google"]}), [])
+
     def test_prior_buyer_fields_reach_only_related_staged_sections(self):
         import render_account_sync
         candidate = account_sync_candidate.load()
