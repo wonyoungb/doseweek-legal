@@ -175,6 +175,21 @@ class AccountSyncCandidateTest(unittest.TestCase):
         self.assertIn("en.retention: missing the 7-day figure",
                       account_sync_candidate.hosting_retention_errors({"locales": locales}))
 
+    def test_candidate_addresses_german_and_dutch_readers_formally(self):
+        # The Android in-app policy injects this copy, and the Android repository's
+        # scripts/formal_address.txt (German Sie, Dutch u) rejects these informal words there.
+        import re
+        informal = {"de": ("du", "dir", "dich", "dein", "deine", "deinen", "deinem", "deiner", "deines"),
+                    "nl": ("je", "jij", "jou", "jouw")}
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        found = {}
+        for locale, words in informal.items():
+            pattern = re.compile(r"\b(?:%s)\b" % "|".join(words), re.IGNORECASE)
+            for field, text in raw["locales"][locale].items():
+                if pattern.search(text):
+                    found[f"{locale}.{field}"] = sorted(set(pattern.findall(text)))
+        self.assertEqual(found, {})
+
     def test_release_gate_refuses_unintegrated_candidate(self):
         with self.assertRaisesRegex(AssertionError, "pre-release candidate"):
             account_sync_candidate.require_release_ready()
