@@ -13,7 +13,7 @@ Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDO
 
 ## CANDIDATE — iOS automatic iCloud backup disclosure withdrawn (2026-10-01)
 
-Branch `next-ai/icloud-disclosure-revert` from `679b03c`; not pushed, merged or published. The 1.0.6
+Commit `3aa200f` on the candidate branch, after `ab8f52e` and `679b03c` (both already pushed as the PR #11 head); a forward revert, so no rebase or force push. Not merged or published. The 1.0.6
 iOS app ships with the automatic iCloud backup lane switched OFF (App Store 5.1.3(ii)), so the
 `ab8f52e` disclosure is reverted: `docs/ios-content.json` (17 locales: privacy `backups` second
 paragraph, manual-backup exception sentence, iCloud sentences in privacy `deletion` and the support
@@ -26,7 +26,7 @@ from there, rechecked against iOS source, when a release turns the feature on.
 - PASS: six renderer `--check`s, `check_site.py` (144 pages, Korean tone 1551 sentences),
   `korean_tone.py` (0 violations), README unittest set (105), `test_account_sync_candidate` (10).
 - NOT_RUN: `check_site.py --release` (effective date unset), browser visual review, native review.
-- Next: owner/coordinator review, then merge with the monetization candidate instead of `ab8f52e`.
+- Next: keep the forward revert on the candidate branch; merge and publication stay owner release gates.
 
 ## ACTIVE — prior-buyer application disclosure SOURCE_OFF5 (2026-10-01)
 
