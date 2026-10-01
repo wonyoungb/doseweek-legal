@@ -140,6 +140,40 @@ class AccountSyncCandidateTest(unittest.TestCase):
             self.assertIn(__import__("html").escape(c["locales"][loc]["retention"]), panel)
             self.assertIn('dir="rtl"' if loc == "ar" else 'dir="ltr"', panel)
 
+    def test_every_locale_names_operator_region_and_cloudflare_transfer(self):
+        # Lane LEGAL-STORE: operator, AWS Lightsail ap-northeast-2 and the Cloudflare PIPA
+        # transfer particulars, in every locale. Reads the raw source (load() may lag behind).
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        for locale in account_sync_candidate.LOCALES:
+            hosting = raw["locales"][locale].get(account_sync_candidate.HOSTING_FIELD, "")
+            for token in (*account_sync_candidate.HOSTING_TOKENS,
+                          *account_sync_candidate.CLOUDFLARE_TRANSFER_LINKS):
+                self.assertIn(token, hosting, locale)
+
+    def test_retention_states_the_d8_and_backup_numbers(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        self.assertEqual([e for e in account_sync_candidate.hosting_retention_errors(raw)
+                          if ".retention:" in e or ".sync:" in e], [])
+
+    def test_staged_privacy_sources_keep_no_release_placeholder(self):
+        import render_account_sync
+        self.assertEqual(account_sync_candidate.staged_placeholder_errors(
+            render_account_sync.integrated_sources()), [])
+
+    def test_hosting_detector_rejects_a_placeholder_candidate(self):
+        locales = {loc: {"processors": "The server location is listed before release.",
+                         "retention": "Kept for 30 days.", "sync": "On iOS only."}
+                   for loc in account_sync_candidate.LOCALES}
+        errors = account_sync_candidate.hosting_retention_errors({"locales": locales})
+        self.assertIn("en.processors: missing 'Cloudflare'", errors)
+        self.assertIn("ko.retention: missing the 7-day figure", errors)
+        self.assertIn("ja.sync: missing 'Android' (full cross-platform scope)", errors)
+        self.assertNotIn("en.retention: missing the 30-day figure", errors)
+        # 17 or 70 days is not the 7-day figure.
+        locales["en"]["retention"] = "Kept 30 days; backups 17 or 70 days."
+        self.assertIn("en.retention: missing the 7-day figure",
+                      account_sync_candidate.hosting_retention_errors({"locales": locales}))
+
     def test_release_gate_refuses_unintegrated_candidate(self):
         with self.assertRaisesRegex(AssertionError, "pre-release candidate"):
             account_sync_candidate.require_release_ready()

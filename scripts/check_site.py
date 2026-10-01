@@ -564,6 +564,21 @@ def main() -> None:
         f"retired sign-in provider named in {len(retired)} legal source fields, e.g. {retired[:3]}; "
         "sign-in is Apple and Google only (owner decision 2026-10-01)"
     )
+    # Lane LEGAL-STORE (2026-10-02): the staged 1.0.6 account/sync candidate must name the
+    # operator, the AWS Lightsail ap-northeast-2 server, the Cloudflare overseas transfer and the
+    # D8/backup 30/7-day rules in every locale, and its staged privacy sources may not keep a
+    # "listed before release" server placeholder.
+    hosting = account_sync_candidate.hosting_retention_errors()
+    assert not hosting, (
+        f"account/sync candidate misses server facts in {len(hosting)} places, e.g. {hosting[:3]}"
+    )
+    import render_account_sync
+    staged_left = account_sync_candidate.staged_placeholder_errors(
+        render_account_sync.integrated_sources()
+    )
+    assert not staged_left, (
+        f"staged 1.0.6 privacy sources keep {len(staged_left)} release placeholders, e.g. {staged_left[:2]}"
+    )
     # Every locale carries the release placeholders exactly as en does, so a translated
     # placeholder is registered (and caught by --release) and no locale keeps one after en changes.
     for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",

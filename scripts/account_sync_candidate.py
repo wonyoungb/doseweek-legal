@@ -37,6 +37,58 @@ FIELDS = ("account", "sync", "retention", "notice", "webDeletion", "releaseStatu
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
 
 
+# Lane LEGAL-STORE (2026-10-02): the account/sync server facts every locale must state before the
+# candidate can describe a working service. Operator: the person the current policy already names.
+# Region: the deploy receipt's Lightsail address lies in AWS's published ap-northeast-2 (Seoul)
+# range. Cloudflare proxies every request (owner decision, deploy receipt owner_decisions[1]) and
+# is a processor with a PIPA Art. 28-8 overseas transfer, so the recipient's contact and network
+# pages are cited verbatim. Retention (owner decision D8) is 30 days after the last
+# server-verified Store end; a Store outage defers deletion by at most 7 days; the approved
+# Lightsail daily snapshots keep 7, so deleted data leaves backups within 7 days.
+HOSTING_FIELD = "processors"
+HOSTING_TOKENS = ("Wonyoung Choi", "Amazon Web Services", "Lightsail", "ap-northeast-2", "Cloudflare")
+CLOUDFLARE_TRANSFER_LINKS = (
+    "https://www.cloudflare.com/privacypolicy/",
+    "https://www.cloudflare.com/network/",
+)
+RETENTION_NUMBERS = ("30", "7")
+# D1: the full record graph crosses both platforms.
+SYNC_PLATFORMS = ("iOS", "Android")
+
+
+def hosting_retention_errors(candidate: dict | None = None) -> list[str]:
+    """Locales whose candidate omits the operator/region/Cloudflare transfer, the D8 and backup
+    numbers or the cross-platform sync scope. Reads the raw source unless a candidate is given,
+    so the check does not depend on load() accepting it."""
+    if candidate is None:
+        candidate = json.loads(SOURCE.read_text(encoding="utf-8"))
+    errors = []
+    for locale in LOCALES:
+        entry = candidate["locales"].get(locale, {})
+        hosting = entry.get(HOSTING_FIELD, "")
+        errors.extend(f"{locale}.{HOSTING_FIELD}: missing {token!r}"
+                      for token in (*HOSTING_TOKENS, *CLOUDFLARE_TRANSFER_LINKS) if token not in hosting)
+        retention = entry.get("retention", "")
+        errors.extend(f"{locale}.retention: missing the {number}-day figure"
+                      for number in RETENTION_NUMBERS if not re.search(rf"(?<!\d){number}(?!\d)", retention))
+        sync = entry.get("sync", "")
+        errors.extend(f"{locale}.sync: missing {platform!r} (full cross-platform scope)"
+                      for platform in SYNC_PLATFORMS if platform not in sync)
+    return errors
+
+
+def staged_placeholder_errors(sources: dict) -> list[str]:
+    """Release placeholder sentences (server location/operator/retention still 'listed before
+    release') left in the staged 1.0.6 privacy sources built by render_account_sync."""
+    import legal_release  # local import: legal_release has no dependency on this module
+    errors = []
+    for name, source in sources.items():
+        for locale, entry in source["locales"].items():
+            left = legal_release.release_placeholders(json.dumps(entry, ensure_ascii=False))
+            errors.extend(f"{name}:{locale}: {sentence!r}" for sentence in left)
+    return errors
+
+
 def retired_provider_mentions(value: object, where: str = "$") -> list[str]:
     """JSON paths whose key or string value names a retired sign-in provider."""
     if isinstance(value, str):
@@ -120,6 +172,11 @@ if __name__ == "__main__":
     assert not retired, (
         f"retired sign-in provider named in {len(retired)} legal source fields, e.g. {retired[:3]}; "
         f"sign-in is {' and '.join(SIGN_IN_PROVIDERS)} only"
+    )
+    hosting = hosting_retention_errors()
+    assert not hosting, (
+        f"account/sync candidate misses server facts in {len(hosting)} places, e.g. {hosting[:3]}; "
+        "state the operator, AWS Lightsail ap-northeast-2, the Cloudflare transfer and the 30/7-day rules"
     )
     candidate = load()
     print(f"OK: {len(candidate['locales'])} account/sync draft locales; status={candidate['status']}")
