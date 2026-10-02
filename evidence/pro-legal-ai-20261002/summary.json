@@ -500,5 +500,27 @@
    "native-speaker and counsel review"
   ],
   "cleanup": "four temporary detached RED worktrees removed by exact path; scratch files deleted by exact path after this summary"
+ },
+ "reviewFix3": {
+  "date": "2026-10-02",
+  "findings": [
+   "major: the settings-sync sentences said all app settings sync and are the same on every device, contradicting the staged Plus-tool and reference-medication sentences and the cross-platform settings contract",
+   "minor: no readiness flag or unresolved item for the settings-sync claim and its restore half",
+   "minor (not changed here): back-translations of the new AI policy strings; the repeated sync paragraph on the staged pages"
+  ],
+  "commits": [
+   {
+    "sha": "2708ded",
+    "kind": "RED",
+    "scope": "scripts/test_settings_sync_disclosure.py"
+   },
+   {
+    "sha": "c6924c8",
+    "kind": "GREEN",
+    "scope": "docs/account-sync-content.candidate.json (sync in 17 locales, serverReadiness.settingsSyncVerified, one unresolved item), scripts/account_sync_candidate.py (readiness token), docs/ACCOUNT_SYNC_RELEASE_REVIEW.md"
+   }
+  ],
+  "red": "red-proof/review-fix3-red.summary.json",
+  "green": "262/262 unittest methods PASS; 13 light commands PASS; check_site.py --release BLOCKED_EFFECTIVE_DATE as before"
  }
 }

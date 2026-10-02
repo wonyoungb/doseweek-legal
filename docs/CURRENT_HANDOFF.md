@@ -120,6 +120,24 @@ sections 4.4 and 5.1-5.5, compliance 4.5 and 8, owner second round (150 a month,
     `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
     `evidence/pro-legal-ai-20261002/red-proof/review-fix2-red.summary.json` and `summary.json`
     (`reviewFix2`); the full logs are in the workspace lanes folder only.
+- Review fix 3 (2026-10-02, major: the settings-sync sentences said all app settings sync and are
+  the same on every device, which contradicted the staged Plus-tool and reference-medication
+  sentences). RED `2708ded` (tests only), GREEN `c6924c8`. The `sync` text now follows the
+  cross-platform settings contract (`settings-xplat-contract-20261002.md` sections 2-3) in 17
+  locales: it names the settings that sync (appearance, weight-change unit, body map view,
+  reminder switches, detailed previews and medication name, record-only mode, supply tracking,
+  food-search market and language), says a change from another device is applied and an
+  important one announced once, that sync never turns on an AI feature, that notification
+  permission, app lock, health/calendar/cloud-storage connections and widget appearance stay on
+  each device, and that a restore from Settings applies the saved settings and names what
+  changed. New `serverReadiness.settingsSyncVerified=false` with an unresolved item (native proof
+  on both clients; the contract marks the estimate reference half-life and the Plus feature
+  document as shared while the staged pages keep them on the device, so their page owners must
+  reconcile). RED: module 7 ran, 4 failing methods, 188 failures, 0 errors; full suite 262 ran,
+  188 failures, no other method. GREEN: 262/262 PASS; the same 13 light commands PASS;
+  `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+  `evidence/pro-legal-ai-20261002/red-proof/review-fix3-red.summary.json`, `summary.json`
+  (`reviewFix3`). The web clone has no settings-sync claim and is unchanged.
 - No owned process, device or external action. Temporary RED worktrees removed. Never publish.
 Next action: orchestrator re-review; IOS-AI-UI and AND-AI-UI copy the 50 app keys from
 `docs/ai-app-copy.candidate.json`; the owner reads the Korean copy and the What's New line at gate 6.

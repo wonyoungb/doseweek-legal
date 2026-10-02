@@ -1,0 +1,54 @@
+{
+ "lane": "LEGAL-AI",
+ "round": "review-fix-3",
+ "date": "2026-10-02",
+ "repository": "doseweek-legal clone PRO-LEGAL-AI-legal",
+ "pairs": [
+  {
+   "id": "settings sync text: no totality claim, named synced settings, AI stays off, restore names what changed, widget appearance per device",
+   "redCommit": "2708ded2b7c390711e3dd0acb1da7d1ffd558acf",
+   "parent": "6672e88368bea71516f43b62540f62e65b5a179e",
+   "scope": "scripts/test_settings_sync_disclosure.py only",
+   "where": "temporary detached worktree at the RED commit, removed afterwards",
+   "command": "cd scripts && python3 -m unittest -v test_settings_sync_disclosure",
+   "exit": 1,
+   "ran": 7,
+   "result": "FAILED (failures=188)",
+   "errors": 0,
+   "failingMethods": {
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_no_page_claims_that_every_app_setting_syncs_or_is_the_same_on_every_device": 136,
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_sync_text_says_ai_stays_off_and_restore_names_what_changed_in_17_locales": 34,
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_sync_text_says_what_settings_sync_and_what_stays_on_one_device_in_17_locales": 17,
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_korean_and_english_state_the_owner_decision": 1
+   },
+   "failingMethodCount": 4,
+   "passingMethodCount": 3,
+   "passingOnParentByDesign": [
+    "test_the_settings_sentences_name_no_platform_store_or_provider (guard)",
+    "test_the_list_of_synced_settings_names_no_setting_the_pages_keep_on_the_device (guard)",
+    "test_staged_policies_terms_and_pages_carry_the_settings_sentences (unchanged)"
+   ],
+   "assertionReasons": {
+    "17 locales x 2 stems x 4 places (candidate, iOS privacy page, Android privacy page, Terms page): 'all your app settings' / 'same on every device' present": 136,
+    "17 locales x 2: no AI-stays-off sentence and no restore sentence in the sync text": 34,
+    "17 locales: the device-only sentence does not name the widget appearance": 17,
+    "pinned English and Korean wording differs": 1
+   },
+   "fullSuiteAtRed": {
+    "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "exit": 1,
+    "ran": 262,
+    "result": "failures=188",
+    "otherFailingMethods": 0
+   },
+   "logs": "workspace release/evidence/1.0.6/PRO-DESIGN-20261002/lanes/LEGAL-AI-fix3-red-proof-legal.log.gz (sha256 108234388533e3de205295bc60164063a8928d389d713ec3f45fbc40b6233acb) and LEGAL-AI-fix3-red-proof-legal-full.log.gz (sha256 e0e33f1a58baf67ed063fa4ab31d963294017ccda7ef9aacad2a7ae75a443e16)",
+   "greenCommit": "c6924c8111f8f4ef0b7e87fcfc837b552fd8f5c1",
+   "green": {
+    "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "exit": 0,
+    "ran": 262,
+    "result": "OK"
+   }
+  }
+ ]
+}

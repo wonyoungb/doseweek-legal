@@ -26,6 +26,11 @@
   now says, in 17 locales, that supported settings are all app settings and stay the same on the
   account's devices, that an important change made on another device is applied and announced
   once, and that device permissions and connections are not synced.
+- Review round 3 (same day): the settings-sync text no longer says that all app settings sync and
+  stay the same on every device. In 17 locales it names the settings that sync, says that device
+  permissions, connections and widget appearance stay on each device, that sync never turns on
+  an AI feature, and that a restore from Settings applies the saved settings and names what
+  changed. A new readiness flag keeps it unpublished until both apps prove the behaviour.
 - The AI release gate also refuses the candidate while clause 5 or the processor row still carry
   a draft sentence ("not yet verified", "before release"), even when every flag is true.
 - Failing-first: RED `8b34c75`, GREEN `b23c985`; round 1 RED `2f43f9c`, GREEN `1c9579b`; round 2
