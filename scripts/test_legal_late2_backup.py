@@ -69,9 +69,15 @@ class LegalLate2BackupTest(unittest.TestCase):
             for token in ('Google Drive', 'Auto Backup', 'Plus'):
                 with self.subTest(locale=locale, token=token):
                     self.assertIn(token, text)
+            # Owner backup_safety_completeness (2026-10-02 15:30): without verified Plus the run
+            # is skipped so the previous backup stays; never an empty or partial backup. The
+            # earlier "excluded together" mechanism is retracted.
+            with self.subTest(locale=locale, stale='oldExcludedWithoutPlusSentence'):
+                self.assertNotIn(expected['oldExcludedWithoutPlusSentence'], text)
             self.concepts(locale, expected, text,
                           ('verified', 'active', 'database', 'key', 'records', 'together',
-                           'excluded', 'existing', 'untouched', 'restore'))
+                           'skip', 'unverifiable', 'noPartial', 'previousKept', 'existing',
+                           'restore', 'googleAccount'))
 
     def test_server_backups_use_manual_predeploy_snapshot_not_weekly_snapshot(self):
         for locale, expected, entry in self.each():
@@ -196,14 +202,20 @@ class LegalLate2BackupTest(unittest.TestCase):
         self.assertTrue(all(value is False for value in self.candidate['serverReadiness'].values()))
         self.assertEqual(self.candidate['status'], 'pre-release-candidate-not-published')
         pending = joined(self.candidate['unresolvedBeforePublication'])
-        for token in ('Google Drive Auto Backup', 'iCloud', 'CloudKit', 'verified Plus'):
+        for token in ('Google Drive Auto Backup', 'iCloud', 'CloudKit', 'verified Plus',
+                      'skips', 'empty or partial', 'bmgr'):
             with self.subTest(requirement=token):
                 self.assertIn(token, pending)
+        with self.subTest(retracted='pending exclusion mechanism'):
+            self.assertNotIn('excludes the complete set otherwise', pending)
         operations = (ROOT / 'docs/LEGAL_OPERATIONS_1_0_6.md').read_text()
         for token in ('end-to-end encrypted', 'server cannot read', 'Google Drive Auto Backup',
-                      'verified Plus', 'iCloud', 'CloudKit', 'existing backups', 'restore'):
+                      'verified Plus', 'iCloud', 'CloudKit', 'existing backups', 'restore',
+                      'skip the backup run', 'previous backup', 'empty or partial', 'bmgr'):
             with self.subTest(operation=token):
                 self.assertIn(token, operations)
+        with self.subTest(retracted='operations exclusion mechanism'):
+            self.assertNotIn('exclude the database, keys and records together', operations)
 
 
 if __name__ == '__main__':

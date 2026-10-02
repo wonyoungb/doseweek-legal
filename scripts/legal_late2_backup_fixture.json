@@ -139,6 +139,21 @@
         ],
         "preDeploy": [
           "배포 전"
+        ],
+        "skip": [
+          "건너뛰"
+        ],
+        "unverifiable": [
+          "확인할 수 없"
+        ],
+        "noPartial": [
+          "일부만"
+        ],
+        "previousKept": [
+          "이전 백업은 그대로"
+        ],
+        "googleAccount": [
+          "Google 계정"
         ]
       },
       "iosCommercialSentences": {
@@ -171,7 +186,8 @@
       },
       "oldAndroidGuideBody": "설정에서 암호화 백업 파일을 만들거나 Google Drive 백업을 켜고, 알림을 조정하고, ‘사용 분석(선택)’을 언제든 바꿀 수 있어요. 홈 화면에 DoseWeek 위젯을 추가할 수도 있어요.",
       "oldAndroidStorageDriveSentence": "선택 사항인 Google Drive 백업을 켜면 암호화된 사본이 사용자 본인의 Google Drive 앱 데이터 폴더에도 보관돼요.",
-      "oldWeeklyServerSnapshotSentence": "서버 OS 복구용 스냅샷은 매주 따로 만들어요."
+      "oldWeeklyServerSnapshotSentence": "서버 OS 복구용 스냅샷은 매주 따로 만들어요.",
+      "oldExcludedWithoutPlusSentence": "Plus가 없으면 데이터베이스, 키, 기록이 함께 제외돼요."
     },
     "en": {
       "oldPrivacySystemExclusion": "All live records are stored locally in Android app-private storage and are excluded from Android system cloud backup and device-to-device transfer.",
@@ -283,6 +299,23 @@
         "preDeploy": [
           "before deployment",
           "pre-deploy"
+        ],
+        "skip": [
+          "skip"
+        ],
+        "unverifiable": [
+          "cannot be verified",
+          "can't be verified"
+        ],
+        "noPartial": [
+          "empty or partial"
+        ],
+        "previousKept": [
+          "previous backup stays",
+          "previous backup is kept"
+        ],
+        "googleAccount": [
+          "Google account"
         ]
       },
       "iosCommercialSentences": {
@@ -311,7 +344,8 @@
       },
       "oldAndroidGuideBody": "In Settings, create an encrypted backup file or turn on Google Drive backup, adjust Notifications and change Usage analytics (optional) at any time. You can also add the DoseWeek widget to your home screen.",
       "oldAndroidStorageDriveSentence": "If you turn on the optional Google Drive backup, an encrypted copy is also kept in your own Google Drive app-data folder.",
-      "oldWeeklyServerSnapshotSentence": "Separate server OS recovery snapshots are made weekly."
+      "oldWeeklyServerSnapshotSentence": "Separate server OS recovery snapshots are made weekly.",
+      "oldExcludedWithoutPlusSentence": "Without Plus, the database, keys and records are excluded together."
     },
     "ja": {
       "oldPrivacySystemExclusion": "現在の記録はアプリ専用領域に保存され、Androidのシステムクラウドバックアップと端末間転送から除外されます。",
@@ -432,6 +466,21 @@
         "preDeploy": [
           "デプロイ前",
           "配備前"
+        ],
+        "skip": [
+          "スキップ"
+        ],
+        "unverifiable": [
+          "確認できない"
+        ],
+        "noPartial": [
+          "一部だけ"
+        ],
+        "previousKept": [
+          "以前のバックアップはそのまま"
+        ],
+        "googleAccount": [
+          "Googleアカウント"
         ]
       },
       "iosCommercialSentences": {
@@ -464,7 +513,8 @@
       },
       "oldAndroidGuideBody": "「設定」で暗号化バックアップファイルを作成するかGoogleドライブへのバックアップをオンにし、通知を調整し、「利用状況分析（任意）」をいつでも変更できます。ホーム画面にDoseWeekのウィジェットを追加することもできます。",
       "oldAndroidStorageDriveSentence": "任意のGoogleドライブへのバックアップをオンにすると、暗号化された控えがユーザー自身のGoogleドライブのアプリデータフォルダにも保管されます。",
-      "oldWeeklyServerSnapshotSentence": "サーバーOS復旧用スナップショットは毎週別に作成します。"
+      "oldWeeklyServerSnapshotSentence": "サーバーOS復旧用スナップショットは毎週別に作成します。",
+      "oldExcludedWithoutPlusSentence": "Plusがない場合、データベース、キー、記録はまとめて除外されます。"
     },
     "de": {
       "oldPrivacySystemExclusion": "Aktuelle Daten bleiben im privaten App-Speicher und sind von der Android-Systemsicherung und Geräteübertragung ausgeschlossen.",
@@ -581,6 +631,21 @@
           "vor der Bereitstellung",
           "vor einer Bereitstellung",
           "vor dem Deployment"
+        ],
+        "skip": [
+          "überspringt"
+        ],
+        "unverifiable": [
+          "nicht bestätigen"
+        ],
+        "noPartial": [
+          "unvollständig"
+        ],
+        "previousKept": [
+          "vorherige Sicherung bleibt"
+        ],
+        "googleAccount": [
+          "Google-Konto"
         ]
       },
       "iosCommercialSentences": {
@@ -610,7 +675,8 @@
       },
       "oldAndroidGuideBody": "In den Einstellungen können Sie eine verschlüsselte Backup-Datei erstellen oder das Google Drive-Backup einschalten, Mitteilungen anpassen und die „Nutzungsanalyse (optional)“ jederzeit ändern. Sie können auch das DoseWeek-Widget zum Startbildschirm hinzufügen.",
       "oldAndroidStorageDriveSentence": "Wenn Sie die optionale Google-Drive-Sicherung einschalten, liegt eine verschlüsselte Kopie zusätzlich in Ihrem eigenen Google-Drive-App-Datenordner.",
-      "oldWeeklyServerSnapshotSentence": "Separate Snapshots zur Wiederherstellung des Server-OS werden wöchentlich erstellt."
+      "oldWeeklyServerSnapshotSentence": "Separate Snapshots zur Wiederherstellung des Server-OS werden wöchentlich erstellt.",
+      "oldExcludedWithoutPlusSentence": "Ohne Plus werden Datenbank, Schlüssel und Aufzeichnungen zusammen ausgeschlossen."
     },
     "fr": {
       "oldPrivacySystemExclusion": "Les données actives restent dans le stockage privé et sont exclues de la sauvegarde système Android et du transfert entre appareils.",
@@ -726,6 +792,21 @@
         "preDeploy": [
           "avant le déploiement",
           "avant un déploiement"
+        ],
+        "skip": [
+          "saute"
+        ],
+        "unverifiable": [
+          "ne peut pas être vérifié"
+        ],
+        "noPartial": [
+          "partielle"
+        ],
+        "previousKept": [
+          "sauvegarde précédente reste"
+        ],
+        "googleAccount": [
+          "compte Google"
         ]
       },
       "iosCommercialSentences": {
@@ -755,7 +836,8 @@
       },
       "oldAndroidGuideBody": "Dans Réglages, créez un fichier de sauvegarde chiffré ou activez la sauvegarde Google Drive, ajustez les notifications et modifiez à tout moment « Analyse de l’utilisation (facultative) ». Vous pouvez aussi ajouter le widget DoseWeek à votre écran d’accueil.",
       "oldAndroidStorageDriveSentence": "Si vous activez la sauvegarde Google Drive facultative, une copie chiffrée est aussi conservée dans votre propre dossier de données d’application Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "Des instantanés distincts de récupération de l’OS du serveur sont créés chaque semaine."
+      "oldWeeklyServerSnapshotSentence": "Des instantanés distincts de récupération de l’OS du serveur sont créés chaque semaine.",
+      "oldExcludedWithoutPlusSentence": "Sans Plus, la base de données, les clés et les enregistrements sont exclus ensemble."
     },
     "es": {
       "oldPrivacySystemExclusion": "Los datos activos permanecen en el almacenamiento privado y están excluidos de la copia del sistema Android y la transferencia entre dispositivos.",
@@ -869,6 +951,21 @@
         "preDeploy": [
           "antes de un despliegue",
           "antes del despliegue"
+        ],
+        "skip": [
+          "omite"
+        ],
+        "unverifiable": [
+          "no se puede verificar"
+        ],
+        "noPartial": [
+          "parcial"
+        ],
+        "previousKept": [
+          "copia anterior se conserva"
+        ],
+        "googleAccount": [
+          "cuenta de Google"
         ]
       },
       "iosCommercialSentences": {
@@ -897,7 +994,8 @@
       },
       "oldAndroidGuideBody": "En Ajustes puede crear un archivo de copia de seguridad cifrada o activar la copia de seguridad en Google Drive, ajustar las notificaciones y cambiar «Análisis del uso (opcional)» en cualquier momento. También puede añadir el widget de DoseWeek a la pantalla de inicio.",
       "oldAndroidStorageDriveSentence": "Si activa la copia opcional en Google Drive, una copia cifrada se guarda también en su propia carpeta de datos de aplicación de Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "Se crean instantáneas semanales separadas para recuperar el OS del servidor."
+      "oldWeeklyServerSnapshotSentence": "Se crean instantáneas semanales separadas para recuperar el OS del servidor.",
+      "oldExcludedWithoutPlusSentence": "Sin Plus, la base de datos, las claves y los registros quedan excluidos juntos."
     },
     "it": {
       "oldPrivacySystemExclusion": "I dati attivi restano nell’archiviazione privata e sono esclusi dal backup di sistema Android e dal trasferimento tra dispositivi.",
@@ -1013,6 +1111,21 @@
           "prima del deploy",
           "prima della distribuzione",
           "prima di una distribuzione"
+        ],
+        "skip": [
+          "salta"
+        ],
+        "unverifiable": [
+          "non può essere verificato"
+        ],
+        "noPartial": [
+          "parziale"
+        ],
+        "previousKept": [
+          "backup precedente resta"
+        ],
+        "googleAccount": [
+          "account Google"
         ]
       },
       "iosCommercialSentences": {
@@ -1041,7 +1154,8 @@
       },
       "oldAndroidGuideBody": "In Impostazioni puoi creare un file di backup crittografato o attivare il backup su Google Drive, regolare le notifiche e modificare in qualsiasi momento «Analisi dell’utilizzo (facoltativa)». Puoi anche aggiungere il widget di DoseWeek alla schermata Home.",
       "oldAndroidStorageDriveSentence": "Se attivi il backup facoltativo su Google Drive, una copia crittografata viene conservata anche nella tua cartella dati app di Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "Si creano snapshot settimanali separati per ripristinare il OS del server."
+      "oldWeeklyServerSnapshotSentence": "Si creano snapshot settimanali separati per ripristinare il OS del server.",
+      "oldExcludedWithoutPlusSentence": "Senza Plus, il database, le chiavi e i registri vengono esclusi insieme."
     },
     "nl": {
       "oldPrivacySystemExclusion": "Actieve gegevens blijven in de privéopslag en zijn uitgesloten van de Android-systeemback-up en overdracht tussen apparaten.",
@@ -1158,6 +1272,22 @@
           "voor een deployment",
           "vóór uitrol",
           "voor uitrol"
+        ],
+        "skip": [
+          "back-upronde over",
+          "overgeslagen"
+        ],
+        "unverifiable": [
+          "niet worden geverifieerd"
+        ],
+        "noPartial": [
+          "onvolledige"
+        ],
+        "previousKept": [
+          "vorige back-up blijft"
+        ],
+        "googleAccount": [
+          "Google-account"
         ]
       },
       "iosCommercialSentences": {
@@ -1186,7 +1316,8 @@
       },
       "oldAndroidGuideBody": "In Instellingen kunt u een versleuteld back-upbestand maken of de Google Drive-back-up inschakelen, meldingen aanpassen en ‘Gebruiksanalyse (optioneel)’ op elk moment wijzigen. U kunt ook de DoseWeek-widget aan uw startscherm toevoegen.",
       "oldAndroidStorageDriveSentence": "Zet u de optionele Google Drive-back-up aan, dan wordt een versleutelde kopie ook in uw eigen Google Drive-app-gegevensmap bewaard.",
-      "oldWeeklyServerSnapshotSentence": "Aparte snapshots voor herstel van het server-OS worden wekelijks gemaakt."
+      "oldWeeklyServerSnapshotSentence": "Aparte snapshots voor herstel van het server-OS worden wekelijks gemaakt.",
+      "oldExcludedWithoutPlusSentence": "Zonder Plus worden de database, sleutels en registraties samen uitgesloten."
     },
     "pt-PT": {
       "oldPrivacySystemExclusion": "Os registos atuais ficam no armazenamento privado da aplicação e são excluídos da cópia de segurança do sistema Android e da transferência entre dispositivos.",
@@ -1301,6 +1432,21 @@
           "antes da implantação",
           "antes de uma implementação",
           "antes da implementação"
+        ],
+        "skip": [
+          "salta"
+        ],
+        "unverifiable": [
+          "não puder ser verificado"
+        ],
+        "noPartial": [
+          "parcial"
+        ],
+        "previousKept": [
+          "cópia anterior se mantém"
+        ],
+        "googleAccount": [
+          "conta Google"
         ]
       },
       "iosCommercialSentences": {
@@ -1329,7 +1475,8 @@
       },
       "oldAndroidGuideBody": "Em Definições pode criar um ficheiro de cópia de segurança encriptada ou ativar a cópia de segurança no Google Drive, ajustar as notificações e alterar «Análise da utilização (opcional)» a qualquer momento. Também pode adicionar o widget do DoseWeek ao ecrã principal.",
       "oldAndroidStorageDriveSentence": "Se ativar a cópia de segurança opcional no Google Drive, uma cópia encriptada fica também na sua própria pasta de dados de aplicação do Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "São criados snapshots semanais separados para recuperar o OS do servidor."
+      "oldWeeklyServerSnapshotSentence": "São criados snapshots semanais separados para recuperar o OS do servidor.",
+      "oldExcludedWithoutPlusSentence": "Sem Plus, a base de dados, as chaves e os registos são excluídos em conjunto."
     },
     "pl": {
       "oldPrivacySystemExclusion": "Bieżące dane pozostają lokalnie w prywatnej pamięci aplikacji i są wyłączone z systemowej kopii zapasowej Androida oraz przenoszenia między urządzeniami.",
@@ -1448,6 +1595,21 @@
         ],
         "preDeploy": [
           "przed wdrożeniem"
+        ],
+        "skip": [
+          "pomija"
+        ],
+        "unverifiable": [
+          "nie można go potwierdzić"
+        ],
+        "noPartial": [
+          "niepełn"
+        ],
+        "previousKept": [
+          "poprzednia kopia pozostaje"
+        ],
+        "googleAccount": [
+          "koncie Google"
         ]
       },
       "iosCommercialSentences": {
@@ -1477,7 +1639,8 @@
       },
       "oldAndroidGuideBody": "W Ustawieniach możesz utworzyć zaszyfrowany plik kopii zapasowej lub włączyć kopię zapasową na Dysku Google, dostosować powiadomienia i w każdej chwili zmienić „Analiza użytkowania (opcjonalna)”. Możesz też dodać widżet DoseWeek do ekranu głównego.",
       "oldAndroidStorageDriveSentence": "Po włączeniu opcjonalnej kopii zapasowej na Dysku Google zaszyfrowana kopia jest przechowywana także w Twoim własnym folderze danych aplikacji na Dysku Google.",
-      "oldWeeklyServerSnapshotSentence": "Osobne migawki odzyskiwania OS serwera powstają co tydzień."
+      "oldWeeklyServerSnapshotSentence": "Osobne migawki odzyskiwania OS serwera powstają co tydzień.",
+      "oldExcludedWithoutPlusSentence": "Bez Plus baza danych, klucze i zapisy są wyłączone razem."
     },
     "sv": {
       "oldPrivacySystemExclusion": "Alla aktuella registreringar lagras lokalt i appens privata lagringsutrymme och är undantagna från Android-systemets molnsäkerhetskopiering och överföring mellan enheter.",
@@ -1592,6 +1755,22 @@
         "preDeploy": [
           "före driftsättning",
           "före distribution"
+        ],
+        "skip": [
+          "hoppar DoseWeek över",
+          "hoppar över"
+        ],
+        "unverifiable": [
+          "inte kan verifieras"
+        ],
+        "noPartial": [
+          "ofullständig"
+        ],
+        "previousKept": [
+          "föregående säkerhetskopian förblir"
+        ],
+        "googleAccount": [
+          "Google-konto"
         ]
       },
       "iosCommercialSentences": {
@@ -1621,7 +1800,8 @@
       },
       "oldAndroidGuideBody": "I Inställningar kan du skapa en krypterad säkerhetskopiefil eller slå på Google Drive-säkerhetskopiering, justera notiser och när som helst ändra ”Användningsanalys (valfri)”. Du kan också lägga till DoseWeek-widgeten på startskärmen.",
       "oldAndroidStorageDriveSentence": "Slår du på den valfria säkerhetskopieringen till Google Drive lagras en krypterad kopia även i din egen appdatamapp i Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "Separata återställningsögonblicksbilder av serverns OS skapas varje vecka."
+      "oldWeeklyServerSnapshotSentence": "Separata återställningsögonblicksbilder av serverns OS skapas varje vecka.",
+      "oldExcludedWithoutPlusSentence": "Utan Plus exkluderas databasen, nycklarna och registreringarna tillsammans."
     },
     "hi": {
       "oldPrivacySystemExclusion": "मौजूदा रिकॉर्ड ऐप-निजी स्टोरेज में रहते हैं और Android सिस्टम क्लाउड बैकअप तथा डिवाइस-टू-डिवाइस स्थानांतरण से बाहर हैं।",
@@ -1740,6 +1920,21 @@
         "preDeploy": [
           "डिप्लॉय",
           "तैनाती से पहले"
+        ],
+        "skip": [
+          "छोड़ देता"
+        ],
+        "unverifiable": [
+          "पुष्टि नहीं हो पाती"
+        ],
+        "noPartial": [
+          "अधूरा"
+        ],
+        "previousKept": [
+          "पिछला बैकअप"
+        ],
+        "googleAccount": [
+          "Google खाते"
         ]
       },
       "iosCommercialSentences": {
@@ -1768,7 +1963,8 @@
       },
       "oldAndroidGuideBody": "सेटिंग में आप एन्क्रिप्ट की गई बैकअप फ़ाइल बना सकते हैं या Google Drive बैकअप चालू कर सकते हैं, नोटिफ़िकेशन बदल सकते हैं और “उपयोग विश्लेषण (वैकल्पिक)” कभी भी बदल सकते हैं। आप होम स्क्रीन पर DoseWeek विजेट भी जोड़ सकते हैं।",
       "oldAndroidStorageDriveSentence": "यदि आप वैकल्पिक Google Drive बैकअप चालू करते हैं, तो एक एन्क्रिप्टेड प्रति आपके अपने Google Drive ऐप-डेटा फ़ोल्डर में भी रहती है।",
-      "oldWeeklyServerSnapshotSentence": "सर्वर OS बहाली के लिए अलग साप्ताहिक स्नैपशॉट बनते हैं।"
+      "oldWeeklyServerSnapshotSentence": "सर्वर OS बहाली के लिए अलग साप्ताहिक स्नैपशॉट बनते हैं।",
+      "oldExcludedWithoutPlusSentence": "Plus के बिना डेटाबेस, कुंजी और रिकॉर्ड साथ में बाहर रखे जाते हैं।"
     },
     "pt-BR": {
       "oldPrivacySystemExclusion": "Os registros atuais ficam no armazenamento privado e são excluídos do backup em nuvem do sistema Android e da transferência entre dispositivos.",
@@ -1884,6 +2080,21 @@
           "antes da implantação",
           "antes do deploy",
           "antes de uma implantação"
+        ],
+        "skip": [
+          "pula"
+        ],
+        "unverifiable": [
+          "não puder ser verificado"
+        ],
+        "noPartial": [
+          "parcial"
+        ],
+        "previousKept": [
+          "backup anterior continua"
+        ],
+        "googleAccount": [
+          "conta do Google"
         ]
       },
       "iosCommercialSentences": {
@@ -1912,7 +2123,8 @@
       },
       "oldAndroidGuideBody": "Em Ajustes, você pode criar um arquivo de backup criptografado ou ativar o backup no Google Drive, ajustar as notificações e mudar “Análise de uso (opcional)” a qualquer momento. Também pode adicionar o widget do DoseWeek à tela inicial.",
       "oldAndroidStorageDriveSentence": "Se você ativar o backup opcional no Google Drive, uma cópia criptografada também fica na sua própria pasta de dados de aplicativo do Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "São criados snapshots semanais separados para recuperar o OS do servidor."
+      "oldWeeklyServerSnapshotSentence": "São criados snapshots semanais separados para recuperar o OS do servidor.",
+      "oldExcludedWithoutPlusSentence": "Sem Plus, o banco de dados, as chaves e os registros são excluídos em conjunto."
     },
     "ar": {
       "oldPrivacySystemExclusion": "تبقى السجلات الحالية في التخزين الخاص بالتطبيق وتُستثنى من النسخ الاحتياطي السحابي لنظام Android والنقل بين الأجهزة.",
@@ -2037,6 +2249,21 @@
         "preDeploy": [
           "قبل النشر",
           "قبل نشر"
+        ],
+        "skip": [
+          "يتخطى"
+        ],
+        "unverifiable": [
+          "تعذّر التحقق"
+        ],
+        "noPartial": [
+          "جزئية"
+        ],
+        "previousKept": [
+          "السابقة كما هي"
+        ],
+        "googleAccount": [
+          "حسابك على Google"
         ]
       },
       "iosCommercialSentences": {
@@ -2065,7 +2292,8 @@
       },
       "oldAndroidGuideBody": "من الإعدادات يمكنك إنشاء ملف نسخة احتياطية مشفّرة أو تشغيل النسخ الاحتياطي على Google Drive، وضبط الإشعارات، وتغيير «تحليلات الاستخدام (اختيارية)» في أي وقت. ويمكنك أيضًا إضافة أداة DoseWeek إلى الشاشة الرئيسية.",
       "oldAndroidStorageDriveSentence": "وإذا فعّلت النسخ الاحتياطي الاختياري على Google Drive، فستُحفظ نسخة مشفّرة أيضًا في مجلد بيانات التطبيق الخاص بك على Google Drive.",
-      "oldWeeklyServerSnapshotSentence": "تُنشأ لقطات منفصلة لاستعادة OS الخادم أسبوعيًا."
+      "oldWeeklyServerSnapshotSentence": "تُنشأ لقطات منفصلة لاستعادة OS الخادم أسبوعيًا.",
+      "oldExcludedWithoutPlusSentence": "ومن دون Plus، تُستثنى قاعدة البيانات والمفتاح والسجلات معًا."
     },
     "zh-Hans": {
       "oldPrivacySystemExclusion": "当前记录保存在应用专属存储空间，并排除在 Android 系统云备份和设备间传输之外。",
@@ -2179,6 +2407,21 @@
         ],
         "preDeploy": [
           "部署前"
+        ],
+        "skip": [
+          "跳过"
+        ],
+        "unverifiable": [
+          "无法验证"
+        ],
+        "noPartial": [
+          "不完整"
+        ],
+        "previousKept": [
+          "之前的备份保持不变"
+        ],
+        "googleAccount": [
+          "Google 账号"
         ]
       },
       "iosCommercialSentences": {
@@ -2207,7 +2450,8 @@
       },
       "oldAndroidGuideBody": "在“设置”中可以创建加密备份文件或开启 Google 云端硬盘备份、调整通知，并随时更改“使用情况分析（可选）”。您也可以将 DoseWeek 小组件添加到主屏幕。",
       "oldAndroidStorageDriveSentence": "如果您开启可选的 Google 云端硬盘备份，加密副本还会保存在您本人的 Google 云端硬盘应用数据文件夹中。",
-      "oldWeeklyServerSnapshotSentence": "服务器OS恢复快照每周单独创建。"
+      "oldWeeklyServerSnapshotSentence": "服务器OS恢复快照每周单独创建。",
+      "oldExcludedWithoutPlusSentence": "没有 Plus 时，数据库、密钥和记录会一并排除。"
     },
     "zh-Hant": {
       "oldPrivacySystemExclusion": "目前紀錄保存在應用程式專用儲存空間，並排除在 Android 系統雲端備份與裝置間移轉之外。",
@@ -2323,6 +2567,21 @@
         ],
         "preDeploy": [
           "部署前"
+        ],
+        "skip": [
+          "略過"
+        ],
+        "unverifiable": [
+          "無法驗證"
+        ],
+        "noPartial": [
+          "不完整"
+        ],
+        "previousKept": [
+          "先前的備份會維持不變"
+        ],
+        "googleAccount": [
+          "Google 帳戶"
         ]
       },
       "iosCommercialSentences": {
@@ -2351,7 +2610,8 @@
       },
       "oldAndroidGuideBody": "在「設定」中可以建立加密備份檔案或開啟 Google 雲端硬碟備份、調整通知，並隨時變更「使用情形分析（選用）」。您也可以將 DoseWeek 小工具加入主畫面。",
       "oldAndroidStorageDriveSentence": "若您開啟可選的 Google 雲端硬碟備份，加密副本也會保存在您本人的 Google 雲端硬碟應用程式資料夾中。",
-      "oldWeeklyServerSnapshotSentence": "伺服器OS復原快照每週單獨建立。"
+      "oldWeeklyServerSnapshotSentence": "伺服器OS復原快照每週單獨建立。",
+      "oldExcludedWithoutPlusSentence": "沒有 Plus 時，資料庫、金鑰和紀錄會一併排除。"
     },
     "tr": {
       "oldPrivacySystemExclusion": "Güncel kayıtlar uygulamaya özel depolamada tutulur ve Android sistem bulut yedeklemesi ile cihazlar arası aktarımın dışında bırakılır.",
@@ -2468,6 +2728,21 @@
         "preDeploy": [
           "dağıtımdan önce",
           "dağıtım öncesi"
+        ],
+        "skip": [
+          "atlar"
+        ],
+        "unverifiable": [
+          "doğrulanamıyor"
+        ],
+        "noPartial": [
+          "eksik bir yedek"
+        ],
+        "previousKept": [
+          "önceki yedek olduğu gibi kalır"
+        ],
+        "googleAccount": [
+          "Google hesab"
         ]
       },
       "iosCommercialSentences": {
@@ -2501,7 +2776,8 @@
       },
       "oldAndroidGuideBody": "Ayarlar’da şifrelenmiş bir yedek dosyası oluşturabilir veya Google Drive yedeklemesini açabilir, bildirimleri düzenleyebilir ve “Kullanım analizi (isteğe bağlı)” ayarını istediğiniz zaman değiştirebilirsiniz. DoseWeek widget’ını ana ekranınıza da ekleyebilirsiniz.",
       "oldAndroidStorageDriveSentence": "İsteğe bağlı Google Drive yedeklemesini açarsanız, şifrelenmiş bir kopya kendi Google Drive uygulama verileri klasörünüzde de tutulur.",
-      "oldWeeklyServerSnapshotSentence": "Sunucunun OS kurtarması için ayrı haftalık anlık görüntüler oluşturulur."
+      "oldWeeklyServerSnapshotSentence": "Sunucunun OS kurtarması için ayrı haftalık anlık görüntüler oluşturulur.",
+      "oldExcludedWithoutPlusSentence": "Plus yoksa veritabanı, anahtarlar ve kayıtlar birlikte yedeklemenin dışında bırakılır."
     }
   },
   "canonicalWithoutAwsTimingMethodSha256": {
