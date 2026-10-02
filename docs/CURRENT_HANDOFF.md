@@ -1,3 +1,13 @@
+## ACTIVE — legal-update-legal (2026-10-02)
+
+The owner resumed this isolated copy lane from reviewer-approved `1714082f`. Branch
+`next-ai/legal-store-legal-cx`; owned edits are legal assertions and, after RED proof, 17-locale
+privacy/account/Terms/US-health sources and their renderers. No native/device job is owned here.
+No push, merge, network, console or publication. Input fingerprints and exact check evidence
+live in `.lane-work/legal-update/`. Existing release effective-date/server gates remain closed.
+Next action: commit assertion-only RED and prove it against the detached parent before copy edits.
+The pause and prior candidate snapshots below are historical for this resumed lane.
+
 ## OWNER_PAUSE_RELAUNCH — 다른 AI 인수인계 (2026-10-01)
 
 사용자가 다른 AI에게 이어서 맡기도록 요청하여 이 세션의 구현·새 검증을 중지했습니다. 자동 재개 doseweek-1-0-6은 PAUSED입니다. 새 담당자가 이어받기 프롬프트로 재개하면 이 표시를 해제하고 현재 live 상태부터 진행합니다. 전체 작업·출시 준비는 미완료이며 운영 배포·콘솔·상품/광고 활성화·제출·웹 공개·merge는 수행하지 않았습니다.

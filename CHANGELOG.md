@@ -5,6 +5,12 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
+## 2026-10-02 — legal-update-legal preparation (unpublished)
+
+- Resumed from the approved LEGAL-STORE head with final owner prices/trial/operator/backup
+  decisions and the supplied legal research. Added assertion-first copy acceptance checks;
+  RED proof and implementation remain the next stage. No public or native action.
+
 ## Unreleased candidate: free version with ads, Plus and Terms of Use (not published)
 
 Candidate copy for the monetization release (owner instruction 2026-09-29,
