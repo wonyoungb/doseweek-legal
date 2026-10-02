@@ -1,4 +1,12 @@
-## 2026-10-02 — late owner decisions (unpublished)
+## 2026-10-02 — late review 1 (unpublished)
+
+- Resume clean reviewed `fe488a5`; fix its one major via permitted store-price public wording.
+- Preserve fixed one-month trial/renewal/cancel/refund and all other legal content.
+- Baseline/review input hashes and historical report retained in `late-review1/`; RED stage next.
+- Added5-method regression and17-locale price/trial preservation fixture; all scripts AST parse PASS.
+- No owned process/device, native, network, publication or other external action.
+
+## 2026-10-02 — late owner decisions (historical; unpublished)
 
 - Resume reviewed `a6a4e18` for final KRW19,900 annual reference and fixed1-month trial.
 - All17 regional exclusions/no representative already implemented; retain safeguards and proof.

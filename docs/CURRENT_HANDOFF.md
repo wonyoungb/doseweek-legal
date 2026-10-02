@@ -1,4 +1,21 @@
-## ACTIVE — legal-update-legal late owner decisions (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal late review 1 (2026-10-02; unpublished)
+
+Objective: fix the single major in late.review-1 with reviewer-permitted store-price wording
+in all17 Terms locales. Final owner price decisions remain authoritative for Store setup;
+no price decision is reopened. Preserve trial/renewal/cancel/refund, other legal MUSTs and histories.
+Branch `next-ai/legal-store-legal-cx`; reviewed HEAD `fe488a5320e50f5afc5e4a26150d935eaa154974`.
+Initial clean state, input fingerprints and historical late report in
+`evidence/legal-update-20261002/late-review1/baseline.json` and `late-report.historical.json`.
+Owned scope: regression/fixture, Terms offer/validator, generated Terms, parity/operations blocker,
+release-map source fingerprints, this handoff and dated CHANGELOG. Git status owns dirty inventory.
+No owned PID/device, native or external action. Existing partner receipts stay historical and
+commercialCopyParityVerified=false until final committed partner copy/check receipts are acquired.
+New5-method regression and17locale fixture added; every Python script AST parse PASS.
+Owned dirty: tests/fixture, baseline/historical receipt, copied offline runners, handoff/CHANGELOG.
+Next action: commit new regression RED, prove assertion failures on this detached parent under /tmp,
+remove temporary worktree, then apply the narrow GREEN source edit. Never publish/push/merge.
+
+## HISTORICAL — legal-update-legal late owner decisions (2026-10-02; unpublished)
 
 Objective: apply final owner decisions in new assertion RED/GREEN commits; never publish.
 Branch `next-ai/legal-store-legal-cx`; starting HEAD `a6a4e18f70bcf866a6bb50aacb8a64164cba8bde`.

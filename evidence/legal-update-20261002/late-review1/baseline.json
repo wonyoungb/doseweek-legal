@@ -1,0 +1,18 @@
+{
+  "objective": "Fix late review-1 major via permitted store-price public wording, all17 locales; assertion RED parent then GREEN; never publish",
+  "head": "fe488a5320e50f5afc5e4a26150d935eaa154974",
+  "branch": "next-ai/legal-store-legal-cx",
+  "status": "",
+  "inputs": {
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/common-rules.md": "71016b430913b7b6ac2ab913ece9dd3c525750852a7c65da6c49257666c73e57",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-late.review-1.json": "892da0ea291ce67fccb5b51161912761f1cf3b0439400db876c2fd95a3e3b8ef",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/PLUS-FEATURE-PACK-SPEC.md": "dee0930ec2f52d6475a3570c4cffc3f97a53232cda2e7094d084e74fc87a4729",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-compliance-research.answer.md": "3c7da0e80854df9ced45f3414283b5b51b310346f2d6df0fb27732e6bce047de",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/backup-cost-research.md.answer.md": "d6222352e9999eb4fec9e424eb07d98f7c0d88167f31761ce573896f98f0110f",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/SYNC-GAP-MAP-20261001/owner-decisions.json": "e3bcc44f10eabae8be771dae2cbe29f9bade271f3e7db2b532051c0b0b7d233a"
+  },
+  "ownedProcess": null,
+  "device": null,
+  "externalActions": [],
+  "nextAction": "Commit regression assertions and prove them on detached parent"
+}
