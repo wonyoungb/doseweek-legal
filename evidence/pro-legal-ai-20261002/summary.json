@@ -1,0 +1,190 @@
+{
+ "lane": "LEGAL-AI",
+ "date": "2026-10-02",
+ "status": "COMPLETE (static); unpublished candidate",
+ "branch": "next-ai/pro-legal-ai",
+ "base": "868932cf09f123dc7be673ef660290819cde25f7",
+ "commits": [
+  {
+   "sha": "8b34c75",
+   "kind": "RED"
+  },
+  {
+   "sha": "b23c985",
+   "kind": "GREEN"
+  },
+  {
+   "kind": "docs",
+   "note": "this evidence and the handoff; its sha is in the lane report"
+  }
+ ],
+ "red": {
+  "proof": "red-proof/legal-red-parent.summary.json",
+  "ran": 24,
+  "failingMethods": 23,
+  "failingSubtests": 269,
+  "errors": 0,
+  "guardPassingOnParent": 1
+ },
+ "green": {
+  "command": "python3 -m unittest discover -s scripts -p 'test_*.py' -v",
+  "exit": 0,
+  "ran": 246,
+  "result": "OK",
+  "newMethods": [
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_ai_section_items_and_retention_follow_screen_a_not_the_first_draft",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_ai_section_names_only_its_own_platform_health_source",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_faq_no_longer_says_1_0_6_has_no_generative_ai",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_candidate_states_the_decided_facts_and_stays_unpublished",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_consent_and_settings_copy_exists_for_every_key_in_17_locales",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_every_server_cannot_read_claim_is_followed_by_the_ai_exception",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_german_uses_sie_and_dutch_uses_u",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_health_platform_paragraphs_say_the_data_is_not_used_for_ai",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_helplines_match_the_spec_and_are_marked_not_refetched",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_korean_copy_never_says_sangdam_and_uses_the_decided_names",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_korean_screen_a_is_the_reconciled_spec_text",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_locale_review_receipts_are_recorded_honestly",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_on_device_ai_section_points_to_the_server_assistant",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_privacy_policies_carry_the_ai_record_assistant_section_in_17_locales",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_processor_table_lists_bedrock_seoul_in_region_without_retention",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_release_gate_stays_closed_until_the_assistant_is_verified",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_served_sources_stay_without_the_unreleased_assistant",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_staged_pages_render_the_section_the_row_and_the_deletion_paragraph",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_store_declarations_follow_the_critic_corrections",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_terms_ai_section_keeps_statutory_rights_and_uses_the_decided_names",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_terms_have_the_ai_section_right_after_the_medical_notice",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_the_exception_is_the_candidate_sentence_and_names_the_feature",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_us_consumer_health_policy_covers_the_assistant",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_whats_new_is_one_neutral_ai_line_without_commercial_terms"
+  ],
+  "newMethodCount": 24,
+  "discovered": 246,
+  "executed": 246,
+  "passed": 246,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "discoveredEqualsExecuted": true,
+  "byModule": {
+   "test_account_legal_update": 6,
+   "test_account_sync_candidate": 32,
+   "test_ai_assistant_legal": 24,
+   "test_korean_tone": 28,
+   "test_legal_late2_backup": 14,
+   "test_legal_late_decisions": 6,
+   "test_legal_late_review1": 5,
+   "test_legal_late_review2": 4,
+   "test_legal_operations": 3,
+   "test_legal_revision1": 9,
+   "test_legal_revision2": 5,
+   "test_legal_revision2_minor": 6,
+   "test_locale_pages": 11,
+   "test_monetization_copy": 8,
+   "test_privacy_legal_update": 12,
+   "test_privacy_ops": 40,
+   "test_render_paragraphs": 18,
+   "test_terms_legal_update": 8,
+   "test_us_health_policy": 7
+  }
+ },
+ "lightChecks": [
+  {
+   "cmd": "python3 scripts/render_home.py --check",
+   "exit": 0,
+   "result": "OK: shared home and 17 language homes match all 17 guide locales and catalog versions"
+  },
+  {
+   "cmd": "python3 scripts/render_ios.py --check",
+   "exit": 0,
+   "result": "OK: iOS privacy and support pages (17 locales) and 34 language pages"
+  },
+  {
+   "cmd": "python3 scripts/render_android.py --check",
+   "exit": 0,
+   "result": "OK: 54 Android pages and icon match /Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/PRO-LEGAL-AI-legal/docs/android-content.candidate.json"
+  },
+  {
+   "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+   "exit": 0,
+   "result": "OK: import guide, 17 language pages and downloads (17 locales); status supported"
+  },
+  {
+   "cmd": "python3 scripts/render_terms.py --check",
+   "exit": 0,
+   "result": "OK: Terms of Use page (17 locales) and 17 language pages; effective date not set (release date BLOCKED)"
+  },
+  {
+   "cmd": "python3 scripts/render_us_health.py --check",
+   "exit": 0,
+   "result": "OK: US Consumer Health Data policy, 18 pages / 17 locales; effective date not set (release date BLOCKED)"
+  },
+  {
+   "cmd": "python3 scripts/render_sitemap.py --check",
+   "exit": 0,
+   "result": "OK: sitemap.xml lists 162 URLs (9 routes x hash page + 17 languages), each with 18 hreflang alternates"
+  },
+  {
+   "cmd": "python3 scripts/check_site.py",
+   "exit": 0,
+   "result": "OK: 9 hash pages and 153 language pages, hreflang (162 pages, 17 languages + x-default, reciprocal), sitemap (162 URLs with alternates)/robots, local links, locale panels, social metadata, accessible FAQ markers, 44px key targets, critical disclosures, Korean tone (28 self-tests, 2297 sentences, 13 allow-listed), and Android legal-catalog parity"
+  },
+  {
+   "cmd": "python3 scripts/account_sync_candidate.py",
+   "exit": 0,
+   "result": "OK: 17 account/sync draft locales; status=pre-release-candidate-not-published"
+  },
+  {
+   "cmd": "python3 scripts/ai_assistant_candidate.py",
+   "exit": 0,
+   "result": "OK: 17 AI disclosure locales, 50 app copy keys; status=pre-release-candidate-not-published; consentVersion=2026-10-02.1"
+  },
+  {
+   "cmd": "python3 scripts/render_account_sync.py --check",
+   "exit": 0,
+   "result": "OK: 126 unpublished staged pages, 7 routes, 17 locales; no files written"
+  },
+  {
+   "cmd": "python3 scripts/korean_tone.py",
+   "exit": 0,
+   "result": "korean_tone: 738 strings, 2297 sentences; violations ending=0 honorific=0 jargon=0 glossary=0 noun-status=0 total=0; allow-listed 13; stale allow-list entries 0"
+  },
+  {
+   "cmd": "python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check",
+   "exit": 0,
+   "result": "OK: 17 locale receipts; flags off: ['ko', 'ja']; back-translation only: 14"
+  },
+  {
+   "cmd": "python3 scripts/check_site.py --release",
+   "exit": 1,
+   "result": "AssertionError: scripts/legal_release.py: NEXT_RELEASE_EFFECTIVE_DATE is not filled; the owner sets the monetization release date before final builds/signing (BLOCKED)"
+  },
+  {
+   "cmd": "git diff --check",
+   "exit": 0,
+   "result": ""
+  }
+ ],
+ "inputs": {
+  "docs/ai-assistant-content.candidate.json": "dcfbe98b406212a6d77be55ed476702c231948015cee5212ed9796322dd2694c",
+  "docs/ai-app-copy.candidate.json": "2ab719e5a69053e3a3984cd2fe27351e2b5c7bb325a73f6a528165800e4e0824",
+  "docs/AI_STORE_DECLARATIONS_1_0_6.md": "e9990cff13a06146c7ef6e0171ca24f1eb31a7fb0aa6c64ed73723ec51e67c46",
+  "scripts/ai_assistant_candidate.py": "fa6b34030c1695cf94e3b6369b60826f6e799277d158e2782f99007bfdda71b2",
+  "scripts/test_ai_assistant_legal.py": "e67a8d7bae695434aa3d3ebc16fdac1481b4e3351064e99c6d3e1ede4a6a6c7c",
+  "scripts/privacy_legal.py": "2894b8e649c5184444a499f4882b67518f8caafcc3e657ad7573aaea0af0732f",
+  "scripts/render_terms.py": "3acc6aa543fde41990048824cdf105e3ee9040ccded04516028ba50e44590216",
+  "scripts/render_account_sync.py": "fbe30e34247522d4f3311248305f4f5530e8e04dd7eda6500c9bf4221411b2c6",
+  "scripts/check_site.py": "592d53c0873b85a68293b9fac74f3a11bad619ef3f041df819a296f944996c7a",
+  "scripts/korean_tone_allowlist.json": "0800932860ad71fc15168ed943906ab3b07f28be649eda587120cbdcdb41b581",
+  "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json": "59b17a199d377e89de35366427552942b0c11eb26b23066cf1df42767347ce2c"
+ },
+ "python": "Python 3.14.8",
+ "notRun": [
+  "browser render of staged pages",
+  "native app use of the copy (IOS-AI-UI, AND-AI-UI)",
+  "helpline re-fetch from official sources (no network)",
+  "AWS or store console readbacks",
+  "EVAL-AI gate",
+  "native-speaker and counsel review"
+ ],
+ "cleanup": "temporary detached RED worktree removed and pruned; scratch fragments deleted after this summary"
+}

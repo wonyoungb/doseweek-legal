@@ -19,6 +19,43 @@ No native/provider/live check applies. Never publish.
 Next action: orchestrator re-review; the owner answers OQ-L2-1 (remove or disclose the
 app-managed Drive backup) before the flag can open.
 
+## ACTIVE — pro-legal-ai: Pro AI record assistant legal copy (2026-10-02; unpublished; separate lane)
+
+Lane LEGAL-AI on branch `next-ai/pro-legal-ai`, cut from `868932c` (the LATE2 review-1 head above,
+which this lane does not change). Objective: PRO-SPEC 2026-10-02 section 8 (critic C18, C20, C23),
+sections 4.4 and 5.1-5.5, compliance 4.5 and 8, owner second round (150 a month, 7-day trial with
+50, names "AI 기록 도우미" and "우선 문의 답변", never "상담"). Pass status: COMPLETE (static).
+- Sources: `docs/ai-assistant-content.candidate.json` (website text) and
+  `docs/ai-app-copy.candidate.json` (Screen A/B/Settings copy, helplines, What's New), 17 locales.
+  Both are hand-maintained JSON; `scripts/ai_assistant_candidate.py` validates them, integrates
+  them into the staged 1.0.6 sources and adds its own `--release` gate. Store drafts:
+  `docs/AI_STORE_DECLARATIONS_1_0_6.md`.
+- Staged result (`render_account_sync.py`): supplement section `ai-assistant` and processor row
+  `aws-bedrock` in both privacy policies; the AI exception after every `recordsSync`, `mealsSync`
+  and `sync` claim (iOS 10, Android 15, Terms 1 per locale); health-platform paragraphs say the
+  data is not used for AI; the on-device AI section points to the server assistant; the Android
+  `ai-health` answer no longer says 1.0.6 has no generative AI; Terms section 6 with later titles
+  renumbered; five US-policy sentences; one paragraph on the staged account-deletion page.
+  Served pages and their sources are unchanged (a test guards that).
+- Commits: RED `8b34c75`, GREEN `b23c985`, then this docs/evidence commit. RED on the detached
+  parent: 24 methods, 23 failing, 269 assertion subtests, 0 errors (1 guard passes by design).
+- Checks at GREEN: 246/246 unittest methods PASS (222 existing + 24 new); 13 light commands PASS;
+  `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+  `evidence/pro-legal-ai-20261002/summary.json`.
+- Review receipts (`evidence/pro-legal-ai-20261002/locale-review/`): ko waits for the owner at
+  gate 6; ja waits for counsel or a native reviewer; en was read by the lane agent; the other 14
+  locales have only a same-model back-translation. No native speaker or counsel reviewed any
+  locale. `write_locale_receipts.py --check` keeps the receipts equal to their inputs, and a
+  copy change after a receipt fails `test_ai_assistant_legal.py`.
+- NOT_RUN / open: helpline re-fetch (no network), AWS contracting entity, Bedrock retention and
+  logging readbacks, deployed consent routes and kill switch, EVAL-AI gate, counsel review, store
+  console entry. All are readiness flags or unresolved items in the candidate.
+- Observation for the Terms owner: the staged Terms intro and section 2 title still describe only
+  Free and Plus; Pro first appears in section 6.
+- No owned process, device or external action. Temporary RED worktree removed. Never publish.
+Next action: orchestrator review; IOS-AI-UI and AND-AI-UI copy the 50 app keys from
+`docs/ai-app-copy.candidate.json`; the owner reads the Korean copy and the What's New line at gate 6.
+
 ## HISTORICAL — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
 
 Objective: apply the late owner backup decisions in all 17 staged 1.0.6 privacy/help/Terms

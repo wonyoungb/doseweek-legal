@@ -1,3 +1,18 @@
+## 2026-10-02 — Pro AI record assistant legal copy (unpublished)
+
+- Staged 1.0.6 pages in 17 locales gain the privacy section "AI 기록 도우미(Pro)", an Amazon
+  Bedrock (Seoul, in-Region, no retention) processor row, the AI exception after every "server
+  cannot read your records" claim, a Terms section (150 a month, 50 in the 7-day trial, 우선 문의
+  답변 with a first reply within 1 business day) and US consumer-health additions.
+- New sources `docs/ai-assistant-content.candidate.json` and `docs/ai-app-copy.candidate.json`
+  (Screen A/B/Settings copy, helplines, one neutral What's New line); store declaration drafts in
+  `docs/AI_STORE_DECLARATIONS_1_0_6.md`. `check_site.py --release` also requires the AI candidate
+  to be verified.
+- Review receipts are honest about their limits: ko and ja are pending, en is an AI-agent review,
+  14 locales have only a same-model back-translation.
+- Failing-first: RED `8b34c75`, GREEN `b23c985`. 246/246 tests and 13 light checks PASS; release
+  check BLOCKED_EFFECTIVE_DATE. Served pages unchanged. Never publish.
+
 ## 2026-10-02 — LATE2 review-1 fix (unpublished)
 
 - Staged earlier answers in ko, ja and tr (both platforms) drop the 1.0.5 "nothing is deleted

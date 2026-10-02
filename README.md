@@ -119,6 +119,7 @@ python3 scripts/render_us_health.py --check
 python3 scripts/render_sitemap.py --check
 python3 scripts/check_site.py            # pages, hreflang, sitemap, local links, locales, disclosures, Korean tone
 python3 scripts/account_sync_candidate.py
+python3 scripts/ai_assistant_candidate.py       # unpublished Pro AI record assistant sources
 python3 scripts/render_account_sync.py --check  # in-memory unpublished 1.0.6 sources/pages
 python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
 python3 scripts/check_site.py --release  # also requires the release effective date and no release placeholders
