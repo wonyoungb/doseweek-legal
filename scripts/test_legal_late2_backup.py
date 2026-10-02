@@ -161,6 +161,28 @@ class LegalLate2BackupTest(unittest.TestCase):
                         with self.subTest(locale=locale, platform=platform, preserved=tail):
                             self.assertIn(sentence, serialized)
 
+    def test_staged_earlier_answers_drop_nothing_moved_into_plus_claim_all_locales(self):
+        # ko, ja and tr state the 1.0.5 "nothing is deleted or moved into Plus" promise as its
+        # own sentence; the other 14 locales join it to the replaced free-feature sentence. On
+        # Android it contradicts androidSystemBackup (OS Drive Auto Backup is Plus-only since the
+        # 15:4x owner decision), and iOS drops it too so all 17 locales say the same thing.
+        for locale, expected, entry in self.each():
+            ios = self.staged['ios-content.json']['locales'][locale]
+            android = self.staged['android-content.candidate.json']['locales'][locale]
+            faq = {x['id']: x for x in android['support']['faq']}
+            for platform, staged, answer, free in (
+                    ('ios', ios, ios['support']['plus']['earlier']['answers'][1],
+                     entry.get('freeFeatures', '')),
+                    ('android', android, faq['plus-earlier']['answers'][1],
+                     entry.get('androidFreeFeatures', ''))):
+                claim = expected[platform + 'CommercialSentences']['oldStandaloneNothingMovedToPlus']
+                with self.subTest(locale=locale, platform=platform):
+                    self.assertTrue(claim)
+                    self.assertTrue(free)
+                    self.assertTrue(answer.startswith(free), f'{locale}.{platform}: free list not first')
+                    self.assertNotIn(claim, answer)
+                    self.assertNotIn(claim, json.dumps(staged, ensure_ascii=False))
+
     def test_manual_crypto_recovery_and_validated_restore_details_remain(self):
         for locale, expected, _ in self.each():
             android = self.staged['android-content.candidate.json']['locales'][locale]

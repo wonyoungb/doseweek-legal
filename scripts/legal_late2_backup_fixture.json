@@ -160,13 +160,13 @@
         "oldFreeList": "기록하기, ‘기록’ 탭, 신체 그래프, 추정, 진료 준비, 식사, 내보내기, 암호화 백업과 복원, 캘린더 연동, 알림, 위젯, 앱 잠금처럼 앱에 원래 있던 기능은 모두 계속 무료로 쓸 수 있어요.",
         "oldAllBackupsFree": "진료 준비의 고정된 4·8·12주 보기, 모든 내보내기와 백업처럼 DoseWeek에 원래 있던 기능은 모두 무료로 남아요.",
         "oldNothingMovedToPlus": "쓰던 기능은 모두 그대로 남고, 기록, 일정, 알림, 위젯, 백업, 내보내기도 바뀌지 않아요.",
+        "oldStandaloneNothingMovedToPlus": "삭제되거나 Plus로 옮겨지는 것은 없어요.",
         "preservedFreePrefix": "네. DoseWeek는 무료로 내려받을 수 있고, 무료 사용자에게는 광고가 보여요.",
         "preservedPlusExpiryTail": [
           "Plus가 끝나도 기록, 템플릿, 저장한 설정은 그대로 남고, 계속 보거나 삭제할 수 있어요.",
           "리포트 설정과 오늘 화면 배치는 Plus를 다시 쓸 때까지 무료 기본값으로 돌아가요."
         ],
         "preservedEarlierNoticeTail": [
-          "삭제되거나 Plus로 옮겨지는 것은 없어요.",
           "앱의 1회 안내에서 변경 내용을 설명하고, 설정 > 정보 > 새로운 기능에서 다시 볼 수 있어요."
         ]
       },
@@ -174,13 +174,13 @@
         "oldFreeList": "기록하기, ‘기록’ 탭, 신체 그래프, 진료 요약, 식사, 내보내기, 암호화 백업과 복원, Google Drive 백업, 캘린더 연동, 알림, 위젯, 앱 잠금처럼 앱에 원래 있던 기능은 모두 계속 무료로 쓸 수 있어요.",
         "oldAllBackupsFree": "진료 요약의 고정된 4·8·12주 보기, 모든 내보내기와 백업처럼 DoseWeek에 원래 있던 기능은 모두 무료로 남아요.",
         "oldNothingMovedToPlus": "쓰던 기능은 모두 그대로 남고, 기록, 일정, 알림, 위젯, 백업, 내보내기도 바뀌지 않아요.",
+        "oldStandaloneNothingMovedToPlus": "삭제되거나 Plus로 옮겨지는 것은 없어요.",
         "preservedFreePrefix": "네. DoseWeek는 Google Play에서 무료로 내려받을 수 있고, 무료 사용자에게는 광고가 보여요.",
         "preservedPlusExpiryTail": [
           "Plus가 끝나도 기록, 템플릿, 저장한 설정은 그대로 남고, 계속 보거나 삭제할 수 있어요.",
           "진료 요약 설정과 오늘 화면 배치는 Plus를 다시 쓸 때까지 무료 기본값으로 돌아가요."
         ],
         "preservedEarlierNoticeTail": [
-          "삭제되거나 Plus로 옮겨지는 것은 없어요.",
           "앱의 1회 안내에서 변경 내용을 설명하고, 설정 > 정보 > 새로운 기능에서 다시 볼 수 있어요."
         ]
       },
@@ -322,6 +322,7 @@
         "oldFreeList": "Everything the app already did stays available without payment, including recording, History, Body charts, the estimate, Visit Prep, meals, exports, encrypted backup and restore, calendar sync, reminders, widgets and App Lock.",
         "oldAllBackupsFree": "Everything that was already in DoseWeek stays free, including the fixed 4, 8 and 12-week Visit Prep and every export and backup.",
         "oldNothingMovedToPlus": "Every feature you had stays, and your records, schedules, reminders, widgets, backups and exports are unchanged; nothing is deleted or moved into Plus.",
+        "oldStandaloneNothingMovedToPlus": "nothing is deleted or moved into Plus.",
         "preservedFreePrefix": "Yes. DoseWeek is a free download, and Free users see ads.",
         "preservedPlusExpiryTail": [
           "If Plus ends, your records, templates and saved settings are kept, and you can still view and delete them; report settings and the Today layout return to the Free defaults until Plus is back."
@@ -334,6 +335,7 @@
         "oldFreeList": "Every feature the app already had stays available without payment, including recording, History, Body charts, the visit summary, meals, exports, encrypted backup and restore, Google Drive backup, calendar sync, reminders, the widget and the app lock.",
         "oldAllBackupsFree": "Everything that was already in DoseWeek stays free, including the fixed 4, 8 and 12-week visit summary and every export and backup.",
         "oldNothingMovedToPlus": "Every feature you had stays, and your records, schedules, reminders, the widget, backups and exports are unchanged; nothing is deleted or moved into Plus.",
+        "oldStandaloneNothingMovedToPlus": "nothing is deleted or moved into Plus.",
         "preservedFreePrefix": "Yes. DoseWeek is a free download on Google Play, and Free users see ads.",
         "preservedPlusExpiryTail": [
           "If Plus ends, your records, templates and saved settings are kept, and you can still view and delete them; visit summary settings and the Today layout return to the Free defaults until Plus is back."
@@ -487,13 +489,13 @@
         "oldFreeList": "記録、履歴、身体のグラフ、推定、受診準備、食事、書き出し、暗号化バックアップと復元、カレンダー連携、リマインダー、ウィジェット、アプリロックなど、アプリにもともとあった機能はすべて、引き続き支払いなしで使えます。",
         "oldAllBackupsFree": "4・8・12週間の固定の受診準備や、すべての書き出しとバックアップなど、DoseWeekにもともとあった機能はすべて無料のままです。",
         "oldNothingMovedToPlus": "使っていた機能はすべてそのまま残り、記録、スケジュール、リマインダー、ウィジェット、バックアップ、書き出しも変わりません。",
+        "oldStandaloneNothingMovedToPlus": "削除されたりPlusに移されたりするものはありません。",
         "preservedFreePrefix": "はい。 DoseWeekは無料でダウンロードでき、無料版のユーザーには広告が表示されます。",
         "preservedPlusExpiryTail": [
           "Plusが終了しても、記録、テンプレート、保存した設定は保持され、引き続き表示・削除できます。",
           "レポートの設定と「今日」画面のレイアウトは、Plusを再び利用するまで無料版の初期設定に戻ります。"
         ],
         "preservedEarlierNoticeTail": [
-          "削除されたりPlusに移されたりするものはありません。",
           "変更内容はアプリ内の1回限りのお知らせで説明され、「設定 > 情報 > 今回のアップデート」で再び確認できます。"
         ]
       },
@@ -501,13 +503,13 @@
         "oldFreeList": "記録、履歴、身体のグラフ、受診サマリー、食事、書き出し、暗号化バックアップと復元、Googleドライブへのバックアップ、カレンダー連携、リマインダー、ウィジェット、アプリロックなど、アプリにもともとあった機能はすべて、引き続き支払いなしで使えます。",
         "oldAllBackupsFree": "4・8・12週間の固定の受診サマリーや、すべての書き出しとバックアップなど、DoseWeekにもともとあった機能はすべて無料のままです。",
         "oldNothingMovedToPlus": "使っていた機能はすべてそのまま残り、記録、スケジュール、リマインダー、ウィジェット、バックアップ、書き出しも変わりません。",
+        "oldStandaloneNothingMovedToPlus": "削除されたりPlusに移されたりするものはありません。",
         "preservedFreePrefix": "はい。 DoseWeekはGoogle Playで無料でダウンロードでき、無料版のユーザーには広告が表示されます。",
         "preservedPlusExpiryTail": [
           "Plusが終了しても、記録、テンプレート、保存した設定は保持され、引き続き表示・削除できます。",
           "受診サマリーの設定と「今日」画面のレイアウトは、Plusを再び利用するまで無料版の初期設定に戻ります。"
         ],
         "preservedEarlierNoticeTail": [
-          "削除されたりPlusに移されたりするものはありません。",
           "変更内容はアプリ内の1回限りのお知らせで説明され、「設定 > 情報 > 今回のアップデート」で再び確認できます。"
         ]
       },
@@ -652,6 +654,7 @@
         "oldFreeList": "Alles, was die App bereits bot, bleibt ohne Bezahlung verfügbar, darunter das Erfassen, der Verlauf, die Körperdiagramme, die Schätzung, das Arztgespräch, Mahlzeiten, Exporte, verschlüsselte Sicherung und Wiederherstellung, Kalendersynchronisierung, Erinnerungen, Widgets und die App-Sperre.",
         "oldAllBackupsFree": "Alles, was bereits in DoseWeek enthalten war, bleibt kostenlos, darunter das feste Arztgespräch für 4, 8 und 12 Wochen sowie alle Exporte und Sicherungen.",
         "oldNothingMovedToPlus": "Alle Funktionen, die Sie hatten, bleiben erhalten, und Ihre Einträge, Zeitpläne, Erinnerungen, Widgets, Sicherungen und Exporte bleiben unverändert; nichts wird gelöscht oder zu Plus verschoben.",
+        "oldStandaloneNothingMovedToPlus": "nichts wird gelöscht oder zu Plus verschoben.",
         "preservedFreePrefix": "Ja. DoseWeek kann kostenlos heruntergeladen werden, und in der kostenlosen Version wird Werbung angezeigt.",
         "preservedPlusExpiryTail": [
           "Endet Plus, bleiben Ihre Einträge, Vorlagen und gespeicherten Einstellungen erhalten, und Sie können sie weiterhin ansehen und löschen; die Berichtseinstellungen und das Layout von „Heute“ kehren zu den Standardwerten der kostenlosen Version zurück, bis Plus wieder aktiv ist."
@@ -664,6 +667,7 @@
         "oldFreeList": "Jede Funktion, die die App bereits hatte, bleibt ohne Bezahlung verfügbar, darunter das Erfassen, der Verlauf, die Körperdiagramme, die Zusammenfassung für den Arztbesuch, Mahlzeiten, Exporte, verschlüsselte Sicherung und Wiederherstellung, die Google-Drive-Sicherung, Kalendersynchronisierung, Erinnerungen, das Widget und die App-Sperre.",
         "oldAllBackupsFree": "Alles, was bereits in DoseWeek enthalten war, bleibt kostenlos, darunter die feste Zusammenfassung für den Arztbesuch für 4, 8 und 12 Wochen sowie alle Exporte und Sicherungen.",
         "oldNothingMovedToPlus": "Alle Funktionen, die Sie hatten, bleiben erhalten, und Ihre Aufzeichnungen, Zeitpläne, Erinnerungen, das Widget, Sicherungen und Exporte bleiben unverändert; nichts wird gelöscht oder zu Plus verschoben.",
+        "oldStandaloneNothingMovedToPlus": "nichts wird gelöscht oder zu Plus verschoben.",
         "preservedFreePrefix": "Ja. DoseWeek kann bei Google Play kostenlos heruntergeladen werden, und in der kostenlosen Version wird Werbung angezeigt.",
         "preservedPlusExpiryTail": [
           "Endet Plus, bleiben Ihre Aufzeichnungen, Vorlagen und gespeicherten Einstellungen erhalten, und Sie können sie weiterhin ansehen und löschen; die Einstellungen der Zusammenfassung für den Arztbesuch und das Layout von „Heute“ kehren zu den Standardwerten der kostenlosen Version zurück, bis Plus wieder aktiv ist."
@@ -813,6 +817,7 @@
         "oldFreeList": "Tout ce que l’app proposait déjà reste disponible sans paiement, notamment l’enregistrement, l’historique, les graphiques de « Corps », l’estimation, la préparation de consultation, les repas, les exportations, la sauvegarde chiffrée et la restauration, la synchronisation du calendrier, les rappels, les widgets et le verrouillage de l’app.",
         "oldAllBackupsFree": "Tout ce qui existait déjà dans DoseWeek reste gratuit, y compris la préparation de consultation fixe sur 4, 8 et 12 semaines et toutes les exportations et sauvegardes.",
         "oldNothingMovedToPlus": "Toutes les fonctions dont vous disposiez restent disponibles, et vos enregistrements, calendriers d’injection, rappels, widgets, sauvegardes et exportations ne changent pas ; rien n’est supprimé ni déplacé vers Plus.",
+        "oldStandaloneNothingMovedToPlus": "rien n’est supprimé ni déplacé vers Plus.",
         "preservedFreePrefix": "Oui. DoseWeek se télécharge gratuitement, et les utilisateurs de la version gratuite voient des publicités.",
         "preservedPlusExpiryTail": [
           "Si Plus prend fin, vos enregistrements, modèles et réglages enregistrés sont conservés, et vous pouvez toujours les consulter et les supprimer ; les réglages du rapport et la disposition d’« Aujourd’hui » reviennent aux valeurs par défaut de la version gratuite jusqu’au retour de Plus."
@@ -825,6 +830,7 @@
         "oldFreeList": "Toutes les fonctions que l’app proposait déjà restent disponibles sans paiement, notamment l’enregistrement, l’historique, les graphiques de « Corps », le résumé de consultation, les repas, les exportations, la sauvegarde chiffrée et la restauration, la sauvegarde Google Drive, la synchronisation du calendrier, les rappels, le widget et le verrouillage de l’app.",
         "oldAllBackupsFree": "Tout ce qui existait déjà dans DoseWeek reste gratuit, y compris le résumé de consultation fixe sur 4, 8 et 12 semaines et toutes les exportations et sauvegardes.",
         "oldNothingMovedToPlus": "Toutes les fonctions dont vous disposiez restent disponibles, et vos enregistrements, calendriers d’injection, rappels, le widget, les sauvegardes et les exportations ne changent pas ; rien n’est supprimé ni déplacé vers Plus.",
+        "oldStandaloneNothingMovedToPlus": "rien n’est supprimé ni déplacé vers Plus.",
         "preservedFreePrefix": "Oui. DoseWeek se télécharge gratuitement sur Google Play, et les utilisateurs de la version gratuite voient des publicités.",
         "preservedPlusExpiryTail": [
           "Si Plus prend fin, vos enregistrements, modèles et réglages enregistrés sont conservés, et vous pouvez toujours les consulter et les supprimer ; les réglages du résumé de consultation et la disposition d’« Aujourd’hui » reviennent aux valeurs par défaut de la version gratuite jusqu’au retour de Plus."
@@ -972,6 +978,7 @@
         "oldFreeList": "Todo lo que la app ya ofrecía sigue disponible sin pagar, incluidos el registro, el historial, los gráficos de «Cuerpo», la estimación, la preparación de la consulta, las comidas, las exportaciones, la copia de seguridad cifrada y la restauración, la sincronización con el calendario, los recordatorios, los widgets y el bloqueo de la app.",
         "oldAllBackupsFree": "Todo lo que ya estaba en DoseWeek sigue siendo gratis, incluida la preparación de la consulta fija de 4, 8 y 12 semanas y todas las exportaciones y copias de seguridad.",
         "oldNothingMovedToPlus": "Todas las funciones que tenía se mantienen, y sus registros, pautas, recordatorios, widgets, copias de seguridad y exportaciones no cambian; nada se elimina ni se traslada a Plus.",
+        "oldStandaloneNothingMovedToPlus": "nada se elimina ni se traslada a Plus.",
         "preservedFreePrefix": "Sí. DoseWeek se descarga gratis, y los usuarios de la versión gratuita ven anuncios.",
         "preservedPlusExpiryTail": [
           "Si Plus termina, sus registros, plantillas y ajustes guardados se conservan, y puede seguir viéndolos y eliminándolos; los ajustes del informe y el diseño de «Hoy» vuelven a los valores predeterminados de la versión gratuita hasta que Plus vuelva a estar activo."
@@ -984,6 +991,7 @@
         "oldFreeList": "Todas las funciones que la app ya tenía siguen disponibles sin pagar, incluidos el registro, el historial, los gráficos de «Cuerpo», el resumen de la consulta, las comidas, las exportaciones, la copia cifrada y la restauración, la copia en Google Drive, la sincronización con el calendario, los recordatorios, el widget y el bloqueo de la app.",
         "oldAllBackupsFree": "Todo lo que ya estaba en DoseWeek sigue siendo gratis, incluido el resumen de la consulta fijo de 4, 8 y 12 semanas y todas las exportaciones y copias.",
         "oldNothingMovedToPlus": "Todas las funciones que tenía se mantienen, y sus registros, pautas, recordatorios, el widget, las copias y las exportaciones no cambian; nada se elimina ni se traslada a Plus.",
+        "oldStandaloneNothingMovedToPlus": "nada se elimina ni se traslada a Plus.",
         "preservedFreePrefix": "Sí. DoseWeek se descarga gratis en Google Play, y los usuarios de la versión gratuita ven anuncios.",
         "preservedPlusExpiryTail": [
           "Si Plus termina, sus registros, plantillas y ajustes guardados se conservan, y puede seguir viéndolos y eliminándolos; los ajustes del resumen de la consulta y el diseño de «Hoy» vuelven a los valores predeterminados de la versión gratuita hasta que Plus vuelva a estar activo."
@@ -1132,6 +1140,7 @@
         "oldFreeList": "Tutto ciò che l’app offriva già resta disponibile senza pagare, compresi registrazione, «Cronologia», grafici di «Corpo», stima, preparazione alla visita, pasti, esportazioni, backup crittografato e ripristino, sincronizzazione del calendario, promemoria, widget e blocco dell’app.",
         "oldAllBackupsFree": "Tutto ciò che era già in DoseWeek resta gratis, compresa la preparazione alla visita fissa a 4, 8 e 12 settimane e tutte le esportazioni e i backup.",
         "oldNothingMovedToPlus": "Tutte le funzioni che avevi restano, e le tue registrazioni, i programmi, i promemoria, i widget, i backup e le esportazioni non cambiano; nulla viene eliminato o spostato in Plus.",
+        "oldStandaloneNothingMovedToPlus": "nulla viene eliminato o spostato in Plus.",
         "preservedFreePrefix": "Sì. DoseWeek si scarica gratis e chi usa la versione gratuita vede annunci.",
         "preservedPlusExpiryTail": [
           "Se Plus termina, le tue registrazioni, i modelli e le impostazioni salvate vengono conservati e puoi ancora visualizzarli ed eliminarli; le impostazioni del report e il layout di «Oggi» tornano ai valori predefiniti della versione gratuita finché Plus non torna attivo."
@@ -1144,6 +1153,7 @@
         "oldFreeList": "Tutte le funzioni che l’app aveva già restano disponibili senza pagare, compresi registrazione, «Cronologia», grafici di «Corpo», riepilogo della visita, pasti, esportazioni, backup crittografato e ripristino, backup su Google Drive, sincronizzazione del calendario, promemoria, widget e blocco dell’app.",
         "oldAllBackupsFree": "Tutto ciò che era già in DoseWeek resta gratis, compreso il riepilogo della visita fisso a 4, 8 e 12 settimane e tutte le esportazioni e i backup.",
         "oldNothingMovedToPlus": "Tutte le funzioni che avevi restano, e le tue registrazioni, i programmi, i promemoria, il widget, i backup e le esportazioni non cambiano; nulla viene eliminato o spostato in Plus.",
+        "oldStandaloneNothingMovedToPlus": "nulla viene eliminato o spostato in Plus.",
         "preservedFreePrefix": "Sì. DoseWeek si scarica gratis da Google Play e chi usa la versione gratuita vede annunci.",
         "preservedPlusExpiryTail": [
           "Se Plus termina, le tue registrazioni, i modelli e le impostazioni salvate vengono conservati e puoi ancora visualizzarli ed eliminarli; le impostazioni del riepilogo della visita e il layout di «Oggi» tornano ai valori predefiniti della versione gratuita finché Plus non torna attivo."
@@ -1294,6 +1304,7 @@
         "oldFreeList": "Alles wat de app al deed, blijft zonder betaling beschikbaar, waaronder registreren, ‘Historie’, de grafieken bij ‘Lichaam’, de schatting, consultvoorbereiding, maaltijden, exports, versleutelde back-up en herstel, agendasynchronisatie, herinneringen, widgets en appvergrendeling.",
         "oldAllBackupsFree": "Alles wat al in DoseWeek zat, blijft gratis, waaronder de vaste consultvoorbereiding voor 4, 8 en 12 weken en alle exports en back-ups.",
         "oldNothingMovedToPlus": "Alle functies die u had, blijven, en uw registraties, schema’s, herinneringen, widgets, back-ups en exports veranderen niet; niets wordt verwijderd of naar Plus verplaatst.",
+        "oldStandaloneNothingMovedToPlus": "niets wordt verwijderd of naar Plus verplaatst.",
         "preservedFreePrefix": "Ja. DoseWeek is gratis te downloaden, en gebruikers van de gratis versie zien advertenties.",
         "preservedPlusExpiryTail": [
           "Als Plus eindigt, blijven uw registraties, sjablonen en opgeslagen instellingen bewaard en kunt u ze nog steeds bekijken en verwijderen; de rapportinstellingen en de indeling van ‘Vandaag’ gaan terug naar de standaardwaarden van de gratis versie tot Plus weer actief is."
@@ -1306,6 +1317,7 @@
         "oldFreeList": "Elke functie die de app al had, blijft zonder betaling beschikbaar, waaronder registreren, ‘Geschiedenis’, de grafieken bij ‘Lichaam’, de consultsamenvatting, maaltijden, exports, versleutelde back-up en herstel, Google Drive-back-up, agendasynchronisatie, herinneringen, de widget en de appvergrendeling.",
         "oldAllBackupsFree": "Alles wat al in DoseWeek zat, blijft gratis, waaronder de vaste consultsamenvatting voor 4, 8 en 12 weken en alle exports en back-ups.",
         "oldNothingMovedToPlus": "Alle functies die u had, blijven, en uw registraties, schema’s, herinneringen, de widget, back-ups en exports veranderen niet; niets wordt verwijderd of naar Plus verplaatst.",
+        "oldStandaloneNothingMovedToPlus": "niets wordt verwijderd of naar Plus verplaatst.",
         "preservedFreePrefix": "Ja. DoseWeek is gratis te downloaden via Google Play, en gebruikers van de gratis versie zien advertenties.",
         "preservedPlusExpiryTail": [
           "Als Plus eindigt, blijven uw registraties, sjablonen en opgeslagen instellingen bewaard en kunt u ze nog steeds bekijken en verwijderen; de instellingen van de consultsamenvatting en de indeling van ‘Vandaag’ gaan terug naar de standaardwaarden van de gratis versie tot Plus weer actief is."
@@ -1453,6 +1465,7 @@
         "oldFreeList": "Tudo o que a aplicação já fazia continua disponível sem pagamento, incluindo o registo, o Histórico, os gráficos do Corpo, a estimativa, a preparação da consulta, as refeições, as exportações, a cópia de segurança encriptada e o restauro, a sincronização do calendário, os lembretes, os widgets e o bloqueio da aplicação.",
         "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo a preparação da consulta fixa de 4, 8 e 12 semanas e todas as exportações e cópias de segurança.",
         "oldNothingMovedToPlus": "Todas as funcionalidades que tinha mantêm-se, e os seus registos, horários, lembretes, widgets, cópias de segurança e exportações não mudam; nada é eliminado nem passa para o Plus.",
+        "oldStandaloneNothingMovedToPlus": "nada é eliminado nem passa para o Plus.",
         "preservedFreePrefix": "Sim. A transferência do DoseWeek é gratuita e os utilizadores da versão gratuita veem anúncios.",
         "preservedPlusExpiryTail": [
           "Se o Plus terminar, os seus registos, modelos e definições guardadas são mantidos e continua a poder vê-los e eliminá-los; as definições do relatório e a disposição do ecrã Hoje voltam às predefinições da versão gratuita até o Plus voltar."
@@ -1465,6 +1478,7 @@
         "oldFreeList": "Todas as funcionalidades que a aplicação já tinha continuam disponíveis sem pagamento, incluindo o registo, o Histórico, os gráficos do Corpo, o resumo para a consulta, as refeições, as exportações, a cópia de segurança encriptada e o restauro, a cópia de segurança no Google Drive, a sincronização do calendário, os lembretes, o widget e o bloqueio da aplicação.",
         "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo o resumo para a consulta fixo de 4, 8 e 12 semanas e todas as exportações e cópias de segurança.",
         "oldNothingMovedToPlus": "Todas as funcionalidades que tinha mantêm-se, e os seus registos, horários, lembretes, o widget, as cópias de segurança e as exportações não mudam; nada é eliminado nem passa para o Plus.",
+        "oldStandaloneNothingMovedToPlus": "nada é eliminado nem passa para o Plus.",
         "preservedFreePrefix": "Sim. A transferência do DoseWeek no Google Play é gratuita e os utilizadores da versão gratuita veem anúncios.",
         "preservedPlusExpiryTail": [
           "Se o Plus terminar, os seus registos, modelos e definições guardadas são mantidos e continua a poder vê-los e eliminá-los; as definições do resumo para a consulta e a disposição do ecrã Hoje voltam às predefinições da versão gratuita até o Plus voltar."
@@ -1616,6 +1630,7 @@
         "oldFreeList": "Wszystko, co aplikacja już oferowała, pozostaje dostępne bez opłat, w tym zapisywanie, „Historia”, wykresy na ekranie „Ciało”, oszacowanie, przygotowanie do wizyty, posiłki, eksporty, zaszyfrowana kopia zapasowa i przywracanie, synchronizacja kalendarza, przypomnienia, widżety i blokada aplikacji.",
         "oldAllBackupsFree": "Wszystko, co już było w DoseWeek, pozostaje bezpłatne, w tym stałe przygotowanie do wizyty za 4, 8 i 12 tygodni oraz wszystkie eksporty i kopie zapasowe.",
         "oldNothingMovedToPlus": "Wszystkie dotychczasowe funkcje zostają, a Twoje zapisy, harmonogramy, przypomnienia, widżety, kopie zapasowe i eksporty się nie zmieniają; nic nie jest usuwane ani przenoszone do Plus.",
+        "oldStandaloneNothingMovedToPlus": "nic nie jest usuwane ani przenoszone do Plus.",
         "preservedFreePrefix": "Tak. DoseWeek można pobrać bezpłatnie, a użytkownicy wersji bezpłatnej widzą reklamy.",
         "preservedPlusExpiryTail": [
           "Gdy Plus się zakończy, Twoje zapisy, szablony i zapisane ustawienia zostają zachowane i nadal możesz je przeglądać i usuwać; ustawienia raportu i układ ekranu „Dziś” wracają do domyślnych ustawień wersji bezpłatnej, dopóki Plus nie zostanie przywrócony."
@@ -1628,6 +1643,7 @@
         "oldFreeList": "Wszystkie funkcje, które aplikacja już miała, pozostają dostępne bez opłat, w tym zapisywanie, „Historia”, wykresy na karcie „Pomiary”, podsumowanie na wizytę, posiłki, eksporty, zaszyfrowana kopia zapasowa i przywracanie, kopia zapasowa na Dysku Google, synchronizacja kalendarza, przypomnienia, widżet i blokada aplikacji.",
         "oldAllBackupsFree": "Wszystko, co już było w DoseWeek, pozostaje bezpłatne, w tym stałe podsumowanie na wizytę za 4, 8 i 12 tygodni oraz wszystkie eksporty i kopie zapasowe.",
         "oldNothingMovedToPlus": "Wszystkie dotychczasowe funkcje zostają, a Twoje zapisy, harmonogramy, przypomnienia, widżet, kopie zapasowe i eksporty się nie zmieniają; nic nie jest usuwane ani przenoszone do Plus.",
+        "oldStandaloneNothingMovedToPlus": "nic nie jest usuwane ani przenoszone do Plus.",
         "preservedFreePrefix": "Tak. DoseWeek można bezpłatnie pobrać z Google Play, a użytkownicy wersji bezpłatnej widzą reklamy.",
         "preservedPlusExpiryTail": [
           "Gdy Plus się zakończy, Twoje zapisy, szablony i zapisane ustawienia zostają zachowane i nadal możesz je przeglądać i usuwać; ustawienia podsumowania na wizytę i układ ekranu „Dzisiaj” wracają do domyślnych ustawień wersji bezpłatnej, dopóki Plus nie zostanie przywrócony."
@@ -1777,6 +1793,7 @@
         "oldFreeList": "Allt som appen redan gjorde är fortfarande tillgängligt utan betalning, inklusive registrering, Historik, diagrammen i Kropp, uppskattningen, besöksförberedelsen, måltider, exporter, krypterad säkerhetskopiering och återställning, kalendersynkronisering, påminnelser, widgetar och applås.",
         "oldAllBackupsFree": "Allt som redan fanns i DoseWeek förblir gratis, inklusive den fasta besöksförberedelsen för 4, 8 och 12 veckor och alla exporter och säkerhetskopior.",
         "oldNothingMovedToPlus": "Alla funktioner du hade finns kvar, och dina registreringar, scheman, påminnelser, widgetar, säkerhetskopior och exporter är oförändrade; inget raderas eller flyttas till Plus.",
+        "oldStandaloneNothingMovedToPlus": "inget raderas eller flyttas till Plus.",
         "preservedFreePrefix": "Ja. DoseWeek är gratis att ladda ned, och användare av gratisversionen ser annonser.",
         "preservedPlusExpiryTail": [
           "Om Plus upphör behålls dina registreringar, mallar och sparade inställningar, och du kan fortfarande visa och radera dem; rapportinställningarna och layouten för I dag återgår till gratisversionens standardval tills Plus är tillbaka."
@@ -1789,6 +1806,7 @@
         "oldFreeList": "Alla funktioner som appen redan hade är fortfarande tillgängliga utan betalning, inklusive registrering, Historik, diagrammen i Kropp, besökssammanfattningen, måltider, exporter, krypterad säkerhetskopiering och återställning, säkerhetskopiering till Google Drive, kalendersynkronisering, påminnelser, widgeten och applåset.",
         "oldAllBackupsFree": "Allt som redan fanns i DoseWeek förblir gratis, inklusive den fasta besökssammanfattningen för 4, 8 och 12 veckor och alla exporter och säkerhetskopior.",
         "oldNothingMovedToPlus": "Alla funktioner du hade finns kvar, och dina registreringar, scheman, påminnelser, widgeten, säkerhetskopior och exporter är oförändrade; inget raderas eller flyttas till Plus.",
+        "oldStandaloneNothingMovedToPlus": "inget raderas eller flyttas till Plus.",
         "preservedFreePrefix": "Ja. DoseWeek är gratis att ladda ned på Google Play, och användare av gratisversionen ser annonser.",
         "preservedPlusExpiryTail": [
           "Om Plus upphör behålls dina registreringar, mallar och sparade inställningar, och du kan fortfarande visa och radera dem; inställningarna för besökssammanfattningen och layouten för I dag återgår till gratisversionens standardval tills Plus är tillbaka."
@@ -1941,6 +1959,7 @@
         "oldFreeList": "ऐप में पहले से मौजूद हर सुविधा बिना भुगतान के उपलब्ध रहती है, जिसमें रिकॉर्ड करना, इतिहास, शरीर के चार्ट, अनुमान, विज़िट की तैयारी, भोजन, निर्यात, एन्क्रिप्टेड बैकअप और रिस्टोर, कैलेंडर सिंक, रिमाइंडर, विजेट और ऐप लॉक शामिल हैं।",
         "oldAllBackupsFree": "DoseWeek में पहले से मौजूद सब कुछ मुफ़्त रहता है, जिसमें 4, 8 और 12 सप्ताह वाली तय विज़िट की तैयारी और हर निर्यात व बैकअप शामिल है।",
         "oldNothingMovedToPlus": "आपकी हर मौजूदा सुविधा बनी रहती है, और आपके रिकॉर्ड, शेड्यूल, रिमाइंडर, विजेट, बैकअप और निर्यात नहीं बदलते; कुछ भी हटाया या Plus में नहीं ले जाया जाता।",
+        "oldStandaloneNothingMovedToPlus": "कुछ भी हटाया या Plus में नहीं ले जाया जाता।",
         "preservedFreePrefix": "हाँ। DoseWeek मुफ़्त में डाउनलोड किया जा सकता है, और मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखते हैं।",
         "preservedPlusExpiryTail": [
           "Plus समाप्त होने पर आपके रिकॉर्ड, टेम्पलेट और सहेजी गई सेटिंग बनी रहती हैं, और आप उन्हें अब भी देख और हटा सकते हैं; Plus फिर से शुरू होने तक रिपोर्ट की सेटिंग और “आज” स्क्रीन का लेआउट मुफ़्त संस्करण की डिफ़ॉल्ट सेटिंग पर लौट आते हैं।"
@@ -1953,6 +1972,7 @@
         "oldFreeList": "ऐप में पहले से मौजूद हर सुविधा बिना भुगतान के उपलब्ध रहती है, जिसमें रिकॉर्ड करना, इतिहास, शरीर के चार्ट, विज़िट सारांश, भोजन, निर्यात, एन्क्रिप्टेड बैकअप और रीस्टोर, Google Drive बैकअप, कैलेंडर सिंक, रिमाइंडर, विजेट और ऐप लॉक शामिल हैं।",
         "oldAllBackupsFree": "DoseWeek में पहले से मौजूद सब कुछ मुफ़्त रहता है, जिसमें 4, 8 और 12 सप्ताह वाला तय विज़िट सारांश और हर निर्यात व बैकअप शामिल है।",
         "oldNothingMovedToPlus": "आपकी हर मौजूदा सुविधा बनी रहती है, और आपके रिकॉर्ड, शेड्यूल, रिमाइंडर, विजेट, बैकअप और निर्यात नहीं बदलते; कुछ भी हटाया या Plus में नहीं ले जाया जाता।",
+        "oldStandaloneNothingMovedToPlus": "कुछ भी हटाया या Plus में नहीं ले जाया जाता।",
         "preservedFreePrefix": "हाँ। DoseWeek, Google Play पर मुफ़्त में डाउनलोड किया जा सकता है, और मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखते हैं।",
         "preservedPlusExpiryTail": [
           "Plus समाप्त होने पर आपके रिकॉर्ड, टेम्पलेट और सहेजी गई सेटिंग बनी रहती हैं, और आप उन्हें अब भी देख और हटा सकते हैं; Plus फिर से शुरू होने तक विज़िट सारांश की सेटिंग और “आज” स्क्रीन का लेआउट मुफ़्त संस्करण की डिफ़ॉल्ट सेटिंग पर लौट आते हैं।"
@@ -2101,6 +2121,7 @@
         "oldFreeList": "Tudo o que o app já fazia continua disponível sem pagamento, incluindo o registro, o Histórico, os gráficos de Corpo, a estimativa, a preparação para a consulta, as refeições, as exportações, o backup criptografado e a restauração, a sincronização com o calendário, os lembretes, os widgets e o bloqueio do app.",
         "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo a preparação para a consulta fixa de 4, 8 e 12 semanas e todas as exportações e backups.",
         "oldNothingMovedToPlus": "Todos os recursos que você tinha continuam, e seus registros, horários, lembretes, widgets, backups e exportações não mudam; nada é excluído nem transferido para o Plus.",
+        "oldStandaloneNothingMovedToPlus": "nada é excluído nem transferido para o Plus.",
         "preservedFreePrefix": "Sim. O download do DoseWeek é gratuito, e usuários da versão gratuita veem anúncios.",
         "preservedPlusExpiryTail": [
           "Se o Plus terminar, seus registros, modelos e configurações salvas são mantidos, e você ainda pode vê-los e excluí-los; as configurações do relatório e o layout da tela Hoje voltam aos padrões da versão gratuita até o Plus voltar."
@@ -2113,6 +2134,7 @@
         "oldFreeList": "Todos os recursos que o aplicativo já tinha continuam disponíveis sem pagamento, incluindo o registro, o Histórico, os gráficos de Corpo, o resumo para a consulta, as refeições, as exportações, o backup criptografado e a restauração, o backup no Google Drive, a sincronização com o calendário, os lembretes, o widget e o bloqueio do aplicativo.",
         "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo o resumo para a consulta fixo de 4, 8 e 12 semanas e todas as exportações e backups.",
         "oldNothingMovedToPlus": "Todos os recursos que você tinha continuam, e seus registros, horários, lembretes, o widget, os backups e as exportações não mudam; nada é excluído nem transferido para o Plus.",
+        "oldStandaloneNothingMovedToPlus": "nada é excluído nem transferido para o Plus.",
         "preservedFreePrefix": "Sim. O download do DoseWeek no Google Play é gratuito, e usuários da versão gratuita veem anúncios.",
         "preservedPlusExpiryTail": [
           "Se o Plus terminar, seus registros, modelos e configurações salvas são mantidos, e você ainda pode vê-los e excluí-los; as configurações do resumo para a consulta e o layout da tela Hoje voltam aos padrões da versão gratuita até o Plus voltar."
@@ -2270,6 +2292,7 @@
         "oldFreeList": "وتبقى كل الميزات التي كانت في التطبيق متاحة دون دفع، ومنها التسجيل و«السجل» ومخططات الجسم والتقدير وتحضير الزيارة والوجبات والتصدير والنسخ الاحتياطي المشفّر والاستعادة ومزامنة التقويم والتذكيرات والأدوات وقفل التطبيق.",
         "oldAllBackupsFree": "يبقى كل ما كان موجودًا في DoseWeek مجانيًا، بما في ذلك تحضير الزيارة الثابت لمدة 4 و8 و12 أسبوعًا وجميع عمليات التصدير والنسخ الاحتياطي.",
         "oldNothingMovedToPlus": "تبقى كل الميزات التي كانت لديك، ولا تتغيّر سجلاتك وجداولك وتذكيراتك وأدواتك ونسخك الاحتياطية وعمليات التصدير؛ ولا يُحذف شيء ولا يُنقل إلى Plus.",
+        "oldStandaloneNothingMovedToPlus": "ولا يُحذف شيء ولا يُنقل إلى Plus.",
         "preservedFreePrefix": "نعم. يمكن تنزيل DoseWeek مجانًا، ويرى مستخدمو الإصدار المجاني إعلانات.",
         "preservedPlusExpiryTail": [
           "وإذا انتهى Plus، تبقى سجلاتك وقوالبك وإعداداتك المحفوظة، ويظل بإمكانك عرضها وحذفها؛ وتعود إعدادات التقرير وتخطيط شاشة «اليوم» إلى الإعدادات الافتراضية للإصدار المجاني إلى أن يعود Plus."
@@ -2282,6 +2305,7 @@
         "oldFreeList": "وتبقى كل الميزات التي كانت في التطبيق متاحة دون دفع، ومنها التسجيل و«السجل» ومخططات الجسم وملخص الزيارة والوجبات والتصدير والنسخ الاحتياطي المشفّر والاستعادة والنسخ الاحتياطي على Google Drive ومزامنة التقويم والتذكيرات والأداة المصغّرة وقفل التطبيق.",
         "oldAllBackupsFree": "يبقى كل ما كان موجودًا في DoseWeek مجانيًا، بما في ذلك ملخص الزيارة الثابت لمدة 4 و8 و12 أسبوعًا وجميع عمليات التصدير والنسخ الاحتياطي.",
         "oldNothingMovedToPlus": "تبقى كل الميزات التي كانت لديك، ولا تتغيّر سجلاتك وجداولك وتذكيراتك والأداة المصغّرة ونسخك الاحتياطية وعمليات التصدير؛ ولا يُحذف شيء ولا يُنقل إلى Plus.",
+        "oldStandaloneNothingMovedToPlus": "ولا يُحذف شيء ولا يُنقل إلى Plus.",
         "preservedFreePrefix": "نعم. يمكن تنزيل DoseWeek مجانًا من Google Play، ويرى مستخدمو الإصدار المجاني إعلانات.",
         "preservedPlusExpiryTail": [
           "وإذا انتهى Plus، تبقى سجلاتك وقوالبك وإعداداتك المحفوظة، ويظل بإمكانك عرضها وحذفها؛ وتعود إعدادات ملخص الزيارة وتخطيط شاشة «اليوم» إلى الإعدادات الافتراضية للإصدار المجاني إلى أن يعود Plus."
@@ -2428,6 +2452,7 @@
         "oldFreeList": "应用原有的所有功能仍可免费使用，包括录入记录、“历史”、身体图表、估算、就诊准备、用餐、导出、加密备份与恢复、日历同步、提醒、小组件和应用锁。",
         "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免费，包括固定的 4 周、8 周和 12 周就诊准备，以及所有导出和备份。",
         "oldNothingMovedToPlus": "您原有的所有功能都会保留，您的记录、日程、提醒、小组件、备份和导出都不会改变；不会删除任何内容，也不会将任何内容移入 Plus。",
+        "oldStandaloneNothingMovedToPlus": "不会删除任何内容，也不会将任何内容移入 Plus。",
         "preservedFreePrefix": "是的。 DoseWeek 可免费下载，免费版用户会看到广告。",
         "preservedPlusExpiryTail": [
           "Plus 结束后，您的记录、模板和已保存的设置都会保留，您仍可查看和删除它们；在您重新使用 Plus 之前，报告设置和“今天”页面布局会恢复为免费版默认设置。"
@@ -2440,6 +2465,7 @@
         "oldFreeList": "应用原有的所有功能仍可免费使用，包括录入记录、“记录”标签页、身体图表、就诊摘要、用餐、导出、加密备份与恢复、Google 云端硬盘备份、日历同步、提醒、小组件和应用锁。",
         "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免费，包括固定的 4 周、8 周和 12 周就诊摘要，以及所有导出和备份。",
         "oldNothingMovedToPlus": "您原有的所有功能都会保留，您的记录、日程、提醒、小组件、备份和导出都不会改变；不会删除任何内容，也不会将任何内容移入 Plus。",
+        "oldStandaloneNothingMovedToPlus": "不会删除任何内容，也不会将任何内容移入 Plus。",
         "preservedFreePrefix": "是的。 DoseWeek 可在 Google Play 免费下载，免费版用户会看到广告。",
         "preservedPlusExpiryTail": [
           "Plus 结束后，您的记录、模板和已保存的设置都会保留，您仍可查看和删除它们；在您重新使用 Plus 之前，就诊摘要设置和“今天”页面布局会恢复为免费版默认设置。"
@@ -2588,6 +2614,7 @@
         "oldFreeList": "App 原有的所有功能仍可免費使用，包括記錄、「紀錄」分頁、身體圖表、估算、就診準備、用餐、匯出、加密備份與還原、行事曆同步、提醒、小工具和 App 鎖定。",
         "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免費，包括固定的 4 週、8 週和 12 週就診準備，以及所有匯出和備份。",
         "oldNothingMovedToPlus": "您原有的所有功能都會保留，您的紀錄、排程、提醒、小工具、備份和匯出都不會改變；不會刪除任何內容，也不會將任何內容移入 Plus。",
+        "oldStandaloneNothingMovedToPlus": "不會刪除任何內容，也不會將任何內容移入 Plus。",
         "preservedFreePrefix": "是的。 DoseWeek 可免費下載，免費版使用者會看到廣告。",
         "preservedPlusExpiryTail": [
           "Plus 結束後，您的紀錄、範本和已儲存的設定都會保留，您仍可查看和刪除；在您再次使用 Plus 之前，報告設定和「今天」畫面版面配置會恢復為免費版預設值。"
@@ -2600,6 +2627,7 @@
         "oldFreeList": "應用程式原有的所有功能仍可免費使用，包括記錄、「紀錄」分頁、身體圖表、就診摘要、用餐、匯出、加密備份與還原、Google 雲端硬碟備份、日曆同步、提醒、小工具和 App 鎖定。",
         "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免費，包括固定的 4 週、8 週和 12 週就診摘要，以及所有匯出和備份。",
         "oldNothingMovedToPlus": "您原有的所有功能都會保留，您的紀錄、排程、提醒、小工具、備份和匯出都不會改變；不會刪除任何內容，也不會將任何內容移入 Plus。",
+        "oldStandaloneNothingMovedToPlus": "不會刪除任何內容，也不會將任何內容移入 Plus。",
         "preservedFreePrefix": "是的。 DoseWeek 可在 Google Play 免費下載，免費版使用者會看到廣告。",
         "preservedPlusExpiryTail": [
           "Plus 結束後，您的紀錄、範本和已儲存的設定都會保留，您仍可查看和刪除；在您再次使用 Plus 之前，就診摘要設定和「今天」畫面版面配置會恢復為免費版預設值。"
@@ -2749,13 +2777,13 @@
         "oldFreeList": "Kayıt, Geçmiş, Vücut grafikleri, tahmin, muayene hazırlığı, öğünler, dışa aktarmalar, şifreli yedekleme ve geri yükleme, takvim eşitleme, hatırlatıcılar, widget'lar ve uygulama kilidi dahil, uygulamanın zaten yaptığı her şey ödeme yapmadan kullanılabilir olmaya devam eder.",
         "oldAllBackupsFree": "Sabit 4, 8 ve 12 haftalık muayene hazırlığı ile tüm dışa aktarmalar ve yedekler dahil, DoseWeek'te zaten bulunan her şey ücretsiz kalır.",
         "oldNothingMovedToPlus": "Sahip olduğunuz tüm özellikler kalır; kayıtlarınız, programlarınız, hatırlatıcılarınız, widget'larınız, yedekleriniz ve dışa aktarmalarınız değişmez.",
+        "oldStandaloneNothingMovedToPlus": "Hiçbir şey silinmez veya Plus'a taşınmaz.",
         "preservedFreePrefix": "Evet. DoseWeek ücretsiz olarak indirilebilir ve ücretsiz sürüm kullanıcıları reklam görür.",
         "preservedPlusExpiryTail": [
           "Plus sona ererse kayıtlarınız, şablonlarınız ve kaydedilmiş ayarlarınız korunur; bunları görüntülemeye ve silmeye devam edebilirsiniz.",
           "Rapor ayarları ve Bugün düzeni, Plus geri gelene kadar ücretsiz sürümün varsayılanlarına döner."
         ],
         "preservedEarlierNoticeTail": [
-          "Hiçbir şey silinmez veya Plus'a taşınmaz.",
           "Uygulamadaki tek seferlik bir duyuru değişikliği açıklar; bunu Ayarlar > Hakkında > Yenilikler bölümünde yeniden okuyabilirsiniz."
         ]
       },
@@ -2763,13 +2791,13 @@
         "oldFreeList": "Kayıt, Geçmiş, Vücut grafikleri, muayene özeti, öğünler, dışa aktarmalar, şifreli yedekleme ve geri yükleme, Google Drive yedeklemesi, takvim eşitleme, hatırlatıcılar, widget ve uygulama kilidi dahil, uygulamada zaten bulunan tüm özellikler ödeme yapmadan kullanılabilir olmaya devam eder.",
         "oldAllBackupsFree": "Sabit 4, 8 ve 12 haftalık muayene özeti ile tüm dışa aktarmalar ve yedekler dahil, DoseWeek'te zaten bulunan her şey ücretsiz kalır.",
         "oldNothingMovedToPlus": "Sahip olduğunuz tüm özellikler kalır; kayıtlarınız, programlarınız, hatırlatıcılarınız, widget, yedekleriniz ve dışa aktarmalarınız değişmez.",
+        "oldStandaloneNothingMovedToPlus": "Hiçbir şey silinmez veya Plus'a taşınmaz.",
         "preservedFreePrefix": "Evet. DoseWeek, Google Play'de ücretsiz olarak indirilebilir ve ücretsiz sürüm kullanıcıları reklam görür.",
         "preservedPlusExpiryTail": [
           "Plus sona ererse kayıtlarınız, şablonlarınız ve kaydedilmiş ayarlarınız korunur; bunları görüntülemeye ve silmeye devam edebilirsiniz.",
           "Muayene özeti ayarları ve Bugün düzeni, Plus geri gelene kadar ücretsiz sürümün varsayılanlarına döner."
         ],
         "preservedEarlierNoticeTail": [
-          "Hiçbir şey silinmez veya Plus'a taşınmaz.",
           "Uygulamadaki tek seferlik bir duyuru değişikliği açıklar; bunu Ayarlar > Hakkında > “Neler yeni?",
           "” bölümünde yeniden okuyabilirsiniz."
         ]
