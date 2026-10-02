@@ -27,23 +27,23 @@ HEALTH = {
  'tr': ('ayrı isteğe bağlı onay','ilaç adları','enjeksiyon zamanları','doz kayıtları','kilo','öğünler','protein','belirtiler','notlar','geri yüklemek','30 gün','7 gün','yerel kayıt','eşitleme kullanılamaz'),
 }
 BACKUP = {
- 'ko': ('매일','업로드 전에','암호화','Amazon S3','서울','매주','OS','7일','다시 사용하지 않아요'),
- 'en': ('daily','before upload','encrypted','Amazon S3','Seoul','weekly','OS','7 days','never reactivated'),
- 'ja': ('毎日','アップロード前','暗号化','Amazon S3','ソウル','毎週','OS','7日','再利用しません'),
- 'de': ('täglich','vor dem Upload','verschlüsselt','Amazon S3','Seoul','wöchentlich','OS','7 Tagen','nicht wieder verwendet'),
- 'fr': ('chaque jour','avant le téléversement','chiffrées','Amazon S3','Séoul','chaque semaine','OS','7 jours','ne sont jamais réutilisées'),
- 'es': ('diarias','antes de subirlos','cifrados','Amazon S3','Seúl','semanales','OS','7 días','no se reutilizan'),
- 'it': ('giornaliere','prima del caricamento','cifrati','Amazon S3','Seul','settimanali','OS','7 giorni','non vengono riutilizzati'),
- 'nl': ('dagelijks','vóór het uploaden','versleuteld','Amazon S3','Seoul','wekelijks','OS','7 dagen','nooit opnieuw gebruikt'),
- 'pt-PT': ('diárias','antes do envio','cifrados','Amazon S3','Seul','semanais','OS','7 dias','não são reutilizados'),
- 'pl': ('codziennie','przed wysłaniem','szyfrowane','Amazon S3','Seulu','co tydzień','OS','7 dni','nie są ponownie używane'),
- 'sv': ('dagligen','före uppladdning','krypterade','Amazon S3','Seoul','varje vecka','OS','7 dagar','återanvänds aldrig'),
- 'hi': ('रोज़','अपलोड से पहले','एन्क्रिप्ट','Amazon S3','सियोल','साप्ताहिक','OS','7 दिन','दोबारा इस्तेमाल नहीं'),
- 'pt-BR': ('diários','antes do envio','criptografados','Amazon S3','Seul','semanais','OS','7 dias','não são reutilizados'),
- 'ar': ('يوميًا','قبل الرفع','مشفّرة','Amazon S3','سيول','أسبوعيًا','OS','7 أيام','لا تُستخدم مجددًا'),
- 'zh-Hans': ('每天','上传前','加密','Amazon S3','首尔','每周','OS','7天','不会重新使用'),
- 'zh-Hant': ('每天','上傳前','加密','Amazon S3','首爾','每週','OS','7天','不會重新使用'),
- 'tr': ('günlük','yüklemeden önce','şifrelenir','Amazon S3','Seul','haftalık','OS','7 gün','yeniden kullanılmaz'),
+ 'ko': ('매일','업로드 전에','암호화','Amazon S3','서울','수동','OS','7일','다시 사용하지 않아요'),
+ 'en': ('daily','before upload','encrypted','Amazon S3','Seoul','manual','OS','7 days','never reactivated'),
+ 'ja': ('毎日','アップロード前','暗号化','Amazon S3','ソウル','手動','OS','7日','再利用しません'),
+ 'de': ('täglich','vor dem Upload','verschlüsselt','Amazon S3','Seoul','manuell','OS','7 Tagen','nicht wieder verwendet'),
+ 'fr': ('chaque jour','avant le téléversement','chiffrées','Amazon S3','Séoul','manuel','OS','7 jours','ne sont jamais réutilisées'),
+ 'es': ('diarias','antes de subirlos','cifrados','Amazon S3','Seúl','manual','OS','7 días','no se reutilizan'),
+ 'it': ('giornaliere','prima del caricamento','cifrati','Amazon S3','Seul','manual','OS','7 giorni','non vengono riutilizzati'),
+ 'nl': ('dagelijks','vóór het uploaden','versleuteld','Amazon S3','Seoul','handmatig','OS','7 dagen','nooit opnieuw gebruikt'),
+ 'pt-PT': ('diárias','antes do envio','cifrados','Amazon S3','Seul','manual','OS','7 dias','não são reutilizados'),
+ 'pl': ('codziennie','przed wysłaniem','szyfrowane','Amazon S3','Seulu','Ręczn','OS','7 dni','nie są ponownie używane'),
+ 'sv': ('dagligen','före uppladdning','krypterade','Amazon S3','Seoul','manuell','OS','7 dagar','återanvänds aldrig'),
+ 'hi': ('रोज़','अपलोड से पहले','एन्क्रिप्ट','Amazon S3','सियोल','मैन्युअल','OS','7 दिन','दोबारा इस्तेमाल नहीं'),
+ 'pt-BR': ('diários','antes do envio','criptografados','Amazon S3','Seul','manual','OS','7 dias','não são reutilizados'),
+ 'ar': ('يوميًا','قبل الرفع','مشفّرة','Amazon S3','سيول','يدوي','OS','7 أيام','لا تُستخدم مجددًا'),
+ 'zh-Hans': ('每天','上传前','加密','Amazon S3','首尔','手动','OS','7天','不会重新使用'),
+ 'zh-Hant': ('每天','上傳前','加密','Amazon S3','首爾','手動','OS','7天','不會重新使用'),
+ 'tr': ('günlük','yüklemeden önce','şifrelenir','Amazon S3','Seul','manuel','OS','7 gün','yeniden kullanılmaz'),
 }
 IMMEDIATE = {
  'ko': ('동의를 철회','30일 대기기간','장애 유예','즉시','지체 없이'),
@@ -100,7 +100,7 @@ class AccountLegalUpdateTests(unittest.TestCase):
     def test_health_consent_categories_purpose_retention_and_refusal_all_locales(self):
         self.assert_localized_concepts('healthConsent', HEALTH)
 
-    def test_hybrid_backup_encryption_cadence_deletion_and_restore_all_locales(self):
+    def test_server_backup_encryption_manual_snapshot_deletion_and_restore_all_locales(self):
         self.assert_localized_concepts('serverBackup', BACKUP)
 
     def test_direct_deletion_and_consent_withdrawal_have_no_expiry_wait_all_locales(self):

@@ -23,7 +23,7 @@ class LegalOperationsTest(unittest.TestCase):
     def test_backup_procedure_requires_physical_deletion_not_only_lifecycle(self):
         text = self.procedure()
         for requirement in ('S3', 'object versions', 'replicas', 'temporary exports',
-                            'weekly', '7 days', 'deletion ledger',
+                            'manual pre-deploy', '7 days', 'deletion ledger',
                             'restore', 'lifecycle alone', 'actual deletion'):
             with self.subTest(requirement=requirement):
                 self.assertIn(requirement, text)
