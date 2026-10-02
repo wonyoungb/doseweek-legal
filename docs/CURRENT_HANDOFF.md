@@ -1,4 +1,22 @@
-## ACTIVE — legal-update-legal late review 2 (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
+
+Objective: apply the latest owner backup decision in all17 staged1.0.6 privacy/help/Terms
+locales: Plus E2EE server automatic backup, server cannot read contents; Android OS Google
+Drive Auto Backup only during verified Plus; no iCloud/CloudKit app-data backup. Free manual
+file export/import and backup reminders remain. Existing Drive backups and restore stay intact.
+Starting HEAD `4890013`; branch `next-ai/legal-store-legal-cx`, clean initial tree.
+Baseline/source/reference hashes and prior immutable report: `evidence/legal-update-20261002/late2/`.
+Owned scope: backup regression/fixture, candidate/renderer, active operations/provenance, local
+proof and continuity. Legacy1.0.5 sources/pages stay historical;7-day server deletion and other
+legal/price/trial/rights disclosures preserved. Git status owns exact dirty files.
+No owned PID/device/background/native job; external canonical ledger is read only.
+No network, push, merge, deploy, Store or publication action. All existing release gates remain closed.
+Assertion-only regression/fixture ready: 12 exact methods; all scripts AST compile PASS.
+Latest owner snapshot decision14:48 also retires weekly OS snapshots in favor of a manual
+pre-deploy snapshot, deleted within7days; related backup disclosures need this correction.
+No product edits yet. Next action: commit RED and prove assertions on the detached parent.
+
+## HISTORICAL — legal-update-legal late review 2 (2026-10-02; unpublished)
 
 Objective: resolve the single major in late.review-2 with its permitted price-agnostic
 store-price contract across active coordination, operations, provenance, tests and report.

@@ -1,0 +1,2444 @@
+{
+  "schemaVersion": 1,
+  "localeOrder": [
+    "ko",
+    "en",
+    "ja",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "nl",
+    "pt-PT",
+    "pl",
+    "sv",
+    "hi",
+    "pt-BR",
+    "ar",
+    "zh-Hans",
+    "zh-Hant",
+    "tr"
+  ],
+  "legacySourceSha256": {
+    "docs/terms-content.json": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d"
+  },
+  "locales": {
+    "ko": {
+      "oldPrivacySystemExclusion": "Android 시스템의 클라우드 백업과 기기 간 전송 대상에서는 빠져 있어요.",
+      "oldOnlyAutomaticDrive": "자동으로 실행되는 백업은 아래에서 설명하는 선택 사항인 Google Drive 백업뿐이고, 이 백업은 기본적으로 꺼져 있어요.",
+      "oldFaqSystemExclusion": "앱 데이터는 계속 Android 시스템 백업과 기기 간 전송에서 제외돼요.",
+      "oldCustomDriveParagraphs": [
+        "선택 사항으로, DoseWeek는 이 암호화된 백업을 사용자 본인의 Google Drive 앱 데이터 폴더에 보관할 수도 있어요. Drive가 볼 수 있는 것은 임의 식별자가 들어간 파일 이름, 파일 크기, 생성 시각, 페이로드 버전, 키 버전, 무작위 스냅샷 식별자뿐이에요. 약 이름, 용량, 측정값, 치료 날짜, 메모는 암호화된 봉투 밖에 드러나지 않아요.",
+        "암호화는 업로드 전에 기기에서 이뤄지고, 오프라인 파일 내보내기와 같은 AES-256-GCM 봉투를 써요. 복구 코드는 백업과 함께 저장하지 않고 어디에도 보내지 않아요. 보관했다고 확인하기 전까지는 같은 코드를 다시 볼 수 있고, 확인한 뒤에는 다시 보여 주지 않아요. 자동 백업을 시작하려면 그 코드를 다시 입력해야 해요. 코드를 잃으면 개발자도 백업을 읽거나 복구할 수 없어요.",
+        "선택 사항인 자동 백업은 기본적으로 꺼져 있어요. 켜면 기기 상태가 허용할 때 하루에 한 번쯤 실행되고, 정확한 시각은 약속하지 않아요. Drive에서 백업을 삭제하면 되돌릴 수 없어요. Drive는 앱 데이터 파일에 휴지통을 제공하지 않기 때문이에요. 연결을 해제하면 이후 업로드는 멈춰요. 하지만 이미 Drive에 있는 백업이나 기기의 기록은 삭제되지 않아요. 이 기기에 저장된 복구 코드 사본을 지우는 것은 따로 명확하게 표시된 별개의 선택이에요. 변경 내용을 올리는 백업은 자동 백업이든 ‘지금 백업’이든 매번 별도의 암호화 파일로 저장돼요. 이전 파일은 앱의 ‘저장된 백업’ 목록에서 삭제하거나 Google 계정에서 이 앱의 데이터를 삭제할 때까지 남아 있고, Google 저장 공간을 차지해요."
+      ],
+      "oldFreeAnswer": "네. DoseWeek는 Google Play에서 무료로 내려받을 수 있고, 무료 사용자에게는 광고가 보여요. 기록하기, ‘기록’ 탭, 신체 그래프, 진료 요약, 식사, 내보내기, 암호화 백업과 복원, Google Drive 백업, 캘린더 연동, 알림, 위젯, 앱 잠금처럼 앱에 원래 있던 기능은 모두 계속 무료로 쓸 수 있어요.",
+      "oldEveryBackupFreeAnswer": "진료 요약의 고정된 4·8·12주 보기, 모든 내보내기와 백업처럼 DoseWeek에 원래 있던 기능은 모두 무료로 남아요. Plus가 끝나도 기록, 템플릿, 저장한 설정은 그대로 남고, 계속 보거나 삭제할 수 있어요. 진료 요약 설정과 오늘 화면 배치는 Plus를 다시 쓸 때까지 무료 기본값으로 돌아가요.",
+      "oldNothingMovedToPlusAnswer": "쓰던 기능은 모두 그대로 남고, 기록, 일정, 알림, 위젯, 백업, 내보내기도 바뀌지 않아요. 삭제되거나 Plus로 옮겨지는 것은 없어요. 앱의 1회 안내에서 변경 내용을 설명하고, 설정 > 정보 > 새로운 기능에서 다시 볼 수 있어요.",
+      "preservedManualPolicySentences": [
+        "현재 기록은 모두 Android 앱 전용 저장소에 로컬로 보관돼요.",
+        "사용자는 Android 시스템 파일 선택기(SAF)로 위치를 정해 모든 앱 데이터를 암호화된 백업 파일로 직접 저장하고, 그 파일을 골라 복원할 수 있어요.",
+        "이 과정에는 DoseWeek 계정이나 넓은 저장소 권한이 필요 없고, 네트워크도 쓰지 않아요.",
+        "백업은 Android용 DoseWeek에서만 복원할 수 있어요.",
+        "다른 플랫폼의 DoseWeek는 백업 형식이 달라서 플랫폼 사이에서 백업을 옮길 수 없어요.",
+        "백업 파일은 AES-256-GCM 인증 암호화와 별도의 고엔트로피 복구 코드로 보호돼요.",
+        "이 파일 백업은 사용자가 직접 만들어요.",
+        "DoseWeek가 운영하는 클라우드 백업이 아니며, 코드 재설정 서비스도 없어요.",
+        "파일과 코드는 따로, 안전하게 보관하세요.",
+        "코드를 잃으면 개발자나 지원 담당자도 코드를 재설정하거나 파일을 복호화할 수 없어요.",
+        "파일 백업의 복구 코드를 보관했다고 확인하기 전까지, DoseWeek는 그 코드를 다시 볼 수 있도록 기기가 보관하는 키로 감싸 이 기기에만 보관해요.",
+        "확인하면 이 사본을 삭제해요."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "외부나 클라우드 문서 제공자를 고르면 그 제공자가 자체 개인정보처리방침과 약관에 따라 백업 파일을 저장해요. DoseWeek 개발자는 백업 파일이나 복구 코드를 받지 않아요.",
+        "복원할 때 DoseWeek는 파일 전체를 복호화하고 구조와 데이터 관계를 끝까지 검증해요. 검증을 마친 뒤에만 현재 앱 데이터를 하나의 로컬 트랜잭션으로 원자적으로 교체해요."
+      ],
+      "preservedManualFaqSentences": [
+        "네.",
+        "설정에서 Android 시스템 파일 선택기로 모든 앱 데이터를 AES-256-GCM으로 암호화된 파일에 직접 저장하고, 그 파일을 골라 복원할 수 있어요.",
+        "별도의 고엔트로피 복구 코드가 필요해요.",
+        "백업은 Android용 DoseWeek에서만 복원할 수 있어요.",
+        "다른 플랫폼의 DoseWeek는 백업 형식이 달라서 플랫폼 사이에서 백업을 옮길 수 없어요."
+      ],
+      "preservedIosManualPolicy": "현재 쓰는 임상 기록 데이터베이스와 암호화된 로컬 백업 봉투(envelope)는 기기 백업에서 제외돼요. 백업은 사용자가 만들기로 선택할 때만 기기 안에서 AES-256-GCM으로 암호화돼요. 백업은 사용자가 시스템 파일 선택 화면(파일 앱)에서 저장 위치를 골라 명시적으로 내보낼 때만 앱 밖으로 나가요. 내보낸 암호문과 복구 코드는 사용자가 관리해요. 개발자는 둘 중 어느 것에도 접근할 수 없어요. 파일 앱에서 고른 위치는 이 기기 밖(사용자가 설정해 둔 파일 제공자)일 수도 있어요. 그러면 그 제공자의 약관과 기기 설정도 함께 적용돼요. 앱 밖에 저장한 백업 파일은 앱 데이터를 삭제해도 지워지지 않으니, 사용자가 직접 삭제해야 해요. iPhone·iPad에서 만든 백업은 iPhone·iPad용 DoseWeek에서만 복원할 수 있어요. 다른 플랫폼용 DoseWeek는 백업 형식이 달라서 플랫폼 사이에서는 백업 파일을 옮길 수 없어요.\n\nPDF와 CSV 내보내기는 평문 파일이에요. 사용자가 요청할 때만 기기에서 만들어지고, 시스템 공유 시트에서 사용자가 선택한 대상으로 전달돼요. 공유한 뒤의 사본과 보관 기간은 DoseWeek와 개발자가 통제할 수 없어요. 그러니 내보낸 파일은 사용자가 안전하게 보관하고 삭제해야 해요.",
+      "preservedIosManualFaq": [
+        "백업은 사용자가 만들기로 선택할 때만 만들어져요. 기기 안에서 AES-256-GCM으로 암호화되고, 사용자가 시스템 파일 선택 화면(파일 앱)에서 저장 위치를 골라 명시적으로 내보낼 때만 앱 밖으로 나가요. 현재 데이터베이스와 로컬 백업 봉투는 기기 백업에서 제외돼요.",
+        "내보낸 파일과 복구 코드를 안전하게 보관하세요. 개발자는 둘 중 어느 것에도 접근할 수 없어서, 잃어버린 코드를 복구하거나 파일을 복호화할 수 없어요. 둘 다 지원 담당자에게 보내지 마세요."
+      ],
+      "concepts": {
+        "e2ee": [
+          "종단간 암호화"
+        ],
+        "unreadable": [
+          "읽을 수 없",
+          "읽지 못"
+        ],
+        "consent": [
+          "동의"
+        ],
+        "manual": [
+          "수동",
+          "직접"
+        ],
+        "export": [
+          "내보내"
+        ],
+        "import": [
+          "가져오"
+        ],
+        "reminder": [
+          "알림"
+        ],
+        "icloudUnused": [
+          "사용하지 않"
+        ],
+        "appData": [
+          "앱 데이터"
+        ],
+        "verified": [
+          "확인",
+          "검증"
+        ],
+        "active": [
+          "활성",
+          "이용 중",
+          "쓰는 동안"
+        ],
+        "database": [
+          "DB",
+          "데이터베이스"
+        ],
+        "key": [
+          "키"
+        ],
+        "records": [
+          "기록"
+        ],
+        "together": [
+          "함께",
+          "한꺼번"
+        ],
+        "excluded": [
+          "제외",
+          "포함하지"
+        ],
+        "existing": [
+          "기존"
+        ],
+        "untouched": [
+          "그대로",
+          "건드리지",
+          "변경하지"
+        ],
+        "restore": [
+          "복원"
+        ],
+        "preDeploy": [
+          "배포 전"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "기록하기, ‘기록’ 탭, 신체 그래프, 추정, 진료 준비, 식사, 내보내기, 암호화 백업과 복원, 캘린더 연동, 알림, 위젯, 앱 잠금처럼 앱에 원래 있던 기능은 모두 계속 무료로 쓸 수 있어요.",
+        "oldAllBackupsFree": "진료 준비의 고정된 4·8·12주 보기, 모든 내보내기와 백업처럼 DoseWeek에 원래 있던 기능은 모두 무료로 남아요.",
+        "oldNothingMovedToPlus": "쓰던 기능은 모두 그대로 남고, 기록, 일정, 알림, 위젯, 백업, 내보내기도 바뀌지 않아요.",
+        "preservedFreePrefix": "네. DoseWeek는 무료로 내려받을 수 있고, 무료 사용자에게는 광고가 보여요.",
+        "preservedPlusExpiryTail": [
+          "Plus가 끝나도 기록, 템플릿, 저장한 설정은 그대로 남고, 계속 보거나 삭제할 수 있어요.",
+          "리포트 설정과 오늘 화면 배치는 Plus를 다시 쓸 때까지 무료 기본값으로 돌아가요."
+        ],
+        "preservedEarlierNoticeTail": [
+          "삭제되거나 Plus로 옮겨지는 것은 없어요.",
+          "앱의 1회 안내에서 변경 내용을 설명하고, 설정 > 정보 > 새로운 기능에서 다시 볼 수 있어요."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "기록하기, ‘기록’ 탭, 신체 그래프, 진료 요약, 식사, 내보내기, 암호화 백업과 복원, Google Drive 백업, 캘린더 연동, 알림, 위젯, 앱 잠금처럼 앱에 원래 있던 기능은 모두 계속 무료로 쓸 수 있어요.",
+        "oldAllBackupsFree": "진료 요약의 고정된 4·8·12주 보기, 모든 내보내기와 백업처럼 DoseWeek에 원래 있던 기능은 모두 무료로 남아요.",
+        "oldNothingMovedToPlus": "쓰던 기능은 모두 그대로 남고, 기록, 일정, 알림, 위젯, 백업, 내보내기도 바뀌지 않아요.",
+        "preservedFreePrefix": "네. DoseWeek는 Google Play에서 무료로 내려받을 수 있고, 무료 사용자에게는 광고가 보여요.",
+        "preservedPlusExpiryTail": [
+          "Plus가 끝나도 기록, 템플릿, 저장한 설정은 그대로 남고, 계속 보거나 삭제할 수 있어요.",
+          "진료 요약 설정과 오늘 화면 배치는 Plus를 다시 쓸 때까지 무료 기본값으로 돌아가요."
+        ],
+        "preservedEarlierNoticeTail": [
+          "삭제되거나 Plus로 옮겨지는 것은 없어요.",
+          "앱의 1회 안내에서 변경 내용을 설명하고, 설정 > 정보 > 새로운 기능에서 다시 볼 수 있어요."
+        ]
+      },
+      "oldAndroidGuideBody": "설정에서 암호화 백업 파일을 만들거나 Google Drive 백업을 켜고, 알림을 조정하고, ‘사용 분석(선택)’을 언제든 바꿀 수 있어요. 홈 화면에 DoseWeek 위젯을 추가할 수도 있어요.",
+      "oldAndroidStorageDriveSentence": "선택 사항인 Google Drive 백업을 켜면 암호화된 사본이 사용자 본인의 Google Drive 앱 데이터 폴더에도 보관돼요.",
+      "oldWeeklyServerSnapshotSentence": "서버 OS 복구용 스냅샷은 매주 따로 만들어요."
+    },
+    "en": {
+      "oldPrivacySystemExclusion": "All live records are stored locally in Android app-private storage and are excluded from Android system cloud backup and device-to-device transfer.",
+      "oldOnlyAutomaticDrive": "You make this file backup yourself; the only automatic option is the optional Google Drive backup described below, which is off by default.",
+      "oldFaqSystemExclusion": "App data remains excluded from Android system backup and device-to-device transfer.",
+      "oldCustomDriveParagraphs": [
+        "As an option, DoseWeek can also keep that encrypted backup in your own Google Drive app-data folder. Drive can see a file name containing a random identifier, the file size, the creation time, the payload version, the key version, and a random snapshot identifier. No medication name, dose, measurement, date of treatment, or note appears outside the encrypted envelope.",
+        "Encryption happens on the device before upload, with the same AES-256-GCM envelope the offline file export uses. The recovery code is never stored with the backup and is never sent anywhere. Until you confirm that you saved it, you can show the same code again; after that, DoseWeek does not show it again. You must re-enter it before any automatic backup can start. If it is lost, the developer cannot read or recover the backup.",
+        "Optional automatic backup is off by default; when it is on it runs about once a day when the device allows it, and does not promise an exact time. Deleting a backup from Drive is permanent, because Drive offers no trash for app-data files. Disconnecting stops future uploads: it does not delete backups already in Drive and does not delete records on the device, and destroying this device's copy of the recovery code is a separate, clearly labelled choice. Each backup that uploads changes, whether automatic or Back up now, is stored as a separate encrypted file. Earlier files stay until you delete them from Stored backups in the app or remove the app's data from your Google account, and they use your Google storage."
+      ],
+      "oldFreeAnswer": "Yes. DoseWeek is a free download on Google Play, and Free users see ads. Every feature the app already had stays available without payment, including recording, History, Body charts, the visit summary, meals, exports, encrypted backup and restore, Google Drive backup, calendar sync, reminders, the widget and the app lock.",
+      "oldEveryBackupFreeAnswer": "Everything that was already in DoseWeek stays free, including the fixed 4, 8 and 12-week visit summary and every export and backup. If Plus ends, your records, templates and saved settings are kept, and you can still view and delete them; visit summary settings and the Today layout return to the Free defaults until Plus is back.",
+      "oldNothingMovedToPlusAnswer": "Every feature you had stays, and your records, schedules, reminders, the widget, backups and exports are unchanged; nothing is deleted or moved into Plus. A one-time notice in the app explains the change, and you can read it again in Settings > About > What's new.",
+      "preservedManualPolicySentences": [
+        "You can manually save all app data to an encrypted backup file at a location you choose through Android's system file picker (SAF), and restore by selecting that file.",
+        "This process needs no DoseWeek account and no broad storage permission, and it uses no network access.",
+        "Backups can be restored only in DoseWeek for Android.",
+        "DoseWeek on other platforms uses a different backup format, so backups cannot be moved between platforms.",
+        "The backup uses AES-256-GCM authenticated encryption and a separate high-entropy recovery code.",
+        "It is not a DoseWeek-operated cloud backup, and there is no code-reset service.",
+        "Keep the file and code safe and separate.",
+        "If the code is lost, the developer and support cannot reset it or decrypt the file.",
+        "Until you confirm that you saved a file backup's recovery code, DoseWeek keeps that code on this device only, wrapped with a key held by the device, so that you can view it again; it is deleted once you confirm."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "If you select an external or cloud document provider, that provider stores the backup under its own privacy policy and terms. The DoseWeek developer receives neither the backup file nor its recovery code.",
+        "During restore, DoseWeek decrypts and completely validates the file, including its structure and data relationships, before atomically replacing current app data in one local transaction."
+      ],
+      "preservedManualFaqSentences": [
+        "Yes.",
+        "In Settings, use Android's system file picker to manually save all app data in an AES-256-GCM encrypted file, and select that file to restore.",
+        "A separate high-entropy recovery code is required.",
+        "Backups can be restored only in DoseWeek for Android.",
+        "DoseWeek on other platforms uses a different backup format, so backups cannot be moved between platforms."
+      ],
+      "preservedIosManualPolicy": "The live clinical database and encrypted local backup envelope are excluded from device backups. A backup is created only when you choose to create one and is encrypted on device with AES-256-GCM. It leaves the app only when you explicitly export it through the system file picker, saving it to a location you choose in the Files app. You manage the exported ciphertext and recovery code; the developer cannot access either. The location you choose in the Files app may be outside this device — a file provider you have set up — and that provider's own terms and your device settings then also apply. A backup file saved outside the app is not removed when you delete DoseWeek's data; you have to delete it yourself. A backup made on iPhone or iPad can be restored only in DoseWeek on iPhone or iPad. DoseWeek on other platforms uses different backup formats, so backup files cannot be moved between platforms.\n\nPDF and CSV exports are plaintext files generated on device only when you request them. They are delivered to the destination you choose in the system share sheet. After sharing, DoseWeek and the developer cannot control copies or retention; store and delete exported files securely.",
+      "preservedIosManualFaq": [
+        "A backup is created only when you choose to make one. It is encrypted on device with AES-256-GCM and leaves the app only when you explicitly export it through the system file picker, saving it to a location you choose in the Files app. The live database and local backup envelope are excluded from device backups.",
+        "Keep the exported file and its recovery code secure. The developer has access to neither and cannot recover a lost code or decrypt the file for you. Never share either with support."
+      ],
+      "concepts": {
+        "e2ee": [
+          "end-to-end"
+        ],
+        "unreadable": [
+          "cannot read",
+          "can’t read"
+        ],
+        "consent": [
+          "consent"
+        ],
+        "manual": [
+          "manual"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "reminder"
+        ],
+        "icloudUnused": [
+          "not used",
+          "does not use",
+          "do not use"
+        ],
+        "appData": [
+          "app data"
+        ],
+        "verified": [
+          "verified"
+        ],
+        "active": [
+          "active"
+        ],
+        "database": [
+          "database",
+          "DB"
+        ],
+        "key": [
+          "key"
+        ],
+        "records": [
+          "record"
+        ],
+        "together": [
+          "together",
+          "as a set"
+        ],
+        "excluded": [
+          "excluded",
+          "exclude"
+        ],
+        "existing": [
+          "existing"
+        ],
+        "untouched": [
+          "untouched",
+          "unchanged"
+        ],
+        "restore": [
+          "restore"
+        ],
+        "preDeploy": [
+          "before deployment",
+          "pre-deploy"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Everything the app already did stays available without payment, including recording, History, Body charts, the estimate, Visit Prep, meals, exports, encrypted backup and restore, calendar sync, reminders, widgets and App Lock.",
+        "oldAllBackupsFree": "Everything that was already in DoseWeek stays free, including the fixed 4, 8 and 12-week Visit Prep and every export and backup.",
+        "oldNothingMovedToPlus": "Every feature you had stays, and your records, schedules, reminders, widgets, backups and exports are unchanged; nothing is deleted or moved into Plus.",
+        "preservedFreePrefix": "Yes. DoseWeek is a free download, and Free users see ads.",
+        "preservedPlusExpiryTail": [
+          "If Plus ends, your records, templates and saved settings are kept, and you can still view and delete them; report settings and the Today layout return to the Free defaults until Plus is back."
+        ],
+        "preservedEarlierNoticeTail": [
+          "A one-time notice in the app explains the change, and you can read it again in Settings > About > What's new."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Every feature the app already had stays available without payment, including recording, History, Body charts, the visit summary, meals, exports, encrypted backup and restore, Google Drive backup, calendar sync, reminders, the widget and the app lock.",
+        "oldAllBackupsFree": "Everything that was already in DoseWeek stays free, including the fixed 4, 8 and 12-week visit summary and every export and backup.",
+        "oldNothingMovedToPlus": "Every feature you had stays, and your records, schedules, reminders, the widget, backups and exports are unchanged; nothing is deleted or moved into Plus.",
+        "preservedFreePrefix": "Yes. DoseWeek is a free download on Google Play, and Free users see ads.",
+        "preservedPlusExpiryTail": [
+          "If Plus ends, your records, templates and saved settings are kept, and you can still view and delete them; visit summary settings and the Today layout return to the Free defaults until Plus is back."
+        ],
+        "preservedEarlierNoticeTail": [
+          "A one-time notice in the app explains the change, and you can read it again in Settings > About > What's new."
+        ]
+      },
+      "oldAndroidGuideBody": "In Settings, create an encrypted backup file or turn on Google Drive backup, adjust Notifications and change Usage analytics (optional) at any time. You can also add the DoseWeek widget to your home screen.",
+      "oldAndroidStorageDriveSentence": "If you turn on the optional Google Drive backup, an encrypted copy is also kept in your own Google Drive app-data folder.",
+      "oldWeeklyServerSnapshotSentence": "Separate server OS recovery snapshots are made weekly."
+    },
+    "ja": {
+      "oldPrivacySystemExclusion": "現在の記録はアプリ専用領域に保存され、Androidのシステムクラウドバックアップと端末間転送から除外されます。",
+      "oldOnlyAutomaticDrive": "自動で実行されるのは、下で説明する任意のGoogleドライブへのバックアップ（初期設定ではオフ）だけです。",
+      "oldFaqSystemExclusion": "データはシステムバックアップと端末間転送から引き続き除外されます。",
+      "oldCustomDriveParagraphs": [
+        "任意で、DoseWeekはこの暗号化されたバックアップをユーザー自身のGoogleドライブのアプリデータフォルダに保管することもできます。ドライブから見えるのは、ランダムな識別子を含むファイル名、ファイルサイズ、作成日時、ペイロードのバージョン、鍵のバージョン、ランダムなスナップショット識別子だけです。薬の名前、用量、測定値、治療日、メモが暗号化されたエンベロープの外に現れることはありません。",
+        "暗号化はアップロード前に端末上で行われ、オフラインのファイル書き出しと同じAES-256-GCMのエンベロープを使用します。復旧コードがバックアップと一緒に保存されることはなく、どこにも送信されません。復旧コードは、保管したことを確認するまでは同じコードを再表示でき、確認後は再び表示されません。自動バックアップを開始するには、ユーザーがそのコードを再入力する必要があります。コードを失うと、開発者はバックアップを読むことも復元することもできません。",
+        "任意の自動バックアップは既定でオフです。オンにすると端末の状況が許すときに1日1回程度実行され、正確な時刻は約束しません。ドライブからバックアップを削除すると元に戻せません。ドライブはアプリデータのファイルにゴミ箱を用意していないためです。接続を解除すると以後のアップロードは停止しますが、すでにドライブにあるバックアップも端末内の記録も削除されません。この端末に保存された復旧コードの控えを消すことは、明確に区別された別の選択です。変更をアップロードするバックアップは、自動バックアップでも「今すぐバックアップ」でも、そのたびに別の暗号化ファイルとして保存されます。以前のファイルは、アプリの「保存されたバックアップ」から削除するか、Googleアカウントからこのアプリのデータを削除するまで残り、Googleの保存容量を使用します。"
+      ],
+      "oldFreeAnswer": "はい。DoseWeekはGoogle Playで無料でダウンロードでき、無料版のユーザーには広告が表示されます。記録、履歴、身体のグラフ、受診サマリー、食事、書き出し、暗号化バックアップと復元、Googleドライブへのバックアップ、カレンダー連携、リマインダー、ウィジェット、アプリロックなど、アプリにもともとあった機能はすべて、引き続き支払いなしで使えます。",
+      "oldEveryBackupFreeAnswer": "4・8・12週間の固定の受診サマリーや、すべての書き出しとバックアップなど、DoseWeekにもともとあった機能はすべて無料のままです。Plusが終了しても、記録、テンプレート、保存した設定は保持され、引き続き表示・削除できます。受診サマリーの設定と「今日」画面のレイアウトは、Plusを再び利用するまで無料版の初期設定に戻ります。",
+      "oldNothingMovedToPlusAnswer": "使っていた機能はすべてそのまま残り、記録、スケジュール、リマインダー、ウィジェット、バックアップ、書き出しも変わりません。削除されたりPlusに移されたりするものはありません。変更内容はアプリ内の1回限りのお知らせで説明され、「設定 > 情報 > 今回のアップデート」で再び確認できます。",
+      "preservedManualPolicySentences": [
+        "Androidのシステムファイル選択画面（SAF）で保存先を指定し、全データを暗号化ファイルへ手動保存し、そのファイルを選択して復元できます。",
+        "DoseWeekアカウントも保存領域への広範な権限も不要で、この処理はネットワークを使いません。",
+        "バックアップはAndroid版DoseWeekでのみ復元できます。",
+        "他のプラットフォームのDoseWeekは別のバックアップ形式を使うため、プラットフォーム間でバックアップを移すことはできません。",
+        "バックアップはAES-256-GCM認証付き暗号化と、別に発行される高エントロピーの復旧コードで保護されます。",
+        "このファイルバックアップはユーザーが自分で作成します。",
+        "DoseWeek運営のクラウドバックアップではなく、コードの再設定サービスもありません。",
+        "ファイルとコードを安全な別々の場所に保管してください。",
+        "開発者やサポートは、失われたコードの再設定やファイルの復号を行えません。",
+        "ファイルバックアップの復旧コードを保管したことを確認するまで、DoseWeekは再表示できるよう、そのコードを端末が保持する鍵で保護してこの端末内にのみ保管し、確認すると削除します。"
+      ],
+      "preservedManualPolicyParagraphs": [
+        "外部またはクラウドのドキュメントプロバイダーを選ぶと、ファイルはその提供者の規約とプライバシーポリシーに従って保存されます。DoseWeekの開発者はバックアップファイルも復旧コードも受け取りません。",
+        "復元時はファイル全体を復号し、構造とデータ関係を完全に検証した後にのみ、現在のデータを1回のローカルトランザクションでアトミックに置き換えます。"
+      ],
+      "preservedManualFaqSentences": [
+        "はい。",
+        "設定からAndroidのシステムファイル選択画面を使い、全データをAES-256-GCM暗号化ファイルとして手動保存し、復元時に選択します。",
+        "別の高エントロピー復旧コードが必要です。",
+        "バックアップはAndroid版DoseWeekでのみ復元できます。",
+        "他のプラットフォームのDoseWeekは別のバックアップ形式を使うため、プラットフォーム間でバックアップを移すことはできません。"
+      ],
+      "preservedIosManualPolicy": "現在使用中の臨床記録データベースと暗号化されたローカルバックアップ・エンベロープは、デバイスバックアップの対象外です。バックアップは、ユーザーが作成を選んだ場合にのみ端末内でAES-256-GCMにより暗号化されます。システムのファイル選択画面（ファイルアプリ）で保存先を選んで明示的に書き出した場合にのみアプリ外へ出ます。書き出した暗号文と復旧コードはユーザー自身が管理し、開発者はどちらにもアクセスできません。 「ファイル」アプリで選んだ保存先はこの端末の外（ユーザーが設定したファイルプロバイダ）である場合があり、そのときはそのプロバイダの規約と端末の設定も適用されます。アプリの外に保存したバックアップファイルはアプリのデータを削除しても消えないため、ユーザー自身で削除してください。iPhoneやiPadで作成したバックアップは、iPhone・iPad版DoseWeekでのみ復元できます。他のプラットフォーム版DoseWeekはバックアップ形式が異なるため、プラットフォーム間でバックアップファイルを移すことはできません。\n\nPDFとCSVの書き出しデータは平文ファイルで、ユーザーが書き出しを選んだ場合にのみデバイス上で生成されます。システム共有シートで選択した送信先に渡されます。共有後のコピーや保存期間はDoseWeekと開発者には管理できないため、書き出したファイルはユーザー自身で安全に保管・削除してください。",
+      "preservedIosManualFaq": [
+        "バックアップは、ユーザーが作成を選んだ場合にのみ作られます。デバイス上でAES-256-GCMにより暗号化され、システムのファイル選択画面（ファイルアプリ）で保存先を選んで明示的に書き出した場合にのみアプリ外へ出ます。現在のデータベースとローカルバックアップ・エンベロープはデバイスバックアップの対象外です。",
+        "書き出したファイルと復旧コードは安全に保管してください。開発者はどちらにもアクセスできず、紛失したコードの復旧やファイルの復号はできません。どちらもサポートに送らないでください。"
+      ],
+      "concepts": {
+        "e2ee": [
+          "エンドツーエンド"
+        ],
+        "unreadable": [
+          "読めません",
+          "読み取れません",
+          "読み取れない"
+        ],
+        "consent": [
+          "同意"
+        ],
+        "manual": [
+          "手動"
+        ],
+        "export": [
+          "書き出し",
+          "エクスポート"
+        ],
+        "import": [
+          "読み込み",
+          "インポート"
+        ],
+        "reminder": [
+          "リマインダー",
+          "通知"
+        ],
+        "icloudUnused": [
+          "使用しません",
+          "使いません"
+        ],
+        "appData": [
+          "アプリデータ",
+          "アプリのデータ"
+        ],
+        "verified": [
+          "確認",
+          "検証"
+        ],
+        "active": [
+          "有効"
+        ],
+        "database": [
+          "DB",
+          "データベース"
+        ],
+        "key": [
+          "キー",
+          "鍵"
+        ],
+        "records": [
+          "記録"
+        ],
+        "together": [
+          "まとめて",
+          "一緒",
+          "すべて"
+        ],
+        "excluded": [
+          "除外"
+        ],
+        "existing": [
+          "既存"
+        ],
+        "untouched": [
+          "変更しません",
+          "そのまま",
+          "変更されません"
+        ],
+        "restore": [
+          "復元"
+        ],
+        "preDeploy": [
+          "デプロイ前",
+          "配備前"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "記録、履歴、身体のグラフ、推定、受診準備、食事、書き出し、暗号化バックアップと復元、カレンダー連携、リマインダー、ウィジェット、アプリロックなど、アプリにもともとあった機能はすべて、引き続き支払いなしで使えます。",
+        "oldAllBackupsFree": "4・8・12週間の固定の受診準備や、すべての書き出しとバックアップなど、DoseWeekにもともとあった機能はすべて無料のままです。",
+        "oldNothingMovedToPlus": "使っていた機能はすべてそのまま残り、記録、スケジュール、リマインダー、ウィジェット、バックアップ、書き出しも変わりません。",
+        "preservedFreePrefix": "はい。 DoseWeekは無料でダウンロードでき、無料版のユーザーには広告が表示されます。",
+        "preservedPlusExpiryTail": [
+          "Plusが終了しても、記録、テンプレート、保存した設定は保持され、引き続き表示・削除できます。",
+          "レポートの設定と「今日」画面のレイアウトは、Plusを再び利用するまで無料版の初期設定に戻ります。"
+        ],
+        "preservedEarlierNoticeTail": [
+          "削除されたりPlusに移されたりするものはありません。",
+          "変更内容はアプリ内の1回限りのお知らせで説明され、「設定 > 情報 > 今回のアップデート」で再び確認できます。"
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "記録、履歴、身体のグラフ、受診サマリー、食事、書き出し、暗号化バックアップと復元、Googleドライブへのバックアップ、カレンダー連携、リマインダー、ウィジェット、アプリロックなど、アプリにもともとあった機能はすべて、引き続き支払いなしで使えます。",
+        "oldAllBackupsFree": "4・8・12週間の固定の受診サマリーや、すべての書き出しとバックアップなど、DoseWeekにもともとあった機能はすべて無料のままです。",
+        "oldNothingMovedToPlus": "使っていた機能はすべてそのまま残り、記録、スケジュール、リマインダー、ウィジェット、バックアップ、書き出しも変わりません。",
+        "preservedFreePrefix": "はい。 DoseWeekはGoogle Playで無料でダウンロードでき、無料版のユーザーには広告が表示されます。",
+        "preservedPlusExpiryTail": [
+          "Plusが終了しても、記録、テンプレート、保存した設定は保持され、引き続き表示・削除できます。",
+          "受診サマリーの設定と「今日」画面のレイアウトは、Plusを再び利用するまで無料版の初期設定に戻ります。"
+        ],
+        "preservedEarlierNoticeTail": [
+          "削除されたりPlusに移されたりするものはありません。",
+          "変更内容はアプリ内の1回限りのお知らせで説明され、「設定 > 情報 > 今回のアップデート」で再び確認できます。"
+        ]
+      },
+      "oldAndroidGuideBody": "「設定」で暗号化バックアップファイルを作成するかGoogleドライブへのバックアップをオンにし、通知を調整し、「利用状況分析（任意）」をいつでも変更できます。ホーム画面にDoseWeekのウィジェットを追加することもできます。",
+      "oldAndroidStorageDriveSentence": "任意のGoogleドライブへのバックアップをオンにすると、暗号化された控えがユーザー自身のGoogleドライブのアプリデータフォルダにも保管されます。",
+      "oldWeeklyServerSnapshotSentence": "サーバーOS復旧用スナップショットは毎週別に作成します。"
+    },
+    "de": {
+      "oldPrivacySystemExclusion": "Aktuelle Daten bleiben im privaten App-Speicher und sind von der Android-Systemsicherung und Geräteübertragung ausgeschlossen.",
+      "oldOnlyAutomaticDrive": "Diese Dateisicherung erstellen Sie selbst; automatisch läuft nur die unten beschriebene optionale Google-Drive-Sicherung, die standardmäßig ausgeschaltet ist.",
+      "oldFaqSystemExclusion": "Die Daten bleiben von Systemsicherung und Geräteübertragung ausgeschlossen.",
+      "oldCustomDriveParagraphs": [
+        "Optional kann DoseWeek diese verschlüsselte Sicherung auch in Ihrem eigenen Google-Drive-App-Datenordner ablegen. Drive sieht dabei einen Dateinamen mit einer zufälligen Kennung, die Dateigröße, den Erstellungszeitpunkt, die Nutzlastversion, die Schlüsselversion und eine zufällige Snapshot-Kennung. Kein Medikamentenname, keine Dosis, kein Messwert, kein Behandlungsdatum und keine Notiz erscheinen außerhalb des verschlüsselten Umschlags.",
+        "Die Verschlüsselung erfolgt vor dem Hochladen auf dem Gerät, mit demselben AES-256-GCM-Umschlag wie beim Dateiexport ohne Netzverbindung. Der Wiederherstellungscode wird nie zusammen mit der Sicherung gespeichert und nirgendwohin gesendet. Bis Sie bestätigen, dass Sie ihn gespeichert haben, können Sie denselben Code erneut anzeigen; danach zeigt DoseWeek ihn nicht mehr an. Sie müssen ihn erneut eingeben, bevor eine automatische Sicherung beginnen kann. Geht er verloren, kann der Entwickler die Sicherung weder lesen noch wiederherstellen.",
+        "Die optionale automatische Sicherung ist standardmäßig aus; eingeschaltet läuft sie etwa einmal täglich, wenn das Gerät es zulässt, und sagt keine genaue Uhrzeit zu. Das Löschen einer Sicherung in Drive ist endgültig, denn Drive bietet für App-Daten-Dateien keinen Papierkorb. Ein Trennen der Verbindung beendet künftige Uploads: Bereits in Drive liegende Sicherungen werden dadurch nicht gelöscht und die Daten auf dem Gerät ebenso wenig; die auf diesem Gerät gespeicherte Kopie des Wiederherstellungscodes zu vernichten, ist eine gesonderte, klar gekennzeichnete Entscheidung. Jede Sicherung, die Änderungen hochlädt, ob automatisch oder über „Jetzt sichern“, wird als eigene verschlüsselte Datei gespeichert. Ältere Dateien bleiben erhalten, bis Sie sie in der App unter „Gespeicherte Backups“ löschen oder die Daten der App aus Ihrem Google-Konto entfernen, und sie belegen Ihren Google-Speicher."
+      ],
+      "oldFreeAnswer": "Ja. DoseWeek kann bei Google Play kostenlos heruntergeladen werden, und in der kostenlosen Version wird Werbung angezeigt. Jede Funktion, die die App bereits hatte, bleibt ohne Bezahlung verfügbar, darunter das Erfassen, der Verlauf, die Körperdiagramme, die Zusammenfassung für den Arztbesuch, Mahlzeiten, Exporte, verschlüsselte Sicherung und Wiederherstellung, die Google-Drive-Sicherung, Kalendersynchronisierung, Erinnerungen, das Widget und die App-Sperre.",
+      "oldEveryBackupFreeAnswer": "Alles, was bereits in DoseWeek enthalten war, bleibt kostenlos, darunter die feste Zusammenfassung für den Arztbesuch für 4, 8 und 12 Wochen sowie alle Exporte und Sicherungen. Endet Plus, bleiben Ihre Aufzeichnungen, Vorlagen und gespeicherten Einstellungen erhalten, und Sie können sie weiterhin ansehen und löschen; die Einstellungen der Zusammenfassung für den Arztbesuch und das Layout von „Heute“ kehren zu den Standardwerten der kostenlosen Version zurück, bis Plus wieder aktiv ist.",
+      "oldNothingMovedToPlusAnswer": "Alle Funktionen, die Sie hatten, bleiben erhalten, und Ihre Aufzeichnungen, Zeitpläne, Erinnerungen, das Widget, Sicherungen und Exporte bleiben unverändert; nichts wird gelöscht oder zu Plus verschoben. Ein einmaliger Hinweis in der App erklärt die Änderung, und Sie können ihn unter „Einstellungen > Info > Was ist neu?“ erneut lesen.",
+      "preservedManualPolicySentences": [
+        "Über die Android-Systemdateiauswahl (SAF) können Sie alle App-Daten manuell in einer verschlüsselten Datei am gewählten Ort speichern und diese Datei zur Wiederherstellung auswählen.",
+        "Dafür sind weder ein DoseWeek-Konto noch umfassender Speicherzugriff nötig, und der Vorgang nutzt keine Netzverbindung.",
+        "Sicherungen lassen sich nur in DoseWeek für Android wiederherstellen.",
+        "DoseWeek auf anderen Plattformen verwendet ein anderes Sicherungsformat, daher können Sicherungen nicht zwischen Plattformen übertragen werden.",
+        "Die Sicherung nutzt authentifizierte AES-256-GCM-Verschlüsselung und einen getrennten Wiederherstellungscode mit hoher Entropie.",
+        "Sie ist keine von DoseWeek betriebene Cloud-Sicherung; es gibt keinen Dienst zum Zurücksetzen des Codes.",
+        "Bewahren Sie Datei und Code sicher und getrennt auf.",
+        "Entwickler und Support können einen verlorenen Code nicht zurücksetzen oder die Datei entschlüsseln.",
+        "Bis Sie bestätigen, dass Sie den Wiederherstellungscode einer Dateisicherung gespeichert haben, bewahrt DoseWeek diesen Code nur auf diesem Gerät auf, geschützt mit einem vom Gerät verwahrten Schlüssel, damit Sie ihn erneut ansehen können; nach Ihrer Bestätigung wird er gelöscht."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Wenn Sie einen externen oder Cloud-Dokumentanbieter wählen, speichert dieser die Datei nach seinen eigenen Bedingungen und Datenschutzregeln. Der DoseWeek-Entwickler erhält weder die Datei noch den Wiederherstellungscode.",
+        "Vor der Wiederherstellung entschlüsselt und prüft DoseWeek die gesamte Datei einschließlich Struktur und Datenbeziehungen. Erst danach werden die aktuellen Daten atomar in einer lokalen Transaktion ersetzt."
+      ],
+      "preservedManualFaqSentences": [
+        "Ja.",
+        "Wählen Sie in den Einstellungen über die Android-Systemdateiauswahl einen Ort für eine AES-256-GCM-verschlüsselte Gesamtsicherung und später die Datei zur Wiederherstellung.",
+        "Ein getrennter Wiederherstellungscode mit hoher Entropie ist erforderlich.",
+        "Sicherungen lassen sich nur in DoseWeek für Android wiederherstellen.",
+        "DoseWeek auf anderen Plattformen verwendet ein anderes Sicherungsformat, daher können Sicherungen nicht zwischen Plattformen übertragen werden."
+      ],
+      "preservedIosManualPolicy": "Die aktive klinische Datenbank und der verschlüsselte lokale Backup-Umschlag sind von Gerätebackups ausgenommen. Ein Backup wird nur erstellt, wenn Sie sich dafür entscheiden, und wird auf dem Gerät mit AES-256-GCM verschlüsselt. Es verlässt die App nur, wenn Sie es ausdrücklich über die Dateiauswahl des Systems exportieren, also an einem selbst gewählten Speicherort in der App „Dateien“ sichern. Den exportierten Chiffretext und den Wiederherstellungscode verwalten Sie selbst; die Entwicklung hat auf beides keinen Zugriff. Der in der App „Dateien“ gewählte Speicherort kann außerhalb dieses Geräts liegen – bei einem von Ihnen eingerichteten Dateianbieter –, und dann gelten zusätzlich die Bedingungen dieses Anbieters und Ihre Geräteeinstellungen. Eine außerhalb der App gespeicherte Backup-Datei wird beim Löschen der DoseWeek-Daten nicht entfernt; Sie müssen sie selbst löschen. Eine auf iPhone oder iPad erstellte Sicherung lässt sich nur in DoseWeek auf iPhone oder iPad wiederherstellen. DoseWeek auf anderen Plattformen verwendet andere Sicherungsformate, daher können Sicherungsdateien nicht zwischen Plattformen übertragen werden.\n\nPDF- und CSV-Exporte sind unverschlüsselte Dateien, die nur auf Ihre Anforderung hin auf dem Gerät erzeugt werden. Sie werden an das Ziel übergeben, das Sie im Teilen-Menü des Systems auswählen. Nach dem Teilen können weder DoseWeek noch die Entwicklung Kopien oder Aufbewahrung kontrollieren; bewahren und löschen Sie exportierte Dateien daher sicher.",
+      "preservedIosManualFaq": [
+        "Eine Sicherung entsteht nur, wenn Sie sie anlegen. Sie wird auf dem Gerät mit AES-256-GCM verschlüsselt und verlässt die App erst, wenn Sie sie über die Systemauswahl an einen Ort in der Dateien-App exportieren. Die aktive Datenbank und die lokale Sicherungshülle sind von Gerätesicherungen ausgenommen.",
+        "Bewahren Sie die exportierte Datei und ihren Wiederherstellungscode sicher auf. Der Entwickler hat auf beides keinen Zugriff und kann weder einen verlorenen Code zurücksetzen noch die Datei für Sie entschlüsseln. Geben Sie beides nie an den Support weiter."
+      ],
+      "concepts": {
+        "e2ee": [
+          "Ende-zu-Ende"
+        ],
+        "unreadable": [
+          "nicht lesen"
+        ],
+        "consent": [
+          "Einwilligung",
+          "Zustimmung"
+        ],
+        "manual": [
+          "manuell"
+        ],
+        "export": [
+          "Export"
+        ],
+        "import": [
+          "Import"
+        ],
+        "reminder": [
+          "Erinner"
+        ],
+        "icloudUnused": [
+          "nicht verwendet",
+          "nicht genutzt",
+          "nutzt kein"
+        ],
+        "appData": [
+          "App-Daten"
+        ],
+        "verified": [
+          "bestätigt",
+          "verifiziert",
+          "geprüft"
+        ],
+        "active": [
+          "aktiv"
+        ],
+        "database": [
+          "Datenbank",
+          "DB"
+        ],
+        "key": [
+          "Schlüssel"
+        ],
+        "records": [
+          "Aufzeichnung",
+          "Datensatz",
+          "Eintrag"
+        ],
+        "together": [
+          "zusammen",
+          "gemeinsam"
+        ],
+        "excluded": [
+          "ausgeschlossen"
+        ],
+        "existing": [
+          "bestehend"
+        ],
+        "untouched": [
+          "unverändert",
+          "unberührt"
+        ],
+        "restore": [
+          "Wiederherstell"
+        ],
+        "preDeploy": [
+          "vor der Bereitstellung",
+          "vor einer Bereitstellung",
+          "vor dem Deployment"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Alles, was die App bereits bot, bleibt ohne Bezahlung verfügbar, darunter das Erfassen, der Verlauf, die Körperdiagramme, die Schätzung, das Arztgespräch, Mahlzeiten, Exporte, verschlüsselte Sicherung und Wiederherstellung, Kalendersynchronisierung, Erinnerungen, Widgets und die App-Sperre.",
+        "oldAllBackupsFree": "Alles, was bereits in DoseWeek enthalten war, bleibt kostenlos, darunter das feste Arztgespräch für 4, 8 und 12 Wochen sowie alle Exporte und Sicherungen.",
+        "oldNothingMovedToPlus": "Alle Funktionen, die Sie hatten, bleiben erhalten, und Ihre Einträge, Zeitpläne, Erinnerungen, Widgets, Sicherungen und Exporte bleiben unverändert; nichts wird gelöscht oder zu Plus verschoben.",
+        "preservedFreePrefix": "Ja. DoseWeek kann kostenlos heruntergeladen werden, und in der kostenlosen Version wird Werbung angezeigt.",
+        "preservedPlusExpiryTail": [
+          "Endet Plus, bleiben Ihre Einträge, Vorlagen und gespeicherten Einstellungen erhalten, und Sie können sie weiterhin ansehen und löschen; die Berichtseinstellungen und das Layout von „Heute“ kehren zu den Standardwerten der kostenlosen Version zurück, bis Plus wieder aktiv ist."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Ein einmaliger Hinweis in der App erklärt die Änderung, und Sie können ihn unter „Einstellungen > Info > Neuerungen“ erneut lesen."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Jede Funktion, die die App bereits hatte, bleibt ohne Bezahlung verfügbar, darunter das Erfassen, der Verlauf, die Körperdiagramme, die Zusammenfassung für den Arztbesuch, Mahlzeiten, Exporte, verschlüsselte Sicherung und Wiederherstellung, die Google-Drive-Sicherung, Kalendersynchronisierung, Erinnerungen, das Widget und die App-Sperre.",
+        "oldAllBackupsFree": "Alles, was bereits in DoseWeek enthalten war, bleibt kostenlos, darunter die feste Zusammenfassung für den Arztbesuch für 4, 8 und 12 Wochen sowie alle Exporte und Sicherungen.",
+        "oldNothingMovedToPlus": "Alle Funktionen, die Sie hatten, bleiben erhalten, und Ihre Aufzeichnungen, Zeitpläne, Erinnerungen, das Widget, Sicherungen und Exporte bleiben unverändert; nichts wird gelöscht oder zu Plus verschoben.",
+        "preservedFreePrefix": "Ja. DoseWeek kann bei Google Play kostenlos heruntergeladen werden, und in der kostenlosen Version wird Werbung angezeigt.",
+        "preservedPlusExpiryTail": [
+          "Endet Plus, bleiben Ihre Aufzeichnungen, Vorlagen und gespeicherten Einstellungen erhalten, und Sie können sie weiterhin ansehen und löschen; die Einstellungen der Zusammenfassung für den Arztbesuch und das Layout von „Heute“ kehren zu den Standardwerten der kostenlosen Version zurück, bis Plus wieder aktiv ist."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Ein einmaliger Hinweis in der App erklärt die Änderung, und Sie können ihn unter „Einstellungen > Info > Was ist neu?",
+          "“ erneut lesen."
+        ]
+      },
+      "oldAndroidGuideBody": "In den Einstellungen können Sie eine verschlüsselte Backup-Datei erstellen oder das Google Drive-Backup einschalten, Mitteilungen anpassen und die „Nutzungsanalyse (optional)“ jederzeit ändern. Sie können auch das DoseWeek-Widget zum Startbildschirm hinzufügen.",
+      "oldAndroidStorageDriveSentence": "Wenn Sie die optionale Google-Drive-Sicherung einschalten, liegt eine verschlüsselte Kopie zusätzlich in Ihrem eigenen Google-Drive-App-Datenordner.",
+      "oldWeeklyServerSnapshotSentence": "Separate Snapshots zur Wiederherstellung des Server-OS werden wöchentlich erstellt."
+    },
+    "fr": {
+      "oldPrivacySystemExclusion": "Les données actives restent dans le stockage privé et sont exclues de la sauvegarde système Android et du transfert entre appareils.",
+      "oldOnlyAutomaticDrive": "Vous créez vous-même cette sauvegarde de fichier ; la seule option automatique est la sauvegarde Google Drive facultative décrite plus bas, désactivée par défaut.",
+      "oldFaqSystemExclusion": "Les données restent exclues de la sauvegarde système et du transfert entre appareils.",
+      "oldCustomDriveParagraphs": [
+        "En option, DoseWeek peut aussi conserver cette sauvegarde chiffrée dans votre propre dossier de données d’application Google Drive. Drive voit un nom de fichier contenant un identifiant aléatoire, la taille du fichier, la date de création, la version de charge utile, la version de clé et un identifiant aléatoire d’instantané. Aucun nom de médicament, dose, mesure, date de traitement ou note n’apparaît en dehors de l’enveloppe chiffrée.",
+        "Le chiffrement a lieu sur l’appareil avant l’envoi, avec la même enveloppe AES-256-GCM que l’export de fichier hors ligne. Le code de récupération n’est jamais stocké avec la sauvegarde et n’est envoyé nulle part. Tant que vous n’avez pas confirmé l’avoir conservé, vous pouvez réafficher le même code ; ensuite, DoseWeek ne l’affiche plus. Vous devez le saisir de nouveau avant qu’une sauvegarde automatique puisse commencer. S’il est perdu, le développeur ne peut ni lire ni récupérer la sauvegarde.",
+        "La sauvegarde automatique facultative est désactivée par défaut ; une fois activée, elle s’exécute environ une fois par jour lorsque l’appareil le permet et ne promet aucune heure précise. Supprimer une sauvegarde dans Drive est définitif, car Drive n’offre pas de corbeille pour les fichiers de données d’application. La déconnexion arrête les envois suivants : elle ne supprime ni les sauvegardes déjà présentes dans Drive ni les données de l’appareil, et détruire la copie du code de récupération conservée sur cet appareil est un choix distinct et clairement signalé. Chaque sauvegarde qui envoie des modifications, automatique ou via « Sauvegarder maintenant », est conservée comme fichier chiffré distinct. Les fichiers précédents restent jusqu’à ce que vous les supprimiez dans « Sauvegardes enregistrées » de l’application ou que vous supprimiez les données de l’application de votre compte Google, et ils occupent votre espace de stockage Google."
+      ],
+      "oldFreeAnswer": "Oui. DoseWeek se télécharge gratuitement sur Google Play, et les utilisateurs de la version gratuite voient des publicités. Toutes les fonctions que l’app proposait déjà restent disponibles sans paiement, notamment l’enregistrement, l’historique, les graphiques de « Corps », le résumé de consultation, les repas, les exportations, la sauvegarde chiffrée et la restauration, la sauvegarde Google Drive, la synchronisation du calendrier, les rappels, le widget et le verrouillage de l’app.",
+      "oldEveryBackupFreeAnswer": "Tout ce qui existait déjà dans DoseWeek reste gratuit, y compris le résumé de consultation fixe sur 4, 8 et 12 semaines et toutes les exportations et sauvegardes. Si Plus prend fin, vos enregistrements, modèles et réglages enregistrés sont conservés, et vous pouvez toujours les consulter et les supprimer ; les réglages du résumé de consultation et la disposition d’« Aujourd’hui » reviennent aux valeurs par défaut de la version gratuite jusqu’au retour de Plus.",
+      "oldNothingMovedToPlusAnswer": "Toutes les fonctions dont vous disposiez restent disponibles, et vos enregistrements, calendriers d’injection, rappels, le widget, les sauvegardes et les exportations ne changent pas ; rien n’est supprimé ni déplacé vers Plus. Un avis unique dans l’app explique ce changement, et vous pouvez le relire dans Réglages > À propos > « Quoi de neuf ? ».",
+      "preservedManualPolicySentences": [
+        "Le sélecteur de fichiers système Android (SAF) permet de sauvegarder manuellement toutes les données dans un fichier chiffré à l’emplacement choisi et de sélectionner ce fichier pour restaurer.",
+        "Aucun compte DoseWeek ni accès général au stockage n’est nécessaire, et l’opération n’utilise aucun accès réseau.",
+        "Les sauvegardes ne peuvent être restaurées que dans DoseWeek pour Android.",
+        "DoseWeek sur les autres plateformes utilise un autre format de sauvegarde : les sauvegardes ne peuvent donc pas passer d’une plateforme à l’autre.",
+        "La sauvegarde utilise un chiffrement authentifié AES-256-GCM et un code de récupération distinct à haute entropie.",
+        "Ce n’est pas un cloud géré par DoseWeek, et le code ne peut pas être réinitialisé.",
+        "Conservez le fichier et le code séparément.",
+        "Le développeur et l’assistance ne peuvent pas réinitialiser un code perdu ni déchiffrer le fichier.",
+        "Tant que vous n’avez pas confirmé avoir conservé le code de récupération d’une sauvegarde sur fichier, DoseWeek garde ce code uniquement sur cet appareil, protégé par une clé détenue par l’appareil, afin que vous puissiez le revoir ; il est supprimé dès votre confirmation."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Si vous choisissez un fournisseur de documents externe ou dans le cloud, il stocke le fichier selon ses propres conditions et sa politique de confidentialité. Le développeur de DoseWeek ne reçoit ni le fichier ni le code de récupération.",
+        "Avant la restauration, DoseWeek déchiffre et valide entièrement le fichier, sa structure et les relations entre les données, puis seulement remplace atomiquement les données actuelles dans une transaction locale."
+      ],
+      "preservedManualFaqSentences": [
+        "Oui.",
+        "Dans les réglages, utilisez le sélecteur de fichiers Android pour sauvegarder manuellement toutes les données dans un fichier chiffré avec AES-256-GCM, puis sélectionnez-le pour restaurer.",
+        "Un code de récupération distinct à haute entropie est requis.",
+        "Les sauvegardes ne peuvent être restaurées que dans DoseWeek pour Android.",
+        "DoseWeek sur les autres plateformes utilise un autre format de sauvegarde : les sauvegardes ne peuvent donc pas passer d’une plateforme à l’autre."
+      ],
+      "preservedIosManualPolicy": "La base de données clinique active et l’enveloppe de sauvegarde locale chiffrée sont exclues des sauvegardes de l’appareil. Une sauvegarde n’est créée que si vous choisissez d’en créer une, et elle est chiffrée sur l’appareil avec AES-256-GCM. Elle ne quitte l’app que si vous l’exportez explicitement via le sélecteur de fichiers du système, en l’enregistrant à l’emplacement de votre choix dans l’app Fichiers. Vous gérez vous-même le texte chiffré exporté et le code de récupération ; le développeur n’a accès ni à l’un ni à l’autre. L’emplacement que vous choisissez dans l’app Fichiers peut se trouver hors de cet appareil — chez un fournisseur de fichiers que vous avez configuré — et les conditions de ce fournisseur ainsi que les réglages de votre appareil s’appliquent alors également. Un fichier de sauvegarde enregistré hors de l’app n’est pas supprimé lorsque vous effacez les données de DoseWeek ; vous devez le supprimer vous-même. Une sauvegarde créée sur iPhone ou iPad ne peut être restaurée que dans DoseWeek sur iPhone ou iPad. DoseWeek sur d’autres plateformes utilise d’autres formats de sauvegarde : les fichiers de sauvegarde ne peuvent donc pas passer d’une plateforme à l’autre.\n\nLes exports PDF et CSV sont des fichiers en clair, générés sur l’appareil uniquement lorsque vous le demandez. Ils sont transmis à la destination que vous choisissez dans la feuille de partage du système. Après le partage, DoseWeek et le développeur ne peuvent contrôler ni les copies ni leur durée de conservation : conservez et supprimez les fichiers exportés de façon sécurisée.",
+      "preservedIosManualFaq": [
+        "Une sauvegarde n’est créée que si vous le demandez. Elle est chiffrée sur l’appareil avec AES-256-GCM et ne quitte l’app que lorsque vous l’exportez via le sélecteur de fichiers du système, vers un emplacement choisi dans l’app Fichiers. La base de données active et l’enveloppe de sauvegarde locale sont exclues des sauvegardes de l’appareil.",
+        "Conservez le fichier exporté et son code de récupération en lieu sûr. Le développeur n’a accès ni à l’un ni à l’autre et ne peut ni réinitialiser un code perdu ni déchiffrer le fichier à votre place. Ne les partagez jamais avec l’assistance."
+      ],
+      "concepts": {
+        "e2ee": [
+          "bout en bout"
+        ],
+        "unreadable": [
+          "ne peut pas lire",
+          "ne peut lire"
+        ],
+        "consent": [
+          "consentement"
+        ],
+        "manual": [
+          "manuell"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "rappel"
+        ],
+        "icloudUnused": [
+          "pas utilisé",
+          "pas utilisée",
+          "ne sont pas utilisés",
+          "n’utilise pas"
+        ],
+        "appData": [
+          "données de l’app",
+          "données de l’application"
+        ],
+        "verified": [
+          "vérifi"
+        ],
+        "active": [
+          "actif",
+          "active"
+        ],
+        "database": [
+          "base de données",
+          "DB"
+        ],
+        "key": [
+          "clé"
+        ],
+        "records": [
+          "enregistrement"
+        ],
+        "together": [
+          "ensemble"
+        ],
+        "excluded": [
+          "exclu"
+        ],
+        "existing": [
+          "existante",
+          "existantes",
+          "existants"
+        ],
+        "untouched": [
+          "inchang",
+          "intact"
+        ],
+        "restore": [
+          "restaur"
+        ],
+        "preDeploy": [
+          "avant le déploiement",
+          "avant un déploiement"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Tout ce que l’app proposait déjà reste disponible sans paiement, notamment l’enregistrement, l’historique, les graphiques de « Corps », l’estimation, la préparation de consultation, les repas, les exportations, la sauvegarde chiffrée et la restauration, la synchronisation du calendrier, les rappels, les widgets et le verrouillage de l’app.",
+        "oldAllBackupsFree": "Tout ce qui existait déjà dans DoseWeek reste gratuit, y compris la préparation de consultation fixe sur 4, 8 et 12 semaines et toutes les exportations et sauvegardes.",
+        "oldNothingMovedToPlus": "Toutes les fonctions dont vous disposiez restent disponibles, et vos enregistrements, calendriers d’injection, rappels, widgets, sauvegardes et exportations ne changent pas ; rien n’est supprimé ni déplacé vers Plus.",
+        "preservedFreePrefix": "Oui. DoseWeek se télécharge gratuitement, et les utilisateurs de la version gratuite voient des publicités.",
+        "preservedPlusExpiryTail": [
+          "Si Plus prend fin, vos enregistrements, modèles et réglages enregistrés sont conservés, et vous pouvez toujours les consulter et les supprimer ; les réglages du rapport et la disposition d’« Aujourd’hui » reviennent aux valeurs par défaut de la version gratuite jusqu’au retour de Plus."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Un avis unique dans l’app explique ce changement, et vous pouvez le relire dans Réglages > À propos > Nouveautés."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Toutes les fonctions que l’app proposait déjà restent disponibles sans paiement, notamment l’enregistrement, l’historique, les graphiques de « Corps », le résumé de consultation, les repas, les exportations, la sauvegarde chiffrée et la restauration, la sauvegarde Google Drive, la synchronisation du calendrier, les rappels, le widget et le verrouillage de l’app.",
+        "oldAllBackupsFree": "Tout ce qui existait déjà dans DoseWeek reste gratuit, y compris le résumé de consultation fixe sur 4, 8 et 12 semaines et toutes les exportations et sauvegardes.",
+        "oldNothingMovedToPlus": "Toutes les fonctions dont vous disposiez restent disponibles, et vos enregistrements, calendriers d’injection, rappels, le widget, les sauvegardes et les exportations ne changent pas ; rien n’est supprimé ni déplacé vers Plus.",
+        "preservedFreePrefix": "Oui. DoseWeek se télécharge gratuitement sur Google Play, et les utilisateurs de la version gratuite voient des publicités.",
+        "preservedPlusExpiryTail": [
+          "Si Plus prend fin, vos enregistrements, modèles et réglages enregistrés sont conservés, et vous pouvez toujours les consulter et les supprimer ; les réglages du résumé de consultation et la disposition d’« Aujourd’hui » reviennent aux valeurs par défaut de la version gratuite jusqu’au retour de Plus."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Un avis unique dans l’app explique ce changement, et vous pouvez le relire dans Réglages > À propos > « Quoi de neuf ?",
+          "»."
+        ]
+      },
+      "oldAndroidGuideBody": "Dans Réglages, créez un fichier de sauvegarde chiffré ou activez la sauvegarde Google Drive, ajustez les notifications et modifiez à tout moment « Analyse de l’utilisation (facultative) ». Vous pouvez aussi ajouter le widget DoseWeek à votre écran d’accueil.",
+      "oldAndroidStorageDriveSentence": "Si vous activez la sauvegarde Google Drive facultative, une copie chiffrée est aussi conservée dans votre propre dossier de données d’application Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "Des instantanés distincts de récupération de l’OS du serveur sont créés chaque semaine."
+    },
+    "es": {
+      "oldPrivacySystemExclusion": "Los datos activos permanecen en el almacenamiento privado y están excluidos de la copia del sistema Android y la transferencia entre dispositivos.",
+      "oldOnlyAutomaticDrive": "Esta copia en archivo la crea usted; la única opción automática es la copia opcional en Google Drive que se describe más abajo, desactivada de forma predeterminada.",
+      "oldFaqSystemExclusion": "Los datos siguen excluidos de la copia del sistema y la transferencia entre dispositivos.",
+      "oldCustomDriveParagraphs": [
+        "Como opción, DoseWeek también puede guardar esa copia cifrada en su propia carpeta de datos de aplicación de Google Drive. Drive ve un nombre de archivo con un identificador aleatorio, el tamaño del archivo, la hora de creación, la versión de la carga útil, la versión de la clave y un identificador aleatorio de instantánea. Ningún nombre de medicamento, dosis, medición, fecha de tratamiento o nota aparece fuera del sobre cifrado.",
+        "El cifrado se realiza en el dispositivo antes de la subida, con el mismo sobre AES-256-GCM que usa la exportación de archivo sin conexión. El código de recuperación nunca se guarda junto a la copia ni se envía a ninguna parte. Hasta que confirme que lo ha guardado, puede volver a mostrar el mismo código; después, DoseWeek no vuelve a mostrarlo. Debe volver a introducirlo antes de que pueda comenzar cualquier copia automática. Si lo pierde, el desarrollador no puede leer ni recuperar la copia.",
+        "La copia automática opcional está desactivada de forma predeterminada; cuando está activada se ejecuta aproximadamente una vez al día si el dispositivo lo permite, y no promete una hora exacta. Eliminar una copia de Drive es definitivo, porque Drive no ofrece papelera para los archivos de datos de aplicación. Desconectar detiene las subidas posteriores: no elimina las copias que ya están en Drive ni los registros del dispositivo, y destruir la copia del código de recuperación guardada en este dispositivo es una decisión aparte y claramente señalada. Cada copia que sube cambios, ya sea automática o con «Hacer una copia ahora», se guarda como un archivo cifrado independiente. Los archivos anteriores se conservan hasta que los elimine en «Copias guardadas» dentro de la app o elimine los datos de la app de su cuenta de Google, y ocupan su almacenamiento de Google."
+      ],
+      "oldFreeAnswer": "Sí. DoseWeek se descarga gratis en Google Play, y los usuarios de la versión gratuita ven anuncios. Todas las funciones que la app ya tenía siguen disponibles sin pagar, incluidos el registro, el historial, los gráficos de «Cuerpo», el resumen de la consulta, las comidas, las exportaciones, la copia cifrada y la restauración, la copia en Google Drive, la sincronización con el calendario, los recordatorios, el widget y el bloqueo de la app.",
+      "oldEveryBackupFreeAnswer": "Todo lo que ya estaba en DoseWeek sigue siendo gratis, incluido el resumen de la consulta fijo de 4, 8 y 12 semanas y todas las exportaciones y copias. Si Plus termina, sus registros, plantillas y ajustes guardados se conservan, y puede seguir viéndolos y eliminándolos; los ajustes del resumen de la consulta y el diseño de «Hoy» vuelven a los valores predeterminados de la versión gratuita hasta que Plus vuelva a estar activo.",
+      "oldNothingMovedToPlusAnswer": "Todas las funciones que tenía se mantienen, y sus registros, pautas, recordatorios, el widget, las copias y las exportaciones no cambian; nada se elimina ni se traslada a Plus. Un aviso único en la app explica el cambio, y puede volver a leerlo en Ajustes > Información > Novedades.",
+      "preservedManualPolicySentences": [
+        "Puede usar el selector de archivos del sistema Android (SAF) para guardar manualmente todos los datos en un archivo cifrado en la ubicación elegida y seleccionar ese archivo para restaurar.",
+        "No se requiere una cuenta DoseWeek ni acceso general al almacenamiento, y el proceso no usa la red.",
+        "Las copias de seguridad solo se pueden restaurar en DoseWeek para Android.",
+        "DoseWeek en otras plataformas usa otro formato de copia de seguridad, por lo que las copias no se pueden trasladar entre plataformas.",
+        "La copia utiliza cifrado autenticado AES-256-GCM y un código de recuperación independiente de alta entropía.",
+        "No es una nube gestionada por DoseWeek, y no existe un servicio para restablecer el código.",
+        "Guarde el archivo y el código por separado.",
+        "El desarrollador y la asistencia no pueden restablecer un código perdido ni descifrar el archivo.",
+        "Hasta que confirme que ha guardado el código de recuperación de una copia en archivo, DoseWeek conserva ese código solo en este dispositivo, protegido con una clave que guarda el dispositivo, para que pueda volver a verlo; se elimina en cuanto lo confirma."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Si elige un proveedor de documentos externo o en la nube, este almacena el archivo según sus propias condiciones y política. El desarrollador de DoseWeek no recibe el archivo ni el código de recuperación.",
+        "Antes de restaurar, DoseWeek descifra y valida completamente el archivo, su estructura y las relaciones entre datos. Solo entonces sustituye de forma atómica los datos actuales en una transacción local."
+      ],
+      "preservedManualFaqSentences": [
+        "Sí.",
+        "En Ajustes, use el selector de archivos Android para guardar manualmente todos los datos en un archivo cifrado con AES-256-GCM y selecciónelo para restaurar.",
+        "Se requiere un código de recuperación independiente de alta entropía.",
+        "Las copias de seguridad solo se pueden restaurar en DoseWeek para Android.",
+        "DoseWeek en otras plataformas usa otro formato de copia de seguridad, por lo que las copias no se pueden trasladar entre plataformas."
+      ],
+      "preservedIosManualPolicy": "La base de datos clínica activa y el sobre cifrado de copia de seguridad local están excluidos de las copias de seguridad del dispositivo. Una copia de seguridad se crea solo cuando usted decide crearla y se cifra en el propio dispositivo con AES-256-GCM. Solo sale de la app cuando usted la exporta de forma explícita a través del selector de archivos del sistema, guardándola en la ubicación que elija en la app Archivos. Usted gestiona el texto cifrado exportado y el código de recuperación; el desarrollador no puede acceder a ninguno de los dos. La ubicación que elija en la app Archivos puede estar fuera de este dispositivo —un proveedor de archivos que usted haya configurado— y en ese caso se aplican además las condiciones de ese proveedor y los ajustes de su dispositivo. Un archivo de copia de seguridad guardado fuera de la app no se elimina al borrar los datos de DoseWeek; debe eliminarlo usted mismo. Una copia de seguridad creada en iPhone o iPad solo se puede restaurar en DoseWeek para iPhone o iPad. DoseWeek en otras plataformas usa formatos de copia de seguridad diferentes, por lo que los archivos de copia no se pueden trasladar entre plataformas.\n\nLas exportaciones en PDF y CSV son archivos sin cifrar generados en el dispositivo solo cuando usted los solicita. Se entregan al destino que usted elija en la hoja de compartir del sistema. Después de compartirlos, ni DoseWeek ni el desarrollador pueden controlar las copias ni su conservación; guarde y elimine los archivos exportados de forma segura.",
+      "preservedIosManualFaq": [
+        "Una copia se crea solo cuando usted decide hacerla. Se cifra en el dispositivo con AES-256-GCM y sale de la aplicación únicamente cuando usted la exporta con el selector de archivos del sistema, guardándola donde elija en la app Archivos. La base de datos activa y el contenedor de copia local quedan excluidos de las copias del dispositivo.",
+        "Guarde el archivo exportado y su código de recuperación en lugar seguro. El desarrollador no tiene acceso a ninguno de los dos y no puede restablecer un código perdido ni descifrar el archivo por usted. Nunca los comparta con el soporte."
+      ],
+      "concepts": {
+        "e2ee": [
+          "extremo a extremo"
+        ],
+        "unreadable": [
+          "no puede leer"
+        ],
+        "consent": [
+          "consentimiento"
+        ],
+        "manual": [
+          "manual"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "recordatorio"
+        ],
+        "icloudUnused": [
+          "no se usa",
+          "no se utilizan",
+          "no utiliza"
+        ],
+        "appData": [
+          "datos de la app",
+          "datos de la aplicación"
+        ],
+        "verified": [
+          "verific",
+          "confirm"
+        ],
+        "active": [
+          "activo",
+          "activa"
+        ],
+        "database": [
+          "base de datos",
+          "DB"
+        ],
+        "key": [
+          "clave"
+        ],
+        "records": [
+          "registro"
+        ],
+        "together": [
+          "juntos",
+          "conjunto"
+        ],
+        "excluded": [
+          "exclu"
+        ],
+        "existing": [
+          "existente"
+        ],
+        "untouched": [
+          "intact",
+          "sin cambios"
+        ],
+        "restore": [
+          "restaur"
+        ],
+        "preDeploy": [
+          "antes de un despliegue",
+          "antes del despliegue"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Todo lo que la app ya ofrecía sigue disponible sin pagar, incluidos el registro, el historial, los gráficos de «Cuerpo», la estimación, la preparación de la consulta, las comidas, las exportaciones, la copia de seguridad cifrada y la restauración, la sincronización con el calendario, los recordatorios, los widgets y el bloqueo de la app.",
+        "oldAllBackupsFree": "Todo lo que ya estaba en DoseWeek sigue siendo gratis, incluida la preparación de la consulta fija de 4, 8 y 12 semanas y todas las exportaciones y copias de seguridad.",
+        "oldNothingMovedToPlus": "Todas las funciones que tenía se mantienen, y sus registros, pautas, recordatorios, widgets, copias de seguridad y exportaciones no cambian; nada se elimina ni se traslada a Plus.",
+        "preservedFreePrefix": "Sí. DoseWeek se descarga gratis, y los usuarios de la versión gratuita ven anuncios.",
+        "preservedPlusExpiryTail": [
+          "Si Plus termina, sus registros, plantillas y ajustes guardados se conservan, y puede seguir viéndolos y eliminándolos; los ajustes del informe y el diseño de «Hoy» vuelven a los valores predeterminados de la versión gratuita hasta que Plus vuelva a estar activo."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Un aviso único en la app explica el cambio, y puede volver a leerlo en Ajustes > Información > Novedades."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Todas las funciones que la app ya tenía siguen disponibles sin pagar, incluidos el registro, el historial, los gráficos de «Cuerpo», el resumen de la consulta, las comidas, las exportaciones, la copia cifrada y la restauración, la copia en Google Drive, la sincronización con el calendario, los recordatorios, el widget y el bloqueo de la app.",
+        "oldAllBackupsFree": "Todo lo que ya estaba en DoseWeek sigue siendo gratis, incluido el resumen de la consulta fijo de 4, 8 y 12 semanas y todas las exportaciones y copias.",
+        "oldNothingMovedToPlus": "Todas las funciones que tenía se mantienen, y sus registros, pautas, recordatorios, el widget, las copias y las exportaciones no cambian; nada se elimina ni se traslada a Plus.",
+        "preservedFreePrefix": "Sí. DoseWeek se descarga gratis en Google Play, y los usuarios de la versión gratuita ven anuncios.",
+        "preservedPlusExpiryTail": [
+          "Si Plus termina, sus registros, plantillas y ajustes guardados se conservan, y puede seguir viéndolos y eliminándolos; los ajustes del resumen de la consulta y el diseño de «Hoy» vuelven a los valores predeterminados de la versión gratuita hasta que Plus vuelva a estar activo."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Un aviso único en la app explica el cambio, y puede volver a leerlo en Ajustes > Información > Novedades."
+        ]
+      },
+      "oldAndroidGuideBody": "En Ajustes puede crear un archivo de copia de seguridad cifrada o activar la copia de seguridad en Google Drive, ajustar las notificaciones y cambiar «Análisis del uso (opcional)» en cualquier momento. También puede añadir el widget de DoseWeek a la pantalla de inicio.",
+      "oldAndroidStorageDriveSentence": "Si activa la copia opcional en Google Drive, una copia cifrada se guarda también en su propia carpeta de datos de aplicación de Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "Se crean instantáneas semanales separadas para recuperar el OS del servidor."
+    },
+    "it": {
+      "oldPrivacySystemExclusion": "I dati attivi restano nell’archiviazione privata e sono esclusi dal backup di sistema Android e dal trasferimento tra dispositivi.",
+      "oldOnlyAutomaticDrive": "Questo backup su file lo crei tu; l’unica opzione automatica è il backup facoltativo su Google Drive descritto più avanti, disattivato per impostazione predefinita.",
+      "oldFaqSystemExclusion": "I dati restano esclusi dal backup di sistema e dal trasferimento.",
+      "oldCustomDriveParagraphs": [
+        "Come opzione, DoseWeek può conservare quel backup crittografato anche nella tua cartella dati app di Google Drive. Drive vede un nome di file con un identificatore casuale, la dimensione del file, l’ora di creazione, la versione del payload, la versione della chiave e un identificatore casuale dell’istantanea. Nessun nome di farmaco, dose, misurazione, data di trattamento o nota compare fuori dalla busta crittografata.",
+        "La crittografia avviene sul dispositivo prima del caricamento, con la stessa busta AES-256-GCM usata dall’esportazione su file offline. Il codice di recupero non viene mai memorizzato insieme al backup né inviato da nessuna parte. Finché non confermi di averlo conservato, puoi mostrare di nuovo lo stesso codice; dopo, DoseWeek non lo mostra più. Devi reinserirlo prima che qualsiasi backup automatico possa iniziare. Se lo perdi, lo sviluppatore non può leggere né recuperare il backup.",
+        "Il backup automatico facoltativo è disattivato per impostazione predefinita; quando è attivo viene eseguito circa una volta al giorno se il dispositivo lo consente e non promette un orario preciso. Eliminare un backup da Drive è definitivo, perché Drive non offre un cestino per i file dati app. La disconnessione interrompe i caricamenti successivi: non elimina i backup già presenti su Drive né i record sul dispositivo, e distruggere la copia del codice di recupero conservata su questo dispositivo è una scelta separata e chiaramente indicata. Ogni backup che carica modifiche, automatico o con «Esegui il backup ora», viene salvato come file crittografato separato. I file precedenti restano finché non li elimini da «Backup salvati» nell’app o non rimuovi i dati dell’app dal tuo account Google, e occupano il tuo spazio di archiviazione Google."
+      ],
+      "oldFreeAnswer": "Sì. DoseWeek si scarica gratis da Google Play e chi usa la versione gratuita vede annunci. Tutte le funzioni che l’app aveva già restano disponibili senza pagare, compresi registrazione, «Cronologia», grafici di «Corpo», riepilogo della visita, pasti, esportazioni, backup crittografato e ripristino, backup su Google Drive, sincronizzazione del calendario, promemoria, widget e blocco dell’app.",
+      "oldEveryBackupFreeAnswer": "Tutto ciò che era già in DoseWeek resta gratis, compreso il riepilogo della visita fisso a 4, 8 e 12 settimane e tutte le esportazioni e i backup. Se Plus termina, le tue registrazioni, i modelli e le impostazioni salvate vengono conservati e puoi ancora visualizzarli ed eliminarli; le impostazioni del riepilogo della visita e il layout di «Oggi» tornano ai valori predefiniti della versione gratuita finché Plus non torna attivo.",
+      "oldNothingMovedToPlusAnswer": "Tutte le funzioni che avevi restano, e le tue registrazioni, i programmi, i promemoria, il widget, i backup e le esportazioni non cambiano; nulla viene eliminato o spostato in Plus. Un avviso unico nell’app spiega la modifica e puoi rileggerlo in Impostazioni > Informazioni > Novità.",
+      "preservedManualPolicySentences": [
+        "Puoi usare il selettore file di sistema Android (SAF) per salvare manualmente tutti i dati in un file crittografato nel luogo scelto e selezionarlo per il ripristino.",
+        "Non servono un account DoseWeek o un accesso generale allo spazio di archiviazione, e l’operazione non usa la rete.",
+        "I backup possono essere ripristinati solo in DoseWeek per Android.",
+        "DoseWeek su altre piattaforme usa un formato di backup diverso, quindi i backup non possono essere trasferiti tra piattaforme.",
+        "Il backup usa crittografia autenticata AES-256-GCM e un codice separato ad alta entropia.",
+        "Non è un cloud gestito da DoseWeek e non esiste un servizio di reimpostazione.",
+        "Conserva file e codice separatamente.",
+        "Sviluppatore e assistenza non possono reimpostare un codice perso o decrittografare il file.",
+        "Finché non confermi di aver conservato il codice di recupero di un backup su file, DoseWeek conserva quel codice solo su questo dispositivo, protetto da una chiave custodita dal dispositivo, così puoi rivederlo; viene eliminato appena confermi."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Se scegli un fornitore di documenti esterno o cloud, questo conserva il file secondo i propri termini e la propria informativa. Lo sviluppatore di DoseWeek non riceve il file né il codice di recupero.",
+        "Prima del ripristino, DoseWeek decrittografa e convalida completamente file, struttura e relazioni tra i dati; solo dopo sostituisce atomicamente i dati attuali in una transazione locale."
+      ],
+      "preservedManualFaqSentences": [
+        "Sì.",
+        "Nelle Impostazioni usa il selettore file Android per salvare manualmente tutti i dati in un file crittografato con AES-256-GCM e selezionalo per il ripristino.",
+        "Serve un codice di ripristino separato ad alta entropia.",
+        "I backup possono essere ripristinati solo in DoseWeek per Android.",
+        "DoseWeek su altre piattaforme usa un formato di backup diverso, quindi i backup non possono essere trasferiti tra piattaforme."
+      ],
+      "preservedIosManualPolicy": "Il database clinico in uso e l'envelope del backup locale crittografato sono esclusi dai backup del dispositivo. Un backup viene creato solo su richiesta dell'utente ed è crittografato sul dispositivo con AES-256-GCM. Esce dall'app solo quando viene esportato esplicitamente tramite il selettore di file di sistema, salvandolo nella posizione scelta nell'app File. Il testo cifrato esportato e il codice di recupero sono gestiti dall'utente; lo sviluppatore non può accedere né all'uno né all'altro. La posizione scelta nell'app File può trovarsi fuori da questo dispositivo — presso un fornitore di file configurato dall'utente — e in tal caso si applicano anche le condizioni di quel fornitore e le impostazioni del dispositivo. Un file di backup salvato fuori dall'app non viene rimosso quando si eliminano i dati di DoseWeek: va eliminato dall'utente. Un backup creato su iPhone o iPad può essere ripristinato solo in DoseWeek su iPhone o iPad. DoseWeek su altre piattaforme usa formati di backup diversi, quindi i file di backup non possono essere trasferiti tra piattaforme.\n\nLe esportazioni PDF e CSV sono file in chiaro, generati sul dispositivo solo su richiesta. Vengono consegnati alla destinazione scelta nel pannello di condivisione di sistema. Dopo la condivisione, DoseWeek e lo sviluppatore non possono controllare copie o tempi di conservazione: conservare ed eliminare i file esportati in modo sicuro.",
+      "preservedIosManualFaq": [
+        "Un backup viene creato solo se lo richiedi. È crittografato sul dispositivo con AES-256-GCM e lascia l’app solo quando lo esporti tramite il selettore file di sistema, salvandolo dove scegli nell’app File. Il database attivo e l’involucro di backup locale sono esclusi dai backup del dispositivo.",
+        "Conserva in modo sicuro il file esportato e il suo codice di recupero. Lo sviluppatore non ha accesso a nessuno dei due e non può reimpostare un codice perduto né decrittografare il file al posto tuo. Non condividerli mai con l’assistenza."
+      ],
+      "concepts": {
+        "e2ee": [
+          "end-to-end"
+        ],
+        "unreadable": [
+          "non può leggere"
+        ],
+        "consent": [
+          "consenso"
+        ],
+        "manual": [
+          "manual"
+        ],
+        "export": [
+          "esport"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "promemoria"
+        ],
+        "icloudUnused": [
+          "non vengono usati",
+          "non sono usati",
+          "non usa",
+          "non viene usato",
+          "non sono utilizzati"
+        ],
+        "appData": [
+          "dati dell’app",
+          "dati dell’applicazione"
+        ],
+        "verified": [
+          "verificat",
+          "confermat"
+        ],
+        "active": [
+          "attiv"
+        ],
+        "database": [
+          "database",
+          "DB"
+        ],
+        "key": [
+          "chiav"
+        ],
+        "records": [
+          "registr"
+        ],
+        "together": [
+          "insieme"
+        ],
+        "excluded": [
+          "esclus"
+        ],
+        "existing": [
+          "esistent"
+        ],
+        "untouched": [
+          "inalterat",
+          "intatt",
+          "non vengono modificat"
+        ],
+        "restore": [
+          "ripristin"
+        ],
+        "preDeploy": [
+          "prima del deploy",
+          "prima della distribuzione",
+          "prima di una distribuzione"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Tutto ciò che l’app offriva già resta disponibile senza pagare, compresi registrazione, «Cronologia», grafici di «Corpo», stima, preparazione alla visita, pasti, esportazioni, backup crittografato e ripristino, sincronizzazione del calendario, promemoria, widget e blocco dell’app.",
+        "oldAllBackupsFree": "Tutto ciò che era già in DoseWeek resta gratis, compresa la preparazione alla visita fissa a 4, 8 e 12 settimane e tutte le esportazioni e i backup.",
+        "oldNothingMovedToPlus": "Tutte le funzioni che avevi restano, e le tue registrazioni, i programmi, i promemoria, i widget, i backup e le esportazioni non cambiano; nulla viene eliminato o spostato in Plus.",
+        "preservedFreePrefix": "Sì. DoseWeek si scarica gratis e chi usa la versione gratuita vede annunci.",
+        "preservedPlusExpiryTail": [
+          "Se Plus termina, le tue registrazioni, i modelli e le impostazioni salvate vengono conservati e puoi ancora visualizzarli ed eliminarli; le impostazioni del report e il layout di «Oggi» tornano ai valori predefiniti della versione gratuita finché Plus non torna attivo."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Un avviso unico nell’app spiega la modifica e puoi rileggerlo in Impostazioni > Informazioni > Novità."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Tutte le funzioni che l’app aveva già restano disponibili senza pagare, compresi registrazione, «Cronologia», grafici di «Corpo», riepilogo della visita, pasti, esportazioni, backup crittografato e ripristino, backup su Google Drive, sincronizzazione del calendario, promemoria, widget e blocco dell’app.",
+        "oldAllBackupsFree": "Tutto ciò che era già in DoseWeek resta gratis, compreso il riepilogo della visita fisso a 4, 8 e 12 settimane e tutte le esportazioni e i backup.",
+        "oldNothingMovedToPlus": "Tutte le funzioni che avevi restano, e le tue registrazioni, i programmi, i promemoria, il widget, i backup e le esportazioni non cambiano; nulla viene eliminato o spostato in Plus.",
+        "preservedFreePrefix": "Sì. DoseWeek si scarica gratis da Google Play e chi usa la versione gratuita vede annunci.",
+        "preservedPlusExpiryTail": [
+          "Se Plus termina, le tue registrazioni, i modelli e le impostazioni salvate vengono conservati e puoi ancora visualizzarli ed eliminarli; le impostazioni del riepilogo della visita e il layout di «Oggi» tornano ai valori predefiniti della versione gratuita finché Plus non torna attivo."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Un avviso unico nell’app spiega la modifica e puoi rileggerlo in Impostazioni > Informazioni > Novità."
+        ]
+      },
+      "oldAndroidGuideBody": "In Impostazioni puoi creare un file di backup crittografato o attivare il backup su Google Drive, regolare le notifiche e modificare in qualsiasi momento «Analisi dell’utilizzo (facoltativa)». Puoi anche aggiungere il widget di DoseWeek alla schermata Home.",
+      "oldAndroidStorageDriveSentence": "Se attivi il backup facoltativo su Google Drive, una copia crittografata viene conservata anche nella tua cartella dati app di Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "Si creano snapshot settimanali separati per ripristinare il OS del server."
+    },
+    "nl": {
+      "oldPrivacySystemExclusion": "Actieve gegevens blijven in de privéopslag en zijn uitgesloten van de Android-systeemback-up en overdracht tussen apparaten.",
+      "oldOnlyAutomaticDrive": "Deze bestandsback-up maakt u zelf; de enige automatische optie is de optionele Google Drive-back-up hieronder, die standaard uit staat.",
+      "oldFaqSystemExclusion": "Gegevens blijven uitgesloten van systeemback-up en apparaatoverdracht.",
+      "oldCustomDriveParagraphs": [
+        "Optioneel kan DoseWeek die versleutelde back-up ook in uw eigen Google Drive-app-gegevensmap bewaren. Drive ziet een bestandsnaam met een willekeurige identificatie, de bestandsgrootte, het tijdstip van aanmaken, de payloadversie, de sleutelversie en een willekeurige snapshot-id. Er verschijnt geen medicijnnaam, dosering, meting, behandeldatum of notitie buiten de versleutelde envelop.",
+        "De versleuteling gebeurt op het apparaat vóór het uploaden, met dezelfde AES-256-GCM-envelop als de offline bestandsexport. De herstelcode wordt nooit samen met de back-up bewaard en nergens naartoe gestuurd. Totdat u bevestigt dat u hem hebt bewaard, kunt u dezelfde code opnieuw tonen; daarna toont DoseWeek hem niet meer. U moet hem opnieuw invoeren voordat een automatische back-up kan starten. Raakt hij kwijt, dan kan de ontwikkelaar de back-up niet lezen of herstellen.",
+        "De optionele automatische back-up staat standaard uit; als hij aanstaat loopt hij ongeveer eens per dag wanneer het apparaat dat toelaat, en belooft hij geen exact tijdstip. Een back-up uit Drive verwijderen is definitief, want Drive biedt geen prullenbak voor app-gegevensbestanden. Verbinding verbreken stopt verdere uploads: het verwijdert niet de back-ups die al in Drive staan en evenmin de gegevens op het apparaat, en het vernietigen van de kopie van de herstelcode op dit apparaat is een aparte, duidelijk aangegeven keuze. Elke back-up die wijzigingen uploadt, automatisch of via ‘Nu een back-up maken’, wordt als apart versleuteld bestand bewaard. Eerdere bestanden blijven bestaan totdat u ze in de app verwijdert onder ‘Opgeslagen back-ups’ of de gegevens van de app uit uw Google-account verwijdert, en ze gebruiken uw Google-opslag."
+      ],
+      "oldFreeAnswer": "Ja. DoseWeek is gratis te downloaden via Google Play, en gebruikers van de gratis versie zien advertenties. Elke functie die de app al had, blijft zonder betaling beschikbaar, waaronder registreren, ‘Geschiedenis’, de grafieken bij ‘Lichaam’, de consultsamenvatting, maaltijden, exports, versleutelde back-up en herstel, Google Drive-back-up, agendasynchronisatie, herinneringen, de widget en de appvergrendeling.",
+      "oldEveryBackupFreeAnswer": "Alles wat al in DoseWeek zat, blijft gratis, waaronder de vaste consultsamenvatting voor 4, 8 en 12 weken en alle exports en back-ups. Als Plus eindigt, blijven uw registraties, sjablonen en opgeslagen instellingen bewaard en kunt u ze nog steeds bekijken en verwijderen; de instellingen van de consultsamenvatting en de indeling van ‘Vandaag’ gaan terug naar de standaardwaarden van de gratis versie tot Plus weer actief is.",
+      "oldNothingMovedToPlusAnswer": "Alle functies die u had, blijven, en uw registraties, schema’s, herinneringen, de widget, back-ups en exports veranderen niet; niets wordt verwijderd of naar Plus verplaatst. Een eenmalige melding in de app legt de wijziging uit, en u kunt die opnieuw lezen via Instellingen > Info > Wat is er nieuw?",
+      "preservedManualPolicySentences": [
+        "Met de Android-systeembestandskiezer (SAF) kunt u handmatig alle gegevens in een versleuteld bestand op een gekozen locatie opslaan en dat bestand voor herstel selecteren.",
+        "Hiervoor zijn geen DoseWeek-account of brede opslagtoegang nodig, en het proces gebruikt geen netwerk.",
+        "Back-ups kunnen alleen in DoseWeek voor Android worden teruggezet.",
+        "DoseWeek op andere platforms gebruikt een ander back-upformaat, dus back-ups kunnen niet tussen platforms worden overgezet.",
+        "De back-up gebruikt geauthenticeerde AES-256-GCM-versleuteling en een afzonderlijke herstelcode met hoge entropie.",
+        "Dit is geen door DoseWeek beheerde cloudback-up en de code kan niet worden gereset.",
+        "Bewaar bestand en code veilig en apart.",
+        "De ontwikkelaar en ondersteuning kunnen een verloren code niet resetten of het bestand ontsleutelen.",
+        "Totdat u bevestigt dat u de herstelcode van een bestandsback-up hebt bewaard, bewaart DoseWeek die code alleen op dit apparaat, beveiligd met een sleutel die het apparaat bewaart, zodat u hem opnieuw kunt bekijken; na uw bevestiging wordt hij verwijderd."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Kiest u een externe of cloud-documentprovider, dan slaat deze het bestand op volgens diens eigen voorwaarden en privacybeleid. De DoseWeek-ontwikkelaar ontvangt het bestand en de herstelcode niet.",
+        "Vóór herstel ontsleutelt en valideert DoseWeek het volledige bestand, de structuur en gegevensrelaties. Alleen daarna worden de huidige gegevens atomair in één lokale transactie vervangen."
+      ],
+      "preservedManualFaqSentences": [
+        "Ja.",
+        "Gebruik in Instellingen de Android-bestandskiezer om alle gegevens handmatig in een met AES-256-GCM versleuteld bestand te bewaren en selecteer het voor herstel.",
+        "Een aparte herstelcode met hoge entropie is vereist.",
+        "Back-ups kunnen alleen in DoseWeek voor Android worden teruggezet.",
+        "DoseWeek op andere platforms gebruikt een ander back-upformaat, dus back-ups kunnen niet tussen platforms worden overgezet."
+      ],
+      "preservedIosManualPolicy": "De actieve klinische database en de versleutelde lokale back-upenvelop worden uitgesloten van apparaatback-ups. Er wordt alleen een back-up gemaakt wanneer u daarvoor kiest, en die wordt op het apparaat versleuteld met AES-256-GCM. De back-up verlaat de app alleen wanneer u hem uitdrukkelijk exporteert via de bestandskiezer van het systeem en opslaat op een locatie die u kiest in de app Bestanden. U beheert de geëxporteerde versleutelde tekst en de herstelcode; de ontwikkelaar heeft tot geen van beide toegang. De locatie die u kiest in de app Bestanden kan buiten dit apparaat liggen — bij een bestandsprovider die u hebt ingesteld — en dan gelden ook de voorwaarden van die provider en uw apparaatinstellingen. Een back-upbestand dat buiten de app is opgeslagen, wordt niet verwijderd wanneer u de gegevens van DoseWeek verwijdert; u moet het zelf verwijderen. Een back-up die op iPhone of iPad is gemaakt, kan alleen in DoseWeek op iPhone of iPad worden teruggezet. DoseWeek op andere platforms gebruikt andere back-upformaten, dus back-upbestanden kunnen niet tussen platforms worden overgezet.\n\nPDF- en CSV-exports zijn onversleutelde bestanden die alleen op uw verzoek op het apparaat worden gemaakt. Ze worden afgeleverd bij de bestemming die u kiest in het deelvenster van het systeem. Na het delen kunnen DoseWeek en de ontwikkelaar kopieën of bewaartermijnen niet meer beheersen; bewaar en verwijder geëxporteerde bestanden zorgvuldig.",
+      "preservedIosManualFaq": [
+        "Een back-up ontstaat alleen als u er zelf een maakt. Hij wordt op het apparaat versleuteld met AES-256-GCM en verlaat de app pas wanneer u hem via de systeembestandskiezer exporteert naar een plek die u kiest in de Bestanden-app. De actieve database en de lokale back-upenvelop vallen buiten apparaatback-ups.",
+        "Bewaar het geëxporteerde bestand en de herstelcode veilig. De ontwikkelaar heeft tot geen van beide toegang en kan een verloren code niet herstellen en het bestand niet voor u ontsleutelen. Deel ze nooit met support."
+      ],
+      "concepts": {
+        "e2ee": [
+          "end-to-end"
+        ],
+        "unreadable": [
+          "niet lezen"
+        ],
+        "consent": [
+          "toestemming"
+        ],
+        "manual": [
+          "handmatig"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "herinner"
+        ],
+        "icloudUnused": [
+          "niet gebruikt",
+          "gebruikt geen"
+        ],
+        "appData": [
+          "appgegevens",
+          "app-gegevens"
+        ],
+        "verified": [
+          "geverifieerd",
+          "bevestigd"
+        ],
+        "active": [
+          "actief",
+          "actieve"
+        ],
+        "database": [
+          "database",
+          "DB"
+        ],
+        "key": [
+          "sleutel"
+        ],
+        "records": [
+          "registratie",
+          "record"
+        ],
+        "together": [
+          "samen"
+        ],
+        "excluded": [
+          "uitgesloten"
+        ],
+        "existing": [
+          "bestaande"
+        ],
+        "untouched": [
+          "ongewijzigd",
+          "onaangeroerd"
+        ],
+        "restore": [
+          "herstel"
+        ],
+        "preDeploy": [
+          "vóór implementatie",
+          "voor implementatie",
+          "vóór een deployment",
+          "voor een deployment",
+          "vóór uitrol",
+          "voor uitrol"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Alles wat de app al deed, blijft zonder betaling beschikbaar, waaronder registreren, ‘Historie’, de grafieken bij ‘Lichaam’, de schatting, consultvoorbereiding, maaltijden, exports, versleutelde back-up en herstel, agendasynchronisatie, herinneringen, widgets en appvergrendeling.",
+        "oldAllBackupsFree": "Alles wat al in DoseWeek zat, blijft gratis, waaronder de vaste consultvoorbereiding voor 4, 8 en 12 weken en alle exports en back-ups.",
+        "oldNothingMovedToPlus": "Alle functies die u had, blijven, en uw registraties, schema’s, herinneringen, widgets, back-ups en exports veranderen niet; niets wordt verwijderd of naar Plus verplaatst.",
+        "preservedFreePrefix": "Ja. DoseWeek is gratis te downloaden, en gebruikers van de gratis versie zien advertenties.",
+        "preservedPlusExpiryTail": [
+          "Als Plus eindigt, blijven uw registraties, sjablonen en opgeslagen instellingen bewaard en kunt u ze nog steeds bekijken en verwijderen; de rapportinstellingen en de indeling van ‘Vandaag’ gaan terug naar de standaardwaarden van de gratis versie tot Plus weer actief is."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Een eenmalige melding in de app legt de wijziging uit, en u kunt die opnieuw lezen via Instellingen > Info > Deze update."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Elke functie die de app al had, blijft zonder betaling beschikbaar, waaronder registreren, ‘Geschiedenis’, de grafieken bij ‘Lichaam’, de consultsamenvatting, maaltijden, exports, versleutelde back-up en herstel, Google Drive-back-up, agendasynchronisatie, herinneringen, de widget en de appvergrendeling.",
+        "oldAllBackupsFree": "Alles wat al in DoseWeek zat, blijft gratis, waaronder de vaste consultsamenvatting voor 4, 8 en 12 weken en alle exports en back-ups.",
+        "oldNothingMovedToPlus": "Alle functies die u had, blijven, en uw registraties, schema’s, herinneringen, de widget, back-ups en exports veranderen niet; niets wordt verwijderd of naar Plus verplaatst.",
+        "preservedFreePrefix": "Ja. DoseWeek is gratis te downloaden via Google Play, en gebruikers van de gratis versie zien advertenties.",
+        "preservedPlusExpiryTail": [
+          "Als Plus eindigt, blijven uw registraties, sjablonen en opgeslagen instellingen bewaard en kunt u ze nog steeds bekijken en verwijderen; de instellingen van de consultsamenvatting en de indeling van ‘Vandaag’ gaan terug naar de standaardwaarden van de gratis versie tot Plus weer actief is."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Een eenmalige melding in de app legt de wijziging uit, en u kunt die opnieuw lezen via Instellingen > Info > Wat is er nieuw?"
+        ]
+      },
+      "oldAndroidGuideBody": "In Instellingen kunt u een versleuteld back-upbestand maken of de Google Drive-back-up inschakelen, meldingen aanpassen en ‘Gebruiksanalyse (optioneel)’ op elk moment wijzigen. U kunt ook de DoseWeek-widget aan uw startscherm toevoegen.",
+      "oldAndroidStorageDriveSentence": "Zet u de optionele Google Drive-back-up aan, dan wordt een versleutelde kopie ook in uw eigen Google Drive-app-gegevensmap bewaard.",
+      "oldWeeklyServerSnapshotSentence": "Aparte snapshots voor herstel van het server-OS worden wekelijks gemaakt."
+    },
+    "pt-PT": {
+      "oldPrivacySystemExclusion": "Os registos atuais ficam no armazenamento privado da aplicação e são excluídos da cópia de segurança do sistema Android e da transferência entre dispositivos.",
+      "oldOnlyAutomaticDrive": "Esta cópia em ficheiro é criada por si; a única opção automática é a cópia de segurança opcional no Google Drive descrita abaixo, desativada por predefinição.",
+      "oldFaqSystemExclusion": "Os dados continuam excluídos da cópia de segurança e transferência do sistema Android.",
+      "oldCustomDriveParagraphs": [
+        "Em opção, o DoseWeek também pode guardar essa cópia encriptada na sua própria pasta de dados de aplicação do Google Drive. O Drive vê um nome de ficheiro com um identificador aleatório, o tamanho do ficheiro, a hora de criação, a versão da carga útil, a versão da chave e um identificador de instantâneo aleatório. Nenhum nome de medicamento, dose, medição, data de tratamento ou nota aparece fora do envelope encriptado.",
+        "A encriptação ocorre no dispositivo antes do carregamento, com o mesmo envelope AES-256-GCM usado na exportação para ficheiro offline. O código de recuperação nunca é guardado com a cópia nem enviado para lado nenhum. Até confirmar que o guardou, pode voltar a mostrar o mesmo código; depois disso, o DoseWeek não o volta a mostrar. Tem de o introduzir novamente antes de qualquer cópia automática poder começar. Se o perder, o programador não consegue ler nem recuperar a cópia.",
+        "A cópia automática opcional está desativada por predefinição; quando está ativada, é executada cerca de uma vez por dia quando o dispositivo o permitir e não promete uma hora exata. Eliminar uma cópia do Drive é definitivo, porque o Drive não oferece reciclagem para ficheiros de dados de aplicação. Desligar a ligação interrompe os carregamentos seguintes: não elimina as cópias já existentes no Drive nem os registos no dispositivo, e destruir a cópia do código de recuperação guardada neste dispositivo é uma escolha separada e claramente identificada. Cada cópia que envia alterações, automática ou com «Criar cópia agora», é guardada como um ficheiro encriptado separado. Os ficheiros anteriores ficam guardados até os eliminar em «Cópias de segurança guardadas» na aplicação ou remover os dados da aplicação da sua conta Google, e ocupam o seu armazenamento Google."
+      ],
+      "oldFreeAnswer": "Sim. A transferência do DoseWeek no Google Play é gratuita e os utilizadores da versão gratuita veem anúncios. Todas as funcionalidades que a aplicação já tinha continuam disponíveis sem pagamento, incluindo o registo, o Histórico, os gráficos do Corpo, o resumo para a consulta, as refeições, as exportações, a cópia de segurança encriptada e o restauro, a cópia de segurança no Google Drive, a sincronização do calendário, os lembretes, o widget e o bloqueio da aplicação.",
+      "oldEveryBackupFreeAnswer": "Tudo o que já existia no DoseWeek continua gratuito, incluindo o resumo para a consulta fixo de 4, 8 e 12 semanas e todas as exportações e cópias de segurança. Se o Plus terminar, os seus registos, modelos e definições guardadas são mantidos e continua a poder vê-los e eliminá-los; as definições do resumo para a consulta e a disposição do ecrã Hoje voltam às predefinições da versão gratuita até o Plus voltar.",
+      "oldNothingMovedToPlusAnswer": "Todas as funcionalidades que tinha mantêm-se, e os seus registos, horários, lembretes, o widget, as cópias de segurança e as exportações não mudam; nada é eliminado nem passa para o Plus. Um aviso único na aplicação explica a alteração, e pode voltar a lê-lo em Definições > Informações > O que há de novo.",
+      "preservedManualPolicySentences": [
+        "O utilizador pode guardar manualmente todos os dados num ficheiro encriptado, através do seletor de ficheiros do sistema Android (SAF), e restaurá-los selecionando esse ficheiro.",
+        "Não é necessária uma conta DoseWeek nem acesso geral ao armazenamento, e o processo não usa rede.",
+        "As cópias de segurança só podem ser restauradas no DoseWeek para Android.",
+        "O DoseWeek noutras plataformas usa outro formato de cópia de segurança, pelo que as cópias não podem ser transferidas entre plataformas.",
+        "A cópia usa encriptação autenticada AES-256-GCM e um código de recuperação separado de alta entropia.",
+        "Não é uma nuvem operada pelo DoseWeek, e não existe reposição do código.",
+        "Guarde o ficheiro e o código separadamente; o programador e o suporte não podem repor um código perdido nem desencriptar o ficheiro.",
+        "Até confirmar que guardou o código de recuperação de uma cópia em ficheiro, o DoseWeek mantém esse código apenas neste dispositivo, protegido por uma chave guardada pelo dispositivo, para que o possa voltar a ver; é eliminado assim que confirmar."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Se escolher um fornecedor de documentos externo ou na nuvem, esse fornecedor guarda o ficheiro segundo os próprios termos e política. O programador do DoseWeek não recebe o ficheiro nem o código de recuperação.",
+        "No restauro, o DoseWeek desencripta e valida completamente a estrutura e as relações dos dados antes de substituir atomicamente os dados atuais numa única transação local."
+      ],
+      "preservedManualFaqSentences": [
+        "Sim.",
+        "Nas Definições, use o seletor de ficheiros do Android para guardar manualmente todos os dados num ficheiro encriptado com AES-256-GCM e selecione-o para restaurar.",
+        "É necessário um código de recuperação separado de alta entropia.",
+        "As cópias de segurança só podem ser restauradas no DoseWeek para Android.",
+        "O DoseWeek noutras plataformas usa outro formato de cópia de segurança, pelo que as cópias não podem ser transferidas entre plataformas."
+      ],
+      "preservedIosManualPolicy": "A base de dados clínica ativa e o envelope encriptado da cópia de segurança local estão excluídos das cópias de segurança do dispositivo. Uma cópia de segurança só é criada quando opta por criá-la e é encriptada no dispositivo com AES-256-GCM. Só sai da aplicação quando a exporta explicitamente através do seletor de ficheiros do sistema, guardando-a na localização que escolher na app Ficheiros. É o utilizador que gere o texto cifrado exportado e o código de recuperação; o programador não pode aceder a nenhum deles. A localização que escolher na app Ficheiros pode estar fora deste dispositivo — num fornecedor de ficheiros que tenha configurado — e nesse caso aplicam-se também os termos desse fornecedor e as definições do seu dispositivo. Um ficheiro de cópia de segurança guardado fora da aplicação não é removido quando elimina os dados do DoseWeek; tem de o eliminar você mesmo. Uma cópia de segurança criada no iPhone ou iPad só pode ser restaurada no DoseWeek para iPhone ou iPad. O DoseWeek noutras plataformas usa formatos de cópia de segurança diferentes, pelo que os ficheiros de cópia não podem ser transferidos entre plataformas.\n\nAs exportações em PDF e CSV são ficheiros em texto simples, gerados no dispositivo apenas quando as solicita. São entregues ao destino que escolher no menu de partilha do sistema. Após a partilha, nem o DoseWeek nem o programador conseguem controlar as cópias ou o tempo de conservação; guarde e elimine os ficheiros exportados de forma segura.",
+      "preservedIosManualFaq": [
+        "Uma cópia só é criada quando decide fazê-la. É encriptada no dispositivo com AES-256-GCM e só sai da aplicação quando a exporta através do seletor de ficheiros do sistema, para um local que escolher na app Ficheiros. A base de dados ativa e o invólucro local da cópia ficam excluídos das cópias do dispositivo.",
+        "Guarde em segurança o ficheiro exportado e o respetivo código de recuperação. O programador não tem acesso a nenhum deles e não pode repor um código perdido nem desencriptar o ficheiro por si. Nunca os partilhe com o apoio."
+      ],
+      "concepts": {
+        "e2ee": [
+          "ponta a ponta"
+        ],
+        "unreadable": [
+          "não pode ler"
+        ],
+        "consent": [
+          "consentimento"
+        ],
+        "manual": [
+          "manual"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "lembrete"
+        ],
+        "icloudUnused": [
+          "não são usados",
+          "não é usado",
+          "não usa",
+          "não são utilizados"
+        ],
+        "appData": [
+          "dados da aplicação",
+          "dados da app"
+        ],
+        "verified": [
+          "verificad",
+          "confirmad"
+        ],
+        "active": [
+          "ativ"
+        ],
+        "database": [
+          "base de dados",
+          "DB"
+        ],
+        "key": [
+          "chave"
+        ],
+        "records": [
+          "registo"
+        ],
+        "together": [
+          "conjunto",
+          "juntos"
+        ],
+        "excluded": [
+          "exclu"
+        ],
+        "existing": [
+          "existente"
+        ],
+        "untouched": [
+          "inalterad",
+          "intact",
+          "não são alterad"
+        ],
+        "restore": [
+          "restaur"
+        ],
+        "preDeploy": [
+          "antes da implantação",
+          "antes de uma implementação",
+          "antes da implementação"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Tudo o que a aplicação já fazia continua disponível sem pagamento, incluindo o registo, o Histórico, os gráficos do Corpo, a estimativa, a preparação da consulta, as refeições, as exportações, a cópia de segurança encriptada e o restauro, a sincronização do calendário, os lembretes, os widgets e o bloqueio da aplicação.",
+        "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo a preparação da consulta fixa de 4, 8 e 12 semanas e todas as exportações e cópias de segurança.",
+        "oldNothingMovedToPlus": "Todas as funcionalidades que tinha mantêm-se, e os seus registos, horários, lembretes, widgets, cópias de segurança e exportações não mudam; nada é eliminado nem passa para o Plus.",
+        "preservedFreePrefix": "Sim. A transferência do DoseWeek é gratuita e os utilizadores da versão gratuita veem anúncios.",
+        "preservedPlusExpiryTail": [
+          "Se o Plus terminar, os seus registos, modelos e definições guardadas são mantidos e continua a poder vê-los e eliminá-los; as definições do relatório e a disposição do ecrã Hoje voltam às predefinições da versão gratuita até o Plus voltar."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Um aviso único na aplicação explica a alteração, e pode voltar a lê-lo em Definições > Informações > Esta atualização."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Todas as funcionalidades que a aplicação já tinha continuam disponíveis sem pagamento, incluindo o registo, o Histórico, os gráficos do Corpo, o resumo para a consulta, as refeições, as exportações, a cópia de segurança encriptada e o restauro, a cópia de segurança no Google Drive, a sincronização do calendário, os lembretes, o widget e o bloqueio da aplicação.",
+        "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo o resumo para a consulta fixo de 4, 8 e 12 semanas e todas as exportações e cópias de segurança.",
+        "oldNothingMovedToPlus": "Todas as funcionalidades que tinha mantêm-se, e os seus registos, horários, lembretes, o widget, as cópias de segurança e as exportações não mudam; nada é eliminado nem passa para o Plus.",
+        "preservedFreePrefix": "Sim. A transferência do DoseWeek no Google Play é gratuita e os utilizadores da versão gratuita veem anúncios.",
+        "preservedPlusExpiryTail": [
+          "Se o Plus terminar, os seus registos, modelos e definições guardadas são mantidos e continua a poder vê-los e eliminá-los; as definições do resumo para a consulta e a disposição do ecrã Hoje voltam às predefinições da versão gratuita até o Plus voltar."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Um aviso único na aplicação explica a alteração, e pode voltar a lê-lo em Definições > Informações > O que há de novo."
+        ]
+      },
+      "oldAndroidGuideBody": "Em Definições pode criar um ficheiro de cópia de segurança encriptada ou ativar a cópia de segurança no Google Drive, ajustar as notificações e alterar «Análise da utilização (opcional)» a qualquer momento. Também pode adicionar o widget do DoseWeek ao ecrã principal.",
+      "oldAndroidStorageDriveSentence": "Se ativar a cópia de segurança opcional no Google Drive, uma cópia encriptada fica também na sua própria pasta de dados de aplicação do Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "São criados snapshots semanais separados para recuperar o OS do servidor."
+    },
+    "pl": {
+      "oldPrivacySystemExclusion": "Bieżące dane pozostają lokalnie w prywatnej pamięci aplikacji i są wyłączone z systemowej kopii zapasowej Androida oraz przenoszenia między urządzeniami.",
+      "oldOnlyAutomaticDrive": "Tę kopię w pliku tworzysz samodzielnie; jedyną automatyczną opcją jest opisana niżej opcjonalna kopia zapasowa na Dysku Google, domyślnie wyłączona.",
+      "oldFaqSystemExclusion": "Dane pozostają wyłączone z kopii systemowej i przenoszenia między urządzeniami.",
+      "oldCustomDriveParagraphs": [
+        "Opcjonalnie DoseWeek może też przechowywać tę zaszyfrowaną kopię w Twoim własnym folderze danych aplikacji na Dysku Google. Dysk widzi nazwę pliku z losowym identyfikatorem, rozmiar pliku, czas utworzenia, wersję ładunku, wersję klucza i losowy identyfikator migawki. Poza zaszyfrowaną kopertą nie pojawia się żadna nazwa leku, dawka, pomiar, data leczenia ani notatka.",
+        "Szyfrowanie odbywa się na urządzeniu przed wysłaniem, w tej samej kopercie AES-256-GCM, której używa eksport do pliku offline. Kod odzyskiwania nigdy nie jest przechowywany razem z kopią ani nigdzie wysyłany. Dopóki nie potwierdzisz zapisania kodu, możesz ponownie wyświetlić ten sam kod; potem DoseWeek już go nie pokazuje. Musisz wpisać go ponownie, zanim automatyczna kopia zapasowa będzie mogła się rozpocząć. Po jego utracie deweloper nie odczyta ani nie odzyska kopii.",
+        "Opcjonalna automatyczna kopia zapasowa jest domyślnie wyłączona; po włączeniu wykonuje się mniej więcej raz dziennie, gdy pozwala na to urządzenie, i nie obiecuje dokładnej godziny. Usunięcie kopii z Dysku jest nieodwracalne, ponieważ Dysk nie ma kosza dla plików danych aplikacji. Rozłączenie zatrzymuje kolejne wysyłki: nie usuwa kopii już znajdujących się na Dysku ani zapisów na urządzeniu, a zniszczenie przechowywanej na tym urządzeniu kopii kodu odzyskiwania jest osobnym, wyraźnie oznaczonym wyborem. Każda kopia, która wysyła zmiany, automatyczna lub utworzona przyciskiem „Utwórz kopię teraz”, jest zapisywana jako osobny zaszyfrowany plik. Wcześniejsze pliki pozostają, dopóki nie usuniesz ich z listy „Zapisane kopie zapasowe” w aplikacji lub nie usuniesz danych aplikacji ze swojego konta Google, i zajmują miejsce w Twoim magazynie Google."
+      ],
+      "oldFreeAnswer": "Tak. DoseWeek można bezpłatnie pobrać z Google Play, a użytkownicy wersji bezpłatnej widzą reklamy. Wszystkie funkcje, które aplikacja już miała, pozostają dostępne bez opłat, w tym zapisywanie, „Historia”, wykresy na karcie „Pomiary”, podsumowanie na wizytę, posiłki, eksporty, zaszyfrowana kopia zapasowa i przywracanie, kopia zapasowa na Dysku Google, synchronizacja kalendarza, przypomnienia, widżet i blokada aplikacji.",
+      "oldEveryBackupFreeAnswer": "Wszystko, co już było w DoseWeek, pozostaje bezpłatne, w tym stałe podsumowanie na wizytę za 4, 8 i 12 tygodni oraz wszystkie eksporty i kopie zapasowe. Gdy Plus się zakończy, Twoje zapisy, szablony i zapisane ustawienia zostają zachowane i nadal możesz je przeglądać i usuwać; ustawienia podsumowania na wizytę i układ ekranu „Dzisiaj” wracają do domyślnych ustawień wersji bezpłatnej, dopóki Plus nie zostanie przywrócony.",
+      "oldNothingMovedToPlusAnswer": "Wszystkie dotychczasowe funkcje zostają, a Twoje zapisy, harmonogramy, przypomnienia, widżet, kopie zapasowe i eksporty się nie zmieniają; nic nie jest usuwane ani przenoszone do Plus. Jednorazowy komunikat w aplikacji wyjaśnia zmianę, a w Ustawienia > Informacje > „Co nowego?” możesz przeczytać go ponownie.",
+      "preservedManualPolicySentences": [
+        "Możesz ręcznie zapisać wszystkie dane w zaszyfrowanym pliku w lokalizacji wybranej przez systemowy selektor plików Androida (SAF), a następnie przywrócić je przez wybór tego pliku.",
+        "Nie wymaga to konta DoseWeek ani szerokiego dostępu do pamięci i nie korzysta z sieci.",
+        "Kopie zapasowe można przywrócić tylko w DoseWeek na Androida.",
+        "DoseWeek na innych platformach używa innego formatu kopii zapasowej, więc kopii nie można przenosić między platformami.",
+        "Plik jest chroniony uwierzytelnionym szyfrowaniem AES-256-GCM i osobnym kodem odzyskiwania o wysokiej entropii.",
+        "Nie jest to kopia w chmurze obsługiwana przez DoseWeek i nie ma usługi resetowania kodu.",
+        "Przechowuj plik i kod bezpiecznie oraz oddzielnie.",
+        "Deweloper ani pomoc techniczna nie mogą zresetować utraconego kodu ani odszyfrować pliku.",
+        "Dopóki nie potwierdzisz zapisania kodu odzyskiwania kopii w pliku, DoseWeek przechowuje ten kod tylko na tym urządzeniu, zabezpieczony kluczem przechowywanym przez urządzenie, aby można go było ponownie wyświetlić; po potwierdzeniu kod jest usuwany."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Jeśli wybierzesz zewnętrznego lub chmurowego dostawcę dokumentów, przechowuje on plik zgodnie z własnymi zasadami i warunkami. Deweloper DoseWeek nie otrzymuje pliku ani kodu odzyskiwania.",
+        "Przed atomowym zastąpieniem bieżących danych w jednej lokalnej transakcji DoseWeek odszyfrowuje i w pełni sprawdza cały plik, jego strukturę i relacje danych."
+      ],
+      "preservedManualFaqSentences": [
+        "Tak.",
+        "W Ustawieniach użyj systemowego selektora plików Androida, aby ręcznie zapisać wszystkie dane w pliku zaszyfrowanym AES-256-GCM, i wybierz go do przywrócenia.",
+        "Potrzebny jest osobny kod odzyskiwania o wysokiej entropii.",
+        "Kopie zapasowe można przywrócić tylko w DoseWeek na Androida.",
+        "DoseWeek na innych platformach używa innego formatu kopii zapasowej, więc kopii nie można przenosić między platformami."
+      ],
+      "preservedIosManualPolicy": "Aktywna kliniczna baza danych oraz zaszyfrowana lokalna koperta kopii zapasowej są wyłączone z kopii zapasowych urządzenia. Kopia zapasowa powstaje tylko wtedy, gdy użytkownik zdecyduje się ją utworzyć, i jest szyfrowana na urządzeniu algorytmem AES-256-GCM. Opuszcza aplikację wyłącznie po jawnym wyeksportowaniu przez systemowy selektor plików, czyli zapisaniu jej w miejscu wybranym w aplikacji Pliki. Wyeksportowanym szyfrogramem i kodem odzyskiwania zarządza użytkownik; deweloper nie ma dostępu do żadnego z nich. Miejsce wybrane w aplikacji Pliki może znajdować się poza tym urządzeniem — u dostawcy plików skonfigurowanego przez użytkownika — i wtedy obowiązują dodatkowo warunki tego dostawcy oraz ustawienia urządzenia. Plik kopii zapasowej zapisany poza aplikacją nie jest usuwany wraz z danymi DoseWeek; trzeba go usunąć samodzielnie. Kopię zapasową utworzoną na iPhonie lub iPadzie można przywrócić tylko w DoseWeek na iPhonie lub iPadzie. DoseWeek na innych platformach używa innych formatów kopii zapasowej, więc plików kopii nie można przenosić między platformami.\n\nEksporty PDF i CSV to pliki jawne, generowane na urządzeniu tylko na żądanie użytkownika. Są przekazywane do miejsca docelowego wybranego w systemowym arkuszu udostępniania. Po udostępnieniu ani DoseWeek, ani deweloper nie kontrolują kopii i czasu ich przechowywania; wyeksportowane pliki należy bezpiecznie przechowywać i usuwać.",
+      "preservedIosManualFaq": [
+        "Kopia powstaje tylko wtedy, gdy sam ją utworzysz. Jest szyfrowana na urządzeniu algorytmem AES-256-GCM i opuszcza aplikację dopiero, gdy wyeksportujesz ją przez systemowy wybór plików do miejsca wskazanego w aplikacji Pliki. Aktywna baza danych i lokalna koperta kopii są wyłączone z kopii zapasowych urządzenia.",
+        "Przechowuj bezpiecznie wyeksportowany plik i jego kod odzyskiwania. Deweloper nie ma dostępu do żadnego z nich i nie może zresetować utraconego kodu ani odszyfrować pliku za Ciebie. Nigdy nie przekazuj ich wsparciu."
+      ],
+      "concepts": {
+        "e2ee": [
+          "end-to-end"
+        ],
+        "unreadable": [
+          "nie może odczytać",
+          "nie może czytać"
+        ],
+        "consent": [
+          "zgod"
+        ],
+        "manual": [
+          "ręczn"
+        ],
+        "export": [
+          "eksport"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "przypomn"
+        ],
+        "icloudUnused": [
+          "nie są używane",
+          "nie korzysta",
+          "nie używa",
+          "nie są wykorzystywane"
+        ],
+        "appData": [
+          "danych aplikacji",
+          "dane aplikacji"
+        ],
+        "verified": [
+          "potwierdz",
+          "zweryfik"
+        ],
+        "active": [
+          "aktywn"
+        ],
+        "database": [
+          "baza danych",
+          "bazę danych",
+          "bazy danych",
+          "DB"
+        ],
+        "key": [
+          "klucz"
+        ],
+        "records": [
+          "rekord",
+          "zapis",
+          "danych"
+        ],
+        "together": [
+          "razem",
+          "łącznie"
+        ],
+        "excluded": [
+          "wyłącz",
+          "wyklucz"
+        ],
+        "existing": [
+          "istniejąc"
+        ],
+        "untouched": [
+          "bez zmian",
+          "niezmienion"
+        ],
+        "restore": [
+          "przywrac"
+        ],
+        "preDeploy": [
+          "przed wdrożeniem"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Wszystko, co aplikacja już oferowała, pozostaje dostępne bez opłat, w tym zapisywanie, „Historia”, wykresy na ekranie „Ciało”, oszacowanie, przygotowanie do wizyty, posiłki, eksporty, zaszyfrowana kopia zapasowa i przywracanie, synchronizacja kalendarza, przypomnienia, widżety i blokada aplikacji.",
+        "oldAllBackupsFree": "Wszystko, co już było w DoseWeek, pozostaje bezpłatne, w tym stałe przygotowanie do wizyty za 4, 8 i 12 tygodni oraz wszystkie eksporty i kopie zapasowe.",
+        "oldNothingMovedToPlus": "Wszystkie dotychczasowe funkcje zostają, a Twoje zapisy, harmonogramy, przypomnienia, widżety, kopie zapasowe i eksporty się nie zmieniają; nic nie jest usuwane ani przenoszone do Plus.",
+        "preservedFreePrefix": "Tak. DoseWeek można pobrać bezpłatnie, a użytkownicy wersji bezpłatnej widzą reklamy.",
+        "preservedPlusExpiryTail": [
+          "Gdy Plus się zakończy, Twoje zapisy, szablony i zapisane ustawienia zostają zachowane i nadal możesz je przeglądać i usuwać; ustawienia raportu i układ ekranu „Dziś” wracają do domyślnych ustawień wersji bezpłatnej, dopóki Plus nie zostanie przywrócony."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Jednorazowy komunikat w aplikacji wyjaśnia zmianę; możesz przeczytać go ponownie w Ustawienia > Informacje > Co nowego."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Wszystkie funkcje, które aplikacja już miała, pozostają dostępne bez opłat, w tym zapisywanie, „Historia”, wykresy na karcie „Pomiary”, podsumowanie na wizytę, posiłki, eksporty, zaszyfrowana kopia zapasowa i przywracanie, kopia zapasowa na Dysku Google, synchronizacja kalendarza, przypomnienia, widżet i blokada aplikacji.",
+        "oldAllBackupsFree": "Wszystko, co już było w DoseWeek, pozostaje bezpłatne, w tym stałe podsumowanie na wizytę za 4, 8 i 12 tygodni oraz wszystkie eksporty i kopie zapasowe.",
+        "oldNothingMovedToPlus": "Wszystkie dotychczasowe funkcje zostają, a Twoje zapisy, harmonogramy, przypomnienia, widżet, kopie zapasowe i eksporty się nie zmieniają; nic nie jest usuwane ani przenoszone do Plus.",
+        "preservedFreePrefix": "Tak. DoseWeek można bezpłatnie pobrać z Google Play, a użytkownicy wersji bezpłatnej widzą reklamy.",
+        "preservedPlusExpiryTail": [
+          "Gdy Plus się zakończy, Twoje zapisy, szablony i zapisane ustawienia zostają zachowane i nadal możesz je przeglądać i usuwać; ustawienia podsumowania na wizytę i układ ekranu „Dzisiaj” wracają do domyślnych ustawień wersji bezpłatnej, dopóki Plus nie zostanie przywrócony."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Jednorazowy komunikat w aplikacji wyjaśnia zmianę, a w Ustawienia > Informacje > „Co nowego?",
+          "” możesz przeczytać go ponownie."
+        ]
+      },
+      "oldAndroidGuideBody": "W Ustawieniach możesz utworzyć zaszyfrowany plik kopii zapasowej lub włączyć kopię zapasową na Dysku Google, dostosować powiadomienia i w każdej chwili zmienić „Analiza użytkowania (opcjonalna)”. Możesz też dodać widżet DoseWeek do ekranu głównego.",
+      "oldAndroidStorageDriveSentence": "Po włączeniu opcjonalnej kopii zapasowej na Dysku Google zaszyfrowana kopia jest przechowywana także w Twoim własnym folderze danych aplikacji na Dysku Google.",
+      "oldWeeklyServerSnapshotSentence": "Osobne migawki odzyskiwania OS serwera powstają co tydzień."
+    },
+    "sv": {
+      "oldPrivacySystemExclusion": "Alla aktuella registreringar lagras lokalt i appens privata lagringsutrymme och är undantagna från Android-systemets molnsäkerhetskopiering och överföring mellan enheter.",
+      "oldOnlyAutomaticDrive": "Den här filsäkerhetskopian skapar du själv; det enda automatiska alternativet är den valfria säkerhetskopieringen till Google Drive som beskrivs nedan och som är avstängd som standard.",
+      "oldFaqSystemExclusion": "Data förblir undantagna från systemsäkerhetskopiering och enhetsöverföring.",
+      "oldCustomDriveParagraphs": [
+        "Som ett alternativ kan DoseWeek också spara den krypterade säkerhetskopian i din egen appdatamapp i Google Drive. Drive ser ett filnamn med en slumpmässig identifierare, filens storlek, tidpunkten då den skapades, nyttolastversionen, nyckelversionen och en slumpmässig ögonblicksbildsidentifierare. Inget läkemedelsnamn, ingen dos, mätning, behandlingsdag eller anteckning förekommer utanför det krypterade kuvertet.",
+        "Krypteringen sker på enheten före uppladdningen, med samma AES-256-GCM-kuvert som filexporten offline använder. Återställningskoden lagras aldrig tillsammans med säkerhetskopian och skickas ingenstans. Tills du bekräftar att du har sparat den kan du visa samma kod igen; därefter visar DoseWeek den inte längre. Du måste ange den på nytt innan någon automatisk säkerhetskopiering kan starta. Om den går förlorad kan utvecklaren varken läsa eller återställa säkerhetskopian.",
+        "Valfri automatisk säkerhetskopiering är avstängd som standard; påslagen körs den ungefär en gång om dagen när enheten tillåter det och lovar ingen exakt tidpunkt. Att radera en säkerhetskopia i Drive är permanent, eftersom Drive inte erbjuder någon papperskorg för appdatafiler. Att koppla från stoppar kommande uppladdningar: det raderar varken säkerhetskopior som redan finns i Drive eller registreringar på enheten, och att förstöra den kopia av återställningskoden som finns på den här enheten är ett separat och tydligt märkt val. Varje säkerhetskopiering som laddar upp ändringar, automatiskt eller med ”Säkerhetskopiera nu”, sparas som en separat krypterad fil. Tidigare filer finns kvar tills du raderar dem under ”Sparade säkerhetskopior” i appen eller tar bort appens data från ditt Google-konto, och de använder ditt lagringsutrymme hos Google."
+      ],
+      "oldFreeAnswer": "Ja. DoseWeek är gratis att ladda ned på Google Play, och användare av gratisversionen ser annonser. Alla funktioner som appen redan hade är fortfarande tillgängliga utan betalning, inklusive registrering, Historik, diagrammen i Kropp, besökssammanfattningen, måltider, exporter, krypterad säkerhetskopiering och återställning, säkerhetskopiering till Google Drive, kalendersynkronisering, påminnelser, widgeten och applåset.",
+      "oldEveryBackupFreeAnswer": "Allt som redan fanns i DoseWeek förblir gratis, inklusive den fasta besökssammanfattningen för 4, 8 och 12 veckor och alla exporter och säkerhetskopior. Om Plus upphör behålls dina registreringar, mallar och sparade inställningar, och du kan fortfarande visa och radera dem; inställningarna för besökssammanfattningen och layouten för I dag återgår till gratisversionens standardval tills Plus är tillbaka.",
+      "oldNothingMovedToPlusAnswer": "Alla funktioner du hade finns kvar, och dina registreringar, scheman, påminnelser, widgeten, säkerhetskopior och exporter är oförändrade; inget raderas eller flyttas till Plus. Ett engångsmeddelande i appen förklarar ändringen, och under Inställningar > Om appen > ”Vad är nytt?” kan du läsa det igen.",
+      "preservedManualPolicySentences": [
+        "Via Androids systemfilväljare (SAF) kan du manuellt spara alla appdata i en krypterad fil på en plats som du väljer och återställa genom att välja filen.",
+        "Processen kräver varken ett DoseWeek-konto eller omfattande lagringsbehörighet och använder inget nätverk.",
+        "Säkerhetskopior kan bara återställas i DoseWeek för Android.",
+        "DoseWeek på andra plattformar använder ett annat format för säkerhetskopior, så säkerhetskopior kan inte flyttas mellan plattformar.",
+        "Säkerhetskopian använder autentiserad AES-256-GCM-kryptering och en separat återställningskod med hög entropi.",
+        "Det är inte en DoseWeek-driven molnsäkerhetskopiering, och det finns ingen tjänst för att återställa koden.",
+        "Förvara filen och koden säkert och åtskilda.",
+        "Utvecklaren och supporten kan inte återställa en förlorad kod eller dekryptera filen.",
+        "Tills du bekräftar att du har sparat återställningskoden för en säkerhetskopia i fil behåller DoseWeek koden endast på den här enheten, skyddad med en nyckel som enheten förvarar, så att du kan visa den igen; den raderas när du bekräftar."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Om du väljer en extern eller molnbaserad dokumentleverantör lagrar leverantören säkerhetskopian enligt sin egen integritetspolicy och sina villkor. Utvecklaren av DoseWeek får varken säkerhetskopieringsfilen eller dess återställningskod.",
+        "Vid återställning dekrypterar och validerar DoseWeek hela filen, inklusive dess struktur och samband mellan data, innan aktuella data ersätts atomärt i en enda lokal transaktion."
+      ],
+      "preservedManualFaqSentences": [
+        "Ja.",
+        "I Inställningar använder du Androids filväljare för att manuellt spara alla data i en AES-256-GCM-krypterad fil och väljer filen vid återställning.",
+        "En separat återställningskod med hög entropi krävs.",
+        "Säkerhetskopior kan bara återställas i DoseWeek för Android.",
+        "DoseWeek på andra plattformar använder ett annat format för säkerhetskopior, så säkerhetskopior kan inte flyttas mellan plattformar."
+      ],
+      "preservedIosManualPolicy": "Den aktiva kliniska databasen och det krypterade lokala kuvertet med säkerhetskopian undantas från enhetens säkerhetskopiering. En säkerhetskopia skapas bara när du väljer att skapa en, och den krypteras på enheten med AES-256-GCM. Den lämnar appen bara när du uttryckligen exporterar den via systemets filväljare och sparar den på en plats du väljer i appen Filer. Du ansvarar själv för den exporterade krypterade texten och för återställningskoden; utvecklaren kan inte komma åt någon av dem. Platsen du väljer i appen Filer kan ligga utanför den här enheten – hos en filleverantör som du själv har ställt in – och då gäller även den leverantörens villkor och dina enhetsinställningar. En fil med säkerhetskopian som sparats utanför appen tas inte bort när du raderar DoseWeeks data; du måste radera den själv. En säkerhetskopia som skapats på iPhone eller iPad kan bara återställas i DoseWeek på iPhone eller iPad. DoseWeek på andra plattformar använder andra format för säkerhetskopior, så säkerhetskopieringsfiler kan inte flyttas mellan plattformar.\n\nPDF- och CSV-exporter är filer i klartext som skapas på enheten först när du begär dem. De levereras till den mottagare du väljer i systemets delningsmeny. Efter delning kan varken DoseWeek eller utvecklaren styra kopior eller hur länge de sparas – förvara och radera exporterade filer på ett säkert sätt.",
+      "preservedIosManualFaq": [
+        "En säkerhetskopia skapas bara när du väljer att göra en. Den krypteras på enheten med AES-256-GCM och lämnar appen först när du exporterar den via systemets filväljare till en plats du väljer i Filer-appen. Den aktiva databasen och det lokala säkerhetskopieformatet undantas från enhetens säkerhetskopior.",
+        "Förvara den exporterade filen och dess återställningskod säkert. Utvecklaren har inte tillgång till någon av dem och kan varken återställa en förlorad kod eller dekryptera filen åt dig. Dela dem aldrig med supporten."
+      ],
+      "concepts": {
+        "e2ee": [
+          "end-to-end",
+          "ände-till-ände"
+        ],
+        "unreadable": [
+          "inte läsa"
+        ],
+        "consent": [
+          "samtycke"
+        ],
+        "manual": [
+          "manuell"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "påminn"
+        ],
+        "icloudUnused": [
+          "inte används",
+          "används inte",
+          "använder inte"
+        ],
+        "appData": [
+          "appdata",
+          "appens data"
+        ],
+        "verified": [
+          "verifierad",
+          "bekräftad"
+        ],
+        "active": [
+          "aktiv"
+        ],
+        "database": [
+          "databas",
+          "DB"
+        ],
+        "key": [
+          "nyck"
+        ],
+        "records": [
+          "registrering",
+          "post"
+        ],
+        "together": [
+          "tillsammans"
+        ],
+        "excluded": [
+          "undantag",
+          "exkluder"
+        ],
+        "existing": [
+          "befintlig"
+        ],
+        "untouched": [
+          "oförändrad",
+          "orörd"
+        ],
+        "restore": [
+          "återställ"
+        ],
+        "preDeploy": [
+          "före driftsättning",
+          "före distribution"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Allt som appen redan gjorde är fortfarande tillgängligt utan betalning, inklusive registrering, Historik, diagrammen i Kropp, uppskattningen, besöksförberedelsen, måltider, exporter, krypterad säkerhetskopiering och återställning, kalendersynkronisering, påminnelser, widgetar och applås.",
+        "oldAllBackupsFree": "Allt som redan fanns i DoseWeek förblir gratis, inklusive den fasta besöksförberedelsen för 4, 8 och 12 veckor och alla exporter och säkerhetskopior.",
+        "oldNothingMovedToPlus": "Alla funktioner du hade finns kvar, och dina registreringar, scheman, påminnelser, widgetar, säkerhetskopior och exporter är oförändrade; inget raderas eller flyttas till Plus.",
+        "preservedFreePrefix": "Ja. DoseWeek är gratis att ladda ned, och användare av gratisversionen ser annonser.",
+        "preservedPlusExpiryTail": [
+          "Om Plus upphör behålls dina registreringar, mallar och sparade inställningar, och du kan fortfarande visa och radera dem; rapportinställningarna och layouten för I dag återgår till gratisversionens standardval tills Plus är tillbaka."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Ett engångsmeddelande i appen förklarar ändringen, och du kan läsa det igen under Inställningar > Om appen > Den här uppdateringen."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Alla funktioner som appen redan hade är fortfarande tillgängliga utan betalning, inklusive registrering, Historik, diagrammen i Kropp, besökssammanfattningen, måltider, exporter, krypterad säkerhetskopiering och återställning, säkerhetskopiering till Google Drive, kalendersynkronisering, påminnelser, widgeten och applåset.",
+        "oldAllBackupsFree": "Allt som redan fanns i DoseWeek förblir gratis, inklusive den fasta besökssammanfattningen för 4, 8 och 12 veckor och alla exporter och säkerhetskopior.",
+        "oldNothingMovedToPlus": "Alla funktioner du hade finns kvar, och dina registreringar, scheman, påminnelser, widgeten, säkerhetskopior och exporter är oförändrade; inget raderas eller flyttas till Plus.",
+        "preservedFreePrefix": "Ja. DoseWeek är gratis att ladda ned på Google Play, och användare av gratisversionen ser annonser.",
+        "preservedPlusExpiryTail": [
+          "Om Plus upphör behålls dina registreringar, mallar och sparade inställningar, och du kan fortfarande visa och radera dem; inställningarna för besökssammanfattningen och layouten för I dag återgår till gratisversionens standardval tills Plus är tillbaka."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Ett engångsmeddelande i appen förklarar ändringen, och under Inställningar > Om appen > ”Vad är nytt?",
+          "” kan du läsa det igen."
+        ]
+      },
+      "oldAndroidGuideBody": "I Inställningar kan du skapa en krypterad säkerhetskopiefil eller slå på Google Drive-säkerhetskopiering, justera notiser och när som helst ändra ”Användningsanalys (valfri)”. Du kan också lägga till DoseWeek-widgeten på startskärmen.",
+      "oldAndroidStorageDriveSentence": "Slår du på den valfria säkerhetskopieringen till Google Drive lagras en krypterad kopia även i din egen appdatamapp i Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "Separata återställningsögonblicksbilder av serverns OS skapas varje vecka."
+    },
+    "hi": {
+      "oldPrivacySystemExclusion": "मौजूदा रिकॉर्ड ऐप-निजी स्टोरेज में रहते हैं और Android सिस्टम क्लाउड बैकअप तथा डिवाइस-टू-डिवाइस स्थानांतरण से बाहर हैं।",
+      "oldOnlyAutomaticDrive": "यह फ़ाइल बैकअप आप खुद बनाते हैं; अपने-आप चलने वाला एकमात्र विकल्प नीचे बताया गया वैकल्पिक Google Drive बैकअप है, जो डिफ़ॉल्ट रूप से बंद रहता है।",
+      "oldFaqSystemExclusion": "डेटा सिस्टम बैकअप और डिवाइस स्थानांतरण से बाहर रहता है।",
+      "oldCustomDriveParagraphs": [
+        "विकल्प के तौर पर DoseWeek उस एन्क्रिप्टेड बैकअप को आपके अपने Google Drive ऐप-डेटा फ़ोल्डर में भी रख सकता है। Drive को एक यादृच्छिक पहचानकर्ता वाला फ़ाइल नाम, फ़ाइल का आकार, बनाने का समय, पेलोड संस्करण, कुंजी संस्करण और एक यादृच्छिक स्नैपशॉट पहचानकर्ता दिखते हैं। एन्क्रिप्टेड लिफ़ाफ़े के बाहर कोई दवा का नाम, खुराक, माप, उपचार की तारीख़ या नोट नहीं दिखता।",
+        "एन्क्रिप्शन अपलोड से पहले डिवाइस पर ही होता है, उसी AES-256-GCM लिफ़ाफ़े से जिसका उपयोग ऑफ़लाइन फ़ाइल निर्यात करता है। रिकवरी कोड कभी बैकअप के साथ संग्रहीत नहीं होता और कहीं नहीं भेजा जाता। जब तक आप पुष्टि नहीं करते कि आपने इसे सहेज लिया है, तब तक आप वही कोड फिर देख सकते हैं; उसके बाद DoseWeek इसे दोबारा नहीं दिखाता। स्वचालित बैकअप शुरू होने से पहले आपको उसे दोबारा दर्ज करना होता है। कोड खो जाने पर डेवलपर बैकअप न पढ़ सकता है और न पुनर्प्राप्त कर सकता है।",
+        "वैकल्पिक स्वचालित बैकअप डिफ़ॉल्ट रूप से बंद है; चालू होने पर यह डिवाइस की अनुमति मिलने पर दिन में लगभग एक बार चलता है और किसी निश्चित समय का वादा नहीं करता। Drive से बैकअप हटाना स्थायी है, क्योंकि Drive ऐप-डेटा फ़ाइलों के लिए ट्रैश नहीं देता। कनेक्शन हटाने से आगे के अपलोड रुक जाते हैं: इससे Drive में पहले से मौजूद बैकअप नहीं मिटते और डिवाइस के रिकॉर्ड भी नहीं मिटते, और इस डिवाइस पर रखी रिकवरी कोड की प्रति नष्ट करना एक अलग, स्पष्ट रूप से चिह्नित विकल्प है। बदलाव अपलोड करने वाला हर बैकअप, चाहे स्वचालित हो या “अभी बैकअप लें” से, अलग एन्क्रिप्टेड फ़ाइल के रूप में सहेजा जाता है। पुरानी फ़ाइलें तब तक रहती हैं जब तक आप उन्हें ऐप में “सहेजे गए बैकअप” से न हटाएँ या अपने Google खाते से ऐप का डेटा न हटाएँ, और वे आपका Google स्टोरेज उपयोग करती हैं।"
+      ],
+      "oldFreeAnswer": "हाँ। DoseWeek, Google Play पर मुफ़्त में डाउनलोड किया जा सकता है, और मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखते हैं। ऐप में पहले से मौजूद हर सुविधा बिना भुगतान के उपलब्ध रहती है, जिसमें रिकॉर्ड करना, इतिहास, शरीर के चार्ट, विज़िट सारांश, भोजन, निर्यात, एन्क्रिप्टेड बैकअप और रीस्टोर, Google Drive बैकअप, कैलेंडर सिंक, रिमाइंडर, विजेट और ऐप लॉक शामिल हैं।",
+      "oldEveryBackupFreeAnswer": "DoseWeek में पहले से मौजूद सब कुछ मुफ़्त रहता है, जिसमें 4, 8 और 12 सप्ताह वाला तय विज़िट सारांश और हर निर्यात व बैकअप शामिल है। Plus समाप्त होने पर आपके रिकॉर्ड, टेम्पलेट और सहेजी गई सेटिंग बनी रहती हैं, और आप उन्हें अब भी देख और हटा सकते हैं; Plus फिर से शुरू होने तक विज़िट सारांश की सेटिंग और “आज” स्क्रीन का लेआउट मुफ़्त संस्करण की डिफ़ॉल्ट सेटिंग पर लौट आते हैं।",
+      "oldNothingMovedToPlusAnswer": "आपकी हर मौजूदा सुविधा बनी रहती है, और आपके रिकॉर्ड, शेड्यूल, रिमाइंडर, विजेट, बैकअप और निर्यात नहीं बदलते; कुछ भी हटाया या Plus में नहीं ले जाया जाता। ऐप में एक बार दिखने वाली सूचना इस बदलाव को समझाती है, और आप इसे सेटिंग > जानकारी > नया क्या है में फिर से पढ़ सकते हैं।",
+      "preservedManualPolicySentences": [
+        "Android सिस्टम फ़ाइल चयनकर्ता (SAF) से आप अपने चुने स्थान पर सभी ऐप डेटा को एन्क्रिप्टेड फ़ाइल में स्वयं सहेज सकते हैं और उसी फ़ाइल को चुनकर पुनर्स्थापित कर सकते हैं।",
+        "इसके लिए DoseWeek खाता या व्यापक स्टोरेज अनुमति नहीं चाहिए, और यह प्रक्रिया नेटवर्क का उपयोग नहीं करती।",
+        "बैकअप केवल Android के लिए DoseWeek में ही रीस्टोर किए जा सकते हैं।",
+        "दूसरे प्लेटफ़ॉर्म का DoseWeek अलग बैकअप फ़ॉर्मेट उपयोग करता है, इसलिए प्लेटफ़ॉर्म के बीच बैकअप नहीं ले जाए जा सकते।",
+        "बैकअप AES-256-GCM प्रमाणित एन्क्रिप्शन और अलग उच्च-एंट्रॉपी रिकवरी कोड से सुरक्षित है।",
+        "यह DoseWeek द्वारा चलाया गया क्लाउड बैकअप नहीं है और कोड रीसेट सेवा नहीं है।",
+        "फ़ाइल और कोड सुरक्षित और अलग रखें।",
+        "डेवलपर या सहायता खोया कोड रीसेट या फ़ाइल डिक्रिप्ट नहीं कर सकते।",
+        "जब तक आप पुष्टि नहीं करते कि आपने फ़ाइल बैकअप का रिकवरी कोड सहेज लिया है, तब तक DoseWeek उसे फिर दिखा सकने के लिए उस कोड को केवल इसी डिवाइस पर, डिवाइस में रखी कुंजी से सुरक्षित करके रखता है; पुष्टि करते ही वह हटा दिया जाता है।"
+      ],
+      "preservedManualPolicyParagraphs": [
+        "बाहरी या क्लाउड दस्तावेज़ प्रदाता चुनने पर फ़ाइल उस प्रदाता की शर्तों और गोपनीयता नीति के अनुसार रखी जाती है। DoseWeek डेवलपर को बैकअप फ़ाइल या रिकवरी कोड नहीं मिलता।",
+        "पुनर्स्थापना से पहले DoseWeek पूरी फ़ाइल को डिक्रिप्ट करके संरचना और डेटा संबंध पूरी तरह जाँचता है; तभी मौजूदा डेटा को एक स्थानीय ट्रांज़ैक्शन में परमाणु रूप से बदलता है।"
+      ],
+      "preservedManualFaqSentences": [
+        "हाँ।",
+        "सेटिंग में Android फ़ाइल चयनकर्ता से सभी डेटा को AES-256-GCM से एन्क्रिप्ट की गई फ़ाइल में स्वयं सहेजें और पुनर्स्थापना के लिए चुनें।",
+        "अलग उच्च-एंट्रॉपी रिकवरी कोड चाहिए।",
+        "बैकअप केवल Android के लिए DoseWeek में ही रीस्टोर किए जा सकते हैं।",
+        "दूसरे प्लेटफ़ॉर्म का DoseWeek अलग बैकअप फ़ॉर्मेट उपयोग करता है, इसलिए प्लेटफ़ॉर्म के बीच बैकअप नहीं ले जाए जा सकते।"
+      ],
+      "preservedIosManualPolicy": "मौजूदा क्लिनिकल डेटाबेस और एन्क्रिप्टेड लोकल बैकअप एनवेलप डिवाइस बैकअप से बाहर रखे जाते हैं। बैकअप तभी बनता है जब आप उसे बनाना चुनते हैं, और वह डिवाइस पर ही AES-256-GCM से एन्क्रिप्ट होता है। वह ऐप से बाहर तभी जाता है जब आप उसे सिस्टम के फ़ाइल पिकर से खुद एक्सपोर्ट करते हैं, यानी Files ऐप में अपनी चुनी हुई जगह पर सहेजते हैं। एक्सपोर्ट किए गए सिफरटेक्स्ट और रिकवरी कोड का प्रबंधन आप करते हैं; डेवलपर इनमें से किसी तक नहीं पहुँच सकता। Files ऐप में आपने जो जगह चुनी है वह इस डिवाइस के बाहर भी हो सकती है — कोई फ़ाइल प्रदाता जिसे आपने खुद सेट किया है — और तब उस प्रदाता की शर्तें तथा आपके डिवाइस की सेटिंग्स भी लागू होती हैं। ऐप के बाहर सहेजी गई बैकअप फ़ाइल DoseWeek का डेटा मिटाने पर नहीं हटती; उसे आपको खुद मिटाना होगा। iPhone या iPad पर बनाया गया बैकअप केवल iPhone या iPad के DoseWeek में ही रीस्टोर किया जा सकता है। अन्य प्लेटफ़ॉर्म पर DoseWeek अलग बैकअप फ़ॉर्मेट उपयोग करता है, इसलिए बैकअप फ़ाइलें प्लेटफ़ॉर्म के बीच नहीं ले जाई जा सकतीं।\n\nPDF और CSV एक्सपोर्ट सादे-पाठ वाली फ़ाइलें हैं, जो आपके अनुरोध पर ही डिवाइस पर बनती हैं। वे सिस्टम शेयर शीट में आपके चुने गए गंतव्य तक पहुँचाई जाती हैं। शेयर करने के बाद कॉपियों और उन्हें कितने समय रखा जाता है, इस पर DoseWeek और डेवलपर का कोई नियंत्रण नहीं होता; एक्सपोर्ट की गई फ़ाइलें सुरक्षित रूप से रखें और हटाएँ।",
+      "preservedIosManualFaq": [
+        "बैकअप तभी बनता है जब आप बनाना चुनते हैं। वह डिवाइस पर AES-256-GCM से एन्क्रिप्ट होता है और ऐप से तभी बाहर जाता है जब आप उसे सिस्टम फ़ाइल चयनकर्ता से निर्यात कर, Files ऐप में अपनी चुनी जगह पर सहेजते हैं। सक्रिय डेटाबेस और स्थानीय बैकअप आवरण डिवाइस बैकअप से बाहर रखे जाते हैं।",
+        "निर्यात की गई फ़ाइल और उसका रिकवरी कोड सुरक्षित रखें। डेवलपर के पास इनमें से कुछ भी नहीं होता, वह खोया कोड रीसेट नहीं कर सकता और फ़ाइल को आपके लिए डिक्रिप्ट नहीं कर सकता। इन्हें कभी सपोर्ट के साथ साझा न करें।"
+      ],
+      "concepts": {
+        "e2ee": [
+          "एंड-टू-एंड"
+        ],
+        "unreadable": [
+          "नहीं पढ़",
+          "पढ़ नहीं"
+        ],
+        "consent": [
+          "सहमति"
+        ],
+        "manual": [
+          "मैन्युअल",
+          "हाथ से",
+          "स्वयं"
+        ],
+        "export": [
+          "निर्यात",
+          "एक्सपोर्ट"
+        ],
+        "import": [
+          "आयात",
+          "इंपोर्ट"
+        ],
+        "reminder": [
+          "रिमाइंडर",
+          "याद दिला"
+        ],
+        "icloudUnused": [
+          "उपयोग नहीं",
+          "इस्तेमाल नहीं"
+        ],
+        "appData": [
+          "ऐप डेटा"
+        ],
+        "verified": [
+          "सत्यापित",
+          "पुष्टि"
+        ],
+        "active": [
+          "सक्रिय"
+        ],
+        "database": [
+          "डेटाबेस",
+          "DB"
+        ],
+        "key": [
+          "कुंजी"
+        ],
+        "records": [
+          "रिकॉर्ड"
+        ],
+        "together": [
+          "साथ"
+        ],
+        "excluded": [
+          "बाहर",
+          "शामिल नहीं"
+        ],
+        "existing": [
+          "मौजूदा"
+        ],
+        "untouched": [
+          "अछूते",
+          "बिना बदलाव",
+          "बदले नहीं"
+        ],
+        "restore": [
+          "पुनर्स्थाप",
+          "रीस्टोर"
+        ],
+        "preDeploy": [
+          "डिप्लॉय",
+          "तैनाती से पहले"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "ऐप में पहले से मौजूद हर सुविधा बिना भुगतान के उपलब्ध रहती है, जिसमें रिकॉर्ड करना, इतिहास, शरीर के चार्ट, अनुमान, विज़िट की तैयारी, भोजन, निर्यात, एन्क्रिप्टेड बैकअप और रिस्टोर, कैलेंडर सिंक, रिमाइंडर, विजेट और ऐप लॉक शामिल हैं।",
+        "oldAllBackupsFree": "DoseWeek में पहले से मौजूद सब कुछ मुफ़्त रहता है, जिसमें 4, 8 और 12 सप्ताह वाली तय विज़िट की तैयारी और हर निर्यात व बैकअप शामिल है।",
+        "oldNothingMovedToPlus": "आपकी हर मौजूदा सुविधा बनी रहती है, और आपके रिकॉर्ड, शेड्यूल, रिमाइंडर, विजेट, बैकअप और निर्यात नहीं बदलते; कुछ भी हटाया या Plus में नहीं ले जाया जाता।",
+        "preservedFreePrefix": "हाँ। DoseWeek मुफ़्त में डाउनलोड किया जा सकता है, और मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखते हैं।",
+        "preservedPlusExpiryTail": [
+          "Plus समाप्त होने पर आपके रिकॉर्ड, टेम्पलेट और सहेजी गई सेटिंग बनी रहती हैं, और आप उन्हें अब भी देख और हटा सकते हैं; Plus फिर से शुरू होने तक रिपोर्ट की सेटिंग और “आज” स्क्रीन का लेआउट मुफ़्त संस्करण की डिफ़ॉल्ट सेटिंग पर लौट आते हैं।"
+        ],
+        "preservedEarlierNoticeTail": [
+          "ऐप में एक बार दिखने वाली सूचना इस बदलाव को समझाती है, और आप इसे सेटिंग्स > जानकारी > इस अपडेट में पर फिर से पढ़ सकते हैं।"
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "ऐप में पहले से मौजूद हर सुविधा बिना भुगतान के उपलब्ध रहती है, जिसमें रिकॉर्ड करना, इतिहास, शरीर के चार्ट, विज़िट सारांश, भोजन, निर्यात, एन्क्रिप्टेड बैकअप और रीस्टोर, Google Drive बैकअप, कैलेंडर सिंक, रिमाइंडर, विजेट और ऐप लॉक शामिल हैं।",
+        "oldAllBackupsFree": "DoseWeek में पहले से मौजूद सब कुछ मुफ़्त रहता है, जिसमें 4, 8 और 12 सप्ताह वाला तय विज़िट सारांश और हर निर्यात व बैकअप शामिल है।",
+        "oldNothingMovedToPlus": "आपकी हर मौजूदा सुविधा बनी रहती है, और आपके रिकॉर्ड, शेड्यूल, रिमाइंडर, विजेट, बैकअप और निर्यात नहीं बदलते; कुछ भी हटाया या Plus में नहीं ले जाया जाता।",
+        "preservedFreePrefix": "हाँ। DoseWeek, Google Play पर मुफ़्त में डाउनलोड किया जा सकता है, और मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखते हैं।",
+        "preservedPlusExpiryTail": [
+          "Plus समाप्त होने पर आपके रिकॉर्ड, टेम्पलेट और सहेजी गई सेटिंग बनी रहती हैं, और आप उन्हें अब भी देख और हटा सकते हैं; Plus फिर से शुरू होने तक विज़िट सारांश की सेटिंग और “आज” स्क्रीन का लेआउट मुफ़्त संस्करण की डिफ़ॉल्ट सेटिंग पर लौट आते हैं।"
+        ],
+        "preservedEarlierNoticeTail": [
+          "ऐप में एक बार दिखने वाली सूचना इस बदलाव को समझाती है, और आप इसे सेटिंग > जानकारी > नया क्या है में फिर से पढ़ सकते हैं।"
+        ]
+      },
+      "oldAndroidGuideBody": "सेटिंग में आप एन्क्रिप्ट की गई बैकअप फ़ाइल बना सकते हैं या Google Drive बैकअप चालू कर सकते हैं, नोटिफ़िकेशन बदल सकते हैं और “उपयोग विश्लेषण (वैकल्पिक)” कभी भी बदल सकते हैं। आप होम स्क्रीन पर DoseWeek विजेट भी जोड़ सकते हैं।",
+      "oldAndroidStorageDriveSentence": "यदि आप वैकल्पिक Google Drive बैकअप चालू करते हैं, तो एक एन्क्रिप्टेड प्रति आपके अपने Google Drive ऐप-डेटा फ़ोल्डर में भी रहती है।",
+      "oldWeeklyServerSnapshotSentence": "सर्वर OS बहाली के लिए अलग साप्ताहिक स्नैपशॉट बनते हैं।"
+    },
+    "pt-BR": {
+      "oldPrivacySystemExclusion": "Os registros atuais ficam no armazenamento privado e são excluídos do backup em nuvem do sistema Android e da transferência entre dispositivos.",
+      "oldOnlyAutomaticDrive": "Você mesmo cria esse backup em arquivo; a única opção automática é o backup opcional no Google Drive descrito abaixo, desativado por padrão.",
+      "oldFaqSystemExclusion": "Os dados permanecem excluídos do backup e da transferência do sistema Android.",
+      "oldCustomDriveParagraphs": [
+        "Como opção, o DoseWeek também pode manter esse backup criptografado na sua própria pasta de dados de aplicativo do Google Drive. O Drive vê um nome de arquivo com um identificador aleatório, o tamanho do arquivo, a hora de criação, a versão da carga útil, a versão da chave e um identificador aleatório de instantâneo. Nenhum nome de medicamento, dose, medição, data de tratamento ou anotação aparece fora do envelope criptografado.",
+        "A criptografia acontece no dispositivo antes do envio, com o mesmo envelope AES-256-GCM usado na exportação para arquivo off-line. O código de recuperação nunca é guardado junto com o backup nem enviado a lugar algum. Até você confirmar que o guardou, é possível mostrar o mesmo código novamente; depois disso, o DoseWeek não o exibe mais. Você precisa digitá-lo novamente antes que qualquer backup automático possa começar. Se ele for perdido, o desenvolvedor não consegue ler nem recuperar o backup.",
+        "O backup automático opcional vem desativado; quando ativado, é executado cerca de uma vez por dia quando o dispositivo permite e não promete um horário exato. Excluir um backup do Drive é definitivo, porque o Drive não oferece lixeira para arquivos de dados de aplicativo. Desconectar interrompe os próximos envios: não exclui os backups que já estão no Drive nem os registros do dispositivo, e destruir a cópia do código de recuperação guardada neste dispositivo é uma escolha separada e claramente identificada. Cada backup que envia alterações, automático ou por “Fazer backup agora”, é armazenado como um arquivo criptografado separado. Os arquivos anteriores continuam guardados até você excluí-los em “Backups armazenados” no app ou remover os dados do app da sua Conta do Google, e ocupam seu armazenamento do Google."
+      ],
+      "oldFreeAnswer": "Sim. O download do DoseWeek no Google Play é gratuito, e usuários da versão gratuita veem anúncios. Todos os recursos que o aplicativo já tinha continuam disponíveis sem pagamento, incluindo o registro, o Histórico, os gráficos de Corpo, o resumo para a consulta, as refeições, as exportações, o backup criptografado e a restauração, o backup no Google Drive, a sincronização com o calendário, os lembretes, o widget e o bloqueio do aplicativo.",
+      "oldEveryBackupFreeAnswer": "Tudo o que já existia no DoseWeek continua gratuito, incluindo o resumo para a consulta fixo de 4, 8 e 12 semanas e todas as exportações e backups. Se o Plus terminar, seus registros, modelos e configurações salvas são mantidos, e você ainda pode vê-los e excluí-los; as configurações do resumo para a consulta e o layout da tela Hoje voltam aos padrões da versão gratuita até o Plus voltar.",
+      "oldNothingMovedToPlusAnswer": "Todos os recursos que você tinha continuam, e seus registros, horários, lembretes, o widget, os backups e as exportações não mudam; nada é excluído nem transferido para o Plus. Um aviso único no aplicativo explica a mudança, e você pode lê-lo de novo em Ajustes > Sobre > O que há de novo.",
+      "preservedManualPolicySentences": [
+        "Pelo seletor de arquivos do sistema Android (SAF), o usuário pode salvar manualmente todos os dados em um arquivo criptografado no local escolhido e restaurá-los selecionando esse arquivo.",
+        "O processo não exige conta DoseWeek nem amplo acesso ao armazenamento e não usa rede.",
+        "Os backups só podem ser restaurados no DoseWeek para Android.",
+        "O DoseWeek em outras plataformas usa outro formato de backup, por isso não é possível transferir backups entre plataformas.",
+        "O backup usa criptografia autenticada AES-256-GCM e um código separado, de alta entropia.",
+        "Não é uma nuvem operada pelo DoseWeek, e não há serviço de redefinição do código.",
+        "Guarde arquivo e código separadamente e em segurança.",
+        "O desenvolvedor e o suporte não podem redefinir um código perdido nem descriptografar o arquivo.",
+        "Até você confirmar que guardou o código de recuperação de um backup em arquivo, o DoseWeek mantém esse código apenas neste dispositivo, protegido por uma chave guardada pelo dispositivo, para que você possa vê-lo de novo; ele é excluído assim que você confirma."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Ao escolher um provedor de documentos externo ou em nuvem, ele armazena o arquivo conforme seus próprios termos e sua política. O desenvolvedor do DoseWeek não recebe o arquivo nem o código de recuperação.",
+        "Na restauração, o DoseWeek descriptografa e valida completamente o arquivo, sua estrutura e as relações entre os dados antes de substituir, de forma atômica, os dados atuais em uma única transação local."
+      ],
+      "preservedManualFaqSentences": [
+        "Sim.",
+        "Nas configurações, use o seletor de arquivos Android para salvar manualmente todos os dados em um arquivo criptografado com AES-256-GCM e selecione-o para restaurar.",
+        "É necessário um código de recuperação separado e de alta entropia.",
+        "Os backups só podem ser restaurados no DoseWeek para Android.",
+        "O DoseWeek em outras plataformas usa outro formato de backup, por isso não é possível transferir backups entre plataformas."
+      ],
+      "preservedIosManualPolicy": "O banco de dados clínico em uso e o envelope de backup local criptografado ficam de fora dos backups do dispositivo. Um backup é criado apenas quando você escolhe criá-lo e é criptografado no próprio dispositivo com AES-256-GCM. Ele só sai do aplicativo quando você o exporta explicitamente pelo seletor de arquivos do sistema, salvando-o no local que você escolher no app Arquivos. Você gerencia o texto cifrado exportado e o código de recuperação; o desenvolvedor não tem acesso a nenhum dos dois. O local que você escolher no app Arquivos pode estar fora deste dispositivo — um provedor de arquivos que você configurou — e, nesse caso, os termos desse provedor e as configurações do seu dispositivo também se aplicam. Um arquivo de backup salvo fora do aplicativo não é removido quando você apaga os dados do DoseWeek; você mesmo precisa excluí-lo. Um backup criado no iPhone ou iPad só pode ser restaurado no DoseWeek para iPhone ou iPad. O DoseWeek em outras plataformas usa formatos de backup diferentes, por isso os arquivos de backup não podem ser transferidos entre plataformas.\n\nAs exportações em PDF e CSV são arquivos em texto simples, gerados no dispositivo apenas quando você as solicita. Elas são entregues ao destino que você escolher no menu de compartilhamento do sistema. Depois do compartilhamento, o DoseWeek e o desenvolvedor não têm controle sobre cópias ou tempo de retenção; guarde e exclua os arquivos exportados com segurança.",
+      "preservedIosManualFaq": [
+        "Um backup só é criado quando você decide fazer. Ele é criptografado no aparelho com AES-256-GCM e só sai do app quando você o exporta pelo seletor de arquivos do sistema, salvando onde escolher no app Arquivos. O banco de dados ativo e o envelope local de backup ficam fora dos backups do aparelho.",
+        "Guarde com segurança o arquivo exportado e seu código de recuperação. O desenvolvedor não tem acesso a nenhum dos dois e não pode redefinir um código perdido nem descriptografar o arquivo para você. Nunca os compartilhe com o suporte."
+      ],
+      "concepts": {
+        "e2ee": [
+          "ponta a ponta"
+        ],
+        "unreadable": [
+          "não pode ler"
+        ],
+        "consent": [
+          "consentimento"
+        ],
+        "manual": [
+          "manual"
+        ],
+        "export": [
+          "export"
+        ],
+        "import": [
+          "import"
+        ],
+        "reminder": [
+          "lembrete"
+        ],
+        "icloudUnused": [
+          "não são usados",
+          "não é usado",
+          "não usa",
+          "não são utilizados"
+        ],
+        "appData": [
+          "dados do app",
+          "dados da aplicação"
+        ],
+        "verified": [
+          "verificad",
+          "confirmad"
+        ],
+        "active": [
+          "ativ"
+        ],
+        "database": [
+          "banco de dados",
+          "DB"
+        ],
+        "key": [
+          "chave"
+        ],
+        "records": [
+          "registro"
+        ],
+        "together": [
+          "conjunto",
+          "juntos"
+        ],
+        "excluded": [
+          "exclu"
+        ],
+        "existing": [
+          "existente"
+        ],
+        "untouched": [
+          "inalterad",
+          "intact",
+          "não são alterad"
+        ],
+        "restore": [
+          "restaur"
+        ],
+        "preDeploy": [
+          "antes da implantação",
+          "antes do deploy",
+          "antes de uma implantação"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Tudo o que o app já fazia continua disponível sem pagamento, incluindo o registro, o Histórico, os gráficos de Corpo, a estimativa, a preparação para a consulta, as refeições, as exportações, o backup criptografado e a restauração, a sincronização com o calendário, os lembretes, os widgets e o bloqueio do app.",
+        "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo a preparação para a consulta fixa de 4, 8 e 12 semanas e todas as exportações e backups.",
+        "oldNothingMovedToPlus": "Todos os recursos que você tinha continuam, e seus registros, horários, lembretes, widgets, backups e exportações não mudam; nada é excluído nem transferido para o Plus.",
+        "preservedFreePrefix": "Sim. O download do DoseWeek é gratuito, e usuários da versão gratuita veem anúncios.",
+        "preservedPlusExpiryTail": [
+          "Se o Plus terminar, seus registros, modelos e configurações salvas são mantidos, e você ainda pode vê-los e excluí-los; as configurações do relatório e o layout da tela Hoje voltam aos padrões da versão gratuita até o Plus voltar."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Um aviso único no app explica a mudança, e você pode lê-lo de novo em Ajustes > Sobre > Esta atualização."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Todos os recursos que o aplicativo já tinha continuam disponíveis sem pagamento, incluindo o registro, o Histórico, os gráficos de Corpo, o resumo para a consulta, as refeições, as exportações, o backup criptografado e a restauração, o backup no Google Drive, a sincronização com o calendário, os lembretes, o widget e o bloqueio do aplicativo.",
+        "oldAllBackupsFree": "Tudo o que já existia no DoseWeek continua gratuito, incluindo o resumo para a consulta fixo de 4, 8 e 12 semanas e todas as exportações e backups.",
+        "oldNothingMovedToPlus": "Todos os recursos que você tinha continuam, e seus registros, horários, lembretes, o widget, os backups e as exportações não mudam; nada é excluído nem transferido para o Plus.",
+        "preservedFreePrefix": "Sim. O download do DoseWeek no Google Play é gratuito, e usuários da versão gratuita veem anúncios.",
+        "preservedPlusExpiryTail": [
+          "Se o Plus terminar, seus registros, modelos e configurações salvas são mantidos, e você ainda pode vê-los e excluí-los; as configurações do resumo para a consulta e o layout da tela Hoje voltam aos padrões da versão gratuita até o Plus voltar."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Um aviso único no aplicativo explica a mudança, e você pode lê-lo de novo em Ajustes > Sobre > O que há de novo."
+        ]
+      },
+      "oldAndroidGuideBody": "Em Ajustes, você pode criar um arquivo de backup criptografado ou ativar o backup no Google Drive, ajustar as notificações e mudar “Análise de uso (opcional)” a qualquer momento. Também pode adicionar o widget do DoseWeek à tela inicial.",
+      "oldAndroidStorageDriveSentence": "Se você ativar o backup opcional no Google Drive, uma cópia criptografada também fica na sua própria pasta de dados de aplicativo do Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "São criados snapshots semanais separados para recuperar o OS do servidor."
+    },
+    "ar": {
+      "oldPrivacySystemExclusion": "تبقى السجلات الحالية في التخزين الخاص بالتطبيق وتُستثنى من النسخ الاحتياطي السحابي لنظام Android والنقل بين الأجهزة.",
+      "oldOnlyAutomaticDrive": "أنت من ينشئ هذه النسخة في ملف؛ والخيار التلقائي الوحيد هو النسخ الاحتياطي الاختياري على Google Drive الموضّح أدناه، وهو متوقف افتراضيًا.",
+      "oldFaqSystemExclusion": "تبقى البيانات مستثناة من نسخة النظام والنقل بين الأجهزة.",
+      "oldCustomDriveParagraphs": [
+        "اختياريًا، يمكن لـ DoseWeek أيضًا الاحتفاظ بتلك النسخة المشفّرة في مجلد بيانات التطبيق الخاص بك على Google Drive. يرى Drive اسم ملف يحتوي على معرّف عشوائي، وحجم الملف، ووقت الإنشاء، وإصدار الحمولة، وإصدار المفتاح، ومُعرّف لقطة عشوائي. ولا يظهر خارج المظروف المشفّر أي اسم دواء أو جرعة أو قياس أو تاريخ علاج أو ملاحظة.",
+        "يجري التشفير على الجهاز قبل الرفع، بالمظروف نفسه AES-256-GCM الذي يستخدمه تصدير الملف دون اتصال. ولا يُحفظ رمز الاسترداد مع النسخة الاحتياطية أبدًا ولا يُرسل إلى أي جهة. إلى أن تؤكد أنك حفظت الرمز، يمكنك عرض الرمز نفسه مجددًا؛ وبعد ذلك لا يعرضه DoseWeek مرة أخرى. وعليك إدخاله من جديد قبل أن يبدأ أي نسخ احتياطي تلقائي. وإذا فُقد، فلا يستطيع المطوّر قراءة النسخة أو استعادتها.",
+        "النسخ الاحتياطي التلقائي الاختياري متوقف افتراضيًا؛ وعند تفعيله يعمل مرة واحدة يوميًا تقريبًا عندما تسمح حالة الجهاز، ولا يَعِد بوقت محدد. وحذف نسخة احتياطية من Drive نهائي، لأن Drive لا يوفّر سلة محذوفات لملفات بيانات التطبيقات. ويوقف قطع الاتصال عمليات الرفع اللاحقة: فهو لا يحذف النسخ الموجودة بالفعل في Drive ولا السجلات الموجودة على الجهاز، وإتلاف نسخة رمز الاسترداد المحفوظة على هذا الجهاز خيار منفصل ومحدد بوضوح. كل نسخة احتياطية ترفع تغييرات، سواء كانت تلقائية أو عبر «النسخ الاحتياطي الآن»، تُحفظ كملف مشفّر منفصل. وتبقى الملفات السابقة إلى أن تحذفها من «النسخ الاحتياطية المحفوظة» داخل التطبيق أو تزيل بيانات التطبيق من حسابك على Google، وهي تشغل مساحة التخزين لديك في Google."
+      ],
+      "oldFreeAnswer": "نعم. يمكن تنزيل DoseWeek مجانًا من Google Play، ويرى مستخدمو الإصدار المجاني إعلانات. وتبقى كل الميزات التي كانت في التطبيق متاحة دون دفع، ومنها التسجيل و«السجل» ومخططات الجسم وملخص الزيارة والوجبات والتصدير والنسخ الاحتياطي المشفّر والاستعادة والنسخ الاحتياطي على Google Drive ومزامنة التقويم والتذكيرات والأداة المصغّرة وقفل التطبيق.",
+      "oldEveryBackupFreeAnswer": "يبقى كل ما كان موجودًا في DoseWeek مجانيًا، بما في ذلك ملخص الزيارة الثابت لمدة 4 و8 و12 أسبوعًا وجميع عمليات التصدير والنسخ الاحتياطي. وإذا انتهى Plus، تبقى سجلاتك وقوالبك وإعداداتك المحفوظة، ويظل بإمكانك عرضها وحذفها؛ وتعود إعدادات ملخص الزيارة وتخطيط شاشة «اليوم» إلى الإعدادات الافتراضية للإصدار المجاني إلى أن يعود Plus.",
+      "oldNothingMovedToPlusAnswer": "تبقى كل الميزات التي كانت لديك، ولا تتغيّر سجلاتك وجداولك وتذكيراتك والأداة المصغّرة ونسخك الاحتياطية وعمليات التصدير؛ ولا يُحذف شيء ولا يُنقل إلى Plus. ويشرح إشعار يظهر مرة واحدة في التطبيق هذا التغيير، ويمكنك قراءته مجددًا من الإعدادات > حول التطبيق > ما الجديد؟",
+      "preservedManualPolicySentences": [
+        "يمكنك استخدام منتقي ملفات النظام في Android ‏(SAF) لحفظ جميع بيانات التطبيق يدويًا في ملف مشفّر بموقع تختاره، ثم اختيار الملف للاستعادة.",
+        "لا يلزم حساب DoseWeek أو إذن واسع للتخزين، ولا تستخدم هذه العملية الشبكة.",
+        "لا يمكن استعادة النسخ الاحتياطية إلا في DoseWeek لنظام Android.",
+        "يستخدم DoseWeek على المنصات الأخرى تنسيقًا مختلفًا للنسخ الاحتياطية، لذا لا يمكن نقل النسخ الاحتياطية بين المنصات.",
+        "تستخدم النسخة تشفير AES-256-GCM الموثّق ورمز استرداد منفصلًا عالي العشوائية.",
+        "وهي ليست سحابة يديرها DoseWeek، ولا توجد خدمة لإعادة تعيين الرمز.",
+        "احتفظ بالملف والرمز بأمان وبشكل منفصل.",
+        "لا يستطيع المطوّر أو الدعم إعادة تعيين رمز مفقود أو فك تشفير الملف.",
+        "إلى أن تؤكد أنك حفظت رمز الاسترداد الخاص بنسخة احتياطية في ملف، يحتفظ DoseWeek بهذا الرمز على هذا الجهاز فقط، محميًا بمفتاح يحتفظ به الجهاز، حتى تتمكن من عرضه مجددًا؛ ويُحذف بمجرد تأكيدك."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "إذا اخترت موفّر مستندات خارجيًا أو سحابيًا، فيخزّن الملف وفق شروطه وسياسة خصوصيته. لا يتلقى مطوّر DoseWeek ملف النسخة الاحتياطية أو رمز الاسترداد.",
+        "قبل الاستعادة، يفك DoseWeek تشفير الملف كاملًا ويتحقق تمامًا من بنيته وعلاقات بياناته، ثم فقط يستبدل البيانات الحالية بصورة ذرّية في معاملة محلية واحدة."
+      ],
+      "preservedManualFaqSentences": [
+        "نعم.",
+        "استخدم منتقي ملفات Android في الإعدادات لحفظ كل البيانات يدويًا في ملف مشفّر باستخدام AES-256-GCM واختره للاستعادة.",
+        "يلزم رمز استرداد منفصل عالي العشوائية.",
+        "لا يمكن استعادة النسخ الاحتياطية إلا في DoseWeek لنظام Android.",
+        "يستخدم DoseWeek على المنصات الأخرى تنسيقًا مختلفًا للنسخ الاحتياطية، لذا لا يمكن نقل النسخ الاحتياطية بين المنصات."
+      ],
+      "preservedIosManualPolicy": "قاعدة البيانات السريرية الحيّة ومغلّف النسخة الاحتياطية المحلية المشفّر مستبعدان من النسخ الاحتياطي للجهاز. لا تُنشأ النسخة الاحتياطية إلا عندما تختار إنشاءها، وتُشفَّر على الجهاز باستخدام AES-256-GCM. ولا تغادر التطبيق إلا عند تصديرها صراحةً عبر منتقي الملفات في النظام، أي بحفظها في الموقع الذي تختاره في تطبيق الملفات. أنت من يدير النص المشفّر المُصدَّر ورمز الاسترداد، ولا يستطيع المطوّر الوصول إلى أي منهما. قد يكون الموقع الذي تختاره في تطبيق الملفات خارج هذا الجهاز — أي عند مزوّد ملفات أعددته أنت — وفي هذه الحالة تنطبق أيضاً شروط ذلك المزوّد وإعدادات جهازك. ولا يُحذف ملف النسخة الاحتياطية المحفوظ خارج التطبيق عند حذف بيانات DoseWeek؛ عليك حذفه بنفسك. لا يمكن استعادة نسخة احتياطية أُنشئت على iPhone أو iPad إلا في DoseWeek على iPhone أو iPad. يستخدم DoseWeek على المنصات الأخرى تنسيقات مختلفة للنسخ الاحتياطية، لذا لا يمكن نقل ملفات النسخ الاحتياطية بين المنصات.\n\nملفات PDF وCSV المُصدَّرة ملفات غير مشفّرة تُنشأ على الجهاز عند طلبك لها فقط. وتُسلَّم إلى الوجهة التي تختارها في ورقة المشاركة في النظام. بعد المشاركة، لا يستطيع DoseWeek ولا المطوّر التحكم في النسخ أو مدة الاحتفاظ بها؛ فاحفظ الملفات المُصدَّرة واحذفها بأمان.",
+      "preservedIosManualFaq": [
+        "لا تُنشأ نسخة احتياطية إلا عندما تختار إنشاءها. تُشفَّر على الجهاز بخوارزمية AES-256-GCM ولا تغادر التطبيق إلا عندما تصدّرها صراحة عبر منتقي ملفات النظام وتحفظها في مكان تختاره في تطبيق الملفات. تُستثنى قاعدة البيانات الحية وغلاف النسخة المحلي من نسخ الجهاز الاحتياطية.",
+        "احتفظ بالملف المصدَّر ورمز الاسترداد في مكان آمن. لا يملك المطوّر أيًا منهما ولا يستطيع استعادة رمز مفقود أو فك تشفير الملف نيابةً عنك. لا تشاركهما مع الدعم أبدًا."
+      ],
+      "concepts": {
+        "e2ee": [
+          "طرف إلى طرف",
+          "من طرف إلى طرف"
+        ],
+        "unreadable": [
+          "لا يستطيع قراء",
+          "لا يمكنه قراء",
+          "لا يمكن للخادم قراء"
+        ],
+        "consent": [
+          "موافق"
+        ],
+        "manual": [
+          "يدوي"
+        ],
+        "export": [
+          "تصدير"
+        ],
+        "import": [
+          "استيراد"
+        ],
+        "reminder": [
+          "تذكير"
+        ],
+        "icloudUnused": [
+          "لا يُستخدم",
+          "لا يستخدم",
+          "لا تُستخدم"
+        ],
+        "appData": [
+          "بيانات التطبيق"
+        ],
+        "verified": [
+          "تحقق",
+          "مؤكّد",
+          "موثّق"
+        ],
+        "active": [
+          "نشط",
+          "فعال",
+          "فعّال"
+        ],
+        "database": [
+          "قاعدة البيانات",
+          "DB"
+        ],
+        "key": [
+          "مفتاح"
+        ],
+        "records": [
+          "سجلات"
+        ],
+        "together": [
+          "معًا",
+          "معاً"
+        ],
+        "excluded": [
+          "تُستثنى",
+          "يستثني",
+          "استبعاد",
+          "مستثن"
+        ],
+        "existing": [
+          "الحالية",
+          "الموجودة",
+          "السابقة"
+        ],
+        "untouched": [
+          "دون تغيير",
+          "لا تتغير",
+          "لا تُغيّر",
+          "لا تُمس"
+        ],
+        "restore": [
+          "استعاد"
+        ],
+        "preDeploy": [
+          "قبل النشر",
+          "قبل نشر"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "وتبقى كل الميزات التي كانت في التطبيق متاحة دون دفع، ومنها التسجيل و«السجل» ومخططات الجسم والتقدير وتحضير الزيارة والوجبات والتصدير والنسخ الاحتياطي المشفّر والاستعادة ومزامنة التقويم والتذكيرات والأدوات وقفل التطبيق.",
+        "oldAllBackupsFree": "يبقى كل ما كان موجودًا في DoseWeek مجانيًا، بما في ذلك تحضير الزيارة الثابت لمدة 4 و8 و12 أسبوعًا وجميع عمليات التصدير والنسخ الاحتياطي.",
+        "oldNothingMovedToPlus": "تبقى كل الميزات التي كانت لديك، ولا تتغيّر سجلاتك وجداولك وتذكيراتك وأدواتك ونسخك الاحتياطية وعمليات التصدير؛ ولا يُحذف شيء ولا يُنقل إلى Plus.",
+        "preservedFreePrefix": "نعم. يمكن تنزيل DoseWeek مجانًا، ويرى مستخدمو الإصدار المجاني إعلانات.",
+        "preservedPlusExpiryTail": [
+          "وإذا انتهى Plus، تبقى سجلاتك وقوالبك وإعداداتك المحفوظة، ويظل بإمكانك عرضها وحذفها؛ وتعود إعدادات التقرير وتخطيط شاشة «اليوم» إلى الإعدادات الافتراضية للإصدار المجاني إلى أن يعود Plus."
+        ],
+        "preservedEarlierNoticeTail": [
+          "ويشرح إشعار يظهر مرة واحدة في التطبيق هذا التغيير، ويمكنك قراءته مجددًا من الإعدادات > حول التطبيق > في هذا التحديث."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "وتبقى كل الميزات التي كانت في التطبيق متاحة دون دفع، ومنها التسجيل و«السجل» ومخططات الجسم وملخص الزيارة والوجبات والتصدير والنسخ الاحتياطي المشفّر والاستعادة والنسخ الاحتياطي على Google Drive ومزامنة التقويم والتذكيرات والأداة المصغّرة وقفل التطبيق.",
+        "oldAllBackupsFree": "يبقى كل ما كان موجودًا في DoseWeek مجانيًا، بما في ذلك ملخص الزيارة الثابت لمدة 4 و8 و12 أسبوعًا وجميع عمليات التصدير والنسخ الاحتياطي.",
+        "oldNothingMovedToPlus": "تبقى كل الميزات التي كانت لديك، ولا تتغيّر سجلاتك وجداولك وتذكيراتك والأداة المصغّرة ونسخك الاحتياطية وعمليات التصدير؛ ولا يُحذف شيء ولا يُنقل إلى Plus.",
+        "preservedFreePrefix": "نعم. يمكن تنزيل DoseWeek مجانًا من Google Play، ويرى مستخدمو الإصدار المجاني إعلانات.",
+        "preservedPlusExpiryTail": [
+          "وإذا انتهى Plus، تبقى سجلاتك وقوالبك وإعداداتك المحفوظة، ويظل بإمكانك عرضها وحذفها؛ وتعود إعدادات ملخص الزيارة وتخطيط شاشة «اليوم» إلى الإعدادات الافتراضية للإصدار المجاني إلى أن يعود Plus."
+        ],
+        "preservedEarlierNoticeTail": [
+          "ويشرح إشعار يظهر مرة واحدة في التطبيق هذا التغيير، ويمكنك قراءته مجددًا من الإعدادات > حول التطبيق > ما الجديد؟"
+        ]
+      },
+      "oldAndroidGuideBody": "من الإعدادات يمكنك إنشاء ملف نسخة احتياطية مشفّرة أو تشغيل النسخ الاحتياطي على Google Drive، وضبط الإشعارات، وتغيير «تحليلات الاستخدام (اختيارية)» في أي وقت. ويمكنك أيضًا إضافة أداة DoseWeek إلى الشاشة الرئيسية.",
+      "oldAndroidStorageDriveSentence": "وإذا فعّلت النسخ الاحتياطي الاختياري على Google Drive، فستُحفظ نسخة مشفّرة أيضًا في مجلد بيانات التطبيق الخاص بك على Google Drive.",
+      "oldWeeklyServerSnapshotSentence": "تُنشأ لقطات منفصلة لاستعادة OS الخادم أسبوعيًا."
+    },
+    "zh-Hans": {
+      "oldPrivacySystemExclusion": "当前记录保存在应用专属存储空间，并排除在 Android 系统云备份和设备间传输之外。",
+      "oldOnlyAutomaticDrive": "文件备份由您自己创建；唯一自动运行的是下文所述的可选 Google 云端硬盘备份，默认关闭。",
+      "oldFaqSystemExclusion": "数据仍排除在系统备份和设备间传输之外。",
+      "oldCustomDriveParagraphs": [
+        "作为一项选择，DoseWeek 也可将该加密备份保存在您本人的 Google 云端硬盘应用数据文件夹中。云端硬盘能看到的是包含随机标识符的文件名、文件大小、创建时间、载荷版本、密钥版本和随机快照标识符。加密信封之外不会出现任何药物名称、剂量、测量值、治疗日期或备注。",
+        "加密在上传前于设备上完成，使用与离线文件导出相同的 AES-256-GCM 信封。恢复码绝不与备份一同存储，也不会发送到任何地方。在您确认已保存恢复码之前，可以再次显示同一个恢复码；确认后 DoseWeek 不会再显示。您必须重新输入后自动备份才能开始。若恢复码丢失，开发者无法读取或找回该备份。",
+        "可选的自动备份默认关闭；开启后，在设备条件允许时大约每天运行一次，并不承诺确切时间。从云端硬盘删除备份不可撤销，因为云端硬盘不为应用数据文件提供回收站。断开连接会停止后续上传：它不会删除云端硬盘中已有的备份，也不会删除设备上的记录；销毁本设备上保存的恢复码副本是另一项明确标示的独立选择。每次上传更改的备份，无论是自动备份还是“立即备份”，都会保存为单独的加密文件。之前的文件会一直保留，直到您在应用的“已保存的备份”中删除，或从您的 Google 账号中移除本应用的数据；这些文件会占用您的 Google 存储空间。"
+      ],
+      "oldFreeAnswer": "是的。DoseWeek 可在 Google Play 免费下载，免费版用户会看到广告。应用原有的所有功能仍可免费使用，包括录入记录、“记录”标签页、身体图表、就诊摘要、用餐、导出、加密备份与恢复、Google 云端硬盘备份、日历同步、提醒、小组件和应用锁。",
+      "oldEveryBackupFreeAnswer": "DoseWeek 原有的所有功能仍然免费，包括固定的 4 周、8 周和 12 周就诊摘要，以及所有导出和备份。Plus 结束后，您的记录、模板和已保存的设置都会保留，您仍可查看和删除它们；在您重新使用 Plus 之前，就诊摘要设置和“今天”页面布局会恢复为免费版默认设置。",
+      "oldNothingMovedToPlusAnswer": "您原有的所有功能都会保留，您的记录、日程、提醒、小组件、备份和导出都不会改变；不会删除任何内容，也不会将任何内容移入 Plus。应用内的一次性通知会说明这项变化，您可以在“设置 > 关于 > 新变化”中再次查看。",
+      "preservedManualPolicySentences": [
+        "您可通过 Android 系统文件选择器（SAF）自行选择位置，将全部应用数据手动保存为加密文件，并选择该文件进行恢复。",
+        "此过程不需要 DoseWeek 账号或广泛的存储权限，也不使用网络。",
+        "备份只能在 Android 版 DoseWeek 中恢复。",
+        "其他平台上的 DoseWeek 使用不同的备份格式，因此无法在平台之间迁移备份。",
+        "备份采用 AES-256-GCM 认证加密，并使用单独的高熵恢复码。",
+        "这不是由 DoseWeek 运营的云备份，也不提供恢复码重置服务。",
+        "请安全、分开保管文件与恢复码。",
+        "开发者和支持人员无法重置丢失的恢复码或解密文件。",
+        "在您确认已保存文件备份的恢复码之前，DoseWeek 会用设备保管的密钥保护该恢复码，仅保存在本设备上，以便您再次查看；确认后即删除。"
+      ],
+      "preservedManualPolicyParagraphs": [
+        "如果选择外部或云端文档提供商，该提供商将依据自身条款和隐私政策存储文件。DoseWeek 开发者不会收到备份文件或恢复码。",
+        "恢复时，DoseWeek 会先解密并完整验证文件、结构和数据关系，之后才在一个本地事务中以原子方式替换当前数据。"
+      ],
+      "preservedManualFaqSentences": [
+        "可以。",
+        "在设置中使用 Android 文件选择器，将全部数据手动保存为 AES-256-GCM 加密文件，并在恢复时选择该文件。",
+        "需要单独的高熵恢复码。",
+        "备份只能在 Android 版 DoseWeek 中恢复。",
+        "其他平台上的 DoseWeek 使用不同的备份格式，因此无法在平台之间迁移备份。"
+      ],
+      "preservedIosManualPolicy": "当前使用的临床记录数据库和加密的本地备份信封不包含在设备备份中。只有在您选择创建时才会生成备份，并在设备上用 AES-256-GCM 加密。只有在您通过系统文件选择器明确导出、保存到您在“文件”App 中选择的位置时，它才会离开本应用。导出的密文和恢复码由您自行管理，开发者无法访问其中任何一项。 您在“文件”App 中选择的位置可能在本设备之外，也就是您自己设置的文件提供程序，此时该提供程序的条款和您的设备设置同样适用。保存在应用之外的备份文件不会随 DoseWeek 数据的删除而消失，需要您自行删除。在 iPhone 或 iPad 上创建的备份只能在 iPhone 或 iPad 上的 DoseWeek 中恢复。其他平台上的 DoseWeek 使用不同的备份格式，因此无法在平台之间迁移备份文件。\n\nPDF 和 CSV 导出文件为明文文件，只在您请求时才在设备上生成。它们会被发送到您在系统共享面板中选择的目的地。共享之后，DoseWeek 和开发者无法控制副本或保存期限；请您自行安全地保管并删除导出的文件。",
+      "preservedIosManualFaq": [
+        "只有在您选择创建时才会生成备份。备份在设备上用 AES-256-GCM 加密，只有当您通过系统文件选择器明确导出、保存到“文件”应用中您选择的位置时才会离开应用。正在使用的数据库和本地备份封装不包含在设备备份中。",
+        "请妥善保管导出的文件及其恢复码。开发者两者都无法访问，既无法找回丢失的恢复码，也无法替您解密文件。切勿把它们发给支持人员。"
+      ],
+      "concepts": {
+        "e2ee": [
+          "端到端"
+        ],
+        "unreadable": [
+          "无法读取",
+          "不能读取"
+        ],
+        "consent": [
+          "同意"
+        ],
+        "manual": [
+          "手动"
+        ],
+        "export": [
+          "导出"
+        ],
+        "import": [
+          "导入"
+        ],
+        "reminder": [
+          "提醒"
+        ],
+        "icloudUnused": [
+          "不使用",
+          "不用于"
+        ],
+        "appData": [
+          "应用数据"
+        ],
+        "verified": [
+          "验证",
+          "核实"
+        ],
+        "active": [
+          "有效"
+        ],
+        "database": [
+          "数据库",
+          "DB"
+        ],
+        "key": [
+          "密钥"
+        ],
+        "records": [
+          "记录"
+        ],
+        "together": [
+          "一起",
+          "一并",
+          "全部"
+        ],
+        "excluded": [
+          "排除",
+          "不包含"
+        ],
+        "existing": [
+          "现有"
+        ],
+        "untouched": [
+          "不变",
+          "不受影响",
+          "不修改"
+        ],
+        "restore": [
+          "恢复"
+        ],
+        "preDeploy": [
+          "部署前"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "应用原有的所有功能仍可免费使用，包括录入记录、“历史”、身体图表、估算、就诊准备、用餐、导出、加密备份与恢复、日历同步、提醒、小组件和应用锁。",
+        "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免费，包括固定的 4 周、8 周和 12 周就诊准备，以及所有导出和备份。",
+        "oldNothingMovedToPlus": "您原有的所有功能都会保留，您的记录、日程、提醒、小组件、备份和导出都不会改变；不会删除任何内容，也不会将任何内容移入 Plus。",
+        "preservedFreePrefix": "是的。 DoseWeek 可免费下载，免费版用户会看到广告。",
+        "preservedPlusExpiryTail": [
+          "Plus 结束后，您的记录、模板和已保存的设置都会保留，您仍可查看和删除它们；在您重新使用 Plus 之前，报告设置和“今天”页面布局会恢复为免费版默认设置。"
+        ],
+        "preservedEarlierNoticeTail": [
+          "应用内的一次性通知会说明这项变化，您可以在“设置 > 关于 > 本次更新”中再次查看。"
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "应用原有的所有功能仍可免费使用，包括录入记录、“记录”标签页、身体图表、就诊摘要、用餐、导出、加密备份与恢复、Google 云端硬盘备份、日历同步、提醒、小组件和应用锁。",
+        "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免费，包括固定的 4 周、8 周和 12 周就诊摘要，以及所有导出和备份。",
+        "oldNothingMovedToPlus": "您原有的所有功能都会保留，您的记录、日程、提醒、小组件、备份和导出都不会改变；不会删除任何内容，也不会将任何内容移入 Plus。",
+        "preservedFreePrefix": "是的。 DoseWeek 可在 Google Play 免费下载，免费版用户会看到广告。",
+        "preservedPlusExpiryTail": [
+          "Plus 结束后，您的记录、模板和已保存的设置都会保留，您仍可查看和删除它们；在您重新使用 Plus 之前，就诊摘要设置和“今天”页面布局会恢复为免费版默认设置。"
+        ],
+        "preservedEarlierNoticeTail": [
+          "应用内的一次性通知会说明这项变化，您可以在“设置 > 关于 > 新变化”中再次查看。"
+        ]
+      },
+      "oldAndroidGuideBody": "在“设置”中可以创建加密备份文件或开启 Google 云端硬盘备份、调整通知，并随时更改“使用情况分析（可选）”。您也可以将 DoseWeek 小组件添加到主屏幕。",
+      "oldAndroidStorageDriveSentence": "如果您开启可选的 Google 云端硬盘备份，加密副本还会保存在您本人的 Google 云端硬盘应用数据文件夹中。",
+      "oldWeeklyServerSnapshotSentence": "服务器OS恢复快照每周单独创建。"
+    },
+    "zh-Hant": {
+      "oldPrivacySystemExclusion": "目前紀錄保存在應用程式專用儲存空間，並排除在 Android 系統雲端備份與裝置間移轉之外。",
+      "oldOnlyAutomaticDrive": "檔案備份由您自己建立；唯一自動執行的是下文所述的可選 Google 雲端硬碟備份，預設為關閉。",
+      "oldFaqSystemExclusion": "資料仍排除在系統備份與裝置間移轉之外。",
+      "oldCustomDriveParagraphs": [
+        "作為一項選擇，DoseWeek 也可將該加密備份保存在您本人的 Google 雲端硬碟應用程式資料夾中。雲端硬碟能看到的是包含隨機識別碼的檔案名稱、檔案大小、建立時間、承載資料版本、金鑰版本與隨機快照識別碼。加密信封之外不會出現任何藥物名稱、劑量、測量值、治療日期或備註。",
+        "加密在上傳前於裝置上完成，使用與離線檔案匯出相同的 AES-256-GCM 信封。復原碼絕不與備份一同儲存，也不會傳送到任何地方。在您確認已保存復原碼之前，可以再次顯示同一組復原碼；確認後 DoseWeek 不會再顯示。您必須重新輸入後自動備份才能開始。若復原碼遺失，開發者無法讀取或找回該備份。",
+        "可選的自動備份預設為關閉；開啟後會在裝置條件允許時大約每天執行一次，並不承諾確切時間。從雲端硬碟刪除備份無法復原，因為雲端硬碟不為應用程式資料檔案提供垃圾桶。中斷連線會停止後續上傳：不會刪除雲端硬碟中既有的備份，也不會刪除裝置上的紀錄；銷毀本裝置上保存的復原碼副本是另一項明確標示的獨立選擇。每次上傳變更的備份，無論是自動備份或「立即備份」，都會儲存為獨立的加密檔案。先前的檔案會一直保留，直到您在 App 的「已儲存的備份」中刪除，或從您的 Google 帳戶移除本 App 的資料；這些檔案會占用您的 Google 儲存空間。"
+      ],
+      "oldFreeAnswer": "是的。DoseWeek 可在 Google Play 免費下載，免費版使用者會看到廣告。應用程式原有的所有功能仍可免費使用，包括記錄、「紀錄」分頁、身體圖表、就診摘要、用餐、匯出、加密備份與還原、Google 雲端硬碟備份、日曆同步、提醒、小工具和 App 鎖定。",
+      "oldEveryBackupFreeAnswer": "DoseWeek 原有的所有功能仍然免費，包括固定的 4 週、8 週和 12 週就診摘要，以及所有匯出和備份。Plus 結束後，您的紀錄、範本和已儲存的設定都會保留，您仍可查看和刪除；在您再次使用 Plus 之前，就診摘要設定和「今天」畫面版面配置會恢復為免費版預設值。",
+      "oldNothingMovedToPlusAnswer": "您原有的所有功能都會保留，您的紀錄、排程、提醒、小工具、備份和匯出都不會改變；不會刪除任何內容，也不會將任何內容移入 Plus。應用程式內的一次性通知會說明這項變更，您可以在「設定 > 關於 > 新功能」中再次查看。",
+      "preservedManualPolicySentences": [
+        "您可透過 Android 系統檔案選擇器（SAF）自行選擇位置，將所有應用程式資料手動儲存為加密檔案，並選擇該檔案進行還原。",
+        "此過程不需要 DoseWeek 帳號或廣泛儲存權限，也不使用網路。",
+        "備份只能在 Android 版 DoseWeek 中還原。",
+        "其他平台上的 DoseWeek 使用不同的備份格式，因此無法在平台之間移轉備份。",
+        "備份採用 AES-256-GCM 驗證加密，並使用獨立的高熵復原碼。",
+        "這不是由 DoseWeek 營運的雲端備份，也不提供復原碼重設服務。",
+        "請安全且分開保管檔案與復原碼。",
+        "開發者和支援人員無法重設遺失的復原碼或解密檔案。",
+        "在您確認已保存檔案備份的復原碼之前，DoseWeek 會以裝置保管的金鑰保護該復原碼，僅儲存在本裝置上，方便您再次查看；確認後即刪除。"
+      ],
+      "preservedManualPolicyParagraphs": [
+        "如果選擇外部或雲端文件提供者，該提供者會依其自身條款與隱私權政策儲存檔案。DoseWeek 開發者不會收到備份檔案或復原碼。",
+        "還原時，DoseWeek 會先解密並完整驗證檔案、結構及資料關聯，之後才在單一本機交易中以不可分割的方式取代目前資料。"
+      ],
+      "preservedManualFaqSentences": [
+        "可以。",
+        "在設定中使用 Android 檔案選擇器，將所有資料手動儲存為 AES-256-GCM 加密檔案，並在還原時選擇該檔案。",
+        "需要獨立的高熵復原碼。",
+        "備份只能在 Android 版 DoseWeek 中還原。",
+        "其他平台上的 DoseWeek 使用不同的備份格式，因此無法在平台之間移轉備份。"
+      ],
+      "preservedIosManualPolicy": "使用中的臨床紀錄資料庫與加密的本機備份信封，都不會納入裝置備份。備份只在您選擇建立時才會產生，並在裝置上以 AES-256-GCM 加密。只有在您透過系統檔案選擇器明確匯出、儲存到您在「檔案」App 中選擇的位置時，它才會離開本 App。匯出的密文與復原碼由您自行管理，開發者無法取得其中任何一項。 您在「檔案」App 中選擇的位置可能在本裝置之外，也就是您自行設定的檔案提供者，此時該提供者的條款與您的裝置設定同樣適用。儲存在 App 之外的備份檔案不會隨 DoseWeek 資料的刪除而消失，需要您自行刪除。在 iPhone 或 iPad 上建立的備份只能在 iPhone 或 iPad 上的 DoseWeek 中還原。其他平台上的 DoseWeek 使用不同的備份格式，因此無法在平台之間移轉備份檔案。\n\nPDF 與 CSV 匯出檔案為明文檔案，只在您提出要求時才在裝置上產生。它們會送往您在系統分享介面中選擇的目的地。分享之後，DoseWeek 與開發者無法控制副本或保存期限；請您安全地保管並刪除匯出的檔案。",
+      "preservedIosManualFaq": [
+        "只有在您選擇建立時才會產生備份。備份在裝置上以 AES-256-GCM 加密，只有當您透過系統檔案選擇器明確匯出、儲存到「檔案」App 中您選擇的位置時才會離開 App。使用中的資料庫與本機備份封裝不包含在裝置備份中。",
+        "請妥善保管匯出的檔案及其復原碼。開發者兩者皆無法取得，既無法找回遺失的復原碼，也無法替您解密檔案。切勿將它們交給支援人員。"
+      ],
+      "concepts": {
+        "e2ee": [
+          "端對端"
+        ],
+        "unreadable": [
+          "無法讀取",
+          "不能讀取"
+        ],
+        "consent": [
+          "同意"
+        ],
+        "manual": [
+          "手動"
+        ],
+        "export": [
+          "匯出"
+        ],
+        "import": [
+          "匯入"
+        ],
+        "reminder": [
+          "提醒"
+        ],
+        "icloudUnused": [
+          "不使用",
+          "不用於"
+        ],
+        "appData": [
+          "應用程式資料",
+          "應用資料"
+        ],
+        "verified": [
+          "驗證",
+          "確認"
+        ],
+        "active": [
+          "有效"
+        ],
+        "database": [
+          "資料庫",
+          "DB"
+        ],
+        "key": [
+          "金鑰"
+        ],
+        "records": [
+          "紀錄"
+        ],
+        "together": [
+          "一起",
+          "一併",
+          "全部"
+        ],
+        "excluded": [
+          "排除",
+          "不包含"
+        ],
+        "existing": [
+          "既有",
+          "現有"
+        ],
+        "untouched": [
+          "不變",
+          "不受影響",
+          "不修改"
+        ],
+        "restore": [
+          "還原"
+        ],
+        "preDeploy": [
+          "部署前"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "App 原有的所有功能仍可免費使用，包括記錄、「紀錄」分頁、身體圖表、估算、就診準備、用餐、匯出、加密備份與還原、行事曆同步、提醒、小工具和 App 鎖定。",
+        "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免費，包括固定的 4 週、8 週和 12 週就診準備，以及所有匯出和備份。",
+        "oldNothingMovedToPlus": "您原有的所有功能都會保留，您的紀錄、排程、提醒、小工具、備份和匯出都不會改變；不會刪除任何內容，也不會將任何內容移入 Plus。",
+        "preservedFreePrefix": "是的。 DoseWeek 可免費下載，免費版使用者會看到廣告。",
+        "preservedPlusExpiryTail": [
+          "Plus 結束後，您的紀錄、範本和已儲存的設定都會保留，您仍可查看和刪除；在您再次使用 Plus 之前，報告設定和「今天」畫面版面配置會恢復為免費版預設值。"
+        ],
+        "preservedEarlierNoticeTail": [
+          "App 內的一次性通知會說明這項變更，您可以在「設定 > 關於 > 本次更新」中再次查看。"
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "應用程式原有的所有功能仍可免費使用，包括記錄、「紀錄」分頁、身體圖表、就診摘要、用餐、匯出、加密備份與還原、Google 雲端硬碟備份、日曆同步、提醒、小工具和 App 鎖定。",
+        "oldAllBackupsFree": "DoseWeek 原有的所有功能仍然免費，包括固定的 4 週、8 週和 12 週就診摘要，以及所有匯出和備份。",
+        "oldNothingMovedToPlus": "您原有的所有功能都會保留，您的紀錄、排程、提醒、小工具、備份和匯出都不會改變；不會刪除任何內容，也不會將任何內容移入 Plus。",
+        "preservedFreePrefix": "是的。 DoseWeek 可在 Google Play 免費下載，免費版使用者會看到廣告。",
+        "preservedPlusExpiryTail": [
+          "Plus 結束後，您的紀錄、範本和已儲存的設定都會保留，您仍可查看和刪除；在您再次使用 Plus 之前，就診摘要設定和「今天」畫面版面配置會恢復為免費版預設值。"
+        ],
+        "preservedEarlierNoticeTail": [
+          "應用程式內的一次性通知會說明這項變更，您可以在「設定 > 關於 > 新功能」中再次查看。"
+        ]
+      },
+      "oldAndroidGuideBody": "在「設定」中可以建立加密備份檔案或開啟 Google 雲端硬碟備份、調整通知，並隨時變更「使用情形分析（選用）」。您也可以將 DoseWeek 小工具加入主畫面。",
+      "oldAndroidStorageDriveSentence": "若您開啟可選的 Google 雲端硬碟備份，加密副本也會保存在您本人的 Google 雲端硬碟應用程式資料夾中。",
+      "oldWeeklyServerSnapshotSentence": "伺服器OS復原快照每週單獨建立。"
+    },
+    "tr": {
+      "oldPrivacySystemExclusion": "Güncel kayıtlar uygulamaya özel depolamada tutulur ve Android sistem bulut yedeklemesi ile cihazlar arası aktarımın dışında bırakılır.",
+      "oldOnlyAutomaticDrive": "Bu dosya yedeğini kendiniz oluşturursunuz; tek otomatik seçenek, aşağıda açıklanan ve varsayılan olarak kapalı olan isteğe bağlı Google Drive yedeklemesidir.",
+      "oldFaqSystemExclusion": "Veriler sistem yedeklemesi ve cihaz aktarımının dışında kalır.",
+      "oldCustomDriveParagraphs": [
+        "İsteğe bağlı olarak DoseWeek, bu şifrelenmiş yedeği kendi Google Drive uygulama verileri klasörünüzde de tutabilir. Drive; rastgele bir tanımlayıcı içeren dosya adını, dosya boyutunu, oluşturulma zamanını, yük sürümünü, anahtar sürümünü ve rastgele bir anlık görüntü tanımlayıcısını görür. Şifreli zarfın dışında hiçbir ilaç adı, doz, ölçüm, tedavi tarihi veya not görünmez.",
+        "Şifreleme, yüklemeden önce cihazda yapılır ve çevrimdışı dosya dışa aktarımının kullandığı AES-256-GCM zarfının aynısı kullanılır. Kurtarma kodu hiçbir zaman yedekle birlikte saklanmaz ve hiçbir yere gönderilmez. Kodu kaydettiğinizi onaylayana kadar aynı kodu yeniden görüntüleyebilirsiniz; onayladıktan sonra DoseWeek kodu bir daha göstermez. Otomatik yedekleme başlayabilmeden önce onu yeniden girmeniz gerekir. Kod kaybolursa geliştirici yedeği okuyamaz ve kurtaramaz.",
+        "İsteğe bağlı otomatik yedekleme varsayılan olarak kapalıdır; açıkken cihaz izin verdiğinde günde yaklaşık bir kez çalışır ve kesin bir saat vaat etmez. Bir yedeği Drive'dan silmek kalıcıdır, çünkü Drive uygulama verisi dosyaları için çöp kutusu sunmaz. Bağlantıyı kesmek sonraki yüklemeleri durdurur: Drive'da hâlihazırda bulunan yedekleri de cihazdaki kayıtları da silmez; bu cihazda saklanan kurtarma kodu kopyasını yok etmek ayrı ve açıkça belirtilmiş bir seçimdir. Değişiklikleri yükleyen her yedekleme, otomatik ya da “Şimdi yedekle” ile yapılmış olsun, ayrı bir şifreli dosya olarak saklanır. Önceki dosyalar, onları uygulamadaki “Kayıtlı yedekler” listesinden silene veya Google hesabınızdan uygulamanın verilerini kaldırana kadar kalır ve Google depolama alanınızı kullanır."
+      ],
+      "oldFreeAnswer": "Evet. DoseWeek, Google Play'de ücretsiz olarak indirilebilir ve ücretsiz sürüm kullanıcıları reklam görür. Kayıt, Geçmiş, Vücut grafikleri, muayene özeti, öğünler, dışa aktarmalar, şifreli yedekleme ve geri yükleme, Google Drive yedeklemesi, takvim eşitleme, hatırlatıcılar, widget ve uygulama kilidi dahil, uygulamada zaten bulunan tüm özellikler ödeme yapmadan kullanılabilir olmaya devam eder.",
+      "oldEveryBackupFreeAnswer": "Sabit 4, 8 ve 12 haftalık muayene özeti ile tüm dışa aktarmalar ve yedekler dahil, DoseWeek'te zaten bulunan her şey ücretsiz kalır. Plus sona ererse kayıtlarınız, şablonlarınız ve kaydedilmiş ayarlarınız korunur; bunları görüntülemeye ve silmeye devam edebilirsiniz. Muayene özeti ayarları ve Bugün düzeni, Plus geri gelene kadar ücretsiz sürümün varsayılanlarına döner.",
+      "oldNothingMovedToPlusAnswer": "Sahip olduğunuz tüm özellikler kalır; kayıtlarınız, programlarınız, hatırlatıcılarınız, widget, yedekleriniz ve dışa aktarmalarınız değişmez. Hiçbir şey silinmez veya Plus'a taşınmaz. Uygulamadaki tek seferlik bir duyuru değişikliği açıklar; bunu Ayarlar > Hakkında > “Neler yeni?” bölümünde yeniden okuyabilirsiniz.",
+      "preservedManualPolicySentences": [
+        "Android sistem dosya seçicisi (SAF) ile tüm verileri seçtiğiniz yerde şifrelenmiş bir dosyaya elle kaydedebilir ve dosyayı seçerek geri yükleyebilirsiniz.",
+        "DoseWeek hesabı veya geniş depolama izni gerekmez ve bu işlem ağ kullanmaz.",
+        "Yedekler yalnızca Android için DoseWeek’te geri yüklenebilir.",
+        "Diğer platformlardaki DoseWeek farklı bir yedek biçimi kullandığından yedekler platformlar arasında taşınamaz.",
+        "Yedek, kimlik doğrulamalı AES-256-GCM şifrelemesi ve ayrı, yüksek entropili bir kurtarma kodu kullanır.",
+        "Bu, DoseWeek tarafından işletilen bir bulut yedeklemesi değildir ve kod sıfırlama hizmeti yoktur.",
+        "Dosyayı ve kodu güvenle ve ayrı saklayın.",
+        "Geliştirici veya destek kayıp kodu sıfırlayamaz veya dosyanın şifresini çözemez.",
+        "Bir dosya yedeğinin kurtarma kodunu kaydettiğinizi onaylayana kadar DoseWeek, kodu yeniden görebilmeniz için onu cihazın sakladığı bir anahtarla koruyarak yalnızca bu cihazda tutar; onayladığınızda silinir."
+      ],
+      "preservedManualPolicyParagraphs": [
+        "Harici veya bulut tabanlı bir belge sağlayıcısı seçerseniz dosya, o sağlayıcının koşulları ve gizlilik politikası uyarınca saklanır. DoseWeek geliştiricisi dosyayı veya kurtarma kodunu almaz.",
+        "Geri yüklemeden önce DoseWeek dosyanın tamamının şifresini çözer, yapısını ve veri ilişkilerini bütünüyle doğrular; ancak bundan sonra güncel verileri tek bir yerel işlem içinde atomik olarak değiştirir."
+      ],
+      "preservedManualFaqSentences": [
+        "Evet.",
+        "Ayarlar'da Android dosya seçicisiyle tüm verileri AES-256-GCM ile şifrelenmiş bir dosyaya elle kaydedin ve geri yüklemek için seçin.",
+        "Ayrı, yüksek entropili bir kurtarma kodu gerekir.",
+        "Yedekler yalnızca Android için DoseWeek’te geri yüklenebilir.",
+        "Diğer platformlardaki DoseWeek farklı bir yedek biçimi kullandığından yedekler platformlar arasında taşınamaz."
+      ],
+      "preservedIosManualPolicy": "Etkin klinik veritabanı ve şifreli yerel yedek zarfı, cihaz yedeklemelerinin dışında tutulur. Yedek yalnızca siz oluşturmayı seçtiğinizde oluşturulur ve cihazda AES-256-GCM ile şifrelenir. Uygulamadan yalnızca sistem dosya seçicisi üzerinden açıkça dışa aktardığınızda, yani Dosyalar uygulamasında seçtiğiniz bir konuma kaydettiğinizde çıkar. Dışa aktarılan şifreli metni ve kurtarma kodunu siz yönetirsiniz; geliştirici hiçbirine erişemez. Dosyalar uygulamasında seçtiğiniz konum bu cihazın dışında olabilir — kendi kurduğunuz bir dosya sağlayıcısında — ve o durumda ilgili sağlayıcının koşulları ile cihaz ayarlarınız da geçerli olur. Uygulamanın dışına kaydedilen bir yedek dosyası, DoseWeek verilerini sildiğinizde kaldırılmaz; onu kendiniz silmeniz gerekir. iPhone veya iPad’de oluşturulan bir yedek yalnızca iPhone veya iPad’deki DoseWeek’te geri yüklenebilir. Diğer platformlardaki DoseWeek farklı yedek biçimleri kullandığından yedek dosyaları platformlar arasında taşınamaz.\n\nPDF ve CSV dışa aktarımları, yalnızca siz istediğinizde cihazda oluşturulan düz metin dosyalarıdır. Sistem paylaşım sayfasında seçtiğiniz hedefe iletilir. Paylaşımdan sonra kopyaları ve saklanma sürelerini DoseWeek ve geliştirici denetleyemez; dışa aktarılan dosyaları güvenle saklayın ve silin.",
+      "preservedIosManualFaq": [
+        "Yedek yalnızca siz oluşturmayı seçtiğinizde üretilir. Cihazda AES-256-GCM ile şifrelenir ve uygulamadan ancak sistem dosya seçiciyle, Dosyalar uygulamasında seçtiğiniz bir konuma dışa aktardığınızda çıkar. Etkin veritabanı ve yerel yedek zarfı cihaz yedeklerinin dışında tutulur.",
+        "Dışa aktarılan dosyayı ve kurtarma kodunu güvenle saklayın. Geliştiricinin ikisine de erişimi yoktur; kaybolan bir kodu sıfırlayamaz ve dosyayı sizin için çözemez. Bunları asla destekle paylaşmayın."
+      ],
+      "concepts": {
+        "e2ee": [
+          "uçtan uca"
+        ],
+        "unreadable": [
+          "okuyamaz"
+        ],
+        "consent": [
+          "onay",
+          "rıza"
+        ],
+        "manual": [
+          "elle",
+          "manuel"
+        ],
+        "export": [
+          "dışa aktar"
+        ],
+        "import": [
+          "içe aktar"
+        ],
+        "reminder": [
+          "hatırlat"
+        ],
+        "icloudUnused": [
+          "kullanılmaz",
+          "kullanmaz"
+        ],
+        "appData": [
+          "uygulama verileri"
+        ],
+        "verified": [
+          "doğrulan"
+        ],
+        "active": [
+          "etkin",
+          "aktif"
+        ],
+        "database": [
+          "veritabanı",
+          "veri tabanı",
+          "DB"
+        ],
+        "key": [
+          "anahtar"
+        ],
+        "records": [
+          "kayıt"
+        ],
+        "together": [
+          "birlikte"
+        ],
+        "excluded": [
+          "hariç",
+          "dışarıda",
+          "dışında",
+          "dahil edilmez"
+        ],
+        "existing": [
+          "mevcut"
+        ],
+        "untouched": [
+          "dokunulmaz",
+          "değişmez",
+          "değiştirilmez"
+        ],
+        "restore": [
+          "geri yükle"
+        ],
+        "preDeploy": [
+          "dağıtımdan önce",
+          "dağıtım öncesi"
+        ]
+      },
+      "iosCommercialSentences": {
+        "oldFreeList": "Kayıt, Geçmiş, Vücut grafikleri, tahmin, muayene hazırlığı, öğünler, dışa aktarmalar, şifreli yedekleme ve geri yükleme, takvim eşitleme, hatırlatıcılar, widget'lar ve uygulama kilidi dahil, uygulamanın zaten yaptığı her şey ödeme yapmadan kullanılabilir olmaya devam eder.",
+        "oldAllBackupsFree": "Sabit 4, 8 ve 12 haftalık muayene hazırlığı ile tüm dışa aktarmalar ve yedekler dahil, DoseWeek'te zaten bulunan her şey ücretsiz kalır.",
+        "oldNothingMovedToPlus": "Sahip olduğunuz tüm özellikler kalır; kayıtlarınız, programlarınız, hatırlatıcılarınız, widget'larınız, yedekleriniz ve dışa aktarmalarınız değişmez.",
+        "preservedFreePrefix": "Evet. DoseWeek ücretsiz olarak indirilebilir ve ücretsiz sürüm kullanıcıları reklam görür.",
+        "preservedPlusExpiryTail": [
+          "Plus sona ererse kayıtlarınız, şablonlarınız ve kaydedilmiş ayarlarınız korunur; bunları görüntülemeye ve silmeye devam edebilirsiniz.",
+          "Rapor ayarları ve Bugün düzeni, Plus geri gelene kadar ücretsiz sürümün varsayılanlarına döner."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Hiçbir şey silinmez veya Plus'a taşınmaz.",
+          "Uygulamadaki tek seferlik bir duyuru değişikliği açıklar; bunu Ayarlar > Hakkında > Yenilikler bölümünde yeniden okuyabilirsiniz."
+        ]
+      },
+      "androidCommercialSentences": {
+        "oldFreeList": "Kayıt, Geçmiş, Vücut grafikleri, muayene özeti, öğünler, dışa aktarmalar, şifreli yedekleme ve geri yükleme, Google Drive yedeklemesi, takvim eşitleme, hatırlatıcılar, widget ve uygulama kilidi dahil, uygulamada zaten bulunan tüm özellikler ödeme yapmadan kullanılabilir olmaya devam eder.",
+        "oldAllBackupsFree": "Sabit 4, 8 ve 12 haftalık muayene özeti ile tüm dışa aktarmalar ve yedekler dahil, DoseWeek'te zaten bulunan her şey ücretsiz kalır.",
+        "oldNothingMovedToPlus": "Sahip olduğunuz tüm özellikler kalır; kayıtlarınız, programlarınız, hatırlatıcılarınız, widget, yedekleriniz ve dışa aktarmalarınız değişmez.",
+        "preservedFreePrefix": "Evet. DoseWeek, Google Play'de ücretsiz olarak indirilebilir ve ücretsiz sürüm kullanıcıları reklam görür.",
+        "preservedPlusExpiryTail": [
+          "Plus sona ererse kayıtlarınız, şablonlarınız ve kaydedilmiş ayarlarınız korunur; bunları görüntülemeye ve silmeye devam edebilirsiniz.",
+          "Muayene özeti ayarları ve Bugün düzeni, Plus geri gelene kadar ücretsiz sürümün varsayılanlarına döner."
+        ],
+        "preservedEarlierNoticeTail": [
+          "Hiçbir şey silinmez veya Plus'a taşınmaz.",
+          "Uygulamadaki tek seferlik bir duyuru değişikliği açıklar; bunu Ayarlar > Hakkında > “Neler yeni?",
+          "” bölümünde yeniden okuyabilirsiniz."
+        ]
+      },
+      "oldAndroidGuideBody": "Ayarlar’da şifrelenmiş bir yedek dosyası oluşturabilir veya Google Drive yedeklemesini açabilir, bildirimleri düzenleyebilir ve “Kullanım analizi (isteğe bağlı)” ayarını istediğiniz zaman değiştirebilirsiniz. DoseWeek widget’ını ana ekranınıza da ekleyebilirsiniz.",
+      "oldAndroidStorageDriveSentence": "İsteğe bağlı Google Drive yedeklemesini açarsanız, şifrelenmiş bir kopya kendi Google Drive uygulama verileri klasörünüzde de tutulur.",
+      "oldWeeklyServerSnapshotSentence": "Sunucunun OS kurtarması için ayrı haftalık anlık görüntüler oluşturulur."
+    }
+  },
+  "canonicalWithoutAwsTimingMethodSha256": {
+    "docs/ios-content.json": "c5559919126178d7dd2d9c76a93d69c7a54d6fa7ecc39b887e0348d731bb951b",
+    "docs/android-content.candidate.json": "50d7ec55a02a5075d7c290935cbe448f471322d3ded388d8924737e3eef51585"
+  }
+}

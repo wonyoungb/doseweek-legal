@@ -1,0 +1,1578 @@
+{
+  "lane": "legal-update-legal",
+  "revision": 2,
+  "status": "STATIC_GREEN_AWAITING_REVIEW_EXTERNAL_PARITY_BLOCKED",
+  "reviewedHead": "d3b6e32b21789c67763ad9f73bfff77dc370cc2b",
+  "head": "a6a4e18f70bcf866a6bb50aacb8a64164cba8bde",
+  "branch": "next-ai/legal-store-legal-cx",
+  "sourceGreenHead": "5f96792321df89783e22b73aa7c43e1979e3a46c",
+  "commits": [
+    {
+      "sha": "30647c4596ef8d7bc0cc9d0dcbabd012e5b4438d",
+      "subject": "test(legal-update-legal): cover review-2 retirement and disclosure gaps",
+      "stampVerified": true,
+      "type": "RED"
+    },
+    {
+      "sha": "5f96792321df89783e22b73aa7c43e1979e3a46c",
+      "subject": "fix(legal-update-legal): retire buyer program and resolve review-2 copy",
+      "stampVerified": true,
+      "type": "GREEN"
+    },
+    {
+      "sha": "a6a4e18f70bcf866a6bb50aacb8a64164cba8bde",
+      "subject": "docs(legal-update-legal): record verified review-2 completion",
+      "stampVerified": true,
+      "type": "DOCS"
+    }
+  ],
+  "redCommits": [
+    {
+      "sha": "30647c4596ef8d7bc0cc9d0dcbabd012e5b4438d",
+      "expectedFailing": [
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_legacy_rights_reach_staged_policy_help_and_terms_without_claims",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_prior_buyer_workflow_is_absent_from_candidate",
+        "test_legal_revision2.LegalRevision2Test.test_all_locales_keep_free_features_and_rights_without_special_offer",
+        "test_legal_revision2.LegalRevision2Test.test_commercial_copy_parity_is_a_distinct_closed_release_gate",
+        "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker",
+        "test_legal_revision2.LegalRevision2Test.test_prior_buyer_grant_and_claim_code_program_are_retired",
+        "test_legal_revision2.LegalRevision2Test.test_retired_claim_collection_has_no_active_release_workflow",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_pipa_thousand_threshold_uses_locale_correct_grouping_both_sources",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_renderer_rejects_short_store_name_next_to_localized_text",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_staged_ios_copy_rejects_shortened_competing_store_names"
+      ],
+      "proof": {
+        "parent": "d3b6e32b21789c67763ad9f73bfff77dc370cc2b",
+        "receipt": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/red-parent.json",
+        "log": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/red-parent.log.gz",
+        "validation": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/red-proof.json",
+        "compile": "PASS",
+        "methods": 43,
+        "failedMethods": 10,
+        "assertionFailures": 1098,
+        "errors": 0,
+        "skipped": 0,
+        "omitted": 0,
+        "temporaryDetachedWorktreeRemoved": true
+      }
+    }
+  ],
+  "greenTests": [
+    "test_account_legal_update.AccountLegalUpdateTests.test_business_operator_and_representative_all_locales",
+    "test_account_legal_update.AccountLegalUpdateTests.test_direct_deletion_and_consent_withdrawal_have_no_expiry_wait_all_locales",
+    "test_account_legal_update.AccountLegalUpdateTests.test_health_consent_categories_purpose_retention_and_refusal_all_locales",
+    "test_account_legal_update.AccountLegalUpdateTests.test_hybrid_backup_encryption_cadence_deletion_and_restore_all_locales",
+    "test_account_legal_update.AccountLegalUpdateTests.test_store_confirmed_expiry_recheck_reset_account_and_subscription_boundaries_all_locales",
+    "test_account_legal_update.AccountLegalUpdateTests.test_unverified_backup_and_deletion_features_remain_publication_gated",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_backup_window_and_access_logs_are_tracked_as_readiness",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_candidate_addresses_german_and_dutch_readers_formally",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_candidate_localizes_off_status_analytics_and_legacy_rights_review",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_cjk_fields_join_sentences_without_an_ascii_space",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_cloudflare_transfer_covers_the_announcement_check_and_refuses_truthfully",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_every_locale_has_the_full_draft_scope",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_every_locale_names_operator_region_and_cloudflare_transfer",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_external_deletion_locales_provide_email_and_separate_outcomes",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_external_deletion_request_uses_existing_support_without_plus",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_health_sync_does_not_say_sync_is_the_only_way_off_the_device",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_hosting_detector_rejects_a_placeholder_candidate",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_legacy_rights_reach_staged_policy_help_and_terms_without_claims",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_live_and_staged_legal_sources_name_no_retired_provider",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_pending_digest_basis_stays_registered_until_the_tombstone_decision",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_pending_markers_are_distinct_from_release_placeholders",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_release_gate_refuses_open_readiness_flags",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_release_gate_refuses_unintegrated_candidate",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_retention_states_the_d8_and_backup_numbers",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_offline_clause_and_backup_mechanism_are_refused",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_prior_buyer_workflow_is_absent_from_candidate",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_provider_detector_covers_localized_names",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_sign_in_providers_are_apple_and_google_only",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_ios_support_lead_replaces_legacy_account_denial",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_page_inventory_and_no_fabricated_effective_date",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_privacy_sources_keep_no_release_placeholder",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_sources_carry_health_sync_and_the_pending_verifier_location",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_sources_qualify_the_record_and_meal_denials",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_sources_reconcile_account_denials_without_a_date",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_sync_key_health_sync_and_kept_records_are_stated",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_sync_scope_is_checked_in_every_locale",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_transfer_detector_rejects_the_reviewed_false_refusal",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_unshipped_server_and_client_paths_are_tracked_as_readiness",
+    "test_korean_tone.AuditTests.test_allow_list_entries_need_a_reason",
+    "test_korean_tone.AuditTests.test_audit_counts_and_stale_allow_list_entries",
+    "test_korean_tone.AuditTests.test_repository_allow_list_is_valid",
+    "test_korean_tone.EndingRuleTests.test_formal_endings_are_flagged",
+    "test_korean_tone.EndingRuleTests.test_formal_rewrites",
+    "test_korean_tone.EndingRuleTests.test_haeyo_sentences_and_questions_pass",
+    "test_korean_tone.EndingRuleTests.test_labels_ending_in_a_noun_or_stem_pass",
+    "test_korean_tone.EndingRuleTests.test_only_the_sentence_end_counts",
+    "test_korean_tone.EndingRuleTests.test_placeholders_inside_sentences",
+    "test_korean_tone.EndingRuleTests.test_plain_endings_are_flagged",
+    "test_korean_tone.EndingRuleTests.test_quoted_term_is_not_the_sentence_ending",
+    "test_korean_tone.EngineIdentityTests.test_engine_matches_pinned_hash_in_shared_rule_data",
+    "test_korean_tone.GlossaryRuleTests.test_feature_name_and_quoted_old_name_pass",
+    "test_korean_tone.GlossaryRuleTests.test_feature_names_are_flagged",
+    "test_korean_tone.GlossaryRuleTests.test_reviewed_allow_list_suppresses_a_legitimate_use",
+    "test_korean_tone.HonorificRuleTests.test_honorific_rewrites",
+    "test_korean_tone.HonorificRuleTests.test_plain_polite_requests_pass",
+    "test_korean_tone.HonorificRuleTests.test_stacked_and_filler_honorifics_are_flagged",
+    "test_korean_tone.JargonRuleTests.test_jargon_is_flagged_with_its_plain_word",
+    "test_korean_tone.JargonRuleTests.test_jargon_list_lives_in_the_shared_rule_data",
+    "test_korean_tone.JargonRuleTests.test_jargon_rewrites",
+    "test_korean_tone.JargonRuleTests.test_plain_words_and_lookalikes_pass",
+    "test_korean_tone.NounStatusRuleTests.test_noun_heading_inside_a_longer_message_passes",
+    "test_korean_tone.NounStatusRuleTests.test_short_labels_and_noun_phrases_pass",
+    "test_korean_tone.NounStatusRuleTests.test_whole_status_messages_ending_in_a_noun_are_flagged",
+    "test_korean_tone.WebsiteLoaderTests.test_generator_label_tables_and_templates",
+    "test_korean_tone.WebsiteLoaderTests.test_loads_only_the_ko_locale_with_json_paths",
+    "test_korean_tone.WebsiteLoaderTests.test_repository_sources_exclude_generated_pages",
+    "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle",
+    "test_legal_operations.LegalOperationsTest.test_breach_procedure_covers_sdk_disclosure_and_separate_clocks",
+    "test_legal_operations.LegalOperationsTest.test_release_readiness_cannot_omit_new_legal_gates",
+    "test_legal_revision1.LegalRevision1Test.test_canonical_ios_policy_and_help_avoid_other_platform_names",
+    "test_legal_revision1.LegalRevision1Test.test_excluded_market_prose_preserves_existing_user_rights_all_locales",
+    "test_legal_revision1.LegalRevision1Test.test_market_contract_rejects_reopened_regions_and_fake_rep_contact",
+    "test_legal_revision1.LegalRevision1Test.test_market_metadata_matches_exclusions_and_no_rep_appointment",
+    "test_legal_revision1.LegalRevision1Test.test_neutral_ios_retention_preserves_other_store_verifier_and_deletion_bounds",
+    "test_legal_revision1.LegalRevision1Test.test_operations_gate_excludes_markets_preserves_existing_user_safeguards",
+    "test_legal_revision1.LegalRevision1Test.test_operator_bearing_fields_use_business_and_keep_representative",
+    "test_legal_revision1.LegalRevision1Test.test_release_still_requires_actual_sales_exclusion_readback",
+    "test_legal_revision1.LegalRevision1Test.test_staged_ios_policy_and_help_avoid_other_platform_names",
+    "test_legal_revision2.LegalRevision2Test.test_all_locales_keep_free_features_and_rights_without_special_offer",
+    "test_legal_revision2.LegalRevision2Test.test_commercial_copy_parity_is_a_distinct_closed_release_gate",
+    "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker",
+    "test_legal_revision2.LegalRevision2Test.test_prior_buyer_grant_and_claim_code_program_are_retired",
+    "test_legal_revision2.LegalRevision2Test.test_retired_claim_collection_has_no_active_release_workflow",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_brand_guard_covers_localized_shortened_forms_and_allows_google_sign_in",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_canonical_ios_copy_rejects_shortened_competing_store_names",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_pipa_sensitive_and_external_access_triggers_remain_independent",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_pipa_thousand_threshold_uses_locale_correct_grouping_both_sources",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_renderer_rejects_short_store_name_next_to_localized_text",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_staged_ios_copy_rejects_shortened_competing_store_names",
+    "test_locale_pages.LocalePageTests.test_every_route_has_a_page_for_every_locale",
+    "test_locale_pages.LocalePageTests.test_hash_pages_stay_multilingual_and_become_x_default",
+    "test_locale_pages.LocalePageTests.test_hreflang_links_are_reciprocal",
+    "test_locale_pages.LocalePageTests.test_language_navigation_links_the_same_route_in_every_locale",
+    "test_locale_pages.LocalePageTests.test_language_script_leaves_static_pages_alone",
+    "test_locale_pages.LocalePageTests.test_local_links_resolve_from_locale_pages",
+    "test_locale_pages.LocalePageTests.test_locale_pages_are_canonical_and_list_every_alternate",
+    "test_locale_pages.LocalePageTests.test_locale_pages_declare_their_language_and_direction",
+    "test_locale_pages.LocalePageTests.test_locale_panel_is_the_hash_page_panel",
+    "test_locale_pages.LocalePageTests.test_sitemap_lists_every_page_with_its_alternates",
+    "test_locale_pages.LocalePageTests.test_titles_and_descriptions_are_localized",
+    "test_monetization_copy.AdsTransferParticularsTest.test_every_android_ads_section_lists_the_particulars_and_the_app_set_id",
+    "test_monetization_copy.AdsTransferParticularsTest.test_every_ios_ads_section_lists_the_transfer_particulars",
+    "test_monetization_copy.AdsTransferParticularsTest.test_renderers_reject_an_ads_section_without_the_particulars",
+    "test_monetization_copy.AndroidPurchaseVerificationCopyTest.test_english_purchase_copy_names_server_verification_only",
+    "test_monetization_copy.PurchaseServerPlaceholderTest.test_ios_and_android_purchase_sections_carry_the_same_placeholders",
+    "test_monetization_copy.PurchaseServerPlaceholderTest.test_parity_guard_rejects_an_ios_section_without_the_retention_sentence",
+    "test_monetization_copy.PurchaseServerPlaceholderTest.test_release_gate_finds_every_pending_ios_server_sentence",
+    "test_monetization_copy.RewardPassCopyTest.test_every_locale_describes_the_24_hour_reward_and_48_hour_cap",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_and_sales_configuration_block_release_without_rep_appointment",
+    "test_privacy_ops.MonthlyExportTests.test_atomic_writer_refuses_existing_and_cleans_sanitised_temp",
+    "test_privacy_ops.MonthlyExportTests.test_cli_default_is_dry_and_no_token_or_response_in_stdout",
+    "test_privacy_ops.MonthlyExportTests.test_cli_malformed_json_does_not_echo_response",
+    "test_privacy_ops.MonthlyExportTests.test_default_dry_run_never_reads_token_contacts_network_or_writes",
+    "test_privacy_ops.MonthlyExportTests.test_duplicate_month_stops_before_token_or_request_and_preserves_bytes",
+    "test_privacy_ops.MonthlyExportTests.test_execute_needs_explicit_token_without_automatic_auth",
+    "test_privacy_ops.MonthlyExportTests.test_existing_lock_prevents_concurrent_query_without_removing_other_lock",
+    "test_privacy_ops.MonthlyExportTests.test_git_archive_and_token_rejected_before_network",
+    "test_privacy_ops.MonthlyExportTests.test_http_errors_redact_provider_body_and_do_not_retry",
+    "test_privacy_ops.MonthlyExportTests.test_insecure_symlink_directory_oversize_and_header_injection_token_rejected",
+    "test_privacy_ops.MonthlyExportTests.test_one_request_persists_only_coarse_private_monthly_json",
+    "test_privacy_ops.MonthlyExportTests.test_publication_error_leaves_no_partial_final",
+    "test_privacy_ops.MonthlyExportTests.test_rejected_non_regular_token_closes_descriptor",
+    "test_privacy_ops.MonthlyExportTests.test_rejected_report_never_persists_raw_or_final_and_releases_lock",
+    "test_privacy_ops.MonthlyExportTests.test_shared_archive_and_symlink_rejected",
+    "test_privacy_ops.MonthlyExportTests.test_small_counts_and_no_rows_have_identical_export_bytes",
+    "test_privacy_ops.MonthlyExportTests.test_token_in_archive_rejected",
+    "test_privacy_ops.MonthlyExportTests.test_transport_failure_does_not_retry_or_leave_output",
+    "test_privacy_ops.MonthlyExportTests.test_transport_fixed_https_post_no_proxy_redirect_or_retry",
+    "test_privacy_ops.MonthlyExportTests.test_transport_rejects_nonjson_oversize_and_duplicate_payload",
+    "test_privacy_ops.PrivacyBoundaryTests.test_changed_query_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_current_future_and_buffer_months_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_deletion_plan_never_echoes_identifier",
+    "test_privacy_ops.PrivacyBoundaryTests.test_dimensions_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_duplicate_json_key_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_empty_is_not_claimed_zero",
+    "test_privacy_ops.PrivacyBoundaryTests.test_extra_metric_and_field_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_hidden_row_dimension_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_leap_month_end",
+    "test_privacy_ops.PrivacyBoundaryTests.test_malformed_counts",
+    "test_privacy_ops.PrivacyBoundaryTests.test_other_identifier_types_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_output_excludes_source_quota_and_exact_count",
+    "test_privacy_ops.PrivacyBoundaryTests.test_private_write_refuses_overwrite",
+    "test_privacy_ops.PrivacyBoundaryTests.test_quality_flags_rejected",
+    "test_privacy_ops.PrivacyBoundaryTests.test_ranges_and_review_remain_pending",
+    "test_privacy_ops.PrivacyBoundaryTests.test_runtime_has_only_bounded_standard_library_dependencies",
+    "test_privacy_ops.PrivacyBoundaryTests.test_small_counts_and_zero_are_indistinguishable",
+    "test_privacy_ops.PrivacyBoundaryTests.test_timezone_and_metadata_required",
+    "test_privacy_ops.PrivacyBoundaryTests.test_truncated_or_invalid_row_count",
+    "test_privacy_ops.PrivacyBoundaryTests.test_two_stream_filter_locked",
+    "test_render_paragraphs.GeneratedContentTests.test_android_lists_follow_their_lead_in_paragraph",
+    "test_render_paragraphs.GeneratedContentTests.test_android_privacy_sections",
+    "test_render_paragraphs.GeneratedContentTests.test_android_support_answers",
+    "test_render_paragraphs.GeneratedContentTests.test_ios_contact_email_is_on_its_own_line",
+    "test_render_paragraphs.GeneratedContentTests.test_ios_deletion_faq_names_the_delete_action_once",
+    "test_render_paragraphs.GeneratedContentTests.test_ios_privacy_sections",
+    "test_render_paragraphs.GeneratedContentTests.test_ios_support_answers",
+    "test_render_paragraphs.GeneratedContentTests.test_policy_urls_render_with_wrap_points_and_exact_text",
+    "test_render_paragraphs.GeneratedContentTests.test_terms_link_the_eula_once_per_language",
+    "test_render_paragraphs.GeneratedContentTests.test_terms_sections_and_subsections",
+    "test_render_paragraphs.ParagraphBlockTests.test_android_list_follows_the_paragraph_that_introduces_it",
+    "test_render_paragraphs.ParagraphBlockTests.test_android_list_items_and_skip_target_are_unchanged",
+    "test_render_paragraphs.ParagraphBlockTests.test_android_policy_section_blocks_are_separate_escaped_paragraphs",
+    "test_render_paragraphs.ParagraphBlockTests.test_ios_faq_blocks_keep_inline_markup_per_block",
+    "test_render_paragraphs.ParagraphBlockTests.test_reviewed_urls_wrap_only_after_path_slashes",
+    "test_render_paragraphs.ParagraphBlockTests.test_single_block_answers_keep_one_paragraph",
+    "test_render_paragraphs.ParagraphBlockTests.test_single_newline_in_a_policy_block_is_a_line_break",
+    "test_render_paragraphs.ParagraphBlockTests.test_split_is_on_blank_lines_only",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_all_17_locales_keep_final_prices_and_store_localization",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_annual_and_us_renewal_notice_windows_are_not_assumed_covered",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_app_store_trial_is_not_described_as_immediate_payment",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_calendar_month_trial_uses_store_eligibility_for_first_time_subscribers",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_current_operator_and_optional_account_replace_retired_claims",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_integration_preserves_every_billing_paragraph_and_appends_retention",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_korean_conversion_and_increase_need_affirmative_preceding_30_day_consent",
+    "test_terms_legal_update.TermsLegalUpdateTest.test_store_refund_policy_preserves_statutory_rights_and_korean_time_limits",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_both_privacy_pages_have_actual_policy_links_all_locales",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_health_categories_purposes_and_sources_are_disclosed",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_health_rights_and_downstream_backup_deletion",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_recipients_affiliates_no_sale_no_health_geofencing",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_collection_and_sharing_consent_requested_service_limit",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_prominent_localized_us_health_policy",
+    "test_us_health_policy.USConsumerHealthPolicyTests.test_state_response_deletion_and_appeal_deadlines"
+  ],
+  "items": [
+    {
+      "id": "LEGAL-01",
+      "title": "Privacy completeness",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "All17locales disclose processing purposes, categories, ordinary and sensitive bases, retention, security/destruction, rights/CPO, recipients, optional SDK processing and refusal. Known app behavior and source attribution preserved.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-02",
+      "title": "Distinct health consent",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Separate optional health-sync consent names medication/schedule/dose, measurements, meals/protein, symptoms/notes; purpose, period and refusal effects. Terms, account consent, analytics and OS permissions do not substitute. Existing-record import remains a distinct choice.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py"
+      ],
+      "greenTests": [
+        "test_account_legal_update.AccountLegalUpdateTests.test_health_consent_categories_purpose_retention_and_refusal_all_locales"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Native/server consent and withdrawal flows remain false-gated; this lane does not verify collection timing."
+    },
+    {
+      "id": "LEGAL-03",
+      "title": "Processor roles",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Cloudflare and AWS hosting/security processing separated from optional Firebase/AdMob and Apple/Google sign-in; no blanket contract-necessity classification or encryption exemption.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Actual recipient roles/entities, contracts, SDK inventory and access need owner/provider confirmation."
+    },
+    {
+      "id": "LEGAL-04",
+      "title": "PIPA Art28-8 table",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Six services each have8columns: basis, data, country, time/method, recipient/contact, purpose, retention, refusal. Accessible table renders in17locales; verified known facts entered and required unknown facts explicitly unverified.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_and_sales_configuration_block_release_without_rep_appointment"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Cloudflare/AWS/Google/Apple exact legal entities, contacts, actual countries and finite periods are not available in inputs; table cannot be called a completed verified Art28-8 inventory."
+    },
+    {
+      "id": "LEGAL-05",
+      "title": "Transfer distinction",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Mandatory sync/announcement route, optional analytics/ad routes, overseas-transfer basis and refusal consequences are distinguished; necessary consent must precede transfer.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_and_sales_configuration_block_release_without_rep_appointment"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Actual transfer basis, pre-consent routing, announcement refusal, ad consent and international safeguards remain unresolved release gates."
+    },
+    {
+      "id": "LEGAL-06",
+      "title": "Automatic retention",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "Deletion anchored to Store-confirmed last Plus end+30days, with entitlement recheck and only a Store-verification outage deferral of at most7additional days. Fixed anchor preserved across17locales.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_account_legal_update.AccountLegalUpdateTests.test_store_confirmed_expiry_recheck_reset_account_and_subscription_boundaries_all_locales"
+      ],
+      "redProof": [],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-07",
+      "title": "Immediate user deletion",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "User-requested deletion or consent withdrawal bypasses subscription-expiry waiting and outage deferral. Sync-server-copy deletion, full account deletion and independent Store cancellation distinguished; active subscription does not delay account deletion.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_account_legal_update.AccountLegalUpdateTests.test_direct_deletion_and_consent_withdrawal_have_no_expiry_wait_all_locales",
+        "test_account_legal_update.AccountLegalUpdateTests.test_store_confirmed_expiry_recheck_reset_account_and_subscription_boundaries_all_locales"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Native/server deletion completion and authorization-token lifecycle require operational proof."
+    },
+    {
+      "id": "LEGAL-08",
+      "title": "Hybrid backups",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Daily pre-upload client-encrypted app data in S3Seoul and weekly OS recovery snapshots; removed personal data leaves all backups within7days and deleted data cannot return to use after restore. Operating procedure covers versions/replicas/manual snapshots and independent physical cleanup.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_account_legal_update.AccountLegalUpdateTests.test_hybrid_backup_encryption_cadence_deletion_and_restore_all_locales",
+        "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Actual provider settings/cleanup/restore proof absent; lifecycle alone is expressly insufficient. No backup setting or native behavior changed by this lane."
+    },
+    {
+      "id": "LEGAL-09",
+      "title": "Statutory/other retention",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Separates limited legally justified transaction/verification records from health-sync retention; requires category, legal basis and finite period before retaining a purchase digest/tombstone.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_pending_digest_basis_stays_registered_until_the_tombstone_decision",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Verifier host and tombstone basis/expiry remain owner/provider facts; no invented legal period."
+    },
+    {
+      "id": "LEGAL-10",
+      "title": "Deletion webpage",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Existing support-email request without reinstall or Plus, minimal identity checks and no passwords/recovery codes/health records/purchase tokens; staged account/delete and all localized integration validate noindex/null date.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_external_deletion_locales_provide_email_and_separate_outcomes",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_external_deletion_request_uses_existing_support_without_plus",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_page_inventory_and_no_fabricated_effective_date"
+      ],
+      "redProof": [],
+      "remaining": "Actual live/public request route and erasure workflow not verified or published; deletionRequest.published=false. Publishing is forbidden in this lane."
+    },
+    {
+      "id": "LEGAL-11",
+      "title": "Rights/CPO",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "All17locales use WonyoungLabs where operator is named and disclose WonyoungChoi as representative/CPO, business registration and owner-supplied business address/contact. Rights, withdrawal, refusal reasons and appeal channels retained. Revision 1 also corrects every Android scope operator paragraph; all 102 canonical operator-bearing fields audited.",
+      "files": [
+        "docs/account-sync-content.candidate.json",
+        "scripts/account_sync_candidate.py",
+        "scripts/render_account_sync.py",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_account_legal_update.AccountLegalUpdateTests.test_business_operator_and_representative_all_locales",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145",
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-12",
+      "title": "Analytics/advertising",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Optional analytics and nonpersonalized ads remain distinct. Recorded health content is excluded from ads and analytics content fields; health-revealing SDK/account metadata is separately protected and sharing needs applicable separate health consent. No-IDFA/AD_ID does not imply no SDK collection.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/us-health-content.json",
+        "scripts/render_us_health.py",
+        "us-health/index.html",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_collection_and_sharing_consent_requested_service_limit"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Shipped neutral event/screen/error inventory, provider retention/roles and actual regional consent flow need native/SDK proof."
+    },
+    {
+      "id": "LEGAL-13",
+      "title": "Health-platform permissions",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Preserves optional read-only platform permissions and manual-entry alternatives, revocation and no health-data advertising use. AndroidMLKit exception remains platform/selected-food-label specific.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Actual requested HealthKit/HealthConnect selectors and shipped permission behavior are native-owner scope."
+    },
+    {
+      "id": "LEGAL-14",
+      "title": "Subscription/trial",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "All17Terms keep USD1.99/month13.99/year, KRW3300/month22000/year (superseding owner/spec decision) and JPY300/month1980/year; actual localized Store price prevails. Eligible first-time subscribers receive1calendar-month Store free trial, then full selected-plan automatic renewal; cancellation any time through the Store.",
+      "files": [
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_terms_legal_update.TermsLegalUpdateTest.test_all_17_locales_keep_final_prices_and_store_localization",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_app_store_trial_is_not_described_as_immediate_payment",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_calendar_month_trial_uses_store_eligibility_for_first_time_subscribers"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-15",
+      "title": "Korean conversion/increase",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Affirmative consent within the30days preceding free-to-paid conversion or price increase, with date/old and new price/payment/cancellation conditions. No conversion/increase without required consent.",
+      "files": [
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_terms_legal_update.TermsLegalUpdateTest.test_korean_conversion_and_increase_need_affirmative_preceding_30_day_consent"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Store product/offer and actual notices/consent coverage require release-owner proof; no Store query or activation performed."
+    },
+    {
+      "id": "LEGAL-16",
+      "title": "Refund Terms/renderer",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "Store refund channels preserve overriding statutory rights: Korea7day withdrawal, nonconformity within3months of supply and30days of knowledge/could-know, applicable3business-day refund. Account renderer appends account retention rather than replacing billing/refund paragraphs.",
+      "files": [
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_terms_legal_update.TermsLegalUpdateTest.test_integration_preserves_every_billing_paragraph_and_appends_retention",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_store_refund_policy_preserves_statutory_rights_and_korean_time_limits"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-17",
+      "title": "Recurring charges",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Annual full charge and recurring period prominent; Store cancellation/renewal facts preserved; conditional Korea50–20day continuous-transaction notices, California15–45day annual and7–30day price-change notices/annual reminders identified.",
+      "files": [
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_terms_legal_update.TermsLegalUpdateTest.test_annual_and_us_renewal_notice_windows_are_not_assumed_covered"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Applicable contract classification and actual Store/operator regional notice coverage require verification."
+    },
+    {
+      "id": "LEGAL-18",
+      "title": "Dark-pattern/public claims",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Terms do not imply consent through silence or remove statutory rights; this lane introduces no clinical efficacy, safety, superiority or prescription-purchase claims. Existing legal copy is preserved and regional subscription notice obligations are drafted.",
+      "files": [
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_terms_legal_update.TermsLegalUpdateTest.test_current_operator_and_optional_account_replace_retired_claims",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_korean_conversion_and_increase_need_affirmative_preceding_30_day_consent"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Actual paywall/cancellation/advertising flows, objective-claim substantiation and other-repository native/store/landing audits remain follow-up; no claim-substantiation procedure or complete marketing audit is implemented or proved here."
+    },
+    {
+      "id": "LEGAL-19",
+      "title": "Medical wording",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "mg estimated residual amount retained per final owner decision. All17locales strengthen reference-only/not medical advice, not actual blood concentration/effectiveness measurement and not dose/time/treatment adjustment guidance; Terms use matching source wording.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/terms-content.json",
+        "scripts/render_terms.py",
+        "scripts/render_account_sync.py"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-20",
+      "title": "Separate US Consumer Health Data policy",
+      "verdict": "IMPLEMENTED_CANDIDATE",
+      "how": "Separate prominent linked us-health route and17locale pages, categories/purposes/sources/recipient classes/affiliates, separate collection and sharing consent, narrow requested-service necessity, no health sale/geofencing, rights and downstream erasure.",
+      "files": [
+        "docs/us-health-content.json",
+        "scripts/render_us_health.py",
+        "us-health/index.html",
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "scripts/locale_pages.py",
+        "sitemap.xml"
+      ],
+      "greenTests": [
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_both_privacy_pages_have_actual_policy_links_all_locales",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_health_categories_purposes_and_sources_are_disclosed",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_recipients_affiliates_no_sale_no_health_geofencing",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_collection_and_sharing_consent_requested_service_limit",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_prominent_localized_us_health_policy"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51"
+      ],
+      "remaining": "Static candidate wording only; no legal, translation, operational or publication certification."
+    },
+    {
+      "id": "LEGAL-21",
+      "title": "Regional rights",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Korea10day and EU/UK1month rights plus JapanAPPI and BrazilLGPD/ANPD disclosure. US: Washington45+45/appeal45, Nevada45+45/deletion30/appeal45, Connecticut45+45/appeal60/withdrawal15. Stricter immediate operational deletion and7day backup promise preserved.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/us-health-content.json",
+        "scripts/render_us_health.py",
+        "us-health/index.html",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_health_rights_and_downstream_backup_deletion",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_state_response_deletion_and_appeal_deadlines"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Rights/appeal/downstream-recipient response workflows and machine-readable portability need operational proof."
+    },
+    {
+      "id": "LEGAL-22",
+      "title": "International disclosures",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "1.0.6 EU/EEA, UK and Switzerland sales excluded; no EU/UK representative designated or appointment placeholder. Applicable existing-user Art.6/9 bases, one-month rights, safeguards, transfer mechanisms and breach clocks preserved; actual Store exclusions remain false-gated.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_and_sales_configuration_block_release_without_rep_appointment"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145",
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ],
+      "remaining": "Actual Store availability readback and recipient-specific safeguards/contracts/DPIA/processing records remain unverified. Appointment is not a prerequisite for this decided 1.0.6 scope; future reopening needs an applicability review."
+    },
+    {
+      "id": "LEGAL-23",
+      "title": "Children",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "Existing adult-only service copy is preserved. No regional child applicability assessment, parental-consent workflow or age-control implementation was added by this lane.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [],
+      "redProof": [],
+      "remaining": "Regional child-directed/actual-knowledge applicability, age gating and any required parental-consent controls are NOT_IMPLEMENTED/native-operational follow-up. The listed processing test is not child-control proof; no universal COPPA/GDPR-child certification."
+    },
+    {
+      "id": "LEGAL-24",
+      "title": "Breach response",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "All17privacy drafts and internal procedure include unauthorizedSDK disclosure and health-revealing metadata. PIPA72h includes independent sensitive-data/unlawful-access triggers; FTC without unreasonable delay/max60calendar days,500+ concurrentFTC and state-media trigger,smaller FTC60days afteryearend; GDPR72h authority/high-risk individual notice.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/LEGAL_OPERATIONS_1_0_6.md"
+      ],
+      "greenTests": [
+        "test_legal_operations.LegalOperationsTest.test_breach_procedure_covers_sdk_disclosure_and_separate_clocks",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145"
+      ],
+      "remaining": "Named incident escalation/drills, notification channels and actual processor incident arrangements remain false-gated; drafted procedure is not executed response proof."
+    },
+    {
+      "id": "LEGAL-25",
+      "title": "Platform boundaries",
+      "verdict": "PARTIAL_BLOCKED_ON_EXTERNAL_FACTS",
+      "how": "17locales/RTL/stablehash/noJS fallback/source attribution/local links maintained; iOS platform-specific copy guarded against Android/GooglePlay branding. Website-source/render parity and localizedUS route checked; AndroidMLKit exception not generalized to iOS/web. Canonical/staged iOS policy/help contain no Android/Google Play; full shared retention survives localized neutral store names, including separate verifier 90/30-day clauses.",
+      "files": [
+        "docs/ios-content.json",
+        "docs/android-content.candidate.json",
+        "scripts/privacy_legal.py",
+        "scripts/render_ios.py",
+        "scripts/render_android.py",
+        "docs/us-health-content.json",
+        "scripts/render_us_health.py",
+        "us-health/index.html",
+        "scripts/check_site.py",
+        "scripts/test_locale_pages.py"
+      ],
+      "greenTests": [
+        "test_locale_pages.LocalePageTests.test_every_route_has_a_page_for_every_locale",
+        "test_locale_pages.LocalePageTests.test_locale_pages_declare_their_language_and_direction",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use"
+      ],
+      "redProof": [
+        "a7febe9d8524c5ec209b71b9c2b525c576c6b4b9",
+        "2e51e281a3dc93786430b766e89c69dd36c2af51",
+        "147c533b3678633cf604cbbf1dff712bb0069145",
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ],
+      "remaining": "Store privacy/health declarations, trader/merchant/Organization-account requirements, app behavior and public URL availability are external/native/store-owner gates, not claimed complete."
+    },
+    {
+      "id": "R1-PRICE",
+      "title": "Major: Korean annual price",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "17 offers, renderer/test expectations and regenerated Terms use KRW22,000/year; actual Store prices still prevail.",
+      "greenTests": [
+        "test_terms_legal_update.TermsLegalUpdateTest.test_all_17_locales_keep_final_prices_and_store_localization"
+      ],
+      "redProof": [
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ]
+    },
+    {
+      "id": "R1-OPERATOR",
+      "title": "Major: Android business operator",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "All 17 Android scope paragraphs now name Wonyoung Labs; representative/privacy officer and unrelated age/consent clauses preserved.",
+      "greenTests": [
+        "test_legal_revision1.LegalRevision1Test.test_operator_bearing_fields_use_business_and_keep_representative"
+      ],
+      "redProof": [
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ]
+    },
+    {
+      "id": "R1-MARKETS",
+      "title": "Major: sales exclusions and representatives",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "All 34 policy paragraphs, exact metadata, readiness validation and operations align with excluded markets/no appointed reps; existing-user rights/safeguards retained.",
+      "greenTests": [
+        "test_legal_revision1.LegalRevision1Test.test_excluded_market_prose_preserves_existing_user_rights_all_locales",
+        "test_legal_revision1.LegalRevision1Test.test_market_contract_rejects_reopened_regions_and_fake_rep_contact",
+        "test_legal_revision1.LegalRevision1Test.test_release_still_requires_actual_sales_exclusion_readback"
+      ],
+      "redProof": [
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ]
+    },
+    {
+      "id": "R1-IOS",
+      "title": "Minor: competing platform/store names in iOS copy",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "Neutralized all canonical/staged iOS policy/help platform/store references while preserving all retention/verifier clauses and numbers.",
+      "greenTests": [
+        "test_legal_revision1.LegalRevision1Test.test_canonical_ios_policy_and_help_avoid_other_platform_names",
+        "test_legal_revision1.LegalRevision1Test.test_staged_ios_policy_and_help_avoid_other_platform_names",
+        "test_legal_revision1.LegalRevision1Test.test_neutral_ios_retention_preserves_other_store_verifier_and_deletion_bounds"
+      ],
+      "redProof": [
+        "a33a8b857e004f19b207711266be5b3a542b52d9"
+      ]
+    },
+    {
+      "id": "R2-RETIRED-BUYER-PROGRAM",
+      "severity": "major",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "All17 Terms/candidate/staged policy/help retire separate grant and claim/code program. Removed claim privacy/help fields, schema requirements, renderer injections and active application/evidence/review/appeal/code release instructions. Core features Free for new/prior users, ordinary Store-confirmed trial, statutory rights and historical ad-free-rights review retained; original feature help tails match byte-for-byte.",
+      "greenTests": [
+        "test_legal_revision2.LegalRevision2Test.test_all_locales_keep_free_features_and_rights_without_special_offer",
+        "test_legal_revision2.LegalRevision2Test.test_prior_buyer_grant_and_claim_code_program_are_retired",
+        "test_legal_revision2.LegalRevision2Test.test_retired_claim_collection_has_no_active_release_workflow"
+      ],
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/semantic-preservation-audit.json"
+    },
+    {
+      "id": "R2-COMMERCIAL-PARITY",
+      "severity": "major",
+      "verdict": "COORDINATION_RECORDED_BLOCKED_EXTERNAL",
+      "how": "Review-2 required KRW22,000 retained in all17 Terms. Committed iOS now matches; committed Android policy, Play preparation copy and checks still use19,900. Exact committed/working receipts and coordinated Android next action recorded. New commercialCopyParityVerified=false gate rejects missing/false readiness; Store-returned app UI prices remain required. No partner writes or decision reopened.",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/partner-parity-receipts.json",
+      "remaining": "Orchestrator coordinates Android policy, review copy and verification inputs together in new failing-first commits for KRW 22,000; obtain matching committed receipts and exact policy byte parity plus partner checks before opening commercialCopyParityVerified. The iOS retained one-line policy patch matches Android preimage; applying that patch alone leaves Android verification inputs inconsistent."
+    },
+    {
+      "id": "R2-IOS-SHORT-STORE-NAMES",
+      "severity": "minor",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "Removed retired claim-help and localized shortened Play purchase-token references. Canonical/staged iOS rejects full/short store aliases, CJK adjacency and hyphens; Google sign-in remains allowed. Every other sync/token-encryption/deletion byte survives.",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/neutral-token-preservation.json"
+    },
+    {
+      "id": "R2-PIPA-THOUSAND",
+      "severity": "minor",
+      "verdict": "FIXED_STATIC_VERIFIED",
+      "how": "Both privacy sources use1.000 in de/es/tr and1 000 in fr/pl/sv. Only12threshold paragraphs changed; restoring grouping reproduces original whole-source bytes. Independent sensitive/unique-ID and unauthorized-access triggers,72-hour clock and all incident metadata preserved.",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/minor-preservation.json"
+    }
+  ],
+  "checks": [
+    {
+      "cmd": "python3 scripts/render_home.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-00.log.gz",
+      "logSha256": "26ba7dbe41b1fc34d09e82d05f7ea3be637e4f2727d88b83b2b455dc0733ed8d",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-00.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_ios.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-01.log.gz",
+      "logSha256": "182a8ac43c158f1999ad7d6f52834218717190851ea2b11975d2707714c90637",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-01.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_android.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-02.log.gz",
+      "logSha256": "0813af516beb00e41bf311ab170260da368e0be1891be0cae91e9a618bf3657b",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-02.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-03.log.gz",
+      "logSha256": "24700ed7ba5230826a371d026432c632af280c8e6e1a34d0707c93f13bcadea6",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-03.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_terms.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-04.log.gz",
+      "logSha256": "96aeaabb6335dd4f39fd758709091379a9ef016bae90954fb7bf2cd5a075979e",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-04.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_us_health.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-05.log.gz",
+      "logSha256": "add73d8aa77aa6dbc6706ef8b64470f947c67319a159f3253e9c945becdc13ba",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-05.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_sitemap.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-06.log.gz",
+      "logSha256": "7d73944e4f8058f85a2f9f03a28960dfa44a9b2fa3b079a42e6fee9a06561daf",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-06.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/check_site.py",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-07.log.gz",
+      "logSha256": "49eb34ecebab53abbf1e48e8cddde9d7d1b0ed7728ff025c7252a2efc6214106",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-07.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/account_sync_candidate.py",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-08.log.gz",
+      "logSha256": "098687e60b4205dc144633576bd08b8fde43fa9f21a5f2f96b0420d6ca8042e3",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-08.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/render_account_sync.py --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-09.log.gz",
+      "logSha256": "da93310dc8352382f7b1b1c10c1193b59c63ef47429ece62517bee71b788bc7e",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-09.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/korean_tone.py",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-10.log.gz",
+      "logSha256": "644c5b50df70d3612300368f7deff5061ffef7a3eb617a9fc04f618c15d5eb26",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-10.log.gz"
+    },
+    {
+      "cmd": "python3 scripts/check_site.py --release",
+      "exit": 1,
+      "result": "BLOCKED_EFFECTIVE_DATE",
+      "log": "evidence/legal-update-20261002/revision2/check-11.log.gz",
+      "logSha256": "09029677c66d41f803cc4ed6b761e43fc9493a21d78ee275342c8555da91a3c6",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-11.log.gz"
+    },
+    {
+      "cmd": "git diff --check",
+      "exit": 0,
+      "result": "PASS",
+      "log": "evidence/legal-update-20261002/revision2/check-12.log.gz",
+      "logSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/check-12.log.gz"
+    },
+    {
+      "cmd": "python3 evidence/legal-update-20261002/revision1/run_tests.py . evidence/legal-update-20261002/revision2/full-green",
+      "exit": 0,
+      "result": "PASS",
+      "methods": 193,
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/full-green.json"
+    },
+    {
+      "cmd": "focused related eight-module family via exact-identity runner",
+      "exit": 0,
+      "result": "PASS",
+      "methods": 81,
+      "proof": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/focused-green.json"
+    }
+  ],
+  "filesTouched": [
+    "CHANGELOG.md",
+    "android/privacy/index.html",
+    "ar/terms/index.html",
+    "de/android/privacy/index.html",
+    "de/privacy/index.html",
+    "de/terms/index.html",
+    "docs/ACCOUNT_SYNC_RELEASE_REVIEW.md",
+    "docs/COMMERCIAL_COPY_PARITY_1_0_6.json",
+    "docs/CURRENT_HANDOFF.md",
+    "docs/LEGAL_OPERATIONS_1_0_6.md",
+    "docs/account-sync-content.candidate.json",
+    "docs/android-content.candidate.json",
+    "docs/ios-content.json",
+    "docs/terms-content.json",
+    "en/terms/index.html",
+    "es/android/privacy/index.html",
+    "es/privacy/index.html",
+    "es/terms/index.html",
+    "evidence/legal-update-20261002/revision2/baseline.json",
+    "evidence/legal-update-20261002/revision2/check-00.log.gz",
+    "evidence/legal-update-20261002/revision2/check-01.log.gz",
+    "evidence/legal-update-20261002/revision2/check-02.log.gz",
+    "evidence/legal-update-20261002/revision2/check-03.log.gz",
+    "evidence/legal-update-20261002/revision2/check-04.log.gz",
+    "evidence/legal-update-20261002/revision2/check-05.log.gz",
+    "evidence/legal-update-20261002/revision2/check-06.log.gz",
+    "evidence/legal-update-20261002/revision2/check-07.log.gz",
+    "evidence/legal-update-20261002/revision2/check-08.log.gz",
+    "evidence/legal-update-20261002/revision2/check-09.log.gz",
+    "evidence/legal-update-20261002/revision2/check-10.log.gz",
+    "evidence/legal-update-20261002/revision2/check-11.log.gz",
+    "evidence/legal-update-20261002/revision2/check-12.log.gz",
+    "evidence/legal-update-20261002/revision2/checks.json",
+    "evidence/legal-update-20261002/revision2/final-inputs.json",
+    "evidence/legal-update-20261002/revision2/focused-green.json",
+    "evidence/legal-update-20261002/revision2/focused-green.log.gz",
+    "evidence/legal-update-20261002/revision2/frozen-input-comparison.json",
+    "evidence/legal-update-20261002/revision2/full-frozen-input-comparison.json",
+    "evidence/legal-update-20261002/revision2/full-green.json",
+    "evidence/legal-update-20261002/revision2/full-green.log.gz",
+    "evidence/legal-update-20261002/revision2/generation.json",
+    "evidence/legal-update-20261002/revision2/independent-review.json",
+    "evidence/legal-update-20261002/revision2/minor-preservation.json",
+    "evidence/legal-update-20261002/revision2/neutral-token-preservation.json",
+    "evidence/legal-update-20261002/revision2/partner-parity-receipts.json",
+    "evidence/legal-update-20261002/revision2/red-parent.json",
+    "evidence/legal-update-20261002/revision2/red-parent.log.gz",
+    "evidence/legal-update-20261002/revision2/red-proof.json",
+    "evidence/legal-update-20261002/revision2/render_android-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/render_home-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/render_import-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/render_ios-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/render_sitemap-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/render_terms-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/render_us_health-generate.log.gz",
+    "evidence/legal-update-20261002/revision2/report-validation-precompletion.json",
+    "evidence/legal-update-20261002/revision2/revision1-report.historical.json",
+    "evidence/legal-update-20261002/revision2/run_checks.py",
+    "evidence/legal-update-20261002/revision2/semantic-preservation-audit.json",
+    "evidence/legal-update-20261002/revision2/staged-artifacts.json",
+    "evidence/legal-update-20261002/revision2/write_report.py",
+    "fr/android/privacy/index.html",
+    "fr/privacy/index.html",
+    "fr/terms/index.html",
+    "hi/terms/index.html",
+    "it/terms/index.html",
+    "ja/terms/index.html",
+    "ko/terms/index.html",
+    "legal-release-map.json",
+    "nl/terms/index.html",
+    "pl/android/privacy/index.html",
+    "pl/privacy/index.html",
+    "pl/terms/index.html",
+    "privacy/index.html",
+    "pt-BR/terms/index.html",
+    "pt-PT/terms/index.html",
+    "scripts/account_sync_candidate.py",
+    "scripts/fixtures/legal_revision2_rights_anchors.json",
+    "scripts/render_account_sync.py",
+    "scripts/render_ios.py",
+    "scripts/test_account_sync_candidate.py",
+    "scripts/test_legal_revision2.py",
+    "scripts/test_legal_revision2_minor.py",
+    "sv/android/privacy/index.html",
+    "sv/privacy/index.html",
+    "sv/terms/index.html",
+    "terms/index.html",
+    "tr/android/privacy/index.html",
+    "tr/privacy/index.html",
+    "tr/terms/index.html",
+    "zh-Hans/terms/index.html",
+    "zh-Hant/terms/index.html"
+  ],
+  "filesTouchedScope": "d3b6e32b21789c67763ad9f73bfff77dc370cc2b..a6a4e18f70bcf866a6bb50aacb8a64164cba8bde (revision2 only)",
+  "nativeNeeded": [],
+  "nativeNeededNote": "Static legal repository has no native targets. Native/server/provider/Store flow proof belongs to orchestrator; no selector invented.",
+  "ownerQuestions": [
+    {
+      "id": "OQ-01",
+      "question": "1.0.6의 EU/EEA·영국·스위스 판매 제외를 실제 두 스토어 설정으로 확인하고, 기존 이용자에게 적용되는 권리·이전 보호·사고 대응 증거를 제공해 주세요.",
+      "reason": "Latest owner/spec excludes these markets and requires no EU/UK representative for this version; actual Store exclusion configuration and existing-user safeguards are operational evidence, not a reopened decision.",
+      "affects": [
+        "LEGAL-22"
+      ]
+    },
+    {
+      "id": "OQ-02",
+      "question": "Cloudflare의 실제 수신 법인·연락처·처리 국가·로그/캐시 항목과 유한 보관 기간, 하위수탁자·공지 확인 경로의 이전 근거와 거부 효과를 확인해 주세요.",
+      "reason": "PIPAArt28-8required particulars cannot be inferred from a worldwide provider description.",
+      "affects": [
+        "LEGAL-03",
+        "LEGAL-04",
+        "LEGAL-05"
+      ]
+    },
+    {
+      "id": "OQ-03",
+      "question": "AWS 계약 법인·연락처, 해외 지원/원격 접근·하위수탁자, 접속 로그 항목/기간과 서울 백업 실제 설정을 확인해 주세요.",
+      "reason": "Seoul storage location does not prove no foreign access or complete recipient inventory.",
+      "affects": [
+        "LEGAL-03",
+        "LEGAL-04",
+        "LEGAL-08"
+      ]
+    },
+    {
+      "id": "OQ-04",
+      "question": "Firebase/AdMob/Apple·Google 로그인별 수신자 역할·국가·보관 기간, 광고/분석 이전 동의·거부 경로와 지역별 계약/이전 장치를 확정해 주세요.",
+      "reason": "OptionalSDK processing is not automatically contract-necessary; EU/UK onward safeguards and Japan/Brazil mechanisms need actual recipient evidence.",
+      "affects": [
+        "LEGAL-03",
+        "LEGAL-04",
+        "LEGAL-05",
+        "LEGAL-12",
+        "LEGAL-22"
+      ]
+    },
+    {
+      "id": "OQ-05",
+      "question": "구매 검증 서버 위치와 구매 digest/tombstone의 필요 항목·법적 근거·유한 보관 기간을 확정해 주세요.",
+      "reason": "Transaction exceptions must not become indefinite health/account retention.",
+      "affects": [
+        "LEGAL-09"
+      ]
+    },
+    {
+      "id": "OQ-06",
+      "question": "실제 독립 건강정보 동의, 철회·서버 사본/계정 즉시 삭제, 이메일 삭제 요청 처리와 모든 백업의 7일 내 물리 삭제·복구 차단 증거를 제공해 주세요.",
+      "reason": "Native/server flows, versions/replicas/manual snapshots and rights completion are operational gates; successful request transport is not erasure completion.",
+      "affects": [
+        "LEGAL-02",
+        "LEGAL-07",
+        "LEGAL-08",
+        "LEGAL-10",
+        "LEGAL-21"
+      ]
+    },
+    {
+      "id": "OQ-07",
+      "question": "사고 대응 담당/연락처·통지 채널·훈련, US 권리/이의제기/수신자 삭제 절차와 국제 계약·처리기록·고위험 평가를 확인해 주세요.",
+      "reason": "Drafted notices/procedure do not prove an operationalFTC/PIPA/GDPR response or consumer-health-rights workflow.",
+      "affects": [
+        "LEGAL-21",
+        "LEGAL-22",
+        "LEGAL-24"
+      ]
+    },
+    {
+      "id": "OQ-08",
+      "question": "한국 체험 전환·인상 동의와 지역별 갱신/연간 통지의 실제 Store·운영자 적용 범위, 한국 계속거래 해당 여부 및 제출 시 사업자/trader/건강 앱 계정 요건을 확인해 주세요.",
+      "reason": "Final prices/trial/operator decisions are accepted; only implementation/coverage evidence and store submission facts remain.",
+      "affects": [
+        "LEGAL-15",
+        "LEGAL-17",
+        "LEGAL-25"
+      ]
+    },
+    {
+      "id": "OQ-09",
+      "question": "통합 담당자가 발효일·공급업체 사실·실제 판매 제외 설정·운영/native 증거를 확인하고 법률/번역/시각 검토를 완료한 뒤 기존 출시 순서에 따라 게시 게이트를 판단해 주세요.",
+      "reason": "This lane is expressly never-publish; no publication approval is requested here.",
+      "affects": [
+        "LEGAL-04",
+        "LEGAL-10",
+        "LEGAL-22",
+        "LEGAL-25"
+      ]
+    },
+    {
+      "id": "OQ-R2-PARITY",
+      "question": "통합 담당자는 Android 정책·스토어 검토 문구·검사 입력을 리뷰2의 KRW22,000에 함께 맞추고, iOS와 일치하는 커밋·검사 증거를 남겨 주세요.",
+      "reason": "Committed Android remains19,900; coordination/verification task only, not a new price decision.",
+      "affects": [
+        "R2-COMMERCIAL-PARITY"
+      ],
+      "decisionReopened": false
+    },
+    {
+      "id": "OQ-R2-HISTORICAL-RIGHTS",
+      "question": "과거 광고 없는 이용 약속과 기존 구매자의 법정 권리를 플랫폼·소비자법 기준으로 검토한 증거를 남겨 주세요.",
+      "reason": "No separate grant/claim-code program is offered; retirement does not settle historical rights.",
+      "affects": [
+        "R2-RETIRED-BUYER-PROGRAM"
+      ],
+      "decisionReopened": false
+    }
+  ],
+  "notDone": [
+    "No push, merge, deployment, web publication, Store-console work or production/network calls.",
+    "Actual required supplier particulars/roles/contracts/international safeguards and actual Store exclusions remain unverified; no invented contacts or periods.",
+    "No native/device tests, provider readbacks, actual deletion/backup/restore/consent/rights/breach execution or end-to-end operation proof.",
+    "Live/public availability and the deletion-request public URL are not verified; successful local rendering does not prove publication.",
+    "Publication/release-date gate fails with exit1; date null and all operational/legal readiness flags stay false.",
+    "Visual review NOT_RUN: browser security policy rejected the local file URL; no bypass attempted.",
+    "No counsel or native-speaker review/certification; 17locale copy is agent-drafted.",
+    "Other-repository app/store/landing implementation and health/trader/merchant account requirements are not changed or claimed completed.",
+    "Regional child applicability/age-control/parental-consent implementation and objective-claim substantiation are not implemented or certified; existing adult-only legal scope is preserved.",
+    "Android committed commercial price parity remains BLOCKED; no partner policy/review/verification changes are claimed.",
+    "Future paraphrased contradictory offers are not certified by anchor-presence regressions; current exact retired body and independent source review found no survivor."
+  ],
+  "commercialCopyParity": {
+    "schemaVersion": 1,
+    "observedUTC": "2026-10-02T04:10:53.786940+00:00",
+    "authority": "legal-update-legal.review-2.json: retain KRW 22,000; do not reopen owner decisions",
+    "requiredKoreaAnnual": "KRW 22,000",
+    "status": "BLOCKED_ANDROID_COMMITTED_PRICE",
+    "nativePriceRule": "App UI shows store-returned localized prices, eligibility and billing periods. Static copy parity does not prove Store configuration.",
+    "partners": {
+      "ios": {
+        "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios",
+        "head": "fc3da4125e578ee607b158fc56de4c2943ebcee3",
+        "annualPrice": "KRW 22,000",
+        "policySha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
+        "storeReviewPath": "docs/ASC_ANSWER_SHEET.md",
+        "workingMatchesCommitted": true
+      },
+      "android": {
+        "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and",
+        "head": "2ca05407c09796884e1a4760f1cf04f88c231acc",
+        "annualPrice": "KRW 19,900",
+        "policySha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+        "storeReviewPath": "docs/PLAY_STORE.md",
+        "workingMatchesCommitted": true
+      }
+    },
+    "receipt": "evidence/legal-update-20261002/revision2/partner-parity-receipts.json",
+    "nextAction": "Orchestrator coordinates Android policy, review copy and verification inputs together in new failing-first commits for KRW 22,000; obtain matching committed receipts and exact policy byte parity plus partner checks before opening commercialCopyParityVerified. The iOS retained one-line policy patch matches Android preimage; applying that patch alone leaves Android verification inputs inconsistent.",
+    "ownerDecisionNeeded": false,
+    "publicationAuthorized": false
+  },
+  "verification": {
+    "full": {
+      "methods": 193,
+      "executed": [
+        "test_account_legal_update.AccountLegalUpdateTests.test_business_operator_and_representative_all_locales",
+        "test_account_legal_update.AccountLegalUpdateTests.test_direct_deletion_and_consent_withdrawal_have_no_expiry_wait_all_locales",
+        "test_account_legal_update.AccountLegalUpdateTests.test_health_consent_categories_purpose_retention_and_refusal_all_locales",
+        "test_account_legal_update.AccountLegalUpdateTests.test_hybrid_backup_encryption_cadence_deletion_and_restore_all_locales",
+        "test_account_legal_update.AccountLegalUpdateTests.test_store_confirmed_expiry_recheck_reset_account_and_subscription_boundaries_all_locales",
+        "test_account_legal_update.AccountLegalUpdateTests.test_unverified_backup_and_deletion_features_remain_publication_gated",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_backup_window_and_access_logs_are_tracked_as_readiness",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_candidate_addresses_german_and_dutch_readers_formally",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_candidate_localizes_off_status_analytics_and_legacy_rights_review",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_cjk_fields_join_sentences_without_an_ascii_space",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_cloudflare_transfer_covers_the_announcement_check_and_refuses_truthfully",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_every_locale_has_the_full_draft_scope",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_every_locale_names_operator_region_and_cloudflare_transfer",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_external_deletion_locales_provide_email_and_separate_outcomes",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_external_deletion_request_uses_existing_support_without_plus",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_health_sync_does_not_say_sync_is_the_only_way_off_the_device",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_hosting_detector_rejects_a_placeholder_candidate",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_legacy_rights_reach_staged_policy_help_and_terms_without_claims",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_live_and_staged_legal_sources_name_no_retired_provider",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_pending_digest_basis_stays_registered_until_the_tombstone_decision",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_pending_markers_are_distinct_from_release_placeholders",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_release_gate_refuses_open_readiness_flags",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_release_gate_refuses_unintegrated_candidate",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_retention_states_the_d8_and_backup_numbers",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_offline_clause_and_backup_mechanism_are_refused",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_prior_buyer_workflow_is_absent_from_candidate",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_provider_detector_covers_localized_names",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_sign_in_providers_are_apple_and_google_only",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_ios_support_lead_replaces_legacy_account_denial",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_page_inventory_and_no_fabricated_effective_date",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_privacy_sources_keep_no_release_placeholder",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_sources_carry_health_sync_and_the_pending_verifier_location",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_sources_qualify_the_record_and_meal_denials",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_staged_sources_reconcile_account_denials_without_a_date",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_sync_key_health_sync_and_kept_records_are_stated",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_sync_scope_is_checked_in_every_locale",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_transfer_detector_rejects_the_reviewed_false_refusal",
+        "test_account_sync_candidate.AccountSyncCandidateTest.test_unshipped_server_and_client_paths_are_tracked_as_readiness",
+        "test_korean_tone.AuditTests.test_allow_list_entries_need_a_reason",
+        "test_korean_tone.AuditTests.test_audit_counts_and_stale_allow_list_entries",
+        "test_korean_tone.AuditTests.test_repository_allow_list_is_valid",
+        "test_korean_tone.EndingRuleTests.test_formal_endings_are_flagged",
+        "test_korean_tone.EndingRuleTests.test_formal_rewrites",
+        "test_korean_tone.EndingRuleTests.test_haeyo_sentences_and_questions_pass",
+        "test_korean_tone.EndingRuleTests.test_labels_ending_in_a_noun_or_stem_pass",
+        "test_korean_tone.EndingRuleTests.test_only_the_sentence_end_counts",
+        "test_korean_tone.EndingRuleTests.test_placeholders_inside_sentences",
+        "test_korean_tone.EndingRuleTests.test_plain_endings_are_flagged",
+        "test_korean_tone.EndingRuleTests.test_quoted_term_is_not_the_sentence_ending",
+        "test_korean_tone.EngineIdentityTests.test_engine_matches_pinned_hash_in_shared_rule_data",
+        "test_korean_tone.GlossaryRuleTests.test_feature_name_and_quoted_old_name_pass",
+        "test_korean_tone.GlossaryRuleTests.test_feature_names_are_flagged",
+        "test_korean_tone.GlossaryRuleTests.test_reviewed_allow_list_suppresses_a_legitimate_use",
+        "test_korean_tone.HonorificRuleTests.test_honorific_rewrites",
+        "test_korean_tone.HonorificRuleTests.test_plain_polite_requests_pass",
+        "test_korean_tone.HonorificRuleTests.test_stacked_and_filler_honorifics_are_flagged",
+        "test_korean_tone.JargonRuleTests.test_jargon_is_flagged_with_its_plain_word",
+        "test_korean_tone.JargonRuleTests.test_jargon_list_lives_in_the_shared_rule_data",
+        "test_korean_tone.JargonRuleTests.test_jargon_rewrites",
+        "test_korean_tone.JargonRuleTests.test_plain_words_and_lookalikes_pass",
+        "test_korean_tone.NounStatusRuleTests.test_noun_heading_inside_a_longer_message_passes",
+        "test_korean_tone.NounStatusRuleTests.test_short_labels_and_noun_phrases_pass",
+        "test_korean_tone.NounStatusRuleTests.test_whole_status_messages_ending_in_a_noun_are_flagged",
+        "test_korean_tone.WebsiteLoaderTests.test_generator_label_tables_and_templates",
+        "test_korean_tone.WebsiteLoaderTests.test_loads_only_the_ko_locale_with_json_paths",
+        "test_korean_tone.WebsiteLoaderTests.test_repository_sources_exclude_generated_pages",
+        "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle",
+        "test_legal_operations.LegalOperationsTest.test_breach_procedure_covers_sdk_disclosure_and_separate_clocks",
+        "test_legal_operations.LegalOperationsTest.test_release_readiness_cannot_omit_new_legal_gates",
+        "test_legal_revision1.LegalRevision1Test.test_canonical_ios_policy_and_help_avoid_other_platform_names",
+        "test_legal_revision1.LegalRevision1Test.test_excluded_market_prose_preserves_existing_user_rights_all_locales",
+        "test_legal_revision1.LegalRevision1Test.test_market_contract_rejects_reopened_regions_and_fake_rep_contact",
+        "test_legal_revision1.LegalRevision1Test.test_market_metadata_matches_exclusions_and_no_rep_appointment",
+        "test_legal_revision1.LegalRevision1Test.test_neutral_ios_retention_preserves_other_store_verifier_and_deletion_bounds",
+        "test_legal_revision1.LegalRevision1Test.test_operations_gate_excludes_markets_preserves_existing_user_safeguards",
+        "test_legal_revision1.LegalRevision1Test.test_operator_bearing_fields_use_business_and_keep_representative",
+        "test_legal_revision1.LegalRevision1Test.test_release_still_requires_actual_sales_exclusion_readback",
+        "test_legal_revision1.LegalRevision1Test.test_staged_ios_policy_and_help_avoid_other_platform_names",
+        "test_legal_revision2.LegalRevision2Test.test_all_locales_keep_free_features_and_rights_without_special_offer",
+        "test_legal_revision2.LegalRevision2Test.test_commercial_copy_parity_is_a_distinct_closed_release_gate",
+        "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker",
+        "test_legal_revision2.LegalRevision2Test.test_prior_buyer_grant_and_claim_code_program_are_retired",
+        "test_legal_revision2.LegalRevision2Test.test_retired_claim_collection_has_no_active_release_workflow",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_brand_guard_covers_localized_shortened_forms_and_allows_google_sign_in",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_canonical_ios_copy_rejects_shortened_competing_store_names",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_pipa_sensitive_and_external_access_triggers_remain_independent",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_pipa_thousand_threshold_uses_locale_correct_grouping_both_sources",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_renderer_rejects_short_store_name_next_to_localized_text",
+        "test_legal_revision2_minor.LegalRevision2MinorTest.test_staged_ios_copy_rejects_shortened_competing_store_names",
+        "test_locale_pages.LocalePageTests.test_every_route_has_a_page_for_every_locale",
+        "test_locale_pages.LocalePageTests.test_hash_pages_stay_multilingual_and_become_x_default",
+        "test_locale_pages.LocalePageTests.test_hreflang_links_are_reciprocal",
+        "test_locale_pages.LocalePageTests.test_language_navigation_links_the_same_route_in_every_locale",
+        "test_locale_pages.LocalePageTests.test_language_script_leaves_static_pages_alone",
+        "test_locale_pages.LocalePageTests.test_local_links_resolve_from_locale_pages",
+        "test_locale_pages.LocalePageTests.test_locale_pages_are_canonical_and_list_every_alternate",
+        "test_locale_pages.LocalePageTests.test_locale_pages_declare_their_language_and_direction",
+        "test_locale_pages.LocalePageTests.test_locale_panel_is_the_hash_page_panel",
+        "test_locale_pages.LocalePageTests.test_sitemap_lists_every_page_with_its_alternates",
+        "test_locale_pages.LocalePageTests.test_titles_and_descriptions_are_localized",
+        "test_monetization_copy.AdsTransferParticularsTest.test_every_android_ads_section_lists_the_particulars_and_the_app_set_id",
+        "test_monetization_copy.AdsTransferParticularsTest.test_every_ios_ads_section_lists_the_transfer_particulars",
+        "test_monetization_copy.AdsTransferParticularsTest.test_renderers_reject_an_ads_section_without_the_particulars",
+        "test_monetization_copy.AndroidPurchaseVerificationCopyTest.test_english_purchase_copy_names_server_verification_only",
+        "test_monetization_copy.PurchaseServerPlaceholderTest.test_ios_and_android_purchase_sections_carry_the_same_placeholders",
+        "test_monetization_copy.PurchaseServerPlaceholderTest.test_parity_guard_rejects_an_ios_section_without_the_retention_sentence",
+        "test_monetization_copy.PurchaseServerPlaceholderTest.test_release_gate_finds_every_pending_ios_server_sentence",
+        "test_monetization_copy.RewardPassCopyTest.test_every_locale_describes_the_24_hour_reward_and_48_hour_cap",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts",
+        "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_and_sales_configuration_block_release_without_rep_appointment",
+        "test_privacy_ops.MonthlyExportTests.test_atomic_writer_refuses_existing_and_cleans_sanitised_temp",
+        "test_privacy_ops.MonthlyExportTests.test_cli_default_is_dry_and_no_token_or_response_in_stdout",
+        "test_privacy_ops.MonthlyExportTests.test_cli_malformed_json_does_not_echo_response",
+        "test_privacy_ops.MonthlyExportTests.test_default_dry_run_never_reads_token_contacts_network_or_writes",
+        "test_privacy_ops.MonthlyExportTests.test_duplicate_month_stops_before_token_or_request_and_preserves_bytes",
+        "test_privacy_ops.MonthlyExportTests.test_execute_needs_explicit_token_without_automatic_auth",
+        "test_privacy_ops.MonthlyExportTests.test_existing_lock_prevents_concurrent_query_without_removing_other_lock",
+        "test_privacy_ops.MonthlyExportTests.test_git_archive_and_token_rejected_before_network",
+        "test_privacy_ops.MonthlyExportTests.test_http_errors_redact_provider_body_and_do_not_retry",
+        "test_privacy_ops.MonthlyExportTests.test_insecure_symlink_directory_oversize_and_header_injection_token_rejected",
+        "test_privacy_ops.MonthlyExportTests.test_one_request_persists_only_coarse_private_monthly_json",
+        "test_privacy_ops.MonthlyExportTests.test_publication_error_leaves_no_partial_final",
+        "test_privacy_ops.MonthlyExportTests.test_rejected_non_regular_token_closes_descriptor",
+        "test_privacy_ops.MonthlyExportTests.test_rejected_report_never_persists_raw_or_final_and_releases_lock",
+        "test_privacy_ops.MonthlyExportTests.test_shared_archive_and_symlink_rejected",
+        "test_privacy_ops.MonthlyExportTests.test_small_counts_and_no_rows_have_identical_export_bytes",
+        "test_privacy_ops.MonthlyExportTests.test_token_in_archive_rejected",
+        "test_privacy_ops.MonthlyExportTests.test_transport_failure_does_not_retry_or_leave_output",
+        "test_privacy_ops.MonthlyExportTests.test_transport_fixed_https_post_no_proxy_redirect_or_retry",
+        "test_privacy_ops.MonthlyExportTests.test_transport_rejects_nonjson_oversize_and_duplicate_payload",
+        "test_privacy_ops.PrivacyBoundaryTests.test_changed_query_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_current_future_and_buffer_months_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_deletion_plan_never_echoes_identifier",
+        "test_privacy_ops.PrivacyBoundaryTests.test_dimensions_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_duplicate_json_key_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_empty_is_not_claimed_zero",
+        "test_privacy_ops.PrivacyBoundaryTests.test_extra_metric_and_field_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_hidden_row_dimension_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_leap_month_end",
+        "test_privacy_ops.PrivacyBoundaryTests.test_malformed_counts",
+        "test_privacy_ops.PrivacyBoundaryTests.test_other_identifier_types_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_output_excludes_source_quota_and_exact_count",
+        "test_privacy_ops.PrivacyBoundaryTests.test_private_write_refuses_overwrite",
+        "test_privacy_ops.PrivacyBoundaryTests.test_quality_flags_rejected",
+        "test_privacy_ops.PrivacyBoundaryTests.test_ranges_and_review_remain_pending",
+        "test_privacy_ops.PrivacyBoundaryTests.test_runtime_has_only_bounded_standard_library_dependencies",
+        "test_privacy_ops.PrivacyBoundaryTests.test_small_counts_and_zero_are_indistinguishable",
+        "test_privacy_ops.PrivacyBoundaryTests.test_timezone_and_metadata_required",
+        "test_privacy_ops.PrivacyBoundaryTests.test_truncated_or_invalid_row_count",
+        "test_privacy_ops.PrivacyBoundaryTests.test_two_stream_filter_locked",
+        "test_render_paragraphs.GeneratedContentTests.test_android_lists_follow_their_lead_in_paragraph",
+        "test_render_paragraphs.GeneratedContentTests.test_android_privacy_sections",
+        "test_render_paragraphs.GeneratedContentTests.test_android_support_answers",
+        "test_render_paragraphs.GeneratedContentTests.test_ios_contact_email_is_on_its_own_line",
+        "test_render_paragraphs.GeneratedContentTests.test_ios_deletion_faq_names_the_delete_action_once",
+        "test_render_paragraphs.GeneratedContentTests.test_ios_privacy_sections",
+        "test_render_paragraphs.GeneratedContentTests.test_ios_support_answers",
+        "test_render_paragraphs.GeneratedContentTests.test_policy_urls_render_with_wrap_points_and_exact_text",
+        "test_render_paragraphs.GeneratedContentTests.test_terms_link_the_eula_once_per_language",
+        "test_render_paragraphs.GeneratedContentTests.test_terms_sections_and_subsections",
+        "test_render_paragraphs.ParagraphBlockTests.test_android_list_follows_the_paragraph_that_introduces_it",
+        "test_render_paragraphs.ParagraphBlockTests.test_android_list_items_and_skip_target_are_unchanged",
+        "test_render_paragraphs.ParagraphBlockTests.test_android_policy_section_blocks_are_separate_escaped_paragraphs",
+        "test_render_paragraphs.ParagraphBlockTests.test_ios_faq_blocks_keep_inline_markup_per_block",
+        "test_render_paragraphs.ParagraphBlockTests.test_reviewed_urls_wrap_only_after_path_slashes",
+        "test_render_paragraphs.ParagraphBlockTests.test_single_block_answers_keep_one_paragraph",
+        "test_render_paragraphs.ParagraphBlockTests.test_single_newline_in_a_policy_block_is_a_line_break",
+        "test_render_paragraphs.ParagraphBlockTests.test_split_is_on_blank_lines_only",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_all_17_locales_keep_final_prices_and_store_localization",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_annual_and_us_renewal_notice_windows_are_not_assumed_covered",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_app_store_trial_is_not_described_as_immediate_payment",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_calendar_month_trial_uses_store_eligibility_for_first_time_subscribers",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_current_operator_and_optional_account_replace_retired_claims",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_integration_preserves_every_billing_paragraph_and_appends_retention",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_korean_conversion_and_increase_need_affirmative_preceding_30_day_consent",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_store_refund_policy_preserves_statutory_rights_and_korean_time_limits",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_both_privacy_pages_have_actual_policy_links_all_locales",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_health_categories_purposes_and_sources_are_disclosed",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_health_rights_and_downstream_backup_deletion",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_recipients_affiliates_no_sale_no_health_geofencing",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_collection_and_sharing_consent_requested_service_limit",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_separate_prominent_localized_us_health_policy",
+        "test_us_health_policy.USConsumerHealthPolicyTests.test_state_response_deletion_and_appeal_deadlines"
+      ],
+      "failed": [],
+      "errors": [],
+      "skipped": [],
+      "omitted": []
+    },
+    "focusedMethods": 81,
+    "checks": "12PASS / 1BLOCKED_EFFECTIVE_DATE (actual child exit1 preserved)",
+    "sitePages": 162,
+    "stagedPages": 126,
+    "locales": 17,
+    "stagedRoutes": 7,
+    "koreanTone": {
+      "sentences": 2078,
+      "violations": 0,
+      "existingExceptions": 9,
+      "stale": 0
+    },
+    "frozenInputs": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/final-inputs.json",
+    "frozenFileCount": 255,
+    "inputComparison": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/full-frozen-input-comparison.json",
+    "visual": "NOT_RUN",
+    "native": "NOT_RUN",
+    "provider": "NOT_RUN",
+    "liveSite": "LIVE_SITE_NOT_VERIFIED",
+    "counselNativeSpeaker": "NOT_CERTIFIED"
+  },
+  "historical": {
+    "previousRevisionReport": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2/revision1-report.historical.json",
+    "previousResults": "Historical; not restarted. Current193-method suite separately verified.",
+    "redWrapperPredictionCorrection": {
+      "initialWrapperExit": 1,
+      "incorrectPredictedFailedMethods": 11,
+      "actualRetainedFailedMethods": 10,
+      "rerun": false,
+      "productResultUnchanged": true
+    }
+  },
+  "cleanup": {
+    "worktreeStatus": "CLEAN",
+    "temporaryProofWorktreesRemoved": true,
+    "ownedScratchRemaining": [],
+    "activeProcessOwnership": null,
+    "nativeDeviceOwnership": null
+  },
+  "externalState": "No network, push, merge, deploy, Store action or publication; read-only committed partner receipts only.",
+  "handoff": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/docs/CURRENT_HANDOFF.md",
+  "journal": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/CHANGELOG.md",
+  "evidenceRoot": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/revision2",
+  "authorizationNote": "Revision2 explicitly retains KRW22,000 despite current spec/partner19900 inputs. No prices/trial/regions/backup/mg/operator decisions reopened. Never publish.",
+  "reportValidation": {
+    "result": "PASS",
+    "headMatches": true,
+    "filesInventoryMatches": true,
+    "commitStampsVerified": true,
+    "redProofCompilesAndFailsOnAssertions": true,
+    "greenIdentitySetsMatch": true,
+    "frozenInputMatchCount": 255,
+    "publication": "BLOCKED_EXIT_1_NOT_PUBLISHED",
+    "productChecksNotRerunForReportingDocs": true
+  }
+}
