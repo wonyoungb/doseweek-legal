@@ -176,7 +176,7 @@ Older handoffs, continuation prompts and snapshots were removed from the tree. T
 Git history.
 
 Prepared 1.0.6 disclosures include the Wonyoung Labs operator, separate health-sync consent,
-processor/transfer tables, regional rights, daily encrypted S3 Seoul backups and weekly OS
+processor/transfer tables, regional rights, daily encrypted S3 Seoul backups and manual pre-deploy OS
 snapshots with the seven-day deletion limit, trial/subscription terms and a separate US policy.
 1.0.6 excludes EU/EEA, UK and Switzerland sales and has no appointed EU/UK representative;
 applicable existing-user rights and safeguards remain. Supplier facts, actual Store exclusions

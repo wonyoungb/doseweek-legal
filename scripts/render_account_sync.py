@@ -10,6 +10,7 @@ import copy
 import hashlib
 import html
 import json
+import re
 import shutil
 from pathlib import Path
 from urllib.parse import urlencode
@@ -52,6 +53,12 @@ IOS_RETENTION_STORE_LABELS = {'ko': [{'old': 'Google Play', 'new': '다른 지�
 def sections(entry):
     return {s['id']: s for s in entry['sections']}
 
+def replace_backup_sentence(paragraph, index, replacement, locale):
+    """Replace one legacy blanket claim, preserving the other help sentences."""
+    parts = [p.strip() for p in re.split(r'(?<=[。।])|(?<=\.)\s+', paragraph) if p.strip()]
+    parts[index] = replacement
+    return ('' if locale in CJK else ' ').join(parts)
+
 def integrated_sources(candidate=None):
     c = candidate or account_sync_candidate.load()
     ios = json.loads((ROOT / 'docs/ios-content.json').read_text())
@@ -69,6 +76,7 @@ def integrated_sources(candidate=None):
     for loc, text in c['locales'].items():
         us_health['locales'][loc]['intro'] = text['releaseStatus'] + '\n\n' + us_health['locales'][loc]['intro']
         i, a, t = ios['locales'][loc], android['locales'][loc], terms['locales'][loc]
+        backup_guide = i['support']['guide']['steps'][5]['body']
         ip, ap, tp = sections(i['privacy']), sections(a['privacy']), sections(t)
         join = lambda *keys: '\n\n'.join(text[k] for k in keys)
         ios_retention = text['retention']
@@ -76,6 +84,7 @@ def integrated_sources(candidate=None):
             assert label['old'] in ios_retention, (loc, 'shared store wording changed')
             ios_retention = ios_retention.replace(label['old'], label['new'])
         assert 'Google Play' not in ios_retention, loc
+        assert 'Google Drive' not in ios_retention, loc
         join_ios = lambda *keys: '\n\n'.join(ios_retention if k == 'retention' else text[k]
                                              for k in keys)
         i['privacy']['intro'] = text['releaseStatus'] + '\n\n' + i['privacy']['intro']
@@ -100,7 +109,7 @@ def integrated_sources(candidate=None):
         qualify(ip['meals']['paragraphs'], 0, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         qualify(ip['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         qualify(ap['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
-        ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + join('sync', 'serverBackup')
+        ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + join('automaticBackup', 'iosAppDataBackup', 'sync', 'serverBackup')
         ip['deletion']['paragraphs'][0] += '\n\n' + join_ios('retention', 'webDeletion')
         purchase = ip['purchases']['paragraphs'][0].split('\n\n')
         assert len(purchase) == 7, (loc, 'ios purchase paragraph boundary changed')
@@ -116,11 +125,15 @@ def integrated_sources(candidate=None):
         ip['purchases']['paragraphs'][0] = '\n\n'.join(purchase)
         for group, key in [('released', 'backup'), ('secondRelease', 'backup')]:
             i['support'][group][key]['answers'][0] = text['manualBackupScope'] + '\n\n' + i['support'][group][key]['answers'][0]
-            i['support'][group][key]['answers'][-1] += '\n\n' + text['sync']
+            i['support'][group][key]['answers'][-1] += '\n\n' + join('automaticBackup', 'iosAppDataBackup', 'sync')
+        i['support']['guide']['steps'][5]['body'] = backup_guide + '\n\n' + join('automaticBackup', 'iosAppDataBackup')
         i['support']['released']['deletion']['answers'][-1] += '\n\n' + join_ios('retention', 'webDeletion')
-        i['support']['plus']['features']['answers'][0] += '\n\n' + join('account', 'sync')
+        i['support']['plus']['features']['answers'][0] += '\n\n' + join('account', 'automaticBackup', 'iosAppDataBackup', 'sync')
         i['support']['plus']['manage']['answers'][-1] += '\n\n' + join_ios('account', 'retention')
         i['support']['plus']['earlier']['answers'][0] = text['legacyRights']
+        for key, index, sentence in [('free', 0, -1), ('features', 1, 0), ('earlier', 1, 0)]:
+            answers = i['support']['plus'][key]['answers']
+            answers[index] = replace_backup_sentence(answers[index], sentence, text['freeFeatures'], loc)
         a['privacy']['scope'] = text['releaseStatus'] + '\n\n' + a['privacy']['scope'].replace('1.0.5', '1.0.6')
         a['home']['featureBadges'][1] = text['account']
         ap['no-collection']['paragraphs'][0] = ap['no-collection']['paragraphs'][0].replace('1.0.5', '1.0.6')
@@ -136,9 +149,12 @@ def integrated_sources(candidate=None):
         ap['no-collection']['paragraphs'][1] = join('releaseStatus', 'account', 'sync', 'analytics', 'notice') + '\n\n' + '\n\n'.join(analytics[1:])
         ap['no-collection']['items'][0] = text['sync']
         ap['no-collection']['items'][1] = text['account']
-        for index in (0, 2):
-            ap['backup']['paragraphs'][index] = text['manualBackupScope'] + '\n\n' + ap['backup']['paragraphs'][index]
-        ap['backup']['paragraphs'][-1] += '\n\n' + join('sync', 'serverBackup')
+        # The custom app-managed Drive path belongs to the retained 1.0.5 source. The 1.0.6
+        # automatic paths are E2EE server sync and Android OS Auto Backup, with distinct keys.
+        ap['backup']['paragraphs'][0] = join('manualBackupScope', 'androidManualFileBackup')
+        ap['backup']['paragraphs'][2] = text['androidManualFileSecurity']
+        ap['backup']['paragraphs'][4:] = [text['automaticBackup'], text['androidSystemBackup'], join('sync', 'serverBackup')]
+        a['support']['guide']['steps'][5]['body'] = backup_guide + '\n\n' + join('automaticBackup', 'androidSystemBackup')
         ap['purchases']['paragraphs'][1] = join('account', 'sync')
         ap['purchases']['paragraphs'][2] = join('sync', 'processors')
         if c.get('serverReadiness', {}).get('verifierHostDecided') is not True:
@@ -151,20 +167,25 @@ def integrated_sources(candidate=None):
         ap['retention']['paragraphs'][0] = join('retention', 'webDeletion')
         ap['security']['paragraphs'][0] = text['sync']
         faq['accounts']['answers'] = [join('releaseStatus', 'account', 'sync', 'analytics', 'notice')]
-        faq['backup']['answers'][0] = text['manualBackupScope'] + '\n\n' + faq['backup']['answers'][0]
-        faq['backup']['answers'][1] += '\n\n' + text['sync']
+        faq['backup']['answers'][0] = join('manualBackupScope', 'androidManualFileFaq')
+        faq['backup']['answers'][1] = join('androidManualFileDestination', 'automaticBackup', 'androidSystemBackup', 'sync')
+        faq['storage']['answers'][0] = join('recordsSync', 'automaticBackup', 'androidSystemBackup')
         faq['deletion']['answers'][0] += '\n\n' + join('retention', 'webDeletion')
         faq['recovery']['answers'] = [text['sync']]
-        faq['plus-features']['answers'][0] += '\n\n' + join('account', 'sync')
+        faq['plus-features']['answers'][0] += '\n\n' + join('account', 'automaticBackup', 'androidSystemBackup', 'sync')
         faq['plus-restore']['answers'][1] = join('account', 'sync')
         faq['plus-earlier']['answers'][0] = text['legacyRights']
+        for key, index, sentence in [('plus-free', 0, -1), ('plus-features', 1, 0), ('plus-earlier', 1, 0)]:
+            answers = faq[key]['answers']
+            answers[index] = replace_backup_sentence(answers[index], sentence, text['androidFreeFeatures'], loc)
+        faq['plus-earlier']['answers'][1] += '\n\n' + text['androidSystemBackup']
         t['intro'] = text['releaseStatus'] + '\n\n' + t['intro']
         tp['free-plus']['paragraphs'][1] = text['legacyRights']
-        tp['free-plus']['paragraphs'][0] += '\n\n' + text['account']
+        tp['free-plus']['paragraphs'][0] += '\n\n' + join('account', 'automaticBackup')
         # Billing rights remain canonical: account/retention describes a different
         # subject and must never replace refund, conversion or price-change clauses.
         tp['billing']['paragraphs'][1] += '\n\n' + join('account', 'retention')
-        tp['records']['paragraphs'][0] = join('sync', 'retention', 'webDeletion', 'notice', 'analytics')
+        tp['records']['paragraphs'][0] = join('automaticBackup', 'iosAppDataBackup', 'androidSystemBackup', 'sync', 'retention', 'webDeletion', 'notice', 'analytics')
     render_ios.validate(ios)
     render_android.validate_catalog(android)
     render_terms.validate(terms, ios)
@@ -182,7 +203,7 @@ def deletion_panel(c, loc):
     text = c['locales'][loc]
     title = html.escape(text['deletionTitle'])
     mailto = 'mailto:' + c['deletionRequest']['supportEmail'] + '?' + urlencode({'subject': 'DoseWeek account deletion request'})
-    paragraphs = ''.join('<p>' + html.escape(text[k]) + '</p>' for k in ('releaseStatus', 'webDeletion', 'retention', 'serverBackup', 'account', 'analytics'))
+    paragraphs = ''.join('<p>' + html.escape(text[k]) + '</p>' for k in ('releaseStatus', 'webDeletion', 'retention', 'automaticBackup', 'iosAppDataBackup', 'androidSystemBackup', 'serverBackup', 'account', 'analytics'))
     return f'<article id="{loc}" class="language-panel" lang="{loc}" dir="{locale_pages.direction(loc)}" data-language="{loc}" data-document-title="{title} — DoseWeek" aria-labelledby="{loc}-content"><header class="hero"><h1 id="{loc}-content">{title}</h1></header><div class="policy-card">{paragraphs}<a class="button primary" href="{html.escape(mailto, quote=True)}">{html.escape(text["requestLabel"])}</a><p><a href="{html.escape(mailto, quote=True)}">wonyoung@wonyoungchoi.dev</a></p></div></article>'
 
 def rendered_pages(sources, candidate=None):

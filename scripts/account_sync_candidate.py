@@ -34,7 +34,10 @@ LOCALES = (
 )
 FIELDS = ("account", "sync", "healthSync", "healthConsent", "serverBackup", "recordsSync", "mealsSync", "processors", "retention", "notice",
           "webDeletion", "releaseStatus",
-          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope")
+          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
+          "automaticBackup", "iosAppDataBackup", "androidSystemBackup", "freeFeatures", "androidFreeFeatures",
+          "androidManualFileBackup", "androidManualFileSecurity", "androidManualFileFaq",
+          "androidManualFileDestination")
 
 
 # Lane LEGAL-STORE (2026-10-02): the account/sync server facts every locale must state before the

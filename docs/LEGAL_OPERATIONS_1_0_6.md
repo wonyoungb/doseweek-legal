@@ -41,12 +41,31 @@ The current handoff and account candidate readiness flags own release status.
    readiness requires a tested contact/escalation route and dated private receipts; drafting
    this file does not set breachProcedureOperational=true.
 
-## Deletion and hybrid-backup acceptance
+## Plus automatic backup acceptance
+
+- Both platforms: automatic record backup/sync requires active Plus and separate health-sync
+  consent. Records are end-to-end encrypted on the device; the server cannot read their contents.
+  This does not hide readable account/purchase metadata or replace incident obligations.
+- Android: OS Google Drive Auto Backup includes the complete app-data set only during
+  verified Plus. Without verified Plus, exclude the database, keys and records together;
+  never write a partial set. Leave existing backups intact and keep restore available.
+  Show existing1.0.5 users a one-time, non-blocking notice with the manual export route.
+  Verify the actual OS/provider backup data, transfer, settings and retention particulars;
+  do not reuse the retired app-managed Drive-folder disclosure as OS backup evidence.
+- iOS: iCloud and CloudKit app-data backup stay off. A user-directed manual file export to a
+  chosen cloud document provider is distinct, as are optional calendar-provider copies.
+- Free manual file export/import and backup reminders remain. Backup settings must show the
+  current state honestly. Acquire native/source/configuration receipts for Plus on/off,
+  expired/unverified entitlement, full-set backup/restore and the migration notice before release.
+  These paragraphs are a candidate contract, not evidence of executed backup or restored data.
+
+## Deletion and server-backup acceptance
 
 - Daily app-data backup: encrypt before upload to Amazon S3 in Seoul (ap-northeast-2).
   Distinguish device E2EE payloads from backup encryption: account/purchase metadata may be
-  readable to the operator after backup decryption. A weekly OS recovery snapshot is separate
-  and have the same personal-data deletion bound.
+  readable to the operator after backup decryption. A manual pre-deploy OS recovery snapshot is separate
+  and is deleted within 7 days; no weekly snapshots are created. The same personal-data
+  deletion bound applies. Hourly Lambda cleanup uses an IAM role, not access keys.
 - Requested deletion or health-consent withdrawal makes covered data unavailable immediately
   and removes active copies without delay; never wait for Plus expiry. Full account deletion
   remains possible during an active subscription. Store cancellation is a separate action.

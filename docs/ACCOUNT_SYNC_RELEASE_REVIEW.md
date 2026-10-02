@@ -51,7 +51,7 @@ The preserved public inputs and144pages describe the historical no-account app. 
 | Source | Fields that currently conflict or omit the new behavior |
 |---|---|
 | `ios-content.json` | `privacy.storage`, `privacy.backups`, `privacy.deletion`, `privacy.purchases`; support `released.backup`, `released.deletion`, `plus.features` and `plus.manage` need account/sync/deletion paths. iOS purchases currently says the app sends no purchase data to the developer and the server has no account linkage. Confirm the implemented token path before replacing it. |
-| `android-content.candidate.json` | `privacy.scope`, `no-collection`, `backup`, `purchases`, `retention`, `security`; support FAQ `accounts`, `backup`, `deletion`, `recovery`, `plus-features` and `plus-restore`. Existing manual file and Google Drive features stay distinct; cross-platform server sync is a third path. |
+| `android-content.candidate.json` | `privacy.scope`, `no-collection`, `backup`, `purchases`, `retention`, `security`; support FAQ `accounts`, `backup`, `deletion`, `recovery`, `plus-features` and `plus-restore`. Manual file export/import remain Free. Plus automatic backup uses E2EE server sync; Android OS Google Drive Auto Backup requires verified active Plus, preserves existing backups and restore. The retired custom Drive-folder descriptions remain historical in the 1.0.5 source. |
 | `terms-content.json` | `free-plus`, `billing`, `records` currently say no cross-platform account and only local records. Add optional account, server sync entitlement, recovery-code loss and deletion consequences without changing store cancellation/refund language. |
 | Generated pages | `/privacy/`, `/support/`, `/android/privacy/`, `/android/support/`, `/terms/` and their 17 language pages are still generated from the old sources. Do not hand-edit them. |
 
@@ -255,3 +255,8 @@ catalog guard refuses the token "iOS".
   `legal_release.PENDING_DIGEST_BASIS`, tied to `tombstoneRetentionDecided`, and refused by
   `check_site.py --release`.
 - ja/zh fields join sentences without an ASCII space after "。".
+
+LATE2 backup decision: automatic server backup is optional, end-to-end encrypted and Plus-only;
+the server cannot read the record contents. iCloud/CloudKit app-data backup stays off. Manual
+file export/import and backup reminders remain Free. OS Drive entitlement/restore/notice and
+iOS exclusion receipts are required before publication; no operational readiness is inferred.

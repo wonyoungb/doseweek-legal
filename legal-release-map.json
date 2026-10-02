@@ -209,15 +209,15 @@
     "effectiveDate": null,
     "operator": "Wonyoung Labs (sole proprietorship); representative/privacy officer Wonyoung Choi",
     "sourceHashes": {
-      "docs/ios-content.json": "dcd9eda991ecdb657d6528bede3eacaa9c9b5c6f5b2b20ff2768d86e0e96915c",
-      "docs/android-content.candidate.json": "566f01de0d18c4be67a9d4b0f9f51f0d2472cfdd8848113ecda9d2795586acee",
-      "docs/account-sync-content.candidate.json": "f5c0d3726fd3c556cf5f0e79f049d679e1d9f57989badc30b6c7b51d771820dd",
+      "docs/ios-content.json": "975487b21dd45d44e8dc4b1567d5ff21a580f5568d2aae8ad0e06b031236c06e",
+      "docs/android-content.candidate.json": "056bacd4c3551e225f637189003a7bb82d9a269feb89b23dceaa8258c9273e1b",
+      "docs/account-sync-content.candidate.json": "b6ee6e3be9b4e1ac83cad0fcd89d239c91cdde79abfb5f382de6a0641dc87071",
       "docs/terms-content.json": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d",
       "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee"
     },
     "privacySupplement": "Art30 purposes/bases/security/rights, recipient-specific Art28-8 inventory, PIPA/FTC/GDPR breach section; supplier particulars stay explicitly unverified and false-gated",
     "subscription": "Late review-2: all17 public Terms and active coordination use store price for monthly/annual plans with full local price/taxes/period before purchase. Actual Store configuration requires separate readback; no numeric configuration authority is asserted here. First-time1-calendar-month trial, auto-renewal, cancel any time; statutory rights and store-returned native UI preserved.",
-    "backup": "daily pre-upload-encrypted S3 Seoul app data +weekly OS recovery snapshot; deleted personal data out of all relevant backups within7days; independent cleanup/actual proof required",
+    "backup": "Plus optional automatic record backup/sync is device E2EE: server cannot read contents. Android OS Google Drive Auto Backup app data requires verified active Plus; existing backups/restore retained. No iCloud/CloudKit app-data backup; Free manual export/import/reminders retained. Daily encrypted S3 Seoul archives and manual pre-deploy OS snapshot only; all relevant personal-data copies deleted within 7 days; hourly IAM-role cleanup and actual proof required.",
     "routes": {
       "site": [
         "",
@@ -232,10 +232,10 @@
       ],
       "stagedAccount": "account/delete/ through render_account_sync.py (unpublished/noindex) — request by support email without reinstall or Plus"
     },
-    "verification": "Late review-2 PASS:208 exact full unittest methods and68 focused methods, zero failures/errors/skips/omissions;13 ordinary commands PASS. All162 generated pages unchanged;260 frozen source/test/runner/fixture/artifact/config/Python inputs match. Release child exit1 BLOCKED_EFFECTIVE_DATE; all readiness flags and final partner/operational/Store receipts remain closed. Supplemental provenance input comparison covers the new release-map assertion. Native/provider/live/visual NOT_RUN.",
+    "verification": "LATE2 exact assertion RED/GREEN identities,logs,frozen inputs and outcomes are recorded in evidence/legal-update-20261002/late2 and the final lane report. Prior late-review-2 proof remains historical for matching unchanged inputs. No native/provider/live/visual PASS is asserted;effective date and operational/legal readiness remain closed.",
     "publication": "never published/pushed/merged by this lane; date/native/server/provider/sales-exclusion/operational gates stay closed",
     "ownerQuestions": "Final report and candidate unresolved/readiness fields; no prices/trial/regions/mg/backup/operator decision reopened",
-    "evidence": "evidence/legal-update-20261002/late-review2/",
+    "evidence": "evidence/legal-update-20261002/late2/",
     "marketAvailability": {
       "version": "1.0.6",
       "excludedRegions": [
@@ -297,6 +297,11 @@
       "assertionFailures": 6,
       "resolution": "price-agnostic-store-price-active-contract",
       "partnerParity": "BLOCKED_PARTNER_CHECK_RECEIPTS"
+    },
+    "late2": {
+      "reviewedParent": "48900139478e80ae08187252d6d434b3270f9d91",
+      "redCommit": "cfc27f770c16c34752e11afb4206e51abd86575e",
+      "resolution": "Plus E2EE server automatic backup;verifiedPlus Android OS Drive;no app-data iCloud;manual predeploy snapshot"
     }
   }
 }
