@@ -70,6 +70,56 @@ sections 4.4 and 5.1-5.5, compliance 4.5 and 8, owner second round (150 a month,
     PASS; `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
     `evidence/pro-legal-ai-20261002/red-proof/review-fix1-red.summary.json` and `summary.json`
     (`reviewFix1`).
+- Review round 2 (2026-10-02, one major finding plus the settings sync addition; legal head
+  before the docs commit `c147f38`):
+  - Major: the staged iOS 1.0.6 support answer `support.released.ai` (and the privacy section
+    `ai`) still ended with "No Private Cloud Compute, server model, or third-party model is
+    used" in 17 locales. PRO-SPEC 4.4 `ai.paused` links to that answer. RED `e854f24`, GREEN
+    `cf834c1`: new candidate fields `onDeviceOnly` (the sentence scoped to the two on-device
+    features) and `iosAiFaq` (the assistant is a different feature, processed on a server with
+    a third-party model: DoseWeek server, Amazon Bedrock Seoul, Claude by Anthropic, only after
+    separate consent; needs a connection; the app says when it is paused). `integrate()`
+    replaces the one denial sentence in the answer and in the privacy section (the
+    `onDeviceScope` pointer stays). `androidAiFaq` gained "It is processed on a server, not on
+    the device." `render_ios.validate` refuses a 1.0.6 AI answer without "Amazon Bedrock"; the
+    served 1.0.5 source is unchanged.
+  - Sweep: `test_no_staged_text_denies_a_server_or_third_party_model_outside_the_scoped_sentences`
+    reads every string of the staged iOS, Android, Terms and US-policy sources, both candidate
+    files and the rendered staged pages with per-locale phrase stems (`DENIAL_STEMS`,
+    `SERVER_STEMS`, `ON_DEVICE_STEMS`). README, AGENTS, docs/*.md, home, help navigation, import,
+    templates/ and assets/ were checked by hand: no other denial. Left for their owner, because
+    they do not speak about AI: iOS `secondRelease.meals` and Android `candidate2-meals` say
+    records "stay on the device" without the account-sync condition; Android `home.intro` is
+    conditional on opt-in features and is not a staged route.
+  - Settings sync (owner decision 2026-10-02 19:22, late-decisions.md): RED `ec6d1e7`, GREEN
+    `c147f38`. The `sync` text of `docs/account-sync-content.candidate.json` says after the
+    record list, in 17 locales: supported settings are all app settings (injection-reminder
+    switches, recording without a plan, supply tracking); they stay the same on every device
+    signed in to the account; an important change made on another device is applied and
+    announced once; permissions and connections of one device (notification permission, app
+    lock, health-data, calendar and cloud-storage connections) are not synced. The sentences
+    name no platform, store or provider. Not written here: the restore half of the decision
+    (a restore from Settings applies the saved settings and names what changed) is app UI copy
+    of the sync and backup lanes; the file-backup sections may need a matching sentence later.
+  - Minors: `require_release_ready` refuses the draft sentences listed in the new top-level
+    `preReleaseWording` (5 per locale: clause 5 and four processor-row cells) even with every
+    flag true. Recorded in `unresolvedBeforePublication`, with no copy change: the ja privacy
+    clause 6 APPI transfer statement (counsel; flag `locales.ja` is off), the Screen A retention
+    sentence that reads broader than clause 4 (owner at gate 6; it needs a consentVersion bump
+    and new receipts), and the zh "meal ideas" term (the shipped CON-PRO strings use the same
+    term, so both change together). Unchanged: the blanket "상담" checks (decided at gate 6).
+  - `ai.refuse.sideEffect` (round-1 minor, PRO-SPEC 4.4 open copy conflict): settled as the
+    shipped CON-PRO wording without "날짜별로". The payload carries no dates, so no date-sorted
+    AI answer exists; the owner confirms at gate 6.
+  - The new website sentences are candidate text, not app-consumed consent copy, so they are
+    outside the C23 receipts (the 50 app keys and 15 CON-PRO keys did not change;
+    `write_locale_receipts.py --check` passes). They have no native-speaker or counsel review.
+  - RED proofs in temporary detached worktrees (removed): A 33 methods ran, 7 failing, 109
+    assertion failures, 0 errors; B 4 ran, 3 failing, 35 failures, 0 errors (1 guard passes).
+    GREEN: 259/259 unittest methods PASS (248 + 11 new); the same 13 light commands PASS;
+    `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+    `evidence/pro-legal-ai-20261002/red-proof/review-fix2-red.summary.json` and `summary.json`
+    (`reviewFix2`); the full logs are in the workspace lanes folder only.
 - No owned process, device or external action. Temporary RED worktrees removed. Never publish.
 Next action: orchestrator re-review; IOS-AI-UI and AND-AI-UI copy the 50 app keys from
 `docs/ai-app-copy.candidate.json`; the owner reads the Korean copy and the What's New line at gate 6.

@@ -14,8 +14,23 @@
   (50 app keys and 15 CON-PRO keys per locale; the first receipts recorded 11 app keys), and the
   staged Android 1.0.6 content no longer says "No generative AI" as a home badge or lists
   "Generative AI" among the things not used; both now name the opt-in assistant in 17 locales.
-- Failing-first: RED `8b34c75`, GREEN `b23c985`. 246/246 tests and 13 light checks PASS; release
-  check BLOCKED_EFFECTIVE_DATE. Served pages unchanged. Never publish.
+- Review round 2 (same day): the staged iOS 1.0.6 support answer "Why is an AI feature
+  unavailable?" and the privacy section "On-device AI" no longer say outright that no server
+  model or third-party model is used. In 17 locales the sentence is scoped to the two on-device
+  features, and the support answer adds that the AI record assistant (Pro) is processed on a
+  server with a third-party model (Amazon Bedrock, Seoul Region, Claude by Anthropic) only after
+  separate consent. The staged Android answer says the assistant is processed on a server, not on
+  the device. `render_ios.validate` refuses a 1.0.6 AI answer that does not name Amazon Bedrock,
+  and a sweep test allows a server or third-party model denial only inside the scoped sentences.
+- Settings sync (owner decision 2026-10-02 19:22): the `sync` text of the account/sync candidate
+  now says, in 17 locales, that supported settings are all app settings and stay the same on the
+  account's devices, that an important change made on another device is applied and announced
+  once, and that device permissions and connections are not synced.
+- The AI release gate also refuses the candidate while clause 5 or the processor row still carry
+  a draft sentence ("not yet verified", "before release"), even when every flag is true.
+- Failing-first: RED `8b34c75`, GREEN `b23c985`; round 1 RED `2f43f9c`, GREEN `1c9579b`; round 2
+  RED `e854f24`, GREEN `cf834c1`, RED `ec6d1e7`, GREEN `c147f38`. 259/259 tests and 13 light
+  checks PASS; release check BLOCKED_EFFECTIVE_DATE. Served pages unchanged. Never publish.
 
 ## 2026-10-02 — LATE2 review-1 fix (unpublished)
 

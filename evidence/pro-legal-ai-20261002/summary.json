@@ -329,5 +329,176 @@
    "browser render of the staged pages",
    "native-speaker or counsel review of any locale"
   ]
+ },
+ "reviewFix2": {
+  "date": "2026-10-02",
+  "findings": [
+   "major: the staged iOS 1.0.6 support FAQ support.released.ai still said no server model or third-party model is used, in 17 locales (the privacy on-device AI section carried the same sentence with only a pointer below it)",
+   "task addition: the policy must say that settings sync across the account devices (owner decision 2026-10-02 19:22)",
+   "minor: require_release_ready did not check that the draft sentences are gone",
+   "minor (recorded as blockers, no copy change): ja privacy clause 6 APPI transfer statement; Screen A retention sentence broader than clause 4; zh meal-ideas term"
+  ],
+  "commits": [
+   {
+    "sha": "e854f24",
+    "kind": "RED",
+    "scope": "scripts/test_ai_assistant_legal.py"
+   },
+   {
+    "sha": "cf834c1",
+    "kind": "GREEN",
+    "scope": "docs/ai-assistant-content.candidate.json (onDeviceOnly, iosAiFaq, androidAiFaq, preReleaseWording, 3 unresolved items), scripts/ai_assistant_candidate.py, scripts/render_ios.py"
+   },
+   {
+    "sha": "ec6d1e7",
+    "kind": "RED",
+    "scope": "scripts/test_settings_sync_disclosure.py (new)"
+   },
+   {
+    "sha": "c147f38",
+    "kind": "GREEN",
+    "scope": "docs/account-sync-content.candidate.json (sync, 17 locales), docs/ACCOUNT_SYNC_RELEASE_REVIEW.md"
+   },
+   {
+    "kind": "docs",
+    "note": "this evidence, the changelog and the handoff; its sha is in the lane report"
+   }
+  ],
+  "red": {
+   "proof": "red-proof/review-fix2-red.summary.json",
+   "A": {
+    "ran": 33,
+    "failingMethods": 7,
+    "failures": 109,
+    "errors": 0
+   },
+   "B": {
+    "ran": 4,
+    "failingMethods": 3,
+    "failures": 35,
+    "errors": 0,
+    "guardPassingOnParent": 1
+   }
+  },
+  "green": {
+   "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+   "exit": 0,
+   "ran": 259,
+   "result": "OK",
+   "newMethods": 11,
+   "methodsBefore": 248
+  },
+  "lightChecks": [
+   {
+    "cmd": "python3 scripts/render_home.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_ios.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_android.py --check",
+    "exit": 0,
+    "result": "54 Android pages; served 1.0.5 source unchanged"
+   },
+   {
+    "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_terms.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_us_health.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_sitemap.py --check",
+    "exit": 0,
+    "result": "162 URLs"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/account_sync_candidate.py",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/ai_assistant_candidate.py",
+    "exit": 0,
+    "result": "17 AI disclosure locales, 50 app copy keys"
+   },
+   {
+    "cmd": "python3 scripts/render_account_sync.py --check",
+    "exit": 0,
+    "result": "126 unpublished staged pages"
+   },
+   {
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 0,
+    "result": "742 strings, 2311 sentences, 0 violations, 13 allow-listed, 0 stale"
+   },
+   {
+    "cmd": "python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check",
+    "exit": 0,
+    "result": "17 receipts unchanged (the app copy did not change)"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py --release",
+    "exit": 1,
+    "result": "BLOCKED as before: NEXT_RELEASE_EFFECTIVE_DATE is not filled (expected)"
+   },
+   {
+    "cmd": "git diff --check",
+    "exit": 0
+   }
+  ],
+  "inputs": {
+   "docs/ai-assistant-content.candidate.json": "5693175dccc47cc27b485f6327473c71b800a03e62433ae2a97d1b9fe34693d6",
+   "docs/account-sync-content.candidate.json": "161002535f27c88d8a1c336a6c9ff36ba7698398b86c887e7a4e6cbe19f20222",
+   "docs/ai-app-copy.candidate.json": "2ab719e5a69053e3a3984cd2fe27351e2b5c7bb325a73f6a528165800e4e0824",
+   "scripts/ai_assistant_candidate.py": "37c386b78d583193a485e33c519856b74b9495dd3311f5227bffd8ed4fa7f31b",
+   "scripts/render_ios.py": "99e628eab0e8d0125f606ba982a21604742405c5fed282ea618673c16e7d7ec9",
+   "scripts/test_ai_assistant_legal.py": "e70fb716c1504ee56eb274e8a5a881acb47cf190740ea129dfc4a27a7bee8db6",
+   "scripts/test_settings_sync_disclosure.py": "0b5e70281988a625b3a995d4984b44c4f726d83723686894b5ad4e31ba24033f"
+  },
+  "sweep": {
+   "method": "every string of the staged iOS, Android, Terms and US-policy sources, both candidate files and all 126 rendered staged pages is checked by test_no_staged_text_denies_a_server_or_third_party_model_outside_the_scoped_sentences; README, AGENTS, docs/*.md, docs/home-content.json, docs/help-navigation.json, import/content.json, templates/ and assets/ were read or grepped by hand",
+   "fixed": [
+    "iOS support.released.ai answers[0] (17 locales)",
+    "iOS privacy section ai paragraphs[0] (17 locales)",
+    "Android support faq ai-health answers[0]: says the assistant is processed on a server, not on the device (17 locales)"
+   ],
+   "noDenialFound": [
+    "Terms",
+    "US consumer-health policy",
+    "docs/ai-app-copy.candidate.json",
+    "docs/home-content.json",
+    "docs/help-navigation.json",
+    "import/content.json (it describes an external AI the user chooses)",
+    "templates/",
+    "assets/",
+    "docs/AI_STORE_DECLARATIONS_1_0_6.md",
+    "docs/LEGAL_OPERATIONS_1_0_6.md"
+   ],
+   "notAiDenialsLeftForTheirOwner": [
+    "iOS support secondRelease.meals answers[1] \"Meal records stay on the device ...\" and Android faq candidate2-meals answers[1] \"Records stay on the device ...\": unconditional although account sync sends meal records end-to-end encrypted; they do not speak about AI (the assistant sends meal-day counts and the protein average, not meal records). Owner: account/sync legal lane",
+    "Android home.intro \"Records stay on the device unless you turn on an optional integration.\": conditional on opt-in features; the Android home page is not one of the staged routes"
+   ]
+  },
+  "newWebsiteStringsReview": "onDeviceOnly, iosAiFaq, the Android server sentence and the settings sync sentences are website candidate text, not app-consumed consent or refusal copy, so they are outside the C23 receipt scope (the receipts hash the 50 app keys and the 15 CON-PRO keys, which did not change). Like the rest of the website candidate they were written by the lane agent in 17 locales and have no native-speaker or counsel review; ko is read by the owner at gate 6 and ja by counsel or a native reviewer.",
+  "notRun": [
+   "browser render of staged pages",
+   "native app behaviour of settings sync (built by the sync lanes)",
+   "helpline re-fetch from official sources (no network)",
+   "AWS or store console readbacks",
+   "EVAL-AI gate",
+   "native-speaker and counsel review"
+  ],
+  "cleanup": "four temporary detached RED worktrees removed by exact path; scratch files deleted by exact path after this summary"
  }
 }
