@@ -1,0 +1,28 @@
+! Formal u throughout. Symptoms are called "klacht(en)" (complaints), the usual Dutch patient-facing word, in both the consent copy and the CON-PRO refusals.
+! ai.refuse.pregnancy says "Overleg altijd" (always consult), slightly stronger than the English "Please talk to".
+lead = The assistant makes weekly overviews and general meal ideas with your records and explains how you use the app. The answers come from AI, not from a human, and it gives no medical advice.
+sent = Before records are sent, we show you the content, and nothing is sent until you tap "Send". We send the number of doses (on time, too late, skipped), the change in the weight that you entered yourself, how often you recorded each kind of complaint, the number of days with a meal record with your protein average and goal, and your streak in weeks. For meal ideas we also send the kind of meal, the preferences, the allergies and the foods you do not like, as you chose them. Your language and region setting and the questions you type are also sent, and with help about the app only the app version, the platform and the current screen are added.
+notSent = We send no names or dosages of medicines, notes, names of foods, photos, dates, or your name, e-mail address or account data. What you type in the question field is sent as you wrote it.
+where = The app encrypts the content once more and sends it to the DoseWeek server (Seoul, Republic of Korea); Amazon Bedrock from Amazon Web Services (Seoul region) processes the content. The AI model is Claude from Anthropic. AWS manages it, and Anthropic cannot see the content.
+retention = What you send and the answers do not stay on the server and are not used for AI training. Answers are kept only on your device. Usage counts (without content) are kept for at most 2 months, and consent proofs as long as your account exists. If you report an answer and choose "Send answer text along", only that answer is kept 30 days.
+e2ee = While the AI makes an answer, the DoseWeek server and Amazon Bedrock can read what you sent. Sync and backup data remain protected with end-to-end encryption just as now.
+optional = Only the AI functions then lapse; the other functions of Pro and Plus keep working. You can withdraw your consent at any time under Settings > AI registration assistant.
+checkHealth = [Optional] I give consent for the processing of my health data (sensitive data)
+checkDetail = Purpose: make AI weekly overviews and meal ideas and answer questions about using the app / Data: the records under "What is sent" above and the questions I type / Retention: deleted as soon as the answer is made (if an answer is sent along with a report, only that answer 30 days) / If you refuse, everything except AI keeps working
+checkAge = I am 18 years or older
+processing = The app encrypts the content, Amazon Bedrock (Seoul) processes it, and the content is deleted as soon as the answer is made.
+r.dose = I cannot determine your dose or the moment of administering for you. That depends on your prescription and your body, so discuss this with the care provider who prescribed it. I can summarize your dosing history. Do you want an overview for your next appointment?
+r.sideEffect = Whether a complaint is normal or comes from the medicine, I cannot judge. Consult your care provider if it persists or if you are worried. I can summarize the complaints you have recorded.
+r.diagnosis = Only a doctor can judge whether you have a condition or how big the chance of it is. Discuss your questions with your care provider. I gladly help you list questions for your appointment.
+r.drugInfo = Whether you can combine other medicines or supplements, or which medicine suits you better, I cannot answer. Tell your care provider everything you use and ask there.
+r.diet = I cannot give diets for conditions or targets for your intake. Discuss how much you eat and your weight goals with your care provider. I can give general meal ideas for enough protein and fluids.
+r.pregnancy = About medicines and nutrition during pregnancy or breastfeeding I can give no advice. Always consult your care provider.
+r.minor = The AI registration assistant is only for persons of 18 years and older. Do you have questions about your health? Then consult a care provider together with a parent or guardian.
+r.other = I cannot help you with that. I gladly help you with ordering your records, general meal ideas or using the app.
+emergency = Are your complaints serious or do they suddenly get worse? Then do not wait. Call {text} directly or go to the nearest emergency department. I cannot judge whether it is an emergency.
+emergencyGeneric = Are your complaints serious or do they suddenly get worse? Then do not wait. Call the local emergency number directly or go to the nearest emergency department. I cannot judge whether it is an emergency.
+crisis = It sounds as if you are having a very hard time. You do not have to carry this alone. Call {text} now to talk to someone at any moment of the day. Are you in direct danger? Then call {text2}.
+crisisGeneric = It sounds as if you are having a very hard time. You do not have to carry this alone. At {text} you find a helpline near you. Are you in direct danger? Then call the local emergency number.
+header = This is the AI registration assistant. The answers come from AI, not from a human.
+output = Made by AI and possibly incorrect. This is no medical advice. Discuss decisions about your health with your care provider.
+export = Content generated by AI · DoseWeek

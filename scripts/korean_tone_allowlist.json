@@ -64,6 +64,34 @@
       "rule": "glossary",
       "match": "치료 반응·약효·부작용",
       "reason": "Terms reuse the medical disclaimer verbatim. This excludes prediction of clinical adverse effects rather than naming the 컨디션 feature; same narrow medical exception reviewed 2026-10-02."
+    },
+    {
+      "file": "docs/ai-assistant-content.candidate.json",
+      "key": "locales.ko.clauses[1]",
+      "rule": "glossary",
+      "match": "증상 종류별 기록 횟수",
+      "reason": "Sensitive-health data category of the AI record assistant: the item sent is the symptom kind with its count (PRO-SPEC 5.1/5.4, en: symptom), not the in-app 컨디션 feature label; the privacy text names it exactly as consent Screen A does (critic C18; reviewed 2026-10-02)."
+    },
+    {
+      "file": "docs/ai-assistant-content.candidate.json",
+      "key": "locales.ko.usHealth.categories",
+      "rule": "glossary",
+      "match": "증상 종류별 횟수",
+      "reason": "Sensitive-health data category of the AI record assistant: the item sent is the symptom kind with its count (PRO-SPEC 5.1/5.4, en: symptom), not the in-app 컨디션 feature label; the privacy text names it exactly as consent Screen A does (critic C18; reviewed 2026-10-02)."
+    },
+    {
+      "file": "docs/ai-app-copy.candidate.json",
+      "key": "locales.ko.copy.ai.consent.a.sent.body",
+      "rule": "glossary",
+      "match": "증상 종류별 기록 횟수",
+      "reason": "PIPA Art. 23 sensitive-information consent (Screen A/B): the listed item is the symptom kind and count that is sent, kept verbatim from PRO-SPEC 5.1 so the consent scope stays legally exact; it is not the 컨디션 feature label (reviewed 2026-10-02)."
+    },
+    {
+      "file": "docs/ai-app-copy.candidate.json",
+      "key": "locales.ko.copy.ai.consent.b.row.symptoms",
+      "rule": "glossary",
+      "match": "증상 종류별 횟수",
+      "reason": "PIPA Art. 23 sensitive-information consent (Screen A/B): the listed item is the symptom kind and count that is sent, kept verbatim from PRO-SPEC 5.1 so the consent scope stays legally exact; it is not the 컨디션 feature label (reviewed 2026-10-02)."
     }
   ]
 }

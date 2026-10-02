@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "lane": "LEGAL-AI",
+  "date": "2026-10-02",
+  "locale": "ar",
+  "consentVersion": "2026-10-02.1",
+  "scope": {
+    "screenA": [
+      "ai.consent.a.title",
+      "ai.consent.a.lead",
+      "ai.consent.a.sent.title",
+      "ai.consent.a.sent.body",
+      "ai.consent.a.notSent.body",
+      "ai.consent.a.notSent.health.ios",
+      "ai.consent.a.notSent.health.android",
+      "ai.consent.a.where.title",
+      "ai.consent.a.where.body",
+      "ai.consent.a.retention.title",
+      "ai.consent.a.retention.body",
+      "ai.consent.a.e2ee.title",
+      "ai.consent.a.e2ee.body",
+      "ai.consent.a.optional.title",
+      "ai.consent.a.optional.body",
+      "ai.consent.a.check.health",
+      "ai.consent.a.check.health.detail",
+      "ai.consent.a.check.age",
+      "ai.consent.a.later",
+      "ai.consent.a.agree",
+      "ai.consent.a.region.jp",
+      "ai.consent.a.region.us"
+    ],
+    "screenB": [
+      "ai.consent.b.title",
+      "ai.consent.b.purpose.weekly",
+      "ai.consent.b.purpose.meal",
+      "ai.consent.b.row.doses",
+      "ai.consent.b.row.weight",
+      "ai.consent.b.row.symptoms",
+      "ai.consent.b.row.meals",
+      "ai.consent.b.weight.excluded.ios",
+      "ai.consent.b.weight.excluded.android",
+      "ai.consent.b.preview",
+      "ai.consent.b.processing",
+      "ai.consent.b.quota.weekly",
+      "ai.consent.b.quota.regenerate",
+      "ai.consent.b.quota.remaining",
+      "ai.consent.b.cancel",
+      "ai.consent.b.send"
+    ],
+    "labels": [
+      "ai.label.header",
+      "ai.label.output",
+      "ai.label.export"
+    ],
+    "refusalTemplates": [
+      "ai.refuse.dose",
+      "ai.refuse.sideEffect",
+      "ai.refuse.diagnosis",
+      "ai.refuse.drugInfo",
+      "ai.refuse.diet",
+      "ai.refuse.pregnancy",
+      "ai.refuse.minor",
+      "ai.refuse.other",
+      "ai.emergency",
+      "ai.emergency.generic",
+      "ai.crisis",
+      "ai.crisis.generic"
+    ]
+  },
+  "sources": {
+    "appCopy": {
+      "path": "docs/ai-app-copy.candidate.json",
+      "keys": "ai.consent.a.* and ai.consent.b.*",
+      "sha256": "234aac7f2e35bedf0b10838e3c7c02e068b542463b0f457e0f471dd8ba01e2a1"
+    },
+    "conProSharedCopy": {
+      "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
+      "origin": "apps/ios lane clone PRO-CON-IOS (branch next-ai/pro-con-ios), scripts/fixtures/shared_copy.json; read at commit 6186a66282c718167a26a09fd691db3de2c51498 and unchanged at d8faf2a0cf3b77c744dd1ccedba255d90a5f620a (same file sha256). The CON-PRO report states the file is byte-identical in PRO-CON-AND.",
+      "keys": [
+        "ai.refuse.dose",
+        "ai.refuse.sideEffect",
+        "ai.refuse.diagnosis",
+        "ai.refuse.drugInfo",
+        "ai.refuse.diet",
+        "ai.refuse.pregnancy",
+        "ai.refuse.minor",
+        "ai.refuse.other",
+        "ai.emergency",
+        "ai.emergency.generic",
+        "ai.crisis",
+        "ai.crisis.generic",
+        "ai.label.header",
+        "ai.label.output",
+        "ai.label.export"
+      ],
+      "sha256": "2b5e4ace83207fa57e6d33069e40e15744c6c0b4851aa2ac24347cb243fedc5a"
+    }
+  },
+  "status": "back-translation-only",
+  "reviewer": "LEGAL-AI lane agent (Claude Opus 5.5); an AI agent, not a human reviewer",
+  "method": "same-model back-translation: the agent that wrote the translation translated the listed strings back to English in the same session and compared them with the English source. Not blind, not independent, no native speaker, no counsel. Short labels and buttons were compared without a recorded back-translation.",
+  "nativeSpeakerReview": false,
+  "counselReview": false,
+  "flag": {
+    "key": "locales.ar",
+    "recommended": true,
+    "condition": "true only if the orchestrator accepts a same-model back-translation as the C23 receipt; a native review is still missing"
+  },
+  "findings": [
+    "Masculine singular address, as in the shipped CON-PRO copy and the existing Arabic site copy. Numbers stay in Latin digits.",
+    "\"Up to 2 months\" is written as the dual \"شهرين\" followed by \"(2)\" so the figure stays visible."
+  ],
+  "backTranslation": {
+    "ai.consent.a.lead": "It uses your records to create weekly summaries and general meal ideas, and explains the way to use the app. The answers are from artificial intelligence and not from a human, and it does not provide medical advice.",
+    "ai.consent.a.sent.body": "Before sending the records we show you the content, and nothing is sent until you press \"Send\". We send the number of doses (on time, late, skipped), the change in the weight you entered yourself, the number of times each kind of symptom was recorded, the number of days on which a meal was recorded with the protein average and its goal, and the number of consecutive weeks of recording. When creating meal ideas we also send the meal type, the preferences, the allergies and the foods you do not like as you chose them. The language and region setting and the questions you write are also sent, and help in using the app adds only the app version, the platform and the current screen.",
+    "ai.consent.a.notSent.body": "We do not send the names of medicines or their doses, nor the notes, nor the names of foods, nor the photos, nor the dates, nor your name or your e-mail or your account data. What you write in the question box is sent as you wrote it.",
+    "ai.consent.a.where.body": "The app encrypts the content an additional time and sends it to the DoseWeek server (Seoul, Republic of Korea), and Amazon Bedrock from Amazon Web Services (Seoul region) processes it. The artificial-intelligence model is Claude from Anthropic. AWS operates it, and Anthropic cannot see the content.",
+    "ai.consent.a.retention.body": "What you send and the answers do not remain on the server and are not used to train artificial intelligence. The answers are saved on your device only. Usage counters (without the content) are kept for a period of up to two months (2), and consent records as long as your account exists. If you report an answer and choose \"Attach the text of the answer\", that answer only is kept for 30 days.",
+    "ai.consent.a.e2ee.body": "While the artificial intelligence creates the answer, the DoseWeek server and Amazon Bedrock can read what you sent. Sync and backup data remain protected by end-to-end encryption as they are now.",
+    "ai.consent.a.optional.body": "Only the artificial-intelligence features will stop; the other Pro and Plus features remain available as they are. You can withdraw your consent at any time from Settings > AI records assistant.",
+    "ai.consent.a.check.health": "[Optional] I agree to the processing of my health information (sensitive)",
+    "ai.consent.a.check.health.detail": "Purpose: creating weekly summaries and meal ideas by artificial intelligence and answering questions on using the app / Data: the records mentioned in \"What is sent\" above and the questions I write / Retention: deletion immediately upon creating the answer (if an answer is attached to a report, that answer only for 30 days) / If you refuse, everything remains available except artificial intelligence",
+    "ai.consent.a.check.age": "My age is 18 years or more",
+    "ai.consent.b.processing": "The app encrypts it, Amazon Bedrock (Seoul) processes it, and it is deleted immediately upon creating the answer.",
+    "ai.refuse.dose": "I cannot determine your dose or the time of taking it. That depends on your prescription and your body's response, so talk with the health-care provider who prescribed it for you. I can instead summarize your dose record. Do you want a summary to show at your next visit?",
+    "ai.refuse.sideEffect": "I cannot assess whether the symptom is normal or resulting from the medicine. If it continues or worries you, talk with the health-care provider. I can summarize the symptoms you recorded.",
+    "ai.refuse.diagnosis": "The doctor alone can determine whether you have a disease or how likely you are to get it. Discuss your questions with the health-care provider. I can help you prepare questions for your visit.",
+    "ai.refuse.drugInfo": "I cannot answer whether you can combine other medicines or supplements, or which medicine is more suitable for you. Tell the health-care provider everything you take and ask him.",
+    "ai.refuse.diet": "I cannot provide diets for particular diseases or targets for amounts of food. Discuss the amount of food and your weight goals with the health-care provider. I can provide general ideas for meals that help you get protein and fluids.",
+    "ai.refuse.pregnancy": "I cannot provide guidance about medicines or food during pregnancy or breastfeeding. Talk with the health-care provider.",
+    "ai.refuse.minor": "The AI records assistant is intended for those aged 18 years and more. If you have health questions, consult the health-care provider with one of your parents or your guardian.",
+    "ai.refuse.other": "I cannot help with that. I am always pleased to help you organize your records or provide general meal ideas or explain how to use the app.",
+    "ai.emergency": "If your symptoms are severe or suddenly worsened, do not wait. Call the number {text} immediately or go to the nearest emergency department. I cannot assess emergency cases.",
+    "ai.emergency.generic": "If your symptoms are severe or suddenly worsened, do not wait. Call the local emergency number immediately or go to the nearest emergency department. I cannot assess emergency cases.",
+    "ai.crisis": "It seems you are going through a very hard time. There is no need for you to face that alone. Call the number {text} now to talk with a person at any time of the night or day. If you are in direct danger, call the number {text2}.",
+    "ai.crisis.generic": "It seems you are going through a very hard time. There is no need for you to face that alone. You can find a helpline in your area via {text}. If you are in direct danger, call the local emergency number.",
+    "ai.label.header": "This is the AI records assistant. The answers are from artificial intelligence and not from a human.",
+    "ai.label.output": "Content created by artificial intelligence and it may contain errors. This is not medical advice. Consult the health-care provider before making decisions about your health.",
+    "ai.label.export": "Content created by artificial intelligence · DoseWeek"
+  }
+}

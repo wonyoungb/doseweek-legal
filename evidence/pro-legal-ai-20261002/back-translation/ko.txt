@@ -1,0 +1,4 @@
+! Source locale. Waits for the owner at gate 6; this lane does not sign off Korean copy.
+! Screen A follows PRO-SPEC 5.1 with three reconciled differences: the health-source sentence is split into .ios and .android keys (Apple 건강 / Health Connect), quotation marks are typographic, and 증상 is kept as the legally exact data category under a reviewed tone-allowlist entry.
+! 상담 is not used anywhere; clinician advice is 의료진과 상의, as in the shipped CON-PRO keys. CON-PRO chose 컨디션 / 몸 상태 for 증상 in ai.refuse.sideEffect and ai.emergency; the consent screens say 증상, so the owner should confirm the two terms read consistently.
+! The 1-business-day promise of 우선 문의 답변 is defined in the Terms as Korean weekdays excluding public holidays (lane clarification).

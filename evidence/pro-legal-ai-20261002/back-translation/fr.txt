@@ -1,0 +1,29 @@
+! Formal vous throughout. The feature is named "assistant de suivi IA" (AI tracking assistant) in the shipped CON-PRO copy; the legal copy keeps that name.
+! ai.crisis and ai.crisis.generic say "sans soutien" (without support) where the English says "alone"; same intent.
+! ai.emergency and ai.crisis put the article "le" before {text}, which assumes a phone number is substituted.
+lead = It uses your records to create weekly summaries and general meal ideas, and explains to you how to use the app. The answers come from an AI, not from a person, and it gives no medical opinion.
+sent = Before any sending of records, we show you the content, and nothing is sent as long as you have not touched "Send". We send the number of doses (on time, late, skipped), the change in the weight that you entered yourself, the number of times you noted each type of symptom, the number of days with a recorded meal together with your protein average and goal, and your streak in weeks. For meal ideas we also send the meal type, the preferences, the allergies and the foods you do not like, as you chose them. Your language and region setting and the questions you type are also sent, and help about the app adds only the app version, the platform and the current screen.
+notSent = We do not send the names or doses of medicines, the notes, the food names, the photos, the dates, nor your name, your e-mail or your account information. What you type in the question field is sent as you wrote it.
+where = The app encrypts the content one more time and sends it to the DoseWeek server (Seoul, Republic of Korea), then Amazon Bedrock from Amazon Web Services (Seoul region) processes it. The AI model is Claude from Anthropic. AWS operates it and Anthropic cannot see the content.
+retention = What you send and the answers do not stay on the server and are not used to train an AI. The answers are saved only on your device. Usage counters (without content) are kept up to 2 months, and proofs of consent as long as your account exists. If you report an answer and choose "Attach the text of the answer", only that answer is kept 30 days.
+e2ee = While the AI creates an answer, the DoseWeek server and Amazon Bedrock can read what you sent. Sync and backup data remain protected by end-to-end encryption, as today.
+optional = Only the AI functions will be unavailable; the other functions of Pro and Plus remain usable. You can withdraw your consent at any time in Settings > AI tracking assistant.
+checkHealth = [Optional] I accept the processing of my health information (sensitive)
+checkDetail = Purpose: create the AI weekly summaries and the meal ideas, answer questions about using the app / Data: the records indicated in "What is sent" above and the questions I type / Retention: deletion as soon as the answer is created (if an answer is attached to a report, that answer only, for 30 days) / In case of refusal, everything works except the AI
+checkAge = I am 18 years old or more
+processing = The app encrypts the content, Amazon Bedrock (Seoul) processes it, then it is deleted as soon as the answer is created.
+r.dose = I cannot decide your dose or the moment of taking it. That depends on your prescription and on your body's reaction: talk about it to the health professional who prescribed it to you. On the other hand I can summarize your dose history. Do you want a summary for your next appointment?
+r.sideEffect = I cannot assess whether a symptom is normal or whether it comes from the medicine. If it persists or worries you, talk about it to a health professional. I can summarize the symptoms you have noted.
+r.diagnosis = Only a doctor can say whether you have a disease or what the probability of developing one is. Talk about your questions to a health professional. I can help you prepare questions for your appointment.
+r.drugInfo = I cannot tell you whether you can combine other medicines or supplements, nor which medicine suits you best. Tell a health professional everything you take and ask their advice.
+r.diet = I cannot propose a diet adapted to a disease or an intake target. Talk about quantities and your weight goals to a health professional. I can give you general meal ideas for protein and hydration.
+r.pregnancy = I cannot advise you on medicines or food during pregnancy or breastfeeding. Talk about it to a health professional.
+r.minor = The AI tracking assistant is reserved for people aged 18 and over. For any health question, see a health professional with a parent or a guardian.
+r.other = I cannot help you on this point. I can always help you organize your records, propose general meal ideas or explain the app.
+emergency = If your symptoms are serious or suddenly get worse, do not wait. Call {text} immediately or go to the nearest emergency department. I cannot assess an emergency.
+emergencyGeneric = If your symptoms are serious or suddenly get worse, do not wait. Call the local emergency number immediately or go to the nearest emergency department. I cannot assess an emergency.
+crisis = You are visibly going through a very difficult moment. You do not have to face this without support. Call {text} to talk to someone, at any hour of the day or night. In case of immediate danger, call {text2}.
+crisisGeneric = You are visibly going through a very difficult moment. You do not have to face this without support. On {text} you will find a listening line near you. In case of immediate danger, call the local emergency number.
+header = Here is the AI tracking assistant. The answers come from an AI, not from a person.
+output = Content created by an AI, which may contain errors. This is not a medical opinion. Talk about your health decisions to a health professional.
+export = AI-generated content · DoseWeek

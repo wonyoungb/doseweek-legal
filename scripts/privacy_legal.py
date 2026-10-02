@@ -18,6 +18,13 @@ SECTION_IDS = ('processing', 'rights', 'processors', 'incident')
 COLUMN_IDS = ('legalBasis', 'data', 'country', 'timingMethod', 'recipientContact',
               'purpose', 'retention', 'refusalEffect')
 PROVIDER_IDS = ('cloudflare', 'aws', 'firebase', 'admob', 'apple-sign-in', 'google-sign-in')
+# Staged Pro AI record assistant (scripts/ai_assistant_candidate.py): the 1.0.6 staging render
+# appends one more supplement section and puts an Amazon Bedrock processor row right after the
+# AWS hosting row. Sources without them stay valid; nothing else may be added.
+STAGED_AI_SECTION_ID = 'ai-assistant'
+STAGED_AI_PROVIDER_ID = 'aws-bedrock'
+STAGED_AI_PARAGRAPHS = 12
+PROCESSOR_IDS = ('cloudflare', 'aws', STAGED_AI_PROVIDER_ID, 'firebase')
 READINESS_KEYS = ('providerInventoryVerified', 'overseasTransferBasisVerified',
                   'processorContractsVerified', 'regionalSafeguardsVerified',
                   'salesRegionExclusionsVerified')
@@ -48,22 +55,28 @@ def validate_supplement(supplement: dict, locale: str) -> None:
         'measuredBloodConcentration': False, 'predictsEffectOrSafety': False,
         'medicalAdvice': False, 'doseChangeBasis': False}, locale
     sections = supplement['sections']
-    assert [section['id'] for section in sections] == list(SECTION_IDS), locale
+    assert [section['id'] for section in sections] in (
+        list(SECTION_IDS), [*SECTION_IDS, STAGED_AI_SECTION_ID]), locale
     for section in sections:
         assert isinstance(section['title'], str) and section['title'].strip(), locale
         assert isinstance(section['paragraphs'], list) and section['paragraphs'], locale
         assert all(isinstance(p, str) and p.strip() for p in section['paragraphs']), locale
+    for section in sections[len(SECTION_IDS):]:
+        assert set(section) == {'id', 'title', 'paragraphs'}, locale
+        assert len(section['paragraphs']) == STAGED_AI_PARAGRAPHS, locale
     table = sections[2]['table']
     assert set(table) == {'caption', 'columns', 'rows'}, locale
     assert isinstance(table['caption'], str) and table['caption'].strip(), locale
     assert [column['id'] for column in table['columns']] == list(COLUMN_IDS), locale
     assert all(set(column) == {'id', 'label'} and isinstance(column['label'], str)
                and column['label'].strip() for column in table['columns']), locale
-    assert [row['id'] for row in table['rows']] == list(PROVIDER_IDS), locale
+    staged = list(PROVIDER_IDS)
+    staged.insert(staged.index('aws') + 1, STAGED_AI_PROVIDER_ID)
+    assert [row['id'] for row in table['rows']] in (list(PROVIDER_IDS), staged), locale
     for row in table['rows']:
         assert set(row) == {'id', 'role', 'cells'}, locale
-        assert row['role'] == ('processor' if row['id'] in
-                              ('cloudflare', 'aws', 'firebase') else 'independent-controller'), locale
+        assert row['role'] == ('processor' if row['id'] in PROCESSOR_IDS
+                               else 'independent-controller'), locale
         assert set(row['cells']) == set(COLUMN_IDS), locale
         assert all(isinstance(value, str) and value.strip() for value in row['cells'].values()), locale
 

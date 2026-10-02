@@ -1,0 +1,320 @@
+#!/usr/bin/env python3
+"""Staged legal copy for the Pro "AI 기록 도우미" (AI record assistant), 1.0.6 candidate.
+
+Sources (lane LEGAL-AI, 2026-10-02; PRO-SPEC section 8, compliance sections 4.5 and 8):
+
+* docs/ai-assistant-content.candidate.json: website text in 17 locales. The privacy section
+  "AI 기록 도우미(Pro)", the processor row, the sentences that qualify the existing
+  "the server cannot read your records" claims, the Terms section and the US consumer-health
+  additions.
+* docs/ai-app-copy.candidate.json: text the apps consume. Screen A, Screen B and Settings copy,
+  the perk line, the helplines and the neutral What's New line.
+
+Nothing here is published. `integrate` changes only the in-memory staged 1.0.6 sources that
+scripts/render_account_sync.py builds; the served pages and their sources stay as they are.
+`require_release_ready` keeps `check_site.py --release` closed until every readiness flag is
+true and the unresolved list is empty.
+
+    python3 scripts/ai_assistant_candidate.py   # validate both sources
+"""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "docs/ai-assistant-content.candidate.json"
+APP_SOURCE = ROOT / "docs/ai-app-copy.candidate.json"
+LOCALES = (
+    "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
+    "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
+)
+CJK = ("ja", "zh-Hans", "zh-Hant")
+SECTION_ID = "ai-assistant"
+PROCESSOR_ROW_ID = "aws-bedrock"
+ROW_CELLS = ("legalBasis", "data", "country", "timingMethod", "recipientContact", "purpose",
+             "retention", "refusalEffect")
+US_HEALTH_FIELDS = ("categories", "purpose", "processor", "noSale", "consent")
+FIELDS = ("name", "perk", "sectionTitle", "clauses", "e2eeException", "healthExclusion",
+          "onDeviceScope", "androidAiFaq", "processorRow", "cloudflareTransit", "terms",
+          "usHealth", "deletion")
+CLAUSES = 12
+TERMS_PARAGRAPHS = 8
+HEALTH_PLACEHOLDER = "{healthExclusion}"
+# Account/sync candidate fields that say the developer or server cannot read the records.
+# With the AI record assistant that is true only for sync and backup, so the staged text adds
+# the exception right after each of them (PRO-SPEC section 8; never claim that end-to-end
+# encryption covers AI content).
+SERVER_CANNOT_READ_FIELDS = ("recordsSync", "mealsSync", "sync")
+READINESS_KEYS = (
+    "awsContractingEntityVerified", "bedrockRetentionNoneReadback",
+    "bedrockInvocationLoggingOffReadback", "hpkeEnvelopeDeployed", "consentRoutesDeployed",
+    "killSwitchVerified", "helplinesRefetched", "counselReviewed",
+    "localeReviewReceiptsAccepted", "evalGatePassed", "storeDeclarationsReadBack",
+)
+FACTS = {
+    "provider": "Amazon Bedrock", "region": "ap-northeast-2", "inRegionOnly": True,
+    "bedrockRetention": "none", "modelFamily": "Anthropic Claude", "monthlyRequests": 150,
+    "weeklySummaryOutsideQuota": True, "trialDays": 7, "trialRequests": 50, "minimumAge": 18,
+    "usageCountRetentionMonths": 2, "reportExcerptRetentionDays": 30, "summaryCardsOnDevice": 2,
+    "priorityFirstReplyBusinessDays": 1, "limitReductionNoticeDays": 30,
+}
+HELPLINE_TOKENS = ("119", "109", "911", "988", "0120-279-338", "findahelpline.com")
+# Owner second round (2026-10-02): the product is "AI 기록 도우미" and the perk "우선 문의 답변";
+# "상담" is never used. compliance 4.1 lists the other names that must not appear.
+RETIRED_KOREAN_TERMS = ("상담", "AI 코치", "AI 영양사", "AI 닥터", "주치의", "무제한", "부작용 관리")
+IOS_ONLY_FORBIDDEN = ("Android", "Google Play", "Health Connect")
+ANDROID_ONLY_FORBIDDEN = ("Apple", "iOS", "App Store")
+PLACEHOLDER = re.compile(r"\{[A-Za-z0-9]+\}")
+APP_PLACEHOLDERS = ("{count}", "{count2}", "{text}")
+SCREEN_A_PREFIX = "ai.consent.a."
+SCREEN_B_PREFIX = "ai.consent.b."
+
+
+def separator(locale: str) -> str:
+    return "" if locale in CJK else " "
+
+
+def number(value: int, text: str) -> bool:
+    """True when the integer appears as its own number in text (not inside a longer number)."""
+    return re.search(rf"(?<![\d.,]){value}(?![\d])", text) is not None
+
+
+def _strings(value: object) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, dict):
+        return [text for item in value.values() for text in _strings(item)]
+    if isinstance(value, list):
+        return [text for item in value for text in _strings(item)]
+    return []
+
+
+def load() -> dict:
+    candidate = json.loads(SOURCE.read_text(encoding="utf-8"))
+    assert candidate["schemaVersion"] == 1
+    assert candidate["status"] in ("pre-release-candidate-not-published", "integrated-and-verified")
+    assert candidate["plannedVersion"] == "1.0.6"
+    assert candidate["facts"] == FACTS, "AI facts changed: update the copy in all 17 locales first"
+    assert set(candidate["readiness"]) == set(READINESS_KEYS)
+    assert all(type(value) is bool for value in candidate["readiness"].values())
+    assert candidate["localeOrder"] == list(LOCALES)
+    assert list(candidate["locales"]) == list(LOCALES)
+    for locale, entry in candidate["locales"].items():
+        assert tuple(entry) == FIELDS, f"{locale}: AI disclosure fields"
+        clauses = entry["clauses"]
+        assert len(clauses) == CLAUSES and len(entry["terms"]) == TERMS_PARAGRAPHS, locale
+        assert tuple(entry["processorRow"]) == ROW_CELLS, locale
+        assert tuple(entry["usHealth"]) == US_HEALTH_FIELDS, locale
+        assert tuple(entry["healthExclusion"]) == ("ios", "android"), locale
+        texts = _strings(entry)
+        assert all(text == text.strip() and len(text) > 2 for text in texts), locale
+        assert "<" not in "".join(texts), f"{locale}: plain text only"
+        placeholders = [found for text in texts for found in PLACEHOLDER.findall(text)]
+        assert placeholders == [HEALTH_PLACEHOLDER] and HEALTH_PLACEHOLDER in clauses[1], (
+            f"{locale}: clause 2 carries the one platform placeholder"
+        )
+        name = entry["name"]
+        assert name in entry["sectionTitle"] or name.casefold() in entry["sectionTitle"].casefold(), locale
+        assert "Pro" in entry["sectionTitle"], locale
+        for token in ("Amazon Bedrock", "ap-northeast-2", "Anthropic", "Claude"):
+            assert token in clauses[4], f"{locale}: clause 5 names the processor ({token})"
+        assert "Cloudflare" in clauses[5] and "DoseWeek" in clauses[5], locale
+        assert number(2, clauses[3]) and number(30, clauses[3]), f"{locale}: clause 4 retention"
+        assert number(18, clauses[10]), f"{locale}: clause 11 age"
+        for token in HELPLINE_TOKENS:
+            assert token in clauses[11], f"{locale}: clause 12 helpline {token}"
+        assert "Amazon Bedrock" in entry["e2eeException"] and "DoseWeek" in entry["e2eeException"], locale
+        row = entry["processorRow"]
+        assert row["legalBasis"].startswith("Amazon Bedrock (AWS) — "), locale
+        assert "ap-northeast-2" in row["country"], locale
+        assert "https://aws.amazon.com/privacy/" in row["recipientContact"], locale
+        assert "Amazon Bedrock" in row["retention"], locale
+        terms = entry["terms"]
+        assert "Plus" in terms[0] and "Pro" in terms[0] and number(7, terms[0]) and number(3, terms[0]), locale
+        assert number(18, terms[1]), locale
+        assert "119" in terms[3] and "911" in terms[3], locale
+        assert all(number(value, terms[4]) for value in (150, 50, 30, 1)) and "UTC" in terms[4], locale
+        assert entry["perk"].casefold() in terms[0].casefold(), f"{locale}: perk named in the Pro paragraph"
+        assert entry["perk"].casefold() in terms[7].casefold() and number(1, terms[7]), locale
+        us_health = entry["usHealth"]
+        assert "HealthKit" in us_health["categories"] and "Health Connect" in us_health["categories"], locale
+        assert "Amazon Bedrock" in us_health["processor"] and "AWS" in us_health["processor"], locale
+        assert number(30, entry["deletion"]), locale
+        assert "1.0.6" in entry["androidAiFaq"] and "Amazon Bedrock" in entry["androidAiFaq"], locale
+        ios_only = [entry["healthExclusion"]["ios"], entry["onDeviceScope"]]
+        android_only = [entry["healthExclusion"]["android"], entry["androidAiFaq"]]
+        assert not [token for token in IOS_ONLY_FORBIDDEN for text in ios_only if token in text], locale
+        assert not [token for token in ANDROID_ONLY_FORBIDDEN for text in android_only if token in text], locale
+        shared = [text for text in texts if text not in ios_only + android_only]
+        # The privacy section reaches both platform policies, so its shared text names neither
+        # platform; the Terms and the US policy are single pages for both and may.
+        both_platforms = [*entry["terms"], *entry["usHealth"].values()]
+        for text in shared:
+            if text in both_platforms:
+                continue
+            assert not [token for token in ("Android", "iOS", "Google Play", "App Store") if token in text], (
+                f"{locale}: shared privacy text names a platform"
+            )
+    korean = "\n".join(_strings(candidate["locales"]["ko"]))
+    assert not [term for term in RETIRED_KOREAN_TERMS if term in korean], "Korean AI copy uses a retired term"
+    assert "AI 기록 도우미" == candidate["locales"]["ko"]["name"]
+    assert "우선 문의 답변" == candidate["locales"]["ko"]["perk"]
+    english = "\n".join(candidate["locales"]["en"]["clauses"][4:6] + [candidate["locales"]["en"]["processorRow"]["timingMethod"]])
+    assert "end-to-end" not in english, "the AI transit is app-layer encryption to the server key, not end-to-end"
+    return candidate
+
+
+def load_app_copy() -> dict:
+    document = json.loads(APP_SOURCE.read_text(encoding="utf-8"))
+    assert document["schemaVersion"] == 1
+    assert document["status"] == "pre-release-candidate-not-published"
+    assert document["plannedVersion"] == "1.0.6"
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}\.\d+", document["consentVersion"])
+    assert document["localeOrder"] == list(LOCALES) and list(document["locales"]) == list(LOCALES)
+    keys = document["keys"]
+    assert len(keys) == len(set(keys)) and all(key.startswith(("ai.", "pro.")) for key in keys)
+    regions = document["helplines"]["regions"]
+    assert {code: (item["emergency"], item["crisis"]) for code, item in regions.items()} == {
+        "KR": ("119", "109"), "JP": ("119", "0120-279-338"), "US": ("911", "988"),
+    }
+    assert document["helplines"]["default"]["link"] == "https://findahelpline.com"
+    assert document["helplines"]["verification"]["refetchFromOfficialSources"] == "NOT_RUN" or (
+        document["helplines"]["verification"]["status"] == "refetched"
+    )
+    reference = document["locales"]["ko"]["copy"]
+    for locale, entry in document["locales"].items():
+        assert tuple(entry) == ("name", "perk", "copy", "whatsNew"), locale
+        copy = entry["copy"]
+        assert list(copy) == keys, f"{locale}: app copy keys"
+        for key, text in copy.items():
+            assert isinstance(text, str) and text == text.strip() and text, (locale, key)
+            found = sorted(PLACEHOLDER.findall(text))
+            assert found == sorted(PLACEHOLDER.findall(reference[key])), (locale, key, "placeholders")
+            assert all(item in APP_PLACEHOLDERS for item in found), (locale, key)
+            if key.endswith(".ios"):
+                assert not [token for token in IOS_ONLY_FORBIDDEN if token in text], (locale, key)
+            elif key.endswith(".android"):
+                assert not [token for token in ANDROID_ONLY_FORBIDDEN if token in text], (locale, key)
+            else:
+                assert not [token for token in ("Android", "iOS", "Google Play", "App Store",
+                                                "Health Connect", "Apple") if token in text], (locale, key)
+        for token in ("Amazon Bedrock", "Anthropic", "Claude", "DoseWeek"):
+            assert token in copy["ai.consent.a.where.body"], (locale, token)
+        assert number(2, copy["ai.consent.a.retention.body"]) and number(30, copy["ai.consent.a.retention.body"]), locale
+        assert number(30, copy["ai.consent.a.check.health.detail"]), locale
+        assert number(18, copy["ai.consent.a.check.age"]), locale
+        assert "Amazon Bedrock" in copy["ai.consent.a.e2ee.body"], locale
+        assert "Amazon Bedrock" in copy["ai.consent.b.processing"], locale
+        assert number(7, copy["ai.consent.b.purpose.weekly"]), locale
+        assert "PIPA" in copy["ai.consent.a.region.jp"] and "Amazon Bedrock" in copy["ai.consent.a.region.jp"], locale
+        assert copy["pro.support.priority"].startswith(entry["perk"]) and number(1, copy["pro.support.priority"]), locale
+        assert entry["name"].casefold() in entry["whatsNew"].casefold(), f"{locale}: What's New names the feature"
+    korean = "\n".join(_strings(document["locales"]["ko"]))
+    assert not [term for term in RETIRED_KOREAN_TERMS if term in korean], "Korean app copy uses a retired term"
+    return document
+
+
+def _qualified(value: object, claims: list[str], exception: str, joiner: str) -> object:
+    if isinstance(value, str):
+        for claim in claims:
+            if claim in value:
+                value = value.replace(claim, claim + joiner + exception)
+        return value
+    if isinstance(value, list):
+        return [_qualified(item, claims, exception, joiner) for item in value]
+    if isinstance(value, dict):
+        return {key: _qualified(item, claims, exception, joiner) for key, item in value.items()}
+    return value
+
+
+def _sections(entries: list[dict]) -> dict:
+    return {section["id"]: section for section in entries}
+
+
+def _supplement(privacy: dict, text: dict, platform: str) -> None:
+    supplement = privacy["legalSupplement"]
+    clauses = [clause.replace(HEALTH_PLACEHOLDER, text["healthExclusion"][platform])
+               for clause in text["clauses"]]
+    supplement["sections"].append({"id": SECTION_ID, "title": text["sectionTitle"], "paragraphs": clauses})
+    rows = _sections(supplement["sections"])["processors"]["table"]["rows"]
+    position = [row["id"] for row in rows].index("aws") + 1
+    rows.insert(position, {"id": PROCESSOR_ROW_ID, "role": "processor",
+                           "cells": dict(text["processorRow"])})
+    return None
+
+
+def integrate(ios: dict, android: dict, terms: dict, us_health: dict, account: dict,
+              candidate: dict | None = None) -> None:
+    """Add the AI record assistant disclosures to the staged 1.0.6 sources, in place."""
+    import render_account_sync
+    candidate = candidate or load()
+    for locale in LOCALES:
+        text = candidate["locales"][locale]
+        joiner = separator(locale)
+        claims = [account["locales"][locale][field] for field in SERVER_CANNOT_READ_FIELDS]
+        for document in (ios, android, terms):
+            document["locales"][locale] = _qualified(
+                document["locales"][locale], claims, text["e2eeException"], joiner)
+        i, a, t = ios["locales"][locale], android["locales"][locale], terms["locales"][locale]
+        ip, ap = _sections(i["privacy"]["sections"]), _sections(a["privacy"]["sections"])
+
+        # Privacy: the section, the processor row and the Cloudflare ciphertext sentence.
+        for privacy, platform in ((i["privacy"], "ios"), (a["privacy"], "android")):
+            _supplement(privacy, text, platform)
+            table = _sections(privacy["legalSupplement"]["sections"])["processors"]["table"]
+            cloudflare = _sections(table["rows"])["cloudflare"]["cells"]
+            cloudflare["data"] += joiner + text["cloudflareTransit"]
+        # Health-platform data is never used for AI (Apple 5.1.3; PRO-SPEC 5.4 provenance filter).
+        ip["health"]["paragraphs"][0] += joiner + text["healthExclusion"]["ios"]
+        ap["no-collection"]["paragraphs"][2] += joiner + text["healthExclusion"]["android"]
+        # "No server model" stays true for on-device AI recording; say where the assistant is.
+        ip["ai"]["paragraphs"][0] += "\n\n" + text["onDeviceScope"]
+        # 1.0.5 said "no generative AI"; the staged build only bumped the version in that
+        # sentence, which is false once the assistant ships in 1.0.6.
+        faq = _sections(a["support"]["faq"])["ai-health"]
+        faq["answers"][0] = render_account_sync.replace_backup_sentence(
+            faq["answers"][0], 0, text["androidAiFaq"], locale)
+
+        # Terms: a new section right after the medical notice; later titles move up by one.
+        sections = t["sections"]
+        index = [section["id"] for section in sections].index("medical") + 1
+        for section in sections[index:]:
+            old, separator_, rest = section["title"].partition(". ")
+            assert separator_ and old.isdigit(), (locale, section["id"], "numbered title")
+            section["title"] = f"{int(old) + 1}. {rest}"
+        sections.insert(index, {"id": SECTION_ID, "title": f"{index + 1}. {text['sectionTitle']}",
+                                "paragraphs": list(text["terms"])})
+
+        # US consumer-health policy: sentences inside the existing paragraphs.
+        us = _sections(us_health["locales"][locale]["sections"])
+        additions = text["usHealth"]
+        us["categories"]["paragraphs"][0] += joiner + additions["categories"]
+        us["purposes-sources"]["paragraphs"][1] += joiner + additions["purpose"]
+        us["disclosures"]["paragraphs"][0] += joiner + additions["processor"]
+        us["disclosures"]["paragraphs"][2] += joiner + additions["noSale"]
+        us["consent"]["paragraphs"][1] += joiner + additions["consent"]
+
+
+def deletion_paragraph(locale: str, candidate: dict | None = None) -> str:
+    return (candidate or load())["locales"][locale]["deletion"]
+
+
+def require_release_ready(candidate: dict | None = None) -> None:
+    candidate = candidate if candidate is not None else load()
+    assert candidate["status"] == "integrated-and-verified", (
+        "AI record assistant disclosure is a pre-release candidate: verify the provider facts, "
+        "the consent flow, the helplines and the locale reviews first"
+    )
+    assert not candidate["unresolvedBeforePublication"], (
+        "AI release blockers remain in docs/ai-assistant-content.candidate.json"
+    )
+    open_flags = [key for key in READINESS_KEYS if candidate["readiness"].get(key) is not True]
+    assert not open_flags, f"AI readiness flags still open: {open_flags}"
+
+
+if __name__ == "__main__":
+    web, app = load(), load_app_copy()
+    print(f"OK: {len(web['locales'])} AI disclosure locales, {len(app['keys'])} app copy keys; "
+          f"status={web['status']}; consentVersion={app['consentVersion']}")

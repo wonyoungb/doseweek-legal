@@ -1,0 +1,4 @@
+! Waits for counsel (APPI Art. 28 block, OWNER-DECISIONS #5) or a native reviewer; this lane does not sign off Japanese copy.
+! ai.consent.a.region.jp is the compliance 5.1 draft with 当社 replaced by DoseWeek and です/ます endings; counsel finalizes the wording.
+! Polite です/ます throughout. iOS says サブスクリプション and the Android variant says 定期購入, following each store's own term.
+! CON-PRO ja refusals were read against the Korean source: meaning matches; 医療従事者 is used for clinician.

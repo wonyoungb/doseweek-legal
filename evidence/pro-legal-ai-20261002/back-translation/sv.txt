@@ -1,0 +1,28 @@
+! Informal du throughout, the Swedish standard. The feature is named in the definite form "AI-loggassistenten".
+! End-to-end encryption is rendered "totalsträckskryptering" in the consent copy.
+lead = It uses your entries to create weekly summaries and general meal ideas and explains how the app works. The answers come from AI, not from a human, and it gives no medical advice.
+sent = Before entries are sent we show the content, and nothing is sent until you press "Send". We send the number of doses (on time, late, skipped), the change in the weight you yourself entered, how many times you have logged each type of symptom, the number of days with a logged meal together with your protein average and protein goal, and your streak in weeks. For meal ideas we also send the meal type, the preferences, the allergies and the foods you do not like that you have chosen. Your language and region setting and the questions you write are also sent, and the app help adds only app version, platform and current screen.
+notSent = We do not send medicine names or doses, notes, food names, photos, dates or your name, your e-mail address or your account details. What you write in the question field is sent exactly as you wrote it.
+where = The app encrypts the content one more time and sends it to the DoseWeek server (Seoul, Republic of Korea), and Amazon Bedrock from Amazon Web Services (the Seoul region) processes it. The AI model is Claude from Anthropic. AWS runs it, and Anthropic cannot see the content.
+retention = What you send and the answers are not saved on the server and are not used for AI training. The answers are saved only on your device. Usage counters (without content) are saved for up to 2 months and consent proofs as long as your account exists. If you report an answer and choose "Send along the answer text", only that answer is saved for 30 days.
+e2ee = While the AI creates an answer, the DoseWeek server and Amazon Bedrock can read what you have sent. Sync and backup data are still protected with end-to-end encryption, just as now.
+optional = It is only the AI functions that cannot be used; the other functions in Pro and Plus work as usual. You can withdraw the consent at any time under Settings > the AI log assistant.
+checkHealth = [Optional] I consent to the processing of my health information (sensitive data)
+checkDetail = Purpose: create AI weekly summaries and meal ideas and answer questions about how the app is used / Data: the entries under "What is sent" above and the questions I write / Storage: deleted as soon as the answer has been created (if an answer is sent along in a report, only that answer is saved for 30 days) / If you decline, everything except AI works as usual
+checkAge = I am 18 years or older
+processing = The app encrypts the content, Amazon Bedrock (Seoul) processes it and it is deleted as soon as the answer has been created.
+r.dose = I cannot decide your dose or when you should take it. That depends on your prescription and how your body reacts, so talk to the health-care staff who prescribed the medicine. I can instead summarize your dose history. Do you want a summary to show at the next visit?
+r.sideEffect = I cannot judge whether a symptom is normal or is due to the medicine. If it persists or worries you, talk to health-care staff. I can summarize the symptoms you have logged.
+r.diagnosis = Only a doctor can judge whether you have a disease or how likely it is that you get one. Take up your questions with health-care staff. I gladly help collect questions before the visit.
+r.drugInfo = I cannot answer whether you can combine other medicines or dietary supplements, or which medicine suits you best. Tell health-care staff about everything you take and ask them.
+r.diet = I cannot give diets for diseases or goals for how much you should eat. Talk to health-care staff about the amount of food and your weight goals. I can give general meal ideas that help you get protein and fluid.
+r.pregnancy = I cannot give advice about medicines or food during pregnancy or breastfeeding. Talk to health-care staff.
+r.minor = The AI log assistant is only for persons who are 18 years or older. If you have questions about health, talk to health-care staff together with a parent or guardian.
+r.other = I cannot help with that. I gladly help order your entries, give general meal ideas or explain how the app works.
+emergency = If your symptoms are severe or suddenly get worse, do not wait. Call {text} directly or go to the nearest emergency department. I cannot judge emergency situations.
+emergencyGeneric = If your symptoms are severe or suddenly get worse, do not wait. Call the local emergency number directly or go to the nearest emergency department. I cannot judge emergency situations.
+crisis = It sounds as if you are having a very heavy time. You do not need to go through this alone. Call {text} now to talk to someone at any time of the day or night. If you are in acute danger, call {text2}.
+crisisGeneric = It sounds as if you are having a very heavy time. You do not need to go through this alone. At {text} you find a support line where you live. If you are in acute danger, call the local emergency number.
+header = This is the AI log assistant. The answers come from AI, not from a human.
+output = Created by AI and may contain errors. It is not medical advice. Talk to health-care staff before you make decisions about your health.
+export = AI-generated content · DoseWeek

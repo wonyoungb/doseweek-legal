@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "status": "pre-release-candidate-not-published",
+  "plannedVersion": "1.0.6",
+  "lane": "LEGAL-AI: PRO-SPEC 2026-10-02 section 8 with sections 4.4, 5.1-5.5; compliance sections 4.5 and 8; critic rows C18, C20, C23; OWNER-ANSWERS second round",
+  "facts": {
+    "provider": "Amazon Bedrock",
+    "region": "ap-northeast-2",
+    "inRegionOnly": true,
+    "bedrockRetention": "none",
+    "modelFamily": "Anthropic Claude",
+    "monthlyRequests": 150,
+    "weeklySummaryOutsideQuota": true,
+    "trialDays": 7,
+    "trialRequests": 50,
+    "minimumAge": 18,
+    "usageCountRetentionMonths": 2,
+    "reportExcerptRetentionDays": 30,
+    "summaryCardsOnDevice": 2,
+    "priorityFirstReplyBusinessDays": 1,
+    "limitReductionNoticeDays": 30
+  },
+  "readiness": {
+    "awsContractingEntityVerified": false,
+    "bedrockRetentionNoneReadback": false,
+    "bedrockInvocationLoggingOffReadback": false,
+    "hpkeEnvelopeDeployed": false,
+    "consentRoutesDeployed": false,
+    "killSwitchVerified": false,
+    "helplinesRefetched": false,
+    "counselReviewed": false,
+    "localeReviewReceiptsAccepted": false,
+    "evalGatePassed": false,
+    "storeDeclarationsReadBack": false
+  },
+  "unresolvedBeforePublication": [
+    "AWS contracting entity and recipient contact for Amazon Bedrock are not verified (readiness.awsContractingEntityVerified); clause 5 and the processor row say so in all 17 locales and must be replaced with the verified entity before publication",
+    "Bedrock data-retention mode none and model-invocation logging off need read-only readback receipts (OPS-AI); the policy states the designed configuration, not a verified state",
+    "The HPKE app-layer envelope, the consent routes (POST and DELETE /v1/ai/consent), the per-install Screen A and the runtime kill switch are not deployed or verified; the staged text describes the designed behaviour of PRO-SPEC sections 5 and 6",
+    "Crisis and emergency numbers (KR 119 and 109; JP 119 and 0120-279-338 with the alternative 0570-783-556 and the MHLW page; US 911 and 988; findahelpline.com elsewhere) were only checked for consistency against PRO-SPEC 4.4, compliance 4.5 and the CON-PRO ai_safety_preflight_v1.json fixture; a re-fetch from the official sources is NOT_RUN in this lane (no network)",
+    "Counsel review (the owner books it; not a build blocker): Screen A including the Japanese APPI Art. 28 block, the Terms AI section (no blanket liability exclusion), the PIPA Art. 23 separate-consent wording and the PIPA Art. 28-8 basis for any AWS overseas access",
+    "Locale review (critic C23): ko waits for the owner at gate 6, ja waits for counsel or a native reviewer, en was reviewed by the lane agent, and the other 14 locales have only a recorded same-model back-translation; no native-speaker review exists for any locale, and the flags locales.ko and locales.ja stay false",
+    "The EVAL-AI release gate (PRO-SPEC 10.4) has not run; the refusal behaviour described in clause 12 depends on it",
+    "Store declarations (App Review notes, App Privacy, age rating, Play Data safety, Health apps declaration, App access) are drafts in docs/AI_STORE_DECLARATIONS_1_0_6.md; console entry and readback are owner-gated (STORE-PRO)",
+    "Priority support replies: the one-business-day first reply is defined as Korean weekdays excluding public holidays; this definition is a lane clarification that the owner can change",
+    "The Pro subscription sentences in the Terms AI section (auto-renewal, 7-day trial eligibility, trial cap of 50) must be reconciled with the final Store configuration and the Korean paid-conversion consent text before publication"
+  ],
+  "localeOrder": [
+    "ko",
+    "en",
+    "ja",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "nl",
+    "pt-PT",
+    "pl",
+    "sv",
+    "hi",
+    "pt-BR",
+    "ar",
+    "zh-Hans",
+    "zh-Hant",
+    "tr"
+  ],
+  "locales": {
+    "ko": {
+      "name": "AI 기록 도우미",
+      "perk": "우선 문의 답변",
+      "sectionTitle": "AI 기록 도우미(Pro)",
+      "clauses": [
+        "처리 목적: 내가 요청한 주간 요약, 일반적인 식사 아이디어, 앱 사용 도움말을 만들어요. AI 기록 도우미는 Pro 구독에 들어 있는 선택 기능이에요. 사람이 아닌 AI가 답하고, 의료 조언은 하지 않아요.",
+        "처리 항목: 보내기 전에 화면에서 확인한 기록과 내가 입력한 질문이에요. 기록은 투여 횟수(제때·늦음·건너뜀), 직접 입력한 체중의 변화, 증상 종류별 기록 횟수, 식사를 기록한 날 수와 단백질 평균·목표, 연속 기록 주 수예요. 식사 아이디어를 만들 때는 고른 식사 종류·선호·알레르기·싫어하는 음식도 보내요. 언어·지역 설정도 함께 보내고, 앱 사용 도움말에는 앱 버전·기기 종류·지금 화면만 더해요. 약 이름·용량, 메모, 음식 이름, 사진, 날짜, 이름·이메일·계정 정보는 보내지 않아요. {healthExclusion} 질문 칸에 직접 쓴 내용은 쓴 그대로 보내요.",
+        "처리 근거: 건강정보는 민감정보라서, 다른 동의와 따로 받은 동의가 있을 때만 처리해요. 한국에서는 개인정보 보호법 제23조에 따른 동의예요. 처음 켤 때 동의를 받고, 기록을 보낼 때마다 보낼 내용을 보여 드리고 한 번 더 확인해요.",
+        "보유 기간: 보낸 내용과 답변은 서버에 남기지 않고, 답을 만든 뒤 바로 지워요. 대화 내용은 저장하지 않아요. 주간 요약 카드는 내 기기에만 최대 2개까지 저장하고, 동기화나 어떤 백업에도 넣지 않아요. 이용 횟수(내용 제외)는 최대 2개월, 동의 기록은 계정이 있는 동안 보관해요. 답변을 신고하면서 ‘답변 내용도 함께 보내기’를 고르면 그 답변만 30일 보관해요.",
+        "처리 위탁: Amazon Web Services(AWS)의 Amazon Bedrock이 대한민국 서울 리전(ap-northeast-2)에서 AI 답변을 만들어요. AI 모델은 Anthropic의 Claude예요. AWS가 운영하고, Anthropic은 내용을 볼 수 없어요. Amazon Bedrock은 보낸 내용과 답변을 저장하지 않게 설정해요. AWS의 계약 법인과 연락처는 아직 확인하지 않았고, 출시 전에 이 방침에 적어요.",
+        "처리 위치와 전송: AI 요청은 대한민국 서울 리전 안에서 처리하고, 다른 나라의 리전으로 보내지 않아요. 앱이 보낼 내용을 DoseWeek 서버의 공개 키로 한 번 더 암호화해요. 그래서 요청을 전달하는 Cloudflare는 암호문만 볼 수 있어요. Cloudflare가 처리하는 IP 주소 같은 접속 정보의 국외 이전은 이 방침의 국외 이전 안내를 따라요.",
+        "AI 학습과 광고: 보낸 기록과 질문을 AI 학습이나 광고에 쓰지 않고, 팔지 않아요.",
+        "종단간 암호화와 다른 점: AI 기록 도우미에 보낸 내용은 답을 만드는 동안 DoseWeek 서버와 Amazon Bedrock이 읽을 수 있어요. 종단간 암호화는 동기화와 백업 데이터에만 적용돼요.",
+        "자동화된 결정: AI 답변은 참고용이에요. 내 권리나 의무에 영향을 주는 결정을 AI가 내리지 않아요.",
+        "동의 철회와 삭제: 설정 > AI 기록 도우미에서 언제든 동의를 철회하고 저장된 AI 요약을 지울 수 있어요. 철회하면 그때부터 AI에 기록을 보내지 않아요. 계정을 삭제하면 이용 횟수와 동의 기록도 함께 지워요. 동의하지 않아도 Pro와 Plus의 다른 기능은 그대로 쓸 수 있어요.",
+        "이용 나이: AI 기록 도우미는 만 18세 이상만 쓸 수 있어요. 나이는 내가 직접 확인해 주는 방식이고, 생년월일은 받지 않아요.",
+        "AI 표시와 안전 안내: 모든 AI 답변에는 AI가 만들었다는 표시와 의료 조언이 아니라는 안내가 붙고, 답변마다 신고 버튼이 있어요. 용량, 몸 상태에 대한 판단, 진단, 약 정보 같은 의료 질문에는 AI가 답을 만들지 않고 미리 정해 둔 안내문을 보여 줘요. 응급이나 위기 상황으로 보이면 스토어 지역에 맞는 번호를 알려 드려요. 한국은 119와 109, 일본은 119와 よりそいホットライン(0120-279-338), 미국은 911과 988이에요. 그 밖의 지역에서는 지역 응급 번호와 findahelpline.com을 알려 드려요."
+      ],
+      "e2eeException": "AI 기록 도우미(Pro)에 동의하고 직접 보낸 내용은 종단간 암호화의 예외예요. 이 내용은 답을 만드는 동안 DoseWeek 서버와 Amazon Bedrock이 읽을 수 있어요.",
+      "healthExclusion": {
+        "ios": "Apple 건강에서 읽어 온 정보는 AI 기능에도 사용하지 않고, AI 기록 도우미로 보내지 않아요.",
+        "android": "Health Connect에서 읽어 온 정보는 AI 기능에도 사용하지 않고, AI 기록 도우미로 보내지 않아요."
+      },
+      "onDeviceScope": "이 항목은 기기 안에서만 처리하는 AI 기록과 진료 준비에 관한 내용이에요. 서버에서 처리하는 AI 기록 도우미(Pro)는 이 방침의 ‘AI 기록 도우미(Pro)’ 항목에서 따로 설명해요.",
+      "androidAiFaq": "Android용 DoseWeek 1.0.6에는 선택 기능인 AI 기록 도우미(Pro)가 있어요. 따로 동의한 뒤에만 Amazon Bedrock(대한민국 서울 리전)의 생성형 AI가 주간 요약, 일반적인 식사 아이디어, 앱 사용 도움말을 만들어요. 그 밖의 기능에는 생성형 AI를 쓰지 않아요.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — AI 기록 도우미를 켤 때 따로 받는 건강정보(민감정보) 처리 동의가 근거예요. 처리위탁 계약과 개인정보 보호법 Art. 28-8의 해외 접근 근거는 미확인이에요.",
+        "data": "기록을 보낼 때 화면에서 확인한 집계 값과 직접 쓴 질문이에요. 약 이름·용량, 메모, 음식 이름, 사진, 날짜, 계정 정보는 보내지 않아요.",
+        "country": "대한민국 서울 리전(ap-northeast-2) 안에서만 처리해요. 다른 리전으로 보내는 추론 프로필은 쓰지 않아요. 해외 지원·접근 여부는 미확인이에요.",
+        "timingMethod": "AI 기능을 요청하고 ‘보내기’를 누를 때만 보내요. 앱에서 한 번 더 암호화해 DoseWeek 서버로 보내고, 서버가 메모리에서만 풀어 Amazon Bedrock에 전달해요.",
+        "recipientContact": "Amazon Web Services(AWS)의 계약 법인과 수신자 연락처는 미확인이에요. 업체 참고: https://aws.amazon.com/privacy/",
+        "purpose": "요청한 AI 답변을 만드는 수탁자예요. AI 모델은 Anthropic의 Claude이고 AWS가 운영해요. AI 학습이나 광고에는 쓰지 않아요.",
+        "retention": "보관하지 않아요. Amazon Bedrock에 내용을 저장하지 않는 설정을 쓰고, 실제 설정을 확인한 기록은 출시 전에 남겨요.",
+        "refusalEffect": "동의하지 않거나 설정에서 철회하면 AI 기능만 쓸 수 없어요. 기록 기능과 Pro·Plus의 다른 기능은 그대로 쓸 수 있어요."
+      },
+      "cloudflareTransit": "AI 기록 도우미 요청은 앱에서 한 번 더 암호화한 암호문으로만 지나가요.",
+      "terms": [
+        "Pro는 Plus의 모든 기능에 AI 기록 도우미와 우선 문의 답변을 더한 선택 구독이에요. 월간 또는 연간으로 자동 갱신되고, 3항의 결제·갱신·취소·환불 규칙이 Plus와 똑같이 적용돼요. 스토어가 체험 자격을 확인한 경우에만 7일 무료 체험이 제공돼요. Plus 무료 체험을 이미 쓴 경우에는 제공되지 않을 수 있어요.",
+        "AI 기록 도우미는 로그인하고 따로 동의한 뒤에 쓸 수 있고, 만 18세 이상만 쓸 수 있어요. 내가 보내기로 확인한 기록으로 주간 요약, 일반적인 식사 아이디어, 앱 사용 도움말을 만들어요. 동의하지 않아도 Pro의 다른 기능은 그대로 쓸 수 있어요.",
+        "AI 기록 도우미는 의료기기가 아니고, 진단·치료·투약 지시 같은 의료 조언을 하지 않아요. AI가 만든 내용은 틀리거나 빠진 부분이 있을 수 있어요. 건강에 관한 결정은 의료진과 상의해 주세요.",
+        "응급 상황에는 AI 기록 도우미의 답을 기다리지 말고 지역 응급 번호로 바로 연락해 주세요. 한국과 일본은 119, 미국은 911이에요.",
+        "이용 횟수는 한 달에 150회예요. 무료 체험 중에는 50회까지 쓸 수 있어요. 주간 요약은 한 주에 한 번 이 횟수와 별도로 만들 수 있고, 다시 만들면 1회로 계산해요. 횟수는 협정 세계시(UTC) 기준으로 매달 1일에 다시 채워져요. 횟수를 줄여야 할 때는 적용 30일 전에 알리고, 이미 결제한 기간에는 불리하게 적용하지 않아요.",
+        "다른 사람의 건강정보를 입력하거나, 의료 조언을 얻으려고 안내를 우회하는 방식으로 쓰지 마세요.",
+        "AI 기능을 잠시 쓸 수 없을 때가 있어요. 이 경우에도 관련 법률에 따른 청약철회·환불 권리는 그대로 보장돼요.",
+        "우선 문의 답변은 Pro 구독자가 지원 이메일로 보낸 앱 사용 문의에 1영업일 안에 첫 답변을 드리는 거예요. 영업일은 대한민국의 평일(공휴일 제외)을 기준으로 해요. 의료 질문에는 답하지 않으니, 문의에 건강 기록을 넣지 마세요."
+      ],
+      "usHealth": {
+        "categories": "AI 기록 도우미(Pro)를 켜고 보내기로 확인하면, 직접 입력한 기록에서 만든 투여 횟수, 체중 변화, 증상 종류별 횟수, 식사·단백질 집계와 식사 선호·알레르기·싫어하는 음식, 직접 쓴 질문도 건강정보로 다뤄요. 이 내용은 종단간 암호화 대상이 아니에요. 답을 만드는 동안 서버에서 읽을 수 있고, 답을 만든 뒤 바로 지워요. HealthKit이나 Health Connect에서 읽어 온 정보는 AI 기록 도우미로 보내지 않아요.",
+        "purpose": "요청하면 AI 요약과 일반적인 영양 아이디어를 만드는 데에도 써요. AI 답변은 진단이나 치료 권고가 아니에요.",
+        "processor": "AI 기록 도우미 요청은 처리수탁자인 AWS의 Amazon Bedrock(대한민국 서울 리전)이 답을 만드는 데에만 처리해요. 내용을 저장하지 않고 AI 학습에도 쓰지 않아요.",
+        "noSale": "AI 기록 도우미에 보낸 건강정보도 팔지 않고, 광고를 위해 제공하지 않아요.",
+        "consent": "AI 기록 도우미는 처음 켤 때 별도의 동의 화면에서 동의를 받고, 기록을 보낼 때마다 한 번 더 확인해요. 설정 > AI 기록 도우미에서 언제든 철회할 수 있어요."
+      },
+      "deletion": "계정을 삭제하면 AI 기록 도우미의 이용 횟수와 동의 기록도 함께 지워요. AI에 보낸 내용과 답변은 서버에 저장하지 않아서, 따로 지울 서버 사본이 없어요. 답변을 신고하면서 함께 보낸 답변 내용은 계정과 연결하지 않고 보관하고, 30일 뒤에 지워요."
+    },
+    "en": {
+      "name": "AI record assistant",
+      "perk": "Priority support replies",
+      "sectionTitle": "AI record assistant (Pro)",
+      "clauses": [
+        "Purpose: to create the weekly summaries, general meal ideas and app-help answers you ask for. The AI record assistant is an optional feature included in the Pro subscription. Answers come from AI, not a person, and it does not give medical advice.",
+        "Data processed: the records you confirm on screen before sending, and the questions you type. The records are dose counts (on time, late, skipped), the change in the weight you entered yourself, how many times you logged each kind of symptom, the number of days with a meal log together with your protein average and goal, and your streak in weeks. For meal ideas we also send the meal kind, preferences, allergies and disliked foods you choose. Your language and region setting is sent too, and app help adds only the app version, the platform and the current screen. We do not send medication names or doses, notes, food names, photos, dates, or your name, email or account details. {healthExclusion} Whatever you type in the question box is sent as you wrote it.",
+        "Legal basis: health information is sensitive, so we process it only with a consent that is separate from every other consent. In Korea this is the consent under Article 23 of the Personal Information Protection Act. We ask when you first turn the feature on, and each time records are sent we show what will be sent and ask you to confirm again.",
+        "Retention: what you send and the answers are not kept on the server; they are deleted as soon as the answer is made. Chat messages are not stored. Weekly summary cards are saved only on your device, at most 2, and are left out of sync and every backup. Usage counts (without content) are kept for up to 2 months, and consent records for as long as the account exists. If you report an answer and choose “Include the answer text”, only that answer is kept for 30 days.",
+        "Processor: Amazon Bedrock, a service of Amazon Web Services (AWS), creates the AI answers in the Seoul Region (ap-northeast-2) in the Republic of Korea. The AI model is Claude by Anthropic. AWS operates it, and Anthropic cannot see the content. Amazon Bedrock is set not to store what you send or the answers. The AWS contracting entity and its contact details are not yet verified and will be stated in this policy before release.",
+        "Where it is processed and how it travels: AI requests are processed inside the Seoul Region in the Republic of Korea and are not sent to a Region in another country. The app encrypts the content once more to the DoseWeek server’s public key, so Cloudflare, which relays the request, sees only ciphertext. The overseas transfer of connection information that Cloudflare handles, such as your IP address, follows the overseas-transfer notice in this policy.",
+        "AI training and advertising: we do not use the records and questions you send for AI training or advertising, and we do not sell them.",
+        "How this differs from end-to-end encryption: while an answer is being made, the DoseWeek server and Amazon Bedrock can read what you sent to the AI record assistant. End-to-end encryption applies only to sync and backup data.",
+        "Automated decisions: AI answers are for reference. The AI makes no decision that affects your rights or obligations.",
+        "Withdrawing consent and deleting: in Settings > AI record assistant you can withdraw consent and delete saved AI summaries at any time. After you withdraw, no records are sent to the AI. Deleting your account also deletes your usage counts and consent records. If you do not consent, the other Pro and Plus features keep working.",
+        "Age: the AI record assistant is only for people aged 18 or older. You confirm your age yourself; we do not ask for a date of birth.",
+        "AI labels and safety messages: every AI answer carries a label saying it was made by AI and is not medical advice, and each answer has a Report button. For medical questions such as doses, whether a symptom is normal, diagnoses or drug information, the AI does not write an answer; the app shows a fixed message instead. If a message looks like an emergency or a crisis, the app shows the numbers for your store region: 119 and 109 in Korea, 119 and the Yorisoi Hotline (0120-279-338) in Japan, 911 and 988 in the United States. Elsewhere it points to your local emergency number and findahelpline.com."
+      ],
+      "e2eeException": "Content you consent to and send to the AI record assistant (Pro) is the exception to end-to-end encryption: the DoseWeek server and Amazon Bedrock can read it while an answer is being made.",
+      "healthExclusion": {
+        "ios": "Information read from Apple Health is not used for AI features either and is not sent to the AI record assistant.",
+        "android": "Information read from Health Connect is not used for AI features either and is not sent to the AI record assistant."
+      },
+      "onDeviceScope": "This section covers only AI recording and visit preparation, which are processed on the device. The AI record assistant (Pro), which is processed on a server, is described separately under “AI record assistant (Pro)” in this policy.",
+      "androidAiFaq": "DoseWeek 1.0.6 for Android includes the optional AI record assistant (Pro). Only after separate consent, generative AI on Amazon Bedrock (Seoul Region, Republic of Korea) creates weekly summaries, general meal ideas and app-help answers. No other feature uses generative AI.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — The basis is the separate consent to process health (sensitive) information that you give when turning on the AI record assistant. The processing contract and the PIPA Art. 28-8 basis for any overseas access are unverified.",
+        "data": "The aggregated values you confirm on screen when sending records, and the questions you type. Medication names and doses, notes, food names, photos, dates and account details are not sent.",
+        "country": "Processed only inside the Seoul Region (ap-northeast-2), Republic of Korea. No inference profile that routes to another Region is used. Overseas support or access is unverified.",
+        "timingMethod": "Sent only when you request an AI feature and tap Send. The app encrypts the content once more and sends it to the DoseWeek server, which decrypts it only in memory and passes it to Amazon Bedrock.",
+        "recipientContact": "The contracting entity and recipient contact for Amazon Web Services (AWS) are unverified. Supplier reference: https://aws.amazon.com/privacy/",
+        "purpose": "Processor that creates the AI answers you request. The AI model is Claude by Anthropic, operated by AWS. Not used for AI training or advertising.",
+        "retention": "Not retained. Amazon Bedrock is set not to store content; the record of checking the actual setting is kept before release.",
+        "refusalEffect": "If you do not consent, or withdraw in Settings, only the AI features become unavailable. Recording and the other Pro and Plus features keep working."
+      },
+      "cloudflareTransit": "AI record assistant requests pass only as ciphertext that the app has encrypted once more.",
+      "terms": [
+        "Pro is an optional subscription that adds the AI record assistant and Priority support replies to everything in Plus. It renews automatically each month or year, and the payment, renewal, cancellation and refund rules in section 3 apply to it exactly as they do to Plus. A 7-day free trial is offered only when the store confirms that you are eligible. It may not be offered if you have already used a Plus free trial.",
+        "You can use the AI record assistant after you sign in and give a separate consent, and only if you are 18 or older. It creates weekly summaries, general meal ideas and app-help answers from the records you confirm for sending. If you do not consent, the other Pro features keep working.",
+        "The AI record assistant is not a medical device and gives no medical advice such as diagnosis, treatment or dosing instructions. Content made by AI can be wrong or incomplete. Talk to your clinician before making decisions about your health.",
+        "In an emergency, do not wait for an answer from the AI record assistant. Contact your local emergency number at once: 119 in Korea and Japan, 911 in the United States.",
+        "You can make 150 requests a month. During a free trial you can make up to 50. One weekly summary per week does not count toward this limit, and creating it again counts as 1 request. The count refills on the 1st of each month in Coordinated Universal Time (UTC). If we ever need to lower the limit, we will tell you 30 days before it applies, and it will not apply to your disadvantage during a period you have already paid for.",
+        "Do not enter another person’s health information, and do not try to get around the safety messages to obtain medical advice.",
+        "The AI features may be unavailable at times. Your statutory rights to withdraw from the contract and to a refund remain fully protected in that case too.",
+        "Priority support replies means that when a Pro subscriber emails support with a question about using the app, we send a first reply within 1 business day. Business days are weekdays in the Republic of Korea, excluding public holidays. We do not answer medical questions, so please do not include health records in your message."
+      ],
+      "usHealth": {
+        "categories": "If you turn on the AI record assistant (Pro) and confirm sending, we also treat as health information the dose counts, weight change, counts of each kind of symptom and meal and protein totals built from what you entered, your meal preferences, allergies and disliked foods, and the questions you type. This content is not end-to-end encrypted. The server can read it while an answer is being made, and it is deleted as soon as the answer is made. Information read from HealthKit or Health Connect is not sent to the AI record assistant.",
+        "purpose": "On request, we also use it to create AI summaries and general nutrition ideas. AI answers are not a diagnosis or a treatment recommendation.",
+        "processor": "AI record assistant requests are processed by Amazon Bedrock from AWS, a processor, in the Seoul Region, Republic of Korea, only to create the answer. The content is not stored and is not used for AI training.",
+        "noSale": "We do not sell health information sent to the AI record assistant either, and we do not share it for advertising.",
+        "consent": "For the AI record assistant we ask for consent on a separate screen when you first turn it on, and we ask you to confirm again each time records are sent. You can withdraw at any time in Settings > AI record assistant."
+      },
+      "deletion": "Deleting your account also deletes your AI record assistant usage counts and consent records. What you send to the AI and its answers are not stored on the server, so there is no server copy to delete. Answer text that you chose to include with a report is kept without any link to your account and is deleted after 30 days."
+    },
+    "ja": {
+      "name": "AI記録アシスタント",
+      "perk": "お問い合わせへの優先返信",
+      "sectionTitle": "AI記録アシスタント（Pro）",
+      "clauses": [
+        "利用目的：ご依頼に応じて、週間サマリー、一般的な食事のアイデア、アプリの使い方の回答を作成します。AI記録アシスタントはProサブスクリプションに含まれる任意の機能です。人ではなくAIが回答し、医学的な助言は行いません。",
+        "取り扱う項目：送信前に画面で確認した記録と、入力した質問です。記録は、投与回数（予定どおり・遅れ・スキップ）、ご自身で入力した体重の変化、症状の種類ごとの記録回数、食事を記録した日数とたんぱく質の平均・目標、連続記録の週数です。食事のアイデアを作成するときは、選択した食事の種類、好み、アレルギー、苦手な食品も送信します。言語・地域の設定もあわせて送信し、アプリの使い方の質問では、アプリのバージョン、端末の種類、現在の画面だけを加えます。薬の名前・用量、メモ、食品名、写真、日付、氏名・メールアドレス・アカウント情報は送信しません。{healthExclusion}質問欄に入力した内容は、入力したとおりに送信します。",
+        "取り扱いの根拠：健康情報は要配慮の情報であるため、ほかの同意とは別に取得した同意がある場合にのみ取り扱います。韓国では個人情報保護法第23条に基づく同意です。初めてオンにするときに同意をいただき、記録を送信するたびに送信内容を表示して、もう一度確認します。",
+        "保存期間：送信した内容と回答はサーバーに残さず、回答の作成後すぐに削除します。チャットの内容は保存しません。週間サマリーのカードは端末にのみ最大2件まで保存し、同期やいかなるバックアップにも含めません。利用回数（内容を除く）は最大2か月、同意の記録はアカウントがある間保存します。回答を報告する際に「回答の内容も一緒に送信」を選んだ場合は、その回答だけを30日間保存します。",
+        "委託先：Amazon Web Services（AWS）のAmazon Bedrockが、大韓民国のソウルリージョン（ap-northeast-2）でAIの回答を作成します。AIモデルはAnthropicのClaudeです。運用はAWSが行い、Anthropicは内容を見ることができません。Amazon Bedrockは、送信した内容と回答を保存しない設定にします。AWSの契約法人と連絡先はまだ確認できておらず、リリース前にこのポリシーに記載します。",
+        "処理の場所と送信方法：AIへのリクエストは大韓民国のソウルリージョン内で処理し、ほかの国のリージョンには送信しません。アプリは送信する内容をDoseWeekサーバーの公開鍵でもう一度暗号化します。そのため、リクエストを中継するCloudflareには暗号文しか見えません。Cloudflareが取り扱うIPアドレスなどの接続情報の国外移転は、このポリシーの国外移転の説明に従います。",
+        "AIの学習と広告：送信した記録と質問をAIの学習や広告に利用せず、販売もしません。",
+        "エンドツーエンド暗号化との違い：AI記録アシスタントに送信した内容は、回答を作成している間、DoseWeekサーバーとAmazon Bedrockが読み取れる状態になります。エンドツーエンド暗号化が適用されるのは、同期とバックアップのデータだけです。",
+        "自動化された決定：AIの回答は参考情報です。お客様の権利や義務に影響する決定をAIが行うことはありません。",
+        "同意の撤回と削除：「設定」>「AI記録アシスタント」で、いつでも同意を撤回し、保存されたAIサマリーを削除できます。撤回すると、それ以降はAIに記録を送信しません。アカウントを削除すると、利用回数と同意の記録も一緒に削除します。同意しなくても、ProとPlusのほかの機能はそのまま使えます。",
+        "利用できる年齢：AI記録アシスタントは18歳以上の方のみご利用いただけます。年齢はご自身で確認していただく方式で、生年月日はお預かりしません。",
+        "AIの表示と安全のための案内：すべてのAIの回答には、AIが作成したこと、医学的な助言ではないことを示す表示が付き、回答ごとに報告ボタンがあります。用量、症状が問題ないかどうかの判断、診断、薬の情報といった医療に関する質問には、AIが回答を作成せず、あらかじめ決められた案内文を表示します。緊急または危機的な状況と思われる場合は、ストアの地域に合った番号をご案内します。韓国は119と109、日本は119とよりそいホットライン（0120-279-338）、米国は911と988です。そのほかの地域では、地域の緊急通報番号とfindahelpline.comをご案内します。"
+      ],
+      "e2eeException": "AI記録アシスタント（Pro）に同意して送信した内容は、エンドツーエンド暗号化の例外です。この内容は、回答を作成している間、DoseWeekサーバーとAmazon Bedrockが読み取れます。",
+      "healthExclusion": {
+        "ios": "Appleヘルスケアから読み取った情報はAI機能にも使用せず、AI記録アシスタントにも送信しません。",
+        "android": "Health Connectから読み取った情報はAI機能にも使用せず、AI記録アシスタントにも送信しません。"
+      },
+      "onDeviceScope": "この項目は、端末内だけで処理するAI記録と受診準備についての説明です。サーバーで処理するAI記録アシスタント（Pro）については、このポリシーの「AI記録アシスタント（Pro）」の項目で別に説明します。",
+      "androidAiFaq": "Android版DoseWeek 1.0.6には、任意の機能としてAI記録アシスタント（Pro）があります。別途同意した場合にのみ、Amazon Bedrock（大韓民国ソウルリージョン）の生成AIが週間サマリー、一般的な食事のアイデア、アプリの使い方の回答を作成します。そのほかの機能では生成AIを使用しません。",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — AI記録アシスタントをオンにするときに別途いただく、健康情報（要配慮の情報）の取り扱いへの同意が根拠です。委託契約と、個人情報保護法 Art. 28-8 に基づく国外からのアクセスの根拠は未確認です。",
+        "data": "記録を送信するときに画面で確認した集計値と、入力した質問です。薬の名前・用量、メモ、食品名、写真、日付、アカウント情報は送信しません。",
+        "country": "大韓民国のソウルリージョン（ap-northeast-2）内だけで処理します。ほかのリージョンに送る推論プロファイルは使用しません。国外からのサポート・アクセスの有無は未確認です。",
+        "timingMethod": "AI機能を依頼して「送信」を押したときだけ送信します。アプリでもう一度暗号化してDoseWeekサーバーに送り、サーバーがメモリ上でのみ復号してAmazon Bedrockに渡します。",
+        "recipientContact": "Amazon Web Services（AWS）の契約法人と受領者の連絡先は未確認です。事業者の参考情報：https://aws.amazon.com/privacy/",
+        "purpose": "ご依頼のAI回答を作成する委託先です。AIモデルはAnthropicのClaudeで、AWSが運用します。AIの学習や広告には利用しません。",
+        "retention": "保存しません。Amazon Bedrockでは内容を保存しない設定を使用し、実際の設定を確認した記録はリリース前に残します。",
+        "refusalEffect": "同意しない場合や設定で撤回した場合は、AI機能だけが使えなくなります。記録機能とPro・Plusのほかの機能はそのまま使えます。"
+      },
+      "cloudflareTransit": "AI記録アシスタントへのリクエストは、アプリでもう一度暗号化した暗号文としてのみ通過します。",
+      "terms": [
+        "Proは、Plusのすべての機能にAI記録アシスタントとお問い合わせへの優先返信を加えた任意のサブスクリプションです。月額または年額で自動更新され、第3項の支払い・更新・解約・返金のルールがPlusと同じように適用されます。7日間の無料トライアルは、ストアが利用資格を確認した場合にのみ提供されます。Plusの無料トライアルをすでに利用した場合は、提供されないことがあります。",
+        "AI記録アシスタントは、サインインして別途同意した後に利用でき、18歳以上の方のみご利用いただけます。送信することを確認した記録から、週間サマリー、一般的な食事のアイデア、アプリの使い方の回答を作成します。同意しなくても、Proのほかの機能はそのまま使えます。",
+        "AI記録アシスタントは医療機器ではなく、診断・治療・投薬の指示といった医学的な助言は行いません。AIが作成した内容には、誤りや不足が含まれることがあります。健康に関する判断は医療従事者にご相談ください。",
+        "緊急時は、AI記録アシスタントの回答を待たずに、すぐに地域の緊急通報番号に連絡してください。韓国と日本は119、米国は911です。",
+        "利用回数は1か月に150回です。無料トライアル中は50回まで利用できます。週間サマリーは週に1回、この回数とは別に作成でき、作り直すと1回として数えます。回数は協定世界時（UTC）の毎月1日にリセットされます。回数を減らす必要がある場合は適用の30日前までにお知らせし、すでにお支払い済みの期間には不利に適用しません。",
+        "ほかの人の健康情報を入力したり、医学的な助言を得るために案内を回避するような使い方をしたりしないでください。",
+        "AI機能を一時的に利用できないことがあります。その場合でも、関連する法律に基づく契約の撤回・返金の権利はそのまま保障されます。",
+        "お問い合わせへの優先返信とは、Proの購読者がサポート宛てのメールで送ったアプリの使い方に関するお問い合わせに、1営業日以内に最初の返信をお送りするものです。営業日は大韓民国の平日（祝日を除く）を基準とします。医療に関する質問にはお答えしませんので、お問い合わせに健康記録を含めないでください。"
+      ],
+      "usHealth": {
+        "categories": "AI記録アシスタント（Pro）をオンにして送信を確認した場合、入力した記録から作成した投与回数、体重の変化、症状の種類ごとの回数、食事・たんぱく質の集計、食事の好み・アレルギー・苦手な食品、入力した質問も健康情報として取り扱います。この内容はエンドツーエンド暗号化の対象ではありません。回答を作成している間はサーバーで読み取ることができ、回答の作成後すぐに削除します。HealthKitまたはHealth Connectから読み取った情報は、AI記録アシスタントに送信しません。",
+        "purpose": "ご依頼があれば、AIサマリーと一般的な栄養のアイデアの作成にも利用します。AIの回答は、診断や治療の推奨ではありません。",
+        "processor": "AI記録アシスタントへのリクエストは、処理委託先であるAWSのAmazon Bedrock（大韓民国ソウルリージョン）が、回答を作成する目的でのみ処理します。内容は保存せず、AIの学習にも利用しません。",
+        "noSale": "AI記録アシスタントに送信した健康情報も販売せず、広告のために提供しません。",
+        "consent": "AI記録アシスタントでは、初めてオンにするときに別の同意画面で同意をいただき、記録を送信するたびにもう一度確認します。「設定」>「AI記録アシスタント」でいつでも撤回できます。"
+      },
+      "deletion": "アカウントを削除すると、AI記録アシスタントの利用回数と同意の記録も一緒に削除します。AIに送信した内容と回答はサーバーに保存しないため、削除するサーバー上のコピーはありません。回答を報告する際に一緒に送信した回答の内容は、アカウントと結び付けずに保存し、30日後に削除します。"
+    },
+    "de": {
+      "name": "KI-Aufzeichnungsassistent",
+      "perk": "Bevorzugte Antwort auf Anfragen",
+      "sectionTitle": "KI-Aufzeichnungsassistent (Pro)",
+      "clauses": [
+        "Zweck: Wir erstellen die Wochenübersichten, allgemeinen Mahlzeitenideen und Antworten zur App-Nutzung, die Sie anfordern. Der KI-Aufzeichnungsassistent ist eine optionale Funktion des Pro-Abos. Die Antworten stammen von einer KI, nicht von einem Menschen, und er gibt keine medizinische Beratung.",
+        "Verarbeitete Daten: die Einträge, die Sie vor dem Senden auf dem Bildschirm bestätigen, und die Fragen, die Sie eingeben. Die Einträge sind die Anzahl der Dosen (pünktlich, verspätet, ausgelassen), die Veränderung des von Ihnen selbst eingegebenen Gewichts, wie oft Sie jede Art von Symptom erfasst haben, die Anzahl der Tage mit Mahlzeiteneintrag samt Eiweißdurchschnitt und -ziel sowie Ihre Serie in Wochen. Für Mahlzeitenideen senden wir außerdem die von Ihnen gewählte Mahlzeitenart, Vorlieben, Allergien und Lebensmittel, die Sie nicht mögen. Ihre Sprach- und Regionseinstellung wird ebenfalls gesendet, und bei Fragen zur App kommen nur die App-Version, die Plattform und der aktuelle Bildschirm hinzu. Nicht gesendet werden Medikamentennamen und Dosierungen, Notizen, Lebensmittelnamen, Fotos, Datumsangaben sowie Ihr Name, Ihre E-Mail-Adresse und Kontodaten. {healthExclusion} Was Sie in das Fragefeld eingeben, wird so gesendet, wie Sie es geschrieben haben.",
+        "Rechtsgrundlage: Gesundheitsdaten sind sensible Daten. Wir verarbeiten sie deshalb nur mit einer Einwilligung, die getrennt von allen anderen Einwilligungen eingeholt wird. In Korea ist dies die Einwilligung nach Artikel 23 des Personal Information Protection Act. Wir fragen, wenn Sie die Funktion zum ersten Mal einschalten, und jedes Mal, wenn Einträge gesendet werden, zeigen wir Ihnen den Inhalt und bitten Sie erneut um Bestätigung.",
+        "Speicherdauer: Was Sie senden, und die Antworten bleiben nicht auf dem Server, sondern werden gelöscht, sobald die Antwort erstellt ist. Chatnachrichten werden nicht gespeichert. Wochenübersichten werden nur auf Ihrem Gerät gespeichert, höchstens 2, und weder synchronisiert noch in irgendein Backup aufgenommen. Nutzungszähler (ohne Inhalte) werden bis zu 2 Monate aufbewahrt, Einwilligungsnachweise so lange, wie das Konto besteht. Wenn Sie eine Antwort melden und „Antworttext mitsenden“ wählen, wird nur diese Antwort 30 Tage aufbewahrt.",
+        "Auftragsverarbeiter: Amazon Bedrock von Amazon Web Services (AWS) erstellt die KI-Antworten in der Region Seoul (ap-northeast-2) in der Republik Korea. Das KI-Modell ist Claude von Anthropic. AWS betreibt es, und Anthropic kann die Inhalte nicht sehen. Amazon Bedrock ist so eingestellt, dass weder das Gesendete noch die Antworten gespeichert werden. Die AWS-Vertragsgesellschaft und ihre Kontaktdaten sind noch nicht geprüft und werden vor der Veröffentlichung in dieser Erklärung genannt.",
+        "Verarbeitungsort und Übertragung: KI-Anfragen werden innerhalb der Region Seoul in der Republik Korea verarbeitet und nicht an eine Region in einem anderen Land gesendet. Die App verschlüsselt den Inhalt zusätzlich mit dem öffentlichen Schlüssel des DoseWeek-Servers. Cloudflare, das die Anfrage weiterleitet, sieht deshalb nur verschlüsselten Text. Für die Auslandsübermittlung der Verbindungsdaten, die Cloudflare verarbeitet, etwa Ihrer IP-Adresse, gilt der Hinweis zur Auslandsübermittlung in dieser Erklärung.",
+        "KI-Training und Werbung: Wir verwenden die gesendeten Einträge und Fragen nicht für KI-Training oder Werbung und verkaufen sie nicht.",
+        "Unterschied zur Ende-zu-Ende-Verschlüsselung: Während eine Antwort erstellt wird, können der DoseWeek-Server und Amazon Bedrock lesen, was Sie an den KI-Aufzeichnungsassistenten gesendet haben. Die Ende-zu-Ende-Verschlüsselung gilt nur für Synchronisierungs- und Backup-Daten.",
+        "Automatisierte Entscheidungen: KI-Antworten dienen nur zur Orientierung. Die KI trifft keine Entscheidung, die Ihre Rechte oder Pflichten berührt.",
+        "Widerruf und Löschung: Unter Einstellungen > KI-Aufzeichnungsassistent können Sie Ihre Einwilligung jederzeit widerrufen und gespeicherte KI-Übersichten löschen. Nach dem Widerruf werden keine Einträge mehr an die KI gesendet. Wenn Sie Ihr Konto löschen, werden auch Nutzungszähler und Einwilligungsnachweise gelöscht. Auch ohne Einwilligung können Sie die übrigen Funktionen von Pro und Plus weiter nutzen.",
+        "Alter: Der KI-Aufzeichnungsassistent ist nur für Personen ab 18 Jahren. Sie bestätigen Ihr Alter selbst; ein Geburtsdatum fragen wir nicht ab.",
+        "KI-Kennzeichnung und Sicherheitshinweise: Jede KI-Antwort trägt den Hinweis, dass sie von einer KI erstellt wurde und keine medizinische Beratung ist, und zu jeder Antwort gibt es eine Schaltfläche zum Melden. Auf medizinische Fragen, etwa zu Dosierungen, zur Einschätzung von Symptomen, zu Diagnosen oder zu Arzneimittelinformationen, erstellt die KI keine Antwort; die App zeigt stattdessen einen festen Hinweis. Wirkt eine Nachricht wie ein Notfall oder eine Krise, zeigt die App die Nummern für Ihre Store-Region: 119 und 109 in Korea, 119 und die Yorisoi Hotline (0120-279-338) in Japan, 911 und 988 in den USA. In anderen Regionen verweist sie auf den örtlichen Notruf und auf findahelpline.com."
+      ],
+      "e2eeException": "Eine Ausnahme von der Ende-zu-Ende-Verschlüsselung sind Inhalte, die Sie nach Ihrer Einwilligung selbst an den KI-Aufzeichnungsassistenten (Pro) senden: Der DoseWeek-Server und Amazon Bedrock können sie lesen, während eine Antwort erstellt wird.",
+      "healthExclusion": {
+        "ios": "Aus Apple Health gelesene Daten werden auch nicht für KI-Funktionen verwendet und nicht an den KI-Aufzeichnungsassistenten gesendet.",
+        "android": "Aus Health Connect gelesene Daten werden auch nicht für KI-Funktionen verwendet und nicht an den KI-Aufzeichnungsassistenten gesendet."
+      },
+      "onDeviceScope": "Dieser Abschnitt betrifft nur die KI-Erfassung und die Terminvorbereitung, die auf dem Gerät verarbeitet werden. Der KI-Aufzeichnungsassistent (Pro), der auf einem Server verarbeitet wird, ist in dieser Erklärung gesondert unter „KI-Aufzeichnungsassistent (Pro)“ beschrieben.",
+      "androidAiFaq": "DoseWeek 1.0.6 für Android enthält den optionalen KI-Aufzeichnungsassistenten (Pro). Nur nach gesonderter Einwilligung erstellt generative KI auf Amazon Bedrock (Region Seoul, Republik Korea) Wochenübersichten, allgemeine Mahlzeitenideen und Antworten zur App-Nutzung. Keine andere Funktion verwendet generative KI.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — Grundlage ist die gesonderte Einwilligung in die Verarbeitung von Gesundheitsdaten (sensiblen Daten), die Sie beim Einschalten des KI-Aufzeichnungsassistenten geben. Der Auftragsverarbeitungsvertrag und die Grundlage nach PIPA Art. 28-8 für einen Zugriff aus dem Ausland sind ungeprüft.",
+        "data": "Die zusammengefassten Werte, die Sie beim Senden auf dem Bildschirm bestätigen, und die Fragen, die Sie eingeben. Medikamentennamen und Dosierungen, Notizen, Lebensmittelnamen, Fotos, Datumsangaben und Kontodaten werden nicht gesendet.",
+        "country": "Verarbeitung nur innerhalb der Region Seoul (ap-northeast-2), Republik Korea. Es wird kein Inferenzprofil verwendet, das in eine andere Region weiterleitet. Support oder Zugriff aus dem Ausland ist ungeprüft.",
+        "timingMethod": "Gesendet wird nur, wenn Sie eine KI-Funktion anfordern und auf „Senden“ tippen. Die App verschlüsselt den Inhalt zusätzlich und sendet ihn an den DoseWeek-Server, der ihn nur im Arbeitsspeicher entschlüsselt und an Amazon Bedrock weitergibt.",
+        "recipientContact": "Die Vertragsgesellschaft und der Empfängerkontakt von Amazon Web Services (AWS) sind ungeprüft. Anbieterhinweis: https://aws.amazon.com/privacy/",
+        "purpose": "Auftragsverarbeiter, der die angeforderten KI-Antworten erstellt. Das KI-Modell ist Claude von Anthropic und wird von AWS betrieben. Keine Nutzung für KI-Training oder Werbung.",
+        "retention": "Keine Speicherung. Amazon Bedrock ist so eingestellt, dass Inhalte nicht gespeichert werden; der Nachweis der tatsächlichen Einstellung wird vor der Veröffentlichung festgehalten.",
+        "refusalEffect": "Wenn Sie nicht einwilligen oder in den Einstellungen widerrufen, entfallen nur die KI-Funktionen. Das Erfassen von Einträgen und die übrigen Funktionen von Pro und Plus bleiben nutzbar."
+      },
+      "cloudflareTransit": "Anfragen an den KI-Aufzeichnungsassistenten passieren nur als verschlüsselter Text, den die App zusätzlich verschlüsselt hat.",
+      "terms": [
+        "Pro ist ein optionales Abo, das alle Funktionen von Plus um den KI-Aufzeichnungsassistenten und die bevorzugte Antwort auf Anfragen ergänzt. Es verlängert sich monatlich oder jährlich automatisch, und die Regeln zu Zahlung, Verlängerung, Kündigung und Erstattung in Abschnitt 3 gelten dafür genauso wie für Plus. Eine kostenlose Testphase von 7 Tagen gibt es nur, wenn der Store Ihre Berechtigung bestätigt. Wenn Sie bereits eine kostenlose Plus-Testphase genutzt haben, wird sie möglicherweise nicht angeboten.",
+        "Sie können den KI-Aufzeichnungsassistenten nutzen, nachdem Sie sich angemeldet und gesondert eingewilligt haben, und nur, wenn Sie mindestens 18 Jahre alt sind. Er erstellt Wochenübersichten, allgemeine Mahlzeitenideen und Antworten zur App-Nutzung aus den Einträgen, deren Versand Sie bestätigen. Auch ohne Einwilligung können Sie die übrigen Pro-Funktionen weiter nutzen.",
+        "Der KI-Aufzeichnungsassistent ist kein Medizinprodukt und gibt keine medizinische Beratung wie Diagnosen, Behandlungs- oder Dosierungsanweisungen. Von KI erstellte Inhalte können falsch oder unvollständig sein. Besprechen Sie Entscheidungen zu Ihrer Gesundheit mit medizinischem Fachpersonal.",
+        "Warten Sie im Notfall nicht auf eine Antwort des KI-Aufzeichnungsassistenten. Rufen Sie sofort den örtlichen Notruf an: 119 in Korea und Japan, 911 in den USA.",
+        "Sie können 150 Anfragen pro Monat stellen. Während einer kostenlosen Testphase sind es bis zu 50. Eine Wochenübersicht pro Woche zählt nicht zu diesem Limit; wenn Sie sie neu erstellen, zählt das als 1 Anfrage. Der Zähler wird am 1. jedes Monats nach koordinierter Weltzeit (UTC) zurückgesetzt. Müssen wir das Limit senken, informieren wir Sie 30 Tage vorher, und für einen bereits bezahlten Zeitraum wird es nicht zu Ihrem Nachteil angewendet.",
+        "Geben Sie keine Gesundheitsdaten anderer Personen ein und versuchen Sie nicht, die Sicherheitshinweise zu umgehen, um medizinische Beratung zu erhalten.",
+        "Die KI-Funktionen können zeitweise nicht verfügbar sein. Ihre gesetzlichen Rechte auf Widerruf und Erstattung bleiben auch dann vollständig bestehen.",
+        "Bevorzugte Antwort auf Anfragen bedeutet: Wenn Pro-Abonnentinnen und -Abonnenten dem Support per E-Mail eine Frage zur Nutzung der App senden, erhalten sie innerhalb von 1 Arbeitstag eine erste Antwort. Arbeitstage sind Montag bis Freitag in der Republik Korea, ausgenommen Feiertage. Medizinische Fragen beantworten wir nicht; fügen Sie Ihrer Nachricht daher bitte keine Gesundheitsdaten bei."
+      ],
+      "usHealth": {
+        "categories": "Wenn Sie den KI-Aufzeichnungsassistenten (Pro) einschalten und das Senden bestätigen, behandeln wir auch Folgendes als Gesundheitsdaten: die aus Ihren Eingaben gebildete Anzahl der Dosen, die Gewichtsveränderung, die Anzahl je Symptomart, die Summen zu Mahlzeiten und Eiweiß, Ihre Mahlzeitenvorlieben, Allergien und Lebensmittel, die Sie nicht mögen, sowie die Fragen, die Sie eingeben. Diese Inhalte sind nicht Ende-zu-Ende-verschlüsselt. Der Server kann sie lesen, während eine Antwort erstellt wird, und sie werden gelöscht, sobald die Antwort erstellt ist. Aus HealthKit oder Health Connect gelesene Daten werden nicht an den KI-Aufzeichnungsassistenten gesendet.",
+        "purpose": "Auf Anfrage verwenden wir sie auch, um KI-Übersichten und allgemeine Ernährungsideen zu erstellen. KI-Antworten sind keine Diagnose und keine Behandlungsempfehlung.",
+        "processor": "Anfragen an den KI-Aufzeichnungsassistenten verarbeitet Amazon Bedrock von AWS als Auftragsverarbeiter in der Region Seoul, Republik Korea, ausschließlich zur Erstellung der Antwort. Die Inhalte werden nicht gespeichert und nicht für KI-Training verwendet.",
+        "noSale": "Auch Gesundheitsdaten, die an den KI-Aufzeichnungsassistenten gesendet werden, verkaufen wir nicht und geben sie nicht für Werbung weiter.",
+        "consent": "Für den KI-Aufzeichnungsassistenten holen wir beim ersten Einschalten Ihre Einwilligung auf einem eigenen Bildschirm ein und bitten Sie bei jedem Senden von Einträgen erneut um Bestätigung. Unter Einstellungen > KI-Aufzeichnungsassistent können Sie jederzeit widerrufen."
+      },
+      "deletion": "Wenn Sie Ihr Konto löschen, werden auch die Nutzungszähler und Einwilligungsnachweise des KI-Aufzeichnungsassistenten gelöscht. Was Sie an die KI senden, und die Antworten werden nicht auf dem Server gespeichert, daher gibt es keine Serverkopie zu löschen. Antworttext, den Sie einer Meldung beigefügt haben, wird ohne Verbindung zu Ihrem Konto aufbewahrt und nach 30 Tagen gelöscht."
+    },
+    "fr": {
+      "name": "assistant de suivi IA",
+      "perk": "Réponse prioritaire à vos questions",
+      "sectionTitle": "Assistant de suivi IA (Pro)",
+      "clauses": [
+        "Finalité : créer les résumés hebdomadaires, les idées de repas générales et les réponses d’aide sur l’app que vous demandez. L’assistant de suivi IA est une fonction facultative incluse dans l’abonnement Pro. Les réponses viennent d’une IA, pas d’une personne, et il ne donne pas d’avis médical.",
+        "Données traitées : les enregistrements que vous confirmez à l’écran avant l’envoi et les questions que vous saisissez. Les enregistrements sont le nombre de doses (à l’heure, en retard, sautées), l’évolution du poids que vous avez saisi vous-même, le nombre de fois où vous avez noté chaque type de symptôme, le nombre de jours avec un repas enregistré ainsi que votre moyenne et votre objectif de protéines, et votre série en semaines. Pour les idées de repas, nous envoyons aussi le type de repas, les préférences, les allergies et les aliments que vous n’aimez pas, tels que vous les avez choisis. Votre réglage de langue et de région est également envoyé, et l’aide sur l’app ajoute uniquement la version de l’app, la plateforme et l’écran en cours. Nous n’envoyons pas les noms ni les doses de médicaments, les notes, les noms d’aliments, les photos, les dates, ni votre nom, votre e-mail ou les informations de votre compte. {healthExclusion} Ce que vous saisissez dans le champ de question est envoyé tel que vous l’avez écrit.",
+        "Base juridique : les informations de santé sont sensibles. Nous ne les traitons donc qu’avec un consentement recueilli séparément de tout autre consentement. En Corée, il s’agit du consentement prévu à l’article 23 de la loi sur la protection des informations personnelles (PIPA). Nous vous le demandons lorsque vous activez la fonction pour la première fois, et à chaque envoi d’enregistrements nous affichons ce qui sera envoyé et vous demandons de confirmer à nouveau.",
+        "Conservation : ce que vous envoyez et les réponses ne restent pas sur le serveur ; ils sont supprimés dès que la réponse est créée. Les messages de discussion ne sont pas conservés. Les résumés hebdomadaires sont enregistrés uniquement sur votre appareil, 2 au maximum, et sont exclus de la synchronisation et de toute sauvegarde. Les compteurs d’utilisation (sans contenu) sont conservés jusqu’à 2 mois, et les preuves de consentement tant que le compte existe. Si vous signalez une réponse et choisissez « Joindre le texte de la réponse », seule cette réponse est conservée 30 jours.",
+        "Sous-traitant : Amazon Bedrock, un service d’Amazon Web Services (AWS), crée les réponses de l’IA dans la région de Séoul (ap-northeast-2), en République de Corée. Le modèle d’IA est Claude d’Anthropic. AWS l’exploite et Anthropic ne peut pas voir le contenu. Amazon Bedrock est réglé pour ne conserver ni ce que vous envoyez ni les réponses. L’entité contractante d’AWS et ses coordonnées ne sont pas encore vérifiées et seront indiquées dans cette politique avant la publication.",
+        "Lieu de traitement et transmission : les demandes à l’IA sont traitées dans la région de Séoul, en République de Corée, et ne sont pas envoyées vers une région d’un autre pays. L’app chiffre une nouvelle fois le contenu avec la clé publique du serveur DoseWeek. Cloudflare, qui relaie la demande, ne voit donc que du texte chiffré. Le transfert à l’étranger des informations de connexion traitées par Cloudflare, comme votre adresse IP, suit les indications sur les transferts à l’étranger de cette politique.",
+        "Entraînement de l’IA et publicité : nous n’utilisons pas les enregistrements et les questions que vous envoyez pour entraîner une IA ni pour la publicité, et nous ne les vendons pas.",
+        "Différence avec le chiffrement de bout en bout : pendant la création d’une réponse, le serveur DoseWeek et Amazon Bedrock peuvent lire ce que vous avez envoyé à l’assistant de suivi IA. Le chiffrement de bout en bout s’applique uniquement aux données de synchronisation et de sauvegarde.",
+        "Décisions automatisées : les réponses de l’IA sont données à titre indicatif. L’IA ne prend aucune décision qui affecte vos droits ou vos obligations.",
+        "Retrait du consentement et suppression : dans Réglages > Assistant de suivi IA, vous pouvez à tout moment retirer votre consentement et supprimer les résumés IA enregistrés. Après le retrait, aucun enregistrement n’est envoyé à l’IA. La suppression de votre compte supprime aussi vos compteurs d’utilisation et vos preuves de consentement. Si vous ne consentez pas, les autres fonctions de Pro et de Plus restent utilisables.",
+        "Âge : l’assistant de suivi IA est réservé aux personnes de 18 ans et plus. Vous confirmez votre âge vous-même ; nous ne demandons pas de date de naissance.",
+        "Mentions IA et messages de sécurité : chaque réponse de l’IA porte une mention indiquant qu’elle a été créée par une IA et qu’elle n’est pas un avis médical, et chaque réponse dispose d’un bouton de signalement. Pour les questions médicales, par exemple sur les doses, sur le caractère normal d’un symptôme, sur un diagnostic ou sur des médicaments, l’IA ne rédige pas de réponse ; l’app affiche à la place un message fixe. Si un message ressemble à une urgence ou à une situation de crise, l’app affiche les numéros de la région de votre store : 119 et 109 en Corée, 119 et la Yorisoi Hotline (0120-279-338) au Japon, 911 et 988 aux États-Unis. Ailleurs, elle renvoie vers le numéro d’urgence local et vers findahelpline.com."
+      ],
+      "e2eeException": "Le contenu que vous envoyez vous-même à l’assistant de suivi IA (Pro) après y avoir consenti fait exception au chiffrement de bout en bout : le serveur DoseWeek et Amazon Bedrock peuvent le lire pendant la création d’une réponse.",
+      "healthExclusion": {
+        "ios": "Les informations lues depuis Apple Health ne sont pas non plus utilisées pour les fonctions d’IA et ne sont pas envoyées à l’assistant de suivi IA.",
+        "android": "Les informations lues depuis Health Connect ne sont pas non plus utilisées pour les fonctions d’IA et ne sont pas envoyées à l’assistant de suivi IA."
+      },
+      "onDeviceScope": "Cette section concerne uniquement l’enregistrement par IA et la préparation de consultation, qui sont traités sur l’appareil. L’assistant de suivi IA (Pro), traité sur un serveur, est décrit séparément dans la section « Assistant de suivi IA (Pro) » de cette politique.",
+      "androidAiFaq": "DoseWeek 1.0.6 pour Android comprend l’assistant de suivi IA (Pro), une fonction facultative. Uniquement après un consentement distinct, une IA générative sur Amazon Bedrock (région de Séoul, République de Corée) crée des résumés hebdomadaires, des idées de repas générales et des réponses d’aide sur l’app. Aucune autre fonction n’utilise d’IA générative.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — La base est le consentement distinct au traitement des informations de santé (sensibles) que vous donnez en activant l’assistant de suivi IA. Le contrat de sous-traitance et la base prévue par PIPA Art. 28-8 pour un accès depuis l’étranger ne sont pas vérifiés.",
+        "data": "Les valeurs agrégées que vous confirmez à l’écran lors de l’envoi et les questions que vous saisissez. Les noms et doses de médicaments, les notes, les noms d’aliments, les photos, les dates et les informations de compte ne sont pas envoyés.",
+        "country": "Traitement uniquement dans la région de Séoul (ap-northeast-2), République de Corée. Aucun profil d’inférence acheminant vers une autre région n’est utilisé. L’assistance ou l’accès depuis l’étranger ne sont pas vérifiés.",
+        "timingMethod": "Envoi uniquement lorsque vous demandez une fonction d’IA et touchez « Envoyer ». L’app chiffre une nouvelle fois le contenu et l’envoie au serveur DoseWeek, qui le déchiffre uniquement en mémoire et le transmet à Amazon Bedrock.",
+        "recipientContact": "L’entité contractante et le contact destinataire d’Amazon Web Services (AWS) ne sont pas vérifiés. Référence du fournisseur : https://aws.amazon.com/privacy/",
+        "purpose": "Sous-traitant qui crée les réponses d’IA que vous demandez. Le modèle d’IA est Claude d’Anthropic, exploité par AWS. Aucune utilisation pour l’entraînement d’IA ni pour la publicité.",
+        "retention": "Aucune conservation. Amazon Bedrock est réglé pour ne pas conserver le contenu ; la preuve du réglage réel est consignée avant la publication.",
+        "refusalEffect": "Si vous ne consentez pas ou si vous retirez votre consentement dans les réglages, seules les fonctions d’IA deviennent indisponibles. L’enregistrement et les autres fonctions de Pro et de Plus restent utilisables."
+      },
+      "cloudflareTransit": "Les demandes de l’assistant de suivi IA ne transitent que sous forme de texte chiffré une nouvelle fois par l’app.",
+      "terms": [
+        "Pro est un abonnement facultatif qui ajoute l’assistant de suivi IA et la réponse prioritaire à vos questions à toutes les fonctions de Plus. Il se renouvelle automatiquement chaque mois ou chaque année, et les règles de paiement, de renouvellement, de résiliation et de remboursement de la section 3 s’y appliquent exactement comme à Plus. Un essai gratuit de 7 jours n’est proposé que si le store confirme que vous y avez droit. Il peut ne pas être proposé si vous avez déjà utilisé un essai gratuit de Plus.",
+        "Vous pouvez utiliser l’assistant de suivi IA après vous être connecté et avoir donné un consentement distinct, et seulement si vous avez 18 ans ou plus. Il crée des résumés hebdomadaires, des idées de repas générales et des réponses d’aide sur l’app à partir des enregistrements dont vous confirmez l’envoi. Si vous ne consentez pas, les autres fonctions de Pro restent utilisables.",
+        "L’assistant de suivi IA n’est pas un dispositif médical et ne donne aucun avis médical tel qu’un diagnostic, un traitement ou des instructions de dosage. Le contenu créé par l’IA peut être inexact ou incomplet. Parlez de vos décisions de santé à un professionnel de santé.",
+        "En cas d’urgence, n’attendez pas la réponse de l’assistant de suivi IA. Appelez immédiatement le numéro d’urgence local : le 119 en Corée et au Japon, le 911 aux États-Unis.",
+        "Vous pouvez faire 150 demandes par mois. Pendant un essai gratuit, vous pouvez en faire jusqu’à 50. Un résumé hebdomadaire par semaine ne compte pas dans cette limite ; le recréer compte pour 1 demande. Le compteur est remis à zéro le 1er de chaque mois, en temps universel coordonné (UTC). Si nous devons réduire la limite, nous vous en informerons 30 jours avant son application, et elle ne s’appliquera pas à votre détriment pendant une période déjà payée.",
+        "Ne saisissez pas les informations de santé d’une autre personne et n’essayez pas de contourner les messages de sécurité pour obtenir un avis médical.",
+        "Les fonctions d’IA peuvent être momentanément indisponibles. Dans ce cas aussi, vos droits légaux de rétractation et de remboursement restent pleinement garantis.",
+        "La réponse prioritaire à vos questions signifie que, lorsqu’un abonné Pro écrit à l’assistance par e-mail pour une question sur l’utilisation de l’app, nous envoyons une première réponse sous 1 jour ouvré. Les jours ouvrés sont les jours de semaine en République de Corée, hors jours fériés. Nous ne répondons pas aux questions médicales ; n’incluez donc pas de données de santé dans votre message."
+      ],
+      "usHealth": {
+        "categories": "Si vous activez l’assistant de suivi IA (Pro) et confirmez l’envoi, nous traitons aussi comme des informations de santé le nombre de doses, l’évolution du poids, le nombre par type de symptôme et les totaux de repas et de protéines établis à partir de ce que vous avez saisi, vos préférences alimentaires, vos allergies et les aliments que vous n’aimez pas, ainsi que les questions que vous saisissez. Ce contenu n’est pas chiffré de bout en bout. Le serveur peut le lire pendant la création d’une réponse, et il est supprimé dès que la réponse est créée. Les informations lues depuis HealthKit ou Health Connect ne sont pas envoyées à l’assistant de suivi IA.",
+        "purpose": "Sur demande, nous les utilisons aussi pour créer des résumés IA et des idées générales de nutrition. Les réponses de l’IA ne sont ni un diagnostic ni une recommandation de traitement.",
+        "processor": "Les demandes de l’assistant de suivi IA sont traitées par Amazon Bedrock d’AWS, sous-traitant, dans la région de Séoul, République de Corée, uniquement pour créer la réponse. Le contenu n’est pas conservé et n’est pas utilisé pour entraîner une IA.",
+        "noSale": "Nous ne vendons pas non plus les informations de santé envoyées à l’assistant de suivi IA et nous ne les communiquons pas à des fins publicitaires.",
+        "consent": "Pour l’assistant de suivi IA, nous recueillons votre consentement sur un écran distinct lors de la première activation et nous vous demandons de confirmer à nouveau à chaque envoi d’enregistrements. Vous pouvez le retirer à tout moment dans Réglages > Assistant de suivi IA."
+      },
+      "deletion": "La suppression de votre compte supprime aussi les compteurs d’utilisation et les preuves de consentement de l’assistant de suivi IA. Ce que vous envoyez à l’IA et ses réponses ne sont pas conservés sur le serveur ; il n’y a donc aucune copie serveur à supprimer. Le texte de réponse que vous avez choisi de joindre à un signalement est conservé sans lien avec votre compte et supprimé au bout de 30 jours."
+    },
+    "es": {
+      "name": "asistente de registros con IA",
+      "perk": "Respuesta prioritaria a sus preguntas",
+      "sectionTitle": "Asistente de registros con IA (Pro)",
+      "clauses": [
+        "Finalidad: crear los resúmenes semanales, las ideas generales de comidas y las respuestas de ayuda sobre la app que usted solicita. El asistente de registros con IA es una función opcional incluida en la suscripción Pro. Las respuestas las da una IA, no una persona, y no ofrece consejo médico.",
+        "Datos tratados: los registros que confirma en pantalla antes de enviarlos y las preguntas que escribe. Los registros son el número de dosis (a tiempo, con retraso, omitidas), el cambio del peso que usted mismo introdujo, cuántas veces registró cada tipo de síntoma, el número de días con comidas registradas junto con su promedio y su objetivo de proteínas, y su racha en semanas. Para las ideas de comidas enviamos también el tipo de comida, las preferencias, las alergias y los alimentos que no le gustan, según lo que haya elegido. También se envía su ajuste de idioma y región, y la ayuda sobre la app añade solo la versión de la app, la plataforma y la pantalla actual. No enviamos nombres ni dosis de medicamentos, notas, nombres de alimentos, fotos, fechas, ni su nombre, su correo electrónico o los datos de su cuenta. {healthExclusion} Lo que escriba en el campo de pregunta se envía tal como lo escribió.",
+        "Base jurídica: la información de salud es sensible, por lo que solo la tratamos con un consentimiento recogido por separado de cualquier otro. En Corea se trata del consentimiento previsto en el artículo 23 de la Ley de Protección de Información Personal (PIPA). Se lo pedimos la primera vez que activa la función y, cada vez que se envían registros, le mostramos lo que se va a enviar y le pedimos que lo confirme de nuevo.",
+        "Conservación: lo que envía y las respuestas no se guardan en el servidor; se eliminan en cuanto se crea la respuesta. Los mensajes de la conversación no se almacenan. Los resúmenes semanales se guardan solo en su dispositivo, 2 como máximo, y quedan fuera de la sincronización y de cualquier copia de seguridad. Los recuentos de uso (sin contenido) se conservan hasta 2 meses, y los registros de consentimiento mientras exista la cuenta. Si denuncia una respuesta y elige «Incluir el texto de la respuesta», solo esa respuesta se conserva 30 días.",
+        "Encargado del tratamiento: Amazon Bedrock, un servicio de Amazon Web Services (AWS), crea las respuestas de la IA en la región de Seúl (ap-northeast-2), en la República de Corea. El modelo de IA es Claude de Anthropic. Lo opera AWS, y Anthropic no puede ver el contenido. Amazon Bedrock está configurado para no almacenar lo que usted envía ni las respuestas. La entidad contratante de AWS y sus datos de contacto aún no están verificados y se indicarán en esta política antes del lanzamiento.",
+        "Lugar del tratamiento y transmisión: las solicitudes a la IA se tratan dentro de la región de Seúl, en la República de Corea, y no se envían a una región de otro país. La app cifra el contenido una vez más con la clave pública del servidor de DoseWeek. Por eso Cloudflare, que retransmite la solicitud, solo ve texto cifrado. La transferencia internacional de la información de conexión que trata Cloudflare, como su dirección IP, se rige por el aviso sobre transferencias internacionales de esta política.",
+        "Entrenamiento de IA y publicidad: no usamos los registros ni las preguntas que envía para entrenar IA ni para publicidad, y no los vendemos.",
+        "Diferencia con el cifrado de extremo a extremo: mientras se crea una respuesta, el servidor de DoseWeek y Amazon Bedrock pueden leer lo que envió al asistente de registros con IA. El cifrado de extremo a extremo se aplica solo a los datos de sincronización y de copia de seguridad.",
+        "Decisiones automatizadas: las respuestas de la IA son orientativas. La IA no toma ninguna decisión que afecte a sus derechos u obligaciones.",
+        "Retirada del consentimiento y eliminación: en Ajustes > Asistente de registros con IA puede retirar su consentimiento y eliminar los resúmenes de IA guardados en cualquier momento. Tras la retirada no se envían registros a la IA. Al eliminar su cuenta se eliminan también sus recuentos de uso y sus registros de consentimiento. Si no da su consentimiento, las demás funciones de Pro y Plus siguen disponibles.",
+        "Edad: el asistente de registros con IA es solo para mayores de 18 años. Usted mismo confirma su edad; no pedimos fecha de nacimiento.",
+        "Avisos de IA y mensajes de seguridad: cada respuesta de la IA lleva un aviso de que fue creada por IA y de que no es consejo médico, y cada respuesta tiene un botón para denunciarla. Ante preguntas médicas, por ejemplo sobre dosis, sobre si un síntoma es normal, sobre diagnósticos o sobre medicamentos, la IA no redacta una respuesta; la app muestra en su lugar un mensaje fijo. Si un mensaje parece una emergencia o una crisis, la app muestra los números de la región de su tienda: 119 y 109 en Corea, 119 y la Yorisoi Hotline (0120-279-338) en Japón, 911 y 988 en Estados Unidos. En otros lugares remite al número de emergencias local y a findahelpline.com."
+      ],
+      "e2eeException": "La excepción al cifrado de extremo a extremo es el contenido que usted mismo envía al asistente de registros con IA (Pro) tras dar su consentimiento: el servidor de DoseWeek y Amazon Bedrock pueden leerlo mientras se crea una respuesta.",
+      "healthExclusion": {
+        "ios": "La información leída de Apple Health tampoco se usa para funciones de IA ni se envía al asistente de registros con IA.",
+        "android": "La información leída de Health Connect tampoco se usa para funciones de IA ni se envía al asistente de registros con IA."
+      },
+      "onDeviceScope": "Esta sección se refiere solo al registro con IA y a la preparación de la consulta, que se procesan en el dispositivo. El asistente de registros con IA (Pro), que se procesa en un servidor, se describe por separado en la sección «Asistente de registros con IA (Pro)» de esta política.",
+      "androidAiFaq": "DoseWeek 1.0.6 para Android incluye el asistente de registros con IA (Pro), una función opcional. Solo tras un consentimiento aparte, una IA generativa en Amazon Bedrock (región de Seúl, República de Corea) crea resúmenes semanales, ideas generales de comidas y respuestas de ayuda sobre la app. Ninguna otra función usa IA generativa.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — La base es el consentimiento aparte para tratar información de salud (sensible) que usted da al activar el asistente de registros con IA. El contrato de encargo y la base de PIPA Art. 28-8 para un acceso desde el extranjero no están verificados.",
+        "data": "Los valores agregados que confirma en pantalla al enviar registros y las preguntas que escribe. No se envían nombres ni dosis de medicamentos, notas, nombres de alimentos, fotos, fechas ni datos de la cuenta.",
+        "country": "Tratamiento solo dentro de la región de Seúl (ap-northeast-2), República de Corea. No se usa ningún perfil de inferencia que enrute a otra región. El soporte o el acceso desde el extranjero no están verificados.",
+        "timingMethod": "Se envía solo cuando solicita una función de IA y toca «Enviar». La app cifra el contenido una vez más y lo envía al servidor de DoseWeek, que lo descifra solo en memoria y lo pasa a Amazon Bedrock.",
+        "recipientContact": "La entidad contratante y el contacto del destinatario de Amazon Web Services (AWS) no están verificados. Referencia del proveedor: https://aws.amazon.com/privacy/",
+        "purpose": "Encargado que crea las respuestas de IA que usted solicita. El modelo de IA es Claude de Anthropic, operado por AWS. No se usa para entrenar IA ni para publicidad.",
+        "retention": "No se conserva. Amazon Bedrock está configurado para no almacenar contenido; el registro de la comprobación de la configuración real se guarda antes del lanzamiento.",
+        "refusalEffect": "Si no da su consentimiento o lo retira en Ajustes, solo dejan de estar disponibles las funciones de IA. El registro y las demás funciones de Pro y Plus siguen disponibles."
+      },
+      "cloudflareTransit": "Las solicitudes del asistente de registros con IA pasan solo como texto cifrado una vez más por la app.",
+      "terms": [
+        "Pro es una suscripción opcional que añade el asistente de registros con IA y la respuesta prioritaria a sus preguntas a todo lo que incluye Plus. Se renueva automáticamente cada mes o cada año, y las reglas de pago, renovación, cancelación y reembolso de la sección 3 se le aplican igual que a Plus. La prueba gratuita de 7 días se ofrece solo cuando la tienda confirma que usted cumple los requisitos. Puede no ofrecerse si ya utilizó una prueba gratuita de Plus.",
+        "Puede usar el asistente de registros con IA después de iniciar sesión y dar un consentimiento aparte, y solo si tiene 18 años o más. Crea resúmenes semanales, ideas generales de comidas y respuestas de ayuda sobre la app a partir de los registros cuyo envío usted confirma. Si no da su consentimiento, las demás funciones de Pro siguen disponibles.",
+        "El asistente de registros con IA no es un producto sanitario y no ofrece consejo médico, como diagnósticos, tratamientos o instrucciones de dosificación. El contenido creado por IA puede ser incorrecto o incompleto. Consulte las decisiones sobre su salud con su profesional sanitario.",
+        "En una emergencia, no espere la respuesta del asistente de registros con IA. Llame de inmediato al número de emergencias local: 119 en Corea y Japón, 911 en Estados Unidos.",
+        "Puede hacer 150 solicitudes al mes. Durante una prueba gratuita puede hacer hasta 50. Un resumen semanal por semana no cuenta para este límite; volver a crearlo cuenta como 1 solicitud. El recuento se restablece el día 1 de cada mes, en tiempo universal coordinado (UTC). Si tenemos que reducir el límite, se lo comunicaremos 30 días antes de aplicarlo, y no se aplicará en su perjuicio durante un periodo que ya haya pagado.",
+        "No introduzca información de salud de otra persona ni intente eludir los mensajes de seguridad para obtener consejo médico.",
+        "Las funciones de IA pueden no estar disponibles en algunos momentos. También en ese caso se mantienen íntegros sus derechos legales de desistimiento y reembolso.",
+        "La respuesta prioritaria a sus preguntas significa que, cuando un suscriptor de Pro escribe por correo electrónico al soporte con una pregunta sobre el uso de la app, enviamos una primera respuesta en 1 día hábil. Los días hábiles son los días laborables de lunes a viernes en la República de Corea, excluidos los festivos. No respondemos preguntas médicas, así que no incluya registros de salud en su mensaje."
+      ],
+      "usHealth": {
+        "categories": "Si activa el asistente de registros con IA (Pro) y confirma el envío, también tratamos como información de salud el número de dosis, el cambio de peso, el recuento por tipo de síntoma y los totales de comidas y proteínas elaborados a partir de lo que usted introdujo, sus preferencias de comida, alergias y alimentos que no le gustan, y las preguntas que escribe. Este contenido no está cifrado de extremo a extremo. El servidor puede leerlo mientras se crea una respuesta, y se elimina en cuanto se crea la respuesta. La información leída de HealthKit o Health Connect no se envía al asistente de registros con IA.",
+        "purpose": "Si lo solicita, también la usamos para crear resúmenes de IA e ideas generales de nutrición. Las respuestas de la IA no son un diagnóstico ni una recomendación de tratamiento.",
+        "processor": "Las solicitudes del asistente de registros con IA las trata Amazon Bedrock de AWS, como encargado, en la región de Seúl, República de Corea, solo para crear la respuesta. El contenido no se almacena ni se usa para entrenar IA.",
+        "noSale": "Tampoco vendemos la información de salud enviada al asistente de registros con IA ni la compartimos con fines publicitarios.",
+        "consent": "Para el asistente de registros con IA pedimos su consentimiento en una pantalla aparte la primera vez que lo activa, y le pedimos que confirme de nuevo cada vez que se envían registros. Puede retirarlo en cualquier momento en Ajustes > Asistente de registros con IA."
+      },
+      "deletion": "Al eliminar su cuenta se eliminan también los recuentos de uso y los registros de consentimiento del asistente de registros con IA. Lo que envía a la IA y sus respuestas no se almacenan en el servidor, por lo que no hay copia en el servidor que eliminar. El texto de respuesta que decidió incluir en una denuncia se conserva sin vínculo con su cuenta y se elimina a los 30 días."
+    },
+    "it": {
+      "name": "assistente IA per le registrazioni",
+      "perk": "Risposta prioritaria alle richieste",
+      "sectionTitle": "Assistente IA per le registrazioni (Pro)",
+      "clauses": [
+        "Finalità: creare i riepiloghi settimanali, le idee generali per i pasti e le risposte di aiuto sull’app che richiedi. L’assistente IA per le registrazioni è una funzione facoltativa inclusa nell’abbonamento Pro. Le risposte arrivano da un’IA, non da una persona, e non fornisce consigli medici.",
+        "Dati trattati: le registrazioni che confermi sullo schermo prima dell’invio e le domande che scrivi. Le registrazioni sono il numero di dosi (puntuali, in ritardo, saltate), la variazione del peso che hai inserito tu, quante volte hai registrato ogni tipo di sintomo, il numero di giorni con pasti registrati insieme alla media e all’obiettivo di proteine, e la tua serie in settimane. Per le idee per i pasti inviamo anche il tipo di pasto, le preferenze, le allergie e gli alimenti che non ti piacciono, come li hai scelti. Viene inviata anche l’impostazione di lingua e area geografica, e l’aiuto sull’app aggiunge solo la versione dell’app, la piattaforma e la schermata corrente. Non inviamo nomi o dosi dei farmaci, note, nomi degli alimenti, foto, date, né il tuo nome, la tua email o i dati dell’account. {healthExclusion} Quello che scrivi nel campo della domanda viene inviato così come lo hai scritto.",
+        "Base giuridica: le informazioni sulla salute sono sensibili, quindi le trattiamo solo con un consenso raccolto separatamente da ogni altro consenso. In Corea si tratta del consenso previsto dall’articolo 23 della legge sulla protezione delle informazioni personali (PIPA). Te lo chiediamo la prima volta che attivi la funzione e, ogni volta che vengono inviate registrazioni, ti mostriamo che cosa verrà inviato e ti chiediamo di confermare di nuovo.",
+        "Conservazione: quello che invii e le risposte non restano sul server; vengono eliminati appena la risposta è stata creata. I messaggi della chat non vengono salvati. I riepiloghi settimanali sono salvati solo sul tuo dispositivo, al massimo 2, e sono esclusi dalla sincronizzazione e da qualsiasi backup. I conteggi di utilizzo (senza contenuti) sono conservati fino a 2 mesi, e le prove del consenso finché esiste l’account. Se segnali una risposta e scegli «Includi il testo della risposta», solo quella risposta viene conservata per 30 giorni.",
+        "Responsabile del trattamento: Amazon Bedrock, un servizio di Amazon Web Services (AWS), crea le risposte dell’IA nella regione di Seul (ap-northeast-2), nella Repubblica di Corea. Il modello di IA è Claude di Anthropic. Lo gestisce AWS e Anthropic non può vedere i contenuti. Amazon Bedrock è impostato per non archiviare né ciò che invii né le risposte. La società contraente di AWS e i suoi recapiti non sono ancora verificati e saranno indicati in questa informativa prima del rilascio.",
+        "Luogo del trattamento e trasmissione: le richieste all’IA sono trattate all’interno della regione di Seul, nella Repubblica di Corea, e non sono inviate a una regione di un altro Paese. L’app cifra il contenuto un’altra volta con la chiave pubblica del server DoseWeek. Per questo Cloudflare, che inoltra la richiesta, vede solo testo cifrato. Il trasferimento all’estero delle informazioni di connessione trattate da Cloudflare, come il tuo indirizzo IP, segue le indicazioni sui trasferimenti all’estero di questa informativa.",
+        "Addestramento dell’IA e pubblicità: non usiamo le registrazioni e le domande che invii per addestrare l’IA né per la pubblicità, e non le vendiamo.",
+        "Differenza rispetto alla crittografia end-to-end: mentre viene creata una risposta, il server DoseWeek e Amazon Bedrock possono leggere ciò che hai inviato all’assistente IA per le registrazioni. La crittografia end-to-end si applica solo ai dati di sincronizzazione e di backup.",
+        "Decisioni automatizzate: le risposte dell’IA sono solo indicative. L’IA non prende alcuna decisione che incida sui tuoi diritti o obblighi.",
+        "Revoca del consenso ed eliminazione: in Impostazioni > Assistente IA per le registrazioni puoi revocare il consenso ed eliminare i riepiloghi IA salvati in qualsiasi momento. Dopo la revoca non vengono inviate registrazioni all’IA. Eliminando l’account vengono eliminati anche i conteggi di utilizzo e le prove del consenso. Se non dai il consenso, le altre funzioni di Pro e Plus restano disponibili.",
+        "Età: l’assistente IA per le registrazioni è riservato a chi ha almeno 18 anni. Confermi tu la tua età; non chiediamo la data di nascita.",
+        "Indicazioni sull’IA e messaggi di sicurezza: ogni risposta dell’IA riporta l’indicazione che è stata creata dall’IA e che non è un consiglio medico, e ogni risposta ha un pulsante per segnalarla. Per le domande mediche, ad esempio su dosi, sulla normalità di un sintomo, su diagnosi o su farmaci, l’IA non scrive una risposta; l’app mostra invece un messaggio fisso. Se un messaggio sembra un’emergenza o una crisi, l’app mostra i numeri della regione del tuo store: 119 e 109 in Corea, 119 e la Yorisoi Hotline (0120-279-338) in Giappone, 911 e 988 negli Stati Uniti. Altrove rimanda al numero di emergenza locale e a findahelpline.com."
+      ],
+      "e2eeException": "Fa eccezione alla crittografia end-to-end il contenuto che invii tu all’assistente IA per le registrazioni (Pro) dopo aver dato il consenso: il server DoseWeek e Amazon Bedrock possono leggerlo mentre viene creata una risposta.",
+      "healthExclusion": {
+        "ios": "Le informazioni lette da Apple Health non sono usate nemmeno per le funzioni di IA e non sono inviate all’assistente IA per le registrazioni.",
+        "android": "Le informazioni lette da Health Connect non sono usate nemmeno per le funzioni di IA e non sono inviate all’assistente IA per le registrazioni."
+      },
+      "onDeviceScope": "Questa sezione riguarda solo la registrazione con IA e la preparazione della visita, che sono elaborate sul dispositivo. L’assistente IA per le registrazioni (Pro), elaborato su un server, è descritto separatamente nella sezione «Assistente IA per le registrazioni (Pro)» di questa informativa.",
+      "androidAiFaq": "DoseWeek 1.0.6 per Android include l’assistente IA per le registrazioni (Pro), una funzione facoltativa. Solo dopo un consenso separato, un’IA generativa su Amazon Bedrock (regione di Seul, Repubblica di Corea) crea riepiloghi settimanali, idee generali per i pasti e risposte di aiuto sull’app. Nessun’altra funzione usa IA generativa.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — La base è il consenso separato al trattamento delle informazioni sulla salute (sensibili) che dai quando attivi l’assistente IA per le registrazioni. Il contratto di trattamento e la base prevista da PIPA Art. 28-8 per un accesso dall’estero non sono verificati.",
+        "data": "I valori aggregati che confermi sullo schermo quando invii le registrazioni e le domande che scrivi. Non vengono inviati nomi e dosi dei farmaci, note, nomi degli alimenti, foto, date e dati dell’account.",
+        "country": "Trattamento solo all’interno della regione di Seul (ap-northeast-2), Repubblica di Corea. Non viene usato alcun profilo di inferenza che instradi verso un’altra regione. L’assistenza o l’accesso dall’estero non sono verificati.",
+        "timingMethod": "Invio solo quando richiedi una funzione di IA e tocchi «Invia». L’app cifra il contenuto un’altra volta e lo invia al server DoseWeek, che lo decifra solo in memoria e lo passa ad Amazon Bedrock.",
+        "recipientContact": "La società contraente e il contatto del destinatario di Amazon Web Services (AWS) non sono verificati. Riferimento del fornitore: https://aws.amazon.com/privacy/",
+        "purpose": "Responsabile che crea le risposte dell’IA che richiedi. Il modello di IA è Claude di Anthropic, gestito da AWS. Nessun uso per l’addestramento dell’IA né per la pubblicità.",
+        "retention": "Nessuna conservazione. Amazon Bedrock è impostato per non archiviare i contenuti; la prova della verifica dell’impostazione effettiva viene registrata prima del rilascio.",
+        "refusalEffect": "Se non dai il consenso o lo revochi nelle Impostazioni, non sono disponibili solo le funzioni di IA. La registrazione e le altre funzioni di Pro e Plus restano disponibili."
+      },
+      "cloudflareTransit": "Le richieste dell’assistente IA per le registrazioni transitano solo come testo cifrato un’altra volta dall’app.",
+      "terms": [
+        "Pro è un abbonamento facoltativo che aggiunge l’assistente IA per le registrazioni e la risposta prioritaria alle richieste a tutte le funzioni di Plus. Si rinnova automaticamente ogni mese o ogni anno, e le regole su pagamento, rinnovo, annullamento e rimborso della sezione 3 si applicano esattamente come a Plus. La prova gratuita di 7 giorni è offerta solo quando lo store conferma che ne hai diritto. Potrebbe non essere offerta se hai già usato una prova gratuita di Plus.",
+        "Puoi usare l’assistente IA per le registrazioni dopo aver effettuato l’accesso e dato un consenso separato, e solo se hai almeno 18 anni. Crea riepiloghi settimanali, idee generali per i pasti e risposte di aiuto sull’app a partire dalle registrazioni di cui confermi l’invio. Se non dai il consenso, le altre funzioni di Pro restano disponibili.",
+        "L’assistente IA per le registrazioni non è un dispositivo medico e non fornisce consigli medici come diagnosi, trattamenti o istruzioni sul dosaggio. I contenuti creati dall’IA possono essere errati o incompleti. Parla delle decisioni sulla tua salute con un professionista sanitario.",
+        "In caso di emergenza, non aspettare la risposta dell’assistente IA per le registrazioni. Chiama subito il numero di emergenza locale: 119 in Corea e in Giappone, 911 negli Stati Uniti.",
+        "Puoi fare 150 richieste al mese. Durante una prova gratuita puoi farne fino a 50. Un riepilogo settimanale alla settimana non rientra in questo limite; crearlo di nuovo conta come 1 richiesta. Il conteggio si azzera il giorno 1 di ogni mese, secondo il tempo coordinato universale (UTC). Se dovremo ridurre il limite, te lo comunicheremo 30 giorni prima dell’applicazione, e non sarà applicato a tuo svantaggio per un periodo già pagato.",
+        "Non inserire informazioni sulla salute di un’altra persona e non cercare di aggirare i messaggi di sicurezza per ottenere consigli medici.",
+        "Le funzioni di IA possono essere temporaneamente non disponibili. Anche in questo caso i tuoi diritti di recesso e di rimborso previsti dalla legge restano pienamente garantiti.",
+        "Risposta prioritaria alle richieste significa che, quando un abbonato Pro scrive all’assistenza via email per una domanda sull’uso dell’app, inviamo una prima risposta entro 1 giorno lavorativo. I giorni lavorativi sono quelli dal lunedì al venerdì nella Repubblica di Corea, esclusi i festivi. Non rispondiamo a domande mediche, quindi non includere dati sulla salute nel messaggio."
+      ],
+      "usHealth": {
+        "categories": "Se attivi l’assistente IA per le registrazioni (Pro) e confermi l’invio, trattiamo come informazioni sulla salute anche il numero di dosi, la variazione del peso, il conteggio per tipo di sintomo e i totali di pasti e proteine ricavati da ciò che hai inserito, le tue preferenze alimentari, le allergie e gli alimenti che non ti piacciono, e le domande che scrivi. Questo contenuto non è protetto da crittografia end-to-end. Il server può leggerlo mentre viene creata una risposta, e viene eliminato appena la risposta è stata creata. Le informazioni lette da HealthKit o Health Connect non sono inviate all’assistente IA per le registrazioni.",
+        "purpose": "Su richiesta le usiamo anche per creare riepiloghi IA e idee generali di nutrizione. Le risposte dell’IA non sono una diagnosi né una raccomandazione di trattamento.",
+        "processor": "Le richieste dell’assistente IA per le registrazioni sono trattate da Amazon Bedrock di AWS, in qualità di responsabile del trattamento, nella regione di Seul, Repubblica di Corea, solo per creare la risposta. Il contenuto non viene archiviato e non viene usato per addestrare l’IA.",
+        "noSale": "Non vendiamo nemmeno le informazioni sulla salute inviate all’assistente IA per le registrazioni e non le condividiamo a fini pubblicitari.",
+        "consent": "Per l’assistente IA per le registrazioni chiediamo il consenso in una schermata separata alla prima attivazione, e ti chiediamo di confermare di nuovo ogni volta che vengono inviate registrazioni. Puoi revocarlo in qualsiasi momento in Impostazioni > Assistente IA per le registrazioni."
+      },
+      "deletion": "Eliminando l’account vengono eliminati anche i conteggi di utilizzo e le prove del consenso dell’assistente IA per le registrazioni. Quello che invii all’IA e le sue risposte non sono archiviati sul server, quindi non c’è alcuna copia sul server da eliminare. Il testo della risposta che hai scelto di includere in una segnalazione è conservato senza alcun collegamento al tuo account ed eliminato dopo 30 giorni."
+    },
+    "nl": {
+      "name": "AI-registratieassistent",
+      "perk": "Antwoord met voorrang op uw vragen",
+      "sectionTitle": "AI-registratieassistent (Pro)",
+      "clauses": [
+        "Doel: de weekoverzichten, algemene maaltijdideeën en antwoorden op vragen over de app maken waar u om vraagt. De AI-registratieassistent is een optionele functie die bij het Pro-abonnement hoort. De antwoorden komen van AI, niet van een mens, en hij geeft geen medisch advies.",
+        "Verwerkte gegevens: de registraties die u vóór het verzenden op het scherm bevestigt en de vragen die u typt. De registraties zijn het aantal doses (op tijd, te laat, overgeslagen), de verandering van het gewicht dat u zelf heeft ingevoerd, hoe vaak u elk soort klacht heeft vastgelegd, het aantal dagen met een maaltijdregistratie met uw eiwitgemiddelde en -doel, en uw reeks in weken. Voor maaltijdideeën sturen we ook het soort maaltijd, de voorkeuren, de allergieën en de voedingsmiddelen die u niet lust, zoals u die heeft gekozen. Uw taal- en regio-instelling wordt ook verzonden, en bij hulp over de app komen alleen de app-versie, het platform en het huidige scherm erbij. We sturen geen namen of doseringen van medicijnen, notities, namen van voedingsmiddelen, foto’s, datums, of uw naam, e-mailadres of accountgegevens. {healthExclusion} Wat u in het vraagveld typt, wordt verzonden zoals u het heeft geschreven.",
+        "Rechtsgrond: gezondheidsgegevens zijn gevoelig. Daarom verwerken we ze alleen met een toestemming die los van elke andere toestemming wordt gevraagd. In Korea is dit de toestemming op grond van artikel 23 van de Personal Information Protection Act. We vragen erom wanneer u de functie voor het eerst inschakelt, en telkens wanneer registraties worden verzonden, laten we zien wat er wordt verzonden en vragen we u opnieuw te bevestigen.",
+        "Bewaartermijn: wat u verstuurt en de antwoorden blijven niet op de server staan; ze worden verwijderd zodra het antwoord is gemaakt. Chatberichten worden niet opgeslagen. Weekoverzichten worden alleen op uw apparaat bewaard, hooguit 2, en vallen buiten de synchronisatie en elke back-up. Gebruikstellingen (zonder inhoud) worden maximaal 2 maanden bewaard, en toestemmingsbewijzen zolang het account bestaat. Als u een antwoord meldt en ‘Antwoordtekst meesturen’ kiest, wordt alleen dat antwoord 30 dagen bewaard.",
+        "Verwerker: Amazon Bedrock, een dienst van Amazon Web Services (AWS), maakt de AI-antwoorden in de regio Seoul (ap-northeast-2) in de Republiek Korea. Het AI-model is Claude van Anthropic. AWS beheert het, en Anthropic kan de inhoud niet zien. Amazon Bedrock is zo ingesteld dat het niet opslaat wat u verstuurt en ook de antwoorden niet. De contracterende AWS-entiteit en haar contactgegevens zijn nog niet geverifieerd en worden vóór de release in dit beleid vermeld.",
+        "Plaats van verwerking en verzending: AI-verzoeken worden verwerkt binnen de regio Seoul in de Republiek Korea en worden niet naar een regio in een ander land gestuurd. De app versleutelt de inhoud nog een keer met de openbare sleutel van de DoseWeek-server. Daardoor ziet Cloudflare, dat het verzoek doorstuurt, alleen versleutelde tekst. Voor de doorgifte naar het buitenland van verbindingsgegevens die Cloudflare verwerkt, zoals uw IP-adres, geldt de toelichting over doorgifte naar het buitenland in dit beleid.",
+        "AI-training en reclame: we gebruiken de registraties en vragen die u verstuurt niet voor AI-training of reclame, en we verkopen ze niet.",
+        "Verschil met end-to-end-versleuteling: terwijl een antwoord wordt gemaakt, kunnen de DoseWeek-server en Amazon Bedrock lezen wat u naar de AI-registratieassistent heeft gestuurd. End-to-end-versleuteling geldt alleen voor synchronisatie- en back-upgegevens.",
+        "Geautomatiseerde besluiten: AI-antwoorden zijn alleen ter informatie. De AI neemt geen besluit dat uw rechten of plichten raakt.",
+        "Toestemming intrekken en verwijderen: onder Instellingen > AI-registratieassistent kunt u op elk moment uw toestemming intrekken en opgeslagen AI-overzichten verwijderen. Na het intrekken worden er geen registraties meer naar de AI gestuurd. Als u uw account verwijdert, worden ook uw gebruikstellingen en toestemmingsbewijzen verwijderd. Als u geen toestemming geeft, blijven de andere functies van Pro en Plus werken.",
+        "Leeftijd: de AI-registratieassistent is alleen voor personen van 18 jaar en ouder. U bevestigt zelf uw leeftijd; we vragen geen geboortedatum.",
+        "AI-aanduiding en veiligheidsmeldingen: bij elk AI-antwoord staat dat het door AI is gemaakt en geen medisch advies is, en elk antwoord heeft een knop om het te melden. Op medische vragen, bijvoorbeeld over doseringen, over de vraag of een klacht normaal is, over diagnoses of over medicijnen, schrijft de AI geen antwoord; de app toont dan een vaste melding. Lijkt een bericht op een noodgeval of een crisis, dan toont de app de nummers voor uw store-regio: 119 en 109 in Korea, 119 en de Yorisoi Hotline (0120-279-338) in Japan, 911 en 988 in de Verenigde Staten. Elders verwijst de app naar het lokale alarmnummer en naar findahelpline.com."
+      ],
+      "e2eeException": "Een uitzondering op de end-to-end-versleuteling is de inhoud die u na uw toestemming zelf naar de AI-registratieassistent (Pro) stuurt: de DoseWeek-server en Amazon Bedrock kunnen die lezen terwijl een antwoord wordt gemaakt.",
+      "healthExclusion": {
+        "ios": "Gegevens die uit Apple Health zijn gelezen, worden ook niet voor AI-functies gebruikt en niet naar de AI-registratieassistent gestuurd.",
+        "android": "Gegevens die uit Health Connect zijn gelezen, worden ook niet voor AI-functies gebruikt en niet naar de AI-registratieassistent gestuurd."
+      },
+      "onDeviceScope": "Dit onderdeel gaat alleen over AI-registratie en de voorbereiding van een afspraak, die op het apparaat worden verwerkt. De AI-registratieassistent (Pro), die op een server wordt verwerkt, wordt apart beschreven onder ‘AI-registratieassistent (Pro)’ in dit beleid.",
+      "androidAiFaq": "DoseWeek 1.0.6 voor Android bevat de optionele AI-registratieassistent (Pro). Alleen na afzonderlijke toestemming maakt generatieve AI op Amazon Bedrock (regio Seoul, Republiek Korea) weekoverzichten, algemene maaltijdideeën en antwoorden op vragen over de app. Geen enkele andere functie gebruikt generatieve AI.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — De grondslag is de afzonderlijke toestemming voor het verwerken van gezondheidsgegevens (gevoelige gegevens) die u geeft wanneer u de AI-registratieassistent inschakelt. De verwerkersovereenkomst en de grondslag van PIPA Art. 28-8 voor toegang vanuit het buitenland zijn niet geverifieerd.",
+        "data": "De samengevatte waarden die u bij het verzenden op het scherm bevestigt en de vragen die u typt. Namen en doseringen van medicijnen, notities, namen van voedingsmiddelen, foto’s, datums en accountgegevens worden niet verzonden.",
+        "country": "Verwerking alleen binnen de regio Seoul (ap-northeast-2), Republiek Korea. Er wordt geen inferentieprofiel gebruikt dat naar een andere regio doorstuurt. Ondersteuning of toegang vanuit het buitenland is niet geverifieerd.",
+        "timingMethod": "Alleen verzonden wanneer u een AI-functie vraagt en op ‘Verzenden’ tikt. De app versleutelt de inhoud nog een keer en stuurt die naar de DoseWeek-server, die de inhoud alleen in het geheugen ontsleutelt en doorgeeft aan Amazon Bedrock.",
+        "recipientContact": "De contracterende entiteit en het contact van de ontvanger van Amazon Web Services (AWS) zijn niet geverifieerd. Verwijzing van de leverancier: https://aws.amazon.com/privacy/",
+        "purpose": "Verwerker die de AI-antwoorden maakt waar u om vraagt. Het AI-model is Claude van Anthropic en wordt door AWS beheerd. Geen gebruik voor AI-training of reclame.",
+        "retention": "Niet bewaard. Amazon Bedrock is zo ingesteld dat inhoud niet wordt opgeslagen; het bewijs van de controle van de werkelijke instelling wordt vóór de release vastgelegd.",
+        "refusalEffect": "Als u geen toestemming geeft of die in Instellingen intrekt, vervallen alleen de AI-functies. Registreren en de andere functies van Pro en Plus blijven werken."
+      },
+      "cloudflareTransit": "Verzoeken van de AI-registratieassistent passeren alleen als tekst die de app nog een keer heeft versleuteld.",
+      "terms": [
+        "Pro is een optioneel abonnement dat de AI-registratieassistent en antwoord met voorrang op uw vragen toevoegt aan alles van Plus. Het wordt elke maand of elk jaar automatisch verlengd, en de regels voor betaling, verlenging, opzegging en terugbetaling in onderdeel 3 gelden ervoor net als voor Plus. Een gratis proefperiode van 7 dagen wordt alleen aangeboden als de store bevestigt dat u ervoor in aanmerking komt. Die wordt mogelijk niet aangeboden als u al een gratis proefperiode van Plus heeft gebruikt.",
+        "U kunt de AI-registratieassistent gebruiken nadat u bent ingelogd en afzonderlijk toestemming heeft gegeven, en alleen als u 18 jaar of ouder bent. De assistent maakt weekoverzichten, algemene maaltijdideeën en antwoorden op vragen over de app op basis van de registraties waarvan u het verzenden bevestigt. Als u geen toestemming geeft, blijven de andere functies van Pro werken.",
+        "De AI-registratieassistent is geen medisch hulpmiddel en geeft geen medisch advies zoals diagnoses, behandelingen of doseerinstructies. Door AI gemaakte inhoud kan onjuist of onvolledig zijn. Overleg beslissingen over uw gezondheid met uw zorgverlener.",
+        "Wacht in een noodgeval niet op een antwoord van de AI-registratieassistent. Bel direct het lokale alarmnummer: 119 in Korea en Japan, 911 in de Verenigde Staten.",
+        "U kunt 150 verzoeken per maand doen. Tijdens een gratis proefperiode zijn dat er hooguit 50. Eén weekoverzicht per week telt niet mee voor deze limiet; het opnieuw maken telt als 1 verzoek. De telling wordt op de 1e van elke maand in gecoördineerde wereldtijd (UTC) opnieuw aangevuld. Als we de limiet moeten verlagen, laten we u dat 30 dagen vooraf weten, en de verlaging geldt niet in uw nadeel voor een periode waarvoor u al heeft betaald.",
+        "Voer geen gezondheidsgegevens van iemand anders in en probeer de veiligheidsmeldingen niet te omzeilen om medisch advies te krijgen.",
+        "De AI-functies kunnen soms tijdelijk niet beschikbaar zijn. Ook dan blijven uw wettelijke rechten op herroeping en terugbetaling volledig gelden.",
+        "Antwoord met voorrang op uw vragen betekent dat een Pro-abonnee die de ondersteuning per e-mail een vraag stuurt over het gebruik van de app, binnen 1 werkdag een eerste antwoord krijgt. Werkdagen zijn maandag tot en met vrijdag in de Republiek Korea, behalve feestdagen. We beantwoorden geen medische vragen, dus neem geen gezondheidsgegevens op in uw bericht."
+      ],
+      "usHealth": {
+        "categories": "Als u de AI-registratieassistent (Pro) inschakelt en het verzenden bevestigt, behandelen we ook het volgende als gezondheidsgegevens: het aantal doses, de gewichtsverandering, het aantal per soort klacht en de totalen van maaltijden en eiwit die uit uw invoer zijn samengesteld, uw maaltijdvoorkeuren, allergieën en voedingsmiddelen die u niet lust, en de vragen die u typt. Deze inhoud is niet end-to-end versleuteld. De server kan die lezen terwijl een antwoord wordt gemaakt, en de inhoud wordt verwijderd zodra het antwoord is gemaakt. Gegevens die uit HealthKit of Health Connect zijn gelezen, worden niet naar de AI-registratieassistent gestuurd.",
+        "purpose": "Op verzoek gebruiken we ze ook om AI-overzichten en algemene voedingsideeën te maken. AI-antwoorden zijn geen diagnose en geen behandeladvies.",
+        "processor": "Verzoeken van de AI-registratieassistent worden verwerkt door Amazon Bedrock van AWS, als verwerker, in de regio Seoul, Republiek Korea, alleen om het antwoord te maken. De inhoud wordt niet opgeslagen en niet gebruikt voor AI-training.",
+        "noSale": "Ook gezondheidsgegevens die naar de AI-registratieassistent zijn gestuurd, verkopen we niet en delen we niet voor reclame.",
+        "consent": "Voor de AI-registratieassistent vragen we uw toestemming op een apart scherm wanneer u die voor het eerst inschakelt, en we vragen u opnieuw te bevestigen telkens wanneer registraties worden verzonden. U kunt de toestemming op elk moment intrekken onder Instellingen > AI-registratieassistent."
+      },
+      "deletion": "Als u uw account verwijdert, worden ook de gebruikstellingen en toestemmingsbewijzen van de AI-registratieassistent verwijderd. Wat u naar de AI stuurt en de antwoorden worden niet op de server opgeslagen, dus er is geen serverkopie om te verwijderen. Antwoordtekst die u met een melding heeft meegestuurd, wordt zonder koppeling met uw account bewaard en na 30 dagen verwijderd."
+    },
+    "pt-PT": {
+      "name": "assistente de registos com IA",
+      "perk": "Resposta prioritária às suas perguntas",
+      "sectionTitle": "Assistente de registos com IA (Pro)",
+      "clauses": [
+        "Finalidade: criar os resumos semanais, as ideias gerais de refeições e as respostas de ajuda sobre a aplicação que pedir. O assistente de registos com IA é uma funcionalidade opcional incluída na subscrição Pro. As respostas são dadas por uma IA, não por uma pessoa, e não presta aconselhamento médico.",
+        "Dados tratados: os registos que confirma no ecrã antes do envio e as perguntas que escreve. Os registos são o número de doses (a horas, com atraso, omitidas), a variação do peso que introduziu, quantas vezes registou cada tipo de sintoma, o número de dias com refeições registadas, juntamente com a média e o objetivo de proteína, e a sua sequência em semanas. Para as ideias de refeições enviamos também o tipo de refeição, as preferências, as alergias e os alimentos de que não gosta, tal como os escolheu. A definição de idioma e região também é enviada, e a ajuda sobre a aplicação acrescenta apenas a versão da aplicação, a plataforma e o ecrã atual. Não enviamos nomes nem doses de medicamentos, notas, nomes de alimentos, fotografias, datas, nem o seu nome, e-mail ou dados da conta. {healthExclusion} O que escrever no campo da pergunta é enviado tal como o escreveu.",
+        "Fundamento jurídico: a informação de saúde é sensível, pelo que só a tratamos com um consentimento recolhido separadamente de qualquer outro. Na Coreia, trata-se do consentimento previsto no artigo 23.º da lei de proteção de informações pessoais (PIPA). Pedimo-lo quando ativa a funcionalidade pela primeira vez e, sempre que são enviados registos, mostramos o que vai ser enviado e pedimos que confirme novamente.",
+        "Conservação: o que envia e as respostas não ficam no servidor; são eliminados logo que a resposta é criada. As mensagens da conversa não são guardadas. Os resumos semanais são guardados apenas no seu dispositivo, no máximo 2, e ficam fora da sincronização e de qualquer cópia de segurança. As contagens de utilização (sem conteúdo) são conservadas até 2 meses, e os registos de consentimento enquanto a conta existir. Se denunciar uma resposta e escolher «Incluir o texto da resposta», só essa resposta é conservada durante 30 dias.",
+        "Subcontratante: o Amazon Bedrock, um serviço da Amazon Web Services (AWS), cria as respostas da IA na região de Seul (ap-northeast-2), na República da Coreia. O modelo de IA é o Claude, da Anthropic. É operado pela AWS, e a Anthropic não consegue ver o conteúdo. O Amazon Bedrock está configurado para não guardar o que envia nem as respostas. A entidade contratante da AWS e os respetivos contactos ainda não foram verificados e serão indicados nesta política antes do lançamento.",
+        "Local do tratamento e transmissão: os pedidos à IA são tratados dentro da região de Seul, na República da Coreia, e não são enviados para uma região de outro país. A aplicação cifra o conteúdo mais uma vez com a chave pública do servidor do DoseWeek. Por isso a Cloudflare, que encaminha o pedido, só vê texto cifrado. A transferência internacional das informações de ligação tratadas pela Cloudflare, como o seu endereço IP, segue o aviso sobre transferências internacionais desta política.",
+        "Treino de IA e publicidade: não usamos os registos e as perguntas que envia para treinar IA nem para publicidade, e não os vendemos.",
+        "Diferença em relação à encriptação de ponta a ponta: enquanto uma resposta é criada, o servidor do DoseWeek e o Amazon Bedrock conseguem ler o que enviou ao assistente de registos com IA. A encriptação de ponta a ponta aplica-se apenas aos dados de sincronização e de cópia de segurança.",
+        "Decisões automatizadas: as respostas da IA são apenas de referência. A IA não toma nenhuma decisão que afete os seus direitos ou obrigações.",
+        "Retirar o consentimento e eliminar: em Definições > Assistente de registos com IA pode, a qualquer momento, retirar o consentimento e eliminar os resumos de IA guardados. Depois de o retirar, não são enviados registos à IA. Ao eliminar a conta, são também eliminadas as contagens de utilização e os registos de consentimento. Se não der o consentimento, as outras funcionalidades do Pro e do Plus continuam disponíveis.",
+        "Idade: o assistente de registos com IA é apenas para maiores de 18 anos. É o próprio utilizador que confirma a idade; não pedimos a data de nascimento.",
+        "Avisos de IA e mensagens de segurança: cada resposta da IA tem um aviso de que foi criada por IA e de que não é aconselhamento médico, e cada resposta tem um botão para a denunciar. Perante perguntas médicas, por exemplo sobre doses, sobre se um sintoma é normal, sobre diagnósticos ou sobre medicamentos, a IA não escreve uma resposta; a aplicação mostra, em vez disso, uma mensagem fixa. Se uma mensagem parecer uma emergência ou uma crise, a aplicação mostra os números da região da sua loja: 119 e 109 na Coreia, 119 e a Yorisoi Hotline (0120-279-338) no Japão, 911 e 988 nos Estados Unidos. Noutros locais, indica o número de emergência local e findahelpline.com."
+      ],
+      "e2eeException": "A exceção à encriptação de ponta a ponta é o conteúdo que o próprio utilizador envia ao assistente de registos com IA (Pro) depois de dar o consentimento: o servidor do DoseWeek e o Amazon Bedrock conseguem lê-lo enquanto uma resposta é criada.",
+      "healthExclusion": {
+        "ios": "A informação lida da Apple Health também não é usada em funcionalidades de IA nem é enviada ao assistente de registos com IA.",
+        "android": "A informação lida do Health Connect também não é usada em funcionalidades de IA nem é enviada ao assistente de registos com IA."
+      },
+      "onDeviceScope": "Esta secção refere-se apenas ao registo com IA e à preparação da consulta, que são processados no dispositivo. O assistente de registos com IA (Pro), processado num servidor, é descrito em separado na secção «Assistente de registos com IA (Pro)» desta política.",
+      "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registos com IA (Pro), uma funcionalidade opcional. Só depois de um consentimento separado é que uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre a aplicação. Nenhuma outra funcionalidade usa IA generativa.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — O fundamento é o consentimento separado para o tratamento de informação de saúde (sensível) que dá ao ativar o assistente de registos com IA. O contrato de subcontratação e o fundamento do PIPA Art. 28-8 para um acesso a partir do estrangeiro não estão verificados.",
+        "data": "Os valores agregados que confirma no ecrã ao enviar registos e as perguntas que escreve. Não são enviados nomes nem doses de medicamentos, notas, nomes de alimentos, fotografias, datas nem dados da conta.",
+        "country": "Tratamento apenas dentro da região de Seul (ap-northeast-2), República da Coreia. Não é usado nenhum perfil de inferência que encaminhe para outra região. O suporte ou o acesso a partir do estrangeiro não estão verificados.",
+        "timingMethod": "Envio apenas quando pede uma funcionalidade de IA e toca em «Enviar». A aplicação cifra o conteúdo mais uma vez e envia-o para o servidor do DoseWeek, que o decifra apenas em memória e o passa ao Amazon Bedrock.",
+        "recipientContact": "A entidade contratante e o contacto do destinatário da Amazon Web Services (AWS) não estão verificados. Referência do fornecedor: https://aws.amazon.com/privacy/",
+        "purpose": "Subcontratante que cria as respostas de IA que pede. O modelo de IA é o Claude, da Anthropic, operado pela AWS. Sem utilização para treino de IA nem para publicidade.",
+        "retention": "Sem conservação. O Amazon Bedrock está configurado para não guardar conteúdo; o registo da verificação da configuração real é guardado antes do lançamento.",
+        "refusalEffect": "Se não der o consentimento ou o retirar nas Definições, só as funcionalidades de IA deixam de estar disponíveis. O registo e as outras funcionalidades do Pro e do Plus continuam disponíveis."
+      },
+      "cloudflareTransit": "Os pedidos do assistente de registos com IA passam apenas como texto cifrado mais uma vez pela aplicação.",
+      "terms": [
+        "O Pro é uma subscrição opcional que acrescenta o assistente de registos com IA e a resposta prioritária às suas perguntas a tudo o que o Plus inclui. Renova-se automaticamente todos os meses ou todos os anos, e as regras de pagamento, renovação, cancelamento e reembolso da secção 3 aplicam-se-lhe tal como ao Plus. O período experimental gratuito de 7 dias só é oferecido quando a loja confirma que é elegível. Pode não ser oferecido se já tiver usado um período experimental gratuito do Plus.",
+        "Pode usar o assistente de registos com IA depois de iniciar sessão e dar um consentimento separado, e apenas se tiver 18 anos ou mais. Cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre a aplicação a partir dos registos cujo envio confirma. Se não der o consentimento, as outras funcionalidades do Pro continuam disponíveis.",
+        "O assistente de registos com IA não é um dispositivo médico e não presta aconselhamento médico, como diagnósticos, tratamentos ou instruções de dosagem. O conteúdo criado por IA pode estar errado ou incompleto. Fale com o seu profissional de saúde antes de tomar decisões sobre a sua saúde.",
+        "Numa emergência, não espere pela resposta do assistente de registos com IA. Ligue de imediato para o número de emergência local: 119 na Coreia e no Japão, 911 nos Estados Unidos.",
+        "Pode fazer 150 pedidos por mês. Durante um período experimental gratuito pode fazer até 50. Um resumo semanal por semana não conta para este limite; criá-lo de novo conta como 1 pedido. A contagem é reposta no dia 1 de cada mês, em tempo universal coordenado (UTC). Se tivermos de reduzir o limite, avisaremos 30 dias antes de o aplicar, e não será aplicado em seu prejuízo durante um período que já tenha pago.",
+        "Não introduza informação de saúde de outra pessoa nem tente contornar as mensagens de segurança para obter aconselhamento médico.",
+        "As funcionalidades de IA podem ficar temporariamente indisponíveis. Também nesse caso os seus direitos legais de livre resolução e de reembolso se mantêm integralmente.",
+        "A resposta prioritária às suas perguntas significa que, quando um subscritor do Pro escreve ao apoio por e-mail com uma pergunta sobre a utilização da aplicação, enviamos uma primeira resposta no prazo de 1 dia útil. Os dias úteis são os dias de segunda a sexta-feira na República da Coreia, excluindo feriados. Não respondemos a perguntas médicas, por isso não inclua registos de saúde na sua mensagem."
+      ],
+      "usHealth": {
+        "categories": "Se ativar o assistente de registos com IA (Pro) e confirmar o envio, tratamos também como informação de saúde o número de doses, a variação do peso, a contagem por tipo de sintoma e os totais de refeições e proteína elaborados a partir do que introduziu, as suas preferências alimentares, alergias e alimentos de que não gosta, e as perguntas que escreve. Este conteúdo não tem encriptação de ponta a ponta. O servidor consegue lê-lo enquanto uma resposta é criada, e é eliminado logo que a resposta é criada. A informação lida do HealthKit ou do Health Connect não é enviada ao assistente de registos com IA.",
+        "purpose": "A pedido, usamo-la também para criar resumos de IA e ideias gerais de nutrição. As respostas da IA não são um diagnóstico nem uma recomendação de tratamento.",
+        "processor": "Os pedidos do assistente de registos com IA são tratados pelo Amazon Bedrock da AWS, enquanto subcontratante, na região de Seul, República da Coreia, apenas para criar a resposta. O conteúdo não é guardado nem usado para treinar IA.",
+        "noSale": "Também não vendemos a informação de saúde enviada ao assistente de registos com IA nem a partilhamos para fins de publicidade.",
+        "consent": "Para o assistente de registos com IA, pedimos o consentimento num ecrã separado quando o ativa pela primeira vez, e pedimos que confirme novamente sempre que são enviados registos. Pode retirá-lo a qualquer momento em Definições > Assistente de registos com IA."
+      },
+      "deletion": "Ao eliminar a conta, são também eliminadas as contagens de utilização e os registos de consentimento do assistente de registos com IA. O que envia à IA e as respostas não são guardados no servidor, pelo que não existe cópia no servidor para eliminar. O texto da resposta que escolheu incluir numa denúncia é conservado sem ligação à sua conta e eliminado ao fim de 30 dias."
+    },
+    "pl": {
+      "name": "asystent wpisów AI",
+      "perk": "Priorytetowa odpowiedź na pytania",
+      "sectionTitle": "Asystent wpisów AI (Pro)",
+      "clauses": [
+        "Cel: tworzenie podsumowań tygodnia, ogólnych pomysłów na posiłki i odpowiedzi z pomocą dotyczącą aplikacji, o które prosisz. Asystent wpisów AI to opcjonalna funkcja zawarta w subskrypcji Pro. Odpowiedzi tworzy AI, a nie człowiek, i nie udziela on porad medycznych.",
+        "Przetwarzane dane: wpisy, które potwierdzasz na ekranie przed wysłaniem, oraz pytania, które wpisujesz. Wpisy to liczba dawek (na czas, z opóźnieniem, pominięte), zmiana masy ciała wprowadzonej samodzielnie, liczba zapisów każdego rodzaju objawu, liczba dni z zapisanym posiłkiem wraz ze średnią i celem białka oraz twoja seria w tygodniach. Przy pomysłach na posiłki wysyłamy też wybrany rodzaj posiłku, preferencje, alergie i produkty, których nie lubisz. Wysyłane jest także ustawienie języka i regionu, a pomoc dotycząca aplikacji dodaje tylko wersję aplikacji, platformę i bieżący ekran. Nie wysyłamy nazw ani dawek leków, notatek, nazw produktów spożywczych, zdjęć, dat ani twojego imienia i nazwiska, adresu e-mail czy danych konta. {healthExclusion} To, co wpiszesz w polu pytania, jest wysyłane dokładnie tak, jak zostało napisane.",
+        "Podstawa prawna: informacje o zdrowiu są danymi wrażliwymi, dlatego przetwarzamy je tylko na podstawie zgody zbieranej oddzielnie od wszystkich innych zgód. W Korei jest to zgoda na podstawie art. 23 ustawy o ochronie informacji osobistych (PIPA). Prosimy o nią przy pierwszym włączeniu funkcji, a przy każdym wysłaniu wpisów pokazujemy, co zostanie wysłane, i prosimy o ponowne potwierdzenie.",
+        "Okres przechowywania: tego, co wysyłasz, i odpowiedzi nie zostawiamy na serwerze; usuwamy je od razu po utworzeniu odpowiedzi. Wiadomości z rozmowy nie są zapisywane. Podsumowania tygodnia są zapisywane tylko na twoim urządzeniu, najwyżej 2, i nie trafiają do synchronizacji ani żadnej kopii zapasowej. Liczniki użycia (bez treści) przechowujemy do 2 miesięcy, a potwierdzenia zgody tak długo, jak istnieje konto. Jeśli zgłosisz odpowiedź i wybierzesz „Dołącz treść odpowiedzi”, tylko ta odpowiedź jest przechowywana przez 30 dni.",
+        "Podmiot przetwarzający: Amazon Bedrock, usługa Amazon Web Services (AWS), tworzy odpowiedzi AI w regionie Seul (ap-northeast-2) w Republice Korei. Model AI to Claude firmy Anthropic. Obsługuje go AWS, a Anthropic nie widzi treści. Amazon Bedrock jest ustawiony tak, aby nie zapisywać ani tego, co wysyłasz, ani odpowiedzi. Podmiot AWS będący stroną umowy i jego dane kontaktowe nie zostały jeszcze zweryfikowane i zostaną podane w tej polityce przed wydaniem.",
+        "Miejsce przetwarzania i przesyłanie: żądania do AI są przetwarzane w regionie Seul w Republice Korei i nie są wysyłane do regionu w innym kraju. Aplikacja szyfruje treść jeszcze raz kluczem publicznym serwera DoseWeek. Dlatego Cloudflare, który przekazuje żądanie, widzi tylko zaszyfrowany tekst. Przekazywanie za granicę informacji o połączeniu przetwarzanych przez Cloudflare, takich jak twój adres IP, odbywa się zgodnie z informacją o przekazywaniu za granicę w tej polityce.",
+        "Trenowanie AI i reklamy: nie używamy wysyłanych wpisów i pytań do trenowania AI ani do reklam i nie sprzedajemy ich.",
+        "Różnica względem szyfrowania end-to-end: podczas tworzenia odpowiedzi serwer DoseWeek i Amazon Bedrock mogą odczytać to, co wysłano do asystenta wpisów AI. Szyfrowanie end-to-end dotyczy tylko danych synchronizacji i kopii zapasowych.",
+        "Zautomatyzowane decyzje: odpowiedzi AI mają charakter pomocniczy. AI nie podejmuje żadnej decyzji, która wpływa na twoje prawa lub obowiązki.",
+        "Wycofanie zgody i usuwanie: w Ustawieniach > Asystent wpisów AI możesz w każdej chwili wycofać zgodę i usunąć zapisane podsumowania AI. Po wycofaniu zgody wpisy nie są wysyłane do AI. Usunięcie konta usuwa też liczniki użycia i potwierdzenia zgody. Jeśli nie wyrazisz zgody, pozostałe funkcje Pro i Plus nadal działają.",
+        "Wiek: asystent wpisów AI jest tylko dla osób, które mają co najmniej 18 lat. Wiek potwierdzasz samodzielnie; nie prosimy o datę urodzenia.",
+        "Oznaczenia AI i komunikaty bezpieczeństwa: każda odpowiedź AI ma oznaczenie, że utworzyła ją AI i że nie jest poradą medyczną, a przy każdej odpowiedzi jest przycisk zgłoszenia. Na pytania medyczne, na przykład o dawki, o to, czy objaw jest normalny, o diagnozy lub o leki, AI nie tworzy odpowiedzi; aplikacja pokazuje zamiast tego stały komunikat. Jeśli wiadomość wygląda na nagły wypadek lub kryzys, aplikacja pokazuje numery dla regionu twojego sklepu: 119 i 109 w Korei, 119 i Yorisoi Hotline (0120-279-338) w Japonii, 911 i 988 w Stanach Zjednoczonych. W innych miejscach wskazuje lokalny numer alarmowy i findahelpline.com."
+      ],
+      "e2eeException": "Wyjątkiem od szyfrowania end-to-end jest treść, którą po wyrażeniu zgody samodzielnie wysyłasz do asystenta wpisów AI (Pro): serwer DoseWeek i Amazon Bedrock mogą ją odczytać podczas tworzenia odpowiedzi.",
+      "healthExclusion": {
+        "ios": "Informacje odczytane z Apple Health nie są też używane w funkcjach AI i nie są wysyłane do asystenta wpisów AI.",
+        "android": "Informacje odczytane z Health Connect nie są też używane w funkcjach AI i nie są wysyłane do asystenta wpisów AI."
+      },
+      "onDeviceScope": "Ta sekcja dotyczy tylko zapisu z AI i przygotowania do wizyty, które są przetwarzane na urządzeniu. Asystent wpisów AI (Pro), przetwarzany na serwerze, jest opisany osobno w sekcji „Asystent wpisów AI (Pro)” tej polityki.",
+      "androidAiFaq": "DoseWeek 1.0.6 na Androida zawiera opcjonalnego asystenta wpisów AI (Pro). Tylko po odrębnej zgodzie generatywna AI w Amazon Bedrock (region Seul, Republika Korei) tworzy podsumowania tygodnia, ogólne pomysły na posiłki i odpowiedzi z pomocą dotyczącą aplikacji. Żadna inna funkcja nie używa generatywnej AI.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — Podstawą jest odrębna zgoda na przetwarzanie informacji o zdrowiu (danych wrażliwych), której udzielasz przy włączaniu asystenta wpisów AI. Umowa powierzenia przetwarzania i podstawa z PIPA Art. 28-8 dla dostępu z zagranicy nie zostały zweryfikowane.",
+        "data": "Zbiorcze wartości, które potwierdzasz na ekranie przy wysyłaniu wpisów, oraz pytania, które wpisujesz. Nazwy i dawki leków, notatki, nazwy produktów spożywczych, zdjęcia, daty i dane konta nie są wysyłane.",
+        "country": "Przetwarzanie tylko w regionie Seul (ap-northeast-2), Republika Korei. Nie jest używany żaden profil inferencji kierujący do innego regionu. Wsparcie lub dostęp z zagranicy nie zostały zweryfikowane.",
+        "timingMethod": "Wysyłane tylko wtedy, gdy prosisz o funkcję AI i dotkniesz „Wyślij”. Aplikacja szyfruje treść jeszcze raz i wysyła ją do serwera DoseWeek, który odszyfrowuje ją tylko w pamięci i przekazuje do Amazon Bedrock.",
+        "recipientContact": "Podmiot będący stroną umowy i kontakt odbiorcy Amazon Web Services (AWS) nie zostały zweryfikowane. Informacje dostawcy: https://aws.amazon.com/privacy/",
+        "purpose": "Podmiot przetwarzający, który tworzy odpowiedzi AI, o które prosisz. Model AI to Claude firmy Anthropic, obsługiwany przez AWS. Bez użycia do trenowania AI ani do reklam.",
+        "retention": "Brak przechowywania. Amazon Bedrock jest ustawiony tak, aby nie zapisywać treści; zapis sprawdzenia rzeczywistego ustawienia zostanie sporządzony przed wydaniem.",
+        "refusalEffect": "Jeśli nie wyrazisz zgody albo wycofasz ją w Ustawieniach, niedostępne będą tylko funkcje AI. Zapisywanie wpisów oraz pozostałe funkcje Pro i Plus nadal działają."
+      },
+      "cloudflareTransit": "Żądania asystenta wpisów AI przechodzą tylko jako tekst zaszyfrowany jeszcze raz przez aplikację.",
+      "terms": [
+        "Pro to opcjonalna subskrypcja, która do wszystkich funkcji Plus dodaje asystenta wpisów AI i funkcję „Priorytetowa odpowiedź na pytania”. Odnawia się automatycznie co miesiąc lub co rok, a zasady płatności, odnawiania, anulowania i zwrotów z sekcji 3 stosuje się do niej tak samo jak do Plus. Bezpłatny okres próbny 7 dni jest dostępny tylko wtedy, gdy sklep potwierdzi, że się do niego kwalifikujesz. Może nie być dostępny, jeśli wcześniej wykorzystano bezpłatny okres próbny Plus.",
+        "Z asystenta wpisów AI możesz korzystać po zalogowaniu się i wyrażeniu odrębnej zgody, i tylko jeśli masz co najmniej 18 lat. Tworzy on podsumowania tygodnia, ogólne pomysły na posiłki i odpowiedzi z pomocą dotyczącą aplikacji na podstawie wpisów, których wysłanie potwierdzasz. Jeśli nie wyrazisz zgody, pozostałe funkcje Pro nadal działają.",
+        "Asystent wpisów AI nie jest wyrobem medycznym i nie udziela porad medycznych, takich jak diagnoza, leczenie czy instrukcje dawkowania. Treści utworzone przez AI mogą być błędne lub niepełne. Decyzje dotyczące zdrowia skonsultuj z pracownikiem ochrony zdrowia.",
+        "W nagłym wypadku nie czekaj na odpowiedź asystenta wpisów AI. Od razu zadzwoń pod lokalny numer alarmowy: 119 w Korei i Japonii, 911 w Stanach Zjednoczonych.",
+        "Możesz wysłać 150 żądań w miesiącu. W bezpłatnym okresie próbnym możesz wysłać do 50. Jedno podsumowanie tygodnia na tydzień nie wlicza się do tego limitu; utworzenie go ponownie liczy się jako 1 żądanie. Licznik odnawia się 1. dnia każdego miesiąca według uniwersalnego czasu koordynowanego (UTC). Jeśli będziemy musieli obniżyć limit, poinformujemy o tym 30 dni przed zastosowaniem zmiany i nie zastosujemy jej na twoją niekorzyść w okresie, za który już zapłacono.",
+        "Nie wprowadzaj informacji o zdrowiu innej osoby i nie próbuj obchodzić komunikatów bezpieczeństwa, aby uzyskać poradę medyczną.",
+        "Funkcje AI mogą być czasowo niedostępne. Także wtedy twoje ustawowe prawa do odstąpienia od umowy i do zwrotu pozostają w pełni zachowane.",
+        "Priorytetowa odpowiedź na pytania oznacza, że gdy subskrybent Pro wyśle e-mailem do pomocy technicznej pytanie o korzystanie z aplikacji, pierwszą odpowiedź wysyłamy w ciągu 1 dnia roboczego. Dni robocze to dni od poniedziałku do piątku w Republice Korei, z wyjątkiem świąt. Nie odpowiadamy na pytania medyczne, więc nie dołączaj do wiadomości wpisów o zdrowiu."
+      ],
+      "usHealth": {
+        "categories": "Jeśli włączysz asystenta wpisów AI (Pro) i potwierdzisz wysłanie, jako informacje o zdrowiu traktujemy także liczbę dawek, zmianę masy ciała, liczbę zapisów według rodzaju objawu oraz sumy posiłków i białka utworzone z wprowadzonych danych, twoje preferencje dotyczące posiłków, alergie i produkty, których nie lubisz, a także pytania, które wpisujesz. Ta treść nie jest szyfrowana end-to-end. Serwer może ją odczytać podczas tworzenia odpowiedzi, a po utworzeniu odpowiedzi jest od razu usuwana. Informacje odczytane z HealthKit lub Health Connect nie są wysyłane do asystenta wpisów AI.",
+        "purpose": "Na twoją prośbę używamy ich także do tworzenia podsumowań AI i ogólnych pomysłów żywieniowych. Odpowiedzi AI nie są diagnozą ani zaleceniem leczenia.",
+        "processor": "Żądania asystenta wpisów AI przetwarza Amazon Bedrock od AWS, jako podmiot przetwarzający, w regionie Seul w Republice Korei, wyłącznie w celu utworzenia odpowiedzi. Treść nie jest zapisywana ani używana do trenowania AI.",
+        "noSale": "Informacji o zdrowiu wysłanych do asystenta wpisów AI także nie sprzedajemy i nie udostępniamy do celów reklamowych.",
+        "consent": "W przypadku asystenta wpisów AI prosimy o zgodę na osobnym ekranie przy pierwszym włączeniu, a przy każdym wysłaniu wpisów prosimy o ponowne potwierdzenie. Zgodę możesz wycofać w każdej chwili w Ustawieniach > Asystent wpisów AI."
+      },
+      "deletion": "Usunięcie konta usuwa też liczniki użycia i potwierdzenia zgody asystenta wpisów AI. Tego, co wysyłasz do AI, i odpowiedzi nie zapisujemy na serwerze, więc nie ma kopii na serwerze do usunięcia. Treść odpowiedzi dołączona do zgłoszenia jest przechowywana bez powiązania z twoim kontem i usuwana po 30 dniach."
+    },
+    "sv": {
+      "name": "AI-loggassistenten",
+      "perk": "Prioriterat svar på frågor",
+      "sectionTitle": "AI-loggassistenten (Pro)",
+      "clauses": [
+        "Ändamål: att skapa de veckosammanfattningar, allmänna måltidsidéer och svar om hur appen fungerar som du ber om. AI-loggassistenten är en valfri funktion som ingår i Pro-prenumerationen. Svaren kommer från AI, inte från en människa, och den ger inte medicinsk rådgivning.",
+        "Uppgifter som behandlas: de poster du bekräftar på skärmen innan de skickas och de frågor du skriver. Posterna är antal doser (i tid, sena, överhoppade), förändringen i den vikt du själv har angett, hur många gånger du har loggat varje typ av symptom, antal dagar med loggad måltid tillsammans med ditt proteingenomsnitt och proteinmål samt din svit i veckor. För måltidsidéer skickar vi också den måltidstyp, de preferenser, de allergier och de livsmedel du inte tycker om som du har valt. Din språk- och regioninställning skickas också, och apphjälpen lägger bara till appversion, plattform och aktuell skärm. Vi skickar inte läkemedelsnamn eller doser, anteckningar, livsmedelsnamn, foton, datum eller ditt namn, din e-postadress eller dina kontouppgifter. {healthExclusion} Det du skriver i frågefältet skickas precis som du skrev det.",
+        "Rättslig grund: hälsoinformation är känslig, så vi behandlar den bara med ett samtycke som hämtas in separat från alla andra samtycken. I Korea är det samtycket enligt artikel 23 i lagen om skydd av personuppgifter (PIPA). Vi frågar när du slår på funktionen första gången, och varje gång poster skickas visar vi vad som skickas och ber dig bekräfta igen.",
+        "Lagringstid: det du skickar och svaren sparas inte på servern utan raderas så snart svaret har skapats. Chattmeddelanden sparas inte. Veckosammanfattningar sparas bara på din enhet, högst 2, och ingår inte i synkroniseringen eller i någon säkerhetskopia. Användningsräknare (utan innehåll) sparas i upp till 2 månader och samtyckesbevis så länge kontot finns. Om du rapporterar ett svar och väljer ”Skicka med svarstexten” sparas bara det svaret i 30 dagar.",
+        "Personuppgiftsbiträde: Amazon Bedrock, en tjänst från Amazon Web Services (AWS), skapar AI-svaren i regionen Seoul (ap-northeast-2) i Republiken Korea. AI-modellen är Claude från Anthropic. AWS driver den, och Anthropic kan inte se innehållet. Amazon Bedrock är inställt så att varken det du skickar eller svaren sparas. AWS avtalspart och dess kontaktuppgifter är ännu inte verifierade och anges i den här policyn före lanseringen.",
+        "Var behandlingen sker och hur uppgifterna skickas: AI-förfrågningar behandlas inom regionen Seoul i Republiken Korea och skickas inte till en region i ett annat land. Appen krypterar innehållet en gång till med DoseWeek-serverns offentliga nyckel. Därför ser Cloudflare, som vidarebefordrar förfrågan, bara krypterad text. Överföringen till utlandet av anslutningsuppgifter som Cloudflare hanterar, till exempel din IP-adress, följer informationen om överföringar till utlandet i den här policyn.",
+        "AI-träning och reklam: vi använder inte de poster och frågor du skickar för AI-träning eller reklam, och vi säljer dem inte.",
+        "Skillnaden mot totalsträckskryptering: medan ett svar skapas kan DoseWeek-servern och Amazon Bedrock läsa det du har skickat till AI-loggassistenten. Totalsträckskryptering gäller bara för synkroniserings- och säkerhetskopieringsdata.",
+        "Automatiserade beslut: AI-svaren är bara vägledande. AI:n fattar inga beslut som påverkar dina rättigheter eller skyldigheter.",
+        "Återkalla samtycke och radera: under Inställningar > AI-loggassistenten kan du när som helst återkalla ditt samtycke och radera sparade AI-sammanfattningar. När du har återkallat samtycket skickas inga poster till AI:n. Om du raderar ditt konto raderas även användningsräknare och samtyckesbevis. Om du inte samtycker fungerar de övriga funktionerna i Pro och Plus som vanligt.",
+        "Ålder: AI-loggassistenten är bara för personer som är 18 år eller äldre. Du bekräftar själv din ålder; vi ber inte om födelsedatum.",
+        "AI-märkning och säkerhetsmeddelanden: varje AI-svar har en märkning om att det har skapats av AI och inte är medicinsk rådgivning, och varje svar har en knapp för att rapportera det. På medicinska frågor, till exempel om doser, om huruvida ett symptom är normalt, om diagnoser eller om läkemedel, skriver AI:n inget svar; appen visar i stället ett fast meddelande. Om ett meddelande ser ut som en nödsituation eller en kris visar appen numren för din butiksregion: 119 och 109 i Korea, 119 och Yorisoi Hotline (0120-279-338) i Japan, 911 och 988 i USA. På andra platser hänvisar den till det lokala larmnumret och till findahelpline.com."
+      ],
+      "e2eeException": "Undantaget från totalsträckskrypteringen är innehåll som du själv skickar till AI-loggassistenten (Pro) efter att ha samtyckt: DoseWeek-servern och Amazon Bedrock kan läsa det medan ett svar skapas.",
+      "healthExclusion": {
+        "ios": "Uppgifter som har lästs från Apple Health används inte heller för AI-funktioner och skickas inte till AI-loggassistenten.",
+        "android": "Uppgifter som har lästs från Health Connect används inte heller för AI-funktioner och skickas inte till AI-loggassistenten."
+      },
+      "onDeviceScope": "Det här avsnittet gäller bara AI-loggning och besöksförberedelse, som behandlas på enheten. AI-loggassistenten (Pro), som behandlas på en server, beskrivs separat under ”AI-loggassistenten (Pro)” i den här policyn.",
+      "androidAiFaq": "DoseWeek 1.0.6 för Android innehåller den valfria AI-loggassistenten (Pro). Först efter ett separat samtycke skapar generativ AI på Amazon Bedrock (regionen Seoul, Republiken Korea) veckosammanfattningar, allmänna måltidsidéer och svar om hur appen fungerar. Ingen annan funktion använder generativ AI.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — Grunden är det separata samtycke till behandling av hälsoinformation (känsliga uppgifter) som du ger när du slår på AI-loggassistenten. Biträdesavtalet och grunden enligt PIPA Art. 28-8 för åtkomst från utlandet är inte verifierade.",
+        "data": "De sammanställda värden du bekräftar på skärmen när du skickar poster och de frågor du skriver. Läkemedelsnamn och doser, anteckningar, livsmedelsnamn, foton, datum och kontouppgifter skickas inte.",
+        "country": "Behandlas bara inom regionen Seoul (ap-northeast-2), Republiken Korea. Ingen inferensprofil som dirigerar till en annan region används. Support eller åtkomst från utlandet är inte verifierad.",
+        "timingMethod": "Skickas bara när du begär en AI-funktion och trycker på ”Skicka”. Appen krypterar innehållet en gång till och skickar det till DoseWeek-servern, som dekrypterar det enbart i minnet och lämnar det vidare till Amazon Bedrock.",
+        "recipientContact": "Avtalsparten och mottagarkontakten för Amazon Web Services (AWS) är inte verifierade. Leverantörens information: https://aws.amazon.com/privacy/",
+        "purpose": "Personuppgiftsbiträde som skapar de AI-svar du begär. AI-modellen är Claude från Anthropic och drivs av AWS. Används inte för AI-träning eller reklam.",
+        "retention": "Sparas inte. Amazon Bedrock är inställt så att innehåll inte sparas; dokumentationen av kontrollen av den faktiska inställningen sparas före lanseringen.",
+        "refusalEffect": "Om du inte samtycker, eller återkallar samtycket i Inställningar, är det bara AI-funktionerna som inte kan användas. Loggning och de övriga funktionerna i Pro och Plus fungerar som vanligt."
+      },
+      "cloudflareTransit": "Förfrågningar från AI-loggassistenten passerar bara som text som appen har krypterat en gång till.",
+      "terms": [
+        "Pro är en valfri prenumeration som lägger till AI-loggassistenten och prioriterat svar på frågor utöver allt som ingår i Plus. Den förnyas automatiskt varje månad eller år, och reglerna om betalning, förnyelse, uppsägning och återbetalning i avsnitt 3 gäller för den precis som för Plus. En kostnadsfri provperiod på 7 dagar erbjuds bara när butiken bekräftar att du är berättigad. Den erbjuds kanske inte om du redan har använt en kostnadsfri provperiod för Plus.",
+        "Du kan använda AI-loggassistenten efter att du har loggat in och gett ett separat samtycke, och bara om du är 18 år eller äldre. Den skapar veckosammanfattningar, allmänna måltidsidéer och svar om hur appen fungerar utifrån de poster du bekräftar att du vill skicka. Om du inte samtycker fungerar de övriga Pro-funktionerna som vanligt.",
+        "AI-loggassistenten är ingen medicinteknisk produkt och ger inte medicinsk rådgivning som diagnos, behandling eller doseringsanvisningar. Innehåll som skapas av AI kan vara felaktigt eller ofullständigt. Prata med hälso- och sjukvårdspersonal innan du fattar beslut om din hälsa.",
+        "Vänta inte på ett svar från AI-loggassistenten i en nödsituation. Ring det lokala larmnumret direkt: 119 i Korea och Japan, 911 i USA.",
+        "Du kan göra 150 förfrågningar per månad. Under en kostnadsfri provperiod kan du göra upp till 50. En veckosammanfattning per vecka räknas inte in i gränsen; om du skapar den på nytt räknas det som 1 förfrågan. Räknaren fylls på den 1:a varje månad enligt koordinerad universell tid (UTC). Om vi behöver sänka gränsen meddelar vi dig 30 dagar innan den börjar gälla, och den tillämpas inte till din nackdel under en period som du redan har betalat för.",
+        "Ange inte någon annans hälsoinformation och försök inte kringgå säkerhetsmeddelandena för att få medicinsk rådgivning.",
+        "AI-funktionerna kan ibland vara otillgängliga. Även då gäller dina lagstadgade rättigheter till ångerrätt och återbetalning fullt ut.",
+        "Prioriterat svar på frågor innebär att när en Pro-prenumerant mejlar supporten med en fråga om hur appen används skickar vi ett första svar inom 1 arbetsdag. Arbetsdagar är måndag till fredag i Republiken Korea, utom helgdagar. Vi svarar inte på medicinska frågor, så ta inte med hälsouppgifter i ditt meddelande."
+      ],
+      "usHealth": {
+        "categories": "Om du slår på AI-loggassistenten (Pro) och bekräftar att du vill skicka behandlar vi även följande som hälsoinformation: antal doser, viktförändring, antal per symptomtyp och summor för måltider och protein som har tagits fram ur det du har angett, dina måltidspreferenser, allergier och livsmedel du inte tycker om samt de frågor du skriver. Det här innehållet är inte totalsträckskrypterat. Servern kan läsa det medan ett svar skapas, och det raderas så snart svaret har skapats. Uppgifter som har lästs från HealthKit eller Health Connect skickas inte till AI-loggassistenten.",
+        "purpose": "På begäran använder vi den också för att skapa AI-sammanfattningar och allmänna kostidéer. AI-svar är inte en diagnos eller en behandlingsrekommendation.",
+        "processor": "Förfrågningar från AI-loggassistenten behandlas av Amazon Bedrock från AWS, som är personuppgiftsbiträde, i regionen Seoul, Republiken Korea, enbart för att skapa svaret. Innehållet sparas inte och används inte för AI-träning.",
+        "noSale": "Vi säljer inte heller hälsoinformation som skickas till AI-loggassistenten, och vi delar den inte för reklam.",
+        "consent": "För AI-loggassistenten ber vi om samtycke på en separat skärm när du slår på den första gången, och vi ber dig bekräfta igen varje gång poster skickas. Du kan när som helst återkalla samtycket under Inställningar > AI-loggassistenten."
+      },
+      "deletion": "Om du raderar ditt konto raderas även AI-loggassistentens användningsräknare och samtyckesbevis. Det du skickar till AI:n och svaren sparas inte på servern, så det finns ingen serverkopia att radera. Svarstext som du har valt att skicka med i en rapport sparas utan koppling till ditt konto och raderas efter 30 dagar."
+    },
+    "hi": {
+      "name": "AI रिकॉर्ड असिस्टेंट",
+      "perk": "सवालों का प्राथमिकता से जवाब",
+      "sectionTitle": "AI रिकॉर्ड असिस्टेंट (Pro)",
+      "clauses": [
+        "उद्देश्य: आपके माँगने पर साप्ताहिक सारांश, भोजन के सामान्य आइडिया और ऐप इस्तेमाल से जुड़ी मदद के जवाब बनाना। AI रिकॉर्ड असिस्टेंट Pro सब्सक्रिप्शन में शामिल एक वैकल्पिक सुविधा है। जवाब किसी इंसान से नहीं, AI से आते हैं, और यह चिकित्सीय सलाह नहीं देता।",
+        "प्रोसेस की जाने वाली जानकारी: वे रिकॉर्ड जिन्हें आप भेजने से पहले स्क्रीन पर पक्का करते हैं, और वे सवाल जो आप लिखते हैं। रिकॉर्ड में डोज़ की गिनती (समय पर, देर से, छोड़ी गई), आपके खुद दर्ज किए गए वज़न में बदलाव, हर तरह के लक्षण को कितनी बार दर्ज किया गया, भोजन दर्ज किए गए दिनों की संख्या के साथ प्रोटीन का औसत और लक्ष्य, और लगातार रिकॉर्ड के हफ़्तों की संख्या शामिल हैं। भोजन के आइडिया के लिए आपका चुना हुआ भोजन का प्रकार, पसंद, एलर्जी और नापसंद खाद्य पदार्थ भी भेजे जाते हैं। आपकी भाषा और क्षेत्र की सेटिंग भी भेजी जाती है, और ऐप की मदद में सिर्फ़ ऐप का वर्ज़न, प्लैटफ़ॉर्म और मौजूदा स्क्रीन जोड़ी जाती है। दवा के नाम या डोज़, नोट, खाद्य पदार्थों के नाम, फ़ोटो, तारीखें, या आपका नाम, ईमेल या खाते की जानकारी नहीं भेजी जाती। {healthExclusion} सवाल वाले बॉक्स में आप जो लिखते हैं, वह वैसा ही भेजा जाता है जैसा आपने लिखा है।",
+        "कानूनी आधार: स्वास्थ्य जानकारी संवेदनशील होती है, इसलिए हम उसे सिर्फ़ उस सहमति के साथ प्रोसेस करते हैं जो बाकी सभी सहमतियों से अलग ली जाती है। कोरिया में यह व्यक्तिगत जानकारी संरक्षण कानून (PIPA) के अनुच्छेद 23 के तहत ली गई सहमति है। जब आप पहली बार यह सुविधा चालू करते हैं तब हम सहमति लेते हैं, और हर बार रिकॉर्ड भेजते समय भेजी जाने वाली जानकारी दिखाकर दोबारा पुष्टि करवाते हैं।",
+        "रखने की अवधि: आप जो भेजते हैं वह और जवाब सर्वर पर नहीं रखे जाते; जवाब बनते ही उन्हें मिटा दिया जाता है। चैट के संदेश सेव नहीं किए जाते। साप्ताहिक सारांश सिर्फ़ आपके डिवाइस पर, ज़्यादा से ज़्यादा 2, सेव होते हैं और सिंक या किसी भी बैकअप में शामिल नहीं होते। इस्तेमाल की गिनती (बिना सामग्री के) ज़्यादा से ज़्यादा 2 महीने तक और सहमति के रिकॉर्ड खाते के रहने तक रखे जाते हैं। अगर आप किसी जवाब की रिपोर्ट करते समय “जवाब का टेक्स्ट भी भेजें” चुनते हैं, तो सिर्फ़ वही जवाब 30 दिन तक रखा जाता है।",
+        "प्रसंस्करणकर्ता: Amazon Web Services (AWS) की सेवा Amazon Bedrock, कोरिया गणराज्य के सियोल क्षेत्र (ap-northeast-2) में AI के जवाब बनाती है। AI मॉडल Anthropic का Claude है। इसे AWS चलाता है, और Anthropic सामग्री नहीं देख सकता। Amazon Bedrock को इस तरह सेट किया गया है कि आपकी भेजी हुई जानकारी और जवाब सेव न हों। AWS की अनुबंध करने वाली इकाई और उसके संपर्क विवरण की अभी पुष्टि नहीं हुई है; रिलीज़ से पहले इन्हें इस नीति में लिखा जाएगा।",
+        "प्रोसेसिंग की जगह और भेजने का तरीका: AI के अनुरोध कोरिया गणराज्य के सियोल क्षेत्र के भीतर प्रोसेस होते हैं और किसी दूसरे देश के क्षेत्र में नहीं भेजे जाते। ऐप भेजी जाने वाली सामग्री को DoseWeek सर्वर की सार्वजनिक कुंजी से एक बार और एन्क्रिप्ट करता है। इसलिए अनुरोध आगे पहुँचाने वाला Cloudflare सिर्फ़ एन्क्रिप्टेड टेक्स्ट देख सकता है। Cloudflare जिस कनेक्शन जानकारी को प्रोसेस करता है, जैसे आपका IP पता, उसका विदेश में स्थानांतरण इस नीति में दी गई विदेश में स्थानांतरण की जानकारी के अनुसार होता है।",
+        "AI प्रशिक्षण और विज्ञापन: आपके भेजे गए रिकॉर्ड और सवालों का इस्तेमाल AI प्रशिक्षण या विज्ञापन के लिए नहीं किया जाता और उन्हें बेचा नहीं जाता।",
+        "एंड-टू-एंड एन्क्रिप्शन से अंतर: जब तक जवाब बन रहा होता है, DoseWeek सर्वर और Amazon Bedrock वह सामग्री पढ़ सकते हैं जो आपने AI रिकॉर्ड असिस्टेंट को भेजी है। एंड-टू-एंड एन्क्रिप्शन सिर्फ़ सिंक और बैकअप के डेटा पर लागू होता है।",
+        "स्वचालित निर्णय: AI के जवाब सिर्फ़ संदर्भ के लिए हैं। AI ऐसा कोई निर्णय नहीं लेता जो आपके अधिकारों या दायित्वों पर असर डाले।",
+        "सहमति वापस लेना और मिटाना: सेटिंग > AI रिकॉर्ड असिस्टेंट में आप कभी भी सहमति वापस ले सकते हैं और सेव किए गए AI सारांश मिटा सकते हैं। सहमति वापस लेने के बाद AI को रिकॉर्ड नहीं भेजे जाते। खाता मिटाने पर इस्तेमाल की गिनती और सहमति के रिकॉर्ड भी मिटा दिए जाते हैं। सहमति न देने पर भी Pro और Plus की बाकी सुविधाएँ पहले की तरह काम करती हैं।",
+        "उम्र: AI रिकॉर्ड असिस्टेंट सिर्फ़ 18 साल या उससे ज़्यादा उम्र के लोगों के लिए है। अपनी उम्र की पुष्टि आप खुद करते हैं; हम जन्मतिथि नहीं माँगते।",
+        "AI लेबल और सुरक्षा संदेश: हर AI जवाब पर यह लेबल होता है कि उसे AI ने बनाया है और वह चिकित्सीय सलाह नहीं है, और हर जवाब के साथ रिपोर्ट करने का बटन होता है। डोज़, कोई लक्षण सामान्य है या नहीं, निदान या दवा की जानकारी जैसे चिकित्सीय सवालों पर AI जवाब नहीं लिखता; ऐप उसकी जगह एक तय संदेश दिखाता है। अगर कोई संदेश आपातकाल या संकट जैसा लगे, तो ऐप आपके स्टोर के क्षेत्र के नंबर दिखाता है: कोरिया में 119 और 109, जापान में 119 और Yorisoi Hotline (0120-279-338), अमेरिका में 911 और 988। बाकी जगहों पर वह स्थानीय आपातकालीन नंबर और findahelpline.com बताता है।"
+      ],
+      "e2eeException": "एंड-टू-एंड एन्क्रिप्शन का अपवाद वह सामग्री है जो आप सहमति देने के बाद खुद AI रिकॉर्ड असिस्टेंट (Pro) को भेजते हैं: जवाब बनते समय DoseWeek सर्वर और Amazon Bedrock उसे पढ़ सकते हैं।",
+      "healthExclusion": {
+        "ios": "Apple Health से पढ़ी गई जानकारी का इस्तेमाल AI सुविधाओं के लिए भी नहीं किया जाता और उसे AI रिकॉर्ड असिस्टेंट को नहीं भेजा जाता।",
+        "android": "Health Connect से पढ़ी गई जानकारी का इस्तेमाल AI सुविधाओं के लिए भी नहीं किया जाता और उसे AI रिकॉर्ड असिस्टेंट को नहीं भेजा जाता।"
+      },
+      "onDeviceScope": "यह अनुभाग सिर्फ़ AI से रिकॉर्ड करने और विज़िट की तैयारी के बारे में है, जो डिवाइस पर ही प्रोसेस होते हैं। सर्वर पर प्रोसेस होने वाले AI रिकॉर्ड असिस्टेंट (Pro) के बारे में इस नीति के “AI रिकॉर्ड असिस्टेंट (Pro)” अनुभाग में अलग से बताया गया है।",
+      "androidAiFaq": "Android के लिए DoseWeek 1.0.6 में वैकल्पिक AI रिकॉर्ड असिस्टेंट (Pro) शामिल है। अलग से सहमति देने के बाद ही Amazon Bedrock (सियोल क्षेत्र, कोरिया गणराज्य) पर जनरेटिव AI साप्ताहिक सारांश, भोजन के सामान्य आइडिया और ऐप इस्तेमाल से जुड़ी मदद के जवाब बनाता है। कोई और सुविधा जनरेटिव AI का इस्तेमाल नहीं करती।",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — आधार वह अलग सहमति है जो आप AI रिकॉर्ड असिस्टेंट चालू करते समय स्वास्थ्य (संवेदनशील) जानकारी की प्रोसेसिंग के लिए देते हैं। प्रोसेसिंग का अनुबंध और विदेश से पहुँच के लिए PIPA Art. 28-8 का आधार असत्यापित है।",
+        "data": "रिकॉर्ड भेजते समय स्क्रीन पर पक्के किए गए समेकित मान और आपके लिखे सवाल। दवा के नाम और डोज़, नोट, खाद्य पदार्थों के नाम, फ़ोटो, तारीखें और खाते की जानकारी नहीं भेजी जाती।",
+        "country": "प्रोसेसिंग सिर्फ़ सियोल क्षेत्र (ap-northeast-2), कोरिया गणराज्य के भीतर होती है। किसी दूसरे क्षेत्र में भेजने वाली इन्फ़रेंस प्रोफ़ाइल इस्तेमाल नहीं की जाती। विदेश से सहायता या पहुँच असत्यापित है।",
+        "timingMethod": "सिर्फ़ तब भेजा जाता है जब आप कोई AI सुविधा माँगते हैं और “भेजें” पर टैप करते हैं। ऐप सामग्री को एक बार और एन्क्रिप्ट करके DoseWeek सर्वर को भेजता है, जो उसे सिर्फ़ मेमोरी में डिक्रिप्ट करके Amazon Bedrock को देता है।",
+        "recipientContact": "Amazon Web Services (AWS) की अनुबंध करने वाली इकाई और प्राप्तकर्ता का संपर्क असत्यापित है। आपूर्तिकर्ता संदर्भ: https://aws.amazon.com/privacy/",
+        "purpose": "आपके माँगे हुए AI जवाब बनाने वाला प्रसंस्करणकर्ता। AI मॉडल Anthropic का Claude है, जिसे AWS चलाता है। AI प्रशिक्षण या विज्ञापन के लिए इस्तेमाल नहीं होता।",
+        "retention": "नहीं रखा जाता। Amazon Bedrock को सामग्री सेव न करने के लिए सेट किया गया है; असली सेटिंग की जाँच का रिकॉर्ड रिलीज़ से पहले रखा जाएगा।",
+        "refusalEffect": "अगर आप सहमति नहीं देते या सेटिंग में उसे वापस ले लेते हैं, तो सिर्फ़ AI सुविधाएँ उपलब्ध नहीं रहतीं। रिकॉर्ड करना और Pro व Plus की बाकी सुविधाएँ पहले की तरह काम करती हैं।"
+      },
+      "cloudflareTransit": "AI रिकॉर्ड असिस्टेंट के अनुरोध सिर्फ़ ऐसे टेक्स्ट के रूप में गुज़रते हैं जिसे ऐप ने एक बार और एन्क्रिप्ट किया है।",
+      "terms": [
+        "Pro एक वैकल्पिक सब्सक्रिप्शन है जो Plus की सभी सुविधाओं में AI रिकॉर्ड असिस्टेंट और सवालों का प्राथमिकता से जवाब जोड़ता है। यह हर महीने या हर साल अपने-आप रिन्यू होता है, और अनुभाग 3 के भुगतान, रिन्यूअल, रद्द करने और रिफ़ंड के नियम इस पर Plus की तरह ही लागू होते हैं। 7 दिन का मुफ़्त ट्रायल सिर्फ़ तब मिलता है जब स्टोर आपकी पात्रता की पुष्टि करता है। अगर आप Plus का मुफ़्त ट्रायल पहले इस्तेमाल कर चुके हैं, तो यह शायद न मिले।",
+        "AI रिकॉर्ड असिस्टेंट का इस्तेमाल आप साइन इन करने और अलग से सहमति देने के बाद कर सकते हैं, और सिर्फ़ तब जब आपकी उम्र 18 साल या उससे ज़्यादा हो। यह उन रिकॉर्ड से साप्ताहिक सारांश, भोजन के सामान्य आइडिया और ऐप इस्तेमाल से जुड़ी मदद के जवाब बनाता है जिन्हें भेजने की आप पुष्टि करते हैं। सहमति न देने पर भी Pro की बाकी सुविधाएँ पहले की तरह काम करती हैं।",
+        "AI रिकॉर्ड असिस्टेंट कोई चिकित्सा उपकरण नहीं है और निदान, इलाज या डोज़ के निर्देश जैसी चिकित्सीय सलाह नहीं देता। AI की बनाई सामग्री गलत या अधूरी हो सकती है। सेहत से जुड़े फ़ैसलों के लिए चिकित्सा पेशेवर से बात करें।",
+        "आपातकाल में AI रिकॉर्ड असिस्टेंट के जवाब का इंतज़ार न करें। तुरंत अपने स्थानीय आपातकालीन नंबर पर संपर्क करें: कोरिया और जापान में 119, अमेरिका में 911।",
+        "आप हर महीने 150 अनुरोध कर सकते हैं। मुफ़्त ट्रायल के दौरान आप 50 तक अनुरोध कर सकते हैं। हर हफ़्ते एक साप्ताहिक सारांश इस सीमा में नहीं गिना जाता; उसे दोबारा बनाना 1 अनुरोध गिना जाता है। गिनती हर महीने की 1 तारीख को समन्वित वैश्विक समय (UTC) के अनुसार फिर से भर जाती है। अगर हमें सीमा घटानी पड़े, तो हम उसे लागू करने से 30 दिन पहले बताएँगे, और जिस अवधि का भुगतान आप कर चुके हैं उसमें इसे आपके नुकसान में लागू नहीं करेंगे।",
+        "किसी और की स्वास्थ्य जानकारी दर्ज न करें, और चिकित्सीय सलाह पाने के लिए सुरक्षा संदेशों से बचने की कोशिश न करें।",
+        "AI सुविधाएँ कभी-कभी उपलब्ध नहीं हो सकतीं। उस स्थिति में भी अनुबंध से हटने और रिफ़ंड के आपके कानूनी अधिकार पूरी तरह सुरक्षित रहते हैं।",
+        "सवालों का प्राथमिकता से जवाब का मतलब है कि जब कोई Pro सब्सक्राइबर ऐप इस्तेमाल से जुड़ा सवाल सहायता को ईमेल करता है, तो हम 1 कार्यदिवस के भीतर पहला जवाब भेजते हैं। कार्यदिवस का मतलब कोरिया गणराज्य में सोमवार से शुक्रवार है, सार्वजनिक छुट्टियों को छोड़कर। हम चिकित्सीय सवालों के जवाब नहीं देते, इसलिए अपने संदेश में स्वास्थ्य रिकॉर्ड शामिल न करें।"
+      ],
+      "usHealth": {
+        "categories": "अगर आप AI रिकॉर्ड असिस्टेंट (Pro) चालू करते हैं और भेजने की पुष्टि करते हैं, तो हम आपके दर्ज किए गए रिकॉर्ड से बनी डोज़ की गिनती, वज़न में बदलाव, लक्षण के प्रकार के हिसाब से गिनती, भोजन और प्रोटीन के कुल आँकड़े, आपकी भोजन की पसंद, एलर्जी और नापसंद खाद्य पदार्थ, और आपके लिखे सवालों को भी स्वास्थ्य जानकारी मानते हैं। यह सामग्री एंड-टू-एंड एन्क्रिप्टेड नहीं होती। जवाब बनते समय सर्वर इसे पढ़ सकता है, और जवाब बनते ही इसे मिटा दिया जाता है। HealthKit या Health Connect से पढ़ी गई जानकारी AI रिकॉर्ड असिस्टेंट को नहीं भेजी जाती।",
+        "purpose": "आपके कहने पर हम इसका इस्तेमाल AI सारांश और पोषण के सामान्य आइडिया बनाने के लिए भी करते हैं। AI के जवाब निदान या इलाज की सिफ़ारिश नहीं हैं।",
+        "processor": "AI रिकॉर्ड असिस्टेंट के अनुरोधों को प्रसंस्करणकर्ता AWS की Amazon Bedrock, सियोल क्षेत्र, कोरिया गणराज्य में सिर्फ़ जवाब बनाने के लिए प्रोसेस करती है। सामग्री सेव नहीं की जाती और AI प्रशिक्षण के लिए इस्तेमाल नहीं होती।",
+        "noSale": "AI रिकॉर्ड असिस्टेंट को भेजी गई स्वास्थ्य जानकारी भी हम नहीं बेचते और विज्ञापन के लिए साझा नहीं करते।",
+        "consent": "AI रिकॉर्ड असिस्टेंट के लिए हम उसे पहली बार चालू करते समय एक अलग स्क्रीन पर सहमति लेते हैं, और हर बार रिकॉर्ड भेजते समय दोबारा पुष्टि करवाते हैं। आप सेटिंग > AI रिकॉर्ड असिस्टेंट में कभी भी सहमति वापस ले सकते हैं।"
+      },
+      "deletion": "खाता मिटाने पर AI रिकॉर्ड असिस्टेंट के इस्तेमाल की गिनती और सहमति के रिकॉर्ड भी मिटा दिए जाते हैं। आप AI को जो भेजते हैं वह और उसके जवाब सर्वर पर सेव नहीं होते, इसलिए मिटाने के लिए सर्वर पर कोई कॉपी नहीं होती। रिपोर्ट के साथ आपने जो जवाब का टेक्स्ट भेजना चुना, वह आपके खाते से जोड़े बिना रखा जाता है और 30 दिन बाद मिटा दिया जाता है।"
+    },
+    "pt-BR": {
+      "name": "assistente de registros com IA",
+      "perk": "Resposta prioritária às suas perguntas",
+      "sectionTitle": "Assistente de registros com IA (Pro)",
+      "clauses": [
+        "Finalidade: criar os resumos semanais, as ideias gerais de refeições e as respostas de ajuda sobre o app que você pedir. O assistente de registros com IA é um recurso opcional incluído na assinatura Pro. As respostas vêm de uma IA, não de uma pessoa, e ele não dá aconselhamento médico.",
+        "Dados tratados: os registros que você confirma na tela antes do envio e as perguntas que você digita. Os registros são o número de doses (no horário, com atraso, puladas), a variação do peso que você mesmo informou, quantas vezes você registrou cada tipo de sintoma, o número de dias com refeição registrada, junto com a média e a meta de proteína, e a sua sequência em semanas. Para as ideias de refeições, enviamos também o tipo de refeição, as preferências, as alergias e os alimentos de que você não gosta, conforme você escolheu. Sua configuração de idioma e região também é enviada, e a ajuda sobre o app acrescenta apenas a versão do app, a plataforma e a tela atual. Não enviamos nomes nem doses de medicamentos, notas, nomes de alimentos, fotos, datas, nem seu nome, e-mail ou dados da conta. {healthExclusion} O que você digita no campo de pergunta é enviado exatamente como foi escrito.",
+        "Base legal: informações de saúde são sensíveis, por isso só as tratamos com um consentimento coletado separadamente de qualquer outro. Na Coreia, trata-se do consentimento previsto no artigo 23 da lei de proteção de informações pessoais (PIPA). Pedimos esse consentimento quando você ativa o recurso pela primeira vez e, sempre que registros são enviados, mostramos o que será enviado e pedimos que você confirme de novo.",
+        "Retenção: o que você envia e as respostas não ficam no servidor; são excluídos assim que a resposta é criada. As mensagens da conversa não são armazenadas. Os resumos semanais ficam salvos apenas no seu dispositivo, no máximo 2, e ficam fora da sincronização e de qualquer backup. As contagens de uso (sem conteúdo) são mantidas por até 2 meses, e os registros de consentimento enquanto a conta existir. Se você denunciar uma resposta e escolher “Incluir o texto da resposta”, só essa resposta é mantida por 30 dias.",
+        "Operador: o Amazon Bedrock, um serviço da Amazon Web Services (AWS), cria as respostas da IA na região de Seul (ap-northeast-2), na República da Coreia. O modelo de IA é o Claude, da Anthropic. Ele é operado pela AWS, e a Anthropic não consegue ver o conteúdo. O Amazon Bedrock está configurado para não armazenar o que você envia nem as respostas. A entidade contratante da AWS e seus dados de contato ainda não foram verificados e serão informados nesta política antes do lançamento.",
+        "Local do tratamento e transmissão: as solicitações à IA são tratadas dentro da região de Seul, na República da Coreia, e não são enviadas para uma região em outro país. O app criptografa o conteúdo mais uma vez com a chave pública do servidor do DoseWeek. Por isso a Cloudflare, que encaminha a solicitação, só vê texto criptografado. A transferência internacional das informações de conexão tratadas pela Cloudflare, como seu endereço IP, segue o aviso sobre transferências internacionais desta política.",
+        "Treinamento de IA e publicidade: não usamos os registros e as perguntas que você envia para treinar IA nem para publicidade, e não os vendemos.",
+        "Diferença em relação à criptografia de ponta a ponta: enquanto uma resposta é criada, o servidor do DoseWeek e o Amazon Bedrock conseguem ler o que você enviou ao assistente de registros com IA. A criptografia de ponta a ponta se aplica apenas aos dados de sincronização e de backup.",
+        "Decisões automatizadas: as respostas da IA servem apenas como referência. A IA não toma nenhuma decisão que afete seus direitos ou obrigações.",
+        "Revogar o consentimento e excluir: em Ajustes > Assistente de registros com IA, você pode revogar o consentimento e excluir os resumos de IA salvos a qualquer momento. Depois da revogação, nenhum registro é enviado à IA. Ao excluir a conta, as contagens de uso e os registros de consentimento também são excluídos. Se você não der o consentimento, os outros recursos do Pro e do Plus continuam funcionando.",
+        "Idade: o assistente de registros com IA é só para maiores de 18 anos. É você quem confirma sua idade; não pedimos data de nascimento.",
+        "Avisos de IA e mensagens de segurança: toda resposta da IA traz um aviso de que foi criada por IA e de que não é aconselhamento médico, e cada resposta tem um botão para denunciá-la. Diante de perguntas médicas, por exemplo sobre doses, sobre se um sintoma é normal, sobre diagnósticos ou sobre medicamentos, a IA não escreve uma resposta; o app mostra uma mensagem fixa no lugar. Se uma mensagem parecer uma emergência ou uma crise, o app mostra os números da região da sua loja: 119 e 109 na Coreia, 119 e a Yorisoi Hotline (0120-279-338) no Japão, 911 e 988 nos Estados Unidos. Em outros lugares, ele indica o número de emergência local e findahelpline.com."
+      ],
+      "e2eeException": "A exceção à criptografia de ponta a ponta é o conteúdo que você mesmo envia ao assistente de registros com IA (Pro) depois de dar o consentimento: o servidor do DoseWeek e o Amazon Bedrock conseguem lê-lo enquanto uma resposta é criada.",
+      "healthExclusion": {
+        "ios": "As informações lidas do Apple Health também não são usadas em recursos de IA nem enviadas ao assistente de registros com IA.",
+        "android": "As informações lidas do Health Connect também não são usadas em recursos de IA nem enviadas ao assistente de registros com IA."
+      },
+      "onDeviceScope": "Esta seção trata apenas do registro com IA e da preparação para a consulta, que são processados no dispositivo. O assistente de registros com IA (Pro), processado em um servidor, é descrito separadamente na seção “Assistente de registros com IA (Pro)” desta política.",
+      "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registros com IA (Pro), um recurso opcional. Somente depois de um consentimento separado, uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre o app. Nenhum outro recurso usa IA generativa.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — A base é o consentimento separado para o tratamento de informações de saúde (sensíveis) que você dá ao ativar o assistente de registros com IA. O contrato de operador e a base do PIPA Art. 28-8 para acesso a partir do exterior não foram verificados.",
+        "data": "Os valores agregados que você confirma na tela ao enviar registros e as perguntas que você digita. Nomes e doses de medicamentos, notas, nomes de alimentos, fotos, datas e dados da conta não são enviados.",
+        "country": "Tratamento apenas dentro da região de Seul (ap-northeast-2), República da Coreia. Não é usado nenhum perfil de inferência que encaminhe para outra região. Suporte ou acesso a partir do exterior não foram verificados.",
+        "timingMethod": "Enviado apenas quando você solicita um recurso de IA e toca em “Enviar”. O app criptografa o conteúdo mais uma vez e o envia ao servidor do DoseWeek, que o descriptografa apenas na memória e o repassa ao Amazon Bedrock.",
+        "recipientContact": "A entidade contratante e o contato do destinatário da Amazon Web Services (AWS) não foram verificados. Referência do fornecedor: https://aws.amazon.com/privacy/",
+        "purpose": "Operador que cria as respostas de IA que você solicita. O modelo de IA é o Claude, da Anthropic, operado pela AWS. Sem uso para treinamento de IA nem para publicidade.",
+        "retention": "Sem retenção. O Amazon Bedrock está configurado para não armazenar conteúdo; o registro da verificação da configuração real é guardado antes do lançamento.",
+        "refusalEffect": "Se você não der o consentimento ou revogá-lo em Ajustes, só os recursos de IA ficam indisponíveis. O registro e os outros recursos do Pro e do Plus continuam funcionando."
+      },
+      "cloudflareTransit": "As solicitações do assistente de registros com IA passam apenas como texto criptografado mais uma vez pelo app.",
+      "terms": [
+        "O Pro é uma assinatura opcional que acrescenta o assistente de registros com IA e a resposta prioritária às suas perguntas a tudo o que o Plus inclui. Ele é renovado automaticamente todo mês ou todo ano, e as regras de pagamento, renovação, cancelamento e reembolso da seção 3 se aplicam a ele exatamente como ao Plus. O teste gratuito de 7 dias só é oferecido quando a loja confirma que você está qualificado. Ele pode não ser oferecido se você já usou um teste gratuito do Plus.",
+        "Você pode usar o assistente de registros com IA depois de entrar na conta e dar um consentimento separado, e somente se tiver 18 anos ou mais. Ele cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre o app a partir dos registros cujo envio você confirma. Se você não der o consentimento, os outros recursos do Pro continuam funcionando.",
+        "O assistente de registros com IA não é um dispositivo médico e não dá aconselhamento médico, como diagnóstico, tratamento ou instruções de dosagem. O conteúdo criado por IA pode estar errado ou incompleto. Converse com um profissional de saúde antes de tomar decisões sobre sua saúde.",
+        "Em uma emergência, não espere a resposta do assistente de registros com IA. Ligue imediatamente para o número de emergência local: 119 na Coreia e no Japão, 911 nos Estados Unidos.",
+        "Você pode fazer 150 solicitações por mês. Durante um teste gratuito, pode fazer até 50. Um resumo semanal por semana não conta para esse limite; criá-lo de novo conta como 1 solicitação. A contagem é renovada no dia 1º de cada mês, no Tempo Universal Coordenado (UTC). Se precisarmos reduzir o limite, avisaremos 30 dias antes de aplicá-lo, e ele não será aplicado em seu prejuízo durante um período que você já pagou.",
+        "Não insira informações de saúde de outra pessoa nem tente contornar as mensagens de segurança para obter aconselhamento médico.",
+        "Os recursos de IA podem ficar indisponíveis de vez em quando. Mesmo nesse caso, seus direitos legais de arrependimento e de reembolso continuam plenamente garantidos.",
+        "Resposta prioritária às suas perguntas significa que, quando um assinante do Pro envia ao suporte, por e-mail, uma pergunta sobre o uso do app, enviamos uma primeira resposta em até 1 dia útil. Dias úteis são de segunda a sexta-feira na República da Coreia, exceto feriados. Não respondemos a perguntas médicas, então não inclua registros de saúde na sua mensagem."
+      ],
+      "usHealth": {
+        "categories": "Se você ativar o assistente de registros com IA (Pro) e confirmar o envio, também tratamos como informações de saúde o número de doses, a variação do peso, a contagem por tipo de sintoma e os totais de refeições e proteína elaborados a partir do que você informou, suas preferências de refeição, alergias e alimentos de que você não gosta, e as perguntas que você digita. Esse conteúdo não tem criptografia de ponta a ponta. O servidor consegue lê-lo enquanto uma resposta é criada, e ele é excluído assim que a resposta é criada. As informações lidas do HealthKit ou do Health Connect não são enviadas ao assistente de registros com IA.",
+        "purpose": "Quando você solicita, também as usamos para criar resumos de IA e ideias gerais de nutrição. As respostas da IA não são um diagnóstico nem uma recomendação de tratamento.",
+        "processor": "As solicitações do assistente de registros com IA são tratadas pelo Amazon Bedrock da AWS, como operador, na região de Seul, República da Coreia, apenas para criar a resposta. O conteúdo não é armazenado nem usado para treinar IA.",
+        "noSale": "Também não vendemos as informações de saúde enviadas ao assistente de registros com IA nem as compartilhamos para publicidade.",
+        "consent": "Para o assistente de registros com IA, pedimos o consentimento em uma tela separada quando você o ativa pela primeira vez, e pedimos que confirme de novo sempre que registros são enviados. Você pode revogá-lo a qualquer momento em Ajustes > Assistente de registros com IA."
+      },
+      "deletion": "Ao excluir a conta, as contagens de uso e os registros de consentimento do assistente de registros com IA também são excluídos. O que você envia à IA e as respostas não são armazenados no servidor, então não há cópia no servidor para excluir. O texto de resposta que você escolheu incluir em uma denúncia é mantido sem vínculo com a sua conta e excluído após 30 dias."
+    },
+    "ar": {
+      "name": "مساعد السجلات بالذكاء الاصطناعي",
+      "perk": "رد ذو أولوية على استفساراتك",
+      "sectionTitle": "مساعد السجلات بالذكاء الاصطناعي (Pro)",
+      "clauses": [
+        "الغرض: إنشاء الملخصات الأسبوعية وأفكار الوجبات العامة وإجابات المساعدة في استخدام التطبيق التي تطلبها. مساعد السجلات بالذكاء الاصطناعي ميزة اختيارية ضمن اشتراك Pro. الإجابات من الذكاء الاصطناعي وليست من إنسان، ولا يقدّم مشورة طبية.",
+        "البيانات التي تُعالَج: السجلات التي تؤكدها على الشاشة قبل الإرسال والأسئلة التي تكتبها. السجلات هي عدد الجرعات (في موعدها، متأخرة، متخطاة)، والتغيّر في الوزن الذي أدخلته بنفسك، وعدد مرات تسجيل كل نوع من الأعراض، وعدد الأيام التي سُجّلت فيها وجبة مع متوسط البروتين وهدفه، وعدد أسابيع التسجيل المتتالية. عند إنشاء أفكار الوجبات نرسل أيضًا نوع الوجبة والتفضيلات والحساسية والأطعمة التي لا تحبها كما اخترتها. يُرسَل كذلك إعداد اللغة والمنطقة، وتضيف المساعدة في استخدام التطبيق إصدار التطبيق والمنصة والشاشة الحالية فقط. لا نرسل أسماء الأدوية أو جرعاتها، ولا الملاحظات، ولا أسماء الأطعمة، ولا الصور، ولا التواريخ، ولا اسمك أو بريدك الإلكتروني أو بيانات حسابك. {healthExclusion} ما تكتبه في خانة السؤال يُرسَل كما كتبته.",
+        "الأساس القانوني: المعلومات الصحية حساسة، لذلك لا نعالجها إلا بموافقة تُؤخذ بشكل منفصل عن أي موافقة أخرى. في كوريا هذه هي الموافقة المنصوص عليها في المادة 23 من قانون حماية المعلومات الشخصية (PIPA). نطلب موافقتك عند تشغيل الميزة لأول مرة، وفي كل مرة تُرسَل فيها سجلات نعرض عليك ما سيُرسَل ونطلب منك التأكيد مرة أخرى.",
+        "مدة الاحتفاظ: ما ترسله والإجابات لا تبقى على الخادم؛ تُحذف فور إنشاء الإجابة. رسائل المحادثة لا تُحفظ. تُحفظ الملخصات الأسبوعية على جهازك فقط، بحد أقصى 2، ولا تدخل في المزامنة ولا في أي نسخة احتياطية. يُحتفظ بعدّادات الاستخدام (دون المحتوى) لمدة تصل إلى شهرين (2)، وبسجلات الموافقة ما دام الحساب قائمًا. إذا أبلغت عن إجابة واخترت «إرفاق نص الإجابة»، يُحتفظ بتلك الإجابة فقط لمدة 30 يومًا.",
+        "جهة المعالجة: تُنشئ خدمة Amazon Bedrock التابعة لـ Amazon Web Services (AWS) إجابات الذكاء الاصطناعي في منطقة سيول (ap-northeast-2) في جمهورية كوريا. نموذج الذكاء الاصطناعي هو Claude من Anthropic. تشغّله AWS، ولا تستطيع Anthropic رؤية المحتوى. Amazon Bedrock مضبوطة بحيث لا تخزّن ما ترسله ولا الإجابات. الكيان المتعاقد من AWS وبيانات الاتصال به لم يُتحقق منها بعد، وستُذكر في هذه السياسة قبل الإصدار.",
+        "مكان المعالجة وطريقة الإرسال: تُعالَج طلبات الذكاء الاصطناعي داخل منطقة سيول في جمهورية كوريا ولا تُرسَل إلى منطقة في بلد آخر. يشفّر التطبيق المحتوى مرة إضافية بالمفتاح العام لخادم DoseWeek، ولذلك لا ترى Cloudflare التي تمرّر الطلب سوى نص مشفّر. نقل معلومات الاتصال التي تعالجها Cloudflare إلى الخارج، مثل عنوان IP، يخضع لما ورد عن النقل إلى الخارج في هذه السياسة.",
+        "تدريب الذكاء الاصطناعي والإعلانات: لا نستخدم السجلات والأسئلة التي ترسلها لتدريب الذكاء الاصطناعي ولا للإعلانات، ولا نبيعها.",
+        "الفرق عن التشفير من طرف إلى طرف: أثناء إنشاء الإجابة يستطيع خادم DoseWeek وAmazon Bedrock قراءة ما أرسلته إلى مساعد السجلات بالذكاء الاصطناعي. التشفير من طرف إلى طرف ينطبق فقط على بيانات المزامنة والنسخ الاحتياطي.",
+        "القرارات المؤتمتة: إجابات الذكاء الاصطناعي للاستئناس فقط. لا يتخذ الذكاء الاصطناعي أي قرار يؤثر في حقوقك أو التزاماتك.",
+        "سحب الموافقة والحذف: من الإعدادات > مساعد السجلات بالذكاء الاصطناعي يمكنك في أي وقت سحب موافقتك وحذف ملخصات الذكاء الاصطناعي المحفوظة. بعد السحب لا تُرسَل أي سجلات إلى الذكاء الاصطناعي. عند حذف حسابك تُحذف أيضًا عدّادات الاستخدام وسجلات الموافقة. إذا لم توافق، تبقى ميزات Pro وPlus الأخرى متاحة كما هي.",
+        "العمر: مساعد السجلات بالذكاء الاصطناعي مخصص لمن هم في سن 18 عامًا فأكثر. أنت من يؤكد عمره بنفسه؛ ولا نطلب تاريخ الميلاد.",
+        "تنبيهات الذكاء الاصطناعي ورسائل السلامة: تحمل كل إجابة من الذكاء الاصطناعي تنبيهًا بأنها من إنشاء الذكاء الاصطناعي وبأنها ليست مشورة طبية، ولكل إجابة زر للإبلاغ عنها. في الأسئلة الطبية، مثل الجرعات أو ما إذا كان العَرَض طبيعيًا أو التشخيص أو معلومات الأدوية، لا يكتب الذكاء الاصطناعي إجابة؛ ويعرض التطبيق بدلًا من ذلك رسالة ثابتة. إذا بدت الرسالة حالة طوارئ أو أزمة، يعرض التطبيق الأرقام الخاصة بمنطقة متجرك: 119 و109 في كوريا، و119 وخط Yorisoi Hotline (0120-279-338) في اليابان، و911 و988 في الولايات المتحدة. في المناطق الأخرى يحيلك إلى رقم الطوارئ المحلي وإلى findahelpline.com."
+      ],
+      "e2eeException": "الاستثناء من التشفير من طرف إلى طرف هو المحتوى الذي ترسله بنفسك إلى مساعد السجلات بالذكاء الاصطناعي (Pro) بعد موافقتك: يستطيع خادم DoseWeek وAmazon Bedrock قراءته أثناء إنشاء الإجابة.",
+      "healthExclusion": {
+        "ios": "المعلومات المقروءة من Apple Health لا تُستخدم أيضًا في ميزات الذكاء الاصطناعي ولا تُرسَل إلى مساعد السجلات بالذكاء الاصطناعي.",
+        "android": "المعلومات المقروءة من Health Connect لا تُستخدم أيضًا في ميزات الذكاء الاصطناعي ولا تُرسَل إلى مساعد السجلات بالذكاء الاصطناعي."
+      },
+      "onDeviceScope": "يتناول هذا القسم التسجيل بالذكاء الاصطناعي والتحضير للزيارة فقط، وهما يُعالَجان على الجهاز. أما مساعد السجلات بالذكاء الاصطناعي (Pro)، الذي يُعالَج على خادم، فيُشرح بشكل منفصل في قسم «مساعد السجلات بالذكاء الاصطناعي (Pro)» من هذه السياسة.",
+      "androidAiFaq": "يتضمن DoseWeek 1.0.6 لنظام Android مساعد السجلات بالذكاء الاصطناعي (Pro) كميزة اختيارية. بعد موافقة منفصلة فقط، ينشئ ذكاء اصطناعي توليدي على Amazon Bedrock (منطقة سيول، جمهورية كوريا) ملخصات أسبوعية وأفكار وجبات عامة وإجابات مساعدة في استخدام التطبيق. لا تستخدم أي ميزة أخرى الذكاء الاصطناعي التوليدي.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — الأساس هو الموافقة المنفصلة على معالجة المعلومات الصحية (الحساسة) التي تعطيها عند تشغيل مساعد السجلات بالذكاء الاصطناعي. عقد المعالجة وأساس PIPA Art. 28-8 لأي وصول من الخارج غير متحقق منهما.",
+        "data": "القيم المجمّعة التي تؤكدها على الشاشة عند إرسال السجلات والأسئلة التي تكتبها. لا تُرسَل أسماء الأدوية وجرعاتها ولا الملاحظات ولا أسماء الأطعمة ولا الصور ولا التواريخ ولا بيانات الحساب.",
+        "country": "المعالجة داخل منطقة سيول (ap-northeast-2) في جمهورية كوريا فقط. لا يُستخدم أي ملف استدلال يوجّه الطلبات إلى منطقة أخرى. الدعم أو الوصول من الخارج غير متحقق منه.",
+        "timingMethod": "يُرسَل فقط عندما تطلب ميزة ذكاء اصطناعي وتضغط «إرسال». يشفّر التطبيق المحتوى مرة إضافية ويرسله إلى خادم DoseWeek، الذي يفك تشفيره في الذاكرة فقط ويمرّره إلى Amazon Bedrock.",
+        "recipientContact": "الكيان المتعاقد وجهة الاتصال لدى Amazon Web Services (AWS) غير متحقق منهما. مرجع المورّد: https://aws.amazon.com/privacy/",
+        "purpose": "جهة معالجة تنشئ إجابات الذكاء الاصطناعي التي تطلبها. نموذج الذكاء الاصطناعي هو Claude من Anthropic وتشغّله AWS. لا يُستخدم لتدريب الذكاء الاصطناعي ولا للإعلانات.",
+        "retention": "لا يُحتفظ به. Amazon Bedrock مضبوطة بحيث لا تخزّن المحتوى؛ ويُحفظ سجل التحقق من الإعداد الفعلي قبل الإصدار.",
+        "refusalEffect": "إذا لم توافق أو سحبت موافقتك من الإعدادات، تتوقف ميزات الذكاء الاصطناعي فقط. يبقى التسجيل وميزات Pro وPlus الأخرى متاحة كما هي."
+      },
+      "cloudflareTransit": "تمرّ طلبات مساعد السجلات بالذكاء الاصطناعي كنص مشفّر مرة إضافية من التطبيق فقط.",
+      "terms": [
+        "Pro اشتراك اختياري يضيف مساعد السجلات بالذكاء الاصطناعي وميزة «رد ذو أولوية على استفساراتك» إلى كل ما يتضمنه Plus. يتجدد تلقائيًا كل شهر أو كل سنة، وتنطبق عليه قواعد الدفع والتجديد والإلغاء والاسترداد الواردة في القسم 3 تمامًا كما تنطبق على Plus. لا تُعرض الفترة التجريبية المجانية لمدة 7 أيام إلا عندما يؤكد المتجر أهليتك لها. وقد لا تُعرض إذا كنت قد استخدمت فترة تجريبية مجانية لـ Plus من قبل.",
+        "يمكنك استخدام مساعد السجلات بالذكاء الاصطناعي بعد تسجيل الدخول وإعطاء موافقة منفصلة، وفقط إذا كان عمرك 18 عامًا أو أكثر. ينشئ ملخصات أسبوعية وأفكار وجبات عامة وإجابات مساعدة في استخدام التطبيق من السجلات التي تؤكد إرسالها. إذا لم توافق، تبقى ميزات Pro الأخرى متاحة كما هي.",
+        "مساعد السجلات بالذكاء الاصطناعي ليس جهازًا طبيًا ولا يقدّم مشورة طبية مثل التشخيص أو العلاج أو تعليمات الجرعات. قد يكون المحتوى الذي ينشئه الذكاء الاصطناعي خاطئًا أو ناقصًا. استشر مقدم الرعاية الصحية قبل اتخاذ قرارات بشأن صحتك.",
+        "في حالات الطوارئ لا تنتظر إجابة مساعد السجلات بالذكاء الاصطناعي. اتصل فورًا برقم الطوارئ المحلي: 119 في كوريا واليابان، و911 في الولايات المتحدة.",
+        "يمكنك إجراء 150 طلبًا في الشهر. خلال الفترة التجريبية المجانية يمكنك إجراء ما يصل إلى 50 طلبًا. ملخص أسبوعي واحد في الأسبوع لا يُحتسب ضمن هذا الحد؛ وإعادة إنشائه تُحتسب طلبًا واحدًا (1). يُعاد ملء العدّاد في اليوم 1 من كل شهر وفق التوقيت العالمي المنسق (UTC). إذا اضطررنا إلى تخفيض الحد، فسنبلغك قبل 30 يومًا من تطبيقه، ولن يُطبَّق بما يضر بك خلال فترة دفعت قيمتها بالفعل.",
+        "لا تُدخل معلومات صحية تخص شخصًا آخر، ولا تحاول الالتفاف على رسائل السلامة للحصول على مشورة طبية.",
+        "قد لا تتوفر ميزات الذكاء الاصطناعي في بعض الأوقات. وفي هذه الحالة أيضًا تبقى حقوقك القانونية في العدول عن العقد وفي الاسترداد مكفولة بالكامل.",
+        "ميزة «رد ذو أولوية على استفساراتك» تعني أنه عندما يرسل مشترك Pro إلى الدعم بريدًا إلكترونيًا يتضمن سؤالًا عن استخدام التطبيق، نرسل ردًّا أول خلال يوم عمل واحد (1). أيام العمل هي من الاثنين إلى الجمعة في جمهورية كوريا، باستثناء العطل الرسمية. لا نجيب عن الأسئلة الطبية، لذا لا تُدرج سجلات صحية في رسالتك."
+      ],
+      "usHealth": {
+        "categories": "إذا شغّلت مساعد السجلات بالذكاء الاصطناعي (Pro) وأكدت الإرسال، فإننا نعامل أيضًا كمعلومات صحية عدد الجرعات والتغيّر في الوزن والعدد حسب نوع العَرَض ومجاميع الوجبات والبروتين المستخلصة مما أدخلته، وتفضيلاتك في الوجبات والحساسية والأطعمة التي لا تحبها، والأسئلة التي تكتبها. هذا المحتوى غير مشفّر من طرف إلى طرف. يستطيع الخادم قراءته أثناء إنشاء الإجابة، ويُحذف فور إنشاء الإجابة. المعلومات المقروءة من HealthKit أو Health Connect لا تُرسَل إلى مساعد السجلات بالذكاء الاصطناعي.",
+        "purpose": "عند طلبك نستخدمها أيضًا لإنشاء ملخصات بالذكاء الاصطناعي وأفكار تغذية عامة. إجابات الذكاء الاصطناعي ليست تشخيصًا ولا توصية علاجية.",
+        "processor": "تعالج Amazon Bedrock من AWS، بصفتها جهة معالجة، طلبات مساعد السجلات بالذكاء الاصطناعي في منطقة سيول بجمهورية كوريا لإنشاء الإجابة فقط. لا يُخزَّن المحتوى ولا يُستخدم لتدريب الذكاء الاصطناعي.",
+        "noSale": "لا نبيع كذلك المعلومات الصحية المرسلة إلى مساعد السجلات بالذكاء الاصطناعي ولا نشاركها لأغراض الإعلان.",
+        "consent": "في مساعد السجلات بالذكاء الاصطناعي نطلب موافقتك على شاشة منفصلة عند تشغيله لأول مرة، ونطلب منك التأكيد مرة أخرى في كل مرة تُرسَل فيها سجلات. يمكنك سحب الموافقة في أي وقت من الإعدادات > مساعد السجلات بالذكاء الاصطناعي."
+      },
+      "deletion": "عند حذف حسابك تُحذف أيضًا عدّادات الاستخدام وسجلات الموافقة الخاصة بمساعد السجلات بالذكاء الاصطناعي. ما ترسله إلى الذكاء الاصطناعي وإجاباته لا تُخزَّن على الخادم، لذلك لا توجد نسخة على الخادم لحذفها. نص الإجابة الذي اخترت إرفاقه ببلاغ يُحتفظ به دون أي ربط بحسابك ويُحذف بعد 30 يومًا."
+    },
+    "zh-Hans": {
+      "name": "AI 记录助手",
+      "perk": "使用问题优先答复",
+      "sectionTitle": "AI 记录助手（Pro）",
+      "clauses": [
+        "处理目的：根据您的请求生成每周摘要、一般饮食建议和应用使用帮助的回答。AI 记录助手是 Pro 订阅中包含的可选功能。回答来自 AI，而不是真人，且不提供医学建议。",
+        "处理项目：您在发送前于屏幕上确认的记录，以及您输入的问题。记录包括用药次数（按时、延迟、跳过）、您自行输入的体重的变化、各类症状的记录次数、有饮食记录的天数及蛋白质平均值和目标，以及连续记录的周数。生成饮食建议时，还会发送您选择的餐别、偏好、过敏和不喜欢的食物。语言和地区设置也会一并发送；应用使用帮助只额外附带应用版本、平台和当前屏幕。不会发送药物名称或剂量、备注、食物名称、照片、日期，以及您的姓名、电子邮件或账户信息。{healthExclusion}您在提问框中输入的内容会原样发送。",
+        "处理依据：健康信息属于敏感信息，因此我们仅在取得与其他同意分开的单独同意后才进行处理。在韩国，这是依据《个人信息保护法》（PIPA）第 23 条取得的同意。首次开启该功能时我们会征求您的同意，每次发送记录时都会显示将要发送的内容并请您再次确认。",
+        "保存期限：您发送的内容和回答不会保留在服务器上，回答生成后立即删除。聊天内容不会保存。每周摘要仅保存在您的设备上，最多 2 条，并且不纳入同步和任何备份。使用次数（不含内容）最长保存 2 个月，同意记录在账户存续期间保存。如果您在举报回答时选择“一并发送回答内容”，则仅该回答保存 30 天。",
+        "受托处理方：Amazon Web Services（AWS）的 Amazon Bedrock 服务在大韩民国首尔区域（ap-northeast-2）生成 AI 回答。AI 模型为 Anthropic 的 Claude。该模型由 AWS 运营，Anthropic 无法查看内容。Amazon Bedrock 已设置为不存储您发送的内容和回答。AWS 的签约实体及其联系方式尚未核实，将在发布前写入本政策。",
+        "处理地点与传输方式：AI 请求在大韩民国首尔区域内处理，不会发送到其他国家的区域。应用会使用 DoseWeek 服务器的公钥对内容再加密一次，因此转发请求的 Cloudflare 只能看到密文。Cloudflare 所处理的 IP 地址等连接信息的境外传输，按本政策中有关境外传输的说明执行。",
+        "AI 训练与广告：我们不会将您发送的记录和问题用于 AI 训练或广告，也不会出售。",
+        "与端到端加密的区别：在生成回答期间，DoseWeek 服务器和 Amazon Bedrock 可以读取您发送给 AI 记录助手的内容。端到端加密仅适用于同步和备份数据。",
+        "自动化决策：AI 回答仅供参考。AI 不会作出影响您权利或义务的决定。",
+        "撤回同意与删除：您可以随时在“设置 > AI 记录助手”中撤回同意并删除已保存的 AI 摘要。撤回后不再向 AI 发送记录。删除账户时，使用次数和同意记录也会一并删除。即使不同意，Pro 和 Plus 的其他功能仍可照常使用。",
+        "使用年龄：AI 记录助手仅供年满 18 岁的用户使用。年龄由您自行确认，我们不收集出生日期。",
+        "AI 标识与安全提示：每条 AI 回答都带有“由 AI 生成、不构成医学建议”的标识，并且每条回答都有举报按钮。对于剂量、症状是否正常、诊断、药物信息等医疗问题，AI 不会生成回答，应用会显示预先设定的固定提示。如果消息看起来属于紧急或危机情况，应用会显示您所在商店地区对应的号码：韩国为 119 和 109，日本为 119 和 Yorisoi Hotline（0120-279-338），美国为 911 和 988。其他地区则提示当地急救电话和 findahelpline.com。"
+      ],
+      "e2eeException": "您同意后自行发送给 AI 记录助手（Pro）的内容属于端到端加密的例外：在生成回答期间，DoseWeek 服务器和 Amazon Bedrock 可以读取这些内容。",
+      "healthExclusion": {
+        "ios": "从 Apple Health 读取的信息同样不会用于 AI 功能，也不会发送给 AI 记录助手。",
+        "android": "从 Health Connect 读取的信息同样不会用于 AI 功能，也不会发送给 AI 记录助手。"
+      },
+      "onDeviceScope": "本条仅说明在设备上处理的 AI 记录和就诊准备功能。在服务器上处理的 AI 记录助手（Pro）在本政策的“AI 记录助手（Pro）”一节中另行说明。",
+      "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含可选的 AI 记录助手（Pro）。只有在您单独同意后，Amazon Bedrock（大韩民国首尔区域）上的生成式 AI 才会生成每周摘要、一般饮食建议和应用使用帮助的回答。其他功能不使用生成式 AI。",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — 依据是您开启 AI 记录助手时单独给予的健康信息（敏感信息）处理同意。委托处理合同以及 PIPA Art. 28-8 下境外访问的依据尚未核实。",
+        "data": "发送记录时您在屏幕上确认的汇总值，以及您输入的问题。不发送药物名称和剂量、备注、食物名称、照片、日期和账户信息。",
+        "country": "仅在大韩民国首尔区域（ap-northeast-2）内处理。不使用会路由到其他区域的推理配置文件。是否存在境外支持或访问尚未核实。",
+        "timingMethod": "仅在您请求 AI 功能并点击“发送”时发送。应用将内容再加密一次后发送到 DoseWeek 服务器，服务器仅在内存中解密并转交给 Amazon Bedrock。",
+        "recipientContact": "Amazon Web Services（AWS）的签约实体和接收方联系方式尚未核实。供应商参考：https://aws.amazon.com/privacy/",
+        "purpose": "生成您所请求的 AI 回答的受托处理方。AI 模型为 Anthropic 的 Claude，由 AWS 运营。不用于 AI 训练或广告。",
+        "retention": "不保存。Amazon Bedrock 已设置为不存储内容；实际设置的核查记录将在发布前留存。",
+        "refusalEffect": "如果您不同意或在设置中撤回同意，只有 AI 功能无法使用。记录功能以及 Pro 和 Plus 的其他功能仍可照常使用。"
+      },
+      "cloudflareTransit": "AI 记录助手的请求仅以应用再次加密后的密文形式经过。",
+      "terms": [
+        "Pro 是一项可选订阅，在 Plus 全部功能的基础上增加 AI 记录助手和使用问题优先答复。Pro 按月或按年自动续订，第 3 条中有关付款、续订、取消和退款的规则与 Plus 同样适用。只有在商店确认您符合资格时才提供 7 天免费试用。如果您已使用过 Plus 的免费试用，则可能不再提供。",
+        "您需要登录并单独同意后才能使用 AI 记录助手，且仅限年满 18 岁的用户使用。它根据您确认发送的记录生成每周摘要、一般饮食建议和应用使用帮助的回答。即使不同意，Pro 的其他功能仍可照常使用。",
+        "AI 记录助手不是医疗器械，不提供诊断、治疗或用药指示等医学建议。AI 生成的内容可能有误或不完整。有关健康的决定请咨询医务人员。",
+        "遇到紧急情况时，请不要等待 AI 记录助手的回答，应立即拨打当地急救电话：韩国和日本为 119，美国为 911。",
+        "每月可使用 150 次。免费试用期间最多可使用 50 次。每周可另行生成一次每周摘要，不计入上述次数；重新生成则按 1 次计算。次数于每月 1 日按协调世界时（UTC）重新补满。如需减少次数，我们会在生效前 30 天通知您，并且不会在您已付费的期间内作出对您不利的调整。",
+        "请勿输入他人的健康信息，也不要为获取医学建议而试图绕过安全提示。",
+        "AI 功能有时可能暂时无法使用。在这种情况下，您依据相关法律享有的撤销合同和退款的权利仍受到完整保障。",
+        "使用问题优先答复是指：Pro 订阅者通过支持邮箱发送有关应用使用的问题时，我们会在 1 个工作日内作出首次答复。工作日以大韩民国的周一至周五（法定节假日除外）为准。我们不回答医疗问题，因此请勿在邮件中附上健康记录。"
+      ],
+      "usHealth": {
+        "categories": "如果您开启 AI 记录助手（Pro）并确认发送，我们也会将以下内容作为健康信息处理：根据您输入的记录生成的用药次数、体重变化、按症状类别统计的次数、饮食和蛋白质汇总，您的饮食偏好、过敏和不喜欢的食物，以及您输入的问题。这些内容不属于端到端加密的范围。在生成回答期间服务器可以读取，回答生成后立即删除。从 HealthKit 或 Health Connect 读取的信息不会发送给 AI 记录助手。",
+        "purpose": "在您提出请求时，我们也会将其用于生成 AI 摘要和一般营养建议。AI 回答不是诊断或治疗建议。",
+        "processor": "AI 记录助手的请求由作为受托处理方的 AWS Amazon Bedrock 在大韩民国首尔区域处理，且仅用于生成回答。内容不会被存储，也不会用于 AI 训练。",
+        "noSale": "发送给 AI 记录助手的健康信息我们同样不会出售，也不会为广告目的而提供。",
+        "consent": "对于 AI 记录助手，我们会在您首次开启时通过单独的同意界面征求同意，并在每次发送记录时请您再次确认。您可以随时在“设置 > AI 记录助手”中撤回同意。"
+      },
+      "deletion": "删除账户时，AI 记录助手的使用次数和同意记录也会一并删除。您发送给 AI 的内容和回答不会存储在服务器上，因此没有需要删除的服务器副本。您在举报时选择一并发送的回答内容，会在不与账户关联的情况下保存，并在 30 天后删除。"
+    },
+    "zh-Hant": {
+      "name": "AI 紀錄助手",
+      "perk": "使用問題優先答覆",
+      "sectionTitle": "AI 紀錄助手（Pro）",
+      "clauses": [
+        "處理目的：依您的要求產生每週摘要、一般飲食建議和 App 使用說明的回答。AI 紀錄助手是 Pro 訂閱所包含的選用功能。回答來自 AI，而不是真人，且不提供醫療建議。",
+        "處理項目：您在傳送前於畫面上確認的紀錄，以及您輸入的問題。紀錄包括用藥次數（準時、延遲、略過）、您自行輸入的體重的變化、各類症狀的紀錄次數、有飲食紀錄的天數及蛋白質平均值和目標，以及連續紀錄的週數。產生飲食建議時，也會傳送您選擇的餐別、偏好、過敏和不喜歡的食物。語言和地區設定也會一併傳送；App 使用說明只會額外附上 App 版本、平台和目前的畫面。不會傳送藥物名稱或劑量、備註、食物名稱、照片、日期，以及您的姓名、電子郵件或帳號資訊。{healthExclusion}您在提問欄輸入的內容會原樣傳送。",
+        "處理依據：健康資訊屬於敏感資訊，因此我們僅在取得與其他同意分開的單獨同意後才進行處理。在韓國，這是依《個人資訊保護法》（PIPA）第 23 條取得的同意。首次開啟此功能時我們會徵求您的同意，每次傳送紀錄時都會顯示即將傳送的內容並請您再次確認。",
+        "保存期間：您傳送的內容和回答不會留在伺服器上，回答產生後立即刪除。聊天內容不會儲存。每週摘要只儲存在您的裝置上，最多 2 則，且不納入同步和任何備份。使用次數（不含內容）最長保存 2 個月，同意紀錄在帳號存續期間保存。如果您在檢舉回答時選擇「一併傳送回答內容」，則只有該回答會保存 30 天。",
+        "受託處理方：Amazon Web Services（AWS）的 Amazon Bedrock 服務在大韓民國首爾區域（ap-northeast-2）產生 AI 回答。AI 模型為 Anthropic 的 Claude。該模型由 AWS 營運，Anthropic 無法查看內容。Amazon Bedrock 已設定為不儲存您傳送的內容和回答。AWS 的簽約實體及其聯絡方式尚未確認，將在發布前寫入本政策。",
+        "處理地點與傳輸方式：AI 請求在大韓民國首爾區域內處理，不會傳送到其他國家的區域。App 會使用 DoseWeek 伺服器的公開金鑰將內容再加密一次，因此轉送請求的 Cloudflare 只能看到密文。Cloudflare 所處理的 IP 位址等連線資訊的境外傳輸，依本政策中有關境外傳輸的說明辦理。",
+        "AI 訓練與廣告：我們不會將您傳送的紀錄和問題用於 AI 訓練或廣告，也不會出售。",
+        "與端對端加密的差異：在產生回答期間，DoseWeek 伺服器和 Amazon Bedrock 可以讀取您傳送給 AI 紀錄助手的內容。端對端加密僅適用於同步和備份資料。",
+        "自動化決策：AI 回答僅供參考。AI 不會作出影響您權利或義務的決定。",
+        "撤回同意與刪除：您可以隨時在「設定 > AI 紀錄助手」中撤回同意並刪除已儲存的 AI 摘要。撤回後不再向 AI 傳送紀錄。刪除帳號時，使用次數和同意紀錄也會一併刪除。即使不同意，Pro 和 Plus 的其他功能仍可照常使用。",
+        "使用年齡：AI 紀錄助手僅供年滿 18 歲的使用者使用。年齡由您自行確認，我們不會收集出生日期。",
+        "AI 標示與安全提示：每則 AI 回答都帶有「由 AI 產生、不構成醫療建議」的標示，且每則回答都有檢舉按鈕。對於劑量、症狀是否正常、診斷、藥物資訊等醫療問題，AI 不會產生回答，App 會顯示預先設定的固定提示。如果訊息看起來屬於緊急或危機狀況，App 會顯示您所在商店地區對應的號碼：韓國為 119 和 109，日本為 119 和 Yorisoi Hotline（0120-279-338），美國為 911 和 988。其他地區則提示當地緊急求助電話和 findahelpline.com。"
+      ],
+      "e2eeException": "您同意後自行傳送給 AI 紀錄助手（Pro）的內容屬於端對端加密的例外：在產生回答期間，DoseWeek 伺服器和 Amazon Bedrock 可以讀取這些內容。",
+      "healthExclusion": {
+        "ios": "從 Apple Health 讀取的資訊同樣不會用於 AI 功能，也不會傳送給 AI 紀錄助手。",
+        "android": "從 Health Connect 讀取的資訊同樣不會用於 AI 功能，也不會傳送給 AI 紀錄助手。"
+      },
+      "onDeviceScope": "本條僅說明在裝置上處理的 AI 紀錄和就診準備功能。在伺服器上處理的 AI 紀錄助手（Pro）於本政策的「AI 紀錄助手（Pro）」一節中另行說明。",
+      "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含選用的 AI 紀錄助手（Pro）。只有在您另行同意後，Amazon Bedrock（大韓民國首爾區域）上的生成式 AI 才會產生每週摘要、一般飲食建議和 App 使用說明的回答。其他功能不使用生成式 AI。",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — 依據是您開啟 AI 紀錄助手時另行給予的健康資訊（敏感資訊）處理同意。委託處理契約以及 PIPA Art. 28-8 下境外存取的依據尚未確認。",
+        "data": "傳送紀錄時您在畫面上確認的彙總值，以及您輸入的問題。不傳送藥物名稱和劑量、備註、食物名稱、照片、日期和帳號資訊。",
+        "country": "僅在大韓民國首爾區域（ap-northeast-2）內處理。不使用會路由到其他區域的推論設定檔。是否有境外支援或存取尚未確認。",
+        "timingMethod": "僅在您要求 AI 功能並點一下「傳送」時傳送。App 將內容再加密一次後傳送到 DoseWeek 伺服器，伺服器僅在記憶體中解密並轉交給 Amazon Bedrock。",
+        "recipientContact": "Amazon Web Services（AWS）的簽約實體和接收方聯絡方式尚未確認。供應商參考：https://aws.amazon.com/privacy/",
+        "purpose": "產生您所要求的 AI 回答的受託處理方。AI 模型為 Anthropic 的 Claude，由 AWS 營運。不用於 AI 訓練或廣告。",
+        "retention": "不保存。Amazon Bedrock 已設定為不儲存內容；實際設定的查核紀錄將在發布前留存。",
+        "refusalEffect": "如果您不同意或在設定中撤回同意，只有 AI 功能無法使用。紀錄功能以及 Pro 和 Plus 的其他功能仍可照常使用。"
+      },
+      "cloudflareTransit": "AI 紀錄助手的請求僅以 App 再次加密後的密文形式經過。",
+      "terms": [
+        "Pro 是一項選用訂閱，在 Plus 全部功能的基礎上增加 AI 紀錄助手和使用問題優先答覆。Pro 按月或按年自動續訂，第 3 條中有關付款、續訂、取消和退款的規則與 Plus 同樣適用。只有在商店確認您符合資格時才提供 7 天免費試用。如果您已使用過 Plus 的免費試用，則可能不再提供。",
+        "您需要登入並另行同意後才能使用 AI 紀錄助手，且僅限年滿 18 歲的使用者使用。它會根據您確認傳送的紀錄產生每週摘要、一般飲食建議和 App 使用說明的回答。即使不同意，Pro 的其他功能仍可照常使用。",
+        "AI 紀錄助手不是醫療器材，不提供診斷、治療或用藥指示等醫療建議。AI 產生的內容可能有誤或不完整。有關健康的決定請諮詢醫療專業人員。",
+        "遇到緊急狀況時，請不要等待 AI 紀錄助手的回答，應立即撥打當地緊急求助電話：韓國和日本為 119，美國為 911。",
+        "每月可使用 150 次。免費試用期間最多可使用 50 次。每週可另行產生一次每週摘要，不計入上述次數；重新產生則以 1 次計算。次數於每月 1 日依世界協調時間（UTC）重新補滿。如需減少次數，我們會在生效前 30 天通知您，且不會在您已付費的期間內作出對您不利的調整。",
+        "請勿輸入他人的健康資訊，也不要為取得醫療建議而試圖規避安全提示。",
+        "AI 功能有時可能暫時無法使用。在這種情況下，您依相關法律享有的解除契約和退款的權利仍受到完整保障。",
+        "使用問題優先答覆是指：Pro 訂閱者透過支援信箱寄送有關 App 使用的問題時，我們會在 1 個工作日內作出首次答覆。工作日以大韓民國的週一至週五（國定假日除外）為準。我們不回答醫療問題，因此請勿在信件中附上健康紀錄。"
+      ],
+      "usHealth": {
+        "categories": "如果您開啟 AI 紀錄助手（Pro）並確認傳送，我們也會將下列內容作為健康資訊處理：根據您輸入的紀錄產生的用藥次數、體重變化、依症狀類別統計的次數、飲食和蛋白質彙總，您的飲食偏好、過敏和不喜歡的食物，以及您輸入的問題。這些內容不屬於端對端加密的範圍。在產生回答期間伺服器可以讀取，回答產生後立即刪除。從 HealthKit 或 Health Connect 讀取的資訊不會傳送給 AI 紀錄助手。",
+        "purpose": "在您提出要求時，我們也會將其用於產生 AI 摘要和一般營養建議。AI 回答不是診斷或治療建議。",
+        "processor": "AI 紀錄助手的請求由作為受託處理方的 AWS Amazon Bedrock 在大韓民國首爾區域處理，且僅用於產生回答。內容不會被儲存，也不會用於 AI 訓練。",
+        "noSale": "傳送給 AI 紀錄助手的健康資訊我們同樣不會出售，也不會為廣告目的而提供。",
+        "consent": "對於 AI 紀錄助手，我們會在您首次開啟時透過獨立的同意畫面徵求同意，並在每次傳送紀錄時請您再次確認。您可以隨時在「設定 > AI 紀錄助手」中撤回同意。"
+      },
+      "deletion": "刪除帳號時，AI 紀錄助手的使用次數和同意紀錄也會一併刪除。您傳送給 AI 的內容和回答不會儲存在伺服器上，因此沒有需要刪除的伺服器副本。您在檢舉時選擇一併傳送的回答內容，會在不與帳號連結的情況下保存，並在 30 天後刪除。"
+    },
+    "tr": {
+      "name": "yapay zeka kayıt asistanı",
+      "perk": "Sorulara öncelikli yanıt",
+      "sectionTitle": "Yapay zeka kayıt asistanı (Pro)",
+      "clauses": [
+        "Amaç: istediğiniz haftalık özetleri, genel yemek fikirlerini ve uygulama kullanımıyla ilgili yardım yanıtlarını oluşturmak. Yapay zeka kayıt asistanı, Pro aboneliğine dahil isteğe bağlı bir özelliktir. Yanıtları bir insan değil, yapay zeka verir ve tıbbi tavsiye vermez.",
+        "İşlenen veriler: göndermeden önce ekranda onayladığınız kayıtlar ve yazdığınız sorular. Kayıtlar; doz sayıları (zamanında, geç, atlanan), kendi girdiğiniz kilodaki değişim, her belirti türünü kaç kez kaydettiğiniz, öğün kaydı olan gün sayısı ile protein ortalamanız ve hedefiniz ve hafta cinsinden seriniz. Yemek fikirleri için seçtiğiniz öğün türü, tercihler, alerjiler ve sevmediğiniz yiyecekler de gönderilir. Dil ve bölge ayarınız da gönderilir; uygulama yardımına yalnızca uygulama sürümü, platform ve geçerli ekran eklenir. İlaç adları veya dozları, notlar, yiyecek adları, fotoğraflar, tarihler ya da adınız, e-posta adresiniz veya hesap bilgileriniz gönderilmez. {healthExclusion} Soru alanına yazdıklarınız, yazdığınız şekliyle gönderilir.",
+        "Hukuki dayanak: sağlık bilgileri hassastır; bu nedenle bunları yalnızca diğer tüm rızalardan ayrı olarak alınan bir rızayla işleriz. Kore’de bu, Kişisel Bilgilerin Korunması Kanunu’nun (PIPA) 23. maddesi kapsamındaki rızadır. Özelliği ilk kez açtığınızda rızanızı isteriz ve kayıtlar her gönderildiğinde neyin gönderileceğini gösterip yeniden onaylamanızı isteriz.",
+        "Saklama süresi: gönderdikleriniz ve yanıtlar sunucuda tutulmaz; yanıt oluşturulur oluşturulmaz silinir. Sohbet mesajları saklanmaz. Haftalık özetler yalnızca cihazınıza, en fazla 2 adet kaydedilir ve eşitlemeye ya da herhangi bir yedeğe dahil edilmez. Kullanım sayıları (içerik olmadan) en fazla 2 ay, rıza kayıtları ise hesap var olduğu sürece saklanır. Bir yanıtı bildirir ve “Yanıt metnini de gönder” seçeneğini seçerseniz yalnızca o yanıt 30 gün saklanır.",
+        "Veri işleyen: Amazon Web Services’in (AWS) bir hizmeti olan Amazon Bedrock, yapay zeka yanıtlarını Kore Cumhuriyeti’ndeki Seul bölgesinde (ap-northeast-2) oluşturur. Yapay zeka modeli Anthropic’in Claude modelidir. Modeli AWS işletir ve Anthropic içeriği göremez. Amazon Bedrock, gönderdiklerinizi ve yanıtları saklamayacak şekilde ayarlanmıştır. AWS’nin sözleşme tarafı olan tüzel kişi ve iletişim bilgileri henüz doğrulanmamıştır ve yayından önce bu politikada belirtilecektir.",
+        "İşleme yeri ve iletim: yapay zeka istekleri Kore Cumhuriyeti’ndeki Seul bölgesi içinde işlenir ve başka bir ülkedeki bölgeye gönderilmez. Uygulama, içeriği DoseWeek sunucusunun açık anahtarıyla bir kez daha şifreler. Bu nedenle isteği ileten Cloudflare yalnızca şifreli metni görür. Cloudflare’in işlediği IP adresiniz gibi bağlantı bilgilerinin yurt dışına aktarımı, bu politikadaki yurt dışına aktarım açıklamasına tabidir.",
+        "Yapay zeka eğitimi ve reklam: gönderdiğiniz kayıtları ve soruları yapay zeka eğitimi veya reklam için kullanmayız ve satmayız.",
+        "Uçtan uca şifrelemeden farkı: bir yanıt oluşturulurken DoseWeek sunucusu ve Amazon Bedrock, yapay zeka kayıt asistanına gönderdiklerinizi okuyabilir. Uçtan uca şifreleme yalnızca eşitleme ve yedekleme verileri için geçerlidir.",
+        "Otomatik kararlar: yapay zeka yanıtları yalnızca bilgi amaçlıdır. Yapay zeka, haklarınızı veya yükümlülüklerinizi etkileyen hiçbir karar vermez.",
+        "Rızanın geri alınması ve silme: Ayarlar > Yapay zeka kayıt asistanı bölümünden rızanızı istediğiniz zaman geri alabilir ve kaydedilmiş yapay zeka özetlerini silebilirsiniz. Rızanızı geri aldıktan sonra yapay zekaya kayıt gönderilmez. Hesabınızı sildiğinizde kullanım sayıları ve rıza kayıtları da silinir. Rıza vermeseniz de Pro ve Plus’ın diğer özellikleri çalışmaya devam eder.",
+        "Yaş: yapay zeka kayıt asistanı yalnızca 18 yaş ve üzerindeki kişiler içindir. Yaşınızı kendiniz onaylarsınız; doğum tarihi istemeyiz.",
+        "Yapay zeka etiketleri ve güvenlik mesajları: her yapay zeka yanıtında, yanıtın yapay zeka tarafından oluşturulduğunu ve tıbbi tavsiye olmadığını belirten bir etiket bulunur ve her yanıtta bir bildirme düğmesi vardır. Doz, bir belirtinin normal olup olmadığı, teşhis veya ilaç bilgisi gibi tıbbi sorularda yapay zeka yanıt yazmaz; uygulama bunun yerine sabit bir mesaj gösterir. Bir mesaj acil durum veya kriz gibi görünürse uygulama mağaza bölgenize ait numaraları gösterir: Kore’de 119 ve 109, Japonya’da 119 ve Yorisoi Hotline (0120-279-338), Amerika Birleşik Devletleri’nde 911 ve 988. Diğer bölgelerde yerel acil durum numarasına ve findahelpline.com adresine yönlendirir."
+      ],
+      "e2eeException": "Rıza verdikten sonra yapay zeka kayıt asistanına (Pro) kendiniz gönderdiğiniz içerik uçtan uca şifrelemenin istisnasıdır: bir yanıt oluşturulurken DoseWeek sunucusu ve Amazon Bedrock bu içeriği okuyabilir.",
+      "healthExclusion": {
+        "ios": "Apple Health’ten okunan bilgiler yapay zeka özellikleri için de kullanılmaz ve yapay zeka kayıt asistanına gönderilmez.",
+        "android": "Health Connect’ten okunan bilgiler yapay zeka özellikleri için de kullanılmaz ve yapay zeka kayıt asistanına gönderilmez."
+      },
+      "onDeviceScope": "Bu bölüm yalnızca cihazda işlenen yapay zeka ile kayıt ve muayene hazırlığı özelliklerini kapsar. Sunucuda işlenen yapay zeka kayıt asistanı (Pro), bu politikanın “Yapay zeka kayıt asistanı (Pro)” bölümünde ayrıca açıklanır.",
+      "androidAiFaq": "Android için DoseWeek 1.0.6, isteğe bağlı yapay zeka kayıt asistanını (Pro) içerir. Yalnızca ayrı bir rızadan sonra, Amazon Bedrock (Seul bölgesi, Kore Cumhuriyeti) üzerindeki üretken yapay zeka haftalık özetler, genel yemek fikirleri ve uygulama kullanımıyla ilgili yardım yanıtları oluşturur. Başka hiçbir özellik üretken yapay zeka kullanmaz.",
+      "processorRow": {
+        "legalBasis": "Amazon Bedrock (AWS) — Dayanak, yapay zeka kayıt asistanını açarken sağlık (hassas) bilgilerinin işlenmesi için verdiğiniz ayrı rızadır. Veri işleme sözleşmesi ve yurt dışından erişim için PIPA Art. 28-8 dayanağı doğrulanmamıştır.",
+        "data": "Kayıt gönderirken ekranda onayladığınız toplu değerler ve yazdığınız sorular. İlaç adları ve dozları, notlar, yiyecek adları, fotoğraflar, tarihler ve hesap bilgileri gönderilmez.",
+        "country": "Yalnızca Seul bölgesi (ap-northeast-2), Kore Cumhuriyeti içinde işlenir. Başka bir bölgeye yönlendiren çıkarım profili kullanılmaz. Yurt dışından destek veya erişim doğrulanmamıştır.",
+        "timingMethod": "Yalnızca bir yapay zeka özelliği istediğinizde ve “Gönder”e dokunduğunuzda gönderilir. Uygulama içeriği bir kez daha şifreleyip DoseWeek sunucusuna gönderir; sunucu içeriği yalnızca bellekte çözer ve Amazon Bedrock’a iletir.",
+        "recipientContact": "Amazon Web Services’in (AWS) sözleşme tarafı olan tüzel kişi ve alıcı iletişim bilgisi doğrulanmamıştır. Sağlayıcı kaynağı: https://aws.amazon.com/privacy/",
+        "purpose": "İstediğiniz yapay zeka yanıtlarını oluşturan veri işleyendir. Yapay zeka modeli Anthropic’in Claude modelidir ve AWS tarafından işletilir. Yapay zeka eğitimi veya reklam için kullanılmaz.",
+        "retention": "Saklanmaz. Amazon Bedrock içeriği saklamayacak şekilde ayarlanmıştır; gerçek ayarın kontrol kaydı yayından önce tutulur.",
+        "refusalEffect": "Rıza vermezseniz veya Ayarlar’dan rızanızı geri alırsanız yalnızca yapay zeka özellikleri kullanılamaz. Kayıt tutma ile Pro ve Plus’ın diğer özellikleri çalışmaya devam eder."
+      },
+      "cloudflareTransit": "Yapay zeka kayıt asistanı istekleri yalnızca uygulamanın bir kez daha şifrelediği metin olarak geçer.",
+      "terms": [
+        "Pro, Plus’ın tüm özelliklerine yapay zeka kayıt asistanını ve sorulara öncelikli yanıtı ekleyen isteğe bağlı bir aboneliktir. Aylık veya yıllık olarak otomatik yenilenir ve 3. bölümdeki ödeme, yenileme, iptal ve iade kuralları Plus’ta olduğu gibi uygulanır. 7 günlük ücretsiz deneme yalnızca mağaza uygun olduğunuzu doğruladığında sunulur. Daha önce Plus’ın ücretsiz denemesini kullandıysanız sunulmayabilir.",
+        "Yapay zeka kayıt asistanını, oturum açıp ayrı bir rıza verdikten sonra ve yalnızca 18 yaşında veya daha büyükseniz kullanabilirsiniz. Gönderilmesini onayladığınız kayıtlardan haftalık özetler, genel yemek fikirleri ve uygulama kullanımıyla ilgili yardım yanıtları oluşturur. Rıza vermeseniz de Pro’nun diğer özellikleri çalışmaya devam eder.",
+        "Yapay zeka kayıt asistanı tıbbi cihaz değildir ve teşhis, tedavi veya doz talimatı gibi tıbbi tavsiyeler vermez. Yapay zekanın oluşturduğu içerik hatalı veya eksik olabilir. Sağlığınızla ilgili kararlar için sağlık uzmanınıza danışın.",
+        "Acil bir durumda yapay zeka kayıt asistanının yanıtını beklemeyin. Hemen yerel acil durum numarasını arayın: Kore ve Japonya’da 119, Amerika Birleşik Devletleri’nde 911.",
+        "Ayda 150 istek gönderebilirsiniz. Ücretsiz deneme süresince en fazla 50 istek gönderebilirsiniz. Haftada bir haftalık özet bu sınıra dahil değildir; özeti yeniden oluşturmak 1 istek sayılır. Sayaç, Eşgüdümlü Evrensel Zaman’a (UTC) göre her ayın 1’inde yenilenir. Sınırı düşürmemiz gerekirse bunu uygulamadan 30 gün önce bildiririz ve ödemesini yaptığınız bir dönem için aleyhinize uygulamayız.",
+        "Başka birinin sağlık bilgilerini girmeyin ve tıbbi tavsiye almak için güvenlik mesajlarını aşmaya çalışmayın.",
+        "Yapay zeka özellikleri zaman zaman kullanılamayabilir. Bu durumda da ilgili yasalardan doğan cayma ve iade haklarınız tümüyle korunur.",
+        "Sorulara öncelikli yanıt, bir Pro abonesi uygulamanın kullanımıyla ilgili sorusunu destek ekibine e-postayla gönderdiğinde ilk yanıtı 1 iş günü içinde göndermemiz anlamına gelir. İş günleri, resmi tatiller hariç, Kore Cumhuriyeti’nde pazartesiden cumaya kadar olan günlerdir. Tıbbi soruları yanıtlamayız; bu nedenle mesajınıza sağlık kayıtlarınızı eklemeyin."
+      ],
+      "usHealth": {
+        "categories": "Yapay zeka kayıt asistanını (Pro) açar ve gönderimi onaylarsanız, girdiğiniz kayıtlardan oluşturulan doz sayılarını, kilo değişimini, belirti türüne göre sayıları, öğün ve protein toplamlarını, öğün tercihlerinizi, alerjilerinizi ve sevmediğiniz yiyecekleri ve yazdığınız soruları da sağlık bilgisi olarak ele alırız. Bu içerik uçtan uca şifrelenmez. Bir yanıt oluşturulurken sunucu bu içeriği okuyabilir ve yanıt oluşturulur oluşturulmaz içerik silinir. HealthKit veya Health Connect’ten okunan bilgiler yapay zeka kayıt asistanına gönderilmez.",
+        "purpose": "İstediğinizde bunları yapay zeka özetleri ve genel beslenme fikirleri oluşturmak için de kullanırız. Yapay zeka yanıtları teşhis veya tedavi önerisi değildir.",
+        "processor": "Yapay zeka kayıt asistanı isteklerini, veri işleyen olarak AWS’nin Amazon Bedrock hizmeti Kore Cumhuriyeti’ndeki Seul bölgesinde yalnızca yanıtı oluşturmak için işler. İçerik saklanmaz ve yapay zeka eğitimi için kullanılmaz.",
+        "noSale": "Yapay zeka kayıt asistanına gönderilen sağlık bilgilerini de satmayız ve reklam amacıyla paylaşmayız.",
+        "consent": "Yapay zeka kayıt asistanı için, özelliği ilk kez açtığınızda ayrı bir ekranda rızanızı isteriz ve kayıtlar her gönderildiğinde yeniden onaylamanızı isteriz. Rızanızı Ayarlar > Yapay zeka kayıt asistanı bölümünden istediğiniz zaman geri alabilirsiniz."
+      },
+      "deletion": "Hesabınızı sildiğinizde yapay zeka kayıt asistanının kullanım sayıları ve rıza kayıtları da silinir. Yapay zekaya gönderdikleriniz ve yanıtlar sunucuda saklanmadığı için silinecek bir sunucu kopyası yoktur. Bir bildirime eklemeyi seçtiğiniz yanıt metni hesabınızla ilişkilendirilmeden saklanır ve 30 gün sonra silinir."
+    }
+  }
+}

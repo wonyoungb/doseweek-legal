@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "lane": "LEGAL-AI",
+  "date": "2026-10-02",
+  "consentVersion": "2026-10-02.1",
+  "statuses": {
+    "ko": "pending-owner-gate-6",
+    "en": "reviewed-by-lane-agent",
+    "ja": "pending-counsel-or-native-review",
+    "de": "back-translation-only",
+    "fr": "back-translation-only",
+    "es": "back-translation-only",
+    "it": "back-translation-only",
+    "nl": "back-translation-only",
+    "pt-PT": "back-translation-only",
+    "pl": "back-translation-only",
+    "sv": "back-translation-only",
+    "hi": "back-translation-only",
+    "pt-BR": "back-translation-only",
+    "ar": "back-translation-only",
+    "zh-Hans": "back-translation-only",
+    "zh-Hant": "back-translation-only",
+    "tr": "back-translation-only"
+  },
+  "backTranslationOnly": [
+    "de",
+    "fr",
+    "es",
+    "it",
+    "nl",
+    "pt-PT",
+    "pl",
+    "sv",
+    "hi",
+    "pt-BR",
+    "ar",
+    "zh-Hans",
+    "zh-Hant",
+    "tr"
+  ],
+  "nativeSpeakerReviewed": [],
+  "counselReviewed": [],
+  "flagsOff": [
+    "ko",
+    "ja"
+  ],
+  "honesty": "No human has reviewed any locale. en is an AI-agent review; 14 locales have only a same-model back-translation; ko and ja wait for the owner and for counsel or a native reviewer."
+}
