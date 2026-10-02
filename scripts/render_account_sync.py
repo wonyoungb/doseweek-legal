@@ -53,10 +53,21 @@ IOS_RETENTION_STORE_LABELS = {'ko': [{'old': 'Google Play', 'new': '다른 지�
 def sections(entry):
     return {s['id']: s for s in entry['sections']}
 
+# The 1.0.5 "earlier" answer opens with the free list and the "nothing is deleted or moved into
+# Plus" promise, then closes with the one-time-notice sentence. ko, ja and tr state the promise
+# as its own sentence; the other locales join it with ';' or '，'. With Android OS Drive Auto
+# Backup now Plus-only, every sentence but the closing notice is replaced on both platforms.
+EARLIER_CLAIMS = slice(0, -1)
+
 def replace_backup_sentence(paragraph, index, replacement, locale):
-    """Replace one legacy blanket claim, preserving the other help sentences."""
+    """Replace a legacy blanket claim (one sentence index or a slice of sentences), preserving
+    the other help sentences."""
     parts = [p.strip() for p in re.split(r'(?<=[。।])|(?<=\.)\s+', paragraph) if p.strip()]
-    parts[index] = replacement
+    if isinstance(index, slice):
+        assert parts[index], (locale, 'legacy claim sentences changed')
+        parts[index] = [replacement]
+    else:
+        parts[index] = replacement
     return ('' if locale in CJK else ' ').join(parts)
 
 def integrated_sources(candidate=None):
@@ -131,7 +142,7 @@ def integrated_sources(candidate=None):
         i['support']['plus']['features']['answers'][0] += '\n\n' + join('account', 'automaticBackup', 'iosAppDataBackup', 'sync')
         i['support']['plus']['manage']['answers'][-1] += '\n\n' + join_ios('account', 'retention')
         i['support']['plus']['earlier']['answers'][0] = text['legacyRights']
-        for key, index, sentence in [('free', 0, -1), ('features', 1, 0), ('earlier', 1, 0)]:
+        for key, index, sentence in [('free', 0, -1), ('features', 1, 0), ('earlier', 1, EARLIER_CLAIMS)]:
             answers = i['support']['plus'][key]['answers']
             answers[index] = replace_backup_sentence(answers[index], sentence, text['freeFeatures'], loc)
         a['privacy']['scope'] = text['releaseStatus'] + '\n\n' + a['privacy']['scope'].replace('1.0.5', '1.0.6')
@@ -175,7 +186,8 @@ def integrated_sources(candidate=None):
         faq['plus-features']['answers'][0] += '\n\n' + join('account', 'automaticBackup', 'androidSystemBackup', 'sync')
         faq['plus-restore']['answers'][1] = join('account', 'sync')
         faq['plus-earlier']['answers'][0] = text['legacyRights']
-        for key, index, sentence in [('plus-free', 0, -1), ('plus-features', 1, 0), ('plus-earlier', 1, 0)]:
+        for key, index, sentence in [('plus-free', 0, -1), ('plus-features', 1, 0),
+                                    ('plus-earlier', 1, EARLIER_CLAIMS)]:
             answers = faq[key]['answers']
             answers[index] = replace_backup_sentence(answers[index], sentence, text['androidFreeFeatures'], loc)
         faq['plus-earlier']['answers'][1] += '\n\n' + text['androidSystemBackup']
