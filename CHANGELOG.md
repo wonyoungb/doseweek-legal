@@ -10,6 +10,10 @@
   to be verified.
 - Review receipts are honest about their limits: ko and ja are pending, en is an AI-agent review,
   14 locales have only a same-model back-translation.
+- Review round 1 (same day): the 14 back-translation receipts now record every key in scope
+  (50 app keys and 15 CON-PRO keys per locale; the first receipts recorded 11 app keys), and the
+  staged Android 1.0.6 content no longer says "No generative AI" as a home badge or lists
+  "Generative AI" among the things not used; both now name the opt-in assistant in 17 locales.
 - Failing-first: RED `8b34c75`, GREEN `b23c985`. 246/246 tests and 13 light checks PASS; release
   check BLOCKED_EFFECTIVE_DATE. Served pages unchanged. Never publish.
 

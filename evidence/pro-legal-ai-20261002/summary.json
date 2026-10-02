@@ -186,5 +186,148 @@
   "EVAL-AI gate",
   "native-speaker and counsel review"
  ],
- "cleanup": "temporary detached RED worktree removed and pruned; scratch fragments deleted after this summary"
+ "cleanup": "temporary detached RED worktree removed and pruned; scratch fragments deleted after this summary",
+ "reviewFix1": {
+  "date": "2026-10-02",
+  "findings": [
+   "major: C23 receipts recorded 11 of 50 app keys but recommended the flag",
+   "major: staged Android 1.0.6 content still denied generative AI (home badge and not-used list item, 17 locales)"
+  ],
+  "commits": [
+   {
+    "sha": "2f43f9cf9fb0678df6a71c3da5eac5b36bacb0f1",
+    "kind": "RED"
+   },
+   {
+    "sha": "1c9579b",
+    "kind": "GREEN"
+   },
+   {
+    "kind": "docs",
+    "note": "this evidence and the handoff; its sha is in the lane report"
+   }
+  ],
+  "red": {
+   "proof": "red-proof/review-fix1-red.summary.json",
+   "ran": 26,
+   "failingMethods": 3,
+   "failures": 38,
+   "errors": 0,
+   "fullSuiteRan": 248,
+   "fullSuiteFailures": 38,
+   "maskedByTheFirstAssertion": {
+    "note": "each locale subtest stops at the badge assertion; the item assertions were measured separately at the RED commit in one temporary detached worktree (removed)",
+    "locales": 17,
+    "badgeStillStaged": 17,
+    "itemStillStaged": 17,
+    "liOnLocalePage": 17,
+    "liOnRootPage": 17
+   }
+  },
+  "green": {
+   "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+   "exit": 0,
+   "ran": 248,
+   "result": "OK",
+   "byModuleChanged": {
+    "test_ai_assistant_legal": 26
+   },
+   "newMethods": [
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_badge_and_not_used_list_no_longer_deny_generative_ai",
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_renderer_rejects_the_bare_generative_ai_denial_for_1_0_6"
+   ],
+   "changedMethods": [
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_locale_review_receipts_are_recorded_honestly"
+   ]
+  },
+  "lightChecks": [
+   {
+    "cmd": "python3 scripts/render_home.py --check",
+    "exit": 0,
+    "result": "OK: shared home and 17 language homes match all 17 guide locales and catalog versions"
+   },
+   {
+    "cmd": "python3 scripts/render_ios.py --check",
+    "exit": 0,
+    "result": "OK: iOS privacy and support pages (17 locales) and 34 language pages"
+   },
+   {
+    "cmd": "python3 scripts/render_android.py --check",
+    "exit": 0,
+    "result": "OK: 54 Android pages and icon match /Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/PRO-LEGAL-AI-legal/docs/android-con"
+   },
+   {
+    "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+    "exit": 0,
+    "result": "OK: import guide, 17 language pages and downloads (17 locales); status supported"
+   },
+   {
+    "cmd": "python3 scripts/render_terms.py --check",
+    "exit": 0,
+    "result": "OK: Terms of Use page (17 locales) and 17 language pages; effective date not set (release date BLOCKED)"
+   },
+   {
+    "cmd": "python3 scripts/render_us_health.py --check",
+    "exit": 0,
+    "result": "OK: US Consumer Health Data policy, 18 pages / 17 locales; effective date not set (release date BLOCKED)"
+   },
+   {
+    "cmd": "python3 scripts/render_sitemap.py --check",
+    "exit": 0,
+    "result": "OK: sitemap.xml lists 162 URLs (9 routes x hash page + 17 languages), each with 18 hreflang alternates"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py",
+    "exit": 0,
+    "result": "OK: 9 hash pages and 153 language pages, hreflang (162 pages, 17 languages + x-default, reciprocal), sitemap (162 URLs w"
+   },
+   {
+    "cmd": "python3 scripts/account_sync_candidate.py",
+    "exit": 0,
+    "result": "OK: 17 account/sync draft locales; status=pre-release-candidate-not-published"
+   },
+   {
+    "cmd": "python3 scripts/ai_assistant_candidate.py",
+    "exit": 0,
+    "result": "OK: 17 AI disclosure locales, 50 app copy keys; status=pre-release-candidate-not-published; consentVersion=2026-10-02.1"
+   },
+   {
+    "cmd": "python3 scripts/render_account_sync.py --check",
+    "exit": 0,
+    "result": "OK: 126 unpublished staged pages, 7 routes, 17 locales; no files written"
+   },
+   {
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 0,
+    "result": "korean_tone: 740 strings, 2299 sentences; violations ending=0 honorific=0 jargon=0 glossary=0 noun-status=0 total=0; all"
+   },
+   {
+    "cmd": "python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check",
+    "exit": 0,
+    "result": "OK: 17 locale receipts; flags off: ['ko', 'ja']; back-translation only: 14"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py --release",
+    "exit": 1,
+    "result": "AssertionError: scripts/legal_release.py: NEXT_RELEASE_EFFECTIVE_DATE is not filled; the owner sets the monetization rel"
+   }
+  ],
+  "backTranslationCoverage": {
+   "locales": 14,
+   "appKeysPerLocale": "50 of 50",
+   "conProKeysPerLocale": "15 of 15",
+   "addedInThisRound": "39 app strings per locale (546 lines)",
+   "method": "same-model, not blind, no native speaker, no counsel"
+  },
+  "stagedAndroid": {
+   "field": "home.featureBadges[3] and privacy no-collection items[4]",
+   "locales": 17,
+   "bareDenialsLeft": 0,
+   "servedSourceUnchanged": true
+  },
+  "notRun": [
+   "browser render of the staged pages",
+   "native-speaker or counsel review of any locale"
+  ]
+ }
 }

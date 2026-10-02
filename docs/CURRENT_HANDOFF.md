@@ -52,8 +52,26 @@ sections 4.4 and 5.1-5.5, compliance 4.5 and 8, owner second round (150 a month,
   console entry. All are readiness flags or unresolved items in the candidate.
 - Observation for the Terms owner: the staged Terms intro and section 2 title still describe only
   Free and Plus; Pro first appears in section 6.
-- No owned process, device or external action. Temporary RED worktree removed. Never publish.
-Next action: orchestrator review; IOS-AI-UI and AND-AI-UI copy the 50 app keys from
+- Review round 1 (2026-10-02, two major findings; RED `2f43f9c`, GREEN `1c9579b`, then this
+  docs/evidence commit):
+  - C23 receipts were incomplete (11 of 50 app keys recorded, flag still recommended). Now
+    `back-translation/<locale>.txt` records all 50 app keys and the 15 CON-PRO keys for each of
+    the 14 locales; 39 strings per locale were translated back in the review-fix session by the
+    same model (still not blind, no native speaker, no counsel). The receipts hash all 50 app
+    keys, carry `backTranslationRecord`, and a locale with a missing key gets
+    `flag.recommended=false`. `locale-review/summary.json` states the key coverage.
+  - The staged Android 1.0.6 content still said "No generative AI" (`home.featureBadges[3]`)
+    and listed "Generative AI" in the not-used list (`no-collection.items[4]`, rendered as
+    `<li>` on android/privacy) in 17 locales. `integrate()` now replaces both with the candidate
+    fields `androidBadge` and `androidNotUsedItem`; `render_android.validate_catalog` rejects
+    the two bare English claims when `versionName` is 1.0.6. The served 1.0.5 source keeps them.
+  - RED at `2f43f9c` (tree = parent + tests): 26 methods ran, 3 failing, 38 assertion failures,
+    0 errors. GREEN: 248/248 unittest methods PASS (246 + 2 new); the same 13 light commands
+    PASS; `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+    `evidence/pro-legal-ai-20261002/red-proof/review-fix1-red.summary.json` and `summary.json`
+    (`reviewFix1`).
+- No owned process, device or external action. Temporary RED worktrees removed. Never publish.
+Next action: orchestrator re-review; IOS-AI-UI and AND-AI-UI copy the 50 app keys from
 `docs/ai-app-copy.candidate.json`; the owner reads the Korean copy and the What's New line at gate 6.
 
 ## HISTORICAL — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
