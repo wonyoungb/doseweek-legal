@@ -11,6 +11,27 @@ Workspace `/Users/wonyoungchoi/Documents/Coding Work/Doseweek`의 `release/HANDO
 
 정확한 다음 작업: 최종 STATE의 doc-only HEAD와 기존3056 config의 selected preimage/dependency/review를 대조한 derivative를 만든 뒤, reviewed testfixture1 .none을 exact integrate/commit/push/PR13 갱신합니다. ONE incremental UnitSDK/exact selectors → originalOwnerRead1 먼저 → PASS면 remaining7owner+persistent10. Matching mapping8은 반복하지 않습니다. Android baseline/source 및 forensic binding은 병렬 준비하되 builder/device는 exclusive입니다. 더 큰 계획 문서 대신 기존 실제 코드의 연결과 검증에 집중합니다.
 
+## CANDIDATE — round 3 of the account/sync facts (2026-10-02, reviews of e3da3bd)
+
+Same branch. RED `df06a41` (detectors and tests only): `RETIRED_HEALTH_SYNC`,
+`RETIRED_OFFLINE_CLAUSES`, `RETIRED_BACKUP_MECHANISM`/`BACKUP_WINDOW_SENTENCES`, CJK "。 " joins,
+`recordsSync`/`mealsSync` presence and `RECORD_DENIALS`/`MEAL_DENIALS` in the staged sources,
+`serverReadiness.backupWindowVerified`/`accessLogDisclosed`, and
+`legal_release.PENDING_DIGEST_BASIS`. At the RED: candidate tests 32 run / 8 FAIL / 0 ERROR,
+`check_site.py` exit 1 (89 findings), CLI exit 1. GREEN `b6412a8`: non-exclusive `healthSync`,
+new `recordsSync`/`mealsSync` (17 locales) replacing the staged iOS support/meals and Android meals
+denials, mechanism-neutral backup window, unresolved item for the hybrid backup decision, two new
+false readiness flags, ja/zh joins. Agent-drafted translations.
+
+- PASS at head: six renderer `--check`s, `check_site.py` (Korean tone 1595 sentences),
+  `korean_tone.py` (0), the 6-module unittest set, candidate CLI, staged render (108 pages).
+  BLOCKED: `check_site.py --release` (effective date unset, and 10 open readiness flags).
+- Routed outside the lane: iOS `Localizable.xcstrings` `privacy.section1.body` (same records
+  denial) to the iOS in-app copy owner; `check_site.py --release` and the Android
+  `privacy_account_sync_guard.py --release` into `release/1.0.6/scripts/release_gate_checklist.py`
+  (integrator).
+- Evidence: workspace `release/evidence/1.0.6/LEGAL-STORE-20261002/round3/legal/`.
+
 ## CANDIDATE — account/sync server facts, Cloudflare transfer and D8 retention (2026-10-02)
 
 Lane LEGAL-STORE, branch `next-ai/legal-store-legal` from `33e7f63`; not pushed, merged or

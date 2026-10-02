@@ -173,7 +173,7 @@ review claimed). Each fact and its source:
 | D1: all record kinds (plans and changes, dose records, meals, body measurements, supplies, import history) and supported settings on both platforms | Owner decision D1 (2026-10-01) |
 | D8: deleted 30 days after the last server-verified Store end; Store recheck first; outage defers up to 7 days | Server `src/store.js` (`THIRTY_DAYS`, `RETENTION_OUTAGE_DEFERRAL_MS = 7 days`, `settleSnapshotRetention`) and `src/maintenance.js` (`runSnapshotRetention`) |
 | Reset sync deletes only the server copy; account deletion deletes everything server-side | `PROTOCOL.md` `DELETE /v1/sync/snapshot`; `store.deleteSnapshot`. The HTTP route is not in the server branch yet (listed as unresolved) |
-| Daily Lightsail snapshots, 7 kept: deleted data leaves backups within 7 days | Owner decision round 2 `server_backup` (2026-10-01); `PROTOCOL.md` rollback row. A plan, not a configured readback |
+| Daily Lightsail snapshots, 7 kept: deleted data leaves backups within 7 days (superseded in round 3: the text now states only that server backups are kept for at most 7 days; see the round-3 notes) | Owner decision round 2 `server_backup` (2026-10-01); `PROTOCOL.md` rollback row. A plan, not a configured readback |
 
 The staged 1.0.6 purchase sections (`render_account_sync.py`) now carry the `processors` text in
 place of the two "listed before release" placeholders, so the staged sources hold no
@@ -227,3 +227,39 @@ catalog guard refuses the token "iOS".
   applying the staged sources or emptying the unresolved list cannot hide these facts.
 - ko/ja/zh name the country after the Seoul region; Turkish uses "eşitleme" throughout; the D1
   scope check (`SYNC_SCOPE`) covers all 17 locales (debbd1c had narrowed RED 702c296 to en/ko).
+
+### Round 3 (2026-10-02 reviews of `e3da3bd`): denials, health sync and the backup window
+
+- **Unqualified denials.** The live 1.0.5 sources say "the developer does not receive these
+  records" (iOS support answer "Where are my records") and "the developer receives no meal
+  information" (iOS meals and next-release paragraphs, Android next-release paragraph). The staged
+  1.0.6 sources describe the end-to-end encrypted sync of exactly these records, so
+  `render_account_sync.py` replaces each denial with the new candidate fields `recordsSync` /
+  `mealsSync` ("not in readable form; with account sync they reach the server only end-to-end
+  encrypted"). `staged_disclosure_errors()` fails while a staged iOS or Android source keeps
+  either denial (`RECORD_DENIALS`, `MEAL_DENIALS`). The live sources stay unchanged until the
+  staged integration replaces them. The iOS app's own `Localizable.xcstrings`
+  `privacy.section1.body` carries the same records sentence; it is outside this lane and routed to
+  the iOS in-app copy owner.
+- **Health sync.** Round 2's `healthSync` said imported Apple Health / Health Connect data leaves
+  the device only if account sync is on. Both apps' encrypted backups carry it too (Android
+  `DoseWeekRepository` backup snapshot reads every `external_body_measurement` row for the SAF file
+  and Drive backups; the iOS backup payload carries body records with origin `.healthKit`). The
+  sentence now says it is not sent to the developer in readable form, is in the encrypted backups
+  and, with account sync, in the E2EE sync copy. `RETIRED_HEALTH_SYNC` refuses the exclusive form.
+- **Backup window.** Owner decision `round3_20261002.backup_hybrid` (10:4x, after the round-2
+  commits) adopts daily client-side-encrypted S3 app-data backups with a 7-day lifecycle plus a
+  reduced Lightsail snapshot cadence; settings are pending. The `retention` text now states only
+  that server backups are kept for at most 7 days (`BACKUP_WINDOW_SENTENCES`; the daily-snapshot
+  wording is `RETIRED_BACKUP_MECHANISM`). `serverReadiness.backupWindowVerified` stays `false`
+  until an OPS-HOST readback shows S3 versioning off, a lifecycle expiry of 6 days or less, every
+  snapshot gone within 7 days and no other copy outside the window (unresolved item "Server backup
+  window"). `serverReadiness.accessLogDisclosed` tracks HOST-07.
+- **Retired offline clause.** `RETIRED_OFFLINE_CLAUSES` refuses the exclusive "skipped only when
+  offline" clause that `212c91b` removed; against the `d89d227` candidate the detector reports 17
+  findings, against `212c91b` none.
+- **Digest-marker sentence.** The `sync` text's last sentence ("the basis and duration for retaining
+  keyed digest markers ... must be settled before launch") is registered as
+  `legal_release.PENDING_DIGEST_BASIS`, tied to `tombstoneRetentionDecided`, and refused by
+  `check_site.py --release`.
+- ja/zh fields join sentences without an ASCII space after "。".
