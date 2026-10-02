@@ -119,8 +119,9 @@ class PrivacyLegalUpdateTest(unittest.TestCase):
                 self.assertTrue(s['unauthorizedSdkDisclosureCovered'])
                 self.assertTrue(s['encryptedDataRequiresKeyAndMetadataAssessment'])
                 text = '\n'.join(s['paragraphs'])
-                for token in ('FTC', 'SDK', '72', '60', '500', '1,000', 'GDPR'):
+                for token in ('FTC', 'SDK', '72', '60', '500', 'GDPR'):
                     self.assertIn(token, text, 'rendered breach duty absent')
+                self.assertRegex(text, r'1[,. \u00a0]?000', 'Korean reporting threshold absent')
 
     def test_gdpr_breach_risk_and_high_risk_notice(self):
         for name, locale, entry in self.each():
