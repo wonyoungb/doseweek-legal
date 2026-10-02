@@ -54,6 +54,17 @@ def integrated_sources(candidate=None):
         denial = account_sync_candidate.HEALTH_CONNECT_DENIALS[loc]
         assert health_connect.count(denial) == 1, (loc, 'Health Connect paragraph changed')
         ap['no-collection']['paragraphs'][2] = health_connect.replace(denial, text['healthSync'])
+        # Round 3: the live 1.0.5 text says the developer receives no records or meal data. With
+        # account sync these reach the server end-to-end encrypted, so the staged text qualifies
+        # each denial with the candidate's recordsSync / mealsSync (staged_disclosure_errors).
+        def qualify(container, key, denial, replacement):
+            assert container[key].count(denial) == 1, (loc, key, 'denial changed')
+            container[key] = container[key].replace(denial, replacement)
+        qualify(i['support']['released']['storage']['answers'], 0,
+                account_sync_candidate.RECORD_DENIALS[loc], text['recordsSync'])
+        qualify(ip['meals']['paragraphs'], 0, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
+        qualify(ip['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
+        qualify(ap['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + text['sync']
         ip['deletion']['paragraphs'][0] += '\n\n' + join('retention', 'webDeletion')
         purchase = ip['purchases']['paragraphs'][0].split('\n\n')

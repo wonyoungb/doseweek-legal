@@ -32,7 +32,8 @@ LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
-FIELDS = ("account", "sync", "healthSync", "processors", "retention", "notice", "webDeletion", "releaseStatus",
+FIELDS = ("account", "sync", "healthSync", "recordsSync", "mealsSync", "processors", "retention", "notice",
+          "webDeletion", "releaseStatus",
           "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
 
@@ -43,8 +44,9 @@ FIELDS = ("account", "sync", "healthSync", "processors", "retention", "notice", 
 # range. Cloudflare proxies every request (owner decision, deploy receipt owner_decisions[1]) and
 # is a processor with a PIPA Art. 28-8 overseas transfer, so the recipient's contact and network
 # pages are cited verbatim. Retention (owner decision D8) is 30 days after the last
-# server-verified Store end; a Store outage defers deletion by at most 7 days; the approved
-# Lightsail daily snapshots keep 7, so deleted data leaves backups within 7 days.
+# server-verified Store end; a Store outage defers deletion by at most 7 days; server backups are
+# kept for at most 7 days (round 3: mechanism-neutral, since owner decision
+# round3_20261002.backup_hybrid replaces the daily-snapshot plan; serverReadiness.backupWindowVerified).
 HOSTING_FIELD = "processors"
 HOSTING_TOKENS = ("Wonyoung Choi", "Amazon Web Services", "Lightsail", "ap-northeast-2", "Cloudflare")
 CLOUDFLARE_TRANSFER_LINKS = (
