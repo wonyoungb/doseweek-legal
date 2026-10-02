@@ -258,6 +258,76 @@ class AccountSyncCandidateTest(unittest.TestCase):
         self.assertIn("en.processors: false refusal (not signing in does not stop the announcement check)", errors)
         self.assertIn("en.notice: does not say the announcement request passes through Cloudflare", errors)
 
+    # Lane LEGAL-STORE round 3: findings of the two 2026-10-02 reviews of e3da3bd.
+
+    def test_health_sync_does_not_say_sync_is_the_only_way_off_the_device(self):
+        # Both apps' encrypted backups (and Android's Drive backup) carry imported observations.
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        for locale in account_sync_candidate.LOCALES:
+            self.assertNotIn(account_sync_candidate.RETIRED_HEALTH_SYNC[locale],
+                             raw["locales"][locale].get("healthSync", ""), locale)
+        self.assertEqual([e for e in account_sync_candidate.transfer_disclosure_errors(raw)
+                          if ".healthSync:" in e], [])
+
+    def test_staged_sources_qualify_the_record_and_meal_denials(self):
+        # The iOS support answer and both meals paragraphs said the developer receives nothing,
+        # while the same documents describe the end-to-end encrypted sync of these records.
+        import render_account_sync
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        for locale in account_sync_candidate.LOCALES:
+            for field, denials in (("recordsSync", account_sync_candidate.RECORD_DENIALS),
+                                   ("mealsSync", account_sync_candidate.MEAL_DENIALS)):
+                sentence = raw["locales"][locale].get(field, "")
+                self.assertTrue(sentence.strip(), (locale, field))
+                self.assertNotIn(denials[locale], sentence, (locale, field))
+        errors = account_sync_candidate.staged_disclosure_errors(render_account_sync.integrated_sources())
+        self.assertEqual([e for e in errors if "denial" in e or "qualified sync sentence" in e], [])
+
+    def test_retired_offline_clause_and_backup_mechanism_are_refused(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        current = account_sync_candidate.transfer_disclosure_errors(raw)
+        self.assertEqual([e for e in current if "offline" in e or "backup" in e], [])
+        entry = dict(raw["locales"]["en"])
+        entry["processors"] += " " + account_sync_candidate.RETIRED_OFFLINE_CLAUSES["en"]
+        entry["retention"] = entry["retention"].replace(
+            account_sync_candidate.BACKUP_WINDOW_SENTENCES["en"],
+            account_sync_candidate.RETIRED_BACKUP_MECHANISM["en"])
+        broken = dict(raw, locales={**raw["locales"], "en": entry})
+        errors = account_sync_candidate.transfer_disclosure_errors(broken)
+        self.assertIn("en.processors: exclusive 'skipped only when offline' clause", errors)
+        self.assertIn("en.retention: lacks the mechanism-neutral 7-day backup window sentence", errors)
+        self.assertTrue(any(e.startswith("en.retention: names the daily-snapshot") for e in errors), errors)
+
+    def test_cjk_fields_join_sentences_without_an_ascii_space(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        for locale in account_sync_candidate.CJK_LOCALES:
+            for field, text in raw["locales"][locale].items():
+                self.assertNotIn("。 ", text, (locale, field))
+
+    def test_backup_window_and_access_logs_are_tracked_as_readiness(self):
+        # Owner decision round3_20261002.backup_hybrid leaves the backup settings open; HOST-07
+        # access logs are undisclosed. Each needs a False flag with its own unresolved item.
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        for key in ("backupWindowVerified", "accessLogDisclosed"):
+            self.assertIn(key, account_sync_candidate.SERVER_READINESS_TOKENS)
+            self.assertIs(raw.get("serverReadiness", {}).get(key), False, key)
+        backup = [item for item in raw["unresolvedBeforePublication"] if "backup window" in item]
+        self.assertEqual(len(backup), 1, backup)
+        for token in ("backup_hybrid", "versioning", "6 days", "backupWindowVerified"):
+            self.assertIn(token, backup[0])
+
+    def test_pending_digest_basis_stays_registered_until_the_tombstone_decision(self):
+        import legal_release
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        for locale in account_sync_candidate.LOCALES:
+            marker = legal_release.PENDING_DIGEST_BASIS[locale]
+            self.assertIn(marker, raw["locales"][locale]["sync"], locale)
+            self.assertEqual(legal_release.release_placeholders(marker), [], marker)
+            self.assertEqual(legal_release.pending_release_markers(marker), [marker])
+        decided = dict(raw, serverReadiness={**raw.get("serverReadiness", {}), "tombstoneRetentionDecided": True})
+        self.assertIn("en.sync: tombstone retention is decided but the pending digest sentence remains",
+                      account_sync_candidate.transfer_disclosure_errors(decided))
+
     def test_release_gate_refuses_unintegrated_candidate(self):
         with self.assertRaisesRegex(AssertionError, "pre-release candidate"):
             account_sync_candidate.require_release_ready()

@@ -215,7 +215,143 @@ SERVER_READINESS_TOKENS = {
     "tombstoneRetentionDecided": "tombstone retention",
     "announcementTransferReviewed": "announcement check",
     "cloudflareContactVerified": "Cloudflare privacy contact",
+    # Round 3 (2026-10-02 reviews of e3da3bd): the backup window under the hybrid backup decision
+    # (owner-decisions round3_20261002.backup_hybrid) and the origin access-log disclosure.
+    "backupWindowVerified": "backup window",
+    "accessLogDisclosed": "HOST-07",
 }
+
+# Lane LEGAL-STORE round 3 (2026-10-02 reviews of e3da3bd).
+# The round-2 healthSync sentence said imported Health Connect / Apple Health data leaves the
+# device only if account sync is on. Both apps' encrypted backups carry it too (Android
+# DoseWeekRepository backup snapshot incl. external_body_measurement, manual SAF file and Drive
+# backup; iOS backup payload with origin .healthKit), so the exclusive form is retired.
+RETIRED_HEALTH_SYNC = {
+    'ko': '읽은 정보는 앱 전용 저장소에 보관하고, 계정 동기화를 켤 때만 기기 밖으로 나가요. 이때도 출처와 숨김 선택과 함께 개발자가 읽을 수 없는 종단간 암호화 사본에만 담겨요.',
+    'en': 'What it reads is kept in app-private storage and leaves the device only if you turn on account sync: it is then included, with its source and your hide choices, in the end-to-end encrypted copy, which the developer cannot read.',
+    'ja': '読み取った情報はアプリ専用領域に保存され、アカウント同期をオンにした場合にだけ端末の外に出ます。その場合も、取得元と非表示の選択とともに、開発者が読めないエンドツーエンド暗号化されたコピーにだけ含まれます。',
+    'de': 'Gelesene Werte bleiben im privaten App-Speicher und verlassen das Gerät nur, wenn Sie die Kontosynchronisierung einschalten; dann sind sie mit ihrer Quelle und Ihren Ausblende-Einstellungen nur in der Ende-zu-Ende-verschlüsselten Kopie enthalten, die der Entwickler nicht lesen kann.',
+    'fr': 'Ce qu’il lit reste dans le stockage privé de l’application et ne quitte l’appareil que si vous activez la synchronisation du compte : ces données sont alors incluses, avec leur source et vos choix de masquage, dans la copie chiffrée de bout en bout, que le développeur ne peut pas lire.',
+    'es': 'Lo que lee se guarda en el almacenamiento privado de la aplicación y solo sale del dispositivo si activa la sincronización de la cuenta: entonces se incluye, con su origen y sus opciones de ocultación, en la copia cifrada de extremo a extremo, que el desarrollador no puede leer.',
+    'it': 'Ciò che legge resta nell’archiviazione privata dell’app ed esce dal dispositivo solo se attivi la sincronizzazione dell’account: in quel caso è incluso, con la sua origine e le tue scelte di occultamento, nella copia crittografata end-to-end, che lo sviluppatore non può leggere.',
+    'nl': 'Wat wordt gelezen, blijft in de privéopslag van de app en verlaat het apparaat alleen als u accountsynchronisatie inschakelt: het zit dan, met de bron en uw verbergkeuzes, in de end-to-end versleutelde kopie, die de ontwikkelaar niet kan lezen.',
+    'pt-PT': 'O que lê fica no armazenamento privado da aplicação e só sai do dispositivo se ativar a sincronização da conta: nesse caso é incluído, com a origem e as suas escolhas de ocultação, na cópia encriptada ponto a ponto, que o programador não consegue ler.',
+    'pl': 'Odczytane dane pozostają w prywatnej pamięci aplikacji i opuszczają urządzenie tylko wtedy, gdy włączysz synchronizację konta: trafiają wtedy, wraz ze źródłem i Twoimi wyborami ukrycia, do kopii zaszyfrowanej end-to-end, której deweloper nie może odczytać.',
+    'sv': 'Det som läses stannar i appens privata lagringsutrymme och lämnar enheten bara om du slår på kontosynkronisering: då ingår det, med sin källa och dina val att dölja, i den end-to-end-krypterade kopian, som utvecklaren inte kan läsa.',
+    'hi': 'पढ़ी गई जानकारी ऐप-निजी स्टोरेज में रहती है और केवल तब डिवाइस से बाहर जाती है जब आप खाता सिंक चालू करते हैं: तब वह अपने स्रोत और आपके छिपाने के विकल्पों के साथ एंड-टू-एंड एन्क्रिप्टेड प्रति में शामिल होती है, जिसे डेवलपर पढ़ नहीं सकता।',
+    'pt-BR': 'O que é lido fica no armazenamento privado do aplicativo e só sai do aparelho se você ativar a sincronização da conta: nesse caso, é incluído, com a origem e suas escolhas de ocultação, na cópia criptografada de ponta a ponta, que o desenvolvedor não consegue ler.',
+    'ar': 'تُحفظ البيانات المقروءة في التخزين الخاص بالتطبيق ولا تغادر الجهاز إلا إذا فعّلت مزامنة الحساب، وعندها تُضمَّن مع مصدرها وخيارات الإخفاء التي اخترتها في النسخة المشفّرة تشفيرًا شاملًا التي لا يستطيع المطوّر قراءتها.',
+    'zh-Hans': '读取到的信息保存在应用专属存储空间，只有在您开启账户同步时才会离开设备：此时它会连同来源和您的隐藏选择一起，仅包含在开发者无法读取的端到端加密副本中。',
+    'zh-Hant': '讀取到的資訊保存在應用程式專用儲存空間，只有在您開啟帳戶同步時才會離開裝置：此時它會連同來源與您的隱藏選擇一起，僅包含在開發者無法讀取的端對端加密副本中。',
+    'tr': 'Okuduğu veriler uygulamaya özel depolamada kalır ve yalnızca hesap eşitlemesini açarsanız cihazdan çıkar: o zaman kaynağı ve gizleme seçimlerinizle birlikte, geliştiricinin okuyamadığı uçtan uca şifreli kopyaya dahil edilir.',
+}
+# The exclusive "skipped only when offline" clause that 212c91b removed from the refusal; a revert
+# must fail (it was present at d89d227).
+RETIRED_OFFLINE_CLAUSES = {
+    'ko': '기기가 인터넷에 연결되지 않았을 때만 건너뛰어요.',
+    'en': 'it is skipped only when the device has no internet connection.',
+    'ja': '端末がインターネットに接続していないときだけ行われません。',
+    'de': 'sie entfällt nur, wenn das Gerät keine Internetverbindung hat.',
+    'fr': 'elle n’est omise que lorsque l’appareil n’a pas de connexion Internet.',
+    'es': 'solo se omite cuando el dispositivo no tiene conexión a internet.',
+    'it': 'viene saltato solo quando il dispositivo non ha una connessione a Internet.',
+    'nl': 'ze wordt alleen overgeslagen als het apparaat geen internetverbinding heeft.',
+    'pt-PT': 'só é omitida quando o dispositivo não tem ligação à Internet.',
+    'pl': 'jest pomijane tylko wtedy, gdy urządzenie nie ma połączenia z internetem.',
+    'sv': 'den hoppas bara över när enheten saknar internetanslutning.',
+    'hi': 'यह केवल तब नहीं होती जब डिवाइस इंटरनेट से जुड़ा न हो।',
+    'pt-BR': 'ela só é pulada quando o aparelho está sem conexão com a internet.',
+    'ar': 'ولا يُتخطّى إلا عندما لا يكون الجهاز متصلًا بالإنترنت.',
+    'zh-Hans': '只有在设备未连接互联网时才会跳过。',
+    'zh-Hant': '只有在裝置未連上網際網路時才會略過。',
+    'tr': 'yalnızca cihazın internet bağlantısı olmadığında atlanır.',
+}
+# Owner decision round3_20261002.backup_hybrid (daily S3 app-data backups with a 7-day lifecycle
+# plus a reduced Lightsail snapshot cadence; exact settings pending) replaces the "automatic daily
+# snapshots kept for 7 days" mechanism, so the text states only the window and
+# serverReadiness.backupWindowVerified gates it.
+RETIRED_BACKUP_MECHANISM = {
+    'ko': '서버는 매일 자동 스냅샷으로 백업하고 스냅샷은 7일 동안 보관해요.',
+    'en': 'The server is backed up by automatic daily snapshots kept for 7 days',
+    'ja': 'サーバーは毎日自動スナップショットでバックアップし、スナップショットは7日間保管します。',
+    'de': 'Der Server wird durch tägliche automatische Snapshots gesichert, die 7 Tage aufbewahrt werden',
+    'fr': 'Le serveur est sauvegardé par des instantanés automatiques quotidiens conservés 7 jours',
+    'es': 'El servidor se respalda con instantáneas automáticas diarias que se conservan 7 días',
+    'it': 'Il server viene salvato con snapshot automatici giornalieri conservati per 7 giorni',
+    'nl': 'De server wordt geback-upt met dagelijkse automatische momentopnamen die 7 dagen worden bewaard',
+    'pt-PT': 'O servidor é salvaguardado por instantâneos automáticos diários mantidos durante 7 dias',
+    'pl': 'Serwer jest zabezpieczany codziennymi automatycznymi migawkami przechowywanymi przez 7 dni',
+    'sv': 'Servern säkerhetskopieras med dagliga automatiska ögonblicksbilder som sparas i 7 dagar',
+    'hi': 'सर्वर का बैकअप रोज़ाना स्वचालित स्नैपशॉट से होता है, जो 7 दिन रखे जाते हैं',
+    'pt-BR': 'O servidor tem backup por instantâneos automáticos diários guardados por 7 dias',
+    'ar': 'يُنسخ الخادم احتياطيًا بلقطات تلقائية يومية تُحفظ 7 أيام',
+    'zh-Hans': '服务器每天通过自动快照备份，快照保留 7 天',
+    'zh-Hant': '伺服器每天以自動快照備份，快照保留 7 天',
+    'tr': 'Sunucu, 7 gün saklanan günlük otomatik anlık görüntülerle yedeklenir',
+}
+BACKUP_WINDOW_SENTENCES = {
+    'ko': '서버 백업은 최대 7일까지 보관해요.',
+    'en': 'Server backups are kept for at most 7 days',
+    'ja': 'サーバーのバックアップは最長7日間保管します。',
+    'de': 'Serversicherungen werden höchstens 7 Tage aufbewahrt',
+    'fr': 'Les sauvegardes du serveur sont conservées 7 jours au maximum',
+    'es': 'Las copias de seguridad del servidor se conservan como máximo 7 días',
+    'it': 'I backup del server sono conservati per non più di 7 giorni',
+    'nl': 'Back-ups van de server worden hoogstens 7 dagen bewaard',
+    'pt-PT': 'As cópias de segurança do servidor são mantidas durante 7 dias no máximo',
+    'pl': 'Kopie zapasowe serwera są przechowywane najwyżej przez 7 dni',
+    'sv': 'Serverns säkerhetskopior sparas i högst 7 dagar',
+    'hi': 'सर्वर के बैकअप अधिकतम 7 दिन रखे जाते हैं',
+    'pt-BR': 'Os backups do servidor são guardados por no máximo 7 dias',
+    'ar': 'تُحفظ النسخ الاحتياطية للخادم 7 أيام كحدّ أقصى',
+    'zh-Hans': '服务器备份最多保留 7 天',
+    'zh-Hant': '伺服器備份最多保留 7 天',
+    'tr': 'Sunucu yedekleri en fazla 7 gün saklanır',
+}
+# Unqualified denials the staged 1.0.6 sources keep from the live 1.0.5 text (iOS support answer
+# "Where are my records", iOS and Android meals paragraphs). With account sync these records reach
+# the server end-to-end encrypted, so the staged text uses the candidate's recordsSync/mealsSync.
+RECORD_DENIALS = {
+    'ko': '개발자는 이 기록을 받지 않아요.',
+    'en': 'The developer does not receive these records.',
+    'ja': '開発者はこれらの記録を受け取りません。',
+    'de': 'Der Entwickler erhält diese Einträge nicht.',
+    'fr': 'Le développeur ne reçoit pas ces données.',
+    'es': 'El desarrollador no recibe estos registros.',
+    'it': 'Lo sviluppatore non riceve questi dati.',
+    'nl': 'De ontwikkelaar ontvangt deze gegevens niet.',
+    'pt-PT': 'O programador não recebe estes registos.',
+    'pl': 'Deweloper nie otrzymuje tych danych.',
+    'sv': 'Utvecklaren får inte dessa uppgifter.',
+    'hi': 'डेवलपर को ये रिकॉर्ड नहीं मिलते।',
+    'pt-BR': 'O desenvolvedor não recebe esses registros.',
+    'ar': 'لا يتلقى المطوّر هذه السجلات.',
+    'zh-Hans': '开发者不会收到这些记录。',
+    'zh-Hant': '開發者不會收到這些紀錄。',
+    'tr': 'Geliştirici bu kayıtları almaz.',
+}
+MEAL_DENIALS = {
+    'ko': '개발자는 식사 정보를 받지 않아요.',
+    'en': 'The developer receives no meal information.',
+    'ja': '開発者は食事の情報を受け取りません。',
+    'de': 'Der Entwickler erhält keine Angaben zu Mahlzeiten.',
+    'fr': 'Le développeur ne reçoit aucune information sur les repas.',
+    'es': 'El desarrollador no recibe información de comidas.',
+    'it': 'Lo sviluppatore non riceve informazioni sui pasti.',
+    'nl': 'De ontwikkelaar ontvangt geen maaltijdgegevens.',
+    'pt-PT': 'O programador não recebe informação sobre refeições.',
+    'pl': 'Deweloper nie otrzymuje informacji o posiłkach.',
+    'sv': 'Utvecklaren får inga måltidsuppgifter.',
+    'hi': 'डेवलपर को भोजन की कोई जानकारी नहीं मिलती।',
+    'pt-BR': 'O desenvolvedor não recebe informações de refeições.',
+    'ar': 'ولا يتلقى المطوّر أي معلومات عن الوجبات.',
+    'zh-Hans': '开发者不会收到任何用餐信息。',
+    'zh-Hant': '開發者不會取得任何用餐資訊。',
+    'tr': 'Geliştirici öğün bilgisi almaz.',
+}
+# ja/zh sentences are joined without an ASCII space after "。" (render_account_sync joins
+# healthSync the same way).
+CJK_LOCALES = ("ja", "zh-Hans", "zh-Hant")
 
 
 def transfer_disclosure_errors(candidate: dict | None = None) -> list[str]:
@@ -243,7 +379,31 @@ def transfer_disclosure_errors(candidate: dict | None = None) -> list[str]:
             errors.append(f"{locale}.sync: says the key stays on the devices (the recovery code does)")
         if not entry.get("healthSync", "").strip():
             errors.append(f"{locale}.healthSync: missing (imported health measurements are in the sync graph)")
+        if RETIRED_HEALTH_SYNC[locale] in entry.get("healthSync", ""):
+            errors.append(f"{locale}.healthSync: says imported health data leaves the device only through "
+                          "account sync (the encrypted backups carry it too)")
+        if RETIRED_OFFLINE_CLAUSES[locale] in processors:
+            errors.append(f"{locale}.{HOSTING_FIELD}: exclusive 'skipped only when offline' clause")
+        for field in ("recordsSync", "mealsSync"):
+            if not entry.get(field, "").strip():
+                errors.append(f"{locale}.{field}: missing (qualifies the staged 'developer does not receive' denial)")
+        if locale in CJK_LOCALES:
+            spaced = sorted(field for field, value in entry.items() if isinstance(value, str) and "。 " in value)
+            if spaced:
+                errors.append(f"{locale}: ASCII space after '。' in {spaced}")
+        sync = entry.get("sync", "")
+        tombstone_open = (candidate.get("serverReadiness") or {}).get("tombstoneRetentionDecided") is not True
+        digest = legal_release.PENDING_DIGEST_BASIS[locale]
+        if tombstone_open and digest not in sync:
+            errors.append(f"{locale}.sync: lost the pending digest-marker basis sentence")
+        if not tombstone_open and digest in sync:
+            errors.append(f"{locale}.sync: tombstone retention is decided but the pending digest sentence remains")
         retention = entry.get("retention", "")
+        if RETIRED_BACKUP_MECHANISM[locale] in retention:
+            errors.append(f"{locale}.retention: names the daily-snapshot backup mechanism the hybrid backup "
+                          "decision replaces")
+        if BACKUP_WINDOW_SENTENCES[locale] not in retention:
+            errors.append(f"{locale}.retention: lacks the mechanism-neutral 7-day backup window sentence")
         if legal_release.PENDING_TOMBSTONE_RETENTION[locale] not in retention:
             errors.append(f"{locale}.retention: does not list the keyed purchase tombstone kept after deletion")
         if not re.search(r"(?<!\d)90(?!\d)", retention):
@@ -264,7 +424,8 @@ def transfer_disclosure_errors(candidate: dict | None = None) -> list[str]:
 
 def staged_disclosure_errors(sources: dict, candidate: dict | None = None) -> list[str]:
     """Staged 1.0.6 sources that keep the Health Connect denial, lack the health-sync sentence
-    on either platform, or drop the pending verifier location from the Android purchase section."""
+    on either platform, keep an unqualified records/meals denial (round 3) or drop the pending
+    verifier location from the Android purchase section."""
     import legal_release
     if candidate is None:
         candidate = json.loads(SOURCE.read_text(encoding="utf-8"))
@@ -281,6 +442,27 @@ def staged_disclosure_errors(sources: dict, candidate: dict | None = None) -> li
             errors.append(f"android-content.candidate.json:{locale}: Health Connect paragraph lacks the health-sync sentence")
         if HEALTH_CONNECT_DENIALS[locale] in health_connect:
             errors.append(f"android-content.candidate.json:{locale}: Health Connect paragraph still says nothing is sent")
+        ios_entry = sources["ios-content.json"]["locales"][locale]
+        android_entry = sources["android-content.candidate.json"]["locales"][locale]
+        for name, entry in (("ios-content.json", ios_entry), ("android-content.candidate.json", android_entry)):
+            text = json.dumps(entry, ensure_ascii=False)
+            for kind, denials in (("records", RECORD_DENIALS), ("meals", MEAL_DENIALS)):
+                if denials[locale] in text:
+                    errors.append(f"{name}:{locale}: keeps the unqualified {kind} denial {denials[locale]!r}")
+        records_sync = candidate["locales"][locale].get("recordsSync", "")
+        meals_sync = candidate["locales"][locale].get("mealsSync", "")
+        qualified = (
+            ("ios-content.json", "support storage answer", records_sync,
+             "\n\n".join(ios_entry["support"]["released"]["storage"]["answers"])),
+            ("ios-content.json", "meals section", meals_sync, "\n\n".join(ios["meals"]["paragraphs"])),
+            ("ios-content.json", "next-release meals paragraph", meals_sync,
+             "\n\n".join(ios["next-release"]["paragraphs"])),
+            ("android-content.candidate.json", "next-release meals paragraph", meals_sync,
+             "\n\n".join(android["next-release"]["paragraphs"])),
+        )
+        for name, where, sentence, text in qualified:
+            if not sentence or sentence not in text:
+                errors.append(f"{name}:{locale}: {where} lacks the qualified sync sentence")
         purchases = "\n\n".join(android["purchases"]["paragraphs"])
         if (candidate.get("serverReadiness") or {}).get("verifierHostDecided") is not True and \
                 legal_release.PENDING_VERIFIER_LOCATION[locale] not in purchases:

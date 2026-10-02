@@ -144,7 +144,30 @@ PENDING_TOMBSTONE_RETENTION = {
     'zh-Hant': '此標記的保存期限會在發布前列於此處。',
     'tr': 'Bu işaretin ne kadar süre saklanacağı yayımdan önce burada belirtilir.',
 }
-PENDING_RELEASE_MARKERS = (*PENDING_VERIFIER_LOCATION.values(), *PENDING_TOMBSTONE_RETENTION.values())
+# Round 3 (2026-10-02 review): the sync text's last sentence says the basis and duration of the
+# keyed digest markers are settled before launch; it belongs to the same undecided tombstone fact
+# (serverReadiness.tombstoneRetentionDecided), so it is registered and refused by --release too.
+PENDING_DIGEST_BASIS = {
+    'ko': '중복 구매 연결을 막기 위한 키 기반 다이제스트 표식의 보관 근거와 기간은 출시 전에 확정해요.',
+    'en': 'The basis and duration for retaining keyed digest markers to prevent duplicate purchase linking must be settled before launch.',
+    'ja': '購入の重複連携を防ぐダイジェスト標識の保持根拠と期間は公開前に確定します。',
+    'de': 'Grundlage und Dauer der Aufbewahrung von Digest-Markierungen gegen doppelte Kaufverknüpfungen müssen vor der Veröffentlichung feststehen.',
+    'fr': 'La base et la durée de conservation des marqueurs d’empreinte contre les liaisons d’achat en double restent à fixer avant publication.',
+    'es': 'Antes del lanzamiento se definirán la base y el plazo de conservación de los marcadores que evitan vincular una compra varias veces.',
+    'it': 'Base e durata di conservazione dei marcatori che impediscono associazioni duplicate degli acquisti saranno definite prima del lancio.',
+    'nl': 'Grondslag en bewaartermijn van digestmarkeringen tegen dubbele aankoopkoppelingen worden voor publicatie vastgesteld.',
+    'pt-PT': 'A base e o prazo de conservação dos marcadores que impedem ligações duplicadas de compras serão definidos antes do lançamento.',
+    'pl': 'Podstawa i okres przechowywania znaczników skrótów zapobiegających powtórnemu powiązaniu zakupu zostaną ustalone przed publikacją.',
+    'sv': 'Grund och lagringstid för avtrycksmarkörer som förhindrar dubbla köpkopplingar ska fastställas före lansering.',
+    'hi': 'एक खरीद को दो बार जोड़ने से रोकने वाले डाइजेस्ट चिह्नों को रखने का आधार और अवधि लॉन्च से पहले तय होंगे।',
+    'pt-BR': 'A base e o prazo de retenção dos marcadores que impedem vínculos duplicados de compras serão definidos antes do lançamento.',
+    'ar': 'يُحدّد قبل الإطلاق أساس ومدة الاحتفاظ بعلامات الملخص لمنع ربط الشراء أكثر من مرة.',
+    'zh-Hans': '防止重复关联购买的摘要标记，其保留依据和期限须在发布前确定。',
+    'zh-Hant': '防止重複連結購買的摘要標記，其保留依據和期限須在發布前確定。',
+    'tr': 'Yinelenen satın alma bağlantılarını önleyen özet işaretlerinin saklama dayanağı ve süresi yayımdan önce belirlenmelidir.',
+}
+PENDING_RELEASE_MARKERS = (*PENDING_VERIFIER_LOCATION.values(), *PENDING_TOMBSTONE_RETENTION.values(),
+                           *PENDING_DIGEST_BASIS.values())
 
 
 def pending_release_markers(text: str) -> list[str]:
