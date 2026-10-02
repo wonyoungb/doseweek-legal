@@ -34,8 +34,7 @@ LOCALES = (
 )
 FIELDS = ("account", "sync", "healthSync", "healthConsent", "serverBackup", "recordsSync", "mealsSync", "processors", "retention", "notice",
           "webDeletion", "releaseStatus",
-          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
-          "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
+          "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope")
 
 
 # Lane LEGAL-STORE (2026-10-02): the account/sync server facts every locale must state before the
@@ -227,6 +226,7 @@ SERVER_READINESS_TOKENS = {
     "breachProcedureOperational": "breachProcedureOperational",
     "regionalSubscriptionNoticesVerified": "regionalSubscriptionNoticesVerified",
     "consumerHealthRightsVerified": "consumerHealthRightsVerified",
+    "commercialCopyParityVerified": "commercialCopyParityVerified",
 }
 
 # Lane LEGAL-STORE round 3 (2026-10-02 reviews of e3da3bd).
@@ -566,6 +566,8 @@ def load() -> dict:
     assert candidate["legacyDecision"]["ownerDecision"] == "resolved"
     assert candidate["legacyDecision"]["perpetualAdFreeGuaranteed"] is False
     assert candidate["legacyDecision"]["promoAcquisitionProvesPaidPurchase"] is False
+    assert candidate["legacyDecision"]["separatePriorBuyerGrantOffered"] is False
+    assert candidate["legacyDecision"]["priorBuyerClaimProgramRetired"] is True
     hosting = hosting_retention_errors(candidate)
     assert not hosting, f"{SOURCE.name}: missing account/sync server facts, e.g. {hosting[:3]}"
     retired = retired_provider_mentions(candidate)

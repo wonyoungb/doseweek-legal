@@ -112,7 +112,7 @@ def integrated_sources(candidate=None):
         # Legacy file backup exclusions stay scoped to that file format; account settings
         # sync is a distinct path. Keep the complete existing offline/cache/tool behavior.
         purchase[3] = text['manualBackupScope'] + '\n\n' + purchase[3] + '\n\n' + text['sync']
-        purchase[5] = join('legacyRights', 'priorBuyerClaimPrivacy')
+        purchase[5] = text['legacyRights']
         ip['purchases']['paragraphs'][0] = '\n\n'.join(purchase)
         for group, key in [('released', 'backup'), ('secondRelease', 'backup')]:
             i['support'][group][key]['answers'][0] = text['manualBackupScope'] + '\n\n' + i['support'][group][key]['answers'][0]
@@ -120,7 +120,7 @@ def integrated_sources(candidate=None):
         i['support']['released']['deletion']['answers'][-1] += '\n\n' + join_ios('retention', 'webDeletion')
         i['support']['plus']['features']['answers'][0] += '\n\n' + join('account', 'sync')
         i['support']['plus']['manage']['answers'][-1] += '\n\n' + join_ios('account', 'retention')
-        i['support']['plus']['earlier']['answers'] = [join('legacyRights', 'priorBuyerClaimHelp'), text['releaseStatus']]
+        i['support']['plus']['earlier']['answers'][0] = text['legacyRights']
         a['privacy']['scope'] = text['releaseStatus'] + '\n\n' + a['privacy']['scope'].replace('1.0.5', '1.0.6')
         a['home']['featureBadges'][1] = text['account']
         ap['no-collection']['paragraphs'][0] = ap['no-collection']['paragraphs'][0].replace('1.0.5', '1.0.6')
@@ -147,7 +147,7 @@ def integrated_sources(candidate=None):
             ap['purchases']['paragraphs'][2] += '\n\n' + legal_release.PENDING_VERIFIER_LOCATION[loc]
         ap['purchases']['paragraphs'][4] = text['manualBackupScope'] + '\n\n' + ap['purchases']['paragraphs'][4] + '\n\n' + text['sync']
         faq = {f['id']: f for f in a['support']['faq']}
-        ap['purchases']['paragraphs'][5] = '\n\n'.join(faq['plus-cancel']['answers']) + '\n\n' + join('legacyRights', 'priorBuyerClaimPrivacy')
+        ap['purchases']['paragraphs'][5] = '\n\n'.join(faq['plus-cancel']['answers']) + '\n\n' + text['legacyRights']
         ap['retention']['paragraphs'][0] = join('retention', 'webDeletion')
         ap['security']['paragraphs'][0] = text['sync']
         faq['accounts']['answers'] = [join('releaseStatus', 'account', 'sync', 'analytics', 'notice')]
@@ -157,7 +157,7 @@ def integrated_sources(candidate=None):
         faq['recovery']['answers'] = [text['sync']]
         faq['plus-features']['answers'][0] += '\n\n' + join('account', 'sync')
         faq['plus-restore']['answers'][1] = join('account', 'sync')
-        faq['plus-earlier']['answers'] = [join('legacyRights', 'priorBuyerClaimHelp'), text['releaseStatus']]
+        faq['plus-earlier']['answers'][0] = text['legacyRights']
         t['intro'] = text['releaseStatus'] + '\n\n' + t['intro']
         tp['free-plus']['paragraphs'][1] = text['legacyRights']
         tp['free-plus']['paragraphs'][0] += '\n\n' + text['account']

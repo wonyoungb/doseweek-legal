@@ -1,0 +1,163 @@
+{
+  "scope": "Only incident paragraphs[1] thousand grouping in the two privacy sources; all other source bytes and incident metadata preserved.",
+  "fields": [
+    {
+      "source": "docs/ios-content.json",
+      "locale": "de",
+      "field": "locales.de.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1.000",
+      "beforeParagraphSha256": "8fb600b7da9ee2976401d2696803b7860e0128f84f1664cb89075b29512caf4f",
+      "afterParagraphSha256": "23c55b7594a201cc4a398593350a3b0a292f370a82843b82a95b38b6197c1256",
+      "remainingProseSha256": "c7b3bd32271c5c93152d4052dec7574a9bf922a84c452883651ec9dacf43cd13",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "39a947e7cfb609e6c39b6086798add3e1ad7af906ff9a28375697856b4a2d5ec"
+    },
+    {
+      "source": "docs/ios-content.json",
+      "locale": "fr",
+      "field": "locales.fr.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1 000",
+      "beforeParagraphSha256": "f2cf7919c66c91b86cf0b1bd300eb3a62b75a587972de8ab015fca51fb5a3b1c",
+      "afterParagraphSha256": "9d0622018c4a689ac059bfddf9cd2b12c08f28f94c98655e1bbc67b0441c3b8e",
+      "remainingProseSha256": "244589eba3c552e708880dcf33e42a67b92d8073f44eb300b0bfc6016ae82b26",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "928e64124c4112d8c25732e11b8320f544295f9bfd1054b922e6749893bb1765"
+    },
+    {
+      "source": "docs/ios-content.json",
+      "locale": "es",
+      "field": "locales.es.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1.000",
+      "beforeParagraphSha256": "79e5a6b49b5c7a7f29e1d48429858ffa5e63bc2eb5e7e46d2999811a8d12d238",
+      "afterParagraphSha256": "243306496261fdf2d94d31e1ee66146fc26ecaeab66c02a5cc05c6dce536bc3b",
+      "remainingProseSha256": "69c690b0b08352a11b76019e53a98e4bb9517ab608949efa028d20b9a29f0a1e",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "fc6fb9d3f150cc1f09853bf06363e455b40fd9129f34d513ad800779ecd16377"
+    },
+    {
+      "source": "docs/ios-content.json",
+      "locale": "pl",
+      "field": "locales.pl.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1 000",
+      "beforeParagraphSha256": "0a3150b374c2436045e8f444f681354041a4ce0b490ac5c2eb83653bf8c7f191",
+      "afterParagraphSha256": "2c23b671eca9bb05006f5457a3088290a1953298c0ec7274e2e446540a0da929",
+      "remainingProseSha256": "0577e26ec3efacc669dda7c7d45c0bf011fb4086379da7da4899e0f5f7428a73",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "33912bca137c27476fa330bda851f556cb3deff2979020c25285679e0db8bbb4"
+    },
+    {
+      "source": "docs/ios-content.json",
+      "locale": "sv",
+      "field": "locales.sv.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1 000",
+      "beforeParagraphSha256": "988e3a7004eed8be4a3aa5efb255b9ee802d9e5fbc56eb4f310827712865755e",
+      "afterParagraphSha256": "15e94f1214a9996be015299df4df89dbbb9459b11e5cf8014438e27c9f4b74de",
+      "remainingProseSha256": "20f56f6b5e59a5dfffc397898558ce08631e050481dd7ba34c713f19a2191aac",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "7df9e95fa5255d42be04c96925eddbbe8180abe7a26071698084c874329166a0"
+    },
+    {
+      "source": "docs/ios-content.json",
+      "locale": "tr",
+      "field": "locales.tr.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1.000",
+      "beforeParagraphSha256": "519c15f5ed37084cd3443741aabbc3d843b3a72c0e387c63a73f1ae61cf5dac7",
+      "afterParagraphSha256": "61a00b7ad931f5397021dd8872edd9c04ad3ccd5a802b7f91f7def6c0bd6286a",
+      "remainingProseSha256": "337a8659aa92b22cc8dcd509e033b319bcc19295e7339bf001fcaaea2a13fa3b",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "aa8219406255d7376d3340cc0f6156f27088f1d512bfcab91477f3d63f5122bd"
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "locale": "de",
+      "field": "locales.de.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1.000",
+      "beforeParagraphSha256": "8fb600b7da9ee2976401d2696803b7860e0128f84f1664cb89075b29512caf4f",
+      "afterParagraphSha256": "23c55b7594a201cc4a398593350a3b0a292f370a82843b82a95b38b6197c1256",
+      "remainingProseSha256": "c7b3bd32271c5c93152d4052dec7574a9bf922a84c452883651ec9dacf43cd13",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "39a947e7cfb609e6c39b6086798add3e1ad7af906ff9a28375697856b4a2d5ec"
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "locale": "fr",
+      "field": "locales.fr.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1 000",
+      "beforeParagraphSha256": "f2cf7919c66c91b86cf0b1bd300eb3a62b75a587972de8ab015fca51fb5a3b1c",
+      "afterParagraphSha256": "9d0622018c4a689ac059bfddf9cd2b12c08f28f94c98655e1bbc67b0441c3b8e",
+      "remainingProseSha256": "244589eba3c552e708880dcf33e42a67b92d8073f44eb300b0bfc6016ae82b26",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "928e64124c4112d8c25732e11b8320f544295f9bfd1054b922e6749893bb1765"
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "locale": "es",
+      "field": "locales.es.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1.000",
+      "beforeParagraphSha256": "79e5a6b49b5c7a7f29e1d48429858ffa5e63bc2eb5e7e46d2999811a8d12d238",
+      "afterParagraphSha256": "243306496261fdf2d94d31e1ee66146fc26ecaeab66c02a5cc05c6dce536bc3b",
+      "remainingProseSha256": "69c690b0b08352a11b76019e53a98e4bb9517ab608949efa028d20b9a29f0a1e",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "fc6fb9d3f150cc1f09853bf06363e455b40fd9129f34d513ad800779ecd16377"
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "locale": "pl",
+      "field": "locales.pl.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1 000",
+      "beforeParagraphSha256": "0a3150b374c2436045e8f444f681354041a4ce0b490ac5c2eb83653bf8c7f191",
+      "afterParagraphSha256": "2c23b671eca9bb05006f5457a3088290a1953298c0ec7274e2e446540a0da929",
+      "remainingProseSha256": "0577e26ec3efacc669dda7c7d45c0bf011fb4086379da7da4899e0f5f7428a73",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "33912bca137c27476fa330bda851f556cb3deff2979020c25285679e0db8bbb4"
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "locale": "sv",
+      "field": "locales.sv.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1 000",
+      "beforeParagraphSha256": "988e3a7004eed8be4a3aa5efb255b9ee802d9e5fbc56eb4f310827712865755e",
+      "afterParagraphSha256": "15e94f1214a9996be015299df4df89dbbb9459b11e5cf8014438e27c9f4b74de",
+      "remainingProseSha256": "20f56f6b5e59a5dfffc397898558ce08631e050481dd7ba34c713f19a2191aac",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "7df9e95fa5255d42be04c96925eddbbe8180abe7a26071698084c874329166a0"
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "locale": "tr",
+      "field": "locales.tr.privacy.legalSupplement.sections[id=incident].paragraphs[1]",
+      "beforeThreshold": "1,000",
+      "afterThreshold": "1.000",
+      "beforeParagraphSha256": "519c15f5ed37084cd3443741aabbc3d843b3a72c0e387c63a73f1ae61cf5dac7",
+      "afterParagraphSha256": "61a00b7ad931f5397021dd8872edd9c04ad3ccd5a802b7f91f7def6c0bd6286a",
+      "remainingProseSha256": "337a8659aa92b22cc8dcd509e033b319bcc19295e7339bf001fcaaea2a13fa3b",
+      "remainingProseMatches": true,
+      "incidentMetadataSha256": "aa8219406255d7376d3340cc0f6156f27088f1d512bfcab91477f3d63f5122bd"
+    }
+  ],
+  "sources": [
+    {
+      "source": "docs/ios-content.json",
+      "beforeSha256": "998a7e713975ecd0220f7063fc68c1023d4339d2575ce35238d44367551e4aed",
+      "afterSha256": "dcd9eda991ecdb657d6528bede3eacaa9c9b5c6f5b2b20ff2768d86e0e96915c",
+      "restoringOnlyThresholdsMatchesParentBytes": true
+    },
+    {
+      "source": "docs/android-content.candidate.json",
+      "beforeSha256": "457e8d2568e197bf507c1285a936e37fec4b39b6f548067fae024b320e0e8cba",
+      "afterSha256": "566f01de0d18c4be67a9d4b0f9f51f0d2472cfdd8848113ecda9d2795586acee",
+      "restoringOnlyThresholdsMatchesParentBytes": true
+    }
+  ]
+}

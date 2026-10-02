@@ -5,7 +5,19 @@
   and decimal-comma locale PIPA thresholds through new assertion RED then GREEN commits.
 - Keep KRW 22,000 per review-2. Read-only partner audit: iOS matches; committed Android still
   KRW 19,900. Cross-repository commercial parity remains BLOCKED pending matching commits.
-- No native/device/network, push, merge, deployment or publication.
+- RED `30647c4`: detached parent compile PASS; 43 methods,10 failed methods,1098 assertion failures,0 errors/skips/omissions. Wrapper count prediction corrected from retained evidence without a rerun.
+- GREEN source edits remove retired workflows in all17 locales, preserve core Free features,
+  ordinary Store trials and statutory/historical rights, neutralize sync token wording,
+  strengthen the iOS alias guard and group PIPA thousand correctly in12paragraphs.
+- New closed commercial parity gate links committed iOS/Android evidence and coordinated next action.
+- Focused related family:81 exact methods PASS,0 failure/error/skip/omission; retained raw log/identity receipt.
+- Seven renderer commands PASS; affected source-owned privacy/Terms outputs regenerated; release source fingerprints refreshed.
+- Final full193 exact methods PASS; all12ordinary static commands PASS; release exit1 remains
+  BLOCKED_EFFECTIVE_DATE. Site162/staged126pages; tone2078sentences,0violations,9existingexceptions.
+  All255frozen relevant inputs/runtime match;51retired-body and34core-help preservation checks PASS.
+- Independent read-only review found no material current source issue; Android parity remains blocked.
+- Owned translation scratch/proof worktree removed. No native/device/network, push, merge,
+  deployment or publication.
 
 # Changelog
 

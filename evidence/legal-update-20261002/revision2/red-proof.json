@@ -1,0 +1,38 @@
+{
+  "redCommit": "30647c4596ef8d7bc0cc9d0dcbabd012e5b4438d",
+  "parent": "d3b6e32b21789c67763ad9f73bfff77dc370cc2b",
+  "result": "VALID_ASSERTION_RED",
+  "compile": "PASS",
+  "methods": 43,
+  "failedMethods": [
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_legacy_rights_reach_staged_policy_help_and_terms_without_claims",
+    "test_account_sync_candidate.AccountSyncCandidateTest.test_retired_prior_buyer_workflow_is_absent_from_candidate",
+    "test_legal_revision2.LegalRevision2Test.test_all_locales_keep_free_features_and_rights_without_special_offer",
+    "test_legal_revision2.LegalRevision2Test.test_commercial_copy_parity_is_a_distinct_closed_release_gate",
+    "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker",
+    "test_legal_revision2.LegalRevision2Test.test_prior_buyer_grant_and_claim_code_program_are_retired",
+    "test_legal_revision2.LegalRevision2Test.test_retired_claim_collection_has_no_active_release_workflow",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_pipa_thousand_threshold_uses_locale_correct_grouping_both_sources",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_renderer_rejects_short_store_name_next_to_localized_text",
+    "test_legal_revision2_minor.LegalRevision2MinorTest.test_staged_ios_copy_rejects_shortened_competing_store_names"
+  ],
+  "assertionFailures": 1098,
+  "errors": 0,
+  "skipped": 0,
+  "omitted": 0,
+  "proof": "red-parent.json",
+  "log": "red-parent.log.gz",
+  "newTestInputs": {
+    "scripts/test_legal_revision2.py": "37b88dfe5c7dbfc8c8e124e59e53b9d2f1a5e635f9844fd9b1d660b744db5155",
+    "scripts/test_legal_revision2_minor.py": "a99c301b467b288ea9a39ca7e15179aca1e09259456bfea40a76a189c0534bed",
+    "scripts/test_account_sync_candidate.py": "96e99d4d2f57f2b5df7b63732c265a233b6ebbc31af959a95f713c8de709a944",
+    "scripts/fixtures/legal_revision2_rights_anchors.json": "827fbae8af677cc8c073df7adef155403dafb999bc7c1ad61c92262a02c90fc7"
+  },
+  "wrapperPredictionCorrection": {
+    "initialWrapperExit": 1,
+    "incorrectPredictedFailedMethods": 11,
+    "actualRetainedFailedMethods": 10,
+    "rerun": false,
+    "productResultUnchanged": true
+  }
+}

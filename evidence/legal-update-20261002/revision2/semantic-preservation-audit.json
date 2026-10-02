@@ -1,0 +1,518 @@
+{
+  "result": "PASS_CURRENT_STATIC_SOURCE",
+  "scope": "Current complete retired texts absent; retained original core-feature help answers, subscription lookup and incident safeguards; this does not certify paraphrased future contradictions or native/counsel review.",
+  "retiredBodies": [
+    {
+      "locale": "ko",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "15ef13e0498aae1037bf10a1de7b978da518b321675ff8928be8e7198ed3b4f3",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ko",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "83bf6d14c375da8308f2c64be76854faee03b83830ff5dc4a03eb1e94dc67ded",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ko",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "b0b558a04fef9915b49e47a69b5780c43cff2bdbd112dd76e83a9626b4501289",
+      "presentInStaged": false
+    },
+    {
+      "locale": "en",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "7309b3be22c5d5d2841a6ee6b6de9ab040b0c6effa10e08263683587ffcc923b",
+      "presentInStaged": false
+    },
+    {
+      "locale": "en",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "fdf0053a8e7ae067efe680fe535d5a93d1736b98a9c4abe4c8b1a481ede08ce0",
+      "presentInStaged": false
+    },
+    {
+      "locale": "en",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "5f418579b6303ae6950f8fd510d94cbaa1dba210a9ae7c6a433742e77f65b2ce",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ja",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "242548fa1d384aa81b032396abcdf078d3e7dc8bf6ab74980b1a42c9e187ddaf",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ja",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "f3b5243c9834fd136231e8f4057b7d3fcef423e3e13f2b16dbf23191aa3cc608",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ja",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "260dd75722882db7de3a5bcdf695b224a7d6ae86170a3f5c0216d0a4bed7f40d",
+      "presentInStaged": false
+    },
+    {
+      "locale": "de",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "a1a445367de77fd4abf0d7a9804a376e5a392b214281f5d445c8028ec880a378",
+      "presentInStaged": false
+    },
+    {
+      "locale": "de",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "6084a6eaab89bc28500f9e4edb3b4d805c59381f36b50eb3f4dd174a6192d94a",
+      "presentInStaged": false
+    },
+    {
+      "locale": "de",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "937d3ad0dfe351d51c610e2cd7ed64feef4fb80c5fa551971d2119aea6d2b351",
+      "presentInStaged": false
+    },
+    {
+      "locale": "fr",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "1df41e80e0e69fe1c776f179b44f73a4c07d476e569504e4c32e85d555f6bbfe",
+      "presentInStaged": false
+    },
+    {
+      "locale": "fr",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "dbc542318a3df1229c995172b83c1b678810a2d8b5f9196f5b3247405c96e9ac",
+      "presentInStaged": false
+    },
+    {
+      "locale": "fr",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "4e013cf976682ae64c2b204a93de1b5c6a568c1ee30a5e1278a63ffece5030dc",
+      "presentInStaged": false
+    },
+    {
+      "locale": "es",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "8283e2f7aadd7a289b745e444375663b562e0ac364b88060c0ab88e564ade2fa",
+      "presentInStaged": false
+    },
+    {
+      "locale": "es",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "ab1350cc2c7420a4572609814bf688c54999b3d9ae852e774896e75faaa92114",
+      "presentInStaged": false
+    },
+    {
+      "locale": "es",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "25aa848dcb0097796d605a4d17f918f08f3b431d9af499295a2f428dbe597352",
+      "presentInStaged": false
+    },
+    {
+      "locale": "it",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "8a7962ac7b51232aba5bd18b5a7d132645de1be7a19f1cc29ebe9f808496f3d2",
+      "presentInStaged": false
+    },
+    {
+      "locale": "it",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "d93755180f4adce7728831df0d846c9430f01f6c28eadabd86be054a75ad3dcb",
+      "presentInStaged": false
+    },
+    {
+      "locale": "it",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "40daed51f5f1e1f01b8131d0949eaa8c332f6f13e32ae58f534c6b91ca42d18f",
+      "presentInStaged": false
+    },
+    {
+      "locale": "nl",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "7a6d19a9364649b27bec5881303c17bd4fc88c277e12ede4d32a80096ae0edac",
+      "presentInStaged": false
+    },
+    {
+      "locale": "nl",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "fcc9f4cff91b3ff41302f7416d46fe1084452a4a6091a202d646bc4729e149fd",
+      "presentInStaged": false
+    },
+    {
+      "locale": "nl",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "386ba3a6a7a70c49443f15d4c83ce9cda966e114d57c8212f9f279c2d3beaab5",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pt-PT",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "0c27b84a9f01687ddef77bfc98a191b9bf784f11bde0b539fdf903d42a33c3b0",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pt-PT",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "dec594433f42cf9c334d9a43bfdf81c3b126a789b1faa96696cc501c6b92cde2",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pt-PT",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "adfc61ad0b090303190ce4182677bacfdc4122303660374ddf5a7b34f005489f",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pl",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "25a49d1a7969f0164be442a01ebdeb7455d4446cf0ebc3a16616199c08cf4a10",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pl",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "d44ff467dc454032dd0fb4eaed7660cd673dd406dfa1454a9c4426ee93b90faf",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pl",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "233d6b9cdf09d0551efb7bbbaa3258afdda4347eeb8dd8f29ca543774415535a",
+      "presentInStaged": false
+    },
+    {
+      "locale": "sv",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "e9242cd1a72ee5657c5c5ca37b518f76315f243008ce4987329866516859ee72",
+      "presentInStaged": false
+    },
+    {
+      "locale": "sv",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "f49228a141df3a9bcf8aabae1002446e9b6424bf2002602fc847cd9b309c11f2",
+      "presentInStaged": false
+    },
+    {
+      "locale": "sv",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "2b9d53916d7434f6314945cb25d783ec769acc761df18a1adfd1da4a78e5fd22",
+      "presentInStaged": false
+    },
+    {
+      "locale": "hi",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "46c6f4ea4be522174360628949e414d1d36035105d6f627f812a92d0a9e17ec4",
+      "presentInStaged": false
+    },
+    {
+      "locale": "hi",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "32f7456e492e6bf19b7b5cc971551a666e85833b88a15138328ee15855ebb5b8",
+      "presentInStaged": false
+    },
+    {
+      "locale": "hi",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "208912d0afc7ca867f802113446985cfe3a5049777555e39d3c04250a12051c6",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pt-BR",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "f1fba7839c4da4b0438eecd73f14ded8743d9658213eb820852b52d84760b96c",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pt-BR",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "b5636e8caacace2f40b7bcc04240bd9ba910819ecc8371db180f6546a4e4571a",
+      "presentInStaged": false
+    },
+    {
+      "locale": "pt-BR",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "60fe220a4a006e98ed7cbb4cdb5a5f8a142dd1d04023b82c7b620eca35723770",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ar",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "f7a04d26a0c52e3e51f119f0f246b79e27f70df5e4764e091c967d2ae3a87d90",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ar",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "fb3f27dd1558aeb6028bdea969e2c612f1245eb04c59e722da8cbeb8574e02ad",
+      "presentInStaged": false
+    },
+    {
+      "locale": "ar",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "c5b963ada7afd15ec5acf871912623ff521870eeed557152afca87c47316c6bb",
+      "presentInStaged": false
+    },
+    {
+      "locale": "zh-Hans",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "9de7f9dfb318409882b3a2e90f1173814d206ec91c450ead14a90b4df5281d7e",
+      "presentInStaged": false
+    },
+    {
+      "locale": "zh-Hans",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "234803f06071d38c2d54f5287ccb98203fe69b5d7568a97905697c46dc93b3d5",
+      "presentInStaged": false
+    },
+    {
+      "locale": "zh-Hans",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "0987418c502b9af4d7a343ed82ab3c482fb603f4ba3c7e7d1d84deae9f75777b",
+      "presentInStaged": false
+    },
+    {
+      "locale": "zh-Hant",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "1d87afe9a0b649c1900eb213a004326bc724715d1c903043a8e09f9e028c157d",
+      "presentInStaged": false
+    },
+    {
+      "locale": "zh-Hant",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "1e6cad9cf99364f40b6d5a2a0404009bfce7f4890412782d217c73f67631a72a",
+      "presentInStaged": false
+    },
+    {
+      "locale": "zh-Hant",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "119d3684f44fb058bbfe7c4200640d1512ac054aa0294aa85ac95ded9a1da340",
+      "presentInStaged": false
+    },
+    {
+      "locale": "tr",
+      "retiredField": "legacyRights",
+      "retiredBodySha256": "00ec3b810025e2041cad275a7fbd07d28cee785dd4045efe00e373bffd7c4892",
+      "presentInStaged": false
+    },
+    {
+      "locale": "tr",
+      "retiredField": "priorBuyerClaimPrivacy",
+      "retiredBodySha256": "b38e5b6b5a4b048bf5e3ed4a3f85e710b2d7eff3ba7b5cc5fc40300812af7429",
+      "presentInStaged": false
+    },
+    {
+      "locale": "tr",
+      "retiredField": "priorBuyerClaimHelp",
+      "retiredBodySha256": "33efc3e8d725872fdd3bc0a0c7044bdda281e8806113853f23e94ca8725ce448",
+      "presentInStaged": false
+    }
+  ],
+  "coreHelpPreserved": [
+    {
+      "source": "ios-content.json",
+      "locale": "ko",
+      "tailAnswersMatch": true,
+      "sha256": "dbe28a6cb7f523b7b86cd4941300da7ca7f91d831111a4402bf6b040e9927211"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "ko",
+      "tailAnswersMatch": true,
+      "sha256": "dbe28a6cb7f523b7b86cd4941300da7ca7f91d831111a4402bf6b040e9927211"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "en",
+      "tailAnswersMatch": true,
+      "sha256": "a574a8484ff7f8d32abee592b2a2db2c546b18a48eba3da09ff67444bf514d38"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "en",
+      "tailAnswersMatch": true,
+      "sha256": "6e1fb3ce941629dfa941751552604dd18e01e19c986d25b6e48c8082ecfcd7bd"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "ja",
+      "tailAnswersMatch": true,
+      "sha256": "167b123201bcdbec1497c84edf48fb5ae67d0dc68b370c62459c3c345dfcda86"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "ja",
+      "tailAnswersMatch": true,
+      "sha256": "167b123201bcdbec1497c84edf48fb5ae67d0dc68b370c62459c3c345dfcda86"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "de",
+      "tailAnswersMatch": true,
+      "sha256": "e3ef4f7981899769c27245ac927ceda0a35a6e86f43149894b33395989cc33d2"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "de",
+      "tailAnswersMatch": true,
+      "sha256": "fe1395a1821d89cb72d2f670241a7c43c9d1bf8dc81d420f744eb87c25a0ce8d"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "fr",
+      "tailAnswersMatch": true,
+      "sha256": "1a6c150f308dfd2ce81459abc0a24cf85a6b5b9ce9ce0780370d171dbf3cf9a7"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "fr",
+      "tailAnswersMatch": true,
+      "sha256": "7054e23c8fa93671c96f851e3c36d2c594fff7fc5802bb6e9908e1c073b3c11d"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "es",
+      "tailAnswersMatch": true,
+      "sha256": "51b0189ba7cfa3782dd87c4b5da1ae1c3d7b81f57a2c8550c029a6d0c849710b"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "es",
+      "tailAnswersMatch": true,
+      "sha256": "0cbeff446052a2e8de4a98e4c235d8028a01861a63ff36144338eac651d73107"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "it",
+      "tailAnswersMatch": true,
+      "sha256": "227250147c7adbaa6ad70e05042c806390b5b7ba0fee32a7ffc8eec8753f3fc3"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "it",
+      "tailAnswersMatch": true,
+      "sha256": "fb3d858defc071d198f8ddb1f4c4f160cd05d2b9a294856aa907759dc8b1f8c4"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "nl",
+      "tailAnswersMatch": true,
+      "sha256": "623531fbfc38eabedecd80a4ac0ad70e7c9b379a74925e73057202389db64d33"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "nl",
+      "tailAnswersMatch": true,
+      "sha256": "a15595ae2d989ad3fbd58c0e3360ca267882753a69828a847ede3d96c3976fb7"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "pt-PT",
+      "tailAnswersMatch": true,
+      "sha256": "8138744196cb7fcbb1e4b364c23d2562fce744eba39370f7e0820b59afa5a6a9"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "pt-PT",
+      "tailAnswersMatch": true,
+      "sha256": "b0de537fd9e422675d11510d6d2e026eea14e566b312f0e55447368a93fef8f7"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "pl",
+      "tailAnswersMatch": true,
+      "sha256": "c4065660668f1887b80bfb6da8a834f8f3ca4586d1d2da2c07cd854e589ad7e0"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "pl",
+      "tailAnswersMatch": true,
+      "sha256": "de404d3274f6fdd1020f4d12af7b7ae6d5651c69c99ffd3af9b2dd725677b5a4"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "sv",
+      "tailAnswersMatch": true,
+      "sha256": "6a2ba378badb10236cd2cc88aee0f11c4f4bec16a750b1de6eca3c1b199e25de"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "sv",
+      "tailAnswersMatch": true,
+      "sha256": "480324c703ceeff3fa5c1f569fec75d662f30349ce93ce5d6917cae53c61a18f"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "hi",
+      "tailAnswersMatch": true,
+      "sha256": "acf81ba4ecacf57e8cbe3db177200b5c455c85b44b520baf0d7977f1d5f3fcb8"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "hi",
+      "tailAnswersMatch": true,
+      "sha256": "0b65b4d1050fc2e7fca1dff811305e2968744a097cff86c3161459472083830e"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "pt-BR",
+      "tailAnswersMatch": true,
+      "sha256": "df66cc2eafa45c186470673ce35ab84aee8e0bba07f630011baae3d43703cbdc"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "pt-BR",
+      "tailAnswersMatch": true,
+      "sha256": "f5f56baf471e30a1de56662d4e4ff41724bcf09f13616d8084b2932278608ab9"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "ar",
+      "tailAnswersMatch": true,
+      "sha256": "30e030e89ba3a4af158af61e364997f3a2a05c44f8d0f40750760de4e5cfe0c5"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "ar",
+      "tailAnswersMatch": true,
+      "sha256": "1fb95031ae53422d0ce1f8116535680de11b28176f8e3be9e0a68eea304c23e0"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "zh-Hans",
+      "tailAnswersMatch": true,
+      "sha256": "b8687a40afaa34883f28d052c5ff5c467908264e0d3ea5621878eac42f14c635"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "zh-Hans",
+      "tailAnswersMatch": true,
+      "sha256": "a997807cd2c2be79cd64368c07897b3d1df627e37a295762fc14c4965f3e8124"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "zh-Hant",
+      "tailAnswersMatch": true,
+      "sha256": "2c5cdece238de2079c238de983c4da652744a65d3889c9e9a7c39881b48abd30"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "zh-Hant",
+      "tailAnswersMatch": true,
+      "sha256": "41488f64ea641dd6b5ed17e9539d6ed29429bdddbb5561be8ffc3dcc04820fae"
+    },
+    {
+      "source": "ios-content.json",
+      "locale": "tr",
+      "tailAnswersMatch": true,
+      "sha256": "6b5a573281ce733e6a523541bb2a1d8ec18e81a33ff3135aa3a4381b6ff092c2"
+    },
+    {
+      "source": "android-content.candidate.json",
+      "locale": "tr",
+      "tailAnswersMatch": true,
+      "sha256": "8a73713b4496f2ca0e59a88ebb81803e789969a74070f21e0ecd3602a4bca9c5"
+    }
+  ]
+}

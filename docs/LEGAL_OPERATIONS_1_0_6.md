@@ -105,6 +105,21 @@ The current handoff and account candidate readiness flags own release status.
   days before and annual reminders. A genuine one-month trial is not automatically a >31-day
   trial. Record any uncovered owner notification obligation before release.
 
+## Commercial copy parity and prior users
+
+The prior-buyer claim/code program is retired. No separate prior-buyer Plus grant is offered.
+Core features remain Free for new and prior users; standard Store-confirmed trials, statutory
+rights and review of historical ad-free rights remain. Do not advertise claim/evidence/appeal
+or code issuance flows as pending activation.
+
+Review-2 requires this lane to retain KRW 22,000/year. The committed iOS policy/review/check
+inputs now match; committed Android policy, Play preparation notes and price checks still use
+KRW 19,900/year. Commercial parity is BLOCKED until the orchestrator coordinates Android policy,
+review copy and verification inputs in matching new commits and obtains check receipts.
+[Commercial parity record](COMMERCIAL_COPY_PARITY_1_0_6.json) links exact HEAD/hash evidence and
+the concrete next action. `commercialCopyParityVerified` stays false. Use Store-returned native
+UI prices; a static price correction does not prove actual Store readback. No decision is reopened.
+
 ## Publication gate
 
 Every source/render/site check must pass; effective date, 17-locale parity, native/provider

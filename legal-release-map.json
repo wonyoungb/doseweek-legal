@@ -209,14 +209,14 @@
     "effectiveDate": null,
     "operator": "Wonyoung Labs (sole proprietorship); representative/privacy officer Wonyoung Choi",
     "sourceHashes": {
-      "docs/ios-content.json": "998a7e713975ecd0220f7063fc68c1023d4339d2575ce35238d44367551e4aed",
-      "docs/android-content.candidate.json": "457e8d2568e197bf507c1285a936e37fec4b39b6f548067fae024b320e0e8cba",
-      "docs/account-sync-content.candidate.json": "9d61011ed961601014eed6d43b0da2dcae62107e1f0a18a308db74e88e7253c4",
-      "docs/terms-content.json": "c1323d2009c3624f210ec84561802faacbc3805748a08160ec02c4f14117be5b",
+      "docs/ios-content.json": "dcd9eda991ecdb657d6528bede3eacaa9c9b5c6f5b2b20ff2768d86e0e96915c",
+      "docs/android-content.candidate.json": "566f01de0d18c4be67a9d4b0f9f51f0d2472cfdd8848113ecda9d2795586acee",
+      "docs/account-sync-content.candidate.json": "0ea3fb756b8b9527f7953420ee61df7ccba0e56f97aa38009e4ea33a5033811d",
+      "docs/terms-content.json": "30c9229e626b9488b80189a65cf509d4f605aec65fecfb9efeabd6401010fbdb",
       "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee"
     },
     "privacySupplement": "Art30 purposes/bases/security/rights, recipient-specific Art28-8 inventory, PIPA/FTC/GDPR breach section; supplier particulars stay explicitly unverified and false-gated",
-    "subscription": "Superseding owner/spec final USD1.99/13.99, KRW3300/22000, JPY300/1980; Store-localized actual terms; eligible first-time1-calendar-month trial; automatic renewal, Store cancellation and statutory rights",
+    "subscription": "Review-2 retained USD1.99/13.99, KRW3300/22000, JPY300/1980; actual Store-localized terms; eligible first-time1-calendar-month trial; automatic renewal, Store cancellation and statutory rights; Android committed commercial copy still mismatches KRW19900 and stays false-gated",
     "backup": "daily pre-upload-encrypted S3 Seoul app data +weekly OS recovery snapshot; deleted personal data out of all relevant backups within7days; independent cleanup/actual proof required",
     "routes": {
       "site": [
@@ -232,10 +232,10 @@
       ],
       "stagedAccount": "account/delete/ through render_account_sync.py (unpublished/noindex) — request by support email without reinstall or Plus"
     },
-    "verification": "Revision1 PASS: all static source/render/site/tone/link/locale checks and182 exact unittest methods;126unpublished in-memory account/US candidate pages;249frozen relevant inputs matched. Release exit1 BLOCKED date/provider/Store-exclusion/native/operational gates. Visual NOT_RUN; no native/provider/counsel/native-speaker/public claim.",
+    "verification": "Revision2 PASS:193 exact full unittest methods,0 failure/error/skip/omission; seven renderer checks plus candidate/staged/site/tone/diff PASS;162 site pages,126 unpublished staged pages;255 frozen source/test/runner/artifact/fixture/config inputs and Python executable hash match. Release child exit1 BLOCKED_EFFECTIVE_DATE; operational gates and Android committed commercial-price parity remain blocked. Native/provider/live/visual NOT_RUN; no counsel/native-speaker certification.",
     "publication": "never published/pushed/merged by this lane; date/native/server/provider/sales-exclusion/operational gates stay closed",
     "ownerQuestions": "Final report and candidate unresolved/readiness fields; no prices/trial/regions/mg/backup/operator decision reopened",
-    "evidence": "evidence/legal-update-20261002/revision1/",
+    "evidence": "evidence/legal-update-20261002/revision2/",
     "marketAvailability": {
       "version": "1.0.6",
       "excludedRegions": [
@@ -258,6 +258,16 @@
         "neutral iOS store/platform wording"
       ],
       "greenCommit": "recorded in final lane report (this file cannot name its own commit)"
+    },
+    "priorUsers": "Core features remain Free for new/prior users; no separate Plus grant; prior-buyer claim/code program retired; standard Store-confirmed trials, statutory and historical ad-free-rights review retained",
+    "commercialCopyParity": "BLOCKED_ANDROID_COMMITTED_PRICE; docs/COMMERCIAL_COPY_PARITY_1_0_6.json and partner receipts own exact HEAD/hash/next action; commercialCopyParityVerified=false",
+    "revision2": {
+      "reviewedParent": "d3b6e32b21789c67763ad9f73bfff77dc370cc2b",
+      "redCommit": "30647c4",
+      "assertionRedMethods": 43,
+      "failedMethods": 10,
+      "assertionFailures": 1098,
+      "sourceGreenCommit": "recorded in final lane report (this file cannot name its own commit)"
     }
   }
 }

@@ -169,7 +169,10 @@ def validate(content: dict) -> None:
 
     for locale, entry in content["locales"].items():
         locale_copy = json.dumps(entry, ensure_ascii=False)
-        assert 'Android' not in locale_copy and 'Google Play' not in locale_copy, (
+        # ASCII letter boundaries catch shortened store names beside CJK text and in
+        # hyphenated token names while keeping Google sign-in disclosures available.
+        assert not re.search(r'(?<![A-Za-z])(?:Android|Google\s+Play|Play)(?![A-Za-z])',
+                             locale_copy, flags=re.IGNORECASE), (
             f'{locale}: iOS policy/help copy must use neutral references to other platforms/stores'
         )
         assert set(entry) == {"languageName", "direction", "common", "privacy", "support"}, locale

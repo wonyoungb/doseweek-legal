@@ -10,7 +10,34 @@ No owned PID/device, native or external action. Previous proofs/history preserve
 in `evidence/legal-update-20261002/revision2/revision1-report.historical.json`.
 Inputs and clean reviewed state: `revision2/baseline.json`; current dirty files: new regression
 and evidence/continuity files only until the RED stage is proved. Exact Git status is authoritative.
-Next action: commit assertion regressions and prove them on the detached reviewed parent under /tmp.
+RED `30647c4` proved on detached `d3b6e32` under /tmp: 43 exact methods, 10 failed methods,
+1098 assertion failures; compile PASS, 0 errors/skips/omissions. Retained raw gzip and JSON in
+`revision2/red-parent.*`; an incorrect wrapper prediction of 11 failed methods is corrected
+against the unchanged retained result without rerunning. Proof identity/hashes in `red-proof.json`.
+Owned proof worktree removed. GREEN source edit: retired grant/claim/code workflow removed from
+17 Terms and staged policy/help; core feature answers and statutory/historical rights retained.
+Shared token wording neutralized in 17 sync fields; remaining lookup/encryption/deletion prose
+matches exactly. PIPA grouping changed in 12 paragraphs only; remaining privacy source bytes
+match the parent after threshold restoration. iOS renderer rejects short Play aliases.
+Commercial parity false gate and committed partner coordination record added; Android stays BLOCKED.
+Current dirty: source/renderer/docs plus retained RED/change receipts; no owned running job.
+Focused related family PASS:81 exact methods,0 failure/error/skip/omission; AST compile PASS.
+Lossless result/identities/log in `revision2/focused-green.*`; no source changes during this check.
+Seven render commands PASS; affected iOS/Android privacy and17 Terms locale/hash pages regenerated
+from sources. Release map fingerprints refreshed; no effective date or readiness proof invented.
+Final full suite PASS:193 exact methods,0 failure/error/skip/omission. Every ordinary README
+check PASS (12 commands), release command exit1 BLOCKED_EFFECTIVE_DATE remains an actual failed
+gate. Site162 pages/17locales; staged126 pages/7routes; tone2078sentences,0violations,9existing
+exceptions,0stale. Exact255 relevant input hashes and Python executable/runtime match before/after.
+Independent read-only review: no material current source issue; current51retired-body and34core-help
+preservation receipts PASS. Regression presence guards do not certify future paraphrased contradictions.
+Evidence in `revision2/`: full/focused/RED identities and logs,13check receipts, frozen inputs,
+126staged artifact hashes, minor/token and semantic preservation audits, committed partner receipts.
+All17server flags and5legal flags per privacy source remain false. Android committed commercial
+parity BLOCKED; iOS matches requiredKRW22000. No price decision reopened. SourceGREEN is ready
+for a new local commit. Owned proof worktree and translation scratch removed; no running owned job.
+Native/provider/live/visual NOT_RUN; no counsel/native-speaker certification or publication.
+Next action: commit verified sourceGREEN, validate and overwrite final report, record final HEAD.
 
 ## HISTORICAL — legal-update-legal revision 1 (2026-10-02; unpublished)
 

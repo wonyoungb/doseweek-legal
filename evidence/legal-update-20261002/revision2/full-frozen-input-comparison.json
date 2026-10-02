@@ -1,0 +1,6 @@
+{
+  "match": true,
+  "files": 255,
+  "runtimeMatch": true,
+  "sourceTestsRunnerArtifactsFixtureConfiguration": "Same exact final-inputs.json before/after all ordinary checks and193-method full suite; no product mutations during verification."
+}

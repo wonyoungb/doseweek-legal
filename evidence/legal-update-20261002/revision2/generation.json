@@ -1,0 +1,59 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_home.py"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_home-generate.log.gz"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_ios.py"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_ios-generate.log.gz"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_android.py"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_android-generate.log.gz"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_import.py",
+      "--require-all-locales"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_import-generate.log.gz"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_terms.py"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_terms-generate.log.gz"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_us_health.py"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_us_health-generate.log.gz"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_sitemap.py"
+    ],
+    "exit": 0,
+    "log": "evidence/legal-update-20261002/revision2/render_sitemap-generate.log.gz"
+  }
+]

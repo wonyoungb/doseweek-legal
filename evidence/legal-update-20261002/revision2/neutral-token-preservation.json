@@ -1,0 +1,155 @@
+[
+  {
+    "locale": "ko",
+    "field": "sync",
+    "old": "Play 구매 토큰",
+    "new": "스토어 구매 토큰",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "e1f283c4b5e1edbc41e488e42de7868c4037329c9a9366a49c8c4a09b3bc35b8",
+    "afterSha256": "d2f8fed66e83360622204e4b7465a73f2913e82371276a92a8e8941a0a28184c"
+  },
+  {
+    "locale": "en",
+    "field": "sync",
+    "old": "Play purchase token",
+    "new": "store purchase token",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "eacd01516a4e398fb5144c326a348607b77049128f0167365cf475665e3c7a8a",
+    "afterSha256": "b0d912de705b0312404e21d54fb11babdb6d533f87b385e3c7968fe4c731e15d"
+  },
+  {
+    "locale": "ja",
+    "field": "sync",
+    "old": "Play購入トークン",
+    "new": "ストア購入トークン",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "01f54dcf80c90b9e08ba94e3dd3f8f034cae3c718f95a1ff0c948da770a38d33",
+    "afterSha256": "caedd40ed895d85aaa2854b87027b443c1bc0148a433725a5e6d09ee47ed3ad5"
+  },
+  {
+    "locale": "de",
+    "field": "sync",
+    "old": "Play-Kauftoken",
+    "new": "Store-Kauftoken",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "d52453fb78d9f76bf3cfcedf2f028cbd4d92c9cd419c66b9aa6b72af6205344d",
+    "afterSha256": "b025788ff08e23363c74d946d6400262761a2f1b45b24aa8d014530e6e055488"
+  },
+  {
+    "locale": "fr",
+    "field": "sync",
+    "old": "jeton d’achat Play",
+    "new": "jeton d’achat du store",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "ca17b945045e0f278eb97225dd33fdfe5ba3b458a98d81d7da66033e5f551ce9",
+    "afterSha256": "97c9c516adf3ebc121ff0ae10c6f1f9b7ffd5021c996153a841dcfd9439bc354"
+  },
+  {
+    "locale": "es",
+    "field": "sync",
+    "old": "token de compra de Play",
+    "new": "token de compra de la tienda",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "342ad2cd08e08eb3c5c768d54cbdd723653d2405c897e49f50c9bd8da6285e0d",
+    "afterSha256": "9b9f958322a3048dcd97fcd51e810543d19bee371605331a20bcf12b2ab14140"
+  },
+  {
+    "locale": "it",
+    "field": "sync",
+    "old": "token di acquisto Play",
+    "new": "token di acquisto dello store",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "08ab5326326eb7ee7b547df181319fdf5519bfdf77bbe8cfbdbfddfc7f350e45",
+    "afterSha256": "74ad0ce04de530468627a0219087e84f4ea263538f84100c76d43415bf7231f7"
+  },
+  {
+    "locale": "nl",
+    "field": "sync",
+    "old": "Play-aankooptoken",
+    "new": "aankooptoken van de store",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "5cf97eb254c85eb40184f6c5abb9f9d7f995688eaa1ea346925a611fd5d88b6a",
+    "afterSha256": "4e9ddac9e001a7ad04748d0d94a610d545d4489324817f6e8463c89d70f0d29f"
+  },
+  {
+    "locale": "pt-PT",
+    "field": "sync",
+    "old": "token de compra Play",
+    "new": "token de compra da loja",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "b5e908c114841b4ab8a2feb46b64e1e90fb5153ea0460a4f296b2b70813c3c20",
+    "afterSha256": "6a3e6f35caa9eaa6e83cd3bd34f87a5718b5c0b9c61412fe0494c70bc520d7a2"
+  },
+  {
+    "locale": "pl",
+    "field": "sync",
+    "old": "token zakupu Play",
+    "new": "token zakupu ze sklepu",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "af4ed8140aed489940e27b7eaf9a817db0fc5a5ae88046696d471ea5b7acc0b4",
+    "afterSha256": "f330b8927d99e6cb7b52c27f2c1679b3a7bfc4f5c2b644855bd12ba864488b62"
+  },
+  {
+    "locale": "sv",
+    "field": "sync",
+    "old": "Play-köptoken",
+    "new": "köptoken från butiken",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "ca4c5daf589c53a5c878465b2f7e5b9587536d6b5ccf4917c0ae4aa9a24eda11",
+    "afterSha256": "058ea6627ef8737a3fb47e574c39cca189b6befca9dedb6e6d6997f786e85826"
+  },
+  {
+    "locale": "hi",
+    "field": "sync",
+    "old": "Play खरीद टोकन",
+    "new": "स्टोर खरीद टोकन",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "d3cf26521d3b667f5e8ae1f8081836d9d77ffa58227d1e7cf8950640466e26fe",
+    "afterSha256": "d4feb5d27b229c77a482edf237780d09e7c8a9c2049025c4532eee114cf2d8ea"
+  },
+  {
+    "locale": "pt-BR",
+    "field": "sync",
+    "old": "token de compra Play",
+    "new": "token de compra da loja",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "9aea02a215f5693c3accb89f0103343ae1ecf2199fcf6b62fbbaf9832ba6fdc9",
+    "afterSha256": "b06898e0fc08a3bc863d1a7d9d2b1ff8ca652d21fd96fd0f545505a73e26bb64"
+  },
+  {
+    "locale": "ar",
+    "field": "sync",
+    "old": "رمز شراء Play",
+    "new": "رمز شراء المتجر",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "74a3afa30c0f19f0a19e5821cef448c7768f70c4cdaf89ea45b638acf2865386",
+    "afterSha256": "3bbdc8735622296c0d47fb1d500f3b9a39957d12e2047df451ec68644e165bb0"
+  },
+  {
+    "locale": "zh-Hans",
+    "field": "sync",
+    "old": "Play 购买令牌",
+    "new": "商店购买令牌",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "c978c4198146b61713bb3d56c7aeff431fe3c4327fa4280338e8c09e1422ac08",
+    "afterSha256": "9c0f185d5b90f1e3cf907b454cd56710bd3a1c3df795d88c2d985656bbe32f14"
+  },
+  {
+    "locale": "zh-Hant",
+    "field": "sync",
+    "old": "Play 購買權杖",
+    "new": "商店購買權杖",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "24b17df85bded2b3107afaf9d4264c365a78851c53d4e38335346c57699a5698",
+    "afterSha256": "f388f07ce61b80f3395db85c227b5935172775262cdc05ea275c799145a01135"
+  },
+  {
+    "locale": "tr",
+    "field": "sync",
+    "old": "Play satın alma belirteci",
+    "new": "mağaza satın alma belirteci",
+    "remainingProseUnchanged": true,
+    "beforeSha256": "3ce3b6dd72945e92677b8c99fe520010c1e2548bbd56a97734ec3e0290006429",
+    "afterSha256": "2ac061237b84dc2e41a3395c5cf22aa528e0b34adca7087000902d0a7e71e2b1"
+  }
+]
