@@ -423,5 +423,9 @@ if __name__ == "__main__":
         f"account/sync candidate misses server facts in {len(hosting)} places, e.g. {hosting[:3]}; "
         "state the operator, AWS Lightsail ap-northeast-2, the Cloudflare transfer and the 30/7-day rules"
     )
+    transfer = transfer_disclosure_errors()
+    assert not transfer, (
+        f"account/sync candidate states {len(transfer)} false or incomplete facts, e.g. {transfer[:3]}"
+    )
     candidate = load()
     print(f"OK: {len(candidate['locales'])} account/sync draft locales; status={candidate['status']}")
