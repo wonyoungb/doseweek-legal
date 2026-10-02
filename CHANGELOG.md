@@ -1,4 +1,11 @@
-## 2026-10-02 — late review 1 (unpublished)
+## 2026-10-02 — late review 2 (unpublished)
+
+- Resume reviewed `3cbc050` for the single major internal price-authority inconsistency.
+- Choose reviewer-permitted store-price wording; preserve histories and closed gates.
+- Added four focused regressions; replaced two numeric authority assertions. AST compile PASS.
+- Product sources unchanged; assertion RED parent replay next. No external action.
+
+## 2026-10-02 — late review 1 (historical; unpublished)
 
 - Resume clean reviewed `fe488a5`; fix its one major via permitted store-price public wording.
 - Preserve fixed one-month trial/renewal/cancel/refund and all other legal content.

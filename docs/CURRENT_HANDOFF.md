@@ -1,4 +1,18 @@
-## ACTIVE — legal-update-legal late review 1 (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal late review 2 (2026-10-02; unpublished)
+
+Objective: resolve the single major in late.review-2 with its permitted price-agnostic
+store-price contract across active coordination, operations, provenance, tests and report.
+Reviewed HEAD `3cbc050be05cb9a8ae84a8916ed34f15419dcf40`; branch `next-ai/legal-store-legal-cx`.
+Initial worktree clean. Baseline/input hashes and untouched prior report in
+`evidence/legal-update-20261002/late-review2/`. Historical evidence remains immutable.
+Owned dirty: new regression, two existing parity assertions, baseline/offline runners, this
+handoff and CHANGELOG. No product edit yet. All scripts AST compile PASS.
+No owned PID/device/live job or external action; canonical release ledger read only.
+Partner snapshots remain historical; effective date/readiness/publication gates stay closed.
+Next action: commit assertion-only RED, replay six exact selectors on detached reviewed parent
+under /tmp, retain assertion failures and remove the owned proof worktree before GREEN.
+
+## HISTORICAL — legal-update-legal late review 1 (2026-10-02; unpublished)
 
 Objective: fix the single major in late.review-1 with reviewer-permitted store-price wording
 in all17 Terms locales. Final owner price decisions remain authoritative for Store setup;

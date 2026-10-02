@@ -1,0 +1,24 @@
+{
+  "head": "3cbc050be05cb9a8ae84a8916ed34f15419dcf40",
+  "branch": "next-ai/legal-store-legal-cx",
+  "status": "?? evidence/legal-update-20261002/late-review2/\n",
+  "inputs": {
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/common-rules.md": "71016b430913b7b6ac2ab913ece9dd3c525750852a7c65da6c49257666c73e57",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-late.review-2.json": "60e4cbaa33d162c034c65da653706714c83f465748b37ab0ce7f02e463f9f3c1",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-compliance-research.answer.md": "3c7da0e80854df9ced45f3414283b5b51b310346f2d6df0fb27732e6bce047de",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/backup-cost-research.md.answer.md": "d6222352e9999eb4fec9e424eb07d98f7c0d88167f31761ce573896f98f0110f",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/PLUS-FEATURE-PACK-SPEC.md": "dee0930ec2f52d6475a3570c4cffc3f97a53232cda2e7094d084e74fc87a4729",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/AGENTS.md": "da51c0c97cfffa2e76a254117921846fbc8dd01884b6a756c3f1243af06c33da",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/README.md": "b55cffa5802f1d9a02282aaf34a3b6bee887c3b8f17defc8ed00ce5c70fa108d",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/docs/COMMERCIAL_COPY_PARITY_1_0_6.json": "3e4e9251d6fbafa156ef852302797d8ac251a368c94d82958e5b26819481926f",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/docs/LEGAL_OPERATIONS_1_0_6.md": "f827fafb81388bad940d0ed589665d220d80f5e1285b2a969e3b0b3ba7699269",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/legal-release-map.json": "8349de11e1eb8ca6c41888ece17a02265933aa4c3859b8f829c443f2d685bae5",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/docs/account-sync-content.candidate.json": "f3d402a2ac0323452abf001209165a6baa118506a73b73ed79781d4fc9886715",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/docs/terms-content.json": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/scripts/test_legal_late_review1.py": "2863055234dbecede3502448ade552059cd9f5ba9910448a123dd41b77780865",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/scripts/test_legal_revision2.py": "6ce82b9ca0aec85a402c85658f9ad7255852382ecea88b51a1020178b6ef46b4"
+  },
+  "externalActions": [],
+  "ownedProcess": null,
+  "device": null
+}

@@ -64,7 +64,8 @@ class LegalLateReview1Test(unittest.TestCase):
     def test_parity_record_uses_store_price_and_keeps_receipt_gate_closed(self):
         record = json.loads((ROOT / 'docs/COMMERCIAL_COPY_PARITY_1_0_6.json').read_text())
         self.assertEqual(record.get('websitePriceWording'), 'store-price')
-        self.assertEqual(record['requiredKoreaAnnual'], 'KRW 19,900')
+        self.assertEqual(record.get('requiredPriceWording'), 'store-price')
+        self.assertNotIn('requiredKoreaAnnual', record)
         self.assertEqual(record['status'], 'BLOCKED_PARTNER_CHECK_RECEIPTS')
         self.assertFalse(record['publicationAuthorized'])
         candidate = json.loads((ROOT / 'docs/account-sync-content.candidate.json').read_text())

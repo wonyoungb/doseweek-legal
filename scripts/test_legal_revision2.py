@@ -82,7 +82,8 @@ class LegalRevision2Test(unittest.TestCase):
         path = ROOT / 'docs/COMMERCIAL_COPY_PARITY_1_0_6.json'
         self.assertTrue(path.is_file(), 'matching committed partner evidence must be recorded')
         receipt = json.loads(path.read_text())
-        self.assertEqual(receipt['requiredKoreaAnnual'], 'KRW 19,900')
+        self.assertEqual(receipt.get('requiredPriceWording'), 'store-price')
+        self.assertNotIn('requiredKoreaAnnual', receipt)
         self.assertEqual(receipt['websitePriceWording'], 'store-price')
         self.assertEqual(receipt['status'], 'BLOCKED_PARTNER_CHECK_RECEIPTS')
         self.assertIn('late owner decisions', receipt['authority'])
