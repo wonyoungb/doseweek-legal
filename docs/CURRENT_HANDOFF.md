@@ -45,8 +45,11 @@ announcement occasion, Google token claims, notice names Cloudflare, data-key wo
 `serverReadiness` (8 flags, all false) with one unresolved item each, `require_release_ready()`
 refuses open flags, `--release` refuses the registered pending sentences. Hardening `04aa477`:
 `SYNC_SCOPE` in all 17 locales (debbd1c had narrowed RED 702c296's D1 assertion to en/ko).
+`212c91b` (self-found, no RED owed): the refusal no longer says the announcement check is skipped
+"only" when offline (it is also gated by age/privacy/unlock and skipped on timeout); the candidate
+CLI now runs the same detector as `check_site.py`.
 
-- PASS at head: six renderer `--check`s, `check_site.py` (Korean tone 1589 sentences),
+- PASS at head: six renderer `--check`s, `check_site.py` (Korean tone 1590 sentences),
   `korean_tone.py` (0), README unittest set + candidate tests (131), candidate CLI, staged render
   (108 pages). BLOCKED: `check_site.py --release` (effective date unset).
 - Open (owner/counsel): announcement-check transfer route or opt-out, Cloudflare privacy contact and
