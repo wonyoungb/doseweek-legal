@@ -1,10 +1,12 @@
 """LATE2 owner backup contract; assertion REDs use only parent-available APIs."""
+import copy
 import hashlib
 import json
 import re
 import unittest
 from pathlib import Path
 
+import account_sync_candidate
 import render_account_sync
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -238,6 +240,36 @@ class LegalLate2BackupTest(unittest.TestCase):
                 self.assertIn(token, operations)
         with self.subTest(retracted='operations exclusion mechanism'):
             self.assertNotIn('exclude the database, keys and records together', operations)
+
+    def test_app_managed_drive_backup_blocks_publication_until_removed_or_disclosed(self):
+        # apps/google release/1.0.6 still ships the 1.0.5 app-managed Drive appDataFolder backup
+        # (CloudBackupService, DriveAppDataApi), but the staged 1.0.6 Android copy no longer
+        # describes it and no owner decision retires it (OQ-L2-1). Publication must stay blocked
+        # until the build drops it or the copy discloses it.
+        key = 'appManagedDriveBackupDecided'
+        pending = joined(self.candidate['unresolvedBeforePublication'])
+        operations = (ROOT / 'docs/LEGAL_OPERATIONS_1_0_6.md').read_text(encoding='utf-8')
+        for token in ('CloudBackupService', 'appDataFolder', 'OQ-L2-1', key,
+                      'removed from the 1.0.6 build or disclosed before publication'):
+            with self.subTest(source='unresolvedBeforePublication', token=token):
+                self.assertIn(token, pending)
+            with self.subTest(source='LEGAL_OPERATIONS_1_0_6.md', token=token):
+                self.assertIn(token, operations)
+        with self.subTest(stale='feature called retired without a decision'):
+            self.assertNotIn('retired app-managed Drive-folder disclosure', operations)
+        self.assertIn(key, account_sync_candidate.SERVER_READINESS_TOKENS)
+        self.assertIs(self.candidate['serverReadiness'].get(key), False)
+        self.assertEqual([e for e in account_sync_candidate.transfer_disclosure_errors(self.candidate)
+                          if e.startswith('serverReadiness')], [])
+        ready = copy.deepcopy(self.candidate)
+        ready.update(status='integrated-and-verified', unresolvedBeforePublication=[])
+        ready['serverReadiness'] = {name: True for name in self.candidate['serverReadiness']}
+        ready['serverReadiness'][key] = False
+        with self.assertRaisesRegex(AssertionError, key):
+            account_sync_candidate.require_release_ready(ready)
+        del ready['serverReadiness'][key]
+        with self.assertRaisesRegex(AssertionError, key):
+            account_sync_candidate.require_release_ready(ready)
 
 
 if __name__ == '__main__':
