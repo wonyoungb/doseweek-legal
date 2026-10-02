@@ -18,6 +18,8 @@ from site_assets import script_path, stylesheet_path
 from help_navigation import support_start
 import locale_pages
 import render_terms
+import privacy_legal
+import render_us_health
 
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
@@ -150,8 +152,9 @@ def privacy_paragraph(value: str) -> str:
 def validate(content: dict) -> None:
     assert set(content) == {
         "schemaVersion", "platform", "bundleVersion", "effectiveDate", "supportEmail",
-        "localeOrder", "locales",
+        "localeOrder", "locales", "legalReadiness", "representatives",
     }
+    privacy_legal.validate_readiness(content)
     assert content["schemaVersion"] == 1
     assert content["platform"] == "ios"
     assert content["bundleVersion"] in (PAGE_VERSION, "1.0.6")
@@ -171,8 +174,9 @@ def validate(content: dict) -> None:
         assert set(entry["common"]) == {"skipToContent", "contents", "supportLinkTitle"}, locale
         privacy = entry["privacy"]
         assert set(privacy) == {
-            "title", "intro", "effectiveDate", "sections", "medicalDisclaimer",
+            "title", "intro", "effectiveDate", "sections", "medicalDisclaimer", "legalSupplement",
         }, locale
+        privacy_legal.validate_supplement(privacy["legalSupplement"], locale)
         assert set(privacy["medicalDisclaimer"]) == {
             "title", "body", "notAMedicalDevice",
         }, locale
@@ -349,6 +353,7 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         f'{escaped(section["title"])}</a></li>'
         for section in privacy["sections"]
     )
+    toc += privacy_legal.toc(locale, privacy["legalSupplement"])
     toc += (
         f'<li><a href="#{escaped(locale)}-medical">'
         f'{escaped(privacy["medicalDisclaimer"]["title"])}</a></li>'
@@ -367,6 +372,7 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
         + "</div></section>"
         for section in privacy["sections"]
     )
+    sections += "\n" + privacy_legal.sections_html(locale, privacy["legalSupplement"])
     disclaimer = privacy["medicalDisclaimer"]
     date = (
         f'<p class="date"><time datetime="{escaped(effective_date)}">'
@@ -389,6 +395,7 @@ def panel(locale: str, entry: dict, bundle_version: str, effective_date: str) ->
           </div>
           <a class="page-link" href="../support/#{escaped(locale)}">{escaped(entry['common']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
           {render_terms.page_link(locale, '../', direction)}
+          {render_us_health.page_link(locale, '../', direction)}
         </article>"""
 
 

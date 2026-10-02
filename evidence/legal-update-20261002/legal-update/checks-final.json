@@ -1,0 +1,86 @@
+[
+  {
+    "id": "home",
+    "cmd": "python3 scripts/render_home.py --check",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-home.log"
+  },
+  {
+    "id": "ios",
+    "cmd": "python3 scripts/render_ios.py --check",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-ios.log"
+  },
+  {
+    "id": "android",
+    "cmd": "python3 scripts/render_android.py --check",
+    "log": ".lane-work/legal-update/final-android.log",
+    "exit": 0
+  },
+  {
+    "id": "import",
+    "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-import.log"
+  },
+  {
+    "id": "terms",
+    "cmd": "python3 scripts/render_terms.py --check",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-terms.log"
+  },
+  {
+    "id": "us-health",
+    "cmd": "python3 scripts/render_us_health.py --check",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-us-health.log"
+  },
+  {
+    "id": "sitemap",
+    "cmd": "python3 scripts/render_sitemap.py --check",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-sitemap.log"
+  },
+  {
+    "id": "site",
+    "cmd": "python3 scripts/check_site.py",
+    "log": ".lane-work/legal-update/final-site.log",
+    "exit": 0
+  },
+  {
+    "id": "tone",
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-tone.log"
+  },
+  {
+    "id": "account",
+    "cmd": "python3 scripts/account_sync_candidate.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-account.log"
+  },
+  {
+    "id": "staged",
+    "cmd": "python3 scripts/render_account_sync.py --check",
+    "log": ".lane-work/legal-update/final-staged.log",
+    "exit": 0
+  },
+  {
+    "id": "unit",
+    "cmd": "python3 .lane-work/legal-update/suite_runner.py",
+    "log": ".lane-work/legal-update/final-unit.log",
+    "exit": 0
+  },
+  {
+    "id": "release",
+    "cmd": "python3 scripts/check_site.py --release",
+    "exit": 1,
+    "log": ".lane-work/legal-update/final-release.log"
+  },
+  {
+    "id": "diff",
+    "cmd": "git diff --check",
+    "exit": 0,
+    "log": ".lane-work/legal-update/final-diff.log"
+  }
+]

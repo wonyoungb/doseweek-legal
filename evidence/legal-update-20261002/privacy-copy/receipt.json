@@ -1,0 +1,70 @@
+{
+  "scope": "Privacy supplements, operator contact, medical mg disclaimer, structured accessible transfer table and both source/renderers; all17locales",
+  "head": "147c533b3678633cf604cbbf1dff712bb0069145",
+  "frozen": true,
+  "filesTouched": [
+    "docs/ios-content.json",
+    "docs/android-content.candidate.json",
+    "scripts/privacy_legal.py",
+    "scripts/render_ios.py",
+    "scripts/render_android.py",
+    "scripts/test_privacy_legal_update.py"
+  ],
+  "inputHashes": {
+    "docs/ios-content.json": "7229532114ea5d3ce46c1fd485d57477afe6234cc0476eb12ba76f3e0e013f1e",
+    "docs/android-content.candidate.json": "32a6e33095dbc105103ce52d02a7a5e9911ac55172f32da4d07ed4652db00ba4",
+    "scripts/privacy_legal.py": "571355a1f90e345e1b64a932fc5c2c3c27937690b02d1fca6a15033b59eafd01",
+    "scripts/render_ios.py": "7ed461e11d9942680f4b745f66d8694726cb49138b2b8ac47b0f728e46f46497",
+    "scripts/render_android.py": "a8a953b124555ad5876737d12cff189a73bd8943bd8184768635844d2b3e01bc",
+    "scripts/test_privacy_legal_update.py": "f193214d77cf8ec82a842e15bc3efdfa40cbc779ac15a067443a02abc0b2679d"
+  },
+  "scratchHashes": {
+    ".privacy-apply.py": "e9b5b954e832bb6a888cecdb048f5902c0568488d4a0245c02ed8370eb6e7a47",
+    ".privacy-canonical.json": "d04d7f965a0e1c37cd5244fe453a12abb52d15acae71a740129142aa42e601fe",
+    ".privacy-green-first.log": "fbc1d9337260c7ff2c5a1f2c7463b91ad30e40e7d6aff65c9b3fceb04404f9fa",
+    ".privacy-ko.json": "a147fd292df7b345b94bc469377bedb4ef595cc13ab767d18b3a13e09fb8fe26",
+    ".privacy-red-assertions.log": "6fb8d13d02875af9b28254f60701b13913949a0535fa7687e38ca4596165f489",
+    ".privacy-red-prose.log": "caaecf68eca915027c66e88059a64ee8ff28b9b0828c5557e461cbf4d439af11",
+    ".privacy-red.log": "f0771cb62c14c9162a29c4a034a2f30c22f3375700a0f4497d8dde318bcfe259",
+    ".privacy-translations-asia.json": "5ab92b97db3bbf7f542f81bd6e32654b740f3be5f086f3361f2466756a4d3707",
+    ".privacy-translations-europe1.json": "14f72f4cc9ca54e882097bb88f74a77acb6b50f3c301a7c7465f6c3a26f6f183",
+    ".privacy-translations-europe2.json": "02a7e5bcf1f60a93b6b0e656541662e8a91881f08a1f5023d22fe2760e92f30a",
+    ".privacy-translations-europe3.json": "796ec851a3f288ffd6bcaf1364d69136a64e7805637cbbfc9dddb10b0dd68796",
+    ".privacy-translations-other.json": "9229f0de4c992df6069efa60a24d2eb9b358ad1bfcea27e635f83b91118ec51c"
+  },
+  "checks": [
+    {
+      "cmd": "python3 scripts/test_privacy_legal_update.py (baseline; corrected renderer call names before RED commit)",
+      "result": "12 methods /376 assertion subtest failures /0 errors; parent RED proof handled by root",
+      "log": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/.lane-work/privacy-copy/privacy-red-assertions.log"
+    },
+    {
+      "cmd": "python3 scripts/test_privacy_legal_update.py (first GREEN after source apply)",
+      "result": "FAIL:12 methods /30 assertion failures /34 missing-US-source errors; OS acronym/French SCC actual wording corrected; retained waiting source then root all-checks",
+      "exit": "not captured separately by multi-command shell",
+      "log": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/.lane-work/privacy-copy/privacy-green-first.log"
+    },
+    {
+      "cmd": "source-specific render_ios.validate + render_android.validate_catalog",
+      "result": "PASS after preserving Android global PDF prohibition; removed PDF example only, portability rights remain",
+      "exit": 0
+    }
+  ],
+  "ownerQuestions": [
+    "Confirm Cloudflare actual edge/ onward countries, contracting recipient legal entity, privacy contact, exact collected log fields and access/security-log retention; proxy location cannot be inferred from Seoul origin.",
+    "Confirm AWS contracting entity/contact, foreign support/access and onward countries, processor contracts and actual S3+weekly OS snapshot deletion proof within7days including versions, replicas and restoration suppression.",
+    "Confirm Korean advertising/UMP overseas-transfer legal basis and pre-consent/refusal behavior, consent-service transfer route, Google AdMob recipient-specific onward countries and concrete ad/consent retention periods; current no-refusal gap remains blocked.",
+    "Confirm Apple/Google sign-in recipient entities, contacts, countries, independent-controller basis, provider token/account retention and provider-disconnection limits.",
+    "Confirm provider/processor agreements and recipient-specific EU/UK/Japan/Brazil onward safeguards; neither Korea adequacy nor EU SCC universally settles all onward transfers.",
+    "Complete EU and separate UK representative applicability assessment, appointment and public contacts; current sole permitted placeholders explicitly marked pending/unverified.",
+    "Confirm purchase digest and legally required transaction-record item/basis/retention before collection; unresolved values remain blocked.",
+    "Obtain legal and native-speaker review; agent-drafted multilingual text is not verified worldwide compliance; privacy copy is source-only and no operational/server/native deletion proof."
+  ],
+  "notDone": [
+    "Publication",
+    "Native or live provider tests",
+    "Operational breach/deletion/backup verification",
+    "Legal/native-speaker review"
+  ],
+  "nextAction": "Root waits USsourcefreeze then runs every check script and resolves any failures; do not publish."
+}

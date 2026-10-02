@@ -222,12 +222,18 @@ class GeneratedContentTests(unittest.TestCase):
             self.assertEqual(fragment.count(f"<br>{email}</p>"), 1, locale)
 
     def test_policy_urls_render_with_wrap_points_and_exact_text(self):
-        for page in (self.ios_privacy, self.android_privacy):
+        for page, source in ((self.ios_privacy, self.ios), (self.android_privacy, self.android)):
             links = re.findall(r'<a href="(https://[^"]+)">(.*?)</a>', page)
             policy_links = [(href, text) for href, text in links if href in POLICY_URLS]
             # four analytics processor sources, and three ad SDK transfer sources (Google's privacy
-            # policy, its data-centre list and its partner-sites page; review finding 14)
-            self.assertEqual(len(policy_links), (4 + 3) * 17)
+            # policy, its data-centre list and its partner-sites page; review finding 14).
+            # Keep their exact inventory; the separate 1.0.6 transfer table adds legitimate links.
+            legacy = ''.join(element(page, 'section', f'{locale}-{section["id"]}')
+                             for locale, entry in source['locales'].items()
+                             for section in entry['privacy']['sections'])
+            legacy_links = re.findall(r'<a href="(https://[^"]+)">(.*?)</a>', legacy)
+            self.assertEqual(sum(href in POLICY_URLS for href, _ in legacy_links), (4 + 3) * 17)
+            self.assertGreater(len(policy_links), (4 + 3) * 17)
             for href, text in policy_links:
                 self.assertTrue(text.startswith('<bdi dir="ltr">'), href)
                 self.assertIn("<wbr>", text)

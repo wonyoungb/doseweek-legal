@@ -53,8 +53,9 @@ MEDICAL_SECTION_ID = "medical"
 # iOS app. check_site.py allows it only on the Terms pages.
 EULA_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
 LINKED_URLS = (EULA_URL,)
-# Prices and trial terms are not final (owner instruction 2026-09-29): the Terms never state them.
-PRICE_PATTERN = re.compile(r"KRW|₩|[$€£]\s?\d|\b\d{1,3}(?:[,.]\d{3})+\b")
+# Final reference prices (owner round3, 2026-10-02). The Store supplies the actual
+# localized price, eligible introductory offer and billing period before purchase.
+REFERENCE_PRICES = ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980")
 
 
 def escaped(value: object) -> str:
@@ -160,7 +161,20 @@ def validate(content: dict, ios: dict) -> None:
         assert "30" not in pass_text, f"{locale}: stale 30-minute pass"
         assert "24" in pass_text and "48" in pass_text, f"{locale}: rewarded pass limits"
         assert SUPPORT_EMAIL in by_id["contact"]["paragraphs"][0], f"{locale}: contact address"
-        assert not PRICE_PATTERN.search(text), f"{locale}: the Terms must not state a price"
+        offer = by_id["free-plus"]["paragraphs"][2]
+        assert all(price in offer for price in REFERENCE_PRICES), (
+            f"{locale}: final reference prices and their full billing periods must be disclosed"
+        )
+        assert "2,900" not in offer and "App Store" in offer and "Google Play" in offer, (
+            f"{locale}: offer must use the final Korean price and identify Store eligibility"
+        )
+        assert not re.search(r"(?<![\d,])30(?![\d,])", offer), (
+            f"{locale}: a calendar-month trial cannot be described as 30 days"
+        )
+        billing_rights = by_id["billing"]["paragraphs"][1]
+        assert all(period in billing_rights for period in ("7", "3", "30", "50–20", "15–45", "7–30")), (
+            f"{locale}: consumer-rights and applicable notice windows must survive rendering"
+        )
 
 
 def paragraphs(section: dict) -> list[str]:

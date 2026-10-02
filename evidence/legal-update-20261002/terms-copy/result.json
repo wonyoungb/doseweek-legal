@@ -1,0 +1,40 @@
+{
+  "scope": "Terms copy/renderer integration only; root owns final gates/commits/handoff/report",
+  "filesTouched": [
+    "docs/terms-content.json",
+    "scripts/render_terms.py",
+    "scripts/render_account_sync.py (terms billing block only)",
+    "scripts/test_terms_legal_update.py"
+  ],
+  "inputFingerprints": {
+    "docs/terms-content.json": "83f39772f9512ad341bd0ff8f6acf8fcaac070aa1a12a68537ec566f799929ed",
+    "scripts/render_terms.py": "aee6c2fcb75a3aaf29f98f02549ba45d8fa44e0565eeba5d1bcf7bcc81ad356c",
+    "scripts/test_terms_legal_update.py": "69e88e1283d498d68e8f6062767b654658362d6fbf96ec096f3873872e07eba8"
+  },
+  "iosMedicalSubsetSha256": "5913f68b6145334a1f03a8edd71e7aef12f25e85b13826c359a236a9dec2809f",
+  "checks": [
+    {
+      "cmd": "python3 scripts/test_terms_legal_update.py (baseline RED)",
+      "result": "8methods /139 assertion failures /0errors",
+      "evidence": ".lane-work/terms-copy/red.log"
+    },
+    {
+      "cmd": "python3 scripts/test_terms_legal_update.py (latest current input)",
+      "result": "FAILED:7passed methods plus1integration initializationerror; US JSON dependency notcreated yet",
+      "evidence": ".lane-work/terms-copy/green-final.log"
+    },
+    {
+      "cmd": "render_terms.validate + rendered_pages; check every source paragraph in matching locale HTML",
+      "result": "PASS18pages/all17locales; no files generated, no visual claim",
+      "evidence": ".lane-work/terms-copy/terms-render-validation.log"
+    }
+  ],
+  "ownerQuestions": [
+    "Confirm whether annual Plus is a Korean continuous transaction; verify required50–20day notices and applicable earlytermination/refund rights.",
+    "Confirm actual Store/owner notification coverage for California15–45day initialannualrenewal,7–30day feechange notices and annualreminders; currentcopy doesnotclaim runtimeverification."
+  ],
+  "nextAction": "Root finishes USpolicy source dependency then runs frozen final Terms integration/fullsuite and regeneratespages.",
+  "nativeNeeded": [],
+  "publication": "Never published; no network/console/native actions",
+  "translationReview": "Agent-drafted/local consistency review; not counsel/native-speaker verification"
+}

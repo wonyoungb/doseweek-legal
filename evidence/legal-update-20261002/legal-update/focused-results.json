@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tone-family",
+    "cmd": "python3 -m unittest discover -s scripts -p test_korean_tone.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/tone-family.log"
+  },
+  {
+    "id": "paragraph-family",
+    "cmd": "python3 -m unittest discover -s scripts -p test_render_paragraphs.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/paragraph-family.log"
+  },
+  {
+    "id": "privacy-family",
+    "cmd": "python3 -m unittest discover -s scripts -p test_privacy_legal_update.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/privacy-family.log"
+  },
+  {
+    "id": "us-family",
+    "cmd": "python3 -m unittest discover -s scripts -p test_us_health_policy.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/us-family.log"
+  },
+  {
+    "id": "terms-family",
+    "cmd": "python3 -m unittest discover -s scripts -p test_terms_legal_update.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/terms-family.log"
+  },
+  {
+    "id": "tone-corrected",
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 1,
+    "log": ".lane-work/legal-update/tone-corrected.log"
+  }
+]

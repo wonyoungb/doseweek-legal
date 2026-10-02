@@ -1,0 +1,7 @@
+{
+  "matchingRelevantInputs": 46,
+  "changed": [],
+  "gateScope": "all14 commands,173unitmethods,126inmemorystagedpages",
+  "native": "unchanged/not run",
+  "sourceToCheckComparison": "source, tests, renderer, CSS/assets, templates, tone/locale configuration and Python runtime frozen for final gate"
+}

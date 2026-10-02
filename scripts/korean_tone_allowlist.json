@@ -22,6 +22,48 @@
       "rule": "glossary",
       "match": "증상 기록만",
       "reason": "Transcription instruction pasted into an external AI: it names the source app's symptom records, which map to record_type symptom (en: symptom records); not the in-app 컨디션 feature name (reviewed 2026-09-25)."
+    },
+    {
+      "file": "docs/account-sync-content.candidate.json",
+      "key": "locales.ko.healthConsent",
+      "rule": "glossary",
+      "match": "식사·단백질, 증상과 메모",
+      "reason": "Sensitive-health consent names the actual symptom data category (not a feature label), preserving the legal scope; reviewed against the supplied research on 2026-10-02."
+    },
+    {
+      "file": "docs/ios-content.json",
+      "key": "locales.ko.privacy.medicalDisclaimer.body",
+      "rule": "glossary",
+      "match": "치료 반응·약효·부작용",
+      "reason": "The medical disclaimer excludes prediction of clinical adverse effects. Replacing 부작용 with the 컨디션 feature name changes that medical boundary; reviewed 2026-10-02."
+    },
+    {
+      "file": "docs/android-content.candidate.json",
+      "key": "locales.ko.privacy.medicalDisclaimer.body",
+      "rule": "glossary",
+      "match": "치료 반응·약효·부작용",
+      "reason": "The medical disclaimer excludes prediction of clinical adverse effects. Replacing 부작용 with the 컨디션 feature name changes that medical boundary; reviewed 2026-10-02."
+    },
+    {
+      "file": "docs/ios-content.json",
+      "key": "locales.ko.privacy.legalSupplement.sections[0].paragraphs[0]",
+      "rule": "glossary",
+      "match": "식사·단백질, 증상과 메모",
+      "reason": "Privacy disclosure names the actual symptom data category; it is not the in-app feature label. Preserve legal disclosure scope; reviewed 2026-10-02."
+    },
+    {
+      "file": "docs/android-content.candidate.json",
+      "key": "locales.ko.privacy.legalSupplement.sections[0].paragraphs[0]",
+      "rule": "glossary",
+      "match": "식사·단백질, 증상과 메모",
+      "reason": "Privacy disclosure names the actual symptom data category; it is not the in-app feature label. Preserve legal disclosure scope; reviewed 2026-10-02."
+    },
+    {
+      "file": "docs/terms-content.json",
+      "key": "locales.ko.sections[4].paragraphs[0]",
+      "rule": "glossary",
+      "match": "치료 반응·약효·부작용",
+      "reason": "Terms reuse the medical disclaimer verbatim. This excludes prediction of clinical adverse effects rather than naming the 컨디션 feature; same narrow medical exception reviewed 2026-10-02."
     }
   ]
 }

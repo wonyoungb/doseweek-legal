@@ -19,9 +19,10 @@ import locale_pages
 import render_ios
 import render_android
 import render_terms
+import render_us_health
 
 ROOT = Path(__file__).resolve().parents[1]
-ROUTES = ('privacy/', 'support/', 'android/privacy/', 'android/support/', 'terms/', 'account/delete/')
+ROUTES = ('privacy/', 'support/', 'android/privacy/', 'android/support/', 'terms/', 'account/delete/', 'us-health/')
 CJK = ('ja', 'zh-Hans', 'zh-Hant')
 
 def sections(entry):
@@ -32,6 +33,7 @@ def integrated_sources(candidate=None):
     ios = json.loads((ROOT / 'docs/ios-content.json').read_text())
     android = json.loads((ROOT / 'docs/android-content.candidate.json').read_text())
     terms = json.loads((ROOT / 'docs/terms-content.json').read_text())
+    us_health = json.loads((ROOT / 'docs/us-health-content.json').read_text())
     # Validate original contracts before altering the bounded fields below.
     render_ios.validate(ios)
     render_android.validate_catalog(android)
@@ -39,14 +41,16 @@ def integrated_sources(candidate=None):
     originals = copy.deepcopy((ios, android, terms))
     ios['bundleVersion'] = android['versionName'] = c['plannedVersion']
     ios['effectiveDate'] = android['effectiveDate'] = terms['effectiveDate'] = None
+    us_health['effectiveDate'] = None
     for loc, text in c['locales'].items():
+        us_health['locales'][loc]['intro'] = text['releaseStatus'] + '\n\n' + us_health['locales'][loc]['intro']
         i, a, t = ios['locales'][loc], android['locales'][loc], terms['locales'][loc]
         ip, ap, tp = sections(i['privacy']), sections(a['privacy']), sections(t)
         join = lambda *keys: '\n\n'.join(text[k] for k in keys)
         i['privacy']['intro'] = text['releaseStatus'] + '\n\n' + i['privacy']['intro']
         i['privacy']['effectiveDate'] = text['releaseStatus']
         i['support']['labels']['lead'] = join('releaseStatus', 'account')
-        ip['storage']['paragraphs'][0] = join('releaseStatus', 'account', 'sync', 'analytics', 'notice')
+        ip['storage']['paragraphs'][0] = join('releaseStatus', 'account', 'sync', 'healthConsent', 'analytics', 'notice')
         # Imported Apple Health / Health Connect observations are part of the sync graph (server
         # PROTOCOL.md "Snapshot contents"): both health paragraphs say so instead of "not sent".
         ip['health']['paragraphs'][0] += ('' if loc in CJK else ' ') + text['healthSync']
@@ -65,7 +69,7 @@ def integrated_sources(candidate=None):
         qualify(ip['meals']['paragraphs'], 0, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         qualify(ip['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         qualify(ap['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
-        ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + text['sync']
+        ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + join('sync', 'serverBackup')
         ip['deletion']['paragraphs'][0] += '\n\n' + join('retention', 'webDeletion')
         purchase = ip['purchases']['paragraphs'][0].split('\n\n')
         assert len(purchase) == 7, (loc, 'ios purchase paragraph boundary changed')
@@ -90,7 +94,7 @@ def integrated_sources(candidate=None):
         a['home']['featureBadges'][1] = text['account']
         ap['no-collection']['paragraphs'][0] = ap['no-collection']['paragraphs'][0].replace('1.0.5', '1.0.6')
         a['support']['intro'] = join('releaseStatus', 'account', 'analytics')
-        ap['scope']['paragraphs'][1] = join('account', 'sync', 'notice')
+        ap['scope']['paragraphs'][1] = join('account', 'sync', 'healthConsent', 'notice')
         a['home']['versionScope'] = a['home']['versionScope'].replace('1.0.5', '1.0.6')
         for item in a['support']['faq']:
             if item['id'] in ('ai-health', 'notifications'):
@@ -103,7 +107,7 @@ def integrated_sources(candidate=None):
         ap['no-collection']['items'][1] = text['account']
         for index in (0, 2):
             ap['backup']['paragraphs'][index] = text['manualBackupScope'] + '\n\n' + ap['backup']['paragraphs'][index]
-        ap['backup']['paragraphs'][-1] += '\n\n' + text['sync']
+        ap['backup']['paragraphs'][-1] += '\n\n' + join('sync', 'serverBackup')
         ap['purchases']['paragraphs'][1] = join('account', 'sync')
         ap['purchases']['paragraphs'][2] = join('sync', 'processors')
         if c.get('serverReadiness', {}).get('verifierHostDecided') is not True:
@@ -126,7 +130,9 @@ def integrated_sources(candidate=None):
         t['intro'] = text['releaseStatus'] + '\n\n' + t['intro']
         tp['free-plus']['paragraphs'][1] = text['legacyRights']
         tp['free-plus']['paragraphs'][0] += '\n\n' + text['account']
-        tp['billing']['paragraphs'][1] = join('account', 'retention')
+        # Billing rights remain canonical: account/retention describes a different
+        # subject and must never replace refund, conversion or price-change clauses.
+        tp['billing']['paragraphs'][1] += '\n\n' + join('account', 'retention')
         tp['records']['paragraphs'][0] = join('sync', 'retention', 'webDeletion', 'notice', 'analytics')
     render_ios.validate(ios)
     render_android.validate_catalog(android)
@@ -138,13 +144,14 @@ def integrated_sources(candidate=None):
         assert sections(ios['locales'][loc]['privacy'])['tracking'] == sections(originals[0]['locales'][loc]['privacy'])['tracking']
         assert sections(android['locales'][loc]['privacy'])['ads'] == sections(originals[1]['locales'][loc]['privacy'])['ads']
         assert sections(terms['locales'][loc])['ad-free-pass'] == sections(originals[2]['locales'][loc])['ad-free-pass']
-    return {'ios-content.json': ios, 'android-content.candidate.json': android, 'terms-content.json': terms}
+    return {'ios-content.json': ios, 'android-content.candidate.json': android,
+            'terms-content.json': terms, 'us-health-content.json': us_health}
 
 def deletion_panel(c, loc):
     text = c['locales'][loc]
     title = html.escape(text['deletionTitle'])
     mailto = 'mailto:' + c['deletionRequest']['supportEmail'] + '?' + urlencode({'subject': 'DoseWeek account deletion request'})
-    paragraphs = ''.join('<p>' + html.escape(text[k]) + '</p>' for k in ('releaseStatus', 'webDeletion', 'retention', 'account', 'analytics'))
+    paragraphs = ''.join('<p>' + html.escape(text[k]) + '</p>' for k in ('releaseStatus', 'webDeletion', 'retention', 'serverBackup', 'account', 'analytics'))
     return f'<article id="{loc}" class="language-panel" lang="{loc}" dir="{locale_pages.direction(loc)}" data-language="{loc}" data-document-title="{title} — DoseWeek" aria-labelledby="{loc}-content"><header class="hero"><h1 id="{loc}-content">{title}</h1></header><div class="policy-card">{paragraphs}<a class="button primary" href="{html.escape(mailto, quote=True)}">{html.escape(text["requestLabel"])}</a><p><a href="{html.escape(mailto, quote=True)}">wonyoung@wonyoungchoi.dev</a></p></div></article>'
 
 def rendered_pages(sources, candidate=None):
@@ -153,6 +160,7 @@ def rendered_pages(sources, candidate=None):
     pages = {render_ios.PAGE_PATH: render_ios.rendered(i), render_ios.SUPPORT_PATH: render_ios.rendered_support(i), **render_ios.rendered_locale_pages(i)}
     pages.update({p: s for p,s in {**render_android.rendered_pages(a), **render_android.rendered_locale_pages(a)}.items() if p.relative_to(ROOT).as_posix().endswith(('privacy/index.html','support/index.html'))})
     pages.update(render_terms.rendered_pages(t, i))
+    pages.update(render_us_health.rendered_pages(sources['us-health-content.json'], i))
     for path, markup in list(pages.items()):
         relative = path.relative_to(ROOT)
         locale = relative.parts[0] if relative.parts[0] in c['localeOrder'] else None
@@ -182,17 +190,25 @@ def rendered_pages(sources, candidate=None):
             pages[locale_pages.page_path('account/delete/',loc)] = locale_pages.locale_page(route='account/delete/', locale=loc, names=names, description=c['locales'][loc]['deletionTitle'], panel=deletion_panel(c,loc), icon='assets/app-icon.png', social_image=render_ios.SOCIAL_IMAGE, image_alt='DoseWeek app icon', brand_href='../../', brand_aria='DoseWeek', brand_label='DoseWeek', skip_label=i['locales'][loc]['common']['skipToContent'], skip_target=f'{loc}-content', footer='<footer>DoseWeek · 1.0.6 · unpublished</footer>', body_attributes=' data-page="account-delete"').replace('<head>', '<head>\n<meta name="robots" content="noindex,nofollow">',1)
     finally:
         locale_pages.ROUTES = old_routes
-    assert len(pages) == 108
+    assert len(pages) == len(ROUTES) * (len(c['localeOrder']) + 1)
     return pages
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', type=Path, required=True, help='Local review directory outside this public checkout')
+    parser.add_argument('--output', type=Path, help='Local review directory outside this public checkout')
+    parser.add_argument('--check', action='store_true', help='Validate all staged sources/pages in memory without writing or publishing')
     args = parser.parse_args()
-    output = args.output.resolve()
-    assert output != ROOT and not output.is_relative_to(ROOT), 'Never render staged pages into the public checkout'
     sources = integrated_sources()
     pages = rendered_pages(sources)
+    if args.check:
+        assert all(markup.strip().startswith('<!doctype html>') and
+                   'name="robots" content="noindex,nofollow"' in markup
+                   for markup in pages.values()), 'Incomplete staged HTML or missing unpublished gate'
+        print(f'OK: {len(pages)} unpublished staged pages, {len(ROUTES)} routes, 17 locales; no files written')
+        return
+    assert args.output is not None, 'Use --check or --output'
+    output = args.output.resolve()
+    assert output != ROOT and not output.is_relative_to(ROOT), 'Never render staged pages into the public checkout'
     output.mkdir(parents=True,exist_ok=True)
     # Supporting static pages/assets use the preserved baseline, not a new full-site render.
     for p in sorted(ROOT.rglob('index.html')):
@@ -205,6 +221,6 @@ def main():
         dest=output/path.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(markup)
     receipt={'status':'unpublished-local-candidate','version':'1.0.6','effectiveDate':None,'routes':list(ROUTES),'locales':list(account_sync_candidate.LOCALES),'affectedPages':{p.relative_to(ROOT).as_posix():hashlib.sha256(s.encode()).hexdigest() for p,s in sorted(pages.items())},'sources':{n:hashlib.sha256((output/'sources'/n).read_bytes()).hexdigest() for n in sources},'runtime':'no-network-no-device'}
     (output/'render-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
-    print(f'OK: staged {len(pages)} pages, 6 routes x 18 (hash + 17 locales), with null effective date; {output}')
+    print(f'OK: staged {len(pages)} pages, {len(ROUTES)} routes x 18 (hash + 17 locales), with null effective date; {output}')
 
 if __name__=='__main__':main()

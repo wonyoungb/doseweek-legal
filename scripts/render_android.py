@@ -12,6 +12,8 @@ from pathlib import Path
 from site_assets import script_path, stylesheet_path
 import locale_pages
 import render_terms
+import privacy_legal
+import render_us_health
 from help_navigation import COPY as HELP_COPY, HOME as HELP_HOME, task_cards, support_start
 
 from legal_release import (
@@ -287,7 +289,9 @@ def privacy_panel(catalog: dict[str, object], locale: str) -> str:
         f'<li><a href="#{escaped(locale)}-{escaped(section["id"])}">{escaped(section["title"])}</a></li>'
         for section in content["sections"]
     )
+    toc += privacy_legal.toc(locale, content["legalSupplement"])
     sections = "\n".join(render_policy_section(locale, section) for section in content["sections"])
+    sections += "\n" + privacy_legal.sections_html(locale, content["legalSupplement"])
     medical = content["medicalDisclaimer"]
     arrow = "←" if entry["direction"] == "rtl" else "→"
     date = (
@@ -312,6 +316,7 @@ def privacy_panel(catalog: dict[str, object], locale: str) -> str:
           </div>
           <a class="page-link" href="../support/#{escaped(locale)}">{escaped(entry['home']['supportLinkTitle'])} <span aria-hidden="true">{arrow}</span></a>
           {render_terms.page_link(locale, '../../', entry['direction'])}
+          {render_us_health.page_link(locale, '../../', entry['direction'])}
         </article>"""
     )
 
@@ -427,8 +432,9 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert isinstance(catalog, dict), "catalog must be an object"
     assert set(catalog) == {
         "schemaVersion", "platform", "applicationId", "versionName", "effectiveDate",
-        "supportEmail", "localeOrder", "locales",
+        "supportEmail", "localeOrder", "locales", "legalReadiness", "representatives",
     }
+    privacy_legal.validate_readiness(catalog)
     assert catalog["schemaVersion"] == 1
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
@@ -519,8 +525,9 @@ def validate_catalog(catalog: dict[str, object]) -> None:
             expected_length=4,
         )
         assert set(entry["privacy"]) == {
-            "title", "scope", "sections", "medicalDisclaimer",
+            "title", "scope", "sections", "medicalDisclaimer", "legalSupplement",
         }, locale
+        privacy_legal.validate_supplement(entry["privacy"]["legalSupplement"], locale)
         assert set(entry["support"]) == {
             "title", "intro", "privacyWarning", "guide", "faq", "contact", "emergency",
         }, locale

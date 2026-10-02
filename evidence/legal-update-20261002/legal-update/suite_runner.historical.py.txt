@@ -1,0 +1,16 @@
+import unittest,json,sys
+from pathlib import Path
+root=Path.cwd();sys.path.insert(0,str(root/'scripts'))
+loader=unittest.TestLoader();suite=loader.discover(str(root/'scripts'),pattern='test_*.py')
+def flatten(s):
+ for t in s:
+  if isinstance(t,unittest.TestSuite):yield from flatten(t)
+  else:yield t.id()
+requested=list(flatten(suite))
+class IdentityResult(unittest.TextTestResult):
+ def __init__(self,*args,**kwargs):super().__init__(*args,**kwargs);self.executed=[]
+ def startTest(self,test):self.executed.append(test.id());super().startTest(test)
+result=unittest.TextTestRunner(verbosity=2,resultclass=IdentityResult).run(suite)
+receipt={'requested':requested,'discovered':requested,'executed':result.executed,'omitted':sorted(set(requested)-set(result.executed)),'duplicateRequested':len(requested)-len(set(requested)),'methods':result.testsRun,'failureAssertions':[(t.id(),e.splitlines()[-1]) for t,e in result.failures],'errors':[(t.id(),e.splitlines()[-1]) for t,e in result.errors],'skipped':[(t.id(),why) for t,why in result.skipped],'success':result.wasSuccessful()}
+(root/'.lane-work/legal-update/green-suite.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
+sys.exit(0 if result.wasSuccessful() else 1)

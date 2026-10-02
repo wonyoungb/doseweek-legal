@@ -26,7 +26,7 @@ LOCALES = (
 )
 ROUTES = (
     "", "support/", "privacy/", "android/", "android/support/", "android/privacy/", "import/",
-    "terms/",
+    "terms/", "us-health/",
 )
 PANEL_CLASS = 'class="language-panel"'
 

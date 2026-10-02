@@ -1179,3 +1179,37 @@ code {
 
 /* CJK and connected scripts need natural glyph spacing. */
 .language-panel:is([lang="ko"], [lang="ja"], [lang="zh-Hans"], [lang="zh-Hant"], [lang="ar"], [lang="hi"]) :is(h1, h2, h3, .eyebrow, .section-kicker) { letter-spacing: normal; }
+/* The transfer inventory keeps every legal column at narrow widths. */
+.processor-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.processor-table-scroll:focus-visible {
+  outline: 3px solid var(--accent, #316ad8);
+  outline-offset: 3px;
+}
+.processor-table {
+  width: 100%;
+  min-width: 960px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.processor-table caption {
+  padding: 1rem;
+  text-align: start;
+  font-weight: 700;
+}
+.processor-table th,
+.processor-table td {
+  padding: 0.8rem;
+  text-align: start;
+  vertical-align: top;
+  border-block-start: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.processor-table thead th {
+  background: var(--surface, #f3f5f8);
+}

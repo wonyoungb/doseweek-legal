@@ -5,11 +5,21 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
-## 2026-10-02 — legal-update-legal preparation (unpublished)
+## 2026-10-02 — legal-update-legal (unpublished)
 
-- Resumed from the approved LEGAL-STORE head with final owner prices/trial/operator/backup
-  decisions and the supplied legal research. Added assertion-first copy acceptance checks;
-  RED proof and implementation remain the next stage. No public or native action.
+- Added 17-locale privacy/rights/breach and processor-table drafts, explicit sensitive-health
+  consent, Wonyoung Labs operator contacts, daily encrypted S3 Seoul  + weekly OS backups with
+  deletion within 7 days, immediate requested erasure, Store-confirmed end + 30 days / at most 7 days outage retention.
+- Final owner prices and Store-eligible 1-calendar-month trial, automatic renewal/cancellation,
+  Korean statutory refund/consent and regional notices are preserved in Terms; integration
+  appends account retention without overwriting billing rights. Separate US policy linked.
+- Assertion-only REDs `a7febe9`, `2e51e28`, `147c533` proved on their parents. Initial tone,
+  assembly and generated-content failures retained and corrected through related families.
+  Final 173 methods PASS,0 errors/skips/omissions; all static light gates PASS,162 site / 126 staged
+  pages verified. Inputs and exact identities retained under `evidence/legal-update-20261002/`.
+- Release remains BLOCKED on unset date and unresolved provider/native/operational facts;
+  explicit EU/UK representative contacts pending. Local file browser review policy-blocked;
+  no visual/counsel/native-speaker/native/provider certification, publication or push.
 
 ## Unreleased candidate: free version with ads, Plus and Terms of Use (not published)
 

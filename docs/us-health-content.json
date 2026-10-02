@@ -1,0 +1,1182 @@
+{
+  "schemaVersion": 1,
+  "effectiveDate": null,
+  "supportEmail": "wonyoung@wonyoungchoi.dev",
+  "localeOrder": [
+    "ko",
+    "en",
+    "ja",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "nl",
+    "pt-PT",
+    "pl",
+    "sv",
+    "hi",
+    "pt-BR",
+    "ar",
+    "zh-Hans",
+    "zh-Hant",
+    "tr"
+  ],
+  "locales": {
+    "ko": {
+      "title": "미국 소비자 건강정보 개인정보 처리방침",
+      "intro": "Washington, Nevada, Connecticut을 포함한 미국 이용자의 건강정보를 따로 안내해요. 아직 게시하지 않은 1.0.6 검토 초안이며, 시행일은 정하지 않았어요.",
+      "effectiveDateLabel": "시행일",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. 건강정보의 종류",
+          "paragraphs": [
+            "건강정보에는 약 이름과 투약량·시각, 메모, 체중 같은 신체 측정값, 식사·영양 기록, 투약량 추정치 같은 참고용 건강 추론이 포함돼요. 동기화한 암호화 기록과 연결된 계정·동기화·접속·건강 서비스 이용 정보도 건강정보일 수 있어요. 서버는 종단간 암호화 기록을 읽을 수 없어요."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. 목적과 정보 출처",
+          "paragraphs": [
+            "직접 입력한 기록과 허용한 Apple 건강(HealthKit) 또는 Health Connect 측정값이 출처예요. Apple·Google 로그인과 스토어 알림에서 계정·구매 정보를 받아요. 정보 판매업자에게서 건강정보를 받지 않아요.",
+            "기록을 보여 주고 관리하며, 참고용으로 계산하고, 요청한 동기화·백업을 제공하고, 서비스를 안전하게 지키는 데 써요. 진단·치료 권고나 건강정보를 바탕으로 한 광고·통계에 쓰지 않아요."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. 제공받는 곳과 제공 범위",
+          "paragraphs": [
+            "처리수탁자인 Cloudflare와 AWS는 위 건강 기록의 암호화된 사본과 필요한 계정·접속 정보를 전달·호스팅·보호·백업을 위해 처리해요. 안내한 지시와 계약상 보호 조치를 따라야 하며, 건강정보의 독자적인 이용은 허용하지 않아요.",
+            "Apple과 Google은 각자의 역할에 따라 로그인·결제를 처리하며, 이 경로로 기록한 건강 내용을 보내지 않아요. Google AdMob·Firebase에는 일반 개인정보 처리방침에 안내한 SDK 기술 정보만 보내고 기록한 건강 내용은 보내지 않아요. 건강 서비스 이용을 드러내는 기술 정보에도 건강정보 보호 기준을 적용해요. 계열사에 건강정보를 제공하지 않아요. 내보내기·캘린더 연동·개인 클라우드 백업을 선택하면, 선택한 수령자와 파일·캘린더·클라우드 제공자가 선택한 내용이나 암호화 파일을 받고 다른 사본을 만들 수 있어요. 기술 정보가 건강 서비스 이용을 드러낸다면, AdMob·Firebase에 제공할 때 필요한 건강정보 제공 동의를 별도로 받아야 해요. 광고 동의만으로 대신할 수 없어요.",
+            "건강정보를 팔지 않아요. 기록한 건강 내용을 광고에 보내거나 건강정보를 바탕으로 광고 대상을 고르지 않아요. 의료기관 주변에 가상 경계를 설정해 사람을 식별·추적하거나 건강정보를 수집하거나 건강 관련 안내·광고를 보내지 않아요."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. 동의와 선택",
+          "paragraphs": [
+            "선택적인 건강정보 동기화에는 명시적인 동의를 받아요. 동의 없는 수집·이용이나 제공은 이용자가 요청한 서비스를 위해 꼭 필요한 범위로 제한해요. 선택적인 광고·통계에는 이 예외를 적용하지 않아요.",
+            "요청한 서비스 밖의 제공은 수집 동의와 별도로 동의를 받아요. 거절해도 기기에서 기록할 수 있어요. 동의할 때처럼 쉽게 철회할 수 있어요. 설정에서 동기화를 끄거나 연락해 주세요."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. 권리와 삭제",
+          "paragraphs": [
+            "앱 설정이나 wonyoung@wonyoungchoi.dev로 수집 여부 확인, 건강정보와 종류·출처·제공받는 곳의 열람, 동의 철회, 삭제를 요청할 수 있어요. 본인 확인에는 꼭 필요한 최소 정보만 써요.",
+            "본인 확인 뒤 계정이나 서버 사본 삭제를 바로 시작해요. 구독 중이어도 가능하며 구독 만료를 기다리지 않아요. 수탁자와 다른 건강정보 수령자에게도 삭제를 요청해요. 삭제한 정보는 백업·이전 객체 버전·복제본·임시 내보내기·관련 로그·복구 스냅샷에서 7일 안에 지워요. 복원 뒤에도 삭제한 정보를 다시 보여 주지 않아요.",
+            "기기의 기록과 내보낸 파일은 따로 지워야 해요. 스토어 구독 취소도 별도예요. 비밀번호·복구 코드·건강 기록·구매 토큰은 이메일로 보내지 마세요."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. 답변과 이의 신청",
+          "paragraphs": [
+            "Washington: 접수 후 45일 안에 답변해요. 이유가 있으면 45일 한 번 연장하며, 원래 기한 전에 이유를 알려 드려요. 이의 신청 결과도 45일 안에 알려 드려요.",
+            "Nevada: 보통 본인 확인 후 45일 안에 답변하며, 이유가 있으면 45일 연장해요. 요청한 삭제는 본인 확인 후 30일 안에, 수령자의 삭제는 통지 후 30일 안에 처리해야 해요. 이의 신청은 45일 안에 처리해요. DoseWeek의 더 짧은 7일 백업 삭제 기한은 그대로 적용해요.",
+            "Connecticut: 45일 안에 답변하며, 이유가 있으면 45일 연장해요. 이의 신청은 60일 안에 처리해요. 동의 철회 후 그 동의 기반 처리는 15일 안에 중단해요. 거절에 이의가 있으면 같은 이메일로 요청해 주세요. 거절 이유와, 이의가 받아들여지지 않을 때 그 주 법무장관에게 민원을 제기하는 방법을 안내해요."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. 연락처와 변경 안내",
+          "paragraphs": [
+            "운영자: Wonyoung Labs. 개인정보 보호 담당자: Wonyoung Choi, wonyoung@wonyoungchoi.dev. 보관·이전·보안·유출 대응은 일반 개인정보 처리방침에서 안내해요. 건강정보의 이용·제공 범위를 넓힐 때는 필요한 안내와 새 동의를 받아요."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "개인정보 처리방침",
+        "privacyAndroid": "Android용 DoseWeek 개인정보처리방침"
+      }
+    },
+    "en": {
+      "title": "US Consumer Health Data Privacy Policy",
+      "intro": "This separate notice covers consumer health data of US users, including Washington, Nevada and Connecticut. This is an unpublished 1.0.6 review draft; its effective date is not set.",
+      "effectiveDateLabel": "Effective date",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Health data",
+          "paragraphs": [
+            "Health data includes medication names and dose/timing records, notes, body measurements including weight, meals and nutrition, and reference-only health inferences such as dose estimates. Encrypted synced records and linked account, sync, access and health-service-use metadata may also qualify. The server cannot read end-to-end-encrypted records."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Purposes and sources",
+          "paragraphs": [
+            "Sources are records you enter and readings you choose to allow from Apple Health (HealthKit) or Health Connect. Apple/Google sign-in and Store notices supply account/purchase metadata. We do not obtain health data from data brokers.",
+            "We use this data to display and manage your records, make reference-only calculations, provide sync and backups you request, and protect service security. We do not use it for diagnosis, treatment recommendations or health-derived ads or analytics."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Disclosures and recipients",
+          "paragraphs": [
+            "Infrastructure processors Cloudflare and AWS handle the encrypted health records described above and necessary account/connection metadata for transfer, hosting, protection and backups. They must act under our instructions and contractual safeguards; we do not authorize independent health-data use.",
+            "Apple and Google handle sign-in/payments in their own roles; DoseWeek sends no recorded health content through those paths. Google AdMob/Firebase receive the technical SDK data disclosed in the general privacy policies, not recorded health content. Technical data revealing health-service use receive applicable health-data protections. We do not share health data with corporate affiliates. If you choose export, calendar integration or your own cloud backup, chosen recipients and file/calendar/cloud providers receive the selected details or encrypted file and may make onward copies. When technical data reveal health-service use, disclosure to AdMob/Firebase requires the applicable separate health-data sharing consent; advertising consent alone does not establish it.",
+            "We do not sell health data. We do not send recorded health content for advertising or use health-derived ad targeting. We do not use geofencing around healthcare locations to identify or track people, collect health data, or send health-related messages or ads."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Your consent",
+          "paragraphs": [
+            "Optional health sync uses explicit consent. Collection/use or sharing without consent is limited to what is necessary for your requested service. This exception never covers optional ads or analytics.",
+            "Sharing outside the requested service requires separate consent from collection consent. Refusal leaves local recording available. You can withdraw as easily as granting consent: disable sync in Settings or contact us."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Your rights and deletion",
+          "paragraphs": [
+            "Ask to confirm collection, access your health data and its categories, sources and recipients, withdraw consent, or delete data through app Settings or wonyoung@wonyoungchoi.dev. We use only the minimum information needed to verify identity.",
+            "After verification, account or server-copy deletion starts immediately even with an active subscription; it does not wait for subscription expiry. We notify processors and any other health-data recipients to delete. Deleted data disappear within 7 days from backups, object versions, replicas, temporary exports, relevant logs and recovery snapshots. Restoring a backup must not expose deleted data again.",
+            "Local records and your exported files need separate deletion. Store subscription cancellation is separate. Do not email passwords, recovery codes, health records or purchase tokens."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Responses and appeals",
+          "paragraphs": [
+            "Washington: response within 45 days from receipt; one justified 45-day extension, with the reason given before the original deadline; appeal decision within 45 days.",
+            "Nevada: response generally within 45 days after authentication, with a justified 45-day extension; requested deletion within 30 days after authentication and recipient deletion within 30 days of notice; appeal within 45 days. Our stricter 7-day backup limit still applies.",
+            "Connecticut: response within 45 days, with a justified 45-day extension; appeal within 60 days; covered consent-based processing stops within 15 days after withdrawal. Appeal a refusal through the same email route. We give refusal reasons and, if an appeal is denied, explain how to complain to the relevant state Attorney General."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contact and changes",
+          "paragraphs": [
+            "Operator: Wonyoung Labs. Privacy contact: Wonyoung Choi, wonyoung@wonyoungchoi.dev. The general privacy policies explain retention, transfers, security and breach response. Broader health-data use or sharing requires the applicable notice and new consent."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Privacy Policy",
+        "privacyAndroid": "Privacy Policy for DoseWeek on Android"
+      }
+    },
+    "ja": {
+      "title": "米国消費者健康データのプライバシーポリシー",
+      "intro": "Washington、Nevada、Connecticutを含む米国の利用者の健康データを別途説明します。未公開の1.0.6審査用草案で、施行日は未定です。",
+      "effectiveDateLabel": "施行日",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. 健康データの種類",
+          "paragraphs": [
+            "健康データには薬名、投与量・時刻、メモ、体重などの身体測定値、食事・栄養記録、投与量の推定など参考用の健康推論が含まれます。暗号化された同期記録と関連するアカウント・同期・アクセス・健康サービス利用情報も該当する場合があります。サーバーはエンドツーエンド暗号化された記録を読めません。"
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. 目的と情報源",
+          "paragraphs": [
+            "情報源は入力した記録と、許可して選んだAppleヘルスケア（HealthKit）またはHealth Connectの測定値です。Apple・Googleログインとストア通知からアカウント・購入情報を受け取ります。データ販売業者から健康データを取得しません。",
+            "記録の表示・管理、参考用の計算、依頼した同期・バックアップ、サービスの安全確保に使用します。診断、治療の推奨、健康データに基づく広告・分析には使用しません。"
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. 提供先と提供範囲",
+          "paragraphs": [
+            "処理受託者CloudflareとAWSは、上記健康記録の暗号化コピーと必要なアカウント・接続情報を転送・ホスティング・保護・バックアップのため処理します。指示と契約上の保護措置に従う必要があり、健康データの独自利用は認めません。",
+            "AppleとGoogleは各自の役割でログイン・決済を処理し、この経路で記録した健康内容を送りません。Google AdMob・Firebaseには一般プライバシーポリシーで説明するSDK技術情報を送り、記録した健康内容は送りません。健康サービスの利用を示す技術情報にも適用される健康データ保護を行います。関連会社に健康データを提供しません。エクスポート、カレンダー連携、ご自身のクラウドバックアップを選ぶ場合、選択した受領者やファイル・カレンダー・クラウド提供者が選択した内容または暗号化ファイルを受け取り、追加のコピーを作ることがあります。 技術情報が健康サービスの利用を示す場合、AdMob・Firebaseへの提供には適用される別個の健康データ提供同意が必要です。広告への同意だけでは代わりになりません。",
+            "健康データを販売しません。記録した健康内容を広告のため送信せず、健康データに基づく広告ターゲティングを行いません。医療施設周辺のジオフェンシングで人を特定・追跡し、健康データを収集し、健康関連メッセージや広告を送りません。"
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. 同意と選択",
+          "paragraphs": [
+            "任意の健康データ同期には明示的な同意を得ます。同意なしの収集・利用・提供は、依頼されたサービスに必要な範囲に限ります。この例外を任意の広告・分析には適用しません。",
+            "依頼されたサービス外への提供には収集とは別の同意が必要です。拒否しても端末での記録は使えます。同意時と同じ容易さで撤回できます。設定で同期を無効にするか、ご連絡ください。"
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. 権利と削除",
+          "paragraphs": [
+            "アプリ設定またはwonyoung@wonyoungchoi.devで、収集の確認、健康データと種類・情報源・提供先の閲覧、同意撤回、削除を依頼できます。本人確認には必要最小限の情報だけを使います。",
+            "本人確認後、契約中でもアカウントまたはサーバーコピーの削除を直ちに開始し、契約満了を待ちません。受託者と他の健康データ受領者にも削除を求めます。バックアップ、旧オブジェクト版、複製、臨時エクスポート、関連ログ、復旧スナップショットから7日以内に削除します。復元後も削除済みデータを再公開しません。",
+            "端末の記録とエクスポートしたファイルは別途削除してください。ストアの契約解約も別です。パスワード、復旧コード、健康記録、購入トークンをメールで送らないでください。"
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. 回答と異議申立て",
+          "paragraphs": [
+            "Washington：受領から45日以内に回答します。正当な理由で一度45日延長でき、元の期限前に理由を伝えます。異議申立てへの回答も45日以内です。",
+            "Nevada：通常は本人確認後45日以内に回答し、正当な理由で45日延長できます。削除依頼は本人確認後30日以内、受領者の削除は通知後30日以内です。異議申立ては45日以内に処理します。より短い7日のバックアップ削除期限は引き続き適用します。",
+            "Connecticut：45日以内に回答し、正当な理由で45日延長できます。異議申立ては60日以内です。対象となる同意に基づく処理は撤回後15日以内に停止します。拒否への異議は同じメールで申し立てられます。拒否理由と、異議が認められない場合の該当州司法長官への苦情申立て方法を説明します。"
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. 連絡先と変更",
+          "paragraphs": [
+            "運営者：Wonyoung Labs。個人情報窓口：Wonyoung Choi、wonyoung@wonyoungchoi.dev。保管、移転、安全対策、漏えい対応は一般プライバシーポリシーで説明します。健康データの利用・提供を広げる場合は必要な通知と新たな同意を得ます。"
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "プライバシーポリシー",
+        "privacyAndroid": "Android版DoseWeek プライバシーポリシー"
+      }
+    },
+    "de": {
+      "title": "US-Datenschutzhinweise für Verbrauchergesundheitsdaten",
+      "intro": "Diese gesonderten Hinweise gelten für Gesundheitsdaten von US-Nutzern, einschließlich Washington, Nevada und Connecticut. Dies ist ein unveröffentlichter Prüfentwurf für 1.0.6; das Geltungsdatum steht noch nicht fest.",
+      "effectiveDateLabel": "Gültig ab",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Gesundheitsdaten",
+          "paragraphs": [
+            "Gesundheitsdaten umfassen Medikamentennamen, Dosis- und Zeitangaben, Notizen, Körpermesswerte wie Gewicht, Mahlzeiten und Ernährung sowie rein orientierende Gesundheitsableitungen wie Dosisschätzungen. Auch verschlüsselte synchronisierte Daten und verknüpfte Konto-, Synchronisations-, Zugriffs- und Gesundheitsdienst-Nutzungsdaten können dazugehören. Der Server kann Ende-zu-Ende-verschlüsselte Aufzeichnungen nicht lesen."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Zwecke und Quellen",
+          "paragraphs": [
+            "Quellen sind Ihre Eingaben und die von Ihnen erlaubten Messwerte aus Apple Health (HealthKit) oder Health Connect. Apple-/Google-Anmeldung und Store-Mitteilungen liefern Konto- und Kaufdaten. Wir beziehen keine Gesundheitsdaten von Datenhändlern.",
+            "Wir verwenden diese Daten zur Anzeige und Verwaltung Ihrer Aufzeichnungen, für rein orientierende Berechnungen, die angeforderte Synchronisation und Sicherung sowie die Sicherheit des Dienstes. Sie dienen nicht Diagnose, Behandlungsempfehlungen oder gesundheitsbasierten Anzeigen oder Analysen."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Offenlegung und Empfänger",
+          "paragraphs": [
+            "Die Infrastruktur-Auftragsverarbeiter Cloudflare und AWS verarbeiten die oben beschriebenen verschlüsselten Gesundheitsaufzeichnungen und erforderliche Konto-/Verbindungsdaten für Übertragung, Hosting, Schutz und Sicherung. Sie müssen unsere Weisungen und vertraglichen Schutzvorgaben befolgen; eine unabhängige Gesundheitsdatennutzung erlauben wir nicht.",
+            "Apple und Google verarbeiten Anmeldung und Zahlungen in eigener Rolle; über diese Wege sendet DoseWeek keine erfassten Gesundheitsinhalte. Google AdMob/Firebase erhalten die in den allgemeinen Datenschutzhinweisen beschriebenen technischen SDK-Daten, keine erfassten Gesundheitsinhalte. Technische Daten, die Gesundheitsdienstnutzung offenbaren, erhalten den anwendbaren Gesundheitsdatenschutz. Wir geben keine Gesundheitsdaten an verbundene Unternehmen weiter. Bei gewähltem Export, Kalenderintegration oder eigener Cloud-Sicherung erhalten ausgewählte Empfänger und Datei-/Kalender-/Cloud-Anbieter die ausgewählten Angaben oder verschlüsselte Datei und können weitere Kopien erstellen. Wenn technische Daten Gesundheitsdienstnutzung offenbaren, erfordert ihre Weitergabe an AdMob/Firebase die anwendbare separate Einwilligung zur Gesundheitsdatenweitergabe; Werbeeinwilligung allein genügt nicht.",
+            "Wir verkaufen keine Gesundheitsdaten. Wir senden keine erfassten Gesundheitsinhalte für Werbung und nutzen kein gesundheitsbasiertes Werbetargeting. Wir setzen kein Geofencing um Gesundheitseinrichtungen ein, um Personen zu identifizieren oder zu verfolgen, Gesundheitsdaten zu sammeln oder gesundheitsbezogene Nachrichten oder Werbung zu senden."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Ihre Einwilligung",
+          "paragraphs": [
+            "Optionale Gesundheitssynchronisation erfordert ausdrückliche Einwilligung. Erhebung/Nutzung oder Weitergabe ohne Einwilligung beschränken sich auf das für den angeforderten Dienst Notwendige. Diese Ausnahme gilt nie für optionale Werbung oder Analysen.",
+            "Weitergabe außerhalb des angeforderten Dienstes braucht eine von der Erhebung getrennte Einwilligung. Bei Ablehnung bleibt lokale Aufzeichnung verfügbar. Widerruf ist so einfach wie Zustimmung: Deaktivieren Sie Synchronisation in den Einstellungen oder kontaktieren Sie uns."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Ihre Rechte und Löschung",
+          "paragraphs": [
+            "Über App-Einstellungen oder wonyoung@wonyoungchoi.dev können Sie Erhebung bestätigen lassen, Zugang zu Gesundheitsdaten sowie Kategorien, Quellen und Empfängern verlangen, Einwilligung widerrufen oder Löschung beantragen. Zur Identitätsprüfung verwenden wir nur notwendige Mindestangaben.",
+            "Nach Prüfung beginnt die Löschung von Konto oder Serverkopie sofort, auch bei laufendem Abonnement; dessen Ablauf wird nicht abgewartet. Wir verlangen auch von Auftragsverarbeitern und anderen Gesundheitsdatenempfängern Löschung. Gelöschte Daten verschwinden innerhalb von 7 Tagen aus Sicherungen, Objektversionen, Replikaten, temporären Exporten, relevanten Protokollen und Wiederherstellungssnapshots. Wiederherstellung darf gelöschte Daten nicht erneut zugänglich machen.",
+            "Lokale Aufzeichnungen und exportierte Dateien löschen Sie getrennt. Store-Abonnementkündigung ist ebenfalls getrennt. Senden Sie keine Passwörter, Wiederherstellungscodes, Gesundheitsaufzeichnungen oder Kauftokens per E-Mail."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Antworten und Beschwerden",
+          "paragraphs": [
+            "Washington: Antwort innerhalb von 45 Tagen ab Eingang; einmalige begründete Verlängerung um 45 Tage mit Begründung vor der ursprünglichen Frist; Entscheidung über Beschwerden innerhalb von 45 Tagen.",
+            "Nevada: Antwort normalerweise innerhalb von 45 Tagen nach Identitätsprüfung, begründete Verlängerung um 45 Tage; beantragte Löschung binnen 30 Tagen nach Prüfung und Empfängerlöschung binnen 30 Tagen nach Mitteilung; Beschwerdeentscheidung binnen 45 Tagen. Unsere strengere Sicherungsfrist von 7 Tagen gilt weiterhin.",
+            "Connecticut: Antwort binnen 45 Tagen, begründete Verlängerung um 45 Tage; Beschwerdeentscheidung binnen 60 Tagen; betroffene einwilligungsbasierte Verarbeitung endet binnen 15 Tagen nach Widerruf. Beschwerden gegen Ablehnung können Sie an dieselbe E-Mail richten. Wir nennen Ablehnungsgründe und erklären bei erfolgloser Beschwerde den Weg zur zuständigen Generalstaatsanwaltschaft des Bundesstaats."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Kontakt und Änderungen",
+          "paragraphs": [
+            "Betreiber: Wonyoung Labs. Datenschutzkontakt: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Allgemeine Datenschutzhinweise erklären Speicherung, Übermittlungen, Sicherheit und Vorfallreaktion. Erweiterte Gesundheitsdatennutzung oder Weitergabe erfordert die vorgeschriebene Information und neue Einwilligung."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Datenschutzerklärung",
+        "privacyAndroid": "Datenschutzerklärung für DoseWeek auf Android"
+      }
+    },
+    "fr": {
+      "title": "Politique de confidentialité des données de santé des consommateurs aux États-Unis",
+      "intro": "Cette notice distincte couvre les données de santé des utilisateurs aux États-Unis, notamment Washington, Nevada et Connecticut. Il s’agit d’un projet de révision 1.0.6 non publié ; sa date d’effet reste à fixer.",
+      "effectiveDateLabel": "Date d’entrée en vigueur",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Données de santé",
+          "paragraphs": [
+            "Les données de santé comprennent les médicaments, doses et horaires, notes, mesures corporelles dont le poids, repas et nutrition, ainsi que des déductions indicatives comme les estimations de dose. Les dossiers synchronisés chiffrés et les métadonnées liées au compte, à la synchronisation, aux accès et à l’utilisation de services de santé peuvent aussi en relever. Le serveur ne peut pas lire les dossiers chiffrés de bout en bout."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Finalités et sources",
+          "paragraphs": [
+            "Les sources sont vos saisies et les mesures autorisées que vous choisissez dans Apple Santé (HealthKit) ou Health Connect. La connexion Apple/Google et les notifications du Store fournissent des métadonnées de compte et d’achat. Nous n’obtenons pas de données de santé auprès de courtiers.",
+            "Nous utilisons ces données pour afficher et gérer vos dossiers, effectuer des calculs indicatifs, fournir la synchronisation et les sauvegardes demandées et sécuriser le service. Elles ne servent pas au diagnostic, aux recommandations thérapeutiques ou à la publicité ou l’analyse fondées sur la santé."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Communication et destinataires",
+          "paragraphs": [
+            "Les sous-traitants d’infrastructure Cloudflare et AWS traitent les dossiers de santé chiffrés décrits ci-dessus et les métadonnées nécessaires de compte/connexion pour le transfert, l’hébergement, la protection et les sauvegardes. Ils doivent suivre nos instructions et garanties contractuelles ; nous n’autorisons pas leur utilisation autonome des données de santé.",
+            "Apple et Google traitent connexion et paiement dans leurs propres rôles ; DoseWeek n’envoie pas de contenu de santé enregistré par ces voies. Google AdMob/Firebase reçoivent les données techniques SDK décrites dans les politiques générales, pas le contenu de santé enregistré. Les données techniques révélant l’usage d’un service de santé bénéficient des protections applicables. Nous ne communiquons pas de données de santé à des sociétés affiliées. Si vous choisissez export, intégration calendrier ou sauvegarde dans votre propre cloud, les destinataires et fournisseurs de fichiers/calendrier/cloud choisis reçoivent les informations sélectionnées ou le fichier chiffré et peuvent créer d’autres copies. Lorsque des données techniques révèlent l’usage d’un service de santé, leur communication à AdMob/Firebase exige le consentement distinct applicable au partage de données de santé ; le consentement publicitaire seul ne suffit pas.",
+            "Nous ne vendons pas de données de santé. Nous n’envoyons pas de contenu de santé enregistré pour la publicité et n’utilisons pas de ciblage publicitaire fondé sur la santé. Nous n’utilisons pas de géorepérage autour des lieux de soins pour identifier ou suivre des personnes, collecter des données de santé ou envoyer des messages ou publicités de santé."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Votre consentement",
+          "paragraphs": [
+            "La synchronisation facultative des données de santé exige un consentement explicite. La collecte/l’utilisation ou le partage sans consentement se limite au nécessaire pour le service demandé. Cette exception ne couvre jamais la publicité ou l’analyse facultatives.",
+            "Le partage hors du service demandé exige un consentement distinct de celui de collecte. Le refus préserve l’enregistrement local. Le retrait est aussi simple que l’accord : désactivez la synchronisation dans les réglages ou contactez-nous."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Vos droits et la suppression",
+          "paragraphs": [
+            "Dans les réglages ou à wonyoung@wonyoungchoi.dev, demandez confirmation de la collecte, accès aux données de santé et à leurs catégories, sources et destinataires, retrait du consentement ou suppression. Nous n’utilisons que les informations minimales nécessaires à vérifier votre identité.",
+            "Après vérification, la suppression du compte ou de la copie serveur commence immédiatement, même avec un abonnement actif, sans attendre son expiration. Nous demandons aussi la suppression aux sous-traitants et autres destinataires de données de santé. Les données supprimées disparaissent sous 7 jours des sauvegardes, versions d’objets, répliques, exports temporaires, journaux concernés et instantanés de récupération. Une restauration ne doit pas les rendre accessibles à nouveau.",
+            "Les dossiers locaux et fichiers exportés se suppriment séparément, tout comme la résiliation du Store. N’envoyez pas par e-mail de mots de passe, codes de récupération, dossiers de santé ou jetons d’achat."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Réponses et recours",
+          "paragraphs": [
+            "Washington : réponse sous 45 jours après réception ; une prolongation justifiée de 45 jours, motivée avant l’échéance initiale ; décision sur recours sous 45 jours.",
+            "Nevada : réponse généralement sous 45 jours après authentification, avec prolongation justifiée de 45 jours ; suppression demandée sous 30 jours après authentification et par les destinataires sous 30 jours après avis ; recours sous 45 jours. Notre limite de sauvegarde plus stricte de 7 jours reste applicable.",
+            "Connecticut : réponse sous 45 jours, prolongation justifiée de 45 jours ; recours sous 60 jours ; arrêt du traitement concerné fondé sur le consentement sous 15 jours après retrait. Contestez un refus par le même e-mail. Nous motivons les refus et expliquons, si le recours est rejeté, comment saisir le procureur général de l’État concerné."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contact et modifications",
+          "paragraphs": [
+            "Exploitant : Wonyoung Labs. Contact confidentialité : Wonyoung Choi, wonyoung@wonyoungchoi.dev. Les politiques générales expliquent conservation, transferts, sécurité et réponse aux violations. Toute extension d’utilisation ou de partage des données de santé exige l’information applicable et un nouveau consentement."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Politique de confidentialité",
+        "privacyAndroid": "Politique de confidentialité de DoseWeek pour Android"
+      }
+    },
+    "es": {
+      "title": "Política de privacidad de datos de salud de consumidores en EE. UU.",
+      "intro": "Este aviso separado cubre datos de salud de usuarios de EE. UU., incluidos Washington, Nevada y Connecticut. Es un borrador de revisión 1.0.6 sin publicar; su fecha de entrada en vigor no está fijada.",
+      "effectiveDateLabel": "Fecha de entrada en vigor",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Datos de salud",
+          "paragraphs": [
+            "Los datos de salud incluyen medicamentos, dosis y horarios, notas, medidas corporales como el peso, comidas y nutrición e inferencias orientativas como estimaciones de dosis. También pueden incluir registros sincronizados cifrados y metadatos vinculados a cuenta, sincronización, acceso y uso de servicios de salud. El servidor no puede leer registros cifrados de extremo a extremo."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Finalidades y fuentes",
+          "paragraphs": [
+            "Las fuentes son los registros que introduce y las lecturas que permite y elige de Apple Salud (HealthKit) o Health Connect. El inicio Apple/Google y los avisos del Store proporcionan metadatos de cuenta/compra. No obtenemos datos de salud de intermediarios de datos.",
+            "Usamos estos datos para mostrar y gestionar sus registros, realizar cálculos orientativos, prestar la sincronización y copias solicitadas y proteger el servicio. No se usan para diagnóstico, recomendaciones de tratamiento ni publicidad o analítica derivada de salud."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Comunicación y destinatarios",
+          "paragraphs": [
+            "Los encargados de infraestructura Cloudflare y AWS tratan los registros de salud cifrados anteriores y metadatos necesarios de cuenta/conexión para transferencia, alojamiento, protección y copias. Deben seguir nuestras instrucciones y garantías contractuales; no autorizamos un uso independiente de datos de salud.",
+            "Apple y Google tratan acceso y pagos en sus propios roles; DoseWeek no envía contenido de salud registrado por esas vías. Google AdMob/Firebase reciben datos técnicos SDK descritos en las políticas generales, no contenido de salud registrado. Los datos técnicos que revelan uso de servicios de salud reciben las protecciones aplicables. No compartimos datos de salud con empresas afiliadas. Si elige exportación, integración de calendario o su propia copia en la nube, los destinatarios y proveedores de archivos/calendario/nube elegidos reciben los detalles seleccionados o el archivo cifrado y pueden hacer otras copias. Cuando los datos técnicos revelan uso de servicios de salud, comunicarlos a AdMob/Firebase requiere el consentimiento separado aplicable para compartir datos de salud; consentir la publicidad por sí solo no lo sustituye.",
+            "No vendemos datos de salud. No enviamos contenido de salud registrado para publicidad ni usamos segmentación publicitaria derivada de salud. No usamos geovallas alrededor de centros sanitarios para identificar o seguir personas, recoger datos de salud o enviar mensajes o anuncios de salud."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Su consentimiento",
+          "paragraphs": [
+            "La sincronización opcional de salud requiere consentimiento explícito. La recogida/uso o comunicación sin consentimiento se limita a lo necesario para el servicio solicitado. La excepción nunca cubre publicidad o analítica opcionales.",
+            "Compartir fuera del servicio solicitado requiere consentimiento separado del de recogida. Rechazarlo mantiene el registro local. Retirarlo es tan sencillo como otorgarlo: desactive sincronización en Ajustes o contacte con nosotros."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Derechos y eliminación",
+          "paragraphs": [
+            "En Ajustes o en wonyoung@wonyoungchoi.dev puede confirmar la recogida, acceder a datos de salud y sus categorías, fuentes y destinatarios, retirar consentimiento o pedir eliminación. Usamos solo la información mínima para verificar identidad.",
+            "Tras verificar, la eliminación de cuenta o copia del servidor empieza inmediatamente, incluso con suscripción activa, sin esperar su vencimiento. Pedimos eliminar también a encargados y otros destinatarios de salud. Los datos eliminados desaparecen en 7 días de copias, versiones de objetos, réplicas, exportaciones temporales, registros pertinentes e instantáneas de recuperación. Restaurar no debe volver a exponerlos.",
+            "Los registros locales y archivos exportados se eliminan aparte; también se cancela aparte la suscripción del Store. No envíe contraseñas, códigos de recuperación, registros de salud o tokens de compra por correo."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Respuestas y recursos",
+          "paragraphs": [
+            "Washington: respuesta en 45 días desde recepción; una prórroga justificada de 45 días con motivos antes del plazo original; resolución de recurso en 45 días.",
+            "Nevada: respuesta normalmente en 45 días desde autenticación, con prórroga justificada de 45 días; eliminación solicitada en 30 días tras autenticar y por destinatarios en 30 días tras aviso; recurso en 45 días. Sigue aplicándose nuestro límite más estricto de copias de 7 días.",
+            "Connecticut: respuesta en 45 días, prórroga justificada de 45 días; recurso en 60 días; el tratamiento cubierto basado en consentimiento cesa en 15 días desde retirada. Recurra un rechazo por el mismo correo. Indicamos motivos y, si se rechaza el recurso, cómo reclamar al fiscal general del estado correspondiente."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contacto y cambios",
+          "paragraphs": [
+            "Operador: Wonyoung Labs. Contacto de privacidad: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Las políticas generales explican conservación, transferencias, seguridad y respuesta a incidentes. Ampliar uso o comunicación de salud requiere los avisos aplicables y nuevo consentimiento."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Política de Privacidad",
+        "privacyAndroid": "Política de privacidad de DoseWeek para Android"
+      }
+    },
+    "it": {
+      "title": "Informativa sulla privacy dei dati sanitari dei consumatori negli USA",
+      "intro": "Questa informativa separata riguarda i dati sanitari degli utenti USA, inclusi Washington, Nevada e Connecticut. È una bozza di revisione 1.0.6 non pubblicata; la data di efficacia non è fissata.",
+      "effectiveDateLabel": "Data di entrata in vigore",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Dati sanitari",
+          "paragraphs": [
+            "I dati sanitari includono farmaci, dosi e orari, note, misure corporee come il peso, pasti e nutrizione e inferenze indicative come stime della dose. Possono includere anche registri sincronizzati cifrati e metadati collegati ad account, sincronizzazione, accessi e uso di servizi sanitari. Il server non può leggere i registri cifrati end-to-end."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Finalità e fonti",
+          "paragraphs": [
+            "Le fonti sono i dati inseriti e le letture scelte e autorizzate da Apple Salute (HealthKit) o Health Connect. Accesso Apple/Google e notifiche dello Store forniscono metadati di account/acquisto. Non acquisiamo dati sanitari da intermediari di dati.",
+            "Usiamo questi dati per mostrare e gestire i suoi registri, fare calcoli indicativi, offrire sincronizzazione e backup richiesti e proteggere il servizio. Non li usiamo per diagnosi, consigli terapeutici o pubblicità o analisi basate sulla salute."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Comunicazioni e destinatari",
+          "paragraphs": [
+            "I responsabili infrastrutturali Cloudflare e AWS trattano i registri sanitari cifrati descritti sopra e i metadati necessari di account/connessione per trasferimento, hosting, protezione e backup. Devono seguire le nostre istruzioni e garanzie contrattuali; non autorizziamo usi sanitari autonomi.",
+            "Apple e Google trattano accesso/pagamenti nei propri ruoli; DoseWeek non invia contenuti sanitari registrati attraverso tali percorsi. Google AdMob/Firebase ricevono dati tecnici SDK descritti nelle informative generali, non contenuti sanitari registrati. I dati tecnici che rivelano uso di servizi sanitari ricevono le tutele applicabili. Non condividiamo dati sanitari con società affiliate. Se sceglie esportazione, integrazione calendario o backup sul suo cloud, destinatari e fornitori di file/calendario/cloud scelti ricevono i dettagli selezionati o il file cifrato e possono produrre altre copie. Se i dati tecnici rivelano l’uso di servizi sanitari, comunicarli ad AdMob/Firebase richiede il consenso separato applicabile alla condivisione sanitaria; il solo consenso pubblicitario non lo sostituisce.",
+            "Non vendiamo dati sanitari. Non inviamo contenuti sanitari registrati per pubblicità né usiamo targeting pubblicitario derivato dalla salute. Non usiamo geofencing intorno a luoghi di cura per identificare o seguire persone, raccogliere dati sanitari o inviare messaggi o annunci sanitari."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Il suo consenso",
+          "paragraphs": [
+            "La sincronizzazione sanitaria facoltativa richiede consenso esplicito. Raccolta/uso o condivisione senza consenso si limitano al necessario per il servizio richiesto. L’eccezione non copre mai pubblicità o analisi facoltative.",
+            "La condivisione fuori dal servizio richiesto richiede consenso distinto dalla raccolta. Il rifiuto mantiene disponibile la registrazione locale. Revocare è semplice quanto consentire: disattivi la sincronizzazione nelle impostazioni o ci contatti."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Diritti e cancellazione",
+          "paragraphs": [
+            "Da impostazioni o wonyoung@wonyoungchoi.dev può chiedere conferma della raccolta, accesso ai dati sanitari e a categorie, fonti e destinatari, revocare il consenso o cancellare. Usiamo solo le informazioni minime per verificare l’identità.",
+            "Dopo la verifica, la cancellazione dell’account o copia server inizia subito anche con abbonamento attivo, senza attenderne la scadenza. Chiediamo di cancellare anche a responsabili e altri destinatari sanitari. I dati eliminati spariscono entro 7 giorni da backup, versioni degli oggetti, repliche, esportazioni temporanee, log pertinenti e snapshot di ripristino. Il ripristino non deve esporli nuovamente.",
+            "I registri locali e i file esportati vanno eliminati a parte; anche l’abbonamento Store si disdice a parte. Non invii password, codici di recupero, registri sanitari o token d’acquisto via e-mail."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Risposte e ricorsi",
+          "paragraphs": [
+            "Washington: risposta entro 45 giorni dalla ricezione; una proroga motivata di 45 giorni, comunicata prima del termine originale; decisione sul ricorso entro 45 giorni.",
+            "Nevada: risposta di norma entro 45 giorni dall’autenticazione, proroga motivata di 45 giorni; cancellazione richiesta entro 30 giorni dall’autenticazione e dai destinatari entro 30 giorni dall’avviso; ricorso entro 45 giorni. Resta valido il nostro limite di backup più breve di 7 giorni.",
+            "Connecticut: risposta entro 45 giorni, proroga motivata di 45 giorni; ricorso entro 60 giorni; trattamento coperto basato sul consenso interrotto entro 15 giorni dalla revoca. Può contestare un rifiuto alla stessa e-mail. Spieghiamo i motivi e, se il ricorso è respinto, come reclamare al procuratore generale dello stato pertinente."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contatti e modifiche",
+          "paragraphs": [
+            "Gestore: Wonyoung Labs. Contatto privacy: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Le informative generali spiegano conservazione, trasferimenti, sicurezza e risposta alle violazioni. Estendere uso o condivisione sanitaria richiede gli avvisi applicabili e nuovo consenso."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Informativa sulla privacy",
+        "privacyAndroid": "Informativa sulla privacy di DoseWeek per Android"
+      }
+    },
+    "nl": {
+      "title": "Privacyverklaring voor gezondheidsgegevens van Amerikaanse consumenten",
+      "intro": "Deze afzonderlijke verklaring geldt voor gezondheidsgegevens van Amerikaanse gebruikers, waaronder Washington, Nevada en Connecticut. Dit is een ongepubliceerd beoordelingsconcept voor 1.0.6; de ingangsdatum staat nog niet vast.",
+      "effectiveDateLabel": "Ingangsdatum",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Gezondheidsgegevens",
+          "paragraphs": [
+            "Gezondheidsgegevens omvatten medicijnnamen, doses en tijdstippen, notities, lichaamsmetingen zoals gewicht, maaltijden en voeding en uitsluitend indicatieve afleidingen zoals dosisschattingen. Ook versleutelde gesynchroniseerde gegevens en gekoppelde account-, synchronisatie-, toegangs- en gezondheidsdienstgebruikmetadata kunnen hieronder vallen. De server kan end-to-endversleutelde gegevens niet lezen."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Doelen en bronnen",
+          "paragraphs": [
+            "Bronnen zijn uw invoer en de metingen die u toestaat en kiest uit Apple Gezondheid (HealthKit) of Health Connect. Apple-/Google-aanmelding en Store-meldingen leveren account-/aankoopmetadata. Wij krijgen geen gezondheidsgegevens van gegevenshandelaren.",
+            "Wij gebruiken deze gegevens om uw registraties te tonen en beheren, indicatieve berekeningen te maken, gevraagde synchronisatie en back-ups te bieden en de dienst te beveiligen. Wij gebruiken ze niet voor diagnose, behandeladvies of op gezondheid gebaseerde reclame of analyse."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Verstrekking en ontvangers",
+          "paragraphs": [
+            "Infrastructuurverwerkers Cloudflare en AWS verwerken bovengenoemde versleutelde gezondheidsregistraties en noodzakelijke account-/verbindingsmetadata voor overdracht, hosting, bescherming en back-ups. Zij moeten onze instructies en contractuele waarborgen volgen; zelfstandig gezondheidsgegevensgebruik staan wij niet toe.",
+            "Apple en Google verwerken aanmelding/betaling in hun eigen rol; DoseWeek stuurt via die routes geen geregistreerde gezondheidsinhoud. Google AdMob/Firebase ontvangen de technische SDK-gegevens uit de algemene privacyverklaringen, geen geregistreerde gezondheidsinhoud. Technische gegevens die gezondheidsdienstgebruik onthullen krijgen de toepasselijke bescherming. Wij delen geen gezondheidsgegevens met gelieerde bedrijven. Bij gekozen export, kalenderintegratie of eigen cloudback-up ontvangen gekozen ontvangers en bestands-/kalender-/cloudaanbieders de geselecteerde informatie of versleutelde bestanden en kunnen zij verdere kopieën maken. Als technische gegevens gezondheidsdienstgebruik onthullen, vereist verstrekking aan AdMob/Firebase de toepasselijke aparte toestemming voor delen van gezondheidsgegevens; toestemming voor reclame alleen is onvoldoende.",
+            "Wij verkopen geen gezondheidsgegevens. Wij sturen geen geregistreerde gezondheidsinhoud voor reclame en gebruiken geen op gezondheid gebaseerde advertentietargeting. Wij gebruiken geen geofencing rond zorglocaties om mensen te identificeren of volgen, gezondheidsgegevens te verzamelen of gezondheidsberichten of advertenties te sturen."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Uw toestemming",
+          "paragraphs": [
+            "Optionele gezondheidssynchronisatie vereist uitdrukkelijke toestemming. Verzameling/gebruik of delen zonder toestemming blijft beperkt tot wat noodzakelijk is voor de gevraagde dienst. Deze uitzondering geldt nooit voor optionele reclame of analyse.",
+            "Delen buiten de gevraagde dienst vereist aparte toestemming naast verzameling. Weigering laat lokaal registreren beschikbaar. Intrekken is even eenvoudig als toestemmen: schakel synchronisatie uit in Instellingen of neem contact op."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Rechten en verwijdering",
+          "paragraphs": [
+            "Via app-instellingen of wonyoung@wonyoungchoi.dev kunt u verzameling laten bevestigen, toegang tot gezondheidsgegevens en categorieën, bronnen en ontvangers vragen, toestemming intrekken of verwijderen. Wij gebruiken alleen minimale informatie voor identiteitscontrole.",
+            "Na controle start verwijdering van account of serverkopie direct, ook bij een actief abonnement, zonder op afloop te wachten. Wij vragen ook verwerkers en andere gezondheidsgegevensontvangers te verwijderen. Verwijderde gegevens verdwijnen binnen 7 dagen uit back-ups, objectversies, replica’s, tijdelijke exports, relevante logs en herstelsnapshots. Herstel mag ze niet opnieuw beschikbaar maken.",
+            "Lokale registraties en geëxporteerde bestanden verwijdert u apart. Het Store-abonnement zegt u ook apart op. Mail geen wachtwoorden, herstelcodes, gezondheidsregistraties of aankooptokens."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Antwoorden en bezwaar",
+          "paragraphs": [
+            "Washington: antwoord binnen 45 dagen na ontvangst; één gemotiveerde verlenging van 45 dagen met reden vóór de oorspronkelijke termijn; bezwaarbesluit binnen 45 dagen.",
+            "Nevada: doorgaans antwoord binnen 45 dagen na authenticatie, gemotiveerde verlenging van 45 dagen; gevraagde verwijdering binnen 30 dagen na authenticatie en door ontvangers binnen 30 dagen na melding; bezwaar binnen 45 dagen. Onze strengere back-upgrens van 7 dagen blijft gelden.",
+            "Connecticut: antwoord binnen 45 dagen, gemotiveerde verlenging van 45 dagen; bezwaar binnen 60 dagen; betrokken verwerking op toestemming stopt binnen 15 dagen na intrekking. Maak bezwaar tegen weigering via hetzelfde e-mailadres. Wij geven redenen en leggen bij afgewezen bezwaar uit hoe u bij de bevoegde procureur-generaal van de staat kunt klagen."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contact en wijzigingen",
+          "paragraphs": [
+            "Exploitant: Wonyoung Labs. Privacycontact: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Algemene privacyverklaringen verklaren bewaring, doorgifte, beveiliging en datalekrespons. Ruimer gezondheidsgebruik of delen vereist de toepasselijke kennisgeving en nieuwe toestemming."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Privacybeleid",
+        "privacyAndroid": "Privacybeleid van DoseWeek voor Android"
+      }
+    },
+    "pt-PT": {
+      "title": "Política de privacidade dos dados de saúde dos consumidores nos EUA",
+      "intro": "Este aviso separado abrange os dados de saúde dos utilizadores nos EUA, incluindo Washington, Nevada e Connecticut. É um projeto de revisão 1.0.6 não publicado; a data de entrada em vigor não está definida.",
+      "effectiveDateLabel": "Data de entrada em vigor",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Dados de saúde",
+          "paragraphs": [
+            "Os dados de saúde incluem medicamentos, doses e horários, notas, medidas corporais como peso, refeições e nutrição e inferências meramente indicativas, como estimativas de dose. Registos sincronizados cifrados e metadados ligados à conta, sincronização, acesso e utilização de serviços de saúde também podem estar abrangidos. O servidor não consegue ler registos cifrados ponto a ponto."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Finalidades e fontes",
+          "paragraphs": [
+            "As fontes são os registos introduzidos e as leituras autorizadas que escolhe do Apple Saúde (HealthKit) ou Health Connect. O início Apple/Google e avisos da loja fornecem metadados de conta/compra. Não obtemos dados de saúde de intermediários de dados.",
+            "Usamos estes dados para apresentar e gerir registos, fazer cálculos indicativos, fornecer sincronização e cópias solicitadas e proteger o serviço. Não os usamos para diagnóstico, recomendações de tratamento ou publicidade ou análise baseada na saúde."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Comunicação e destinatários",
+          "paragraphs": [
+            "Os subcontratantes de infraestrutura Cloudflare e AWS tratam os registos de saúde cifrados acima e metadados necessários de conta/ligação para transferência, alojamento, proteção e cópias. Devem seguir instruções e garantias contratuais; não autorizamos utilização autónoma de dados de saúde.",
+            "Apple e Google tratam início/pagamentos nos seus próprios papéis; DoseWeek não envia conteúdo de saúde registado por essas vias. Google AdMob/Firebase recebem dados técnicos SDK descritos nas políticas gerais, não conteúdo de saúde registado. Dados técnicos que revelam utilização de serviços de saúde recebem as proteções aplicáveis. Não partilhamos dados de saúde com empresas afiliadas. Se escolher exportação, integração de calendário ou cópia na sua própria nuvem, destinatários e fornecedores de ficheiros/calendário/nuvem escolhidos recebem os detalhes selecionados ou ficheiro cifrado e podem criar outras cópias. Quando dados técnicos revelam utilização de serviços de saúde, comunicá-los à AdMob/Firebase exige o consentimento separado aplicável à partilha de dados de saúde; o consentimento para publicidade, por si só, não o substitui.",
+            "Não vendemos dados de saúde. Não enviamos conteúdo de saúde registado para publicidade nem usamos segmentação publicitária baseada na saúde. Não usamos delimitação geográfica junto de locais de cuidados para identificar ou seguir pessoas, recolher dados de saúde ou enviar mensagens ou anúncios de saúde."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Consentimento",
+          "paragraphs": [
+            "A sincronização de saúde opcional requer consentimento explícito. Recolha/utilização ou partilha sem consentimento limita-se ao necessário para o serviço solicitado. A exceção nunca abrange publicidade ou análise opcionais.",
+            "Partilha fora do serviço solicitado requer consentimento separado da recolha. A recusa mantém o registo local. Retirar é tão simples como consentir: desative a sincronização nas definições ou contacte-nos."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Direitos e eliminação",
+          "paragraphs": [
+            "Nas definições ou em wonyoung@wonyoungchoi.dev pode pedir confirmação da recolha, acesso aos dados de saúde e categorias, fontes e destinatários, retirar consentimento ou eliminar. Usamos apenas informação mínima para verificar identidade.",
+            "Após verificação, a eliminação da conta ou cópia do servidor começa imediatamente, mesmo com subscrição ativa, sem esperar pelo fim. Pedimos também eliminação aos subcontratantes e outros destinatários de saúde. Os dados eliminados desaparecem em 7 dias das cópias, versões de objetos, réplicas, exportações temporárias, registos pertinentes e instantâneos de recuperação. Restaurar não os deve voltar a expor.",
+            "Os registos locais e ficheiros exportados eliminam-se à parte. O cancelamento da subscrição na loja também é separado. Não envie palavras-passe, códigos de recuperação, registos de saúde ou tokens de compra por e-mail."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Respostas e recursos",
+          "paragraphs": [
+            "Washington: resposta em 45 dias após receção; uma prorrogação justificada de 45 dias, com motivo antes do prazo original; decisão de recurso em 45 dias.",
+            "Nevada: resposta geralmente em 45 dias após autenticação, com prorrogação justificada de 45 dias; eliminação pedida em 30 dias após autenticação e pelos destinatários em 30 dias após aviso; recurso em 45 dias. O nosso limite de cópias mais curto de 7 dias mantém-se.",
+            "Connecticut: resposta em 45 dias, prorrogação justificada de 45 dias; recurso em 60 dias; tratamento abrangido baseado em consentimento termina em 15 dias após retirada. Recorra de recusa pelo mesmo e-mail. Indicamos motivos e, se o recurso for recusado, como reclamar ao procurador-geral do estado competente."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contacto e alterações",
+          "paragraphs": [
+            "Operador: Wonyoung Labs. Contacto de privacidade: Wonyoung Choi, wonyoung@wonyoungchoi.dev. As políticas gerais explicam conservação, transferências, segurança e resposta a violações. Ampliar utilização ou partilha de saúde requer os avisos aplicáveis e novo consentimento."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Política de Privacidade",
+        "privacyAndroid": "Política de Privacidade do DoseWeek para Android"
+      }
+    },
+    "pl": {
+      "title": "Polityka prywatności danych zdrowotnych konsumentów w USA",
+      "intro": "Ta odrębna informacja obejmuje dane zdrowotne użytkowników w USA, w tym Washington, Nevada i Connecticut. To nieopublikowany projekt do przeglądu wersji 1.0.6; data wejścia w życie nie jest ustalona.",
+      "effectiveDateLabel": "Data wejścia w życie",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Dane zdrowotne",
+          "paragraphs": [
+            "Dane zdrowotne obejmują nazwy leków, dawki i terminy, notatki, pomiary ciała, w tym wagę, posiłki i żywienie oraz wyłącznie orientacyjne wnioski, np. szacunki dawki. Mogą obejmować też zaszyfrowane synchronizowane zapisy i powiązane metadane konta, synchronizacji, dostępu i korzystania z usług zdrowotnych. Serwer nie odczyta zapisów szyfrowanych end-to-end."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Cele i źródła",
+          "paragraphs": [
+            "Źródłami są wpisane zapisy i wybrane, dozwolone odczyty Apple Zdrowie (HealthKit) lub Health Connect. Logowanie Apple/Google i powiadomienia sklepu dostarczają metadane konta/zakupu. Nie pozyskujemy danych zdrowotnych od brokerów danych.",
+            "Używamy ich do wyświetlania i zarządzania zapisami, obliczeń orientacyjnych, żądanej synchronizacji i kopii oraz ochrony usługi. Nie służą diagnozie, zaleceniom leczenia ani reklamie lub analityce opartej na zdrowiu."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Ujawnianie i odbiorcy",
+          "paragraphs": [
+            "Podmioty przetwarzające infrastrukturę Cloudflare i AWS obsługują opisane wyżej zaszyfrowane zapisy zdrowotne i niezbędne metadane konta/połączenia do przesyłania, hostingu, ochrony i kopii. Muszą stosować nasze instrukcje i zabezpieczenia umowne; nie zezwalamy na samodzielne użycie danych zdrowotnych.",
+            "Apple i Google obsługują logowanie/płatności we własnych rolach; DoseWeek nie wysyła tymi drogami zapisanej treści zdrowotnej. Google AdMob/Firebase otrzymują techniczne dane SDK opisane w politykach ogólnych, nie zapisaną treść zdrowotną. Dane techniczne ujawniające użycie usługi zdrowotnej podlegają właściwej ochronie. Nie udostępniamy danych zdrowotnych spółkom powiązanym. Po wyborze eksportu, integracji kalendarza lub własnej kopii w chmurze wybrani odbiorcy i dostawcy plików/kalendarza/chmury otrzymują wybrane informacje lub zaszyfrowany plik i mogą utworzyć kolejne kopie. Gdy dane techniczne ujawniają korzystanie z usług zdrowotnych, przekazanie ich AdMob/Firebase wymaga właściwej odrębnej zgody na udostępnianie danych zdrowotnych; sama zgoda reklamowa nie wystarcza.",
+            "Nie sprzedajemy danych zdrowotnych. Nie wysyłamy zapisanej treści zdrowotnej do reklamy ani nie stosujemy targetowania reklam na podstawie zdrowia. Nie stosujemy geofencingu wokół placówek opieki do identyfikacji lub śledzenia ludzi, zbierania danych zdrowotnych lub wysyłania zdrowotnych wiadomości czy reklam."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Zgoda",
+          "paragraphs": [
+            "Opcjonalna synchronizacja zdrowia wymaga wyraźnej zgody. Zbieranie/użycie lub udostępnianie bez zgody ogranicza się do konieczności świadczenia żądanej usługi. Wyjątek nigdy nie obejmuje opcjonalnych reklam lub analityki.",
+            "Udostępnianie poza żądaną usługą wymaga odrębnej zgody od zbierania. Odmowa nie blokuje lokalnych zapisów. Wycofanie jest równie łatwe jak udzielenie: należy wyłączyć synchronizację w ustawieniach lub skontaktować się z nami."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Prawa i usuwanie",
+          "paragraphs": [
+            "W ustawieniach lub pod wonyoung@wonyoungchoi.dev można żądać potwierdzenia zbierania, dostępu do danych zdrowotnych, kategorii, źródeł i odbiorców, wycofać zgodę lub usunąć dane. Weryfikacja tożsamości używa tylko niezbędnego minimum informacji.",
+            "Po weryfikacji usuwanie konta lub kopii serwera zaczyna się natychmiast, także przy aktywnej subskrypcji, bez czekania na jej koniec. Żądamy też usunięcia od podmiotów przetwarzających i innych odbiorców zdrowia. Usunięte dane znikają w ciągu 7 dni z kopii, wersji obiektów, replik, tymczasowych eksportów, właściwych logów i migawek odzyskiwania. Odtworzenie nie może ponownie ich udostępnić.",
+            "Lokalne zapisy i wyeksportowane pliki usuwa się oddzielnie, podobnie jak subskrypcję w sklepie. Nie wysyłaj pocztą haseł, kodów odzyskiwania, zapisów zdrowotnych ani tokenów zakupu."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Odpowiedzi i odwołania",
+          "paragraphs": [
+            "Washington: odpowiedź w 45 dni od otrzymania; jedno uzasadnione przedłużenie o 45 dni, z przyczyną przed pierwotnym terminem; decyzja odwoławcza w 45 dni.",
+            "Nevada: odpowiedź zwykle w 45 dni po uwierzytelnieniu, uzasadnione przedłużenie o 45 dni; żądane usunięcie w 30 dni po uwierzytelnieniu i przez odbiorców w 30 dni od zawiadomienia; odwołanie w 45 dni. Nasz surowszy termin kopii 7 dni nadal obowiązuje.",
+            "Connecticut: odpowiedź w 45 dni, uzasadnione przedłużenie o 45 dni; odwołanie w 60 dni; objęte przetwarzanie na zgodzie ustaje w 15 dni od wycofania. Od odmowy można odwołać się tym samym e-mailem. Podajemy przyczyny i po odrzuceniu odwołania wyjaśniamy skargę do właściwego prokuratora generalnego stanu."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Kontakt i zmiany",
+          "paragraphs": [
+            "Operator: Wonyoung Labs. Kontakt prywatności: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Ogólne polityki wyjaśniają retencję, przekazywanie, bezpieczeństwo i reakcje na naruszenia. Rozszerzenie użycia lub udostępniania zdrowia wymaga właściwego zawiadomienia i nowej zgody."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Polityka prywatności",
+        "privacyAndroid": "Polityka prywatności DoseWeek na Androida"
+      }
+    },
+    "sv": {
+      "title": "Integritetspolicy för amerikanska konsumenters hälsodata",
+      "intro": "Denna separata information gäller hälsodata för användare i USA, inklusive Washington, Nevada och Connecticut. Detta är ett opublicerat granskningsutkast för 1.0.6; ikraftträdandedatum är inte bestämt.",
+      "effectiveDateLabel": "Ikraftträdandedatum",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Hälsodata",
+          "paragraphs": [
+            "Hälsodata omfattar läkemedelsnamn, doser och tidpunkter, anteckningar, kroppsmått som vikt, måltider och näring samt endast vägledande slutsatser som dosuppskattningar. Även krypterade synkroniserade uppgifter och kopplad konto-, synkroniserings-, åtkomst- och hälsotjänstanvändningsmetadata kan omfattas. Servern kan inte läsa totalsträckskrypterade uppgifter."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Syften och källor",
+          "paragraphs": [
+            "Källor är uppgifter du anger och avläsningar du väljer att tillåta från Apple Hälsa (HealthKit) eller Health Connect. Apple-/Google-inloggning och Store-meddelanden ger konto-/köpmetadata. Vi hämtar inte hälsodata från datamäklare.",
+            "Vi använder data för att visa och hantera dina uppgifter, göra vägledande beräkningar, ge begärd synkronisering och säkerhetskopiering och skydda tjänsten. De används inte för diagnos, behandlingsråd eller hälsobaserade annonser eller analyser."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Delning och mottagare",
+          "paragraphs": [
+            "Infrastrukturbiträdena Cloudflare och AWS behandlar ovan beskrivna krypterade hälsouppgifter och nödvändig konto-/anslutningsmetadata för överföring, hosting, skydd och säkerhetskopiering. De måste följa våra instruktioner och avtalsgarantier; vi tillåter inte självständig användning av hälsodata.",
+            "Apple och Google hanterar inloggning/betalning i egna roller; DoseWeek skickar inget registrerat hälsoinnehåll via dessa vägar. Google AdMob/Firebase får tekniska SDK-data enligt allmänna integritetspolicyer, inte registrerat hälsoinnehåll. Tekniska data som avslöjar hälsotjänstanvändning får tillämpligt hälsodataskydd. Vi delar inga hälsodata med koncernbolag. Om du väljer export, kalenderintegration eller egen molnsäkerhetskopiering får valda mottagare och fil-/kalender-/molnleverantörer utvalda uppgifter eller krypterade filer och kan skapa ytterligare kopior. När tekniska data avslöjar hälsotjänstanvändning kräver delning med AdMob/Firebase tillämpligt separat samtycke till delning av hälsodata; annonssamtycke ensamt räcker inte.",
+            "Vi säljer inte hälsodata. Vi skickar inte registrerat hälsoinnehåll för annonser och använder inte hälsobaserad annonsinriktning. Vi använder inte geofencing runt vårdplatser för att identifiera eller spåra personer, samla hälsodata eller skicka hälsorelaterade meddelanden eller annonser."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Ditt samtycke",
+          "paragraphs": [
+            "Valfri hälsosynkronisering använder uttryckligt samtycke. Insamling/användning eller delning utan samtycke begränsas till det nödvändiga för den begärda tjänsten. Undantaget gäller aldrig valfria annonser eller analyser.",
+            "Delning utanför begärd tjänst kräver separat samtycke från insamlingen. Vid avböjande fungerar lokal registrering. Det är lika enkelt att återkalla som att samtycka: stäng av synkronisering i Inställningar eller kontakta oss."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Rättigheter och radering",
+          "paragraphs": [
+            "I appinställningar eller via wonyoung@wonyoungchoi.dev kan du få insamling bekräftad, få tillgång till hälsodata och kategorier, källor och mottagare, återkalla samtycke eller radera. Vi använder bara minsta nödvändiga information för identitetskontroll.",
+            "Efter kontroll börjar radering av konto eller serverkopia omedelbart även med aktiv prenumeration, utan att invänta dess slut. Vi begär radering även av biträden och andra hälsodatamottagare. Raderade data försvinner inom 7 dagar från säkerhetskopior, objektversioner, repliker, tillfälliga exporter, berörda loggar och återställningsögonblicksbilder. Återställning får inte göra dem tillgängliga igen.",
+            "Lokala uppgifter och exporterade filer raderas separat, liksom Store-prenumerationen avslutas separat. Mejla inte lösenord, återställningskoder, hälsouppgifter eller köptoken."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Svar och överklaganden",
+          "paragraphs": [
+            "Washington: svar inom 45 dagar från mottagande; en motiverad förlängning om 45 dagar med skäl före ursprunglig frist; överklagandebeslut inom 45 dagar.",
+            "Nevada: normalt svar inom 45 dagar efter autentisering, motiverad förlängning om 45 dagar; begärd radering inom 30 dagar efter autentisering och hos mottagare inom 30 dagar efter meddelande; överklagande inom 45 dagar. Vår strängare säkerhetskopiegräns om 7 dagar gäller fortsatt.",
+            "Connecticut: svar inom 45 dagar, motiverad förlängning om 45 dagar; överklagande inom 60 dagar; berörd samtyckesbaserad behandling upphör inom 15 dagar efter återkallelse. Överklaga avslag via samma mejl. Vi ger skäl och förklarar vid avslag på överklagandet hur du klagar till behörig delstatsåklagare."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Kontakt och ändringar",
+          "paragraphs": [
+            "Operatör: Wonyoung Labs. Integritetskontakt: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Allmänna policyer förklarar lagring, överföring, säkerhet och incidenthantering. Utökad användning eller delning av hälsodata kräver tillämpligt meddelande och nytt samtycke."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Integritetspolicy",
+        "privacyAndroid": "Integritetspolicy för DoseWeek på Android"
+      }
+    },
+    "hi": {
+      "title": "अमेरिकी उपभोक्ता स्वास्थ्य डेटा गोपनीयता नीति",
+      "intro": "Washington, Nevada और Connecticut सहित अमेरिकी उपयोगकर्ताओं के लिए अलग स्वास्थ्य डेटा सूचना। यह 1.0.6 का अप्रकाशित समीक्षा मसौदा है; प्रभावी तिथि तय नहीं है।",
+      "effectiveDateLabel": "प्रभावी तिथि",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. स्वास्थ्य डेटा",
+          "paragraphs": [
+            "स्वास्थ्य डेटा में दवाओं, खुराक और समय के रिकॉर्ड, नोट्स, वज़न जैसे शारीरिक माप, भोजन और पोषण की जानकारी, तथा केवल संदर्भ के लिए स्वास्थ्य संबंधी अनुमान शामिल हैं, जैसे खुराक का अनुमान। एन्क्रिप्ट किए गए सिंक रिकॉर्ड और उनसे जुड़ी खाते, सिंक, एक्सेस और स्वास्थ्य सेवा के उपयोग की जानकारी भी स्वास्थ्य डेटा हो सकती है। सर्वर एंड-टू-एंड एन्क्रिप्ट किए गए रिकॉर्ड नहीं पढ़ सकता।"
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. डेटा के स्रोत और उपयोग",
+          "paragraphs": [
+            "आप रिकॉर्ड दर्ज करते हैं या Apple Health (HealthKit) अथवा Health Connect से उन रीडिंग को चुनते हैं जिनकी अनुमति आपने दी है। Apple/Google साइन-इन और Store की सूचनाओं से खाते और खरीद की जानकारी मिलती है। हम डेटा ब्रोकर से जानकारी नहीं लेते।",
+            "हम डेटा से आपके रिकॉर्ड दिखाते और सँभालते हैं, केवल संदर्भ के लिए गणनाएँ करते हैं, आपके अनुरोध पर सिंक और बैकअप देते हैं, और सेवा की सुरक्षा बनाए रखते हैं। हम निदान, उपचार की सलाह, या स्वास्थ्य डेटा से बने विज्ञापन या विश्लेषण नहीं देते।"
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. डेटा किसे दिया जाता है",
+          "paragraphs": [
+            "अवसंरचना सेवा प्रदाता Cloudflare और AWS एन्क्रिप्ट किए गए रिकॉर्ड तथा खाते और कनेक्शन की आवश्यक जानकारी को स्थानांतरण, होस्टिंग, सुरक्षा और बैकअप के लिए सँभालते हैं। उन्हें हमारे निर्देशों और अनुबंध में तय सुरक्षा उपायों का पालन करना अनिवार्य है; हम स्वास्थ्य डेटा के स्वतंत्र उपयोग की अनुमति नहीं देते।",
+            "Apple/Google अपनी भूमिकाओं में साइन-इन और भुगतान सँभालते हैं; DoseWeek साइन-इन या भुगतान के रास्तों से दर्ज की गई स्वास्थ्य सामग्री नहीं भेजता। Google AdMob/Firebase को केवल सामान्य गोपनीयता नीतियों में घोषित SDK तकनीकी डेटा मिलता है, दर्ज की गई स्वास्थ्य सामग्री नहीं। स्वास्थ्य सेवा के उपयोग का पता देने वाले तकनीकी डेटा पर भी लागू स्वास्थ्य डेटा सुरक्षा उपाय लागू होते हैं। आप निर्यात, कैलेंडर एकीकरण या अपना क्लाउड बैकअप चुनते हैं, तो चुने हुए प्राप्तकर्ताओं और फ़ाइल, कैलेंडर या क्लाउड सेवा प्रदाताओं को चुनी गई जानकारी या एन्क्रिप्ट की गई फ़ाइल मिलती है; वे आगे प्रतियाँ बना सकते हैं। जब तकनीकी डेटा से स्वास्थ्य सेवा के उपयोग का पता चलता है, तो AdMob/Firebase को इसे देने के लिए लागू नियमों के अनुसार स्वास्थ्य डेटा साझा करने की अलग सहमति चाहिए; केवल विज्ञापन की सहमति से यह अलग सहमति नहीं मिल जाती।",
+            "हम स्वास्थ्य डेटा संबद्ध कंपनियों के साथ साझा नहीं करते। हम स्वास्थ्य डेटा नहीं बेचते। हम विज्ञापन के लिए दर्ज की गई स्वास्थ्य सामग्री नहीं भेजते और स्वास्थ्य डेटा पर आधारित विज्ञापन लक्ष्यीकरण नहीं करते। लोगों की पहचान या निगरानी, स्वास्थ्य डेटा एकत्र करने, या स्वास्थ्य संबंधी संदेश या विज्ञापन भेजने के लिए स्वास्थ्य सेवा स्थानों के आसपास जियोफेंसिंग नहीं करते।"
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. सहमति और आपके विकल्प",
+          "paragraphs": [
+            "वैकल्पिक स्वास्थ्य सिंक के लिए स्पष्ट सहमति ली जाती है। सहमति के बिना डेटा एकत्र करना, उपयोग करना या साझा करना केवल आपकी माँगी गई सेवा के लिए आवश्यक होने तक सीमित है। यह अपवाद वैकल्पिक विज्ञापनों या विश्लेषण पर कभी लागू नहीं होता।",
+            "माँगी गई सेवा से बाहर डेटा साझा करने के लिए, डेटा एकत्र करने की सहमति से अलग सहमति चाहिए। मना करने पर भी स्थानीय रिकॉर्ड रखना उपलब्ध रहता है। सहमति वापस लेना उतना ही आसान है जितना देना: सेटिंग्स में सिंक बंद करें या हमसे संपर्क करें।"
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. आपके अधिकार और डेटा मिटाना",
+          "paragraphs": [
+            "ऐप की सेटिंग्स या wonyoung@wonyoungchoi.dev के जरिए आप पूछ सकते हैं कि स्वास्थ्य डेटा एकत्र किया गया है या नहीं, अपने स्वास्थ्य डेटा और उसकी श्रेणियों, स्रोतों तथा प्राप्तकर्ताओं तक पहुँच माँग सकते हैं, सहमति वापस ले सकते हैं या डेटा मिटाने का अनुरोध कर सकते हैं। पहचान सत्यापित करने के लिए हम केवल न्यूनतम आवश्यक जानकारी लेते हैं।",
+            "पहचान सत्यापन के तुरंत बाद खाता और सर्वर की प्रतियाँ मिटाने की प्रक्रिया शुरू होती है, भले ही सदस्यता सक्रिय हो; सदस्यता खत्म होने का इंतजार नहीं होता। हम सेवा प्रदाताओं और स्वास्थ्य डेटा के अन्य प्राप्तकर्ताओं को भी मिटाने के लिए सूचित करते हैं। बैकअप, ऑब्जेक्ट संस्करण, प्रतिकृतियाँ, अस्थायी निर्यात, लॉग और रिकवरी स्नैपशॉट में मौजूद प्रतियाँ 7 दिनों के भीतर मिटाई जाती हैं। बहाली के बाद मिटाया गया डेटा फिर उपलब्ध नहीं कराया जाता।",
+            "स्थानीय रिकॉर्ड और आपके निर्यात किए गए डेटा अलग से मिटाने होते हैं। Store की सदस्यता रद्द करना भी अलग है। पासवर्ड, रिकवरी कोड, स्वास्थ्य रिकॉर्ड या खरीद टोकन कभी ईमेल न करें।"
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. समयसीमाएँ और अपील",
+          "paragraphs": [
+            "Washington: अनुरोध मिलने के 45 दिनों के भीतर जवाब दिया जाता है। उचित कारण से एक बार 45 दिन बढ़ाए जा सकते हैं; मूल समयसीमा से पहले कारण बताया जाता है। अपील पर फैसला 45 दिनों के भीतर दिया जाता है।",
+            "Nevada: आम तौर पर पहचान सत्यापन के बाद 45 दिनों के भीतर जवाब दिया जाता है; उचित कारण से 45 दिन बढ़ाए जा सकते हैं। अनुरोध किया गया डेटा पहचान सत्यापन के बाद 30 दिनों के भीतर मिटाया जाता है, और प्राप्तकर्ताओं को सूचना मिलने के 30 दिनों के भीतर मिटाना होता है। अपील पर फैसला 45 दिनों के भीतर दिया जाता है। बैकअप के लिए DoseWeek की अधिक सख्त 7 दिन की सीमा लागू होती है।",
+            "Connecticut: जवाब 45 दिनों के भीतर दिया जाता है; उचित कारण से 45 दिन बढ़ाए जा सकते हैं। अपील पर फैसला 60 दिनों के भीतर दिया जाता है। सहमति वापस लेने के बाद उसके आधार पर होने वाला संबंधित प्रसंस्करण 15 दिनों के भीतर बंद होता है। अनुरोध अस्वीकार होने पर उसी ईमेल पते से अपील करें। हम अस्वीकृति का कारण बताते हैं और अपील भी अस्वीकार होने पर संबंधित Attorney General के पास शिकायत करने का तरीका बताते हैं।"
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. संपर्क और बदलाव",
+          "paragraphs": [
+            "संचालक: Wonyoung Labs। गोपनीयता संपर्क: Wonyoung Choi, wonyoung@wonyoungchoi.dev। सामान्य गोपनीयता नीतियाँ डेटा रखने की अवधि, स्थानांतरण, सुरक्षा और डेटा उल्लंघन की प्रतिक्रिया समझाती हैं। स्वास्थ्य डेटा के उपयोग या साझाकरण का दायरा बढ़ाने वाले बदलावों के लिए लागू सूचना और नई सहमति जरूरी है।"
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "गोपनीयता नीति",
+        "privacyAndroid": "Android के लिए DoseWeek गोपनीयता नीति"
+      }
+    },
+    "pt-BR": {
+      "title": "Política de privacidade de dados de saúde de consumidores nos EUA",
+      "intro": "Este aviso separado cobre dados de saúde de usuários nos EUA, incluindo Washington, Nevada e Connecticut. É um rascunho de revisão 1.0.6 não publicado; a data de vigência não foi definida.",
+      "effectiveDateLabel": "Data de vigência",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Dados de saúde",
+          "paragraphs": [
+            "Dados de saúde incluem medicamentos, doses e horários, notas, medidas corporais como peso, refeições e nutrição e inferências apenas indicativas, como estimativas de dose. Registros sincronizados criptografados e metadados vinculados a conta, sincronização, acesso e uso de serviços de saúde também podem se enquadrar. O servidor não lê registros com criptografia ponta a ponta."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Finalidades e fontes",
+          "paragraphs": [
+            "As fontes são registros que você insere e leituras autorizadas que escolhe do Apple Saúde (HealthKit) ou Health Connect. Login Apple/Google e avisos da loja fornecem metadados de conta/compra. Não obtemos dados de saúde de corretores de dados.",
+            "Usamos os dados para exibir e gerenciar seus registros, fazer cálculos indicativos, fornecer sincronização e backups solicitados e proteger o serviço. Não usamos para diagnóstico, recomendação de tratamento ou anúncios ou análises baseados na saúde."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Compartilhamento e destinatários",
+          "paragraphs": [
+            "Os operadores de infraestrutura Cloudflare e AWS tratam os registros de saúde criptografados acima e metadados necessários de conta/conexão para transferência, hospedagem, proteção e backups. Devem seguir nossas instruções e garantias contratuais; não autorizamos uso independente de dados de saúde.",
+            "Apple e Google tratam login/pagamento em seus próprios papéis; DoseWeek não envia conteúdo de saúde registrado por esses caminhos. Google AdMob/Firebase recebem dados técnicos SDK descritos nas políticas gerais, não o conteúdo de saúde registrado. Dados técnicos que revelem uso de serviço de saúde recebem as proteções aplicáveis. Não compartilhamos dados de saúde com empresas afiliadas. Se escolher exportação, integração de calendário ou backup na sua própria nuvem, destinatários e provedores de arquivos/calendário/nuvem escolhidos recebem os detalhes selecionados ou arquivo criptografado e podem fazer outras cópias. Quando dados técnicos revelam uso de serviços de saúde, divulgá-los à AdMob/Firebase exige o consentimento separado aplicável para compartilhar dados de saúde; consentimento para anúncios, por si só, não o substitui.",
+            "Não vendemos dados de saúde. Não enviamos conteúdo de saúde registrado para publicidade nem usamos segmentação de anúncios baseada na saúde. Não usamos cercas virtuais em torno de locais de saúde para identificar ou rastrear pessoas, coletar dados de saúde ou enviar mensagens ou anúncios de saúde."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Seu consentimento",
+          "paragraphs": [
+            "A sincronização de saúde opcional usa consentimento explícito. Coleta/uso ou compartilhamento sem consentimento se limita ao necessário ao serviço solicitado. A exceção nunca cobre anúncios ou análises opcionais.",
+            "Compartilhar fora do serviço solicitado exige consentimento separado da coleta. Recusar mantém o registro local. Revogar é tão fácil quanto consentir: desative sincronização em Ajustes ou entre em contato."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Direitos e exclusão",
+          "paragraphs": [
+            "Nos ajustes ou por wonyoung@wonyoungchoi.dev, peça confirmação da coleta, acesso aos dados de saúde e categorias, fontes e destinatários, revogue consentimento ou exclua. Usamos só o mínimo necessário para verificar identidade.",
+            "Após verificar, a exclusão de conta ou cópia do servidor começa imediatamente mesmo com assinatura ativa, sem esperar seu término. Pedimos exclusão também a operadores e outros destinatários de saúde. Dados excluídos somem em 7 dias de backups, versões de objetos, réplicas, exportações temporárias, logs pertinentes e snapshots de recuperação. Restaurar não deve expô-los novamente.",
+            "Registros locais e arquivos exportados são excluídos separadamente. Cancelar assinatura da loja também é separado. Não envie senhas, códigos de recuperação, registros de saúde ou tokens de compra por e-mail."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Respostas e recursos",
+          "paragraphs": [
+            "Washington: resposta em 45 dias do recebimento; uma extensão justificada de 45 dias com motivo antes do prazo original; decisão de recurso em 45 dias.",
+            "Nevada: resposta normalmente em 45 dias após autenticação, com extensão justificada de 45 dias; exclusão solicitada em 30 dias após autenticação e pelos destinatários em 30 dias do aviso; recurso em 45 dias. Nosso limite de backup mais curto de 7 dias continua válido.",
+            "Connecticut: resposta em 45 dias, extensão justificada de 45 dias; recurso em 60 dias; tratamento coberto baseado em consentimento cessa em 15 dias após revogação. Recorra de recusa pelo mesmo e-mail. Damos motivos e, se o recurso for negado, explicamos como reclamar ao procurador-geral do estado pertinente."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. Contato e mudanças",
+          "paragraphs": [
+            "Operador: Wonyoung Labs. Contato de privacidade: Wonyoung Choi, wonyoung@wonyoungchoi.dev. As políticas gerais explicam retenção, transferências, segurança e resposta a incidentes. Ampliar uso ou compartilhamento de saúde exige os avisos aplicáveis e novo consentimento."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Política de Privacidade",
+        "privacyAndroid": "Política de Privacidade do DoseWeek para Android"
+      }
+    },
+    "ar": {
+      "title": "سياسة خصوصية البيانات الصحية للمستهلكين في الولايات المتحدة",
+      "intro": "إشعار مستقل بشأن البيانات الصحية للمستخدمين في الولايات المتحدة، بما فيها Washington وNevada وConnecticut. هذه مسودة مراجعة غير منشورة للإصدار 1.0.6؛ لم يُحدد تاريخ السريان.",
+      "effectiveDateLabel": "تاريخ السريان",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. البيانات الصحية",
+          "paragraphs": [
+            "تشمل البيانات الصحية سجلات الأدوية والجرعات وتوقيتها، والملاحظات، وقياسات الجسم مثل الوزن، والوجبات والتغذية، والاستنتاجات الصحية المخصصة للاستئناس فقط، مثل تقديرات الجرعات. وقد تشمل أيضًا السجلات المشفرة المتزامنة والبيانات المرتبطة بالحساب والمزامنة والوصول واستخدام الخدمات الصحية. لا يستطيع الخادم قراءة السجلات المشفرة من طرف إلى طرف."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. مصادر البيانات وأغراض استخدامها",
+          "paragraphs": [
+            "تُدخل السجلات بنفسك، أو تختار القراءات التي سمحت بالوصول إليها من Apple Health (HealthKit) أو Health Connect. توفر خدمة تسجيل الدخول من Apple/Google وإشعارات Store بيانات الحساب والمشتريات. لا نحصل على البيانات من وسطاء البيانات.",
+            "نستخدم البيانات لعرض سجلاتك وإدارتها، وإجراء حسابات للاستئناس فقط، وتوفير المزامنة والنسخ الاحتياطية التي تطلبها، وحماية أمن الخدمة. لا نقدم تشخيصًا أو توصيات علاجية، ولا نستخدم البيانات الصحية لإنتاج إعلانات أو تحليلات."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. الجهات التي تتلقى البيانات",
+          "paragraphs": [
+            "تعالج جهتا البنية التحتية Cloudflare وAWS السجلات المشفرة وبيانات الحساب والاتصال الضرورية للنقل والاستضافة والحماية والنسخ الاحتياطي. وعليهما الالتزام بتعليماتنا والضمانات التعاقدية؛ ولا نجيز الاستخدام المستقل للبيانات الصحية.",
+            "تتولى Apple/Google تسجيل الدخول والدفع ضمن أدوارها الخاصة؛ ولا يرسل DoseWeek المحتوى الصحي المسجل عبر مسارات تسجيل الدخول أو الدفع. تتلقى Google AdMob/Firebase فقط البيانات التقنية لحزم SDK المعلنة في سياسات الخصوصية العامة، ولا تتلقى المحتوى الصحي المسجل. وتخضع البيانات التقنية التي تكشف استخدام الخدمات الصحية للحماية المطبقة على البيانات الصحية. إذا اخترت التصدير أو تكامل التقويم أو النسخ الاحتياطي إلى سحابتك، فتتلقى الجهات التي تختارها ومزودو خدمات الملفات أو التقويم أو السحابة المعلومات المحددة أو الملف المشفر، وقد تنشئ نسخًا لاحقة. عندما تكشف البيانات التقنية استخدام الخدمات الصحية، يتطلب الإفصاح عنها لـ AdMob/Firebase الموافقة المنفصلة الواجبة على مشاركة البيانات الصحية؛ ولا تكفي الموافقة على الإعلانات وحدها لإثبات هذه الموافقة.",
+            "لا نشارك البيانات الصحية مع الشركات التابعة. لا نبيع البيانات الصحية. لا نرسل المحتوى الصحي المسجل لأغراض الإعلان ولا نستخدم استهدافًا إعلانيًا مستمدًا من البيانات الصحية. ولا نستخدم السياج الجغرافي حول مواقع الرعاية الصحية للتعرف على الأشخاص أو تتبعهم، أو لجمع البيانات الصحية، أو لإرسال رسائل أو إعلانات مرتبطة بالصحة."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. الموافقة وخياراتك",
+          "paragraphs": [
+            "تتطلب المزامنة الصحية الاختيارية موافقة صريحة. يقتصر جمع البيانات أو استخدامها أو مشاركتها دون موافقة على ما يلزم لتقديم الخدمة التي طلبتها. ولا يشمل هذا الاستثناء مطلقًا الإعلانات أو التحليلات الاختيارية.",
+            "تتطلب المشاركة خارج نطاق الخدمة المطلوبة موافقة منفصلة عن موافقة الجمع. يظل تسجيل البيانات محليًا متاحًا عند الرفض. سحب الموافقة سهل بقدر منحها: أوقف المزامنة في الإعدادات أو تواصل معنا."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. حقوقك وحذف البيانات",
+          "paragraphs": [
+            "يمكنك، عبر الإعدادات في التطبيق أو wonyoung@wonyoungchoi.dev، طلب تأكيد جمع البيانات الصحية، والوصول إلى بياناتك وفئاتها ومصادرها والجهات المتلقية لها، أو سحب الموافقة، أو طلب الحذف. نتحقق من هويتك بأقل قدر ضروري من المعلومات.",
+            "تبدأ عملية حذف الحساب ونسخ الخادم فور التحقق من الهوية، حتى مع وجود اشتراك نشط؛ لا ننتظر انتهاء الاشتراك. نُخطر جهات المعالجة والجهات الأخرى التي تلقت البيانات الصحية بحذفها. تُحذف النسخ في النسخ الاحتياطية وإصدارات الكائنات والنسخ المتماثلة وعمليات التصدير المؤقتة والسجلات ولقطات الاسترداد خلال 7 أيام. ولا تُتاح البيانات المحذوفة بعد الاستعادة.",
+            "تُحذف السجلات المحلية والملفات التي صدّرتها بصورة منفصلة. وإلغاء اشتراك Store إجراء منفصل أيضًا. لا ترسل كلمات المرور أو رموز الاسترداد أو السجلات الصحية أو رموز عمليات الشراء عبر البريد الإلكتروني."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. المهل والاعتراضات",
+          "paragraphs": [
+            "Washington: نرد خلال 45 يومًا من استلام الطلب. يجوز تمديد المهلة مرة واحدة لمدة 45 يومًا لسبب مبرر، مع إبلاغك بالسبب قبل انتهاء المهلة الأصلية. يصدر قرار الاعتراض خلال 45 يومًا.",
+            "Nevada: نرد عادةً خلال 45 يومًا بعد التحقق من الهوية، مع إمكان تمديد مبرر لمدة 45 يومًا. تُحذف البيانات المطلوب حذفها خلال 30 يومًا بعد التحقق من الهوية، وتحذفها الجهات المتلقية خلال 30 يومًا من إخطارها. يصدر قرار الاعتراض خلال 45 يومًا. وتظل مهلة DoseWeek الأشد، وهي 7 أيام للنسخ الاحتياطية، سارية.",
+            "Connecticut: نرد خلال 45 يومًا، مع إمكان تمديد مبرر لمدة 45 يومًا. يصدر قرار الاعتراض خلال 60 يومًا. نوقف المعالجة المشمولة القائمة على الموافقة خلال 15 يومًا من سحبها. إذا رُفض طلبك، يمكنك الاعتراض عبر عنوان البريد نفسه. نوضح أسباب الرفض، وإذا رُفض الاعتراض أيضًا نوضح طريقة تقديم شكوى إلى المدعي العام المختص."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. التواصل والتغييرات",
+          "paragraphs": [
+            "المشغّل: Wonyoung Labs. جهة التواصل بشأن الخصوصية: Wonyoung Choi، wonyoung@wonyoungchoi.dev. تشرح سياسات الخصوصية العامة الاحتفاظ بالبيانات ونقلها وأمنها والاستجابة لخرق البيانات. تتطلب التغييرات التي توسع استخدام البيانات الصحية أو مشاركتها الإشعار الواجب وموافقة جديدة."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "سياسة الخصوصية",
+        "privacyAndroid": "سياسة خصوصية DoseWeek لنظام Android"
+      }
+    },
+    "zh-Hans": {
+      "title": "美国消费者健康数据隐私政策",
+      "intro": "面向美国用户的独立健康数据通知，涵盖 Washington、Nevada 和 Connecticut。这是尚未发布的 1.0.6 审阅草案；生效日期未定。",
+      "effectiveDateLabel": "生效日期",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. 健康数据",
+          "paragraphs": [
+            "健康数据包括用药、剂量和时间记录、备注、体重等身体测量数据、饮食与营养信息，以及仅供参考的健康推断，例如剂量估算。加密的同步记录及相关账户、同步、访问和健康服务使用元数据也可能属于健康数据。服务器无法读取端到端加密的记录。"
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. 数据来源与用途",
+          "paragraphs": [
+            "您自行输入记录，或从 Apple Health（HealthKit）或 Health Connect 中选择已授权的读数。Apple/Google 登录和 Store 通知提供账户与购买元数据。我们不从数据经纪商获取数据。",
+            "我们使用数据来显示和管理您的记录、进行仅供参考的计算、提供您请求的同步与备份，并保障服务安全。我们不提供诊断或治疗建议，也不基于健康数据制作广告或进行分析。"
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. 接收数据的各方",
+          "paragraphs": [
+            "基础设施处理方 Cloudflare 和 AWS 处理加密记录和必要的账户、连接元数据，用于传输、托管、保护和备份。它们必须遵守我们的指示及合同保障措施；我们不授权它们独立使用健康数据。",
+            "Apple/Google 根据各自的角色处理登录和付款；DoseWeek 不通过登录或付款路径发送记录的健康内容。Google AdMob/Firebase 仅接收一般隐私政策中已披露的 SDK 技术数据，不接收记录的健康内容。透露健康服务使用情况的技术数据也享有适用的健康数据保护。如您选择导出、日历集成或自行使用的云备份，选定的接收方及文件、日历或云服务提供方会收到选定的信息或加密文件，并可能进一步生成副本。当技术数据透露健康服务使用情况时，向 AdMob/Firebase 披露这些数据须根据适用要求取得健康数据共享的单独同意；仅有广告同意不等于已取得这项同意。",
+            "我们不与关联公司共享健康数据。我们不出售健康数据。我们不为广告发送记录的健康内容，也不基于健康数据进行广告定向。我们不在医疗服务地点周边使用地理围栏来识别或追踪人员、收集健康数据，或发送健康相关信息或广告。"
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. 同意与选择",
+          "paragraphs": [
+            "可选的健康同步需要明确同意。未经同意的收集、使用或共享，仅限于提供您请求的服务所必需的范围。此例外绝不适用于可选广告或分析。",
+            "超出所请求服务范围的共享，需要与收集同意分开的独立同意。拒绝后仍可在本地记录。撤回同意与给予同意同样方便：在设置中关闭同步，或联系我们。"
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. 您的权利与数据删除",
+          "paragraphs": [
+            "您可通过应用内设置或 wonyoung@wonyoungchoi.dev，请求确认是否收集健康数据、访问健康数据及其类别、来源和接收方、撤回同意或删除数据。我们仅使用必要的最少信息核实身份。",
+            "身份核实后，即使订阅仍有效，也会立即开始删除账户和服务器副本，无需等待订阅到期。我们会通知处理方及其他健康数据接收方删除数据。备份、对象版本、复制副本、临时导出、日志和恢复快照中的副本会在 7 天内删除。恢复后不会重新提供已删除的数据。",
+            "本地记录和您导出的文件需另行删除。取消 Store 订阅也是独立操作。请勿通过电子邮件发送密码、恢复代码、健康记录或购买令牌。"
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. 期限与申诉",
+          "paragraphs": [
+            "Washington：收到请求后 45 天内答复。理由充分时可延长一次，最多 45 天，并在原期限届满前说明理由。申诉决定在 45 天内作出。",
+            "Nevada：通常在身份验证后 45 天内答复；理由充分时可延长 45 天。请求删除的数据在身份验证后 30 天内删除，接收方须在收到通知后 30 天内删除。申诉决定在 45 天内作出。DoseWeek 更严格的备份删除期限仍为 7 天。",
+            "Connecticut：45 天内答复；理由充分时可延长 45 天。申诉决定在 60 天内作出。撤回同意后，15 天内停止适用的基于同意的数据处理。如请求被拒绝，可通过同一邮箱申诉。我们会说明拒绝理由；如申诉也被拒绝，会说明如何向相关州总检察长投诉。"
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. 联系与变更",
+          "paragraphs": [
+            "运营方：Wonyoung Labs。隐私联系人：Wonyoung Choi，wonyoung@wonyoungchoi.dev。一般隐私政策说明数据保留、传输、安全及数据泄露响应。扩大健康数据用途或共享范围的变更，需要依法通知并取得新的同意。"
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "隐私政策",
+        "privacyAndroid": "DoseWeek Android 版隐私政策"
+      }
+    },
+    "zh-Hant": {
+      "title": "美國消費者健康資料隱私政策",
+      "intro": "提供給美國使用者的獨立健康資料通知，涵蓋 Washington、Nevada 和 Connecticut。這是尚未發布的 1.0.6 審閱草案；生效日期未定。",
+      "effectiveDateLabel": "生效日期",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. 健康資料",
+          "paragraphs": [
+            "健康資料包括用藥、劑量和時間紀錄、備註、體重等身體測量資料、飲食與營養資訊，以及僅供參考的健康推論，例如劑量估算。加密的同步紀錄及相關帳戶、同步、存取和健康服務使用中繼資料也可能屬於健康資料。伺服器無法讀取端對端加密的紀錄。"
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. 資料來源與用途",
+          "paragraphs": [
+            "您自行輸入紀錄，或從 Apple Health（HealthKit）或 Health Connect 中選擇已授權的讀數。Apple/Google 登入和 Store 通知提供帳戶與購買中繼資料。我們不從資料仲介商取得資料。",
+            "我們使用資料來顯示和管理您的紀錄、進行僅供參考的計算、提供您要求的同步與備份，並保障服務安全。我們不提供診斷或治療建議，也不依據健康資料製作廣告或進行分析。"
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. 接收資料的各方",
+          "paragraphs": [
+            "基礎設施處理方 Cloudflare 和 AWS 處理加密紀錄和必要的帳戶、連線中繼資料，用於傳輸、託管、保護和備份。它們必須遵守我們的指示及合約保障措施；我們不授權它們獨立使用健康資料。",
+            "Apple/Google 依各自的角色處理登入和付款；DoseWeek 不透過登入或付款流程傳送記錄的健康內容。Google AdMob/Firebase 僅接收一般隱私政策中已揭露的 SDK 技術資料，不接收紀錄的健康內容。透露健康服務使用情況的技術資料也享有適用的健康資料保護。如您選擇匯出、行事曆整合或自行使用的雲端備份，選定的接收方及檔案、行事曆或雲端服務提供方會收到選定的資訊或加密檔案，並可能進一步產生副本。當技術資料透露健康服務使用情況時，向 AdMob/Firebase 揭露這些資料須依適用要求取得健康資料分享的獨立同意；僅有廣告同意不等於已取得這項同意。",
+            "我們不與關係企業分享健康資料。我們不出售健康資料。我們不為廣告傳送記錄的健康內容，也不以健康資料為依據鎖定廣告對象。我們不在醫療服務地點周邊使用地理圍欄來識別或追蹤人員、收集健康資料，或傳送健康相關訊息或廣告。"
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. 同意與選擇",
+          "paragraphs": [
+            "選用的健康同步需要明確同意。未經同意的收集、使用或分享，僅限於提供您要求的服務所必需的範圍。此例外絕不適用於選用廣告或分析。",
+            "超出所要求服務範圍的分享，需要與收集同意分開的獨立同意。拒絕後仍可在本機記錄。撤回同意與給予同意同樣方便：在設定中關閉同步，或聯絡我們。"
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. 您的權利與資料刪除",
+          "paragraphs": [
+            "您可透過應用程式內的設定或 wonyoung@wonyoungchoi.dev，要求確認是否收集健康資料、存取健康資料及其類別、來源和接收方、撤回同意或刪除資料。我們僅使用必要的最少資訊核實身分。",
+            "身分核實後，即使訂閱仍有效，也會立即開始刪除帳戶和伺服器副本，無須等待訂閱到期。我們會通知處理方及其他健康資料接收方刪除資料。備份、物件版本、複寫副本、暫存匯出、記錄檔和復原快照中的副本會在 7 天內刪除。還原後不會重新提供已刪除的資料。",
+            "本機紀錄和您匯出的檔案需另行刪除。取消 Store 訂閱也是獨立操作。請勿透過電子郵件傳送密碼、復原碼、健康紀錄或購買權杖。"
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. 期限與申訴",
+          "paragraphs": [
+            "Washington：收到要求後 45 天內回覆。理由充分時可延長一次，最多 45 天，並在原期限屆滿前說明理由。申訴決定在 45 天內作出。",
+            "Nevada：通常在身分驗證後 45 天內回覆；理由充分時可延長 45 天。要求刪除的資料在身分驗證後 30 天內刪除，接收方須在收到通知後 30 天內刪除。申訴決定在 45 天內作出。DoseWeek 更嚴格的備份刪除期限仍為 7 天。",
+            "Connecticut：45 天內回覆；理由充分時可延長 45 天。申訴決定在 60 天內作出。撤回同意後，15 天內停止適用的以同意為依據的資料處理。如要求遭拒，可透過同一信箱申訴。我們會說明拒絕理由；如申訴也遭拒，會說明如何向相關州總檢察長申訴。"
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. 聯絡與變更",
+          "paragraphs": [
+            "營運者：Wonyoung Labs。隱私聯絡人：Wonyoung Choi，wonyoung@wonyoungchoi.dev。一般隱私政策說明資料保留、傳輸、安全及資料外洩應變。擴大健康資料用途或分享範圍的變更，需要依法通知並取得新的同意。"
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "隱私權政策",
+        "privacyAndroid": "DoseWeek Android 版隱私權政策"
+      }
+    },
+    "tr": {
+      "title": "ABD Tüketici Sağlık Verileri Gizlilik Politikası",
+      "intro": "Washington, Nevada ve Connecticut dâhil ABD'deki kullanıcılar için ayrı sağlık verisi bildirimi. Bu, yayımlanmamış 1.0.6 inceleme taslağıdır; yürürlük tarihi belirlenmemiştir.",
+      "effectiveDateLabel": "Yürürlük tarihi",
+      "sections": [
+        {
+          "id": "categories",
+          "title": "1. Sağlık verileri",
+          "paragraphs": [
+            "Sağlık verileri; ilaç, doz ve zamanlama kayıtlarını, notları, kilo gibi vücut ölçümlerini, öğün ve beslenme bilgilerini ve doz tahminleri gibi yalnızca referans amaçlı sağlık çıkarımlarını kapsar. Şifrelenmiş eşitleme kayıtları ile bunlara bağlı hesap, eşitleme, erişim ve sağlık hizmeti kullanım üst verileri de sağlık verisi sayılabilir. Sunucu, uçtan uca şifrelenmiş kayıtları okuyamaz."
+          ]
+        },
+        {
+          "id": "purposes-sources",
+          "title": "2. Veri kaynakları ve kullanım amaçları",
+          "paragraphs": [
+            "Kayıtları siz girersiniz veya Apple Health (HealthKit) ya da Health Connect üzerinden izin verdiğiniz ölçümleri seçersiniz. Apple/Google ile giriş ve Store bildirimleri, hesap ve satın alma üst verilerini sağlar. Veri aracılarından veri almayız.",
+            "Verileri kayıtlarınızı göstermek ve yönetmek, yalnızca referans amaçlı hesaplamalar yapmak, istediğiniz eşitleme ve yedeklemeyi sağlamak ve hizmet güvenliğini korumak için kullanırız. Tanı veya tedavi önerisi sunmayız; sağlık verilerinden reklam ya da analitik üretmeyiz."
+          ]
+        },
+        {
+          "id": "disclosures",
+          "title": "3. Verileri alan taraflar",
+          "paragraphs": [
+            "Altyapı veri işleyenleri Cloudflare ve AWS, aktarım, barındırma, koruma ve yedekleme için şifrelenmiş kayıtları ve gerekli hesap ve bağlantı üst verilerini işler. Talimatlarımıza ve sözleşmesel güvencelere uymak zorundadırlar; sağlık verilerini bağımsız olarak kullanmalarına izin vermeyiz.",
+            "Apple/Google, kendi rolleri kapsamında giriş ve ödemeyi yürütür; DoseWeek, giriş veya ödeme akışları üzerinden kaydedilmiş sağlık içeriği göndermez. Google AdMob/Firebase yalnızca genel gizlilik politikalarında açıklanan SDK teknik verilerini alır, kaydedilen sağlık içeriğini almaz. Sağlık hizmeti kullanımını ortaya koyan teknik veriler de geçerli sağlık verisi korumalarına tabidir. Dışa aktarımı, takvim entegrasyonunu veya kendi bulut yedeğinizi seçerseniz, seçtiğiniz alıcılar ile dosya, takvim veya bulut sağlayıcıları seçilen bilgileri ya da şifrelenmiş dosyayı alır ve bunlardan başka kopyalar oluşturabilir. Teknik veriler sağlık hizmeti kullanımını ortaya koyduğunda, bunların AdMob/Firebase ile paylaşılması için geçerli kurallar uyarınca ayrı sağlık verisi paylaşım rızası gerekir; reklam rızası tek başına bu rızayı sağlamaz.",
+            "Sağlık verilerini bağlı şirketlerle paylaşmayız. Sağlık verilerini satmayız. Reklam amacıyla kaydedilmiş sağlık içeriği göndermeyiz veya sağlık verilerinden türetilen reklam hedeflemesi kullanmayız. Sağlık hizmeti sunulan yerlerin çevresinde kişileri tanımak ya da izlemek, sağlık verisi toplamak ya da sağlıkla ilgili mesaj veya reklam göndermek için coğrafi sınırlama kullanmayız."
+          ]
+        },
+        {
+          "id": "consent",
+          "title": "4. Rıza ve seçenekleriniz",
+          "paragraphs": [
+            "İsteğe bağlı sağlık eşitlemesi açık rıza gerektirir. Rıza olmadan toplama, kullanma veya paylaşma, yalnızca istediğiniz hizmet için gerekli olan işlemlerle sınırlıdır. Bu istisna, isteğe bağlı reklam veya analitiği hiçbir zaman kapsamaz.",
+            "İstediğiniz hizmetin dışındaki paylaşım, toplama rızasından ayrı bir rıza gerektirir. Reddetseniz de yerel kayıt tutabilirsiniz. Rızayı geri çekmek, vermek kadar kolaydır: Ayarlar üzerinden eşitlemeyi kapatın veya bize ulaşın."
+          ]
+        },
+        {
+          "id": "rights",
+          "title": "5. Haklarınız ve veri silme",
+          "paragraphs": [
+            "Uygulamadaki Ayarlar veya wonyoung@wonyoungchoi.dev üzerinden sağlık verisi toplanıp toplanmadığını doğrulatabilir; sağlık verilerinize, kategorilerine, kaynaklarına ve alıcılarına erişim isteyebilir; rızanızı geri çekebilir veya silme talep edebilirsiniz. Kimliğinizi yalnızca gerekli en az bilgiyle doğrularız.",
+            "Kimlik doğrulamasından hemen sonra, abonelik aktif olsa bile hesap ve sunucu kopyalarını silme işlemi başlar; aboneliğin bitmesi beklenmez. Veri işleyenleri ve sağlık verisini alan diğer tarafları silme için bilgilendiririz. Yedekler, nesne sürümleri, çoğaltılmış kopyalar, geçici dışa aktarımlar, günlükler ve kurtarma anlık görüntülerindeki kopyalar 7 gün içinde silinir. Silinen veriler geri yüklemeden sonra yeniden erişime açılmaz.",
+            "Yerel kayıtlar ve dışa aktardığınız dosyalar ayrı olarak silinir. Store aboneliğini iptal etmek de ayrı bir işlemdir. Parolaları, kurtarma kodlarını, sağlık kayıtlarını veya satın alma belirteçlerini asla e-postayla göndermeyin."
+          ]
+        },
+        {
+          "id": "deadlines",
+          "title": "6. Süreler ve itirazlar",
+          "paragraphs": [
+            "Washington: Talebin alınmasından itibaren 45 gün içinde yanıt verilir. Haklı bir gerekçeyle süre bir kez 45 gün uzatılabilir; gerekçe ilk süre dolmadan bildirilir. İtiraz kararı 45 gün içinde verilir.",
+            "Nevada: Genellikle kimlik doğrulamasından sonra 45 gün içinde yanıt verilir; haklı bir gerekçeyle 45 günlük uzatma yapılabilir. Silinmesi talep edilen veriler kimlik doğrulamasından sonra 30 gün içinde, alıcılardaki veriler ise bildirimi almalarından itibaren 30 gün içinde silinir. İtiraz kararı 45 gün içinde verilir. DoseWeek'in yedekler için daha sıkı olan 7 günlük sınırı geçerlidir.",
+            "Connecticut: 45 gün içinde yanıt verilir; haklı bir gerekçeyle 45 günlük uzatma yapılabilir. İtiraz kararı 60 gün içinde verilir. Rıza geri çekildikten sonra, rızaya dayanan ve bu kapsama giren işlemler 15 gün içinde durdurulur. Talep reddedilirse aynı e-posta adresinden itiraz edebilirsiniz. Ret gerekçelerini bildiririz; itiraz da reddedilirse ilgili Eyalet Başsavcılığına nasıl şikâyet edebileceğinizi açıklarız."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "7. İletişim ve değişiklikler",
+          "paragraphs": [
+            "İşletmeci: Wonyoung Labs. Gizlilik iletişimi: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Genel gizlilik politikaları saklama, aktarım, güvenlik ve veri ihlallerine müdahaleyi açıklar. Sağlık verilerinin kullanımını veya paylaşımını genişleten değişiklikler, geçerli bildirimleri ve yeni rızayı gerektirir."
+          ]
+        }
+      ],
+      "links": {
+        "privacyIos": "Gizlilik Politikası",
+        "privacyAndroid": "Android için DoseWeek Gizlilik Politikası"
+      }
+    }
+  }
+}

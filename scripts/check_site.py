@@ -24,6 +24,8 @@ import account_sync_candidate
 import render_ios
 import render_home
 import render_terms
+import render_us_health
+import privacy_legal
 from render_android import rendered_pages, validate_catalog
 from render_import import rendered as rendered_import, validate as validate_import
 
@@ -37,7 +39,8 @@ ANDROID_HTML_FILES = [
 ]
 IMPORT_HTML_FILES = [ROOT / "import/index.html"]
 TERMS_HTML_FILES = [ROOT / "terms/index.html"]
-HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES + IMPORT_HTML_FILES + TERMS_HTML_FILES
+US_HEALTH_HTML_FILES = [ROOT / "us-health/index.html"]
+HTML_FILES = IOS_HTML_FILES + ANDROID_HTML_FILES + IMPORT_HTML_FILES + TERMS_HTML_FILES + US_HEALTH_HTML_FILES
 ANDROID_LANGUAGES = [
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
@@ -59,6 +62,7 @@ POLICY_SOURCE_LINKS = {
     "https://policies.google.com/privacy",
     "https://policies.google.com/technologies/partner-sites",
 }
+POLICY_SOURCE_LINKS.update(privacy_legal.LINKED_URLS)
 # The hash pages and the per-language pages of both privacy policies may link the processor sources.
 PRIVACY_PAGES = {
     locale_pages.page_path(route, locale).resolve()
@@ -74,8 +78,7 @@ TERMS_PAGES = {
 # unapproved price or trial on any page, in any language panel.
 MONETIZATION_OVERCLAIMS = (
     "we collect no data", "collects no data", "no data is collected", "show no ads",
-    "No ads;", "one-time purchase", "no in-app purchase", "free trial", "KRW", "₩",
-    "2,900", "19,900", "광고 없음 ·",
+    "No ads;", "one-time purchase", "no in-app purchase", "2,900", "광고 없음 ·",
     # release builds verify Plus only through the purchase-verification server (finding 31)
     "checks the signed purchase data",
 )
@@ -553,6 +556,12 @@ def main() -> None:
     if arguments.release:
         legal_release.require_release_date()
         account_sync_candidate.require_release_ready()
+        for relative in ("docs/ios-content.json", "docs/android-content.candidate.json"):
+            source = json.loads((ROOT / relative).read_text(encoding="utf-8"))
+            readiness = source.get("legalReadiness", {})
+            assert readiness and all(value is True for value in readiness.values()), (
+                f"{relative}: legal/provider/representative operational readiness remains unverified"
+            )
         for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",
                          "docs/terms-content.json"):
             left = legal_release.release_placeholders((ROOT / relative).read_text(encoding="utf-8"))
@@ -652,6 +661,10 @@ def main() -> None:
             f"{SITE_BASE}terms/", "../assets/app-icon.png", SOCIAL_IMAGE,
             ALL_LANGUAGES, ALL_LANGUAGES,
         ),
+        (ROOT / "us-health/index.html").resolve(): (
+            f"{SITE_BASE}us-health/", "../assets/app-icon.png", SOCIAL_IMAGE,
+            ALL_LANGUAGES, ALL_LANGUAGES,
+        ),
     }
 
     for path, page in pages.items():
@@ -671,7 +684,7 @@ def main() -> None:
         current = [language for language, state, _ in page.language_links if state == "true"]
         assert current == [], f"{label}: static markup must not misstate aria-current before JS"
 
-        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + TERMS_HTML_FILES + [
+        multilingual = ANDROID_HTML_FILES + IMPORT_HTML_FILES + TERMS_HTML_FILES + US_HEALTH_HTML_FILES + [
             ROOT / "privacy/index.html", ROOT / "support/index.html", ROOT / "index.html",
         ]
         if path in {candidate.resolve() for candidate in multilingual}:
@@ -1064,6 +1077,10 @@ def main() -> None:
     for path, expected in render_terms.rendered_pages(*render_terms.load()).items():
         assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
             f"{path.relative_to(ROOT)} does not match docs/terms-content.json; rerun render_terms.py"
+        )
+    for path, expected in render_us_health.rendered_pages(*render_us_health.load()).items():
+        assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+            f"{path.relative_to(ROOT)} does not match docs/us-health-content.json; rerun render_us_health.py"
         )
 
     if arguments.catalog:

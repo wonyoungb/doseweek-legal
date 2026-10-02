@@ -1,0 +1,1536 @@
+{
+  "requested": [
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts",
+    "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_details_block_release_and_reps_marked_pending"
+  ],
+  "executedMethods": 12,
+  "assertionFailures": [
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_art30_processing_basis_security_destruction_and_no_health_sale (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_ftc_health_breach_sdk_disclosures_and_exact_deadlines (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_gdpr_breach_risk_and_high_risk_notice (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_health_permissions_optional_read_only_no_ad_use (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processing"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_international_health_basis_rights_and_transfer_mechanisms (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_korean_rights_ten_days_withdrawal_refusal_and_appeal (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure rights"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='ko')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='en')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='ja')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='de')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='fr')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='es')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='it')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='nl')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='pl')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='sv')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='hi')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='ar')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='ios-content.json', locale='tr')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='en')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='de')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='es')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='it')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_mg_estimate_reference_not_measurement_effect_or_dose_advice (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: None != {'unit': 'mg', 'referenceOnly': True, 'me[111 chars]alse}"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_pipa_sensitive_breach_notice_and_report_seventy_two_hours (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure incident"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='ios-content.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_processor_transfer_table_art28_8_columns_and_roles (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 0 != 1 : missing legal disclosure processors"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='ko')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"ko\" class=\"language-panel\" lang=\"ko\" dir=\"ltr\" data-language=\"ko\" data-document-title=\"개인정보 처리방침 — DoseWeek\" aria-labelledby=\"ko-content\">\\n          <header class=\" [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='en')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"en\" class=\"language-panel\" lang=\"en\" dir=\"ltr\" data-language=\"en\" data-document-title=\"Privacy Policy — DoseWeek\" aria-labelledby=\"en-content\">\\n          <header cl [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='ja')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"ja\" class=\"language-panel\" lang=\"ja\" dir=\"ltr\" data-language=\"ja\" data-document-title=\"プライバシーポリシー — DoseWeek\" aria-labelledby=\"ja-content\">\\n          <header class= [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='de')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"de\" class=\"language-panel\" lang=\"de\" dir=\"ltr\" data-language=\"de\" data-document-title=\"Datenschutzerklärung — DoseWeek\" aria-labelledby=\"de-content\">\\n          <hea [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='fr')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"fr\" class=\"language-panel\" lang=\"fr\" dir=\"ltr\" data-language=\"fr\" data-document-title=\"Politique de confidentialité — DoseWeek\" aria-labelledby=\"fr-content\">\\n       [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='es')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"es\" class=\"language-panel\" lang=\"es\" dir=\"ltr\" data-language=\"es\" data-document-title=\"Política de Privacidad — DoseWeek\" aria-labelledby=\"es-content\">\\n          <h [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='it')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"it\" class=\"language-panel\" lang=\"it\" dir=\"ltr\" data-language=\"it\" data-document-title=\"Informativa sulla privacy — DoseWeek\" aria-labelledby=\"it-content\">\\n          [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='nl')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"nl\" class=\"language-panel\" lang=\"nl\" dir=\"ltr\" data-language=\"nl\" data-document-title=\"Privacybeleid — DoseWeek\" aria-labelledby=\"nl-content\">\\n          <header cla [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"pt-PT\" class=\"language-panel\" lang=\"pt-PT\" dir=\"ltr\" data-language=\"pt-PT\" data-document-title=\"Política de Privacidade — DoseWeek\" aria-labelledby=\"pt-PT-content\">\\ [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='pl')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"pl\" class=\"language-panel\" lang=\"pl\" dir=\"ltr\" data-language=\"pl\" data-document-title=\"Polityka prywatności — DoseWeek\" aria-labelledby=\"pl-content\">\\n          <hea [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='sv')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"sv\" class=\"language-panel\" lang=\"sv\" dir=\"ltr\" data-language=\"sv\" data-document-title=\"Integritetspolicy — DoseWeek\" aria-labelledby=\"sv-content\">\\n          <header [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='hi')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"hi\" class=\"language-panel\" lang=\"hi\" dir=\"ltr\" data-language=\"hi\" data-document-title=\"गोपनीयता नीति — DoseWeek\" aria-labelledby=\"hi-content\">\\n          <header cla [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"pt-BR\" class=\"language-panel\" lang=\"pt-BR\" dir=\"ltr\" data-language=\"pt-BR\" data-document-title=\"Política de Privacidade — DoseWeek\" aria-labelledby=\"pt-BR-content\">\\ [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='ar')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"ar\" class=\"language-panel\" lang=\"ar\" dir=\"rtl\" data-language=\"ar\" data-document-title=\"سياسة الخصوصية — DoseWeek\" aria-labelledby=\"ar-content\">\\n          <header cl [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"zh-Hans\" class=\"language-panel\" lang=\"zh-Hans\" dir=\"ltr\" data-language=\"zh-Hans\" data-document-title=\"隐私政策 — DoseWeek\" aria-labelledby=\"zh-Hans-content\">\\n           [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"zh-Hant\" class=\"language-panel\" lang=\"zh-Hant\" dir=\"ltr\" data-language=\"zh-Hant\" data-document-title=\"隱私權政策 — DoseWeek\" aria-labelledby=\"zh-Hant-content\">\\n          [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='ios-content.json', locale='tr')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"tr\" class=\"language-panel\" lang=\"tr\" dir=\"ltr\" data-language=\"tr\" data-document-title=\"Gizlilik Politikası — DoseWeek\" aria-labelledby=\"tr-content\">\\n          <head [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"ko\" class=\"language-panel\" lang=\"ko\" dir=\"ltr\" data-language=\"ko\" data-document-title=\"Android용 DoseWeek 개인정보처리방침 — DoseWeek Android\" aria-labelledby=\"ko-content\">\\n [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='en')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"en\" class=\"language-panel\" lang=\"en\" dir=\"ltr\" data-language=\"en\" data-document-title=\"Privacy Policy for DoseWeek on Android — DoseWeek Android\" aria-labelledby=\"en [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"ja\" class=\"language-panel\" lang=\"ja\" dir=\"ltr\" data-language=\"ja\" data-document-title=\"Android版DoseWeek プライバシーポリシー — DoseWeek Android\" aria-labelledby=\"ja-content\">\\ [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='de')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"de\" class=\"language-panel\" lang=\"de\" dir=\"ltr\" data-language=\"de\" data-document-title=\"Datenschutzerklärung für DoseWeek auf Android — DoseWeek Android\" aria-labelle [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"fr\" class=\"language-panel\" lang=\"fr\" dir=\"ltr\" data-language=\"fr\" data-document-title=\"Politique de confidentialité de DoseWeek pour Android — DoseWeek Android\" aria [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='es')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"es\" class=\"language-panel\" lang=\"es\" dir=\"ltr\" data-language=\"es\" data-document-title=\"Política de privacidad de DoseWeek para Android — DoseWeek Android\" aria-label [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='it')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"it\" class=\"language-panel\" lang=\"it\" dir=\"ltr\" data-language=\"it\" data-document-title=\"Informativa sulla privacy di DoseWeek per Android — DoseWeek Android\" aria-lab [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"nl\" class=\"language-panel\" lang=\"nl\" dir=\"ltr\" data-language=\"nl\" data-document-title=\"Privacybeleid van DoseWeek voor Android — DoseWeek Android\" aria-labelledby=\"n [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"pt-PT\" class=\"language-panel\" lang=\"pt-PT\" dir=\"ltr\" data-language=\"pt-PT\" data-document-title=\"Política de Privacidade do DoseWeek para Android — DoseWeek Android\"  [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"pl\" class=\"language-panel\" lang=\"pl\" dir=\"ltr\" data-language=\"pl\" data-document-title=\"Polityka prywatności DoseWeek na Androida — DoseWeek Android\" aria-labelledby= [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"sv\" class=\"language-panel\" lang=\"sv\" dir=\"ltr\" data-language=\"sv\" data-document-title=\"Integritetspolicy för DoseWeek på Android — DoseWeek Android\" aria-labelledby= [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"hi\" class=\"language-panel\" lang=\"hi\" dir=\"ltr\" data-language=\"hi\" data-document-title=\"Android के लिए DoseWeek गोपनीयता नीति — DoseWeek Android\" aria-labelledby=\"hi- [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"pt-BR\" class=\"language-panel\" lang=\"pt-BR\" dir=\"ltr\" data-language=\"pt-BR\" data-document-title=\"Política de Privacidade do DoseWeek para Android — DoseWeek Android\"  [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"ar\" class=\"language-panel\" lang=\"ar\" dir=\"rtl\" data-language=\"ar\" data-document-title=\"سياسة خصوصية DoseWeek لنظام Android — DoseWeek Android\" aria-labelledby=\"ar-co [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"zh-Hans\" class=\"language-panel\" lang=\"zh-Hans\" dir=\"ltr\" data-language=\"zh-Hans\" data-document-title=\"DoseWeek Android 版隐私政策 — DoseWeek Android\" aria-labelledby=\"zh- [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"zh-Hant\" class=\"language-panel\" lang=\"zh-Hant\" dir=\"ltr\" data-language=\"zh-Hant\" data-document-title=\"DoseWeek Android 版隱私權政策 — DoseWeek Android\" aria-labelledby=\"zh [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_rendered_transfer_table_accessible_in_every_locale (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: '<table class=\"processor-table\">' not found in '        <article id=\"tr\" class=\"language-panel\" lang=\"tr\" dir=\"ltr\" data-language=\"tr\" data-document-title=\"Android için DoseWeek Gizlilik Politikası — DoseWeek Android\" aria-labelledby= [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='ko')",
+      "AssertionError: 'Wonyoung Labs' not found in \"일정, 투여 기록, 메모, 신체 측정값 같은 건강 기록은 기본적으로 기기에 저장돼요. 개발자는 이 기록을 받지 않아요. 내보내기, 백업, 선택 연동은 따로 설명해요. 선택 사항인 사용 분석에는 아래 규칙이 적용돼요.\\nApple 건강 연동은 읽기 전용이에요. 허용한 신체 측정값(체중, BMI, 체지방률, 제지방량, 허리둘레)만 읽어 와서 기기 안에 표시하고 저장해 [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='en')",
+      "AssertionError: 'Wonyoung Labs' not found in \"Health records, including schedules, administrations, notes and body measurements, stay on your device by default. The developer does not receive these records. Exports, backups and optional integrations  [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='ja')",
+      "AssertionError: 'Wonyoung Labs' not found in 'スケジュール、投与記録、メモ、身体測定値などの健康記録は、初期設定では端末内に保存されます。開発者はこれらの記録を受け取りません。書き出し、バックアップ、任意の連携は別途説明します。任意の利用状況分析には以下のルールが適用されます。\\nAppleヘルスケア連携は読み取り専用です。許可した身体データ（体重、BMI、体脂肪率、除脂肪体重、ウエスト周囲径）のみを読み込み、デバイス内で表示・保存します。権限はいつ [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='de')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Gesundheitsdaten wie Zeitpläne, Verabreichungen, Notizen und Körpermesswerte bleiben standardmäßig auf Ihrem Gerät. Der Entwickler erhält diese Einträge nicht. Exporte, Sicherungen und optionale Integrati [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='fr')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Les données de santé, dont les plannings, administrations, notes et mesures corporelles, restent par défaut sur votre appareil. Le développeur ne reçoit pas ces données. Les exports, sauvegardes et intégr [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='es')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Los registros de salud, como horarios, administraciones, notas y medidas corporales, permanecen por defecto en el dispositivo. El desarrollador no recibe estos registros. Las exportaciones, copias e integ [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='it')",
+      "AssertionError: 'Wonyoung Labs' not found in \"I dati sanitari, inclusi programmi, somministrazioni, note e misurazioni corporee, restano sul dispositivo per impostazione predefinita. Lo sviluppatore non riceve questi dati. Esportazioni, backup e inte [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='nl')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Gezondheidsgegevens, waaronder schema’s, toedieningen, notities en lichaamsmetingen, blijven standaard op uw apparaat. De ontwikkelaar ontvangt deze gegevens niet. Export, back-ups en optionele koppelinge [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='pt-PT')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Os dados de saúde, incluindo horários, administrações, notas e medidas corporais, ficam por predefinição no dispositivo. O programador não recebe estes registos. Exportações, cópias de segurança e integra [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='pl')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Dane zdrowotne, w tym harmonogramy, podania, notatki i pomiary ciała, domyślnie pozostają na urządzeniu. Deweloper nie otrzymuje tych danych. Eksport, kopie zapasowe i opcjonalne integracje opisano osobno [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='sv')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Hälsouppgifter, bland annat scheman, administreringar, anteckningar och kroppsmått, stannar som standard på enheten. Utvecklaren får inte dessa uppgifter. Export, säkerhetskopior och valfria integrationer [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='hi')",
+      "AssertionError: 'Wonyoung Labs' not found in 'शेड्यूल, दवा देने के रिकॉर्ड, नोट्स और शरीर के माप सहित स्वास्थ्य रिकॉर्ड डिफ़ॉल्ट रूप से आपके डिवाइस पर रहते हैं। डेवलपर को ये रिकॉर्ड नहीं मिलते। निर्यात, बैकअप और वैकल्पिक इंटीग्रेशन का विवरण अलग है। व [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='pt-BR')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Os dados de saúde, incluindo horários, administrações, notas e medidas corporais, ficam por padrão no dispositivo. O desenvolvedor não recebe esses registros. Exportações, backups e integrações opcionais  [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='ar')",
+      "AssertionError: 'Wonyoung Labs' not found in 'تبقى السجلات الصحية، ومنها الجداول وعمليات إعطاء الدواء والملاحظات وقياسات الجسم، على جهازك افتراضيًا. لا يتلقى المطوّر هذه السجلات. تُشرح عمليات التصدير والنسخ الاحتياطي والتكاملات الاختيارية بشكل منفصل. [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='zh-Hans')",
+      "AssertionError: 'Wonyoung Labs' not found in '日程、给药记录、备注、身体测量等健康记录默认保存在设备上。开发者不会收到这些记录。导出、备份和可选集成另有说明。可选使用情况分析遵循以下规则。\\nApple Health 集成为只读。只读取您允许的身体数据——体重、BMI、体脂率、瘦体重和腰围——并在您的设备上显示或保存。您可以随时在 iOS“设置”中更改权限。DoseWeek 不会向 Apple Health 写入任何数据。\\n当前使用的临床记录数据库 [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='zh-Hant')",
+      "AssertionError: 'Wonyoung Labs' not found in '排程、給藥紀錄、備註、身體測量等健康紀錄預設保存在裝置上。開發者不會收到這些紀錄。匯出、備份和選用整合另有說明。選用的使用情形分析遵循以下規則。\\nApple Health 整合為唯讀。只會讀取您允許的身體數據——體重、BMI、體脂肪率、淨體重與腰圍——並在您的裝置上顯示或儲存。您可以隨時在 iOS 的「設定」中變更權限。DoseWeek 不會向 Apple Health 寫入任何資料。\\n使用中的臨床紀 [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='ios-content.json', locale='tr')",
+      "AssertionError: 'Wonyoung Labs' not found in \"Programlar, ilaç uygulama kayıtları, notlar ve vücut ölçümleri dahil sağlık kayıtları varsayılan olarak cihazınızda kalır. Geliştirici bu kayıtları almaz. Dışa aktarma, yedekleme ve isteğe bağlı entegrasy [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='ko')",
+      "AssertionError: 'Wonyoung Labs' not found in \"DoseWeek 앱과 이 개인정보처리방침은 대한민국에 있는 개인 개발자 Wonyoung Choi가 운영해요. 개인정보 처리에 관한 문의는 wonyoung@wonyoungchoi.dev로 보내 주세요.\\n\\nDoseWeek Android는 18세 이상만 쓸 수 있어요. 생년월일이나 숫자로 된 나이는 입력받지도, 전송하지도 않아요. 버전별 이용 자격 선택만 기기에 저 [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='en')",
+      "AssertionError: 'Wonyoung Labs' not found in \"DoseWeek and this Privacy Policy are run by Wonyoung Choi, an individual developer based in the Republic of Korea. For questions about data handling, contact wonyoung@wonyoungchoi.dev.\\n\\nDoseWeek for And [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='ja')",
+      "AssertionError: 'Wonyoung Labs' not found in 'DoseWeekアプリと本ポリシーは、大韓民国を拠点とする個人開発者Wonyoung Choiが運営しています。データの取り扱いに関する質問はwonyoung@wonyoungchoi.devへお送りください。\\n\\nAndroid版DoseWeekは18歳以上の方が利用できます。生年月日や数字で表した年齢の入力を求めたり、それらを送信したりすることはありません。対象バージョンに対する利用資格の選択のみを [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='de')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Die App DoseWeek und diese Datenschutzerklärung werden von Wonyoung Choi betrieben, einem Einzelentwickler mit Sitz in der Republik Korea. Fragen zur Datenverarbeitung richten Sie an wonyoung@wonyoungchoi [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='fr')",
+      "AssertionError: 'Wonyoung Labs' not found in 'L’application DoseWeek et la présente politique sont gérées par Wonyoung Choi, développeur individuel établi en République de Corée. Pour toute question sur les données, écrivez à wonyoung@wonyoungchoi.de [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='es')",
+      "AssertionError: 'Wonyoung Labs' not found in 'La aplicación DoseWeek y esta Política de privacidad las gestiona Wonyoung Choi, desarrollador individual con sede en la República de Corea. Para cuestiones sobre datos, escriba a wonyoung@wonyoungchoi.de [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='it')",
+      "AssertionError: 'Wonyoung Labs' not found in 'L’app DoseWeek e questa informativa sono gestite da Wonyoung Choi, sviluppatore individuale con sede nella Repubblica di Corea. Per domande sul trattamento dei dati, scrivi a wonyoung@wonyoungchoi.dev.\\n\\ [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='nl')",
+      "AssertionError: 'Wonyoung Labs' not found in 'De app DoseWeek en dit privacybeleid worden beheerd door Wonyoung Choi, een individuele ontwikkelaar gevestigd in de Republiek Korea. Vragen over gegevensverwerking kunt u sturen naar wonyoung@wonyoungcho [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='pt-PT')",
+      "AssertionError: 'Wonyoung Labs' not found in 'A aplicação DoseWeek e esta Política de Privacidade são geridas por Wonyoung Choi, programador individual sediado na República da Coreia. Para questões sobre o tratamento de dados, contacte wonyoung@wonyo [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='pl')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Za aplikację DoseWeek i niniejszą Politykę prywatności odpowiada Wonyoung Choi, indywidualny deweloper z siedzibą w Republice Korei. Pytania o przetwarzanie danych kieruj na wonyoung@wonyoungchoi.dev.\\n\\n [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='sv')",
+      "AssertionError: 'Wonyoung Labs' not found in 'Appen DoseWeek och denna integritetspolicy drivs av Wonyoung Choi, en enskild utvecklare med säte i Republiken Korea. Frågor om hantering av uppgifter kan skickas till wonyoung@wonyoungchoi.dev.\\n\\nDoseWe [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='hi')",
+      "AssertionError: 'Wonyoung Labs' not found in 'DoseWeek ऐप और इस नीति का संचालन कोरिया गणराज्य में स्थित व्यक्तिगत डेवलपर Wonyoung Choi करते हैं। डेटा प्रबंधन के प्रश्न wonyoung@wonyoungchoi.dev पर भेजें।\\n\\nAndroid के लिए DoseWeek केवल 18 वर्ष या उसस [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='pt-BR')",
+      "AssertionError: 'Wonyoung Labs' not found in 'O aplicativo DoseWeek e esta Política de Privacidade são operados por Wonyoung Choi, desenvolvedor individual baseado na República da Coreia. Para dúvidas sobre dados, entre em contato pelo e-mail wonyoun [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='ar')",
+      "AssertionError: 'Wonyoung Labs' not found in 'يتولى Wonyoung Choi، وهو مطوّر فرد مقيم في جمهورية كوريا، تشغيل تطبيق DoseWeek وهذه السياسة. أرسل أسئلة معالجة البيانات إلى wonyoung@wonyoungchoi.dev.\\n\\nDoseWeek لنظام Android مخصص للأشخاص البالغين 18 عا [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='zh-Hans')",
+      "AssertionError: 'Wonyoung Labs' not found in 'DoseWeek 应用及本隐私政策由位于大韩民国的个人开发者 Wonyoung Choi 运营。如对数据处理有疑问，请联系 wonyoung@wonyoungchoi.dev。\\n\\nAndroid 版 DoseWeek 仅供年满 18 岁的人士使用。应用不会要求输入或传输出生日期或数字年龄；设备上仅保存与版本相关的使用资格选择。如果您拒绝或未确认使用资格，常规应用功能和 AI 将不可用。现有本地记录不会 [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='zh-Hant')",
+      "AssertionError: 'Wonyoung Labs' not found in 'DoseWeek 應用程式及本隱私權政策由位於大韓民國的個人開發者 Wonyoung Choi 營運。如對資料處理有疑問，請聯絡 wonyoung@wonyoungchoi.dev。\\n\\nAndroid 版 DoseWeek 僅供年滿 18 歲的人士使用。App 不會要求輸入或傳送出生日期或數字年齡；裝置上只儲存與版本相關的使用資格選擇。若您拒絕或未確認使用資格，一般 App 功能和 AI 將無法使用。 [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_responsible_operator_and_public_business_contacts (source='android-content.candidate.json', locale='tr')",
+      "AssertionError: 'Wonyoung Labs' not found in \"DoseWeek uygulaması ve bu Gizlilik Politikası, Kore Cumhuriyeti'nde bulunan bireysel geliştirici Wonyoung Choi tarafından işletilmektedir. Verilerin işlenmesiyle ilgili sorularınızı wonyoung@wonyoungchoi. [full assertion in lossless archive]"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_details_block_release_and_reps_marked_pending (source='ios-content.json')",
+      "'providerInventoryVerified'"
+    ],
+    [
+      "test_privacy_legal_update.PrivacyLegalUpdateTest.test_unverified_provider_details_block_release_and_reps_marked_pending (source='android-content.candidate.json')",
+      "'providerInventoryVerified'"
+    ]
+  ],
+  "errors": [],
+  "skipped": [],
+  "success": false,
+  "redCommit": "147c533b3678633cf604cbbf1dff712bb0069145",
+  "parent": "2e51e281a3dc93786430b766e89c69dd36c2af51",
+  "command": "python3 red_runner.py test_privacy_legal_update",
+  "exit": 1,
+  "compileExit": 0,
+  "proof": "temporary detached parent + committed RED test files only",
+  "testHashes": {
+    "scripts/test_privacy_legal_update.py": "f193214d77cf8ec82a842e15bc3efdfa40cbc779ac15a067443a02abc0b2679d"
+  },
+  "fullReceiptArchive": "evidence/legal-update-20261002/legal-update/red-separators-parent.json.gz"
+}

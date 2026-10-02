@@ -1,0 +1,140 @@
+{
+  "component": "US consumer health data policy",
+  "scope": "source, renderer, assertion checks and18generatedlocalpages; no publication",
+  "sourceSha256": "e548bed515f1c0923089215fcb55fb539e2493066f156aa526cb57b95113a2c0",
+  "rendererSha256": "c6fc3e057704abafe7607020e57b66fec6c1f8ef4aa969b79862f033627f533e",
+  "testSha256": "f93e80032af75809f3d46faa7d3e47ff9f7ecb3415c4b4f69361d4908642a9b9",
+  "counts": {
+    "locales": 17,
+    "sections": 119,
+    "paragraphs": 255,
+    "pages": 18
+  },
+  "checks": [
+    {
+      "cmd": "python3 -m py_compile scripts/test_us_health_policy.py scripts/render_us_health.py",
+      "exit": 0
+    },
+    {
+      "cmd": "python3 scripts/render_us_health.py",
+      "exit": 0,
+      "result": "18localpages generated"
+    },
+    {
+      "cmd": "python3 scripts/render_us_health.py --check",
+      "exit": 0,
+      "result": "exactsource/outputparity18pages"
+    },
+    {
+      "cmd": "python3 scripts/test_us_health_policy.py",
+      "exit": 0,
+      "result": "7run0fail0error0skip",
+      "log": ".lane-work/us-health/focused-green.log"
+    },
+    {
+      "cmd": "existing korean_tone.audit only docs/us-health-content.json Korean subtree, no allowlist",
+      "exit": 0,
+      "result": "70sentences0violations0suppressions"
+    }
+  ],
+  "historicalFailures": [
+    {
+      "cmd": "python3 scripts/test_us_health_policy.py before GREEN",
+      "exit": 1,
+      "result": "7assertionfailures0errors",
+      "log": ".lane-work/us-health/red.log"
+    },
+    {
+      "cmd": "python3 scripts/test_us_health_policy.py first GREEN attempt",
+      "exit": 1,
+      "sourceSha256": "f2e1f20dc126c693011a87c764060856b78f0a2ee1a5dc632e017bcf223861ed",
+      "result": "7run2fail0error: privacyHTMLnotyetregenerated;Englishweightcategorynotexplicit",
+      "resolution": "weightmadeexplicitall17;privacyownerrenderedlinkedpages"
+    }
+  ],
+  "pages": {
+    "us-health/index.html": {
+      "sha256": "b1331cd25ddf56e5e1c9735b29357bf9d2b50e89b9da270b9efeb446390e2b94",
+      "bytes": 140308
+    },
+    "ko/us-health/index.html": {
+      "sha256": "c20cf6e2772d2d5e436a33c3e83561b746ba78ed46b7bce2d3cfcbdc1ecc5c63",
+      "bytes": 14258
+    },
+    "en/us-health/index.html": {
+      "sha256": "424cad8cabb6b5af20b6a5222820c67fd55eb736fb6e9c350ffdd3b77ee8e3de",
+      "bytes": 13508
+    },
+    "ja/us-health/index.html": {
+      "sha256": "73e8f66aa2731017c65aaa64beae7487fa945a1af2f75a6ea89e6463c6f5efae",
+      "bytes": 14345
+    },
+    "de/us-health/index.html": {
+      "sha256": "cfd86fb3282cf2e7e53149fd8f355a49e771a63b2d420a4f2a2b7b63057fc22c",
+      "bytes": 14701
+    },
+    "fr/us-health/index.html": {
+      "sha256": "a039bb1819ae2785a7bd8308a2d88e1f77d0c95ad279975c7f7220a7d55afa91",
+      "bytes": 15004
+    },
+    "es/us-health/index.html": {
+      "sha256": "bb7a377cd3c5de45df1f30d5b4c7d11f54fd1382f1c974d122a426e391b0baf6",
+      "bytes": 14098
+    },
+    "it/us-health/index.html": {
+      "sha256": "167e1cc2b8ec81c8ab9b12b881fbc9c814c4107954f20a0fd3c9bbabdf95eed8",
+      "bytes": 13919
+    },
+    "nl/us-health/index.html": {
+      "sha256": "0b6f6ea1ffbee35e61738674ac63009f77537e28dbd55486a0d2c830308d8004",
+      "bytes": 14255
+    },
+    "pt-PT/us-health/index.html": {
+      "sha256": "b6266c3f258a927a4ba26d0ea148b297384912aa44f67b34fc0ce38a4ab09877",
+      "bytes": 14240
+    },
+    "pl/us-health/index.html": {
+      "sha256": "6da5d595302bd62493e4ffa16115dabf817a3cef429505af6bb5230b387b79fd",
+      "bytes": 13874
+    },
+    "sv/us-health/index.html": {
+      "sha256": "5418b54710f39d51a9ce7a765cae2422a2bf7cc2557ce108fefde396b4b40a45",
+      "bytes": 13936
+    },
+    "hi/us-health/index.html": {
+      "sha256": "2dc967e7c58e8646b0202fd37f8a192d7a89eb61a40e88a2f10ce9dcfc65adb5",
+      "bytes": 22704
+    },
+    "pt-BR/us-health/index.html": {
+      "sha256": "335991f31fbf37f2d80d201e78b49bbafa99edbe247c3c9e60cfa3f1a1e4e405",
+      "bytes": 14058
+    },
+    "ar/us-health/index.html": {
+      "sha256": "141458549dd46737935373708927454ca0d1c288ea2d4fb013c6bacb9c4b47bb",
+      "bytes": 17570
+    },
+    "zh-Hans/us-health/index.html": {
+      "sha256": "b54d581139d76d4e723a2cbb474ee165914da40091c201f3474585b4e65c680c",
+      "bytes": 13299
+    },
+    "zh-Hant/us-health/index.html": {
+      "sha256": "603cbfdc20ac46b6cb94cfcb213ed87ecd9853dadf7f34bac7b8d5dc02fabf34",
+      "bytes": 13362
+    },
+    "tr/us-health/index.html": {
+      "sha256": "de9ef580531cd1e3dcf8fc250a6e977d12ad34a7b6dc05faad2fe5d7f0dd52f0",
+      "bytes": 14825
+    }
+  },
+  "ownerQuestions": [
+    "Verifyactualprocessorcontract/subprocessorcontrols andhealthSDKconsent/refusal operation beforelaunch.",
+    "Implementregion-specificrights-response/appeal/mailboxprocedures andseven-daydownstreambackupdeletion/restoreexclusion."
+  ],
+  "notDone": [
+    "native-speakerreview",
+    "browservisualQA",
+    "provideroperationalverification",
+    "nativeorstorechecks",
+    "publication"
+  ]
+}

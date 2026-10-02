@@ -1,12 +1,34 @@
-## ACTIVE — legal-update-legal (2026-10-02)
+## ACTIVE — legal-update-legal (2026-10-02; unpublished)
 
-The owner resumed this isolated copy lane from reviewer-approved `1714082f`. Branch
-`next-ai/legal-store-legal-cx`; owned edits are legal assertions and, after RED proof, 17-locale
-privacy/account/Terms/US-health sources and their renderers. No native/device job is owned here.
-No push, merge, network, console or publication. Input fingerprints and exact check evidence
-live in `.lane-work/legal-update/`. Existing release effective-date/server gates remain closed.
-Next action: commit assertion-only RED and prove it against the detached parent before copy edits.
-The pause and prior candidate snapshots below are historical for this resumed lane.
+Owner scope: 1.0.6 legal/store/web copy from approved `1714082f`, branch
+`next-ai/legal-store-legal-cx`. All 17 locales updated: privacy/rights/breach/processor table,
+separate health consent, immediate deletion and hybrid 7-day backups, subscription/trial/refund
+Terms, separate linked US health-data policy. Current Git HEAD is authoritative; the final
+report records commits and owned files. No native/device job, network, push, merge or publication.
+
+Final static gates PASS: seven renderer checks, account validator, site/tone/link/RTL/source
+parity; exact 173 methods executed: 173 PASS,0 failure/error/skip/omitted. Site: 162 pages (9x18),
+staged: 126 pages (7x18, noindex/null date, in memory); tone: 2101 sentences,0 violations,
+9 narrow clinical/category exceptions,0 stale. Final input 46-file freeze comparison matched.
+REDs `a7febe9`/`2e51e28`: each 36 methods / 619 assertion subtest failures; `147c533` privacy 12 methods /
+376 failures. Each compiles on its detached parent,0 errors/skips; temporary worktrees removed.
+
+Durable evidence: `evidence/legal-update-20261002/legal-update/` contains final inputs,
+exact requested/discovered/executed identities, staged content hashes, closed gates and lossless
+RED/intermediate/final logs. Prior failed first full gate (173 methods: 171 PASS / 2 FAIL), assembly
+errors and tone failures are preserved; none is relabelled PASS. Clinical record wording and
+SDK metadata are distinct after independent 17-locale semantic review.
+
+Publication gate remains BLOCKED: effective date unset, 16 server readiness flags and 5 legal
+readiness flags per privacy source are false; actual provider/country/contact/retention,
+contracts, representatives, deletion/backup/incident/rights and Store/native proofs pending.
+EU/UK contact placeholders are explicit. No counsel/native-speaker certification. Browser
+policy blocked the local file URL, so visual review is NOT_RUN; no workaround was attempted.
+
+Report: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-report.json`.
+Next action: orchestrator reviews/integrates this candidate and resolves the report's
+ownerQuestions/operational gates; publication remains outside this lane. Older snapshots below
+are historical for this resumed lane. Only derived receipts/docs change after this frozen gate.
 
 ## OWNER_PAUSE_RELAUNCH — 다른 AI 인수인계 (2026-10-01)
 
@@ -152,12 +174,12 @@ Next: continue canonical native verification and resolve the listed release gate
 
 ## Resumed local effective account integration (2026-09-30)
 
-Independent review’s P2 iOS support-lead contradiction is repaired in the staging transform only: all17localized leads now use existing unpublished/OFF + optional-account source. The new regression failed first1/1, then exact related8/8PASS. Regeneration changed exactly18iOSsupport candidate pages; other90candidate page hashes match the before-repair receipt. EN/KO source/output truth PASS,108format/panel/hreflang/byte checks and5047local links PASS; tone1738/0violations. Canonical source JSON/144public pages and baseline renderer dependencies remain byte-matched to earlier36iOS/54Android parity, so no whole144/native rerun. Source SHA28c8ff is unchanged; renderer/test and generated source/page hashes are refreshed in receipt.json. Earlier independent-review receipt remains historical P2 evidence until reviewer recheck; no browser appearance/deployment proof is claimed.
+Independent review’s P2 iOS support-lead contradiction is repaired in the staging transform only: all17localized leads now use existing unpublished/OFF + optional-account source. The new regression failed first1/1, then exact related8/8PASS. Regeneration changed exactly18iOSsupport candidate pages; other90candidate page hashes match the before-repair receipt. EN/KO source/output truth PASS,108format/panel/hreflang/byte checks and5047local links PASS; tone1738/0 violations. Canonical source JSON/144public pages and baseline renderer dependencies remain byte-matched to earlier36iOS/54Android parity, so no whole144/native rerun. Source SHA28c8ff is unchanged; renderer/test and generated source/page hashes are refreshed in receipt.json. Earlier independent-review receipt remains historical P2 evidence until reviewer recheck; no browser appearance/deployment proof is claimed.
 
 - Ready for coordinator review at legal primary `5fce11f6`, branch `claude/doseweek-free-ads-plus-himvw9`: ten owned source/renderer/test/review/setup/handoff files only. No commit/push/publication by this packet owner. SHA, exact dirty inventory, commands and evidence are in workspace `release/evidence/1.0.6/legal-effective-sync-20260930/receipt.json`; input source SHA28c8ff7199bc84f6027796e8a24aa4d3ad30702f36815fb61251c3a2dccfb655.
-- Source17locales and focused8exact methods PASS (fail/skip/omit0). Separate1.0.6 null-date sources and108pages generated: six routes × (hash+17locales), exact panel/hreflang/output-byte identities PASS,5047local links PASS. Changed baseline renderers preserve original36iOS/54Android bytes; unchanged public144pages were not rehashed or rerun as a whole. Scoped Korean source check1738sentences/0violations,2existing allowed/1uncovered import allowance; no native-speaker review. py_compile/diff check PASS.
+- Source17locales and focused8exact methods PASS (fail/skip/omit0). Separate1.0.6 null-date sources and108pages generated: six routes × (hash+17locales), exact panel/hreflang/output-byte identities PASS,5047local links PASS. Changed baseline renderers preserve original36iOS/54Android bytes; unchanged public144pages were not rehashed or rerun as a whole. Scoped Korean source check1738sentences/0 violations,2existing allowed/1uncovered import allowance; no native-speaker review. py_compile/diff check PASS.
 - External `/account/delete/` candidate is a prominent localized email request action using the existing public support address, no Plus/reinstall/subscription-cancellation prerequisite. It requests only provider/known account ID, with identity verification before erasure; passwords/recovery/health/purchase tokens excluded. Email initiation, account/server erasure and provider unlink outcomes are distinct. No real mail/API/provider deletion request, native/TLS/operational proof, browser appearance review or publication ran.
-- All17locales carry unpublished/OFF notices and separate optional analytics/transfer choices. Original primary features stay Free; the owner does not guarantee perpetual ad-free use, and promotional acquisition alone is not paid-purchase proof. Verified1month→monthly Plus program is unimplemented and makes no issuance promise. Owner choice is resolved; prior ad-free purchase-claim counsel/platform review remains BLOCKED. Effective date/operator/location/DPA/international transfer/full19native settings+key custody/provider/retention/backup deletion/store forms remain release gates. Actual provider/health sync stays OFF.
+- All 17locales carry unpublished/OFF notices and separate optional analytics/transfer choices. Original primary features stay Free; the owner does not guarantee perpetual ad-free use, and promotional acquisition alone is not paid-purchase proof. Verified1month→monthly Plus program is unimplemented and makes no issuance promise. Owner choice is resolved; prior ad-free purchase-claim counsel/platform review remains BLOCKED. Effective date/operator/location/DPA/international transfer/full19native settings+key custody/provider/retention/backup deletion/store forms remain release gates. Actual provider/health sync stays OFF.
 - First assertion/render/link failures are retained and their related repairs passed. The initial custom tone audit failed before auditing because the wrong Rules type was supplied; its raw file was accidentally overwritten, so only a clearly labelled tool-trace summary is retained. Both release readiness/date guards remain BLOCKED. No active PID/device. **Next action:** coordinator reviews the bounded packet, commits/pushes the same draft PR11, and resolves listed gates before replacing effective public sources or publishing.
 
 ## Historical checkpoints before this resumed local packet
@@ -182,7 +204,7 @@ changes handoff documentation only; previously frozen product inputs are unchang
 
 ## Now (2026-09-30) — provider deletion disclosure candidate
 
-- All17 unpublished locales distinguish server-encrypted Apple refresh capability from health E2EE keys, request-only Kakao unlink token (not retained), and account/server-data erasure from provider disconnection. Failed/unconfirmed disconnection requires manual instructions; no automatic retry is promised. These are planned OFF contracts, not public/live behavior.
+- All 17 unpublished locales distinguish server-encrypted Apple refresh capability from health E2EE keys, request-only Kakao unlink token (not retained), and account/server-data erasure from provider disconnection. Failed/unconfirmed disconnection requires manual instructions; no automatic retry is promised. These are planned OFF contracts, not public/live behavior.
 - Independent server review retains concurrent link/delete, multi-identity capability coverage and proxy/client deadline activation blockers. Hourly retention pruning is source-only; operational deployment, monitoring/backup erasure and bounded lag are unproven. Older request-only pruning snapshot below is historical.
 - Verification **PASS17locale validator + existingfocused2/2**, diffPASS; only three owned candidate/review/handoff paths changed, all public/generated/renderer inputs unchanged versus dd711. Prior144-page source parity reused only for rendering. Native/provider/webdelete/live/counsel/date remain NOT_RUN/BLOCKED. Receipt/logs: workspace `release/evidence/1.0.6/legal-provider-lifecycle-20260930/receipt.json`. No process/device or publication.
 - Exact next action: validate this source candidate, publish only to same draft PR11, then integrate repaired reviewed server/native truth into effective17 sources and working deletion page.

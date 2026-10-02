@@ -1,0 +1,40 @@
+{
+  "accountStatus": "pre-release-candidate-not-published",
+  "serverReadiness": {
+    "retentionRecheckWired": false,
+    "syncResetRoute": false,
+    "syncResetUiIos": false,
+    "syncResetUiAndroid": false,
+    "verifierHostDecided": false,
+    "tombstoneRetentionDecided": false,
+    "announcementTransferReviewed": false,
+    "cloudflareContactVerified": false,
+    "backupWindowVerified": false,
+    "accessLogDisclosed": false,
+    "processorInventoryVerified": false,
+    "healthConsentVerified": false,
+    "internationalRepresentativesVerified": false,
+    "breachProcedureOperational": false,
+    "regionalSubscriptionNoticesVerified": false,
+    "consumerHealthRightsVerified": false
+  },
+  "unresolvedCount": 29,
+  "deletionRequestPublished": false,
+  "privacyLegalReadiness": {
+    "ios-content.json": {
+      "providerInventoryVerified": false,
+      "overseasTransferBasisVerified": false,
+      "processorContractsVerified": false,
+      "regionalSafeguardsVerified": false,
+      "representativesVerified": false
+    },
+    "android-content.candidate.json": {
+      "providerInventoryVerified": false,
+      "overseasTransferBasisVerified": false,
+      "processorContractsVerified": false,
+      "regionalSafeguardsVerified": false,
+      "representativesVerified": false
+    }
+  },
+  "effectiveDate": null
+}

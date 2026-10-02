@@ -29,6 +29,12 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
   release placeholders that must be replaced before publication, and the food-data attribution
   lines.
 
+- [US Consumer Health Data Privacy Policy](us-health-content.json) is a separate 17-locale
+  1.0.6 candidate rendered by `scripts/render_us_health.py` at `/us-health/`. Both privacy
+  policies link to it; all new copy remains unpublished.
+- [Legal operations](LEGAL_OPERATIONS_1_0_6.md) defines incident notices, deletion/backup proof,
+  rights, processor contracts and regional subscription notice gates. It does not prove execution.
+
 ## Checks and records
 
 - [Site checks](../scripts/check_site.py): generated pages, hreflang clusters, the sitemap,

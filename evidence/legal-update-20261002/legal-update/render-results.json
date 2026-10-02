@@ -1,0 +1,37 @@
+[
+  {
+    "cmd": "python3 scripts/render_home.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-0.log"
+  },
+  {
+    "cmd": "python3 scripts/render_ios.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-1.log"
+  },
+  {
+    "cmd": "python3 scripts/render_android.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-2.log"
+  },
+  {
+    "cmd": "python3 scripts/render_import.py --require-all-locales",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-3.log"
+  },
+  {
+    "cmd": "python3 scripts/render_terms.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-4.log"
+  },
+  {
+    "cmd": "python3 scripts/render_us_health.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-5.log"
+  },
+  {
+    "cmd": "python3 scripts/render_sitemap.py",
+    "exit": 0,
+    "log": ".lane-work/legal-update/render-6.log"
+  }
+]

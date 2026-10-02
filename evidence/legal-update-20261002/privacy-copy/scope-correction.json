@@ -1,0 +1,9 @@
+{
+  "sourceOnlyCorrection": "All17 recorded health-content no-public/sale/advertising statement narrowed consistently; metadata processing separately retained; supplier URL text breakpoints restored.",
+  "hashes": {
+    "docs/ios-content.json": "1244183effe8fbc4b790f6084123968d5edffc17c34beb912966e3e41a647dcf",
+    "docs/android-content.candidate.json": "719bc4ab6910887fd1f2ed8055aad391cf33a1f0ee0e6ccc2d412864f379e477",
+    "scripts/privacy_legal.py": "6289e7026baf2f492a048eca364689a191ce57c1e6fc452391e047b0fd907339"
+  },
+  "checks": "Not run; root owns focused correction and subsequent frozen-input checks."
+}

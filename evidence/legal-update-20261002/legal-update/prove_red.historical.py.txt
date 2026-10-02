@@ -1,0 +1,29 @@
+import json,subprocess,tempfile,shutil,hashlib
+from pathlib import Path
+root=Path.cwd(); red=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();parent=subprocess.check_output(['git','rev-parse','HEAD^'],text=True).strip()
+evidence=root/'.lane-work/legal-update';temp=Path(tempfile.mkdtemp(prefix='doseweek-legal-red-parent-'));temp.rmdir()
+modules=['test_account_legal_update','test_terms_legal_update','test_privacy_legal_update','test_us_health_policy','test_legal_operations']
+runner='''import unittest,json,sys
+names=sys.argv[1:]; loader=unittest.TestLoader();suite=loader.loadTestsFromNames(names)
+def flatten(s):
+ for t in s:
+  if isinstance(t,unittest.TestSuite):yield from flatten(t)
+  else:yield t.id()
+ids=list(flatten(suite));result=unittest.TextTestRunner(verbosity=2).run(suite)
+receipt={'requested':ids,'executedMethods':result.testsRun,'assertionFailures':[(t.id(),e.splitlines()[-1]) for t,e in result.failures],'errors':[(t.id(),e.splitlines()[-1]) for t,e in result.errors],'skipped':[(t.id(),why) for t,why in result.skipped],'success':result.wasSuccessful()}
+open(sys.argv[0]+'.json','w').write(json.dumps(receipt,ensure_ascii=False,indent=2)+'\\n')
+sys.exit(0 if result.wasSuccessful() else 1)
+'''
+try:
+ subprocess.run(['git','worktree','add','--detach',str(temp),parent],check=True,capture_output=True,text=True)
+ for m in modules:
+  blob=subprocess.check_output(['git','show',f'{red}:scripts/{m}.py']);(temp/'scripts'/f'{m}.py').write_bytes(blob)
+ (temp/'scripts/red_runner.py').write_text(runner)
+ compile_result=subprocess.run(['python3','-m','py_compile',*[str(temp/'scripts'/f'{m}.py') for m in modules]],capture_output=True,text=True)
+ with (evidence/'red-corrections-parent.log').open('w') as log:run=subprocess.run(['python3','red_runner.py',*modules],cwd=temp/'scripts',stdout=log,stderr=subprocess.STDOUT)
+ result=json.loads((temp/'scripts/red_runner.py.json').read_text());result.update({'redCommit':red,'parent':parent,'command':'python3 red_runner.py '+ ' '.join(modules),'exit':run.returncode,'compileExit':compile_result.returncode,'proof':'temporary detached parent + committed RED test files only','testHashes':{f'scripts/{m}.py':hashlib.sha256(subprocess.check_output(['git','show',f'{red}:scripts/{m}.py'])).hexdigest() for m in modules}})
+ (evidence/'red-corrections-parent.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+ print(json.dumps({k:result[k] for k in ['redCommit','parent','executedMethods','exit','compileExit']},indent=2));print('assertionFailures',len(result['assertionFailures']),'errors',len(result['errors']),'skipped',len(result['skipped']))
+ assert run.returncode==1 and compile_result.returncode==0 and result['assertionFailures'] and not result['errors'] and not result['skipped']
+finally:
+ subprocess.run(['git','worktree','remove','--force',str(temp)],check=True,capture_output=True,text=True)

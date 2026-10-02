@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-02",
   "purpose": "Per-platform publication record for the doseweek-legal second-release candidate (LEGAL_TWO_RELEASES.md section 5). Null means not assigned or not decided; nothing here is a placeholder version or date.",
   "legal": {
     "repository": "wonyoungb/doseweek-legal",
@@ -8,7 +8,7 @@
     "baseCommit": "8a615a1",
     "headCommit": null,
     "publishStatus": "Unpublished. Current owner-approved order: final required native notices and immutable builds/signing, both accepted store uploads and release checks, then site publication.",
-    "sourceStatus": "Website-owned full policy sources and all seven generated pages pass source/link/locale/release checks on 2026-09-23. Scoped 320px EN/AR privacy and no-JavaScript checks pass after the documented wrap fix. Native full-policy duplication is being retired by native owners; legacy resources remain. This does not certify real SDK behavior, translation or publication.",
+    "sourceStatus": "Historical dated source/visual receipts below remain scoped to their recorded inputs. The 1.0.6 legal-update candidate adds new sources and generated pages; fresh static checks and separate blockers are recorded in legalUpdate106 and docs/CURRENT_HANDOFF.md.",
     "generatedPages": [
       "index.html",
       "privacy/index.html",
@@ -17,7 +17,8 @@
       "android/privacy/index.html",
       "android/support/index.html",
       "import/index.html",
-      "terms/index.html"
+      "terms/index.html",
+      "us-health/index.html"
     ],
     "handoff": "docs/CURRENT_HANDOFF.md",
     "headCommitNote": "the branch head is recorded by the final gate; this file cannot name its own commit. observedHeadCommit is the branch head observed before the 2026-09-24 getting-started guide and audit text edit, not the commit that contains it",
@@ -200,5 +201,40 @@
       "translation of placeholder fields",
       "browser review of the new and changed pages"
     ]
+  },
+  "legalUpdate106": {
+    "status": "unpublished-candidate",
+    "baseCommit": "1714082f526a15aec1a7d89ffc00acbeeeab8178",
+    "plannedVersion": "1.0.6",
+    "effectiveDate": null,
+    "operator": "Wonyoung Labs (sole proprietorship); representative/privacy officer Wonyoung Choi",
+    "sourceHashes": {
+      "docs/ios-content.json": "cdd7d6f4f0e5a8f7657da8eafa35e15e3477185616bf4e169fb09a123939df49",
+      "docs/android-content.candidate.json": "02057b004da0ea8c40c7e04212977705b419389de444892cef080dcaa768d272",
+      "docs/account-sync-content.candidate.json": "ff39a408c0f48e91eb708e6e901a9c00ed65053dc89f6d15098e4516313b5eab",
+      "docs/terms-content.json": "8bdc603ef8b1f209516375526dba1f8f0844b960068541fbd10737b6ab51d881",
+      "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee"
+    },
+    "privacySupplement": "Art30 purposes/bases/security/rights, recipient-specific Art28-8 inventory, PIPA/FTC/GDPR breach section; supplier particulars stay explicitly unverified and false-gated",
+    "subscription": "Owner final USD1.99/13.99, KRW3300/19900, JPY300/1980; Store-localized actual terms; eligible first-time1-calendar-month trial; automatic renewal, Store cancellation and statutory rights",
+    "backup": "daily pre-upload-encrypted S3 Seoul app data +weekly OS recovery snapshot; deleted personal data out of all relevant backups within7days; independent cleanup/actual proof required",
+    "routes": {
+      "site": [
+        "",
+        "support/",
+        "privacy/",
+        "android/",
+        "android/support/",
+        "android/privacy/",
+        "import/",
+        "terms/",
+        "us-health/"
+      ],
+      "stagedAccount": "account/delete/ through render_account_sync.py (unpublished/noindex) — request by support email without reinstall or Plus"
+    },
+    "verification": "PASS all static source/render/site/tone/link/locale checks and173 exact unittest methods;126unpublished in-memory account/US candidate pages; release BLOCKED date/provider/native/operational gates. Visual NOT_RUN: browserfile-URL policy. No native/provider/counsel/native-speaker claim.",
+    "publication": "never published/pushed/merged by this lane; date/native/server/provider/representative/operational gates stay closed",
+    "ownerQuestions": "Final report and candidate unresolved/readiness fields; no prices/trial/regions/mg/backup/operator decision reopened",
+    "evidence": "evidence/legal-update-20261002/legal-update/"
   }
 }

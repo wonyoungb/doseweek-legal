@@ -32,7 +32,7 @@ LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
-FIELDS = ("account", "sync", "healthSync", "recordsSync", "mealsSync", "processors", "retention", "notice",
+FIELDS = ("account", "sync", "healthSync", "healthConsent", "serverBackup", "recordsSync", "mealsSync", "processors", "retention", "notice",
           "webDeletion", "releaseStatus",
           "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
@@ -48,7 +48,7 @@ FIELDS = ("account", "sync", "healthSync", "recordsSync", "mealsSync", "processo
 # kept for at most 7 days (round 3: mechanism-neutral, since owner decision
 # round3_20261002.backup_hybrid replaces the daily-snapshot plan; serverReadiness.backupWindowVerified).
 HOSTING_FIELD = "processors"
-HOSTING_TOKENS = ("Wonyoung Choi", "Amazon Web Services", "Lightsail", "ap-northeast-2", "Cloudflare")
+HOSTING_TOKENS = ("Wonyoung Labs", "Wonyoung Choi", "Amazon Web Services", "Lightsail", "ap-northeast-2", "Cloudflare")
 CLOUDFLARE_TRANSFER_LINKS = (
     "https://www.cloudflare.com/privacypolicy/",
     "https://www.cloudflare.com/network/",
@@ -221,6 +221,12 @@ SERVER_READINESS_TOKENS = {
     # (owner-decisions round3_20261002.backup_hybrid) and the origin access-log disclosure.
     "backupWindowVerified": "backup window",
     "accessLogDisclosed": "HOST-07",
+    "processorInventoryVerified": "processorInventoryVerified",
+    "healthConsentVerified": "healthConsentVerified",
+    "internationalRepresentativesVerified": "internationalRepresentativesVerified",
+    "breachProcedureOperational": "breachProcedureOperational",
+    "regionalSubscriptionNoticesVerified": "regionalSubscriptionNoticesVerified",
+    "consumerHealthRightsVerified": "consumerHealthRightsVerified",
 }
 
 # Lane LEGAL-STORE round 3 (2026-10-02 reviews of e3da3bd).

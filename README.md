@@ -16,8 +16,9 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
 | `/terms/` | Terms of Use for both apps (free version with ads, Plus subscription, App Store and Google Play billing). Candidate for the monetization release; not published |
-| `/<locale>/…` | The same eight routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
-| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 144 pages (8 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
+| `/<locale>/…` | The same nine routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
+| `/us-health/` | Separate US Consumer Health Data Privacy Policy, with consent, recipients and state rights; unpublished 1.0.6 candidate |
+| `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 162 pages (9 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
 zh-Hans, zh-Hant and tr. Keep Arabic right-to-left, the separate Portuguese and Chinese
@@ -50,13 +51,14 @@ reuse existing localized copy, one field per route:
 | `/<locale>/android/support/`, `/<locale>/android/privacy/` | `docs/android-content.candidate.json` `home.supportLinkBody`, `home.privacyLinkBody` |
 | `/<locale>/import/` | `import/content.json` `lead` |
 | `/<locale>/terms/` | `docs/terms-content.json` `intro` |
+| `/<locale>/us-health/` | `docs/us-health-content.json` `intro` |
 
 ## Privacy stance
 
 - **This website** is plain HTML and CSS with two small local scripts (`assets/language.js`,
   `assets/import.js`). It has no analytics, trackers, third-party scripts, remote fonts,
   cookies, accounts or form backend.
-- **The apps** need no DoseWeek account. As the policy sources in `docs/` describe, the 1.0.5
+- **The apps** support basic local recording without a DoseWeek account. As the policy sources in `docs/` describe, the 1.0.5
   app releases add optional usage analytics (Google Analytics for Firebase). It is off by default
   and starts only after the user agrees to analytics and, separately, to overseas transfer. The
   live 1.0.5 apps are paid downloads without ads. The candidate sources on this branch describe
@@ -87,12 +89,13 @@ Edit the source first, then render. Do not hand-edit generated HTML.
 | `docs/ios-content.json` | `scripts/render_ios.py` | `privacy/`, `support/`, `<locale>/privacy/`, `<locale>/support/` |
 | `docs/android-content.candidate.json` | `scripts/render_android.py` | `android/**`, `<locale>/android/**` |
 | `docs/terms-content.json` (medical section reuses `docs/ios-content.json` wording) | `scripts/render_terms.py` | `terms/index.html`, `<locale>/terms/index.html` |
+| `docs/us-health-content.json` | `scripts/render_us_health.py` | `us-health/index.html`, `<locale>/us-health/index.html` |
 | `import/content.json` | `scripts/render_import.py` | `import/index.html`, `<locale>/import/index.html`, `import/*.md`, `import/draft-v1.schema.json`, `import/draft.example.json` |
 | locales, routes, hreflang links, language-page shell | `scripts/locale_pages.py` (shared) and `scripts/render_sitemap.py` | the language pages' head and navigation, `sitemap.xml` |
 | effective dates, release placeholders, food-data attributions | `scripts/legal_release.py` | used by the iOS, Android and Terms renderers and `check_site.py` |
 
 Render (writes files). After changing CSS, `assets/language.js` or shared navigation, run all
-six:
+seven:
 
 ```bash
 python3 scripts/render_home.py
@@ -100,6 +103,7 @@ python3 scripts/render_ios.py
 python3 scripts/render_android.py
 python3 scripts/render_import.py --require-all-locales
 python3 scripts/render_terms.py
+python3 scripts/render_us_health.py
 python3 scripts/render_sitemap.py
 ```
 
@@ -111,11 +115,14 @@ python3 scripts/render_ios.py --check
 python3 scripts/render_android.py --check
 python3 scripts/render_import.py --check --require-all-locales
 python3 scripts/render_terms.py --check
+python3 scripts/render_us_health.py --check
 python3 scripts/render_sitemap.py --check
 python3 scripts/check_site.py            # pages, hreflang, sitemap, local links, locales, disclosures, Korean tone
+python3 scripts/account_sync_candidate.py
+python3 scripts/render_account_sync.py --check  # in-memory unpublished 1.0.6 sources/pages
 python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
 python3 scripts/check_site.py --release  # also requires the release effective date and no release placeholders
-(cd scripts && python3 -m unittest test_render_paragraphs test_privacy_ops test_korean_tone test_locale_pages test_monetization_copy)
+python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
 `render_ios.py --catalog <path>` is an optional legacy comparison against old app resources. It
@@ -128,7 +135,7 @@ reviewed exception, with its key, rule, match and reason.
 
 Unpublished account/legal integration can be reviewed with
 `python3 scripts/render_account_sync.py --output /absolute/path/to/local-review-directory`.
-The output must be outside this checkout. It materializes separate 1.0.6 privacy/help/Terms
+The output must be outside this checkout. `--check` validates all staged pages in memory without writing. It materializes separate 1.0.6 privacy/help/Terms
 sources and a localized account-deletion request route using the existing public support
 email. Its effective date stays null, pages carry an unpublished/OFF notice, and requesting
 by email does not prove completed erasure. Original served pages are preserved. See
@@ -137,7 +144,7 @@ by email does not prove completed erasure. Original served pages are preserved. 
 ## Repository layout
 
 ```text
-index.html, privacy/, support/, android/, import/   generated hash pages (served)
+index.html, privacy/, support/, android/, import/, terms/, us-health/   generated hash pages (served)
 ko/, en/, … zh-Hant/, tr/                           generated language pages (served)
 assets/          stylesheets, local scripts, app icons
 docs/            content sources (*.json) and maintainer docs
@@ -167,6 +174,13 @@ nor rewrites the icon. No script in this repository writes `assets/app-icon.png`
 
 Older handoffs, continuation prompts and snapshots were removed from the tree. They remain in
 Git history.
+
+Prepared 1.0.6 disclosures include the Wonyoung Labs operator, separate health-sync consent,
+processor/transfer tables, regional rights, daily encrypted S3 Seoul backups and weekly OS
+snapshots with the seven-day deletion limit, trial/subscription terms and a separate US policy.
+Supplier facts, foreign representatives and native/operational behavior remain gated. The
+[legal operations procedure](docs/LEGAL_OPERATIONS_1_0_6.md) defines the breach/deletion/rights
+work required before publication; it is not a claim that those operations have been run.
 
 ## Notices
 
