@@ -160,6 +160,12 @@ class AccountSyncCandidateTest(unittest.TestCase):
         self.assertEqual(account_sync_candidate.staged_placeholder_errors(
             render_account_sync.integrated_sources()), [])
 
+    def test_sync_scope_is_checked_in_every_locale(self):
+        # Review 2 (2026-10-02): the D1 record-kind scope was machine-checked in en/ko only.
+        self.assertEqual(set(account_sync_candidate.SYNC_SCOPE), set(account_sync_candidate.LOCALES))
+        for locale, terms in account_sync_candidate.SYNC_SCOPE.items():
+            self.assertEqual(len(terms), 8, locale)
+
     def test_hosting_detector_rejects_a_placeholder_candidate(self):
         locales = {loc: {"processors": "The server location is listed before release.",
                          "retention": "Kept for 30 days.", "sync": "On iOS only."}

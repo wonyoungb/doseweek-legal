@@ -54,11 +54,40 @@ CLOUDFLARE_TRANSFER_LINKS = (
 RETENTION_NUMBERS = ("30", "7")
 # D1: the full record graph crosses both platforms. The sync text reaches the Android pages,
 # whose catalog guard (render_android.validate_catalog) refuses the token "iOS", so the scope is
-# checked by the record kinds and the "both platforms" wording in the two reviewed languages.
+# checked by the record kinds, settings and the "both platforms" wording. Round 2 (2026-10-02
+# review): every locale, not only en and ko. Lane commit debbd1c had narrowed the first RED
+# (702c296), which required "iOS"/"Android" in every locale, to en/ko record kinds.
 SYNC_SCOPE = {
     "en": ("injection plans", "dose records", "meals", "body measurements", "supplies",
            "import history", "settings", "both platforms"),
     "ko": ("주사 계획", "투여 기록", "식사", "신체 측정값", "재고", "가져오기 기록", "설정", "두 플랫폼"),
+    "ja": ("注射計画", "投与記録", "食事", "身体の測定値", "在庫", "取り込み履歴", "設定", "両プラットフォーム"),
+    "de": ("Injektionspläne", "Dosisaufzeichnungen", "Mahlzeiten", "Körpermesswerte", "Vorräte",
+           "Importverlauf", "Einstellungen", "beide Plattformen"),
+    "fr": ("plans d’injection", "prises", "repas", "mesures corporelles", "stocks",
+           "historique d’importation", "réglages", "deux plateformes"),
+    "es": ("planes de inyección", "registros de dosis", "comidas", "medidas corporales", "existencias",
+           "historial de importación", "ajustes", "ambas plataformas"),
+    "it": ("piani di iniezione", "somministrazioni", "pasti", "misure corporee", "scorte",
+           "cronologia delle importazioni", "impostazioni", "due piattaforme"),
+    "nl": ("injectieplannen", "dosisregistraties", "maaltijden", "lichaamsmetingen", "voorraad",
+           "importgeschiedenis", "instellingen", "beide platforms"),
+    "pt-PT": ("planos de injeção", "registos de doses", "refeições", "medidas corporais", "stock",
+              "histórico de importação", "definições", "duas plataformas"),
+    "pl": ("plany wstrzyknięć", "zapisy dawek", "posiłki", "pomiary ciała", "zapasy",
+           "historię importu", "ustawieniami", "obiema platformami"),
+    "sv": ("injektionsplaner", "dosregistreringar", "måltider", "kroppsmått", "förråd",
+           "importhistorik", "inställningar", "båda plattformarna"),
+    "hi": ("इंजेक्शन योजनाएँ", "खुराक रिकॉर्ड", "भोजन", "शरीर माप", "स्टॉक", "आयात इतिहास", "सेटिंग",
+           "दोनों प्लेटफ़ॉर्म"),
+    "pt-BR": ("planos de injeção", "registros de doses", "refeições", "medidas corporais", "estoque",
+              "histórico de importação", "configurações", "duas plataformas"),
+    "ar": ("خطط الحقن", "سجلات الجرعات", "الوجبات", "قياسات الجسم", "المخزون", "سجل الاستيراد",
+           "الإعدادات", "المنصّتين"),
+    "zh-Hans": ("注射计划", "用药记录", "饮食", "身体测量", "库存", "导入历史", "设置", "两个平台"),
+    "zh-Hant": ("注射計畫", "用藥紀錄", "飲食", "身體測量", "庫存", "匯入歷程", "設定", "兩個平台"),
+    "tr": ("enjeksiyon planları", "doz kayıtları", "öğünler", "vücut ölçümleri", "stok",
+           "içe aktarma geçmişi", "ayarlarla", "iki platform"),
 }
 
 
