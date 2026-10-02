@@ -34,10 +34,18 @@ preservation receipts PASS. Regression presence guards do not certify future par
 Evidence in `revision2/`: full/focused/RED identities and logs,13check receipts, frozen inputs,
 126staged artifact hashes, minor/token and semantic preservation audits, committed partner receipts.
 All17server flags and5legal flags per privacy source remain false. Android committed commercial
-parity BLOCKED; iOS matches requiredKRW22000. No price decision reopened. SourceGREEN is ready
-for a new local commit. Owned proof worktree and translation scratch removed; no running owned job.
+parity BLOCKED; iOS matches requiredKRW22000. No price decision reopened. Source GREEN committed locally at `5f96792321df89783e22b73aa7c43e1979e3a46c`. Owned proof worktree and translation scratch removed; no running owned job.
 Native/provider/live/visual NOT_RUN; no counsel/native-speaker certification or publication.
-Next action: commit verified sourceGREEN, validate and overwrite final report, record final HEAD.
+Final report overwritten and schema/identity/evidence/log/hash/stamp validation PASS at sourceGREEN;
+`revision2/report-validation-precompletion.json` retains this checkpoint. Independent read-only
+report audit also found no material inconsistency; receipt in `revision2/independent-review.json`. Final reporting-only
+commit will change this handoff, dated journal and report writer/receipt; the mechanical final
+report refresh records final HEAD/commit/file inventory and clean status without changing any
+of255verified product inputs. No competing workspace handoff or release journal is written.
+Next action: orchestrator reviews/integrates the candidate and coordinates Android committed
+policy/review/check parity to KRW22,000 before opening its gate; remaining operational ownerQuestions
+and actual Store/native/provider proofs still block release. Publication is outside this lane.
+Report: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-report.json`.
 
 ## HISTORICAL — legal-update-legal revision 1 (2026-10-02; unpublished)
 

@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "head": "5f96792321df89783e22b73aa7c43e1979e3a46c",
+  "requiredFields": [
+    "head",
+    "commits",
+    "redCommits",
+    "greenTests",
+    "items",
+    "checks",
+    "filesTouched",
+    "nativeNeeded",
+    "ownerQuestions",
+    "notDone"
+  ],
+  "currentItemCitationsInExecutedInventory": true,
+  "reportSchemaReadback": true,
+  "sourceGreen": "5f96792321df89783e22b73aa7c43e1979e3a46c",
+  "externalParity": "BLOCKED_ANDROID_COMMITTED_PRICE",
+  "fullMethods": 193,
+  "staticChecks": "12PASS1BLOCKED",
+  "currentProductHashes": 255,
+  "reportingOnlyCompletionPending": true
+}
