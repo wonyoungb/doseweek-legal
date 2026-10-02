@@ -230,6 +230,9 @@ SERVER_READINESS_TOKENS = {
     "regionalSubscriptionNoticesVerified": "regionalSubscriptionNoticesVerified",
     "consumerHealthRightsVerified": "consumerHealthRightsVerified",
     "commercialCopyParityVerified": "commercialCopyParityVerified",
+    # LATE2 review (2026-10-02): apps/google release/1.0.6 still ships the 1.0.5 app-managed
+    # Drive appDataFolder backup, which the staged 1.0.6 copy no longer describes (OQ-L2-1).
+    "appManagedDriveBackupDecided": "CloudBackupService",
 }
 
 # Lane LEGAL-STORE round 3 (2026-10-02 reviews of e3da3bd).

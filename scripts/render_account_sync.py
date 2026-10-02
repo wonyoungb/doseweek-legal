@@ -162,6 +162,8 @@ def integrated_sources(candidate=None):
         ap['no-collection']['items'][1] = text['account']
         # The custom app-managed Drive path belongs to the retained 1.0.5 source. The 1.0.6
         # automatic paths are E2EE server sync and Android OS Auto Backup, with distinct keys.
+        # The app-managed path still ships in apps/google release/1.0.6; publication stays
+        # blocked until it is removed or disclosed (serverReadiness.appManagedDriveBackupDecided).
         ap['backup']['paragraphs'][0] = join('manualBackupScope', 'androidManualFileBackup')
         ap['backup']['paragraphs'][2] = text['androidManualFileSecurity']
         ap['backup']['paragraphs'][4:] = [text['automaticBackup'], text['androidSystemBackup'], join('sync', 'serverBackup')]

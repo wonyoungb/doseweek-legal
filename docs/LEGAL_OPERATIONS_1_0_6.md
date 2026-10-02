@@ -53,9 +53,17 @@ The current handoff and account candidate readiness flags own release status.
   Leave existing backups intact and keep restore available. Native proof before release: the
   bmgr run on API 34 and 36 (Plus backup, switch to free, bmgr backupnow, previous set still
   present and restoring every record family; a transient entitlement failure behaves like free).
-  Show existing1.0.5 users a one-time, non-blocking notice with the manual export route.
+  Show existing 1.0.5 users a one-time, non-blocking notice with the manual export route.
   Verify the actual OS/provider backup data, transfer, settings and retention particulars;
-  do not reuse the retired app-managed Drive-folder disclosure as OS backup evidence.
+  do not reuse the 1.0.5 app-managed Drive-folder disclosure as OS backup evidence.
+- Android app-managed Drive backup (publication blocker, owner question OQ-L2-1): apps/google
+  release/1.0.6 (3c1be4bd5) still contains the 1.0.5 app-managed encrypted backup to the user's
+  Google Drive appDataFolder (data/drive/CloudBackupService, DriveAppDataApi, CloudBackupWork).
+  The staged 1.0.6 copy describes only OS Google Drive Auto Backup and the E2EE server backup,
+  and no owner decision retires this path or sets its tier. It must be
+  removed from the 1.0.6 build or disclosed before publication (tier, on-device encryption,
+  Drive-visible metadata, retention and deletion, in all 17 locales);
+  appManagedDriveBackupDecided stays false until the build and the staged copy match.
 - iOS: iCloud and CloudKit app-data backup stay off. A user-directed manual file export to a
   chosen cloud document provider is distinct, as are optional calendar-provider copies.
 - Free manual file export/import and backup reminders remain. Backup settings must show the
