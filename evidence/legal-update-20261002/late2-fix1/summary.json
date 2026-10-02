@@ -1,0 +1,54 @@
+{
+  "lane": "legal-update-legal-late2",
+  "pass": "review-1 fix (two majors)",
+  "date": "2026-10-02",
+  "reviewedRejectedHead": "04f43c5905d7defd5f1e024977f7f69171641401",
+  "commits": {
+    "redA": "d8ed26d4e7bc543676fe3dd06902124685f39d79",
+    "greenA": "286237fd86fc2638336ef7849e9441f0cafc613b",
+    "redB": "baffda8849e8ebb6cb3b6230c36b286cb567a602",
+    "greenB": "74534b56a73d69845f5a4064032b19b5ce172038"
+  },
+  "redProofs": {
+    "redA": {
+      "worktree": "temporary detached at redA (non-test files equal parent 04f43c5), removed",
+      "testsRun": 2,
+      "failedMethods": [
+        "test_legal_late2_backup.LegalLate2BackupTest.test_staged_earlier_answers_drop_nothing_moved_into_plus_claim_all_locales"
+      ],
+      "assertionFailures": 6,
+      "errors": [],
+      "omitted": [],
+      "receipt": "redA-proof.json",
+      "logSha256": "1c40d894759d31662bd80d1ae67afd49f67caf4d54248955bfdfb8722749d79f",
+      "failingSubtests": "ko/ja/tr x ios/android (6); other 14 locales and the preservation test pass"
+    },
+    "redB": {
+      "worktree": "temporary detached at redB (non-test files equal parent 286237f), removed",
+      "testsRun": 14,
+      "failedMethods": [
+        "test_legal_late2_backup.LegalLate2BackupTest.test_app_managed_drive_backup_blocks_publication_until_removed_or_disclosed"
+      ],
+      "assertionFailures": 12,
+      "errors": [],
+      "omitted": [],
+      "receipt": "redB-proof.json",
+      "logSha256": "0d2fcece3f2acc6d0a77c4a70ab47ba7f7d3a2e565bdc4f3f24f3c3b8e3c8876"
+    }
+  },
+  "stagedDiffGreenA": "integrated_sources() before/after: exactly 6 fields changed (ios support.plus.earlier.answers[1] and android faq plus-earlier answers[1] in ko, ja, tr); other 14 locales byte-identical",
+  "fullGreen": {
+    "requested": 222,
+    "executed": 222,
+    "testsRun": 222,
+    "failedMethods": [],
+    "errors": [],
+    "skipped": [],
+    "omitted": [],
+    "exit": 0,
+    "receipt": "full-green.json"
+  },
+  "checks": "checks.json (14 commands: 13 PASS, check_site.py --release BLOCKED_EFFECTIVE_DATE as expected)",
+  "frozenInputs": "frozen-input-comparison.json",
+  "native": "none applicable (static website/legal repository)"
+}

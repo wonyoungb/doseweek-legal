@@ -1,4 +1,25 @@
-## ACTIVE — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal LATE2 review-1 fix (2026-10-02; unpublished)
+
+Objective: fix the two majors from the review that rejected `04f43c5`. Branch
+`next-ai/legal-store-legal-cx`. Pass status: COMPLETE (static).
+1. ko/ja/tr kept the 1.0.5 sentence "nothing is deleted or moved into Plus" in the staged earlier
+   answer (Android FAQ plus-earlier, iOS support plus/earlier), because the renderer replaced
+   only sentence 0. It now replaces every sentence before the closing notice on both platforms.
+   RED `d8ed26d` (fixture claim per locale/platform; standalone sentence no longer "preserved"),
+   GREEN `286237f`. Only those 6 staged fields changed; the other 14 locales are byte-identical.
+2. The app-managed Drive appDataFolder backup (CloudBackupService) still ships in apps/google
+   release/1.0.6 but is no longer described. It is now a publication blocker: new
+   `serverReadiness.appManagedDriveBackupDecided=false`, an unresolved item and an operations
+   blocker ("removed from the 1.0.6 build or disclosed before publication"); OQ-L2-1 stays open.
+   RED `baffda8`, GREEN `74534b5`.
+Checks: 222/222 unittest methods PASS; 13 light commands PASS; `check_site.py --release`
+BLOCKED_EFFECTIVE_DATE as expected; frozen inputs match (263 files). Evidence:
+`evidence/legal-update-20261002/late2-fix1/summary.json`. Temporary RED worktrees removed.
+No native/provider/live check applies. Never publish.
+Next action: orchestrator re-review; the owner answers OQ-L2-1 (remove or disclose the
+app-managed Drive backup) before the flag can open.
+
+## HISTORICAL — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
 
 Objective: apply the late owner backup decisions in all 17 staged 1.0.6 privacy/help/Terms
 locales. Plus automatic backup = optional, separately consented end-to-end encrypted server

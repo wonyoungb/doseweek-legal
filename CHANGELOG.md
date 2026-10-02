@@ -1,3 +1,12 @@
+## 2026-10-02 — LATE2 review-1 fix (unpublished)
+
+- Staged earlier answers in ko, ja and tr (both platforms) drop the 1.0.5 "nothing is deleted
+  or moved into Plus" sentence, like the other 14 locales (RED `d8ed26d`, GREEN `286237f`).
+- New publication blocker `serverReadiness.appManagedDriveBackupDecided`: the app-managed
+  Drive appDataFolder backup must be removed from the 1.0.6 build or disclosed (OQ-L2-1;
+  RED `baffda8`, GREEN `74534b5`).
+- 222/222 tests and 13 light checks PASS; release check BLOCKED_EFFECTIVE_DATE. Never publish.
+
 ## 2026-10-02 — LATE2 automatic backup (unpublished)
 
 - Staged 1.0.6 privacy/help/Terms in 17 locales: Plus automatic backup is the optional,
