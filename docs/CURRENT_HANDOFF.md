@@ -1,20 +1,28 @@
 ## ACTIVE — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
 
-Objective: apply the latest owner backup decision in all17 staged1.0.6 privacy/help/Terms
-locales: Plus E2EE server automatic backup, server cannot read contents; Android OS Google
-Drive Auto Backup only during verified Plus; no iCloud/CloudKit app-data backup. Free manual
-file export/import and backup reminders remain. Existing Drive backups and restore stay intact.
-Starting HEAD `4890013`; branch `next-ai/legal-store-legal-cx`, clean initial tree.
-Baseline/source/reference hashes and prior immutable report: `evidence/legal-update-20261002/late2/`.
-Owned scope: backup regression/fixture, candidate/renderer, active operations/provenance, local
-proof and continuity. Legacy1.0.5 sources/pages stay historical;7-day server deletion and other
-legal/price/trial/rights disclosures preserved. Git status owns exact dirty files.
-No owned PID/device/background/native job; external canonical ledger is read only.
-No network, push, merge, deploy, Store or publication action. All existing release gates remain closed.
-Assertion-only regression/fixture ready: 12 exact methods; all scripts AST compile PASS.
-Latest owner snapshot decision14:48 also retires weekly OS snapshots in favor of a manual
-pre-deploy snapshot, deleted within7days; related backup disclosures need this correction.
-No product edits yet. Next action: commit RED and prove assertions on the detached parent.
+Objective: apply the late owner backup decisions in all 17 staged 1.0.6 privacy/help/Terms
+locales. Plus automatic backup = optional, separately consented end-to-end encrypted server
+backup/sync (server cannot read contents). Android OS Google Drive Auto Backup carries the
+complete app-data set only during verified active Plus; otherwise the run is skipped, never an
+empty or partial backup, so the previous backup stays restorable (owner
+backup_safety_completeness, 15:30). No iCloud/CloudKit app-data backup. Free keeps manual file
+export/import and backup reminders. Server: daily encrypted S3 Seoul archives plus one manual
+pre-deploy OS snapshot deleted within 7 days (owner 14:48; weekly snapshots dropped).
+Branch `next-ai/legal-store-legal-cx`; base reviewed `4890013`. Pass status: COMPLETE (static).
+Commits: RED `cfc27f7` (Codex), RED `051b975` (manual snapshot assertions), test correction
+`e691a48` (Free plan named with each locale's live term), GREEN `880184c`, RED `fa684a6`
+(skip-not-empty), GREEN `2cfbac8`, then this docs/evidence commit. HEAD is in the lane report.
+Codex was cut off at 15:33 with GREEN uncommitted and failing on one Android catalog guard
+("visit prep"); fixed by a separate Android free-feature list (`androidFreeFeatures`).
+Shared deletion text now gives a neutral cloud-storage example instead of Google Drive, so
+iOS copy names no Android-side service.
+Checks: 220/220 unittest methods PASS (0 failures/errors/skips/omissions); 13 light commands
+PASS; `check_site.py --release` exit 1 BLOCKED_EFFECTIVE_DATE as expected; frozen inputs match
+(263 files). RED proofs: `late2/red-final-proof.json`, `red2-proof.json`, `red3-proof.json`.
+Raw 7 MB RED logs replaced by excerpts with recorded sha256. No native/provider/live/visual
+check applies or is claimed. No owned PID/device/worktree remains. Never publish.
+Next action: orchestrator review of HEAD; Android Drive skip mechanism and bmgr proof belong
+to the Android BackupAgent lane; publication gates stay closed.
 
 ## HISTORICAL — legal-update-legal late review 2 (2026-10-02; unpublished)
 

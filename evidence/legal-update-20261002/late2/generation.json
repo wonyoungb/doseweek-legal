@@ -1,0 +1,32 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "scripts/account_sync_candidate.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late2/candidate.log.gz",
+    "logSha256": "098687e60b4205dc144633576bd08b8fde43fa9f21a5f2f96b0420d6ca8042e3"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_ios.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late2/render-ios.log.gz",
+    "logSha256": "13aeeb61002176ceedb755c79bcf6ef2e4910bb4fb4d090896e834d3f1b1bf24"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_android.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late2/render-android.log.gz",
+    "logSha256": "5f0ce48381e770d1d5efcdc38fc4b50071a42c8adf0e4167eb72d64ddbf0fe18"
+  }
+]

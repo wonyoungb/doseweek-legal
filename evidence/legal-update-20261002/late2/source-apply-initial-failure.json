@@ -1,0 +1,12 @@
+{
+  "exit": 1,
+  "result": "FAIL",
+  "reason": "French fixture manual anchor manuell did not match correct French snapshot adjective manuel",
+  "sourceWritesCompleted": [
+    "docs/account-sync-content.candidate.json",
+    "docs/ios-content.json",
+    "docs/android-content.candidate.json"
+  ],
+  "remainingStage": "existing backup assertion map, provenance refresh and scratch cleanup",
+  "notAProductAssertionFailure": true
+}

@@ -1,0 +1,20 @@
+{
+  "redCommit": "051b975",
+  "parentSourceCommit": "cfc27f770c16c34752e11afb4206e51abd86575e",
+  "worktree": "temporary detached at 051b975, removed",
+  "requested": [
+    "test_account_legal_update.AccountLegalUpdateTests.test_server_backup_encryption_manual_snapshot_deletion_and_restore_all_locales",
+    "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle"
+  ],
+  "failedMethods": [
+    "test_account_legal_update.AccountLegalUpdateTests.test_server_backup_encryption_manual_snapshot_deletion_and_restore_all_locales",
+    "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle"
+  ],
+  "assertionFailures": 18,
+  "errors": [],
+  "omitted": [],
+  "compile": "PASS",
+  "exit": 1,
+  "reason": "parent serverBackup copy and operations doc still describe weekly OS snapshots; manual pre-deploy wording absent in all 17 locales",
+  "logSha256": "63a5587cc6d140517c625b207c4f611a3fcbfe3d86258375408ef68f744536db"
+}

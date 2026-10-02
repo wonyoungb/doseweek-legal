@@ -1,0 +1,43 @@
+{
+  "redCommit": "fa684a6",
+  "sourceEqualsCommit": "880184c",
+  "worktree": "temporary detached at fa684a6, removed after run",
+  "requested": [
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_os_drive_backup_requires_verified_active_plus_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_staged_policy_support_guide_and_plus_disclose_both_backup_paths",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_decision_stays_operationally_gated",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_is_plus_e2ee_unreadable_with_free_manual_paths_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_icloud_and_cloudkit_do_not_back_up_app_data_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_staged_policy_support_guide_and_plus_disclose_automatic_backup",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_legacy_sources_and_price_trial_rights_contract_stay_unchanged",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_manual_crypto_recovery_and_validated_restore_details_remain",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_server_backups_use_manual_predeploy_snapshot_not_weekly_snapshot",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_android_retires_old_system_exclusion_and_custom_drive_claims",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_commercial_copy_retires_blanket_free_backup_claims_both_platforms",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_terms_disclose_auto_backup_and_platform_data_backup_limits"
+  ],
+  "failedMethods": [
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_os_drive_backup_requires_verified_active_plus_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_decision_stays_operationally_gated"
+  ],
+  "passedBeforeGreen": [
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_staged_policy_support_guide_and_plus_disclose_both_backup_paths",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_is_plus_e2ee_unreadable_with_free_manual_paths_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_icloud_and_cloudkit_do_not_back_up_app_data_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_staged_policy_support_guide_and_plus_disclose_automatic_backup",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_legacy_sources_and_price_trial_rights_contract_stay_unchanged",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_manual_crypto_recovery_and_validated_restore_details_remain",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_server_backups_use_manual_predeploy_snapshot_not_weekly_snapshot",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_android_retires_old_system_exclusion_and_custom_drive_claims",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_commercial_copy_retires_blanket_free_backup_claims_both_platforms",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_terms_disclose_auto_backup_and_platform_data_backup_limits"
+  ],
+  "assertionFailures": 111,
+  "errors": [],
+  "skipped": [],
+  "omitted": [],
+  "compile": "PASS",
+  "exit": 1,
+  "reason": "GREEN-2 copy still states the retracted exclude-together mechanism; skip/previous-kept/no-partial/Google-account wording, operations skip/bmgr proof and pending blocker absent",
+  "logSha256": "949f6c7e3c23060ff4cc63ae5003679f42db24dce4d83a4bde3c4c55457995ed"
+}

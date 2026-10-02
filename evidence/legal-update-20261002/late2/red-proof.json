@@ -1,0 +1,33 @@
+{
+  "redCommit": "cfc27f770c16c34752e11afb4206e51abd86575e",
+  "parent": "48900139478e80ae08187252d6d434b3270f9d91",
+  "command": [
+    "python3",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/late2/run_tests.py",
+    "/private/tmp/doseweek-legal-late2-red-6u4cntzc",
+    "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/late2/red-parent",
+    "test_legal_late2_backup"
+  ],
+  "compile": "PASS",
+  "terminalExit": 1,
+  "result": "EXPECTED_ASSERTION_FAILURE",
+  "testsRun": 12,
+  "failedMethods": [
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_os_drive_backup_requires_verified_active_plus_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_staged_policy_support_guide_and_plus_disclose_both_backup_paths",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_decision_stays_operationally_gated",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_is_plus_e2ee_unreadable_with_free_manual_paths_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_icloud_and_cloudkit_do_not_back_up_app_data_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_staged_policy_support_guide_and_plus_disclose_automatic_backup",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_server_backups_use_manual_predeploy_snapshot_not_weekly_snapshot",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_android_retires_old_system_exclusion_and_custom_drive_claims",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_commercial_copy_retires_blanket_free_backup_claims_both_platforms",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_terms_disclose_auto_backup_and_platform_data_backup_limits"
+  ],
+  "assertionFailures": 1048,
+  "errors": [],
+  "skipped": [],
+  "omitted": [],
+  "temporaryWorktree": "/private/tmp/doseweek-legal-late2-red-6u4cntzc",
+  "cleanup": "removed after owned run completed"
+}

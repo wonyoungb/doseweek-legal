@@ -1,10 +1,15 @@
 ## 2026-10-02 — LATE2 automatic backup (unpublished)
 
-- Resume clean reviewed `4890013`; apply owner Plus E2EE server backup and Android OS
-  Drive Plus-only decision in staged1.0.6 sources; keep legacy sources/pages and other rights.
-- Baseline/reference hashes and immutable prior report retained in `late2/`; RED proof next.
-- Added12 assertion-only regression methods and17-locale fixture; all scripts AST compile PASS.
-  Latest owner14:48 also retires weekly snapshots for a manual pre-deploy snapshot, <=7days.
+- Staged 1.0.6 privacy/help/Terms in 17 locales: Plus automatic backup is the optional,
+  separately consented E2EE server backup/sync; the server cannot read record contents.
+- Android OS Google Drive Auto Backup only with verified active Plus; otherwise the run is
+  skipped (never an empty or partial backup), the previous backup stays restorable, and the
+  backup lives in the user's Google account. iOS uses no iCloud/CloudKit for app data.
+- Free keeps manual file export/import and backup reminders; Android and iOS free lists keep
+  their own feature names. Server backups: daily encrypted S3 Seoul archives plus one manual
+  pre-deploy OS snapshot deleted within 7 days.
+- Failing-first: REDs `cfc27f7`, `051b975`, `fa684a6` (+ test correction `e691a48`); GREENs
+  `880184c`, `2cfbac8`. 220/220 tests and 13 light checks PASS; release check BLOCKED_EFFECTIVE_DATE.
 - No owned job/device or external action. Never publish.
 
 ## 2026-10-02 — late review 2 (unpublished)

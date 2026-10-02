@@ -1,0 +1,55 @@
+{
+  "testCommit": "e691a48",
+  "sourceEqualsCommit": "cfc27f770c16c34752e11afb4206e51abd86575e",
+  "worktree": "temporary detached at e691a48 (docs/ and renderer identical to cfc27f7), removed after run",
+  "requested": [
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_os_drive_backup_requires_verified_active_plus_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_staged_policy_support_guide_and_plus_disclose_both_backup_paths",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_decision_stays_operationally_gated",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_is_plus_e2ee_unreadable_with_free_manual_paths_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_icloud_and_cloudkit_do_not_back_up_app_data_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_staged_policy_support_guide_and_plus_disclose_automatic_backup",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_legacy_sources_and_price_trial_rights_contract_stay_unchanged",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_manual_crypto_recovery_and_validated_restore_details_remain",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_server_backups_use_manual_predeploy_snapshot_not_weekly_snapshot",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_android_retires_old_system_exclusion_and_custom_drive_claims",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_commercial_copy_retires_blanket_free_backup_claims_both_platforms",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_terms_disclose_auto_backup_and_platform_data_backup_limits",
+    "test_account_legal_update.AccountLegalUpdateTests.test_server_backup_encryption_manual_snapshot_deletion_and_restore_all_locales",
+    "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle"
+  ],
+  "failedMethods": [
+    "test_account_legal_update.AccountLegalUpdateTests.test_server_backup_encryption_manual_snapshot_deletion_and_restore_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_os_drive_backup_requires_verified_active_plus_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_android_staged_policy_support_guide_and_plus_disclose_both_backup_paths",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_decision_stays_operationally_gated",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_automatic_backup_is_plus_e2ee_unreadable_with_free_manual_paths_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_icloud_and_cloudkit_do_not_back_up_app_data_all_locales",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_ios_staged_policy_support_guide_and_plus_disclose_automatic_backup",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_server_backups_use_manual_predeploy_snapshot_not_weekly_snapshot",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_android_retires_old_system_exclusion_and_custom_drive_claims",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_commercial_copy_retires_blanket_free_backup_claims_both_platforms",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_staged_terms_disclose_auto_backup_and_platform_data_backup_limits",
+    "test_legal_operations.LegalOperationsTest.test_backup_procedure_requires_physical_deletion_not_only_lifecycle"
+  ],
+  "passedOnParent": [
+    "test_legal_late2_backup.LegalLate2BackupTest.test_legacy_sources_and_price_trial_rights_contract_stay_unchanged",
+    "test_legal_late2_backup.LegalLate2BackupTest.test_manual_crypto_recovery_and_validated_restore_details_remain"
+  ],
+  "assertionFailures": 1083,
+  "errors": [],
+  "skipped": [],
+  "omitted": [],
+  "compile": "PASS",
+  "exit": 1,
+  "note": "The two parent-passing methods are preservation guards (legacy sources/price-trial contract, manual crypto/restore details) and are expected to pass before and after GREEN.",
+  "logSha256": "86de51c8d6982eb0afa8c8075eeece18ef19d26e69a0fb7e6d8e1f32ca0ffa7c",
+  "rawLogDeleted": {
+    "path": "evidence/legal-update-20261002/late2/red-final-proof.log.gz",
+    "bytes": 7002032,
+    "sha256": "86de51c8d6982eb0afa8c8075eeece18ef19d26e69a0fb7e6d8e1f32ca0ffa7c",
+    "reason": "owner summarize-then-delete rule; every failure header plus its first assertion line kept in the excerpt",
+    "excerpt": "evidence/legal-update-20261002/late2/red-final-proof.excerpt.log.gz",
+    "excerptFailures": 1083
+  }
+}
