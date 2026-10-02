@@ -1,0 +1,19 @@
+{
+  "cmd": "python3 evidence/legal-update-20261002/late-review1/write_report.py --checkpoint",
+  "exit": 1,
+  "result": "FAIL_REPORT_VALIDATOR",
+  "exception": "AssertionError at write_report.py line42: assert gzip.decompress(path.read_bytes())",
+  "cause": "A passing git diff --check emits no text; its retained gzip log is valid with an empty decompressed payload. All other command logs have nonempty payloads. No product gate failed and report was not overwritten by the failed writer.",
+  "evidence": {
+    "cmd": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-13.log.gz",
+    "logSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+  },
+  "nextAction": "Allow only the successful git diff --check empty log; preserve this failure, revalidate unchanged product inputs"
+}

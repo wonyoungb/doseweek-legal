@@ -17,6 +17,12 @@
 - Independent final source/render/report-writer auditPASS;18generatedTerms match source/hashes.
   Interim coverage remains historical. Final204methods/13ordinarychecksPASS,259frozeninputs match;
   releaseexit1BLOCKED_EFFECTIVE_DATE remains failed;noownedjob/tmpworktree/scratch remains.
+- SourceGREEN committed locally at `d7b04b78dfbf2f787eea2fd86d40403330fbbe3a`; report finalization next.
+- Initial report-validator exit1 retained for valid empty diff-check log; parser narrowed to that
+  successful command only. Product gates/hashes unchanged; report validation rerun next.
+- Late report overwritten;exactidentity/loghash/frozeninput/stamp/readiness/readbackvalidationPASS
+  at sourceGREEN;initialparserfailure preserved. Independent final report auditPASS:identities,
+  hashes,REDproof,commits,files,checkpoint agree;reportfinalHEAD refresh aftercompletioncommit.
 - No owned device, native, network, publication or other external action.
 
 ## 2026-10-02 — late owner decisions (historical; unpublished)

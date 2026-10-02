@@ -1,0 +1,12 @@
+{
+  "head": "d7b04b78dfbf2f787eea2fd86d40403330fbbe3a",
+  "reportSha256": "72d931539ada2bc64898a4a01197e4cef860cb845549fec840f9cb4b0afa156c",
+  "result": "PASS",
+  "reportValidation": {
+    "exactIdentities": true,
+    "logsAndHashes": true,
+    "frozenInputs": true,
+    "commitStamps": true,
+    "falseReadinessGates": true
+  }
+}

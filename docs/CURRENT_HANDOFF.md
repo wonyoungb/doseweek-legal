@@ -39,7 +39,19 @@ Independent final source/render/report-writer auditPASS;18actualTerms match outp
 All readiness flags/effective date remain closed. Partner snapshots unchanged/historical;
 no native/provider/Store/live/visual/counsel/native-speaker verification claimed.
 No owned running process/device or temporary worktree/scratch remains.
-Next action: commit verified GREEN, overwrite final late report and validate its evidence. Never publish/push/merge.
+Source GREEN committed locally at `d7b04b78dfbf2f787eea2fd86d40403330fbbe3a`; product/test/artifact inputs unchanged.
+Initial report-validator exit1 retained: it incorrectly required text from successful `git diff
+--check`; its valid empty gzip is expected. Narrow parser fix only; product inputs unchanged.
+Late report overwritten at requested external path; schema/readback/exactidentities/loghashes/
+259frozeninputs/commitstamps/falsegates validationPASS at sourceGREEN. Precompletioncheckpoint
+in `late-review1/report-validation-precompletion.json`; initial parser failure preserved separately.
+Independent final report auditPASS: identities/loghashes/259inputs/REDproof/trailers/files/checkpoint
+agree; releaseexit1/initialwriterFAIL and partner/operational blockers explicit. Receipt:
+`late-review1/independent-report-audit.json`. Reporting-only completion records this handoff,
+CHANGELOG, report-writer parser fix/checkpoint/audit. No verified product input changes.
+After completion commit mechanically refresh report finalHEAD/commits/files/cleanstatus.
+Next action for orchestrator: review/integrate new commits and obtain matching final partner
+copy/check receipts plus operational/Store proofs; publication remains outside this lane. Never publish/push/merge.
 
 ## HISTORICAL — legal-update-legal late owner decisions (2026-10-02; unpublished)
 

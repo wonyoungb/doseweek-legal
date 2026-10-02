@@ -1,0 +1,21 @@
+{
+  "reviewer": "delegated read-only price_audit",
+  "head": "d7b04b78dfbf2f787eea2fd86d40403330fbbe3a",
+  "result": "PASS",
+  "checks": {
+    "exactFull204AndFocused33Identities": true,
+    "zeroErrorsSkipsOmissions": true,
+    "red5Methods4Failed154AssertionsCompilePass": true,
+    "redCommitParentMatchesReviewedHead": true,
+    "proofWorktreeAbsent": true,
+    "all14LogHashesAndPayloadsValid": true,
+    "ordinary13Exit0ReleaseExit1Preserved": true,
+    "current259FrozenHashesRuntimeRunnersMatch": true,
+    "commitTrailersAndCommittedTouchedFilesMatch": true,
+    "reportCheckpointShaMatches": true,
+    "initialReportValidatorFailurePreservedAndNarrowFixVerified": true,
+    "storePriceAuthorityAndFalsePartnerReadinessHonest": true,
+    "noPublicationClaims": true
+  },
+  "limit": "Audited at sourceGREEN; reporting-only completion and final reportHEAD/cleanstatus refresh remain. No edits/network/test reruns performed."
+}

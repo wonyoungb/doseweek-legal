@@ -39,7 +39,8 @@ for stem in ('full-green', 'focused-final', 'red-parent'):
 for check in checks:
     path = ROOT / check['log']
     assert path.is_file() and path.stat().st_size and hashlib.sha256(path.read_bytes()).hexdigest() == check['logSha256']
-    assert gzip.decompress(path.read_bytes())
+    decoded = gzip.decompress(path.read_bytes())
+    assert decoded or (check['cmd'] == ['git', 'diff', '--check'] and check['exit'] == 0)
 assert len(checks) == 14 and sum(c['result'] == 'PASS' for c in checks) == 13
 blocked = [c for c in checks if c['result'] != 'PASS']
 assert len(blocked) == 1 and blocked[0]['result'] == 'BLOCKED_EFFECTIVE_DATE' and blocked[0]['exit'] == 1
@@ -88,10 +89,13 @@ report = {
     'inputFingerprints': str(OUT / 'baseline.json'),
     'frozenInputs': {'receipt': str(OUT / 'final-inputs.json'), 'comparison': str(OUT / 'frozen-input-comparison.json'), 'files': frozen['files'], 'match': True, 'scope': 'source/tests/runner/fixtures/generated pages/assets/config/Python runtime'},
     'preservationAudit': str(OUT / 'preservation-audit.json'),
+    'independentSourceAudit': str(OUT / 'independent-source-audit.json'),
+    'independentReportAudit': str(OUT / 'independent-report-audit.json'),
     'historicalLateReport': {'path': str(OUT / 'late-report.historical.json'), 'head': BASE, 'sha256': hashlib.sha256((OUT / 'late-report.historical.json').read_bytes()).hexdigest()},
     'intermediateVerification': {'receipt': str(OUT / 'interim-checks.json'), 'result': 'Historical earlier GREEN checks before restoration of original bare-price validator guard; final receipts supersede only matching coverage'},
     'externalState': {**previous['externalState'], 'publication': 'NOT_PERFORMED', 'ownedProcess': None, 'device': None, 'temporaryWorktreesRemoved': True},
     'workingTree': git('status', '--short'),
+    'reportWriterInitialFailure': str(OUT / 'report-validation-initial-failure.json'),
     'reportValidation': {'exactIdentities': True, 'logsAndHashes': True, 'frozenInputs': True, 'commitStamps': True, 'falseReadinessGates': True},
     'nextAction': 'Orchestrator reviews/integrates revision commits, obtains final committed partner copy/check receipts and operational/Store evidence; never publish from this lane.',
 }
