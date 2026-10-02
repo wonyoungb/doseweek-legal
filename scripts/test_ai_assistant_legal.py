@@ -14,6 +14,7 @@ Assertion REDs: only APIs that exist on the parent commit are imported at module
 Run from the repository root: python3 -m unittest discover -s scripts -p 'test_*.py'
 """
 import hashlib
+import html
 import importlib
 import importlib.util
 import json
@@ -68,10 +69,15 @@ SETTINGS = (
 APP_KEYS = (*(f'ai.consent.a.{key}' for key in SCREEN_A), *(f'ai.consent.b.{key}' for key in SCREEN_B),
             *SETTINGS)
 PLACEHOLDER = re.compile(r'\{[A-Za-z0-9]+\}')
-# Critic C23: the strings whose meaning carries the consent, with the CON-PRO labels and refusals.
-BACK_TRANSLATED_APP_KEYS = tuple(f'ai.consent.a.{key}' for key in (
-    'lead', 'sent.body', 'notSent.body', 'where.body', 'retention.body', 'e2ee.body',
-    'optional.body', 'check.health', 'check.health.detail', 'check.age')) + ('ai.consent.b.processing',)
+# Critic C23 (PRO-SPEC section 8): "a recorded back-translation check of Screen A, Screen B, the
+# labels and the refusal templates". Every app key is recorded, short labels and buttons too:
+# the first receipts recorded only 11 of the 50 app keys and still recommended the flag.
+BACK_TRANSLATED_APP_KEYS = APP_KEYS
+RECEIPT_SCOPE = {
+    'screenA': tuple(f'ai.consent.a.{key}' for key in SCREEN_A),
+    'screenB': tuple(f'ai.consent.b.{key}' for key in SCREEN_B),
+    'settingsAndPerk': SETTINGS,
+}
 CON_PRO_KEYS = (
     'ai.refuse.dose', 'ai.refuse.sideEffect', 'ai.refuse.diagnosis', 'ai.refuse.drugInfo',
     'ai.refuse.diet', 'ai.refuse.pregnancy', 'ai.refuse.minor', 'ai.refuse.other', 'ai.emergency',
@@ -304,6 +310,60 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                 self.assertIn('Amazon Bedrock', staged)
                 self.assert_names_feature(locale, staged, 'the Android AI answer')
 
+    def test_android_badge_and_not_used_list_no_longer_deny_generative_ai(self):
+        # The 1.0.5 badge "No generative AI" and the item "Generative AI" in the list of things
+        # DoseWeek does not use are false once the assistant ships in 1.0.6. The same page
+        # carries the "AI 기록 도우미(Pro)" section and the Amazon Bedrock row.
+        live = load('docs/android-content.candidate.json')
+        root_page = self.pages['android/privacy/index.html']
+        for locale in LOCALES:
+            before = live['locales'][locale]
+            badge = before['home']['featureBadges'][3]
+            item = sections(before['privacy']['sections'])['no-collection']['items'][4]
+            after = self.android['locales'][locale]
+            badges = after['home']['featureBadges']
+            items = sections(after['privacy']['sections'])['no-collection']['items']
+            with self.subTest(locale=locale):
+                self.assertEqual((len(badges), len(items)), (4, 7))
+                self.assertNotIn(badge, badges, 'the staged badge still says there is no generative AI')
+                self.assertNotIn(item, items, 'the staged not-used list still names generative AI outright')
+                self.assert_names_feature(locale, badges[3], 'the generative AI badge')
+                self.assert_names_feature(locale, items[4], 'the generative AI item of the not-used list')
+                self.assertEqual([t for t in ('Apple', 'iOS', 'App Store') if t in badges[3] + items[4]], [])
+                bare = f'<li>{html.escape(item)}</li>'
+                self.assertNotIn(bare, self.pages[f'{locale}/android/privacy/index.html'],
+                                 'the staged Android privacy page lists generative AI as not used')
+                self.assertNotIn(bare, root_page, 'the staged root Android privacy page lists generative AI as not used')
+                self.assertIn(f'<li>{html.escape(items[4])}</li>',
+                              self.pages[f'{locale}/android/privacy/index.html'])
+        korean = self.android['locales']['ko']
+        self.assertEqual(korean['home']['featureBadges'][3], '생성형 AI는 따로 동의한 AI 기록 도우미에서만 써요')
+        self.assertEqual(sections(korean['privacy']['sections'])['no-collection']['items'][4],
+                         '따로 동의하기 전에 생성형 AI(AI 기록 도우미) 사용')
+        english = self.android['locales']['en']
+        self.assertEqual(english['home']['featureBadges'][3],
+                         'Generative AI only in the AI record assistant, after separate consent')
+        self.assertEqual(sections(english['privacy']['sections'])['no-collection']['items'][4],
+                         'Using generative AI (the AI record assistant) without your separate consent')
+
+    def test_android_renderer_rejects_the_bare_generative_ai_denial_for_1_0_6(self):
+        import copy
+        import render_android
+        for field, value in (('badge', 'No generative AI'), ('item', 'Generative AI')):
+            catalog = copy.deepcopy(self.android)
+            english = catalog['locales']['en']
+            if field == 'badge':
+                english['home']['featureBadges'][3] = value
+            else:
+                sections(english['privacy']['sections'])['no-collection']['items'][4] = value
+            with self.subTest(field=field):
+                self.assertEqual(catalog['versionName'], '1.0.6')
+                with self.assertRaises(AssertionError, msg=f'validate_catalog accepts the 1.0.6 {field} {value!r}'):
+                    render_android.validate_catalog(catalog)
+        # The served 1.0.5 source keeps its badge until 1.0.6 is published.
+        render_android.validate_catalog(live := load('docs/android-content.candidate.json'))
+        self.assertEqual(live['versionName'], '1.0.5')
+
     # -- Terms and the US policy --------------------------------------------------------------
 
     def test_terms_have_the_ai_section_right_after_the_medical_notice(self):
@@ -520,9 +580,17 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                 self.assertIs(receipt['nativeSpeakerReview'], False)
                 self.assertIs(receipt['counselReview'], False)
                 copy = document['locales'][locale]['copy']
-                reviewed = {key: copy[key] for key in APP_KEYS if key.startswith('ai.consent.')}
+                recorded = receipt.get('backTranslation', {})
+                if locale not in expected_status:
+                    missing = [key for key in (*BACK_TRANSLATED_APP_KEYS, *CON_PRO_KEYS) if key not in recorded]
+                    self.assertEqual(missing, [],
+                                     f'{len(missing)} of {len(BACK_TRANSLATED_APP_KEYS) + len(CON_PRO_KEYS)} keys '
+                                     'have no recorded back-translation (PRO-SPEC section 8, critic C23)')
+                for group, keys in RECEIPT_SCOPE.items():
+                    self.assertEqual(tuple(receipt['scope'].get(group, ())), keys, f'receipt scope {group}')
+                reviewed = {key: copy[key] for key in APP_KEYS}
                 self.assertEqual(receipt['sources']['appCopy']['sha256'], canonical_sha256(reviewed),
-                                 'the consent copy changed after this receipt: review it again')
+                                 'the app copy changed after this receipt: review it again')
                 self.assertRegex(receipt['sources']['conProSharedCopy']['sha256'], r'^[0-9a-f]{64}$')
                 self.assertEqual(tuple(receipt['sources']['conProSharedCopy']['keys']), CON_PRO_KEYS)
                 flag = receipt['flag']
@@ -531,14 +599,30 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                     self.assertIs(flag['recommended'], False)
                 if locale not in expected_status:
                     self.assertIn('same-model', receipt['method'])
-                    self.assertEqual(tuple(receipt['backTranslation']), (*BACK_TRANSLATED_APP_KEYS, *CON_PRO_KEYS))
-                    self.assertTrue(all(isinstance(text, str) and len(text) > 3
-                                        for text in receipt['backTranslation'].values()))
+                    in_scope = [key for keys in receipt['scope'].values() for key in keys]
+                    self.assertEqual([key for key in in_scope if key not in recorded], [],
+                                     'a key in the declared scope has no recorded back-translation')
+                    self.assertEqual(tuple(recorded), (*BACK_TRANSLATED_APP_KEYS, *CON_PRO_KEYS))
+                    self.assertTrue(all(isinstance(text, str) and len(text) > 3 for text in recorded.values()))
+                    for key in BACK_TRANSLATED_APP_KEYS:
+                        self.assertEqual(sorted(PLACEHOLDER.findall(recorded[key])),
+                                         sorted(PLACEHOLDER.findall(copy[key])), f'{key}: placeholders')
+                    self.assertIs(flag['recommended'], True)
         summary = self.source('evidence/pro-legal-ai-20261002/locale-review/summary.json')
         self.assertEqual(summary['backTranslationOnly'],
                          [locale for locale in LOCALES if locale not in expected_status])
         self.assertEqual(summary['nativeSpeakerReviewed'], [])
         self.assertEqual(summary['flagsOff'], ['ko', 'ja'])
+        self.assertIn('backTranslationKeyCoverage', summary,
+                      'the summary must state how many keys have a recorded back-translation')
+        coverage = summary['backTranslationKeyCoverage']
+        self.assertEqual(coverage['locales'], summary['backTranslationOnly'])
+        self.assertEqual(coverage['perLocale'], {
+            'screenA': {'recorded': 22, 'total': 22}, 'screenB': {'recorded': 16, 'total': 16},
+            'settingsAndPerk': {'recorded': 12, 'total': 12}, 'labels': {'recorded': 3, 'total': 3},
+            'refusalTemplates': {'recorded': 12, 'total': 12}})
+        self.assertEqual(coverage['appKeys'], {'recorded': 50, 'total': 50})
+        self.assertEqual(coverage['missing'], {})
 
     def test_store_declarations_follow_the_critic_corrections(self):
         self.assertTrue((ROOT / STORE_DOC).is_file(), f'{STORE_DOC} is missing')
