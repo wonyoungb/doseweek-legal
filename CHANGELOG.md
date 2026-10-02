@@ -7,6 +7,9 @@ Being on `main` does not by itself prove the live page was checked.
 
 ## 2026-10-02 — legal-update-legal (unpublished)
 
+- Local source GREEN: `2efa2b0f8e368c074fc24f947a4d014776636e0d`. Completion documentation
+  records this checkpoint without changing matching verification inputs; final HEAD is in the
+  lane JSON report. Temporary proof worktrees are removed and no owned check process remains.
 - Added 17-locale privacy/rights/breach and processor-table drafts, explicit sensitive-health
   consent, Wonyoung Labs operator contacts, daily encrypted S3 Seoul  + weekly OS backups with
   deletion within 7 days, immediate requested erasure, Store-confirmed end + 30 days / at most 7 days outage retention.
