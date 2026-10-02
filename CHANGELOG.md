@@ -1,4 +1,4 @@
-## 2026-10-02 — late owner decisions (in progress; unpublished)
+## 2026-10-02 — late owner decisions (unpublished)
 
 - Resume reviewed `a6a4e18` for final KRW19,900 annual reference and fixed1-month trial.
 - All17 regional exclusions/no representative already implemented; retain safeguards and proof.
@@ -10,6 +10,10 @@
 - Final199methods/13ordinarycommandsPASS; releaseexit1BLOCKED_EFFECTIVE_DATE staysfailed.
   Site162/staged126pages; tone2078sentences,0violations,9existingexceptions.257frozeninputs/runtime match.
 - Independent readonly17+33transform/18generatedTerms/sourcepreservationauditPASS.
+- SourceGREEN committed locally at `b2afed9a270469d374cd6cc55518a1c33129470f`; reporting-only finalization next.
+- Late report schema/readback/stamps/identity/loghash/frozeninput validationPASS at sourceGREEN.
+  Original regularreport untouched; independent finalreport auditPASS. Reporting-only completion
+  and mechanical report refresh record finalHEAD/cleanstatus with unchanged verifiedinputs.
 - Input fingerprints and committed partner snapshots in `evidence/legal-update-20261002/late/`.
 
 ## 2026-10-02 — legal-update-legal revision 2 (historical; unpublished)

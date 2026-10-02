@@ -1,0 +1,21 @@
+{
+  "auditedHead": "b2afed9a270469d374cd6cc55518a1c33129470f",
+  "reviewer": "read-only subagent late_audit",
+  "sourceAudit": "PASS_NO_MATERIAL_ISSUE",
+  "reportAudit": "PASS_NO_MATERIAL_ISSUE",
+  "fullExactMethods": 199,
+  "focusedExactMethods": 63,
+  "redMethods": 7,
+  "redFailedMethods": 6,
+  "redAssertionFailures": 104,
+  "historicalRegionalMethods": 1,
+  "historicalRegionalAssertionFailures": 36,
+  "ordinaryCommandsPass": 13,
+  "releaseChildExit": 1,
+  "releaseResult": "BLOCKED_EFFECTIVE_DATE",
+  "frozenInputsMatch": 257,
+  "ownerQuestions": "No obsolete price or EU/UK appointment question",
+  "atAuditedHeadCommitInventory": 2,
+  "atAuditedHeadTouchedFiles": 67,
+  "limitations": "Read-only comparisons; no independent tests/native/network/visual/counsel/native-speaker certification. Final reporting-only HEAD/clean-status refresh follows."
+}

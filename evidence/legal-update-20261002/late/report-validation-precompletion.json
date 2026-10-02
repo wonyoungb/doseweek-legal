@@ -1,0 +1,24 @@
+{
+  "head": "b2afed9a270469d374cd6cc55518a1c33129470f",
+  "report": "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-late-report.json",
+  "reportSha256": "cd3441121123c5d9e1a6c392d874cfff2d1b0e7bcf61691ce8d09a14849266a6",
+  "schemaReadback": "PASS",
+  "commitStamps": "PASS",
+  "identitiesAndLogs": "PASS",
+  "frozenInputComparison": "PASS",
+  "ownedTemporaryWorktreesRemoved": true,
+  "methods": 199,
+  "ordinaryCheckPasses": 13,
+  "releaseGate": {
+    "cmd": [
+      "python3",
+      "scripts/check_site.py",
+      "--release"
+    ],
+    "exit": 1,
+    "result": "BLOCKED_EFFECTIVE_DATE",
+    "log": "evidence/legal-update-20261002/late/check-12.log.gz",
+    "logSha256": "09029677c66d41f803cc4ed6b761e43fc9493a21d78ee275342c8555da91a3c6"
+  },
+  "workingTreeClean": false
+}

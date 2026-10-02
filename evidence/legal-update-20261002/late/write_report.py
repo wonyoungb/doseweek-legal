@@ -5,6 +5,7 @@ import importlib.util
 import json
 import shlex
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -58,6 +59,8 @@ for sha in git('rev-list', '--reverse', f'{BASE}..HEAD').splitlines():
                             'GREEN' if subject.startswith('fix(') else 'DOCS'})
 green = next(c['sha'] for c in commits if c['type'] == 'GREEN')
 old = read('baseline-report.historical.json')
+original_report = TARGET.with_name('legal-update-legal-report.json')
+assert original_report.read_bytes() == (OUT / 'baseline-report.historical.json').read_bytes(), 'Original baseline report changed'
 questions = [q for q in old['ownerQuestions'] if q['id'] != 'OQ-R2-PARITY']
 questions.append({'id': 'OQ-LATE-PARITY',
     'question': '통합 담당자는 최종 가격에 맞는 두 앱의 정책·스토어 검토 문구·검사 입력 커밋과 검사 결과를 확인해 주세요. 앱은 스토어가 돌려준 가격을 표시해요.',
@@ -132,5 +135,6 @@ validation = {'head': head, 'report': str(TARGET), 'reportSha256': hashlib.sha25
               'frozenInputComparison': 'PASS', 'ownedTemporaryWorktreesRemoved': True,
               'methods': full['testsRun'], 'ordinaryCheckPasses': 13, 'releaseGate': blocked[0],
               'workingTreeClean': not report['workingTree']}
-(OUT / 'report-validation.json').write_text(json.dumps(validation, indent=2) + '\n')
+if '--final' not in sys.argv[1:]:
+    (OUT / 'report-validation-precompletion.json').write_text(json.dumps(validation, indent=2) + '\n')
 print(json.dumps(validation))
