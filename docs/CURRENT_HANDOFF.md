@@ -7,13 +7,34 @@ JPY300/month,1,980/year; store-converted other prices and store-returned native 
 EU/EEA, UK and Switzerland exclusions/no representative already implemented in all17locales;
 preserve those rights/safeguards and inherited proof. Fixed1-calendar-month Store-confirmed
 first-time trial, auto-renewal and cancel-anytime wording; remove contradictory duration overrides.
-Owned dirty: late regression scripts/tests and late evidence/continuity files only; product source
-has not been changed. Git status owns exact inventory. No owned PID/device or external action.
+Owned dirty: Terms source/renderer, account publication blocker, commercial parity/operations,
+late tests/evidence and continuity files. Git status owns exact inventory. No owned PID/device or external action.
 Inputs: `evidence/legal-update-20261002/late/baseline.json`; prior revision2 evidence remains historical.
 Read-only partner snapshots: iOS committed policy reflects finalprice; Android snapshot still old.
 Snapshots do not prove partner checks or Store configuration; commercial parity gate remains false.
 Canonical workspace status read from original workspace; no concurrent canonical ledger written.
-Next action: commit RED, prove exact failing methods on detached parent, then bounded source GREEN.
+RED committed locally at `6bf1fd5`; AST compile PASS. No product edits yet.
+RED immediate parent:7 exact methods,6 failed methods,104 assertion failures; compile PASS,
+0 errors/skips/omissions. Supplemental pre-exclusion source:1 method,36 assertion failures;
+regional placeholders/exclusions fail as expected. Both owned detached worktrees removed.
+Raw logs and identities: `late/red-parent.*`, `late/pre-exclusion-source.*`, `late/red-proof.json`.
+GREEN edit:17 final annualprice fields and33 fixedmonth duration clauses changed. Restoring
+those fields reproduces whole originalTerms bytes; no other billing/rights/features modified.
+All17regional policies/UShealth/breach/deletion/processor wording retained. Latest partner snapshots
+remain historical, not final parity verification.
+Focused related family:63 exactmethods PASS,0failure/error/skip/omission; ASTcompilePASS.
+Terms rendererPASS;18hash/localePages regenerated; releaseMap source fingerprints refreshed.
+Final fullsuite:199exactmethods PASS,0fail/error/skip/omission; every13ordinary command PASS
+(including fullsuite/diff). Release child exit1 BLOCKED_EFFECTIVE_DATE remains failed, not waived.
+Site162pages/17locales; staged126pages/7routes; tone2078sentences,0violations,9existingexceptions.
+All257relevant input hashes and Python/runner/runtime match before/after; logs/identities retained.
+Independent readonly audit:17price+33trial transforms exact; all18Terms pages finalprice; account
+only blocker[27] changed; privacy/UShealth/breach/processor/deletion sources and renderers unchanged.
+Preservation hashes in `late/preservation-audit.json`; originalREDs/failures preserved.
+No owned running process or temporary worktree. Native/provider/Store/live/visual NOT_RUN;
+release date null and every readiness flag remains false. Never published/pushed/merged.
+Next action: commit sourceGREEN and validated late report; orchestrator then acquires final partner
+policy/review/check receipts and operational/Store proof before considering publication.
 Report target: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-late-report.json`.
 
 ## HISTORICAL — legal-update-legal revision 2 (2026-10-02; unpublished)

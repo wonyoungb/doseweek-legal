@@ -1,30 +1,38 @@
 {
   "schemaVersion": 1,
-  "observedUTC": "2026-10-02T04:10:53.786940+00:00",
-  "authority": "legal-update-legal.review-2.json: retain KRW 22,000; do not reopen owner decisions",
-  "requiredKoreaAnnual": "KRW 22,000",
-  "status": "BLOCKED_ANDROID_COMMITTED_PRICE",
+  "authority": "2026-10-02 late owner decisions supersede review-2 price instructions",
+  "requiredKoreaAnnual": "KRW 19,900",
+  "status": "BLOCKED_PARTNER_CHECK_RECEIPTS",
   "nativePriceRule": "App UI shows store-returned localized prices, eligibility and billing periods. Static copy parity does not prove Store configuration.",
   "partners": {
     "ios": {
       "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios",
-      "head": "fc3da4125e578ee607b158fc56de4c2943ebcee3",
-      "annualPrice": "KRW 22,000",
-      "policySha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
+      "head": "992b413367ef810027c316950a9c1c7013bbe65e",
+      "policyPath": "docs/MONETIZATION_POLICY.md",
+      "policySha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
       "storeReviewPath": "docs/ASC_ANSWER_SHEET.md",
-      "workingMatchesCommitted": true
+      "storeReviewSha256": "d2ea6b973704718680118b1b8f120579b9654a514872881b7b6168236d1472ca",
+      "workingMatchesCommitted": true,
+      "partnerChecksRunByThisLane": false,
+      "evidenceLimit": "Committed policy/review read-only snapshot; no native or Store readback; partner check receipts not acquired.",
+      "matchesRequiredKoreaAnnual": true
     },
     "android": {
       "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and",
-      "head": "2ca05407c09796884e1a4760f1cf04f88c231acc",
-      "annualPrice": "KRW 19,900",
-      "policySha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+      "head": "d36ff1c97a491280c5a8a565af7e6b57d51f7a34",
+      "policyPath": "docs/MONETIZATION_POLICY.md",
+      "policySha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
       "storeReviewPath": "docs/PLAY_STORE.md",
-      "workingMatchesCommitted": true
+      "storeReviewSha256": "c516dd5640a11db441de1e09e499fbbeaec58f6ef8e6b9e6a24c5df61d384e70",
+      "workingMatchesCommitted": true,
+      "partnerChecksRunByThisLane": false,
+      "evidenceLimit": "Committed policy/review read-only snapshot; no native or Store readback; partner check receipts not acquired.",
+      "matchesRequiredKoreaAnnual": false
     }
   },
-  "receipt": "evidence/legal-update-20261002/revision2/partner-parity-receipts.json",
-  "nextAction": "Orchestrator coordinates Android policy, review copy and verification inputs together in new failing-first commits for KRW 22,000; obtain matching committed receipts and exact policy byte parity plus partner checks before opening commercialCopyParityVerified. The iOS retained one-line policy patch matches Android preimage; applying that patch alone leaves Android verification inputs inconsistent.",
+  "receipt": "evidence/legal-update-20261002/late/partner-snapshots.json",
+  "snapshotNote": "Immutable committed snapshots only. Partner lanes may advance; obtain matching final receipts at integration. No external state certified.",
+  "nextAction": "Orchestrator coordinates partner policy, review copy and verification inputs to final KRW 19,900/year under late owner decisions; obtain matching committed receipts and exact policy byte parity plus partner checks before opening commercialCopyParityVerified. Apps continue showing store-returned localized prices, eligibility and billing periods.",
   "ownerDecisionNeeded": false,
   "publicationAuthorized": false
 }

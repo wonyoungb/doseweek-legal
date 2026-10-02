@@ -55,7 +55,7 @@ EULA_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
 LINKED_URLS = (EULA_URL,)
 # Final reference prices (superseding owner/spec decision, 2026-10-02). The Store supplies the actual
 # localized price, eligible introductory offer and billing period before purchase.
-REFERENCE_PRICES = ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 22,000", "JPY 300", "JPY 1,980")
+REFERENCE_PRICES = ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980")
 
 
 def escaped(value: object) -> str:
@@ -165,7 +165,7 @@ def validate(content: dict, ios: dict) -> None:
         assert all(price in offer for price in REFERENCE_PRICES), (
             f"{locale}: final reference prices and their full billing periods must be disclosed"
         )
-        assert "2,900" not in offer and "App Store" in offer and "Google Play" in offer, (
+        assert "2,900" not in offer and "22,000" not in offer and "App Store" in offer and "Google Play" in offer, (
             f"{locale}: offer must use the final Korean price and identify Store eligibility"
         )
         assert not re.search(r"(?<![\d,])30(?![\d,])", offer), (

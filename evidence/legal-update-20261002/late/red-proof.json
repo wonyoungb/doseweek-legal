@@ -1,0 +1,51 @@
+{
+  "redCommit": "6bf1fd5afaafc5dada9857edc83fdc9624066654",
+  "parent": "a6a4e18f70bcf866a6bb50aacb8a64164cba8bde",
+  "proofs": [
+    {
+      "label": "red-parent",
+      "sourceParent": "a6a4e18f70bcf866a6bb50aacb8a64164cba8bde",
+      "testCommit": "6bf1fd5afaafc5dada9857edc83fdc9624066654",
+      "testSelection": [
+        "test_legal_late_decisions",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_all_17_locales_keep_final_prices_and_store_localization",
+        "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker"
+      ],
+      "exit": 1,
+      "compile": "PASS",
+      "testsRun": 7,
+      "failedMethods": [
+        "test_legal_late_decisions.LegalLateDecisionsTest.test_active_sources_have_no_retired_prices_or_representative_placeholder",
+        "test_legal_late_decisions.LegalLateDecisionsTest.test_final_reference_prices_in_canonical_and_staged_terms",
+        "test_legal_late_decisions.LegalLateDecisionsTest.test_fixed_month_trial_has_no_variable_duration_override",
+        "test_legal_late_decisions.LegalLateDecisionsTest.test_renderer_accepts_final_price_and_rejects_each_retired_price",
+        "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker",
+        "test_terms_legal_update.TermsLegalUpdateTest.test_all_17_locales_keep_final_prices_and_store_localization"
+      ],
+      "assertionFailures": 104,
+      "receipt": "evidence/legal-update-20261002/late/red-parent.json",
+      "log": "evidence/legal-update-20261002/late/red-parent.log.gz",
+      "scope": "RED on immediate parent",
+      "temporaryDetachedWorktreeRemoved": true
+    },
+    {
+      "label": "pre-exclusion-source",
+      "sourceParent": "a2648991d78ad1dd92e604e015af4a535d5319eb",
+      "testCommit": "6bf1fd5afaafc5dada9857edc83fdc9624066654",
+      "testSelection": [
+        "test_legal_late_decisions.LegalLateDecisionsTest.test_excluded_regions_and_no_rep_contact_in_every_policy_locale"
+      ],
+      "exit": 1,
+      "compile": "PASS",
+      "testsRun": 1,
+      "failedMethods": [
+        "test_legal_late_decisions.LegalLateDecisionsTest.test_excluded_regions_and_no_rep_contact_in_every_policy_locale"
+      ],
+      "assertionFailures": 36,
+      "receipt": "evidence/legal-update-20261002/late/pre-exclusion-source.json",
+      "log": "evidence/legal-update-20261002/late/pre-exclusion-source.log.gz",
+      "scope": "Supplemental historical pre-exclusion source; regional copy is inherited unchanged at immediate parent",
+      "temporaryDetachedWorktreeRemoved": true
+    }
+  ]
+}

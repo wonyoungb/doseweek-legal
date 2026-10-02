@@ -1,0 +1,121 @@
+{
+  "ko": [
+    "첫 구독자",
+    "1개월 무료 체험",
+    "자동 갱신돼요",
+    "언제든 스토어에서 취소할 수 있어요",
+    "스토어가 환산한 현지 가격"
+  ],
+  "en": [
+    "first-time subscribers",
+    "1-calendar-month free trial",
+    "renews automatically",
+    "Cancel any time in the store",
+    "store-converted local prices"
+  ],
+  "ja": [
+    "初回",
+    "1か月の無料体験",
+    "自動更新されます",
+    "ストアでいつでも解約できます",
+    "ストアが換算した現地価格"
+  ],
+  "de": [
+    "Erstabonnenten",
+    "1 Kalendermonat",
+    "verlängert sich das Abo automatisch",
+    "jederzeit in den Abo-Einstellungen des Stores kündigen",
+    "Der Store rechnet diese Preise in die jeweilige Landeswährung um"
+  ],
+  "fr": [
+    "premier abonnement",
+    "1 mois calendaire",
+    "se renouvelle automatiquement",
+    "résilier à tout moment",
+    "La boutique convertit ces prix dans la monnaie locale"
+  ],
+  "es": [
+    "primera suscripción",
+    "1 mes natural",
+    "se renueva automáticamente",
+    "cancelarla en cualquier momento",
+    "La tienda convierte estos precios a la moneda local"
+  ],
+  "it": [
+    "primo abbonamento",
+    "1 mese di calendario",
+    "si rinnova automaticamente",
+    "annullarlo in qualsiasi momento",
+    "Lo store converte questi prezzi nella valuta locale"
+  ],
+  "nl": [
+    "eerste abonnement",
+    "1 kalendermaand",
+    "automatisch verlengd",
+    "op elk moment opzeggen",
+    "De store rekent deze prijzen om naar de lokale valuta"
+  ],
+  "pt-PT": [
+    "primeira subscrição",
+    "1 mês de calendário",
+    "renova-se automaticamente",
+    "cancelar a qualquer momento",
+    "convertido para a moeda local pela loja"
+  ],
+  "pl": [
+    "pierwszej subskrypcji",
+    "1 miesiąc kalendarzowy",
+    "odnawia się automatycznie",
+    "anulować ją w każdej chwili",
+    "cenę w lokalnej walucie przelicza sklep"
+  ],
+  "sv": [
+    "första prenumeration",
+    "1 kalendermånad",
+    "förnyas prenumerationen automatiskt",
+    "säga upp när som helst",
+    "butiken omräknar till lokal valuta"
+  ],
+  "hi": [
+    "पहली सदस्यता",
+    "1 कैलेंडर महीने",
+    "सदस्यता अपने-आप रिन्यू होती है",
+    "कभी भी रद्द कर सकते हैं",
+    "स्टोर मुद्रा बदलकर अंतिम स्थानीय कीमत दिखाता है"
+  ],
+  "pt-BR": [
+    "primeira assinatura",
+    "1 mês de calendário",
+    "é renovada automaticamente",
+    "cancelar a qualquer momento",
+    "convertido para a moeda local pela loja"
+  ],
+  "ar": [
+    "المشتركين لأول مرة",
+    "شهر تقويمي واحد (1)",
+    "ويتجدد الاشتراك تلقائيًا",
+    "الإلغاء في المتجر في أي وقت",
+    "الأسعار المحلية المحوّلة في الدول الأخرى"
+  ],
+  "zh-Hans": [
+    "首次订阅用户",
+    "1个月免费试用",
+    "自动续订",
+    "随时在商店取消",
+    "商店换算的当地价格"
+  ],
+  "zh-Hant": [
+    "首次訂閱使用者",
+    "1個月免費試用",
+    "自動續訂",
+    "隨時在商店取消",
+    "商店換算的當地價格"
+  ],
+  "tr": [
+    "ilk kez abone",
+    "1 takvim aylık",
+    "otomatik yenilenir",
+    "Her zaman iptal edebilirsiniz",
+    "mağaza nihai yerel fiyatı yerel para birimine dönüştürür"
+  ]
+}

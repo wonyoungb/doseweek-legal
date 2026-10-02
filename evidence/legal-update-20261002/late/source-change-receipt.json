@@ -1,0 +1,371 @@
+{
+  "termsBeforeSha256": "30c9229e626b9488b80189a65cf509d4f605aec65fecfb9efeabd6401010fbdb",
+  "termsAfterSha256": "b7881bcf8a57e1c1570526ce6abd507c1279d3d59a1f1300942ad8db6c905ac1",
+  "changes": [
+    {
+      "locale": "ko",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "en",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "ja",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "de",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "de",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "de",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "de",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "fr",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "fr",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "fr",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "fr",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "es",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "es",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "es",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "es",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "it",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "it",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "it",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "it",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "nl",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "nl",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "nl",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "nl",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pt-PT",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "pt-PT",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pt-PT",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pt-PT",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pl",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "pl",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pl",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pl",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "sv",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "sv",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "sv",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "sv",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "hi",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "hi",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "hi",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "hi",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pt-BR",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "pt-BR",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pt-BR",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "pt-BR",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "ar",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "zh-Hans",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "zh-Hant",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "tr",
+      "field": "free-plus[2]",
+      "kind": "final-price"
+    },
+    {
+      "locale": "tr",
+      "field": "free-plus[2]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "tr",
+      "field": "billing-ios[0]",
+      "kind": "fixed-month"
+    },
+    {
+      "locale": "tr",
+      "field": "billing-android[0]",
+      "kind": "fixed-month"
+    }
+  ],
+  "priceFields": 17,
+  "fixedMonthFields": 33,
+  "restoredWholeSourceMatches": true,
+  "replacements": {
+    "de": [
+      [
+        " Die im Store angezeigte tatsächliche Dauer ist maßgeblich.",
+        ""
+      ],
+      [
+        "Die tatsächliche Dauer wird vor der Bestätigung angezeigt; ein neues",
+        "Ein neues"
+      ]
+    ],
+    "fr": [
+      [
+        " La durée réelle affichée par la boutique fait foi.",
+        ""
+      ],
+      [
+        "La durée réelle est affichée avant la confirmation ; créer",
+        "Créer"
+      ]
+    ],
+    "es": [
+      [
+        " Rige la duración real que muestra la tienda.",
+        ""
+      ],
+      [
+        "La duración real se muestra antes de la confirmación; crear",
+        "Crear"
+      ]
+    ],
+    "it": [
+      [
+        " Fa fede la durata effettiva indicata dallo store.",
+        ""
+      ],
+      [
+        "La durata effettiva è mostrata prima della conferma; creare",
+        "Creare"
+      ]
+    ],
+    "nl": [
+      [
+        " De werkelijke duur die de store toont, is bepalend.",
+        ""
+      ],
+      [
+        "De werkelijke duur wordt vóór bevestiging getoond; een nieuw",
+        "Een nieuw"
+      ]
+    ],
+    "pt-PT": [
+      [
+        "; vale a duração efetivamente apresentada pela loja.",
+        "."
+      ],
+      [
+        "; vale a duração apresentada na loja.",
+        "."
+      ]
+    ],
+    "pl": [
+      [
+        "; obowiązuje rzeczywista długość podana w sklepie.",
+        "."
+      ],
+      [
+        "; obowiązuje długość podana w sklepie.",
+        "."
+      ]
+    ],
+    "sv": [
+      [
+        "; den faktiska längd som butiken visar gäller.",
+        "."
+      ],
+      [
+        "; den längd som butiken visar gäller.",
+        "."
+      ]
+    ],
+    "hi": [
+      [
+        "; स्टोर में दिखाई गई वास्तविक अवधि लागू होती है।",
+        "।"
+      ],
+      [
+        "; स्टोर में दिखाई गई अवधि लागू होती है।",
+        "।"
+      ]
+    ],
+    "pt-BR": [
+      [
+        "; vale a duração efetivamente mostrada pela loja.",
+        "."
+      ],
+      [
+        "; vale a duração mostrada pela loja.",
+        "."
+      ]
+    ],
+    "tr": [
+      [
+        "; mağazanın gösterdiği gerçek süre geçerlidir.",
+        "."
+      ],
+      [
+        "; mağazada gösterilen süre geçerlidir.",
+        "."
+      ]
+    ]
+  }
+}

@@ -112,13 +112,15 @@ Core features remain Free for new and prior users; standard Store-confirmed tria
 rights and review of historical ad-free rights remain. Do not advertise claim/evidence/appeal
 or code issuance flows as pending activation.
 
-Review-2 requires this lane to retain KRW 22,000/year. The committed iOS policy/review/check
-inputs now match; committed Android policy, Play preparation notes and price checks still use
-KRW 19,900/year. Commercial parity is BLOCKED until the orchestrator coordinates Android policy,
-review copy and verification inputs in matching new commits and obtains check receipts.
-[Commercial parity record](COMMERCIAL_COPY_PARITY_1_0_6.json) links exact HEAD/hash evidence and
-the concrete next action. `commercialCopyParityVerified` stays false. Use Store-returned native
-UI prices; a static price correction does not prove actual Store readback. No decision is reopened.
+Late owner decisions require USD 1.99/month and USD 13.99/year; Korea KRW 3,300/month
+and KRW 19,900/year; Japan JPY 300/month and JPY 1,980/year; other storefronts use
+store-converted prices. The fixed Store-managed free trial is one calendar month for eligible
+first-time subscribers; it auto-renews and can be cancelled any time in the store.
+Commercial parity remains BLOCKED until the orchestrator obtains matching committed policy,
+review copy and verification inputs with partner check receipts.
+[Commercial parity record](COMMERCIAL_COPY_PARITY_1_0_6.json) links immutable committed snapshots
+and the concrete next action. `commercialCopyParityVerified` stays false. Use Store-returned native
+UI prices; static copy does not prove actual Store configuration. No decision is reopened.
 
 ## Publication gate
 

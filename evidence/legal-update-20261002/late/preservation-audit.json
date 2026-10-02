@@ -1,0 +1,545 @@
+{
+  "baseline": "a6a4e18f70bcf866a6bb50aacb8a64164cba8bde",
+  "unchangedRelevantInputs": {
+    "docs/ios-content.json": {
+      "sha256": "dcd9eda991ecdb657d6528bede3eacaa9c9b5c6f5b2b20ff2768d86e0e96915c",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "docs/android-content.candidate.json": {
+      "sha256": "566f01de0d18c4be67a9d4b0f9f51f0d2472cfdd8848113ecda9d2795586acee",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "docs/us-health-content.json": {
+      "sha256": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "scripts/privacy_legal.py": {
+      "sha256": "1c68228f62749a9a29ad1ba8e1719188ea475ba7fdae5469c8cf8d36d727326d",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "scripts/privacy_ops.py": {
+      "sha256": "54ea53981694d2e96248b5102f471ba35c9a073a1b08475c12721fcb25364ecf",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "scripts/render_ios.py": {
+      "sha256": "3e88d68e51eb70469338211da49d8988ec0f99d54892e4bc952f53335f8cf9fb",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "scripts/render_android.py": {
+      "sha256": "e61ef527c545694412756df4f0cc39ab918c406936581ab780a99f94699300cd",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "scripts/render_us_health.py": {
+      "sha256": "c6fc3e057704abafe7607020e57b66fec6c1f8ef4aa969b79862f033627f533e",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    },
+    "scripts/render_account_sync.py": {
+      "sha256": "c00c499615321d4ac46784e50e646c826ab7b82a3db4e551d0c80589e06e9151",
+      "matchesBaseline": true,
+      "scope": "regional exclusions/no representative; existing-user rights; US health; PIPA/FTC incident; processor inventory; deletion/backup; platform-isolated iOS copy"
+    }
+  },
+  "accountOnlyChangedPath": "unresolvedBeforePublication[27]",
+  "accountOtherFieldsMatch": true,
+  "terms": {
+    "termsBeforeSha256": "30c9229e626b9488b80189a65cf509d4f605aec65fecfb9efeabd6401010fbdb",
+    "termsAfterSha256": "b7881bcf8a57e1c1570526ce6abd507c1279d3d59a1f1300942ad8db6c905ac1",
+    "changes": [
+      {
+        "locale": "ko",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "en",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "ja",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "de",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "de",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "de",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "de",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "fr",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "fr",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "fr",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "fr",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "es",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "es",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "es",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "es",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "it",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "it",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "it",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "it",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "nl",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "nl",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "nl",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "nl",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pt-PT",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "pt-PT",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pt-PT",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pt-PT",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pl",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "pl",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pl",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pl",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "sv",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "sv",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "sv",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "sv",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "hi",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "hi",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "hi",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "hi",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pt-BR",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "pt-BR",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pt-BR",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "pt-BR",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "ar",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "zh-Hans",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "zh-Hant",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "tr",
+        "field": "free-plus[2]",
+        "kind": "final-price"
+      },
+      {
+        "locale": "tr",
+        "field": "free-plus[2]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "tr",
+        "field": "billing-ios[0]",
+        "kind": "fixed-month"
+      },
+      {
+        "locale": "tr",
+        "field": "billing-android[0]",
+        "kind": "fixed-month"
+      }
+    ],
+    "priceFields": 17,
+    "fixedMonthFields": 33,
+    "restoredWholeSourceMatches": true,
+    "replacements": {
+      "de": [
+        [
+          " Die im Store angezeigte tatsächliche Dauer ist maßgeblich.",
+          ""
+        ],
+        [
+          "Die tatsächliche Dauer wird vor der Bestätigung angezeigt; ein neues",
+          "Ein neues"
+        ]
+      ],
+      "fr": [
+        [
+          " La durée réelle affichée par la boutique fait foi.",
+          ""
+        ],
+        [
+          "La durée réelle est affichée avant la confirmation ; créer",
+          "Créer"
+        ]
+      ],
+      "es": [
+        [
+          " Rige la duración real que muestra la tienda.",
+          ""
+        ],
+        [
+          "La duración real se muestra antes de la confirmación; crear",
+          "Crear"
+        ]
+      ],
+      "it": [
+        [
+          " Fa fede la durata effettiva indicata dallo store.",
+          ""
+        ],
+        [
+          "La durata effettiva è mostrata prima della conferma; creare",
+          "Creare"
+        ]
+      ],
+      "nl": [
+        [
+          " De werkelijke duur die de store toont, is bepalend.",
+          ""
+        ],
+        [
+          "De werkelijke duur wordt vóór bevestiging getoond; een nieuw",
+          "Een nieuw"
+        ]
+      ],
+      "pt-PT": [
+        [
+          "; vale a duração efetivamente apresentada pela loja.",
+          "."
+        ],
+        [
+          "; vale a duração apresentada na loja.",
+          "."
+        ]
+      ],
+      "pl": [
+        [
+          "; obowiązuje rzeczywista długość podana w sklepie.",
+          "."
+        ],
+        [
+          "; obowiązuje długość podana w sklepie.",
+          "."
+        ]
+      ],
+      "sv": [
+        [
+          "; den faktiska längd som butiken visar gäller.",
+          "."
+        ],
+        [
+          "; den längd som butiken visar gäller.",
+          "."
+        ]
+      ],
+      "hi": [
+        [
+          "; स्टोर में दिखाई गई वास्तविक अवधि लागू होती है।",
+          "।"
+        ],
+        [
+          "; स्टोर में दिखाई गई अवधि लागू होती है।",
+          "।"
+        ]
+      ],
+      "pt-BR": [
+        [
+          "; vale a duração efetivamente mostrada pela loja.",
+          "."
+        ],
+        [
+          "; vale a duração mostrada pela loja.",
+          "."
+        ]
+      ],
+      "tr": [
+        [
+          "; mağazanın gösterdiği gerçek süre geçerlidir.",
+          "."
+        ],
+        [
+          "; mağazada gösterilen süre geçerlidir.",
+          "."
+        ]
+      ]
+    }
+  },
+  "generatedTermsPages": [
+    {
+      "path": "terms/index.html",
+      "sha256": "b4b98a7db6329c5deb90d062bcbdfbfa5ed27ba4fb306c24790fd0cd4208c6e3",
+      "finalAnnualPriceOccurrences": 17,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "ko/terms/index.html",
+      "sha256": "9cea0993822706b9e725e81e8ae1075347650b61e4c460007f51e3cb0310a03e",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "en/terms/index.html",
+      "sha256": "c4bb21c67bfdfe0dfdd7e80b61a6a4d82d85ccabc2acf36b195abab84d56f13a",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "ja/terms/index.html",
+      "sha256": "426fc100c1e3ea5e287c5fa4acd4a8dd1c1a6ff4a237f2981de0e2d253c77ba2",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "de/terms/index.html",
+      "sha256": "ad477a9940ce2222614589ee4384185eed0d80f9d71cac460d688c06411c0e71",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "fr/terms/index.html",
+      "sha256": "cc3c4ccfdac699741eba576ca4075b796ff3d6a4a08f4c5d08add5a994b1bd93",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "es/terms/index.html",
+      "sha256": "a633ce4015a58b667c963dfb8e37ed830e6c96eb1c023df17f304332bda8b1c1",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "it/terms/index.html",
+      "sha256": "a299376dfd95e578b27860533b775680de9e94f7aa1eb6e661a74c2bc9d2d9ac",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "nl/terms/index.html",
+      "sha256": "e5911f8e8c05ceff1927fe9800752bb05a0bdd616b07fa5770dc5aeb110bb0a6",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "pt-PT/terms/index.html",
+      "sha256": "85e71a8c3a9635e870c4cf64eb19d71cd81d06b09a89c205908193548ae58691",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "pl/terms/index.html",
+      "sha256": "3f9a19be5676d91c1d4e728ce8f844db38069810a5077a56f7c921cfffaab31c",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "sv/terms/index.html",
+      "sha256": "0b2b8bc1b6fadc5845060e010e3b589c619a8689368b9de7f777106dce52d783",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "hi/terms/index.html",
+      "sha256": "6b688df1f8a3c8b0bd2ad366a9a7b23fa98e2301532e84cee0dff661ba01f083",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "pt-BR/terms/index.html",
+      "sha256": "b5aa0e4d3faaf6a7a9d1db9527bca9ae3dcea101dc5cd92d2620657b6706e845",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "ar/terms/index.html",
+      "sha256": "9cf2864196b3ed64c52ad643fc767b207980d3132303d016f78b19062b2dee5f",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "zh-Hans/terms/index.html",
+      "sha256": "94869d20403f0ec7615d6c854227adcebfd2b12a1672f93ed39be1f2c3fbbf21",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "zh-Hant/terms/index.html",
+      "sha256": "af1ec9b657b5877853bce7815e9a1c8400ea6d15e2afa16b3a32e62cc69681f9",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    },
+    {
+      "path": "tr/terms/index.html",
+      "sha256": "7e784f312dd0e988975916048419083913bcdc6170c2b54fc4ebf905956118fb",
+      "finalAnnualPriceOccurrences": 1,
+      "oldPricesAbsent": true
+    }
+  ],
+  "reviewer": "independent read-only subagent",
+  "independentReview": "No material source/diff issue; exact17+33 transform independently reconstructed; no external or native certification",
+  "readOnlyAgentActions": [
+    "source comparisons",
+    "diff audit"
+  ],
+  "notRun": [
+    "agent tests",
+    "network",
+    "native",
+    "visual"
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_terms.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late/render-terms.log.gz",
+    "logSha256": "6d159f875d965cdeeaf6680a97c8f8e6b1033f0d613a1918adeb3244ff09edc2"
+  }
+]

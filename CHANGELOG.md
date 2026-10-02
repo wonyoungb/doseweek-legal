@@ -2,7 +2,14 @@
 
 - Resume reviewed `a6a4e18` for final KRW19,900 annual reference and fixed1-month trial.
 - All17 regional exclusions/no representative already implemented; retain safeguards and proof.
-- Prepare assertion-only RED before changing product text. No native, network or publication.
+- Assertion-only RED committed at `6bf1fd5`; AST compile PASS; no product edits yet. No native, network or publication.
+- RED immediateparent7methods/6failed/104assertions; supplemental pre-exclusion1method/36assertions.
+  CompilePASS,0errors/skips/omissions; both detached worktrees removed.
+- GREEN17price and33fixedmonth fields; other Terms fields preserved exactly.
+- Focused63exactmethodsPASS; Terms rendererPASS,18affectedpages regenerated; sourcehashes refreshed.
+- Final199methods/13ordinarycommandsPASS; releaseexit1BLOCKED_EFFECTIVE_DATE staysfailed.
+  Site162/staged126pages; tone2078sentences,0violations,9existingexceptions.257frozeninputs/runtime match.
+- Independent readonly17+33transform/18generatedTerms/sourcepreservationauditPASS.
 - Input fingerprints and committed partner snapshots in `evidence/legal-update-20261002/late/`.
 
 ## 2026-10-02 — legal-update-legal revision 2 (historical; unpublished)

@@ -24,6 +24,8 @@ def fingerprint():
     return {'python': platform.python_version(),
             'executable': shutil.which('python3'),
             'executableSha256': hashlib.sha256(Path(shutil.which('python3')).read_bytes()).hexdigest(),
+            'verificationRunners': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                    for p in (OUT / 'run_tests.py', OUT / 'run_checks.py')},
             'files': {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                       for p in sorted(paths)}}
 
@@ -32,6 +34,7 @@ if __name__ == '__main__':
     before = fingerprint()
     (OUT / 'final-inputs.json').write_text(json.dumps(before, indent=2) + '\n')
     commands = [
+        ['python3', str(OUT / 'run_tests.py'), str(ROOT), str(OUT / 'full-green')],
         ['python3', 'scripts/render_home.py', '--check'],
         ['python3', 'scripts/render_ios.py', '--check'],
         ['python3', 'scripts/render_android.py', '--check'],

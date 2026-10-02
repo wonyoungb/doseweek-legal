@@ -30,6 +30,22 @@ def load(name):
 
 
 class LegalLateDecisionsTest(unittest.TestCase):
+    def test_all_locales_preserve_trial_renewal_cancel_and_local_price_meanings(self):
+        anchors = json.loads((ROOT / 'scripts/fixtures/legal_late_trial_anchors.json').read_text())
+        canonical = load('terms-content.json')
+        staged = render_account_sync.integrated_sources()['terms-content.json']
+        self.assertEqual(set(anchors), set(canonical['localeOrder']))
+        for stage, source in (('canonical', canonical), ('staged', staged)):
+            for locale, entry in source['locales'].items():
+                sections = {s['id']: s for s in entry['sections']}
+                with self.subTest(stage=stage, locale=locale, field='offer'):
+                    for meaning in anchors[locale]:
+                        self.assertIn(meaning, sections['free-plus']['paragraphs'][2])
+                for sub in sections['billing']['subsections']:
+                    with self.subTest(stage=stage, locale=locale, field=sub['id']):
+                        for meaning in anchors[locale][:2]:
+                            self.assertIn(meaning, sub['paragraphs'][0])
+
     def test_fixed_month_trial_has_no_variable_duration_override(self):
         for locale, entry in load('terms-content.json')['locales'].items():
             sections = {s['id']: s for s in entry['sections']}
