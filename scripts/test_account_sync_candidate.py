@@ -30,12 +30,18 @@ class AccountSyncCandidateTest(unittest.TestCase):
             self.assertTrue(mentions(text), text)
         self.assertEqual(mentions({"account": "Apple or Google", "n": 3, "list": ["Google"]}), [])
 
-    def test_prior_buyer_fields_reach_only_related_staged_sections(self):
-        import render_account_sync
+    def test_retired_prior_buyer_workflow_is_absent_from_candidate(self):
         candidate = account_sync_candidate.load()
         for loc, entry in candidate['locales'].items():
-            self.assertTrue(entry.get('priorBuyerClaimPrivacy'), loc)
-            self.assertTrue(entry.get('priorBuyerClaimHelp'), loc)
+            with self.subTest(locale=loc):
+                self.assertNotIn('priorBuyerClaimPrivacy', entry)
+                self.assertNotIn('priorBuyerClaimHelp', entry)
+        self.assertIs(candidate['legacyDecision'].get('separatePriorBuyerGrantOffered'), False)
+        self.assertIs(candidate['legacyDecision'].get('priorBuyerClaimProgramRetired'), True)
+
+    def test_legacy_rights_reach_staged_policy_help_and_terms_without_claims(self):
+        import render_account_sync
+        candidate = account_sync_candidate.load()
         sources = render_account_sync.integrated_sources()
         for loc, entry in candidate['locales'].items():
             ios = sources['ios-content.json']['locales'][loc]
@@ -44,27 +50,13 @@ class AccountSyncCandidateTest(unittest.TestCase):
             ip = render_account_sync.sections(ios['privacy'])
             ap = render_account_sync.sections(android['privacy'])
             faq = {f['id']: f for f in android['support']['faq']}
-            self.assertIn(entry['priorBuyerClaimPrivacy'], ip['purchases']['paragraphs'][0])
-            self.assertIn(entry['priorBuyerClaimPrivacy'], '\n\n'.join(ap['purchases']['paragraphs']))
-            self.assertIn(entry['priorBuyerClaimHelp'], '\n\n'.join(ios['support']['plus']['earlier']['answers']))
-            self.assertIn(entry['priorBuyerClaimHelp'], '\n\n'.join(faq['plus-earlier']['answers']))
-            self.assertIn(entry['legacyRights'], render_account_sync.sections(terms)['free-plus']['paragraphs'])
-            self.assertNotIn(entry['priorBuyerClaimPrivacy'], entry['sync'])
-
-    def test_prior_buyer_copy_preserves_off_and_separate_evidence_policy(self):
-        candidate = account_sync_candidate.load()
-        en = candidate['locales']['en']
-        ko = candidate['locales']['ko']
-        self.assertIn('currently unavailable', en['priorBuyerClaimHelp'])
-        self.assertIn('현재 사용할 수 없어요', ko['priorBuyerClaimHelp'])
-        for phrase in ('no order number or transaction proof', 'separate server encryption key',
-                       'not the health-backup 30 days', 'none is presumed indefinite or anonymous'):
-            self.assertIn(phrase, en['priorBuyerClaimPrivacy'])
-        self.assertIn('approval does not deliver a code or activate Plus', en['priorBuyerClaimHelp'])
-        self.assertIn('verified resulting subscription activates Plus', en['legacyRights'])
-        self.assertNotIn('준비하고', ko['legacyRights'])
-        self.assertNotIn('planned program', en['legacyRights'])
-        self.assertIn('claim', '\n'.join(candidate['unresolvedBeforePublication']))
+            with self.subTest(locale=loc):
+                self.assertNotIn('priorBuyerClaimPrivacy', entry)
+                self.assertIn(entry['legacyRights'], ip['purchases']['paragraphs'][0])
+                self.assertIn(entry['legacyRights'], '\n\n'.join(ap['purchases']['paragraphs']))
+                self.assertIn(entry['legacyRights'], '\n\n'.join(ios['support']['plus']['earlier']['answers']))
+                self.assertIn(entry['legacyRights'], '\n\n'.join(faq['plus-earlier']['answers']))
+                self.assertIn(entry['legacyRights'], render_account_sync.sections(terms)['free-plus']['paragraphs'])
 
     def test_every_locale_has_the_full_draft_scope(self):
         candidate = account_sync_candidate.load()

@@ -1,0 +1,16 @@
+{
+  "reviewedHead": "d3b6e32b21789c67763ad9f73bfff77dc370cc2b",
+  "branch": "next-ai/legal-store-legal-cx",
+  "status": "?? evidence/legal-update-20261002/revision2/\n",
+  "inputs": {
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/common-rules.md": "71016b430913b7b6ac2ab913ece9dd3c525750852a7c65da6c49257666c73e57",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal.review-2.json": "a5ddae39fe750152c5ea905523a308625e623a8be5d3dccb2f9c1ceecc521416",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-compliance-research.answer.md": "3c7da0e80854df9ced45f3414283b5b51b310346f2d6df0fb27732e6bce047de",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/backup-cost-research.md.answer.md": "d6222352e9999eb4fec9e424eb07d98f7c0d88167f31761ce573896f98f0110f",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/PLUS-FEATURE-PACK-SPEC.md": "dee0930ec2f52d6475a3570c4cffc3f97a53232cda2e7094d084e74fc87a4729",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/SYNC-GAP-MAP-20261001/owner-decisions.json": "eb1dd8376e5279219acac1d673771d98110efbfbfadb62199222a72fab9267cc"
+  },
+  "activeOwnedProcess": null,
+  "device": null,
+  "externalState": "No network or publication; read-only local partner audit only."
+}

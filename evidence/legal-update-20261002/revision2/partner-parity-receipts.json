@@ -1,0 +1,326 @@
+{
+  "observedUTC": "2026-10-02T04:10:53.786940+00:00",
+  "auditScope": "Read-only committed public policy, store-preparation copy and verification inputs. No check execution, network, device or external mutation.",
+  "verdict": "BLOCKED_ANDROID_COMMITTED_PRICE",
+  "requiredKoreaAnnualKRW": 22000,
+  "authority": {
+    "path": "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal.review-2.json",
+    "instruction": "Retain this lane's KRW 22,000. Coordinate partner policy, review-copy and verification-input updates; record parity as blocked until matching committed receipts exist. Continue using store-returned prices in app UI."
+  },
+  "lanes": {
+    "ios": {
+      "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios",
+      "branch": "next-ai/legal-store-ios-cx",
+      "head": "fc3da4125e578ee607b158fc56de4c2943ebcee3",
+      "statusPorcelain": "",
+      "files": {
+        "docs/MONETIZATION_POLICY.md": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/docs/MONETIZATION_POLICY.md",
+          "committedGitBlob": "a875a033f68a2c529d0cab26f0cb120a1a8fcf5f",
+          "workingGitBlob": "a875a033f68a2c529d0cab26f0cb120a1a8fcf5f",
+          "committedSha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
+          "workingSha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
+          "committedBytes": 64093,
+          "workingBytes": 64093,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "782584ddae55d2e15affdecad33194991c9d6164 fix(legal-update-ios): resolve review 2 price and French clause",
+          "committedRelevantLines": [
+            {
+              "line": 80,
+              "text": "offer data, never hardcoded prices. Other countries use store-converted local prices."
+            },
+            {
+              "line": 89,
+              "text": "| Korea price | KRW 3,300 / month, KRW 22,000 / year | Same approved amounts |"
+            }
+          ],
+          "relevantTestIds": []
+        },
+        "docs/ASC_ANSWER_SHEET.md": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/docs/ASC_ANSWER_SHEET.md",
+          "committedGitBlob": "ce17d18246f02a2d85f50f08a570896706806ca6",
+          "workingGitBlob": "ce17d18246f02a2d85f50f08a570896706806ca6",
+          "committedSha256": "2561bb63d2d492a0db5fd5bc99f8a01ff69a6d85d21188cdd50cc4292e02146c",
+          "workingSha256": "2561bb63d2d492a0db5fd5bc99f8a01ff69a6d85d21188cdd50cc4292e02146c",
+          "committedBytes": 29508,
+          "workingBytes": 29508,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "782584ddae55d2e15affdecad33194991c9d6164 fix(legal-update-ios): resolve review 2 price and French clause",
+          "committedRelevantLines": [
+            {
+              "line": 186,
+              "text": "| Price | Paid (historical pricing record) | Free download. Plus: USD 1.99/month or USD 13.99/year, with store-converted local prices; Korea KRW 3,300/month or KRW 22,000/year; Japan JPY 300/month or JPY 1,980/year. Paywall uses final StoreKit localized prices and billing periods, including applicable tax, with the full annual charge emphasized over a monthly equivalent. |"
+            }
+          ],
+          "relevantTestIds": []
+        },
+        "scripts/check_legal_store_update.py": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/scripts/check_legal_store_update.py",
+          "committedGitBlob": "1c459c9bcad2e91ab3f6b0850bd3b4acc037066f",
+          "workingGitBlob": "1c459c9bcad2e91ab3f6b0850bd3b4acc037066f",
+          "committedSha256": "730515098112529009374a436e1b1185b2688ed80c844fc9f9c5de297ca9a74d",
+          "workingSha256": "730515098112529009374a436e1b1185b2688ed80c844fc9f9c5de297ca9a74d",
+          "committedBytes": 11575,
+          "workingBytes": 11575,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "363858fb973ccdbc27d2a1d3448791ab7140eac8 test(legal-update-ios): pin review 2 price and French copy",
+          "committedRelevantLines": [
+            {
+              "line": 18,
+              "text": "    'ASC_TRIAL_STORE_TERMS': ('docs/ASC_ANSWER_SHEET.md', ('USD 1.99', 'USD 13.99', 'KRW 3,300', 'KRW 22,000', 'JPY 300', 'JPY 1,980', '1-month', 'first-time', 'StoreKit', 'full annual', 'auto-renew')),"
+            },
+            {
+              "line": 34,
+              "text": "    'POLICY_PRICE_TRIAL': ('docs/MONETIZATION_POLICY.md', ('USD 1.99', 'USD 13.99', 'KRW 3,300', 'KRW 22,000', 'JPY 300', 'JPY 1,980', '1-month', 'first-time', 'full yearly charge')),"
+            },
+            {
+              "line": 64,
+              "text": "    if identity in ('ASC_TRIAL_STORE_TERMS', 'POLICY_PRICE_TRIAL') and re.search(r'KRW\\s*19,?900\\b', text, re.I):"
+            },
+            {
+              "line": 65,
+              "text": "        problems.append(f'{identity}: obsolete Korea annual price KRW 19,900')"
+            }
+          ],
+          "relevantTestIds": []
+        },
+        "scripts/test_legal_store_update.py": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/scripts/test_legal_store_update.py",
+          "committedGitBlob": "95739256ea79fa85babccf9ce2e4c31aeefa729c",
+          "workingGitBlob": "95739256ea79fa85babccf9ce2e4c31aeefa729c",
+          "committedSha256": "c3779c02de22b43bc7da52be115d65ce636ab675b0e3e78c8c71d8d94d64d627",
+          "workingSha256": "c3779c02de22b43bc7da52be115d65ce636ab675b0e3e78c8c71d8d94d64d627",
+          "committedBytes": 3529,
+          "workingBytes": 3529,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "363858fb973ccdbc27d2a1d3448791ab7140eac8 test(legal-update-ios): pin review 2 price and French copy",
+          "committedRelevantLines": [
+            {
+              "line": 49,
+              "text": "                self.assert_rejects_contradiction(identity, 'Korea annual price: KRW 19,900',"
+            }
+          ],
+          "relevantTestIds": [
+            "test_legal_store_update.LegalStoreUpdateTests.test_rejects_old_price_beside_current_price"
+          ]
+        }
+      }
+    },
+    "android": {
+      "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and",
+      "branch": "next-ai/legal-store-android-cx",
+      "head": "2ca05407c09796884e1a4760f1cf04f88c231acc",
+      "statusPorcelain": "",
+      "files": {
+        "docs/MONETIZATION_POLICY.md": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and/docs/MONETIZATION_POLICY.md",
+          "committedGitBlob": "9a6c287b408ce8a65928a26ec78273f56717aa3f",
+          "workingGitBlob": "9a6c287b408ce8a65928a26ec78273f56717aa3f",
+          "committedSha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+          "workingSha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+          "committedBytes": 64093,
+          "workingBytes": 64093,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "0f2dbba0a087132b2a27dad902fd124b1e5e3d04 copy(legal-update-and): apply reviewed sale exclusions and price authority",
+          "committedRelevantLines": [
+            {
+              "line": 80,
+              "text": "offer data, never hardcoded prices. Other countries use store-converted local prices."
+            },
+            {
+              "line": 89,
+              "text": "| Korea price | KRW 3,300 / month, KRW 19,900 / year | Same approved amounts |"
+            }
+          ],
+          "relevantTestIds": []
+        },
+        "docs/PLAY_STORE.md": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and/docs/PLAY_STORE.md",
+          "committedGitBlob": "11ff048141de635150bf01dd6c514f357f1b284d",
+          "workingGitBlob": "11ff048141de635150bf01dd6c514f357f1b284d",
+          "committedSha256": "ec5b6219c351a9f8b1381be239a58e820125ccba3ef8998b7a1e28e1c204c965",
+          "workingSha256": "ec5b6219c351a9f8b1381be239a58e820125ccba3ef8998b7a1e28e1c204c965",
+          "committedBytes": 90020,
+          "workingBytes": 90020,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "0f2dbba0a087132b2a27dad902fd124b1e5e3d04 copy(legal-update-and): apply reviewed sale exclusions and price authority",
+          "committedRelevantLines": [
+            {
+              "line": 59,
+              "text": "KRW 19,900 / year. Numeric tables below record configuration decisions; customer-facing listings"
+            },
+            {
+              "line": 63,
+              "text": "  **KRW 19,900 / year**; Japan **JPY 300 / month**, **JPY 1,980 / year**. Other storefronts use"
+            },
+            {
+              "line": 64,
+              "text": "  **store-converted local prices**. Configure and read back the actual Play table; these decisions"
+            },
+            {
+              "line": 66,
+              "text": "  **never hardcode** them; listing copy says the store price."
+            }
+          ],
+          "relevantTestIds": []
+        },
+        "scripts/test_legal_monetization_policy.py": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and/scripts/test_legal_monetization_policy.py",
+          "committedGitBlob": "8f94d113493efdf207da3164a944fa914211c606",
+          "workingGitBlob": "8f94d113493efdf207da3164a944fa914211c606",
+          "committedSha256": "cf41f936f3ec70f1fbd5bf2c614b43edb69744e937546f6c0b42f82b15d573c2",
+          "workingSha256": "cf41f936f3ec70f1fbd5bf2c614b43edb69744e937546f6c0b42f82b15d573c2",
+          "committedBytes": 10442,
+          "workingBytes": 10442,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "450de7cc6becd864eb5a96be545341ac5f47a37c test(legal-update-and): reject stale region and price authority",
+          "committedRelevantLines": [
+            {
+              "line": 27,
+              "text": "        self.require(\"USD 1.99\", \"USD 13.99\", \"KRW 3,300\", \"KRW 19,900\", \"JPY 300\", \"JPY 1,980\","
+            },
+            {
+              "line": 28,
+              "text": "                     \"store-converted local prices\", \"never hardcoded\")"
+            },
+            {
+              "line": 29,
+              "text": "        self.assertNotRegex(self.flat, r\"Korea price \\(proposal\\)|KRW 2,900|KRW 22,000\")"
+            }
+          ],
+          "relevantTestIds": [
+            "test_legal_monetization_policy.LegalMonetizationPolicyTests.test_final_owner_prices_are_store_returned"
+          ]
+        },
+        "scripts/test_legal_store_listing.py": {
+          "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and/scripts/test_legal_store_listing.py",
+          "committedGitBlob": "284efa6b51e22d2962bddae41aaca1ea20f5e80f",
+          "workingGitBlob": "284efa6b51e22d2962bddae41aaca1ea20f5e80f",
+          "committedSha256": "f83ce4a4fc9f1236c66dcfeb48c7ce505b2d89174eb9ec66a66a1430d6e67d0c",
+          "workingSha256": "f83ce4a4fc9f1236c66dcfeb48c7ce505b2d89174eb9ec66a66a1430d6e67d0c",
+          "committedBytes": 12888,
+          "workingBytes": 12888,
+          "workingMatchesCommitted": true,
+          "lastTouchCommit": "450de7cc6becd864eb5a96be545341ac5f47a37c test(legal-update-and): reject stale region and price authority",
+          "committedRelevantLines": [
+            {
+              "line": 76,
+              "text": "        for value in (\"USD 1.99\", \"USD 13.99\", \"KRW 3,300\", \"KRW 19,900\", \"JPY 300\", \"JPY 1,980\"):"
+            },
+            {
+              "line": 78,
+              "text": "        self.assertTrue(\"store-converted local prices\" in self.notes, \"missing store-converted local prices\")"
+            },
+            {
+              "line": 79,
+              "text": "        self.assertTrue(\"never hardcode\" in self.notes, \"missing store-returned app prices requirement\")"
+            },
+            {
+              "line": 80,
+              "text": "        self.assertNotRegex(self.notes, r\"Prices: proposal KRW 2,900|KRW 2,900|KRW 22,000\")"
+            }
+          ],
+          "relevantTestIds": [
+            "test_legal_store_listing.LegalStoreListingTests.test_store_price_table_uses_final_owner_prices_without_hardcoded_app_prices",
+            "test_legal_store_listing.LegalStoreListingTests.test_current_owner_price_authority_supersedes_historical_review_inputs"
+          ]
+        }
+      }
+    }
+  },
+  "writes": {
+    "partnerWorktrees": false,
+    "thisReceiptOnly": true,
+    "commits": false
+  },
+  "execution": {
+    "checksRun": [],
+    "networkCalls": [],
+    "nativeActions": []
+  },
+  "policyByteParity": false,
+  "committedPolicyDifference": [
+    "--- Android committed policy\n",
+    "+++ iOS committed policy\n",
+    "@@ -89 +89 @@\n",
+    "-| Korea price | KRW 3,300 / month, KRW 19,900 / year | Same approved amounts |",
+    "+| Korea price | KRW 3,300 / month, KRW 22,000 / year | Same approved amounts |"
+  ],
+  "iosPolicyPatch": {
+    "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/docs/history/legal-update-ios-20261002/revision2/shared-policy.patch",
+    "sha256": "6eaa85ff5c8b11b6b4c5a2c12add2f89683c3eb09a70a4e8ed04c6ea98705f75",
+    "bytes": 426,
+    "sourceBlob": "9a6c287b408ce8a65928a26ec78273f56717aa3f",
+    "targetBlob": "a875a033f68a2c529d0cab26f0cb120a1a8fcf5f",
+    "preimageSha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+    "targetSha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
+    "currentAndroidCommittedPreimageMatches": true,
+    "requiredApplyOption": "--unidiff-zero",
+    "retainedDryRunReceipt": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/docs/history/legal-update-ios-20261002/revision2/policy-parity.json",
+    "newDryRunRun": false,
+    "patchContents": "diff --git a/docs/MONETIZATION_POLICY.md b/docs/MONETIZATION_POLICY.md\nindex 9a6c287b..a875a033 100644\n--- a/docs/MONETIZATION_POLICY.md\n+++ b/docs/MONETIZATION_POLICY.md\n@@ -89 +89 @@ offer data, never hardcoded prices. Other countries use store-converted local pr\n-| Korea price | KRW 3,300 / month, KRW 19,900 / year | Same approved amounts |\n+| Korea price | KRW 3,300 / month, KRW 22,000 / year | Same approved amounts |\n",
+    "limitation": "This patch changes the policy only. Android Play notes and test inputs must be coordinated; existing Android guards require KRW19,900 and reject KRW22,000."
+  },
+  "historicalIosReviewedParentPrice": [
+    {
+      "head": "c7b689893d2ddb813b46f5d2654b51ffb53c1073",
+      "path": "docs/MONETIZATION_POLICY.md",
+      "committedSha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+      "priceLines": [
+        {
+          "line": 89,
+          "text": "| Korea price | KRW 3,300 / month, KRW 19,900 / year | Same approved amounts |"
+        }
+      ]
+    },
+    {
+      "head": "c7b689893d2ddb813b46f5d2654b51ffb53c1073",
+      "path": "docs/ASC_ANSWER_SHEET.md",
+      "committedSha256": "d2ea6b973704718680118b1b8f120579b9654a514872881b7b6168236d1472ca",
+      "priceLines": [
+        {
+          "line": 186,
+          "text": "| Price | Paid (historical pricing record) | Free download. Plus: USD 1.99/month or USD 13.99/year, with store-converted local prices; Korea KRW 3,300/month or KRW 19,900/year; Japan JPY 300/month or JPY 1,980/year. Paywall uses final StoreKit localized prices and billing periods, including applicable tax, with the full annual charge emphasized over a monthly equivalent. |"
+        }
+      ]
+    },
+    {
+      "head": "c7b689893d2ddb813b46f5d2654b51ffb53c1073",
+      "path": "scripts/check_legal_store_update.py",
+      "committedSha256": "61ab697e28e2e9d30ad28a666cf783a82412269f7db4f21448585ca20593adc1",
+      "priceLines": [
+        {
+          "line": 18,
+          "text": "    'ASC_TRIAL_STORE_TERMS': ('docs/ASC_ANSWER_SHEET.md', ('USD 1.99', 'USD 13.99', 'KRW 3,300', 'KRW 19,900', 'JPY 300', 'JPY 1,980', '1-month', 'first-time', 'StoreKit', 'full annual', 'auto-renew')),"
+        },
+        {
+          "line": 34,
+          "text": "    'POLICY_PRICE_TRIAL': ('docs/MONETIZATION_POLICY.md', ('USD 1.99', 'USD 13.99', 'KRW 3,300', 'KRW 19,900', 'JPY 300', 'JPY 1,980', '1-month', 'first-time', 'full yearly charge')),"
+        },
+        {
+          "line": 65,
+          "text": "        problems.append(f'{identity}: obsolete Korea annual price KRW 22,000')"
+        }
+      ]
+    }
+  ],
+  "continuityPaths": {
+    "iosCurrentHandoff": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios/docs/CURRENT_HANDOFF.md",
+    "androidCurrentHandoff": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and/docs/CURRENT_HANDOFF.md",
+    "iosReport": "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-ios-report.json",
+    "androidReport": "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-and-report.json"
+  },
+  "nextAction": {
+    "owner": "Orchestrator and Android lane owner",
+    "instruction": "Coordinate Android docs/MONETIZATION_POLICY.md, docs/PLAY_STORE.md and price verification inputs to the already-required KRW22,000/year using new failing-first commits. Obtain matching committed policy/review/check receipts, recheck exact byte parity, and preserve Store-returned app UI prices.",
+    "decisionReopened": false,
+    "remainBlockedUntil": "Android matching committed source and verification receipts exist; a policy-only patch or dirty working bytes do not satisfy parity.",
+    "androidAffectedTests": [
+      "test_legal_monetization_policy.LegalMonetizationPolicyTests.test_final_owner_prices_are_store_returned",
+      "test_legal_store_listing.LegalStoreListingTests.test_store_price_table_uses_final_owner_prices_without_hardcoded_app_prices",
+      "test_legal_store_listing.LegalStoreListingTests.test_current_owner_price_authority_supersedes_historical_review_inputs"
+    ],
+    "partnerWritesPerformed": false,
+    "publicationAuthorized": false
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "ko": {
+    "coreFree": "신규·기존 사용자 모두 기존 핵심 기능을 Free로",
+    "noSeparateGrant": "이전 구매자용 Plus 혜택은 따로 제공하지",
+    "programRetired": "기존 신청·코드 프로그램은 폐기",
+    "noAutomaticPlusCharge": "이전 구매만으로 Plus가 시작되거나 요금이 청구되지",
+    "storeEligibilityTrial": "스토어가 첫 구독자 자격을 확인한 경우에만 표시된 조건에 따라 일반 무료 체험",
+    "statutoryRights": "법정 권리는 그대로 보장",
+    "noPerpetualGuarantee": "영구 광고 제거는 보장하지",
+    "historicalReviewPending": "이전의 광고 없는 이용 권리에 대한 플랫폼·소비자법 검토는 아직 끝나지"
+  },
+  "en": {
+    "coreFree": "New and prior users keep existing core features Free",
+    "noSeparateGrant": "No separate prior-buyer Plus grant is offered",
+    "programRetired": "the prior-buyer claim/code program is retired",
+    "noAutomaticPlusCharge": "An earlier purchase alone starts neither Plus nor a charge",
+    "storeEligibilityTrial": "Only the standard free trial applies, for first-time subscribers whose eligibility the store confirms and under the displayed conditions",
+    "statutoryRights": "Applicable statutory rights remain protected",
+    "noPerpetualGuarantee": "Perpetual ad-free use is not guaranteed",
+    "historicalReviewPending": "Platform and consumer-law review of historical ad-free rights remains pending"
+  },
+  "ja": {
+    "coreFree": "新規・既存ユーザーとも、従来の主要機能をFree",
+    "noSeparateGrant": "以前の購入者への個別のPlus付与は行わず",
+    "programRetired": "購入者向けの申請・コードプログラムは廃止",
+    "noAutomaticPlusCharge": "以前の購入だけでPlusが開始されたり、料金が請求されたりすることはありません",
+    "storeEligibilityTrial": "ストアが初回契約者としての対象資格を確認した場合に限り、表示された条件に従って通常の無料体験",
+    "statutoryRights": "法令上の権利は引き続き保護",
+    "noPerpetualGuarantee": "永続的な広告なしの利用は保証されません",
+    "historicalReviewPending": "過去の広告なしの利用に関する権利について、プラットフォームの規則・消費者法に基づく確認はまだ完了していません"
+  },
+  "de": {
+    "coreFree": "Neue und bisherige Nutzer behalten die bestehenden Kernfunktionen in Free",
+    "noSeparateGrant": "Frühere Käufer erhalten keine gesonderte Plus-Leistung",
+    "programRetired": "das Antrags-/Codeprogramm für frühere Käufer ist eingestellt",
+    "noAutomaticPlusCharge": "Ein früherer Kauf allein startet weder Plus noch eine Abbuchung",
+    "storeEligibilityTrial": "nur die reguläre kostenlose Testphase für erstmalige Abonnenten, deren Berechtigung der Store bestätigt, und zu den angezeigten Bedingungen",
+    "statutoryRights": "Gesetzliche Rechte bleiben gewahrt",
+    "noPerpetualGuarantee": "Dauerhaft werbefreie Nutzung wird nicht garantiert",
+    "historicalReviewPending": "Die Prüfung früherer Rechte auf werbefreie Nutzung nach Plattformregeln und Verbraucherrecht ist noch nicht abgeschlossen"
+  },
+  "fr": {
+    "coreFree": "Les nouveaux utilisateurs et les utilisateurs existants conservent les fonctions essentielles dans Free",
+    "noSeparateGrant": "Aucun avantage Plus distinct n’est accordé aux anciens acheteurs",
+    "programRetired": "leur programme de demande et de codes est abandonné",
+    "noAutomaticPlusCharge": "Un achat antérieur ne déclenche à lui seul ni Plus ni facturation",
+    "storeEligibilityTrial": "Seul l’essai gratuit standard s’applique aux personnes qui s’abonnent pour la première fois et dont le store confirme l’éligibilité, selon les conditions affichées",
+    "statutoryRights": "Les droits légaux restent protégés",
+    "noPerpetualGuarantee": "Une utilisation perpétuellement sans publicité n’est pas garantie",
+    "historicalReviewPending": "L’examen des droits antérieurs à une utilisation sans publicité au regard des règles des plateformes et du droit de la consommation n’est pas terminé"
+  },
+  "es": {
+    "coreFree": "Los usuarios nuevos y anteriores conservan las funciones principales existentes en Free",
+    "noSeparateGrant": "No se ofrece un beneficio Plus separado para compradores anteriores",
+    "programRetired": "su programa de solicitudes y códigos se ha retirado",
+    "noAutomaticPlusCharge": "Una compra anterior por sí sola no inicia Plus ni un cobro",
+    "storeEligibilityTrial": "Solo se aplica la prueba gratuita estándar a quienes se suscriben por primera vez y cuya elegibilidad confirma la tienda, según las condiciones mostradas",
+    "statutoryRights": "Se mantienen los derechos legales",
+    "noPerpetualGuarantee": "No se garantiza el uso sin anuncios para siempre",
+    "historicalReviewPending": "Sigue pendiente la revisión de los derechos históricos de uso sin anuncios conforme a las reglas de las plataformas y la legislación de consumo"
+  },
+  "it": {
+    "coreFree": "Gli utenti nuovi e precedenti mantengono le funzioni principali esistenti in Free",
+    "noSeparateGrant": "Non è previsto un beneficio Plus separato per chi ha acquistato in precedenza",
+    "programRetired": "il relativo programma di richieste e codici è stato ritirato",
+    "noAutomaticPlusCharge": "Un acquisto precedente da solo non avvia Plus né un addebito",
+    "storeEligibilityTrial": "Si applica solo la prova gratuita standard a chi si abbona per la prima volta e la cui idoneità è confermata dallo store, alle condizioni mostrate",
+    "statutoryRights": "I diritti previsti dalla legge restano tutelati",
+    "noPerpetualGuarantee": "L’uso senza annunci per sempre non è garantito",
+    "historicalReviewPending": "La verifica dei diritti storici all’uso senza annunci secondo le regole delle piattaforme e il diritto dei consumatori resta da completare"
+  },
+  "nl": {
+    "coreFree": "Nieuwe en bestaande gebruikers behouden de bestaande kernfuncties in Free",
+    "noSeparateGrant": "Eerdere kopers krijgen geen afzonderlijk Plus-voordeel",
+    "programRetired": "hun aanvraag- en codeprogramma is ingetrokken",
+    "noAutomaticPlusCharge": "Een eerdere aankoop alleen start geen Plus of betaling",
+    "storeEligibilityTrial": "Alleen de standaard gratis proefperiode geldt voor gebruikers die voor het eerst een abonnement afsluiten en van wie de store de geschiktheid bevestigt, onder de getoonde voorwaarden",
+    "statutoryRights": "Wettelijke rechten blijven beschermd",
+    "noPerpetualGuarantee": "Eeuwigdurend advertentievrij gebruik is niet gegarandeerd",
+    "historicalReviewPending": "De beoordeling van eerdere rechten op advertentievrij gebruik volgens platformregels en consumentenrecht is nog niet afgerond"
+  },
+  "pt-PT": {
+    "coreFree": "Os utilizadores novos e anteriores mantêm as funções principais existentes em Free",
+    "noSeparateGrant": "Não é oferecido um benefício Plus separado aos compradores anteriores",
+    "programRetired": "o respetivo programa de pedidos e códigos foi retirado",
+    "noAutomaticPlusCharge": "Uma compra anterior, por si só, não inicia Plus nem uma cobrança",
+    "storeEligibilityTrial": "Aplica-se apenas o período experimental gratuito normal a quem subscreve pela primeira vez e cuja elegibilidade é confirmada pela loja, segundo as condições apresentadas",
+    "statutoryRights": "Os direitos legais mantêm-se protegidos",
+    "noPerpetualGuarantee": "O uso sem anúncios para sempre não é garantido",
+    "historicalReviewPending": "A análise dos direitos anteriores ao uso sem anúncios segundo as regras das plataformas e o direito do consumidor está por concluir"
+  },
+  "pl": {
+    "coreFree": "Nowi i dotychczasowi użytkownicy zachowują istniejące podstawowe funkcje w Free",
+    "noSeparateGrant": "Wcześniejszym nabywcom nie przyznaje się osobnej korzyści Plus",
+    "programRetired": "ich program wniosków i kodów został wycofany",
+    "noAutomaticPlusCharge": "Sam wcześniejszy zakup nie uruchamia Plus ani naliczania opłat",
+    "storeEligibilityTrial": "tylko standardowy bezpłatny okres próbny dla osób subskrybujących po raz pierwszy, których uprawnienia potwierdzi sklep, na wyświetlonych warunkach",
+    "statutoryRights": "Prawa ustawowe pozostają chronione",
+    "noPerpetualGuarantee": "Korzystanie bez reklam na zawsze nie jest gwarantowane",
+    "historicalReviewPending": "Ocena wcześniejszych praw do korzystania bez reklam według zasad platform i prawa konsumenckiego nie została jeszcze zakończona"
+  },
+  "sv": {
+    "coreFree": "Nya och tidigare användare behåller de befintliga kärnfunktionerna i Free",
+    "noSeparateGrant": "Tidigare köpare får ingen separat Plus-förmån",
+    "programRetired": "deras ansöknings- och kodprogram har avvecklats",
+    "noAutomaticPlusCharge": "Ett tidigare köp ensamt startar varken Plus eller en debitering",
+    "storeEligibilityTrial": "Endast den vanliga kostnadsfria provperioden gäller för förstagångsprenumeranter vars behörighet butiken bekräftar, enligt de visade villkoren",
+    "statutoryRights": "Lagstadgade rättigheter är fortsatt skyddade",
+    "noPerpetualGuarantee": "Annonsfri användning för alltid garanteras inte",
+    "historicalReviewPending": "Granskningen av tidigare rättigheter till annonsfri användning enligt plattformsregler och konsumenträtt är ännu inte klar"
+  },
+  "hi": {
+    "coreFree": "नए और पुराने उपयोगकर्ताओं के लिए मौजूदा मुख्य सुविधाएँ Free में",
+    "noSeparateGrant": "पुराने खरीदारों को अलग Plus लाभ नहीं दिया जाता",
+    "programRetired": "उनका आवेदन और कोड कार्यक्रम बंद कर दिया गया है",
+    "noAutomaticPlusCharge": "केवल पहले की खरीद से न Plus शुरू होता है, न शुल्क लगता है",
+    "storeEligibilityTrial": "सामान्य मुफ़्त ट्रायल केवल पहली बार सदस्यता लेने वालों को दिखाए गए नियमों के अनुसार मिलता है, जब स्टोर उनकी पात्रता की पुष्टि करता है",
+    "statutoryRights": "कानूनी अधिकार सुरक्षित रहते हैं",
+    "noPerpetualGuarantee": "हमेशा विज्ञापन-मुक्त उपयोग की गारंटी नहीं है",
+    "historicalReviewPending": "पहले के विज्ञापन-मुक्त उपयोग के अधिकारों की प्लेटफ़ॉर्म नियमों और उपभोक्ता कानून के तहत समीक्षा अभी पूरी नहीं हुई है"
+  },
+  "pt-BR": {
+    "coreFree": "Usuários novos e anteriores mantêm os recursos principais existentes em Free",
+    "noSeparateGrant": "Não há benefício Plus separado para compradores anteriores",
+    "programRetired": "o programa de solicitações e códigos foi encerrado",
+    "noAutomaticPlusCharge": "Uma compra anterior, por si só, não inicia Plus nem uma cobrança",
+    "storeEligibilityTrial": "Somente o teste gratuito padrão se aplica a quem assina pela primeira vez e cuja elegibilidade é confirmada pela loja, conforme as condições exibidas",
+    "statutoryRights": "Os direitos legais continuam protegidos",
+    "noPerpetualGuarantee": "O uso sem anúncios para sempre não é garantido",
+    "historicalReviewPending": "A análise dos direitos anteriores ao uso sem anúncios segundo as regras das plataformas e a legislação do consumidor ainda não foi concluída"
+  },
+  "ar": {
+    "coreFree": "يحتفظ المستخدمون الجدد والسابقون بالميزات الأساسية الحالية ضمن Free",
+    "noSeparateGrant": "لا تُقدّم ميزة Plus منفصلة للمشترين السابقين",
+    "programRetired": "أُلغي برنامج الطلبات والرموز الخاص بهم",
+    "noAutomaticPlusCharge": "لا يبدأ Plus ولا تُفرض رسوم لمجرد شراء سابق",
+    "storeEligibilityTrial": "لا تسري إلا التجربة المجانية المعتادة على المشتركين لأول مرة الذين يؤكد المتجر أهليتهم، وفق الشروط المعروضة",
+    "statutoryRights": "تبقى الحقوق القانونية محفوظة",
+    "noPerpetualGuarantee": "الاستخدام الخالي من الإعلانات إلى الأبد غير مضمون",
+    "historicalReviewPending": "لم تكتمل بعد مراجعة الحقوق السابقة في الاستخدام دون إعلانات وفق قواعد المنصات وقوانين حماية المستهلك"
+  },
+  "zh-Hans": {
+    "coreFree": "新用户和既有用户均可继续通过 Free 使用现有核心功能",
+    "noSeparateGrant": "不向此前购买用户单独授予 Plus 权益",
+    "programRetired": "此前购买用户的申请及兑换码计划已废止",
+    "noAutomaticPlusCharge": "仅凭以前的购买不会开通 Plus，也不会产生收费",
+    "storeEligibilityTrial": "只有商店确认首次订阅资格后，才可按显示的条件享受常规免费试用",
+    "statutoryRights": "法定权利仍受保护",
+    "noPerpetualGuarantee": "不保证永久无广告使用",
+    "historicalReviewPending": "关于既往无广告使用权利的平台规则及消费者法律审查尚未完成"
+  },
+  "zh-Hant": {
+    "coreFree": "新使用者與既有使用者均可繼續透過 Free 使用現有核心功能",
+    "noSeparateGrant": "不向先前購買使用者單獨授予 Plus 權益",
+    "programRetired": "先前購買使用者的申請及兌換碼計畫已廢止",
+    "noAutomaticPlusCharge": "僅憑以前的購買不會開通 Plus，也不會產生收費",
+    "storeEligibilityTrial": "只有商店確認首次訂閱資格後，才可按顯示的條件享有一般免費試用",
+    "statutoryRights": "法定權利仍受保障",
+    "noPerpetualGuarantee": "不保證永久無廣告使用",
+    "historicalReviewPending": "關於既往無廣告使用權利的平台規則及消費者法律審查尚未完成"
+  },
+  "tr": {
+    "coreFree": "Yeni ve önceki kullanıcılar mevcut temel özellikleri Free kapsamında",
+    "noSeparateGrant": "Önceki alıcılara ayrı bir Plus avantajı verilmez",
+    "programRetired": "onlara yönelik başvuru ve kod programı kaldırılmıştır",
+    "noAutomaticPlusCharge": "Önceki satın alım tek başına Plus başlatmaz veya ücret doğurmaz",
+    "storeEligibilityTrial": "Yalnızca mağazanın uygunluğunu doğruladığı ilk kez abone olanlar için, gösterilen koşullarla standart ücretsiz deneme geçerlidir",
+    "statutoryRights": "Yasal haklar korunur",
+    "noPerpetualGuarantee": "Süresiz reklamsız kullanım garanti edilmez",
+    "historicalReviewPending": "Geçmişteki reklamsız kullanım haklarının platform kuralları ve tüketici hukuku kapsamındaki incelemesi henüz tamamlanmamıştır"
+  }
+}

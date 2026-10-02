@@ -1,4 +1,18 @@
-## ACTIVE — legal-update-legal revision 1 (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal revision 2 (2026-10-02; unpublished)
+
+Objective: fix review-2 issues in new RED/GREEN commits; never publish or rewrite history.
+Branch `next-ai/legal-store-legal-cx`; reviewed parent `d3b6e32b21789c67763ad9f73bfff77dc370cc2b`.
+Owned scope: retired prior-buyer grant/claim-code copy; shortened competing-store references
+in staged iOS; six-locale PIPA threshold grouping; committed commercial-copy parity receipts.
+Keep KRW 22,000/year per review-2; iOS current committed copy matches; Android remains blocked
+on KRW 19,900. Store-returned native UI prices remain the required contract.
+No owned PID/device, native or external action. Previous proofs/history preserved below and
+in `evidence/legal-update-20261002/revision2/revision1-report.historical.json`.
+Inputs and clean reviewed state: `revision2/baseline.json`; current dirty files: new regression
+and evidence/continuity files only until the RED stage is proved. Exact Git status is authoritative.
+Next action: commit assertion regressions and prove them on the detached reviewed parent under /tmp.
+
+## HISTORICAL — legal-update-legal revision 1 (2026-10-02; unpublished)
 
 Objective: resolve every major and the minor in review-1, using the latest owner/spec decisions.
 Branch `next-ai/legal-store-legal-cx`; reviewed parent `a2648991d78ad1dd92e604e015af4a535d5319eb`.

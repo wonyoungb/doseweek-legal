@@ -1,3 +1,12 @@
+## 2026-10-02 — legal-update-legal revision 2 (in progress; unpublished)
+
+- Resumed clean reviewed `d3b6e32` under explicit review-2 authorization.
+- Preserve original evidence; fix retired claim/code program, staged iOS shortened store names,
+  and decimal-comma locale PIPA thresholds through new assertion RED then GREEN commits.
+- Keep KRW 22,000 per review-2. Read-only partner audit: iOS matches; committed Android still
+  KRW 19,900. Cross-repository commercial parity remains BLOCKED pending matching commits.
+- No native/device/network, push, merge, deployment or publication.
+
 # Changelog
 
 Changes to the public DoseWeek help and privacy site. The format follows
