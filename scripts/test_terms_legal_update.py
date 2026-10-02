@@ -47,10 +47,10 @@ class TermsLegalUpdateTest(unittest.TestCase):
         for loc, entry in source["locales"].items():
             with self.subTest(locale=loc):
                 prices = sections(entry)["free-plus"]["paragraphs"][2]
-                for token in ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 22,000", "JPY 300", "JPY 1,980"):
+                for token in ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980"):
                     self.assertIn(token, prices, "superseding owner/spec price is missing")
                 self.assertNotIn("2,900", prices)
-                self.assertNotIn("19,900", prices)
+                self.assertNotIn("22,000", prices)
 
     def test_calendar_month_trial_uses_store_eligibility_for_first_time_subscribers(self):
         for loc, entry in content()["locales"].items():

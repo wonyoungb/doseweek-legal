@@ -1,0 +1,34 @@
+{
+  "ios": {
+    "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-ios",
+    "head": "992b413367ef810027c316950a9c1c7013bbe65e",
+    "policyPath": "docs/MONETIZATION_POLICY.md",
+    "policySha256": "9037102601e2add7b30dc72fc7fa937438a2bce73d540ddffc6a6c6151875bd9",
+    "storeReviewPath": "docs/ASC_ANSWER_SHEET.md",
+    "storeReviewSha256": "d2ea6b973704718680118b1b8f120579b9654a514872881b7b6168236d1472ca",
+    "workingMatchesCommitted": true,
+    "priceLines": [
+      "| US price | USD 1.99 / month, USD 13.99 / year | Same approved amounts |",
+      "| Korea price | KRW 3,300 / month, KRW 19,900 / year | Same approved amounts |",
+      "| Japan price | JPY 300 / month, JPY 1,980 / year | Same approved amounts |"
+    ],
+    "partnerChecksRunByThisLane": false,
+    "evidenceLimit": "Committed policy/review read-only snapshot; no native or Store readback; partner check receipts not acquired."
+  },
+  "android": {
+    "path": "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-and",
+    "head": "d36ff1c97a491280c5a8a565af7e6b57d51f7a34",
+    "policyPath": "docs/MONETIZATION_POLICY.md",
+    "policySha256": "445b8785d6b2aac2b725ef19e029233c206f891da5d466b40da60e95d97fb6d7",
+    "storeReviewPath": "docs/PLAY_STORE.md",
+    "storeReviewSha256": "c516dd5640a11db441de1e09e499fbbeaec58f6ef8e6b9e6a24c5df61d384e70",
+    "workingMatchesCommitted": true,
+    "priceLines": [
+      "| US price | USD 1.99 / month, USD 13.99 / year | Same approved amounts |",
+      "| Korea price | KRW 3,300 / month, KRW 22,000 / year | Same approved amounts |",
+      "| Japan price | JPY 300 / month, JPY 1,980 / year | Same approved amounts |"
+    ],
+    "partnerChecksRunByThisLane": false,
+    "evidenceLimit": "Committed policy/review read-only snapshot; no native or Store readback; partner check receipts not acquired."
+  }
+}

@@ -1,4 +1,22 @@
-## ACTIVE — legal-update-legal revision 2 (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal late owner decisions (2026-10-02; unpublished)
+
+Objective: apply final owner decisions in new assertion RED/GREEN commits; never publish.
+Branch `next-ai/legal-store-legal-cx`; starting HEAD `a6a4e18f70bcf866a6bb50aacb8a64164cba8bde`.
+Final references: USD 1.99/month,13.99/year; KRW3,300/month,19,900/year;
+JPY300/month,1,980/year; store-converted other prices and store-returned native UI.
+EU/EEA, UK and Switzerland exclusions/no representative already implemented in all17locales;
+preserve those rights/safeguards and inherited proof. Fixed1-calendar-month Store-confirmed
+first-time trial, auto-renewal and cancel-anytime wording; remove contradictory duration overrides.
+Owned dirty: late regression scripts/tests and late evidence/continuity files only; product source
+has not been changed. Git status owns exact inventory. No owned PID/device or external action.
+Inputs: `evidence/legal-update-20261002/late/baseline.json`; prior revision2 evidence remains historical.
+Read-only partner snapshots: iOS committed policy reflects finalprice; Android snapshot still old.
+Snapshots do not prove partner checks or Store configuration; commercial parity gate remains false.
+Canonical workspace status read from original workspace; no concurrent canonical ledger written.
+Next action: commit RED, prove exact failing methods on detached parent, then bounded source GREEN.
+Report target: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-late-report.json`.
+
+## HISTORICAL — legal-update-legal revision 2 (2026-10-02; unpublished)
 
 Objective: fix review-2 issues in new RED/GREEN commits; never publish or rewrite history.
 Branch `next-ai/legal-store-legal-cx`; reviewed parent `d3b6e32b21789c67763ad9f73bfff77dc370cc2b`.

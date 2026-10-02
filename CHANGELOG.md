@@ -1,4 +1,11 @@
-## 2026-10-02 — legal-update-legal revision 2 (in progress; unpublished)
+## 2026-10-02 — late owner decisions (in progress; unpublished)
+
+- Resume reviewed `a6a4e18` for final KRW19,900 annual reference and fixed1-month trial.
+- All17 regional exclusions/no representative already implemented; retain safeguards and proof.
+- Prepare assertion-only RED before changing product text. No native, network or publication.
+- Input fingerprints and committed partner snapshots in `evidence/legal-update-20261002/late/`.
+
+## 2026-10-02 — legal-update-legal revision 2 (historical; unpublished)
 
 - Resumed clean reviewed `d3b6e32` under explicit review-2 authorization.
 - Preserve original evidence; fix retired claim/code program, staged iOS shortened store names,
