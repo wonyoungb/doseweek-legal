@@ -141,16 +141,16 @@ class PrivacyLegalUpdateTest(unittest.TestCase):
                     self.assertTrue(all(isinstance(v, str) and v.strip() for v in row['cells'].values()))
                     self.assertIn(row['role'], ('processor', 'independent-controller'))
 
-    def test_unverified_provider_details_block_release_and_reps_marked_pending(self):
+    def test_unverified_provider_and_sales_configuration_block_release_without_rep_appointment(self):
         for name, source in zip(SOURCES, catalogs()):
             with self.subTest(source=name):
                 flags = source.get('legalReadiness', {})
                 self.assertEqual(set(flags), {'providerInventoryVerified', 'overseasTransferBasisVerified',
-                    'processorContractsVerified', 'regionalSafeguardsVerified', 'representativesVerified'})
+                    'processorContractsVerified', 'regionalSafeguardsVerified', 'salesRegionExclusionsVerified'})
                 self.assertFalse(any(flags.values()))
                 self.assertEqual(set(source.get('representatives', {})), {'EU', 'UK'})
-                self.assertTrue(all(r['status'] == 'pending-required-assessment' and
-                                    r['contact'] == '[TO BE APPOINTED — NOT VERIFIED]'
+                self.assertTrue(all(r['status'] == 'not-designated-excluded-markets' and
+                                    r['contact'] is None
                                     for r in source['representatives'].values()))
 
     def test_rendered_transfer_table_accessible_in_every_locale(self):

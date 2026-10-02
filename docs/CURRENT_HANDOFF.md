@@ -1,4 +1,21 @@
-## ACTIVE — legal-update-legal (2026-10-02; unpublished)
+## ACTIVE — legal-update-legal revision 1 (2026-10-02; unpublished)
+
+Objective: fix review-1 pricing (KRW 22,000/year), Android business operator,
+1.0.6 EU/EEA/UK/Switzerland sale exclusions with existing-user rights preserved,
+and iOS platform-name isolation. Latest spec/owner decisions supersede initial inputs.
+Branch `next-ai/legal-store-legal-cx`; revision parent `a2648991d78ad1dd92e604e015af4a535d5319eb`.
+Owned edits: four test modules and durable RED evidence. Detached parent proof compiled every
+script and executed all 32 requested/discovered methods: 12 failed methods / 235 assertion
+failures; 0 errors, skips or omissions. Original reviewed source was unchanged.
+Evidence: `evidence/legal-update-20261002/revision1/{baseline,red-parent}.json` and
+`red-parent.log.gz`; exact input/test fingerprints and identities retained. Temporary proof
+worktree restored to its parent after the run and removed before commit.
+The existing initial evidence stays historical; no unchanged native result is rerun.
+No owned device/process, network, push, merge or publication. Effective date remains null.
+Next action: commit these proved RED assertions, then fix the bounded source/renderer fields. Revision evidence lives under
+`evidence/legal-update-20261002/revision1/`; final HEAD/report will record exact state.
+
+## HISTORICAL — legal-update-legal initial result (2026-10-02; rejected review-1)
 
 Owner scope: 1.0.6 legal/store/web copy from approved `1714082f`, branch
 `next-ai/legal-store-legal-cx`. All 17 locales updated: privacy/rights/breach/processor table,

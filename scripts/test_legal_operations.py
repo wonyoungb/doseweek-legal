@@ -32,7 +32,7 @@ class LegalOperationsTest(unittest.TestCase):
         source = json.loads((ROOT / 'docs/account-sync-content.candidate.json').read_text())
         flags = source.get('serverReadiness', {})
         for flag in ('processorInventoryVerified', 'healthConsentVerified',
-                     'internationalRepresentativesVerified', 'breachProcedureOperational',
+                     'salesRegionExclusionsVerified', 'breachProcedureOperational',
                      'regionalSubscriptionNoticesVerified', 'consumerHealthRightsVerified'):
             with self.subTest(flag=flag):
                 self.assertIn(flag, flags)

@@ -5,7 +5,16 @@ Changes to the public DoseWeek help and privacy site. The format follows
 tags. Released sections are dated by their merge to `main`, which is the GitHub Pages source.
 Being on `main` does not by itself prove the live page was checked.
 
-## 2026-10-02 — legal-update-legal (unpublished)
+## 2026-10-02 — legal-update-legal revision 1 (unpublished)
+
+- Review-1 rejected the initial candidate for pricing/operator/market-decision mismatches
+  and inherited iOS platform references. Regression assertions compile on the reviewed detached parent and fail on assertions:
+  32 methods executed, 12 failed methods / 235 assertion failures, 0 errors/skips/omissions.
+  The original results and commits remain retained; no publication or native work.
+- Exact RED evidence/fingerprints are in `evidence/legal-update-20261002/revision1/`.
+  Parent proof worktree removed. Tests are committed before GREEN source edits.
+
+## 2026-10-02 — legal-update-legal initial result (historical; rejected review-1)
 
 - Local source GREEN: `2efa2b0f8e368c074fc24f947a4d014776636e0d`. Completion documentation
   records this checkpoint without changing matching verification inputs; final HEAD is in the

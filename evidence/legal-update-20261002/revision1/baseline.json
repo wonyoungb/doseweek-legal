@@ -1,0 +1,22 @@
+{
+  "parent": "a2648991d78ad1dd92e604e015af4a535d5319eb",
+  "branch": "next-ai/legal-store-legal-cx",
+  "python": "3.14.8",
+  "inputs": {
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/common-rules.md": "71016b430913b7b6ac2ab913ece9dd3c525750852a7c65da6c49257666c73e57",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal.review-1.json": "ff25db51b4b96ec5da2d6f4a89047e5f972ae56d54b90adad37ba4716d51e2c4",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/PLUS-FEATURE-PACK-SPEC.md": "dee0930ec2f52d6475a3570c4cffc3f97a53232cda2e7094d084e74fc87a4729",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-compliance-research.answer.md": "3c7da0e80854df9ced45f3414283b5b51b310346f2d6df0fb27732e6bce047de",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/backup-cost-research.md.answer.md": "d6222352e9999eb4fec9e424eb07d98f7c0d88167f31761ce573896f98f0110f",
+    "/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/SYNC-GAP-MAP-20261001/owner-decisions.json": "eb1dd8376e5279219acac1d673771d98110efbfbfadb62199222a72fab9267cc"
+  },
+  "redTests": {
+    "scripts/test_terms_legal_update.py": "6e4374b57dad182966f419b0579728f541be270964fac0a6b3dd1b16e3b2c429",
+    "scripts/test_privacy_legal_update.py": "d641276b8a8c0de7d8685d775eff086e2081298983b31ff63ec3903e152a1c8f",
+    "scripts/test_legal_operations.py": "ddafce288c42a3a0be1cdcb8bb6944243cac64d5eea34d7d74e5cea18e404d28",
+    "scripts/test_legal_revision1.py": "1227b13d48f31f44a3d83e5071282f54e7521adc70c2f7b0153475de5fa7cad9"
+  },
+  "publication": "NEVER",
+  "ownedProcess": null,
+  "ownedDevice": null
+}

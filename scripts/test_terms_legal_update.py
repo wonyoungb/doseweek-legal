@@ -1,6 +1,6 @@
 """1.0.6 subscription/consumer-rights guards; these assertions fail on the old copy.
 
-The dated owner decision overrides older research/spec price examples. The candidate
+The latest owner/spec decision overrides earlier price examples. The candidate
 integration must carry every original billing paragraph rather than silently replace it.
 """
 import json
@@ -47,9 +47,10 @@ class TermsLegalUpdateTest(unittest.TestCase):
         for loc, entry in source["locales"].items():
             with self.subTest(locale=loc):
                 prices = sections(entry)["free-plus"]["paragraphs"][2]
-                for token in ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980"):
-                    self.assertIn(token, prices, "owner round3 final price is missing")
+                for token in ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 22,000", "JPY 300", "JPY 1,980"):
+                    self.assertIn(token, prices, "superseding owner/spec price is missing")
                 self.assertNotIn("2,900", prices)
+                self.assertNotIn("19,900", prices)
 
     def test_calendar_month_trial_uses_store_eligibility_for_first_time_subscribers(self):
         for loc, entry in content()["locales"].items():
