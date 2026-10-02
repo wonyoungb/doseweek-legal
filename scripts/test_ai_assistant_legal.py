@@ -46,6 +46,43 @@ NAME_STEMS = {
     'zh-Hans': 'AI 记录助手', 'zh-Hant': 'AI 紀錄助手', 'tr': 'yapay zeka kayıt asistan',
 }
 HELPLINES = ('119', '109', '911', '988', '0120-279-338', 'findahelpline.com')
+# Review round 2: DoseWeek has two kinds of AI. AI entry and Visit Prep run on the device (iOS);
+# the AI record assistant (Pro) is processed on a server by a third-party model. Text that
+# describes one must not deny the other. These stems mark "server" and "on the device" in each
+# locale, and the phrases of the 1.0.5 sentence "No Private Cloud Compute, server model, or
+# third-party model is used", which is false for the app as a whole once the assistant ships.
+SERVER_STEMS = {
+    'ko': '서버', 'en': 'server', 'ja': 'サーバー', 'de': 'Server', 'fr': 'serveur', 'es': 'servidor',
+    'it': 'server', 'nl': 'server', 'pt-PT': 'servidor', 'pl': 'serwer', 'sv': 'server',
+    'hi': 'सर्वर', 'pt-BR': 'servidor', 'ar': 'خادم', 'zh-Hans': '服务器', 'zh-Hant': '伺服器',
+    'tr': 'sunucu',
+}
+ON_DEVICE_STEMS = {
+    'ko': '기기', 'en': 'device', 'ja': '端末', 'de': 'Gerät', 'fr': 'appareil', 'es': 'dispositivo',
+    'it': 'dispositivo', 'nl': 'apparaat', 'pt-PT': 'dispositivo', 'pl': 'urządzeni',
+    'sv': 'enheten', 'hi': 'डिवाइस', 'pt-BR': 'dispositivo', 'ar': 'الجهاز', 'zh-Hans': '设备',
+    'zh-Hant': '裝置', 'tr': 'cihaz',
+}
+DENIAL_STEMS = {
+    'ko': ('서버 모델', '제3자 모델'),
+    'en': ('server model', 'third-party model'),
+    'ja': ('サーバーモデル', '第三者モデル'),
+    'de': ('Servermodell', 'Modell Dritter', 'Modelle Dritter'),
+    'fr': ('modèle serveur', 'modèle tiers'),
+    'es': ('modelos de servidor', 'modelo en servidor', 'modelos de terceros', 'modelo de terceros'),
+    'it': ('modelli su server', 'modelli di terze parti'),
+    'nl': ('servermodel', 'model van derden'),
+    'pt-PT': ('modelo em servidor', 'modelos em servidor', 'modelo de terceiros', 'modelos de terceiros'),
+    'pl': ('model serwerowy', 'modele serwerowe', 'model innej firmy', 'modele podmiotów zewnętrznych'),
+    'sv': ('servermodell', 'tredjepartsmodell', 'modell från tredje part'),
+    'hi': ('सर्वर मॉडल', 'तीसरे पक्ष के मॉडल', 'थर्ड-पार्टी मॉडल'),
+    'pt-BR': ('modelo em servidor', 'modelo de terceiros'),
+    'ar': ('نموذج خادم', 'نموذج على خادم', 'نموذج من طرف ثالث', 'نموذج من طرف خارجي'),
+    'zh-Hans': ('服务器模型', '第三方模型'),
+    'zh-Hant': ('伺服器模型', '第三方模型'),
+    'tr': ('sunucu modeli', 'üçüncü taraf model'),
+}
+ON_DEVICE_MODEL = 'SystemLanguageModel.default'
 SERVER_CANNOT_READ_FIELDS = ('recordsSync', 'mealsSync', 'sync')
 SENTENCE = re.compile(r'(?<=[。।])|(?<=\.)\s+')
 RETIRED_KOREAN = ('상담', 'AI 코치', 'AI 영양사', 'AI 닥터', '주치의', '무제한', '부작용 관리')
@@ -128,6 +165,15 @@ def strings(value):
     elif isinstance(value, list):
         for item in value:
             yield from strings(item)
+
+
+def plain(markup):
+    """A rendered page as the text a reader sees: tags removed, entities decoded."""
+    return html.unescape(re.sub(r'<[^>]+>', '', markup))
+
+
+def sentences(text):
+    return [part.strip() for part in SENTENCE.split(text) if part.strip()]
 
 
 def number(value, text):
@@ -364,6 +410,162 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         render_android.validate_catalog(live := load('docs/android-content.candidate.json'))
         self.assertEqual(live['versionName'], '1.0.5')
 
+    # -- review round 2: on-device AI and the server assistant are different features ----------
+
+    def test_ios_ai_answer_says_which_ai_runs_on_the_device_and_which_on_a_server(self):
+        # The staged iOS 1.0.6 support FAQ "Why is an AI feature unavailable?" ended with "No
+        # Private Cloud Compute, server model, or third-party model is used." That is true for AI
+        # entry and Visit Prep only: the AI record assistant (Pro) is processed on a server by
+        # Amazon Bedrock. PRO-SPEC 4.4 `ai.paused` links to this answer.
+        live = load('docs/ios-content.json')
+        candidate = self.source(WEB_SOURCE)
+        root = plain(self.pages['support/index.html'])
+        for locale in LOCALES:
+            before = live['locales'][locale]['support']['released']['ai']['answers']
+            parts = sentences(before[0])
+            denial = parts[-1]
+            after = self.ios['locales'][locale]['support']['released']['ai']['answers']
+            text = candidate['locales'][locale]
+            scoped, pointer = text.get('onDeviceOnly', ''), text.get('iosAiFaq', '')
+            joiner = '' if locale in CJK else ' '
+            with self.subTest(locale=locale):
+                self.assertEqual(len(parts), 3, 'the 1.0.5 answer changed: review the replacement')
+                self.assertIn('Private Cloud Compute', denial)
+                self.assertEqual(after[1:], before[1:], 'the fallback answer is kept')
+                answer = after[0]
+                self.assertNotIn(denial, answer,
+                                 'the staged iOS AI answer still says no server or third-party model '
+                                 'is used, without saying that this covers only the on-device features')
+                self.assert_names_feature(locale, answer, 'the iOS AI answer')
+                for token in ('Amazon Bedrock', 'Anthropic', 'Claude', 'DoseWeek', 'Private Cloud Compute'):
+                    self.assertIn(token, answer, f'the iOS AI answer lacks {token}')
+                self.assertEqual(answer.count(ON_DEVICE_MODEL), 1)
+                self.assertTrue(scoped and pointer,
+                                'the candidate has no onDeviceOnly / iosAiFaq text for this locale')
+                self.assertEqual(answer, before[0][:before[0].rindex(denial)] + scoped + joiner + pointer)
+                self.assertNotIn(denial, scoped, 'the scoped sentence repeats the bare denial')
+                self.assertIn('Private Cloud Compute', scoped)
+                self.assertIn(ON_DEVICE_STEMS[locale].casefold(), scoped.casefold(),
+                              'the denial is not scoped to the on-device features')
+                self.assert_names_feature(locale, pointer, 'the pointer to the server assistant')
+                self.assertIn(SERVER_STEMS[locale].casefold(), pointer.casefold(),
+                              'the pointer does not say the assistant is processed on a server')
+                self.assertEqual([t for t in ('Android', 'Google Play', 'Health Connect')
+                                  if t in scoped + pointer], [])
+                self.assertNotIn(ON_DEVICE_MODEL, scoped + pointer)
+                page = plain(self.pages[f'{locale}/support/index.html'])
+                for rendered, name in ((page, 'locale'), (root, 'root')):
+                    self.assertIn(scoped + joiner + pointer, rendered, f'{name} support page')
+                    self.assertNotIn(denial, rendered, f'{name} support page keeps the bare denial')
+        korean = self.ios['locales']['ko']['support']['released']['ai']['answers'][0]
+        self.assertTrue(korean.endswith(
+            '기기 안에서 처리하는 이 두 기능에는 Private Cloud Compute, 서버 모델, 제3자 모델을 쓰지 않아요. '
+            'AI 기록 도우미(Pro)는 이와 다른 기능이에요. 서버에서 제3자 모델로 처리해요. 따로 동의한 뒤에만, '
+            '확인하고 보낸 내용이 DoseWeek 서버를 거쳐 Amazon Bedrock(대한민국 서울 리전)으로 가고, '
+            'Anthropic의 Claude 모델이 답을 만들어요. 인터넷에 연결되어 있어야 하고, 잠시 쉬어 갈 때는 '
+            '앱에서 알려 드려요. 자세한 내용은 개인정보 처리방침의 ‘AI 기록 도우미(Pro)’ 항목에 있어요.'), korean)
+        english = self.ios['locales']['en']['support']['released']['ai']['answers'][0]
+        self.assertTrue(english.endswith(
+            'These two on-device features use no Private Cloud Compute, server model, or third-party '
+            'model. The AI record assistant (Pro) is a different feature: it is processed on a server, '
+            'with a third-party model. Only after your separate consent, what you confirm and send '
+            'goes through the DoseWeek server to Amazon Bedrock (Seoul Region, Republic of Korea), '
+            'where the Claude model by Anthropic creates the answer. It needs an internet connection '
+            'and can be paused for a while; the app tells you when that happens. The Privacy Policy '
+            'describes it under “AI record assistant (Pro)”.'), english)
+
+    def test_on_device_ai_section_scopes_its_denial_to_the_on_device_features(self):
+        live = load('docs/ios-content.json')
+        candidate = self.source(WEB_SOURCE)
+        root = plain(self.pages['privacy/index.html'])
+        for locale in LOCALES:
+            before = sections(live['locales'][locale]['privacy']['sections'])['ai']['paragraphs'][0]
+            found = [part for part in sentences(before.split('\n\n')[0]) if 'Private Cloud Compute' in part]
+            after = sections(self.ios['locales'][locale]['privacy']['sections'])['ai']['paragraphs'][0]
+            text = candidate['locales'][locale]
+            scoped = text.get('onDeviceOnly', '')
+            with self.subTest(locale=locale):
+                self.assertEqual(len(found), 1, 'the 1.0.5 section changed: review the replacement')
+                denial = found[0]
+                self.assertEqual(before.count(denial), 1)
+                self.assertNotIn(denial, after,
+                                 'the staged on-device AI section still says no server or third-party '
+                                 'model is used, without scope')
+                self.assertTrue(scoped, 'the candidate has no onDeviceOnly text for this locale')
+                self.assertNotIn(denial, scoped)
+                self.assertEqual(after, before.replace(denial, scoped) + '\n\n' + text['onDeviceScope'])
+                self.assertEqual(after.count(ON_DEVICE_MODEL), 1)
+                page = plain(self.pages[f'{locale}/privacy/index.html'])
+                for rendered, name in ((page, 'locale'), (root, 'root')):
+                    self.assertIn(scoped, rendered, f'{name} privacy page')
+                    self.assertNotIn(denial, rendered, f'{name} privacy page keeps the bare denial')
+
+    def test_no_staged_text_denies_a_server_or_third_party_model_outside_the_scoped_sentences(self):
+        # Sweep: the staged policies, help pages, Terms and US policy, and both candidate files.
+        # The phrases may appear only inside the candidate sentences that scope them to the
+        # on-device features or attribute them to the assistant.
+        candidate = self.source(WEB_SOURCE)
+        app = self.source(APP_SOURCE)
+        documents = (('ios', self.ios), ('android', self.android), ('terms', self.terms),
+                     ('us-health', self.us_health), ('web candidate', candidate), ('app copy', app))
+        for locale in LOCALES:
+            text = candidate['locales'][locale]
+            allowed = [part for part in (text.get('onDeviceOnly', ''), text.get('iosAiFaq', '')) if part]
+            for name, document in documents:
+                found = []
+                for value in strings(document['locales'][locale]):
+                    for part in allowed:
+                        value = value.replace(part, '')
+                    folded = value.casefold()
+                    found += [stem for stem in DENIAL_STEMS[locale] if stem.casefold() in folded]
+                with self.subTest(source=name, locale=locale):
+                    self.assertEqual(found, [],
+                                     f'{name} denies a server or third-party model without scope')
+        for path, markup in self.pages.items():
+            locale = path.split('/')[0]
+            if locale not in LOCALES:
+                continue
+            text = candidate['locales'][locale]
+            rendered = plain(markup)
+            for part in (text.get('onDeviceOnly', ''), text.get('iosAiFaq', '')):
+                if part:
+                    rendered = rendered.replace(part, '')
+            folded = rendered.casefold()
+            with self.subTest(page=path):
+                self.assertEqual([stem for stem in DENIAL_STEMS[locale] if stem.casefold() in folded], [])
+
+    def test_ios_renderer_rejects_the_unscoped_ai_denial_for_1_0_6(self):
+        import copy
+        import render_ios
+        live = load('docs/ios-content.json')
+        catalog = copy.deepcopy(self.ios)
+        self.assertEqual(catalog['bundleVersion'], '1.0.6')
+        render_ios.validate(catalog)
+        catalog['locales']['en']['support']['released']['ai']['answers'][0] = (
+            live['locales']['en']['support']['released']['ai']['answers'][0])
+        with self.assertRaises(AssertionError,
+                               msg='render_ios.validate accepts the 1.0.5 AI answer in a 1.0.6 catalog'):
+            render_ios.validate(catalog)
+        # The served 1.0.5 source keeps its answer until 1.0.6 is published.
+        render_ios.validate(live)
+        self.assertEqual(live['bundleVersion'], '1.0.5')
+
+    def test_android_ai_answer_says_the_assistant_is_processed_on_a_server(self):
+        candidate = self.source(WEB_SOURCE)
+        for locale in LOCALES:
+            answer = candidate['locales'][locale]['androidAiFaq']
+            staged = sections(self.android['locales'][locale]['support']['faq'])['ai-health']['answers'][0]
+            with self.subTest(locale=locale):
+                self.assertIn(SERVER_STEMS[locale].casefold(), answer.casefold(),
+                              'the Android AI answer does not say the assistant is processed on a server')
+                self.assertTrue(staged.startswith(answer))
+                self.assertEqual(len(sentences(answer)), 4)
+                self.assertIn(ON_DEVICE_STEMS[locale].casefold(), sentences(answer)[1].casefold(),
+                              'the Android AI answer does not say it is not processed on the device')
+        self.assertIn('이 기능은 기기가 아니라 서버에서 처리해요.', candidate['locales']['ko']['androidAiFaq'])
+        self.assertIn('It is processed on a server, not on the device.',
+                      candidate['locales']['en']['androidAiFaq'])
+
     # -- Terms and the US policy --------------------------------------------------------------
 
     def test_terms_have_the_ai_section_right_after_the_medical_notice(self):
@@ -465,6 +667,52 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
             module.require_release_ready()
         self.assertIn('ai_assistant_candidate.require_release_ready()',
                       (ROOT / 'scripts/check_site.py').read_text(encoding='utf-8'))
+
+    def test_release_gate_refuses_the_draft_sentences_even_when_every_flag_is_true(self):
+        # Clause 5 and the processor row say the AWS entity "is not yet verified and will be stated
+        # before release". Flipping the flags without replacing those sentences must not publish.
+        import copy
+        module = importlib.import_module('ai_assistant_candidate')
+        candidate = copy.deepcopy(module.load())
+        candidate['status'] = 'integrated-and-verified'
+        candidate['unresolvedBeforePublication'] = []
+        candidate['readiness'] = {key: True for key in candidate['readiness']}
+        with self.assertRaises(AssertionError,
+                               msg='the release gate opens while the policy still carries draft sentences'):
+            module.require_release_ready(candidate)
+        draft = candidate.get('preReleaseWording', {})
+        self.assertEqual(list(draft), list(LOCALES))
+
+        def without(value, retired):
+            if isinstance(value, str):
+                for sentence in retired:
+                    value = value.replace(sentence, 'Verified.')
+                return value
+            if isinstance(value, list):
+                return [without(item, retired) for item in value]
+            if isinstance(value, dict):
+                return {key: without(item, retired) for key, item in value.items()}
+            return value
+
+        for locale in LOCALES:
+            entry = candidate['locales'][locale]
+            cells = entry['processorRow']
+            with self.subTest(locale=locale):
+                self.assertEqual(len(draft[locale]), 5)
+                for sentence, field in zip(draft[locale], (entry['clauses'][4], cells['legalBasis'],
+                                                           cells['country'], cells['recipientContact'],
+                                                           cells['retention'])):
+                    self.assertIn(sentence, field)
+            candidate['locales'][locale] = without(entry, draft[locale])
+        module.require_release_ready(candidate)
+
+    def test_gate_6_and_counsel_items_of_review_round_2_are_recorded_as_blockers(self):
+        unresolved = self.source(WEB_SOURCE)['unresolvedBeforePublication']
+        for tokens in (('APPI', 'clause 6', 'locales.ja'),
+                       ('ai.consent.a.retention.body', 'clause 4', 'gate 6'),
+                       ('zh-Hans', 'zh-Hant', 'meal ideas', 'CON-PRO')):
+            with self.subTest(tokens=tokens):
+                self.assertEqual(len([item for item in unresolved if all(token in item for token in tokens)]), 1)
 
     def test_korean_copy_never_says_sangdam_and_uses_the_decided_names(self):
         for path in (WEB_SOURCE, APP_SOURCE):
