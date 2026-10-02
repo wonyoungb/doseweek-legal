@@ -32,7 +32,7 @@ LOCALES = (
     "ko", "en", "ja", "de", "fr", "es", "it", "nl", "pt-PT", "pl", "sv", "hi",
     "pt-BR", "ar", "zh-Hans", "zh-Hant", "tr",
 )
-FIELDS = ("account", "sync", "processors", "retention", "notice", "webDeletion", "releaseStatus",
+FIELDS = ("account", "sync", "healthSync", "processors", "retention", "notice", "webDeletion", "releaseStatus",
           "analytics", "legacyRights", "deletionTitle", "requestLabel", "manualBackupScope",
           "priorBuyerClaimPrivacy", "priorBuyerClaimHelp")
 
@@ -365,14 +365,21 @@ def load() -> dict:
     return candidate
 
 
-def require_release_ready() -> None:
-    candidate = load()
+def require_release_ready(candidate: dict | None = None) -> None:
+    candidate = candidate if candidate is not None else load()
     assert candidate["status"] == "integrated-and-verified", (
         "account/sync disclosure is a pre-release candidate: reconcile 17-locale privacy, "
         "terms, help, deletion page and store declarations with verified native/server behavior"
     )
     assert not candidate["unresolvedBeforePublication"], (
         "account/sync release blockers remain in docs/account-sync-content.candidate.json"
+    )
+    # Lane LEGAL-STORE round 2: the drafted D8, reset-sync, verifier and tombstone text describes
+    # paths that are not shipped or decided; emptying the unresolved list alone does not release it.
+    readiness = candidate.get("serverReadiness") or {}
+    open_flags = [key for key in SERVER_READINESS_TOKENS if readiness.get(key) is not True]
+    assert not open_flags, (
+        f"account/sync serverReadiness flags still open: {open_flags}; ship or decide each path first"
     )
 
 

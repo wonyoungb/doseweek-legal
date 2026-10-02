@@ -557,6 +557,8 @@ def main() -> None:
                          "docs/terms-content.json"):
             left = legal_release.release_placeholders((ROOT / relative).read_text(encoding="utf-8"))
             assert not left, f"{relative}: release placeholder still present: {left[0]!r}"
+            pending = legal_release.pending_release_markers((ROOT / relative).read_text(encoding="utf-8"))
+            assert not pending, f"{relative}: undecided fact still pending: {pending[0]!r}"
     # Owner decision 2026-10-01: sign-in is Apple and Google only. No live or candidate
     # sign-in-bearing legal source may name the dropped Kakao login.
     retired = account_sync_candidate.retired_provider_errors()

@@ -22,6 +22,7 @@ import render_terms
 
 ROOT = Path(__file__).resolve().parents[1]
 ROUTES = ('privacy/', 'support/', 'android/privacy/', 'android/support/', 'terms/', 'account/delete/')
+CJK = ('ja', 'zh-Hans', 'zh-Hant')
 
 def sections(entry):
     return {s['id']: s for s in entry['sections']}
@@ -46,6 +47,13 @@ def integrated_sources(candidate=None):
         i['privacy']['effectiveDate'] = text['releaseStatus']
         i['support']['labels']['lead'] = join('releaseStatus', 'account')
         ip['storage']['paragraphs'][0] = join('releaseStatus', 'account', 'sync', 'analytics', 'notice')
+        # Imported Apple Health / Health Connect observations are part of the sync graph (server
+        # PROTOCOL.md "Snapshot contents"): both health paragraphs say so instead of "not sent".
+        ip['health']['paragraphs'][0] += ('' if loc in CJK else ' ') + text['healthSync']
+        health_connect = ap['no-collection']['paragraphs'][2]
+        denial = account_sync_candidate.HEALTH_CONNECT_DENIALS[loc]
+        assert health_connect.count(denial) == 1, (loc, 'Health Connect paragraph changed')
+        ap['no-collection']['paragraphs'][2] = health_connect.replace(denial, text['healthSync'])
         ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + text['sync']
         ip['deletion']['paragraphs'][0] += '\n\n' + join('retention', 'webDeletion')
         purchase = ip['purchases']['paragraphs'][0].split('\n\n')
@@ -87,6 +95,10 @@ def integrated_sources(candidate=None):
         ap['backup']['paragraphs'][-1] += '\n\n' + text['sync']
         ap['purchases']['paragraphs'][1] = join('account', 'sync')
         ap['purchases']['paragraphs'][2] = join('sync', 'processors')
+        if c.get('serverReadiness', {}).get('verifierHostDecided') is not True:
+            # The standalone Play verifier's host is undecided: keep the registered pending
+            # sentence (check_site.py --release refuses it) instead of dropping the location.
+            ap['purchases']['paragraphs'][2] += '\n\n' + legal_release.PENDING_VERIFIER_LOCATION[loc]
         ap['purchases']['paragraphs'][4] = text['manualBackupScope'] + '\n\n' + ap['purchases']['paragraphs'][4] + '\n\n' + text['sync']
         faq = {f['id']: f for f in a['support']['faq']}
         ap['purchases']['paragraphs'][5] = '\n\n'.join(faq['plus-cancel']['answers']) + '\n\n' + join('legacyRights', 'priorBuyerClaimPrivacy')
