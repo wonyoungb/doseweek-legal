@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "matched": 249,
+  "differences": [],
+  "scope": "all unchanged source/tests/renderer/assets/artifacts and runner; docs/report/derived release-map metadata excluded"
+}

@@ -7,12 +7,23 @@ Being on `main` does not by itself prove the live page was checked.
 
 ## 2026-10-02 — legal-update-legal revision 1 (unpublished)
 
-- Review-1 rejected the initial candidate for pricing/operator/market-decision mismatches
-  and inherited iOS platform references. Regression assertions compile on the reviewed detached parent and fail on assertions:
-  32 methods executed, 12 failed methods / 235 assertion failures, 0 errors/skips/omissions.
-  The original results and commits remain retained; no publication or native work.
-- Exact RED evidence/fingerprints are in `evidence/legal-update-20261002/revision1/`.
-  Parent proof worktree removed. Tests are committed before GREEN source edits.
+- RED `a33a8b8` proves all four review findings on detached `a264899`: compile PASS,
+  32 methods / 12 failed methods / 235 assertion failures; 0 errors/skips/omissions.
+- Corrected every locale's Korean annual reference to KRW 22,000; Android scope now names
+  Wonyoung Labs, preserving Wonyoung Choi as representative/privacy officer.
+- 1.0.6 policy/metadata/operations now exclude EU/EEA, UK and Switzerland sales with no
+  appointed EU/UK representative. Applicable existing-user rights, transfer safeguards,
+  incident clocks and iOS portability are preserved. Actual Store exclusions remain false-gated.
+- Canonical and staged iOS policy/help use neutral other-platform/store references while
+  retaining shared purchase-verifier and deletion disclosures. Affected pages regenerated.
+- Focused 77 and full 182 methods PASS, 0 failures/errors/skips/omissions. Every ordinary
+  static gate PASS; 162 site and 126 in-memory staged pages. All 249 frozen inputs match.
+  Two independent reviews and exact preservation/operator audits found no material issue.
+- Release gate exit1 remains BLOCKED on null date and operational proof. First wrapper
+  classification failure and actual terminal log retained; classification corrected without
+  rerunning product checks. Evidence: `evidence/legal-update-20261002/revision1/`.
+- Owned proof worktree and translation scratch removed. No native/network/store action,
+  push, merge, deployment, publication or new visual/counsel/native-speaker certification.
 
 ## 2026-10-02 — legal-update-legal initial result (historical; rejected review-1)
 

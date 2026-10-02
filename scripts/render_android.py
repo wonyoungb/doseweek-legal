@@ -432,7 +432,7 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert isinstance(catalog, dict), "catalog must be an object"
     assert set(catalog) == {
         "schemaVersion", "platform", "applicationId", "versionName", "effectiveDate",
-        "supportEmail", "localeOrder", "locales", "legalReadiness", "representatives",
+        "supportEmail", "localeOrder", "locales", "legalReadiness", "representatives", "marketAvailability",
     }
     privacy_legal.validate_readiness(catalog)
     assert catalog["schemaVersion"] == 1

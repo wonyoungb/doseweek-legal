@@ -178,7 +178,9 @@ Git history.
 Prepared 1.0.6 disclosures include the Wonyoung Labs operator, separate health-sync consent,
 processor/transfer tables, regional rights, daily encrypted S3 Seoul backups and weekly OS
 snapshots with the seven-day deletion limit, trial/subscription terms and a separate US policy.
-Supplier facts, foreign representatives and native/operational behavior remain gated. The
+1.0.6 excludes EU/EEA, UK and Switzerland sales and has no appointed EU/UK representative;
+applicable existing-user rights and safeguards remain. Supplier facts, actual Store exclusions
+and native/operational behavior remain gated. The
 [legal operations procedure](docs/LEGAL_OPERATIONS_1_0_6.md) defines the breach/deletion/rights
 work required before publication; it is not a claim that those operations have been run.
 

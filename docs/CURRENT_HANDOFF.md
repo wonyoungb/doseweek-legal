@@ -1,19 +1,41 @@
 ## ACTIVE — legal-update-legal revision 1 (2026-10-02; unpublished)
 
-Objective: fix review-1 pricing (KRW 22,000/year), Android business operator,
-1.0.6 EU/EEA/UK/Switzerland sale exclusions with existing-user rights preserved,
-and iOS platform-name isolation. Latest spec/owner decisions supersede initial inputs.
-Branch `next-ai/legal-store-legal-cx`; revision parent `a2648991d78ad1dd92e604e015af4a535d5319eb`.
-Owned edits: four test modules and durable RED evidence. Detached parent proof compiled every
-script and executed all 32 requested/discovered methods: 12 failed methods / 235 assertion
-failures; 0 errors, skips or omissions. Original reviewed source was unchanged.
-Evidence: `evidence/legal-update-20261002/revision1/{baseline,red-parent}.json` and
-`red-parent.log.gz`; exact input/test fingerprints and identities retained. Temporary proof
-worktree restored to its parent after the run and removed before commit.
-The existing initial evidence stays historical; no unchanged native result is rerun.
-No owned device/process, network, push, merge or publication. Effective date remains null.
-Next action: commit these proved RED assertions, then fix the bounded source/renderer fields. Revision evidence lives under
-`evidence/legal-update-20261002/revision1/`; final HEAD/report will record exact state.
+Objective: resolve every major and the minor in review-1, using the latest owner/spec decisions.
+Branch `next-ai/legal-store-legal-cx`; reviewed parent `a2648991d78ad1dd92e604e015af4a535d5319eb`.
+RED `a33a8b8` committed before GREEN: detached reviewed parent compiled all scripts,
+32 exact methods executed, 12 failed methods / 235 assertion failures, 0 errors/skips/omitted.
+Temporary proof worktree was restored to its parent and removed; no history rewritten.
+
+All 17 locales now use KRW 22,000/year, Wonyoung Labs as operator, and 1.0.6 EU/EEA,
+UK and Switzerland sales exclusions with no appointed EU/UK representative. Applicable
+existing-user rights/transfer safeguards/breach clocks and iOS PDF portability are preserved.
+Actual Store-exclusion false gates replace appointment-only false gates. Canonical/staged iOS
+policy/help use neutral other-platform/store references; verifier/retention clauses survive.
+Owned GREEN changes: three policy/Terms sources plus account candidate, bounded validators/
+renderers, regenerated iOS/Android/Terms pages, README/operations/release map and evidence.
+
+Focused GREEN: 77 exact methods PASS. Final full repository GREEN: 182 exact methods PASS,
+0 failures/errors/skips/omitted. Seven renderer checks, candidate, in-memory account render,
+site, tone and diff checks PASS. Site 162 pages; staged 126 noindex/null-date pages.
+Tone 2104 sentences, 0 violations, 9 existing exceptions and 0 stale entries. All 249 frozen
+source/test/runner/assets/artifact hashes match. Two independent read-only reviews found no
+material issue; audit retained 34 regional-policy safeguards and checked 102 operator fields.
+
+Evidence: `evidence/legal-update-20261002/revision1/` holds exact requested/executed IDs,
+lossless RED/focused/full/check logs, input fingerprints, staged hashes and preservation audit.
+The first check wrapper misclassified the release assertion due to an expected-text mismatch;
+its exit1/raw receipt is retained. Corrected classification uses the unchanged retained terminal
+log, without rerunning product checks: release child exit1 remains BLOCKED on null effective date.
+16 account/server flags and 5 legal flags per privacy source remain false; actual supplier,
+Store exclusion, native/deletion/backup/rights/incident proof is still required. No EU/UK
+appointment question remains for this excluded-market version. No counsel/native-speaker or
+visual certification; visual/native/provider/live checks NOT_RUN. No network, push, merge,
+store action, deployment or publication. No owned job/device or temporary/scratch files remain.
+
+Next action: commit the verified GREEN candidate, then overwrite and validate the final lane
+report with final HEAD/commits/owned-file inventory and updated operational ownerQuestions.
+Report: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-report.json`.
+Older snapshots below are historical and cannot authorize release work.
 
 ## HISTORICAL — legal-update-legal initial result (2026-10-02; rejected review-1)
 

@@ -1,0 +1,9 @@
+{
+  "originalWrapperExit": 1,
+  "cause": "wrapper expected is not set, retained assertion says is not filled; release child exit1 correctly preserved",
+  "releaseExit": 1,
+  "releaseResult": "BLOCKED_EFFECTIVE_DATE",
+  "rerun": false,
+  "originalReceipt": "checks-initial-parser-result.historical.json",
+  "validatedAgainstRetainedLog": true
+}

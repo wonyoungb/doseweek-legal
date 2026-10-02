@@ -560,7 +560,7 @@ def main() -> None:
             source = json.loads((ROOT / relative).read_text(encoding="utf-8"))
             readiness = source.get("legalReadiness", {})
             assert readiness and all(value is True for value in readiness.values()), (
-                f"{relative}: legal/provider/representative operational readiness remains unverified"
+                f"{relative}: legal/provider/sales-exclusion operational readiness remains unverified"
             )
         for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",
                          "docs/terms-content.json"):

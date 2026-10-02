@@ -25,6 +25,30 @@ ROOT = Path(__file__).resolve().parents[1]
 ROUTES = ('privacy/', 'support/', 'android/privacy/', 'android/support/', 'terms/', 'account/delete/', 'us-health/')
 CJK = ('ja', 'zh-Hans', 'zh-Hant')
 
+# Keep cross-store purchase verification/deletion disclosures in iOS copy using neutral
+# store names. Context-specific substitutions preserve grammar and every retention bound.
+IOS_RETENTION_STORE_LABELS = {'ko': [{'old': 'Google Play', 'new': '다른 지원 스토어'}],
+ 'en': [{'old': 'Google Play', 'new': 'another supported store'}],
+ 'ja': [{'old': 'Google Play', 'new': '対応する他のストア'}],
+ 'de': [{'old': 'bei Google Play', 'new': 'bei einem anderen unterstützten Store'},
+        {'old': 'über Google Play', 'new': 'über einen anderen unterstützten Store'}],
+ 'fr': [{'old': 'de Google Play', 'new': 'd’un autre store pris en charge'},
+        {'old': 'sur Google Play', 'new': 'sur un autre store pris en charge'}],
+ 'es': [{'old': 'Google Play', 'new': 'otra tienda compatible'}],
+ 'it': [{'old': 'Google Play', 'new': 'un altro store supportato'}],
+ 'nl': [{'old': 'Google Play', 'new': 'een andere ondersteunde store'}],
+ 'pt-PT': [{'old': 'do Google Play', 'new': 'de outra loja compatível'},
+           {'old': 'no Google Play', 'new': 'em outra loja compatível'}],
+ 'pl': [{'old': 'Google Play', 'new': 'innym obsługiwanym sklepie'}],
+ 'sv': [{'old': 'Google Play', 'new': 'en annan stödd butik'}],
+ 'hi': [{'old': 'Google Play', 'new': 'किसी अन्य समर्थित स्टोर'}],
+ 'pt-BR': [{'old': 'no Google Play', 'new': 'em outra loja compatível'},
+           {'old': 'o Google Play', 'new': 'outra loja compatível'}],
+ 'ar': [{'old': 'Google Play', 'new': 'متجر آخر مدعوم'}],
+ 'zh-Hans': [{'old': 'Google Play', 'new': '其他受支持的商店'}],
+ 'zh-Hant': [{'old': 'Google Play', 'new': '其他支援的商店'}],
+ 'tr': [{'old': "Google Play'den", 'new': 'desteklenen başka bir mağazadan'}]}
+
 def sections(entry):
     return {s['id']: s for s in entry['sections']}
 
@@ -47,6 +71,13 @@ def integrated_sources(candidate=None):
         i, a, t = ios['locales'][loc], android['locales'][loc], terms['locales'][loc]
         ip, ap, tp = sections(i['privacy']), sections(a['privacy']), sections(t)
         join = lambda *keys: '\n\n'.join(text[k] for k in keys)
+        ios_retention = text['retention']
+        for label in IOS_RETENTION_STORE_LABELS[loc]:
+            assert label['old'] in ios_retention, (loc, 'shared store wording changed')
+            ios_retention = ios_retention.replace(label['old'], label['new'])
+        assert 'Google Play' not in ios_retention, loc
+        join_ios = lambda *keys: '\n\n'.join(ios_retention if k == 'retention' else text[k]
+                                             for k in keys)
         i['privacy']['intro'] = text['releaseStatus'] + '\n\n' + i['privacy']['intro']
         i['privacy']['effectiveDate'] = text['releaseStatus']
         i['support']['labels']['lead'] = join('releaseStatus', 'account')
@@ -70,7 +101,7 @@ def integrated_sources(candidate=None):
         qualify(ip['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         qualify(ap['next-release']['paragraphs'], 1, account_sync_candidate.MEAL_DENIALS[loc], text['mealsSync'])
         ip['backups']['paragraphs'][0] = text['manualBackupScope'] + '\n\n' + ip['backups']['paragraphs'][0] + '\n\n' + join('sync', 'serverBackup')
-        ip['deletion']['paragraphs'][0] += '\n\n' + join('retention', 'webDeletion')
+        ip['deletion']['paragraphs'][0] += '\n\n' + join_ios('retention', 'webDeletion')
         purchase = ip['purchases']['paragraphs'][0].split('\n\n')
         assert len(purchase) == 7, (loc, 'ios purchase paragraph boundary changed')
         placeholders = [x for x in legal_release.RELEASE_PLACEHOLDERS if x in purchase[1]]
@@ -86,9 +117,9 @@ def integrated_sources(candidate=None):
         for group, key in [('released', 'backup'), ('secondRelease', 'backup')]:
             i['support'][group][key]['answers'][0] = text['manualBackupScope'] + '\n\n' + i['support'][group][key]['answers'][0]
             i['support'][group][key]['answers'][-1] += '\n\n' + text['sync']
-        i['support']['released']['deletion']['answers'][-1] += '\n\n' + join('retention', 'webDeletion')
+        i['support']['released']['deletion']['answers'][-1] += '\n\n' + join_ios('retention', 'webDeletion')
         i['support']['plus']['features']['answers'][0] += '\n\n' + join('account', 'sync')
-        i['support']['plus']['manage']['answers'][-1] += '\n\n' + join('account', 'retention')
+        i['support']['plus']['manage']['answers'][-1] += '\n\n' + join_ios('account', 'retention')
         i['support']['plus']['earlier']['answers'] = [join('legacyRights', 'priorBuyerClaimHelp'), text['releaseStatus']]
         a['privacy']['scope'] = text['releaseStatus'] + '\n\n' + a['privacy']['scope'].replace('1.0.5', '1.0.6')
         a['home']['featureBadges'][1] = text['account']

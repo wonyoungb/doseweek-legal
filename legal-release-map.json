@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-02T03:56:52.747716+00:00",
   "purpose": "Per-platform publication record for the doseweek-legal second-release candidate (LEGAL_TWO_RELEASES.md section 5). Null means not assigned or not decided; nothing here is a placeholder version or date.",
   "legal": {
     "repository": "wonyoungb/doseweek-legal",
@@ -178,7 +178,7 @@
   },
   "terms": {
     "source": "docs/terms-content.json",
-    "sha256": "ccc8f9bb8a120b09e29bb23dfb5d89cc0a0acf689f3a91cde41867d9bcbf96f8",
+    "sha256": "c1323d2009c3624f210ec84561802faacbc3805748a08160ec02c4f14117be5b",
     "renderer": "scripts/render_terms.py",
     "routes": [
       "terms/",
@@ -209,14 +209,14 @@
     "effectiveDate": null,
     "operator": "Wonyoung Labs (sole proprietorship); representative/privacy officer Wonyoung Choi",
     "sourceHashes": {
-      "docs/ios-content.json": "cdd7d6f4f0e5a8f7657da8eafa35e15e3477185616bf4e169fb09a123939df49",
-      "docs/android-content.candidate.json": "02057b004da0ea8c40c7e04212977705b419389de444892cef080dcaa768d272",
-      "docs/account-sync-content.candidate.json": "ff39a408c0f48e91eb708e6e901a9c00ed65053dc89f6d15098e4516313b5eab",
-      "docs/terms-content.json": "8bdc603ef8b1f209516375526dba1f8f0844b960068541fbd10737b6ab51d881",
+      "docs/ios-content.json": "998a7e713975ecd0220f7063fc68c1023d4339d2575ce35238d44367551e4aed",
+      "docs/android-content.candidate.json": "457e8d2568e197bf507c1285a936e37fec4b39b6f548067fae024b320e0e8cba",
+      "docs/account-sync-content.candidate.json": "9d61011ed961601014eed6d43b0da2dcae62107e1f0a18a308db74e88e7253c4",
+      "docs/terms-content.json": "c1323d2009c3624f210ec84561802faacbc3805748a08160ec02c4f14117be5b",
       "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee"
     },
     "privacySupplement": "Art30 purposes/bases/security/rights, recipient-specific Art28-8 inventory, PIPA/FTC/GDPR breach section; supplier particulars stay explicitly unverified and false-gated",
-    "subscription": "Owner final USD1.99/13.99, KRW3300/19900, JPY300/1980; Store-localized actual terms; eligible first-time1-calendar-month trial; automatic renewal, Store cancellation and statutory rights",
+    "subscription": "Superseding owner/spec final USD1.99/13.99, KRW3300/22000, JPY300/1980; Store-localized actual terms; eligible first-time1-calendar-month trial; automatic renewal, Store cancellation and statutory rights",
     "backup": "daily pre-upload-encrypted S3 Seoul app data +weekly OS recovery snapshot; deleted personal data out of all relevant backups within7days; independent cleanup/actual proof required",
     "routes": {
       "site": [
@@ -232,9 +232,32 @@
       ],
       "stagedAccount": "account/delete/ through render_account_sync.py (unpublished/noindex) — request by support email without reinstall or Plus"
     },
-    "verification": "PASS all static source/render/site/tone/link/locale checks and173 exact unittest methods;126unpublished in-memory account/US candidate pages; release BLOCKED date/provider/native/operational gates. Visual NOT_RUN: browserfile-URL policy. No native/provider/counsel/native-speaker claim.",
-    "publication": "never published/pushed/merged by this lane; date/native/server/provider/representative/operational gates stay closed",
+    "verification": "Revision1 PASS: all static source/render/site/tone/link/locale checks and182 exact unittest methods;126unpublished in-memory account/US candidate pages;249frozen relevant inputs matched. Release exit1 BLOCKED date/provider/Store-exclusion/native/operational gates. Visual NOT_RUN; no native/provider/counsel/native-speaker/public claim.",
+    "publication": "never published/pushed/merged by this lane; date/native/server/provider/sales-exclusion/operational gates stay closed",
     "ownerQuestions": "Final report and candidate unresolved/readiness fields; no prices/trial/regions/mg/backup/operator decision reopened",
-    "evidence": "evidence/legal-update-20261002/legal-update/"
+    "evidence": "evidence/legal-update-20261002/revision1/",
+    "marketAvailability": {
+      "version": "1.0.6",
+      "excludedRegions": [
+        "EU",
+        "EEA",
+        "UK",
+        "Switzerland"
+      ],
+      "existingUserRightsPreserved": true
+    },
+    "representatives": "No EU/UK representative designated for 1.0.6 excluded-market scope; future reopening needs applicability review",
+    "revision1": {
+      "reviewedParent": "a2648991d78ad1dd92e604e015af4a535d5319eb",
+      "redCommit": "a33a8b857e004f19b207711266be5b3a542b52d9",
+      "redCommitNote": "full SHA is in the final lane report and Git history",
+      "reviewIssuesResolved": [
+        "KRW22000 annual",
+        "Android business operator",
+        "excluded market/no representative",
+        "neutral iOS store/platform wording"
+      ],
+      "greenCommit": "recorded in final lane report (this file cannot name its own commit)"
+    }
   }
 }

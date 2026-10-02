@@ -1,7 +1,7 @@
 """Validate and render the localized 1.0.6 privacy supplement.
 
 Readiness receipts are source metadata. They are not evidence that providers,
-contracts, deletion operations or regional representatives have been verified.
+contracts, deletion operations or excluded-market Store settings have been verified.
 """
 from __future__ import annotations
 import html
@@ -20,16 +20,26 @@ COLUMN_IDS = ('legalBasis', 'data', 'country', 'timingMethod', 'recipientContact
 PROVIDER_IDS = ('cloudflare', 'aws', 'firebase', 'admob', 'apple-sign-in', 'google-sign-in')
 READINESS_KEYS = ('providerInventoryVerified', 'overseasTransferBasisVerified',
                   'processorContractsVerified', 'regionalSafeguardsVerified',
-                  'representativesVerified')
+                  'salesRegionExclusionsVerified')
+
+
+def validate_market_availability(source: dict) -> None:
+    assert source.get('marketAvailability') == {
+        'version': '1.0.6',
+        'excludedRegions': ['EU', 'EEA', 'UK', 'Switzerland'],
+        'existingUserRightsPreserved': True,
+    }, '1.0.6 excludes EU/EEA, UK and Switzerland sales; existing-user rights remain'
 
 
 def validate_readiness(source: dict) -> None:
+    validate_market_availability(source)
     assert set(source['legalReadiness']) == set(READINESS_KEYS)
     assert all(type(value) is bool for value in source['legalReadiness'].values())
     assert set(source['representatives']) == {'EU', 'UK'}
     for representative in source['representatives'].values():
-        assert set(representative) == {'status', 'contact'}
-        assert all(isinstance(value, str) and value.strip() for value in representative.values())
+        assert representative == {'status': 'not-designated-excluded-markets', 'contact': None}, (
+            'No EU/UK representative is designated for the 1.0.6 excluded-market scope'
+        )
 
 
 def validate_supplement(supplement: dict, locale: str) -> None:

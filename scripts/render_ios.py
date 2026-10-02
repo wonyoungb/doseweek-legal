@@ -152,7 +152,7 @@ def privacy_paragraph(value: str) -> str:
 def validate(content: dict) -> None:
     assert set(content) == {
         "schemaVersion", "platform", "bundleVersion", "effectiveDate", "supportEmail",
-        "localeOrder", "locales", "legalReadiness", "representatives",
+        "localeOrder", "locales", "legalReadiness", "representatives", "marketAvailability",
     }
     privacy_legal.validate_readiness(content)
     assert content["schemaVersion"] == 1
@@ -168,6 +168,10 @@ def validate(content: dict) -> None:
     assert list(content["locales"]) == LOCALE_ORDER
 
     for locale, entry in content["locales"].items():
+        locale_copy = json.dumps(entry, ensure_ascii=False)
+        assert 'Android' not in locale_copy and 'Google Play' not in locale_copy, (
+            f'{locale}: iOS policy/help copy must use neutral references to other platforms/stores'
+        )
         assert set(entry) == {"languageName", "direction", "common", "privacy", "support"}, locale
         validate_support(locale, entry["support"])
         assert entry["direction"] == ("rtl" if locale == "ar" else "ltr"), locale

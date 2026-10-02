@@ -2,7 +2,7 @@
 
 Owner: Wonyoung Labs, sole proprietorship; representative and privacy officer Wonyoung Choi.
 Support: wonyoung@wonyoungchoi.dev. This procedure is a prepared operating contract, not proof
-that notices, deletion, provider agreements or foreign representatives are operational.
+that notices, deletion, provider agreements or Store exclusions are operational.
 The current handoff and account candidate readiness flags own release status.
 
 ## Incident response
@@ -20,7 +20,8 @@ The current handoff and account candidate readiness flags own release status.
    independently of the 1,000-person threshold. If permitted initial details are incomplete,
    send the required initial notice/report and promptly supplement; retain the legal reason
    for any delay. Do not borrow the FTC 60-day ceiling for Korean notice.
-4. EU/UK: assess GDPR/UK GDPR authority reporting within 72 hours of awareness where required;
+4. EU/UK: preserve applicable duties for existing users even though 1.0.6 sales are excluded.
+   Assess GDPR/UK GDPR authority reporting within 72 hours of awareness where required;
    document reasons for delay. Assess notice to individuals without undue delay where high risk.
    Document a decision not to notify and the evidence supporting it; security of ciphertext is
    part of that assessment, not an automatic exemption.
@@ -83,9 +84,14 @@ The current handoff and account candidate readiness flags own release status.
   release. Cloudflare/AWS processor contracts and actual access/announcement paths need proof.
   Optional analytics/independent advertising are not automatically contract-necessary transfers;
   consent-dependent transmissions wait for consent. Paid Plus alone is not proof of lawful refusal.
-- Maintain EU/UK processor agreements, processing records, appropriate onward-transfer mechanisms,
-  DPIA assessment where high risk, and written EU/separate UK representative appointments where
-  applicable. Korea adequacy is not global onward-transfer authorization. Assess Japan special-care
+- For 1.0.6, EU/EEA, UK and Switzerland are excluded from sale; there is no EU/UK representative
+  appointed for this version. Obtain actual Store availability readback before release
+  (`salesRegionExclusionsVerified` remains false until that proof). Existing installations may
+  continue; preserve applicable rights and safeguards for existing users. Maintain applicable
+  EU/UK processor agreements, processing records, onward-transfer mechanisms and DPIA assessment
+  where high risk. Assess representative duties before any future reopening, without treating
+  the sales exclusion as an automatic exemption for existing processing.
+  Korea adequacy is not global onward-transfer authorization. Assess Japan special-care
   consent/foreign-transfer information and Brazil specific highlighted consent/ANPD mechanisms.
 - Before payment show actual Store eligibility, one-calendar-month trial, selected full annual
   or monthly price, billing cycle, renewal and simple cancellation. No hidden mandatory pricing,
@@ -103,7 +109,9 @@ The current handoff and account candidate readiness flags own release status.
 
 Every source/render/site check must pass; effective date, 17-locale parity, native/provider
 behavior, operational facts and deletion route publication require separate owner evidence.
-EU/UK representative contacts are explicitly pending until appointments are confirmed. Unknown
+No EU/UK representative appointment is a 1.0.6 publication prerequisite under the decided
+excluded-market scope. Store availability readback and applicable existing-user safeguards
+remain unverified; a future market reopening needs a separate applicability review. Unknown
 supplier details cannot be filled with guessed countries or periods. No publication is authorized
 by this lane. Console/store/account-type/trader declarations and medical classification are
 orchestrator follow-ups; no native, provider, legal or native-speaker certification is claimed.

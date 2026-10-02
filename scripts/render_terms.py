@@ -53,9 +53,9 @@ MEDICAL_SECTION_ID = "medical"
 # iOS app. check_site.py allows it only on the Terms pages.
 EULA_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
 LINKED_URLS = (EULA_URL,)
-# Final reference prices (owner round3, 2026-10-02). The Store supplies the actual
+# Final reference prices (superseding owner/spec decision, 2026-10-02). The Store supplies the actual
 # localized price, eligible introductory offer and billing period before purchase.
-REFERENCE_PRICES = ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980")
+REFERENCE_PRICES = ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 22,000", "JPY 300", "JPY 1,980")
 
 
 def escaped(value: object) -> str:

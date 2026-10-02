@@ -223,7 +223,7 @@ SERVER_READINESS_TOKENS = {
     "accessLogDisclosed": "HOST-07",
     "processorInventoryVerified": "processorInventoryVerified",
     "healthConsentVerified": "healthConsentVerified",
-    "internationalRepresentativesVerified": "internationalRepresentativesVerified",
+    "salesRegionExclusionsVerified": "salesRegionExclusionsVerified",
     "breachProcedureOperational": "breachProcedureOperational",
     "regionalSubscriptionNoticesVerified": "regionalSubscriptionNoticesVerified",
     "consumerHealthRightsVerified": "consumerHealthRightsVerified",
@@ -544,6 +544,8 @@ def retired_provider_errors(root: Path = ROOT) -> list[str]:
 
 def load() -> dict:
     candidate = json.loads(SOURCE.read_text(encoding="utf-8"))
+    import privacy_legal
+    privacy_legal.validate_market_availability(candidate)
     assert candidate["schemaVersion"] == 1
     assert candidate["localeOrder"] == list(LOCALES)
     assert list(candidate["locales"]) == list(LOCALES)

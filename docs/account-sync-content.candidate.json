@@ -31,7 +31,7 @@
     "The Cloudflare privacy contact (email or postal address) published in Cloudflare's privacy policy must be verified and quoted as the PIPA Art. 28-8 recipient contact; the text cites only the policy URL. Cloudflare's actual log retention stays a counsel item (serverReadiness.cloudflareContactVerified)",
     "Processor inventory and PIPA Art. 28-8 legal basis, actual recipient entities/contacts, countries including foreign access, per-service retention and refusal routing require operational and counsel verification before publication (serverReadiness.processorInventoryVerified).",
     "Separate optional sensitive-health consent, distinct from general account processing, terms, analytics and OS permissions, must be wired and verified in both native clients before health-data processing (serverReadiness.healthConsentVerified).",
-    "EU/UK representative applicability and, where required, designation and public contacts remain owner/counsel publication blockers (serverReadiness.internationalRepresentativesVerified).",
+    "For 1.0.6, EU/EEA, UK and Switzerland are excluded from sale; no EU/UK representative is appointed for this version. Actual App Store/Google Play availability readback remains unverified (serverReadiness.salesRegionExclusionsVerified). Preserve applicable existing-user rights, breach duties and transfer safeguards; exclusion does not certify an exemption from them.",
     "FTC Health Breach Notification Rule and PIPA incident assessment, notification deadlines, contacts, evidence preservation and delivery procedures require an operational drill before release (serverReadiness.breachProcedureOperational).",
     "Actual regional store prices, first-subscriber one-month trial eligibility, full renewal amount, cancellation/refund/statutory rights and Korean conversion/price-increase consent must be verified in store purchase flows before release (serverReadiness.regionalSubscriptionNoticesVerified).",
     "US Consumer Health Data Privacy Policy rights, consent withdrawal, access/deletion, appeal and processor/backup propagation require operational and legal verification before publication (serverReadiness.consumerHealthRightsVerified)."
@@ -49,7 +49,7 @@
     "accessLogDisclosed": false,
     "processorInventoryVerified": false,
     "healthConsentVerified": false,
-    "internationalRepresentativesVerified": false,
+    "salesRegionExclusionsVerified": false,
     "breachProcedureOperational": false,
     "regionalSubscriptionNoticesVerified": false,
     "consumerHealthRightsVerified": false
@@ -453,5 +453,15 @@
     "ownerDecision": "resolved",
     "legalAndPlatformReview": "blocked",
     "promoAcquisitionProvesPaidPurchase": false
+  },
+  "marketAvailability": {
+    "version": "1.0.6",
+    "excludedRegions": [
+      "EU",
+      "EEA",
+      "UK",
+      "Switzerland"
+    ],
+    "existingUserRightsPreserved": true
   }
 }

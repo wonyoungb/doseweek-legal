@@ -1,0 +1,93 @@
+[
+  {
+    "cmd": "python3 scripts/render_home.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-00.log.gz",
+    "sha256": "26ba7dbe41b1fc34d09e82d05f7ea3be637e4f2727d88b83b2b455dc0733ed8d"
+  },
+  {
+    "cmd": "python3 scripts/render_ios.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-01.log.gz",
+    "sha256": "182a8ac43c158f1999ad7d6f52834218717190851ea2b11975d2707714c90637"
+  },
+  {
+    "cmd": "python3 scripts/render_android.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-02.log.gz",
+    "sha256": "0813af516beb00e41bf311ab170260da368e0be1891be0cae91e9a618bf3657b"
+  },
+  {
+    "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-03.log.gz",
+    "sha256": "24700ed7ba5230826a371d026432c632af280c8e6e1a34d0707c93f13bcadea6"
+  },
+  {
+    "cmd": "python3 scripts/render_terms.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-04.log.gz",
+    "sha256": "96aeaabb6335dd4f39fd758709091379a9ef016bae90954fb7bf2cd5a075979e"
+  },
+  {
+    "cmd": "python3 scripts/render_us_health.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-05.log.gz",
+    "sha256": "add73d8aa77aa6dbc6706ef8b64470f947c67319a159f3253e9c945becdc13ba"
+  },
+  {
+    "cmd": "python3 scripts/render_sitemap.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-06.log.gz",
+    "sha256": "7d73944e4f8058f85a2f9f03a28960dfa44a9b2fa3b079a42e6fee9a06561daf"
+  },
+  {
+    "cmd": "python3 scripts/account_sync_candidate.py",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-07.log.gz",
+    "sha256": "098687e60b4205dc144633576bd08b8fde43fa9f21a5f2f96b0420d6ca8042e3"
+  },
+  {
+    "cmd": "python3 scripts/render_account_sync.py --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-08.log.gz",
+    "sha256": "da93310dc8352382f7b1b1c10c1193b59c63ef47429ece62517bee71b788bc7e"
+  },
+  {
+    "cmd": "python3 scripts/check_site.py",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-09.log.gz",
+    "sha256": "0244cde7ef37661d451cc586a23657970cf464093c3bfd96e4ca11d2c575a0fa"
+  },
+  {
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-10.log.gz",
+    "sha256": "46cdfbe68e68eecaf6e5c3dae3240b43f7b7380afdfeace48c509af711e79907"
+  },
+  {
+    "cmd": "python3 scripts/check_site.py --release",
+    "exit": 1,
+    "result": "FAIL",
+    "log": "evidence/legal-update-20261002/revision1/check-11.log.gz",
+    "sha256": "09029677c66d41f803cc4ed6b761e43fc9493a21d78ee275342c8555da91a3c6"
+  },
+  {
+    "cmd": "git diff --check",
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/revision1/check-12.log.gz",
+    "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+  }
+]
