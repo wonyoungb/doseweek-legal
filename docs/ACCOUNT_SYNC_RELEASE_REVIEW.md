@@ -186,3 +186,44 @@ the standalone Android purchase-verification server, and Nginx access-log fields
 (HOST-07). Counsel must confirm the transfer basis (Articles 23, 28-8 and 30) before publication.
 The sync text names "both platforms" rather than iOS and Android because the Android pages'
 catalog guard refuses the token "iOS".
+
+### Round 2 (2026-10-02 reviews): corrections and footnotes to the table above
+
+- **D8 row footnote.** The 30-day/7-day numbers are verified in `src/store.js` and
+  `src/maintenance.js`, but pruning is **not wired**: `src/index.js` calls
+  `startRetentionScheduler(store, { onFailure })` without `recheckPlus` or `alert`, so
+  `maintenance.js` holds ciphertext past its deadline and `runSnapshotRetention` never runs. Checked
+  on the SYNC-AND-INTEG, SYNC-SERVER-INTEG, SYNC-SRV-STORE, SYNC-SRV-HTTP and OPS-HOST heads.
+  `serverReadiness.retentionRecheckWired` stays `false` with its own unresolved item; the drafted
+  D8 wording is unchanged and unpublished.
+- **Reset-sync row footnote.** `DELETE /v1/sync/snapshot` exists only on lane SRV-HTTP
+  (`ab92fcf6`), not in the integrated server; neither client has a reset-sync control.
+  `serverReadiness.syncResetRoute`, `syncResetUiIos` and `syncResetUiAndroid` stay `false`.
+- **Cloudflare transfer.** Every request to `doseweek.wonyoungchoi.dev` passes through Cloudflare,
+  including the public announcement check that every app makes when it opens, signed in or not
+  (Android `AnnouncementTransport.FEED_URL`, iOS `RemoteAnnouncementHTTPClient.endpoint`; deploy
+  receipt `owner_decisions[1]`: the doseweek vhost accepts only Cloudflare ranges). The old refusal
+  ("do not sign in") was false. `processors` now names the host, the announcement occasion (IP and
+  connection data only), the Google token's possible email/profile claims (Android
+  `GetSignInWithGoogleOption`; the server keeps only issuer and subject) and a true refusal effect;
+  `notice` says the request passes through Cloudflare. Owner/counsel decide whether that connection
+  needs its own opt-out or another route (`announcementTransferReviewed`). The recipient contact is
+  still only the policy URL (`cloudflareContactVerified`, not fetched by the lane).
+- **E2EE key.** Every envelope uploads the data key wrapped under the recovery-derived key
+  (`PROTOCOL.md`), so `sync` now says the key is stored only locked by the recovery code and the
+  recovery code stays on the devices.
+- **Imported health data.** `PROTOCOL.md` "Snapshot contents" puts imported Apple Health / Health
+  Connect observations, source provenance and hide choices in the sync graph. New field
+  `healthSync` is appended to the staged Apple Health section and replaces the staged Health
+  Connect "not sent to the developer" sentence.
+- **Kept after account deletion.** `store.js` `deleteAccount` keeps keyed purchase tombstones
+  without an account link and with no expiry; the standalone verifier keeps purchase records
+  90 days and notification IDs 30 days (`server/entitlement-verifier/README.md`). `retention` lists
+  both; the tombstone period is the registered pending sentence
+  `legal_release.PENDING_TOMBSTONE_RETENTION`.
+- **Verifier location.** The staged Android purchases section keeps the registered pending sentence
+  `legal_release.PENDING_VERIFIER_LOCATION`; `check_site.py --release` refuses both pending sets in
+  the effective sources, and `require_release_ready()` refuses any open `serverReadiness` flag, so
+  applying the staged sources or emptying the unresolved list cannot hide these facts.
+- ko/ja/zh name the country after the Seoul region; Turkish uses "eşitleme" throughout; the D1
+  scope check (`SYNC_SCOPE`) covers all 17 locales (debbd1c had narrowed RED 702c296 to en/ko).

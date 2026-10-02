@@ -35,6 +35,25 @@ rewritten `sync` lead and `retention` head in all 17 locales; the staged purchas
   carries this copy. Final: 123 unit tests, check_site/korean_tone/CLI/staged render PASS.
 - Evidence: workspace `release/evidence/1.0.6/LEGAL-STORE-20261002/legal/`.
 
+## CANDIDATE — round 2 of the account/sync facts (2026-10-02, reviews 1 and 2)
+
+Same branch. RED `f098410` (test-only detectors): `transfer_disclosure_errors()` and
+`staged_disclosure_errors()` wired into `check_site.py`; 5 of 25 candidate tests FAIL on
+assertions, `check_site.py` exit 1 (159 findings). GREEN `e53d9ed`: true Cloudflare refusal and
+announcement occasion, Google token claims, notice names Cloudflare, data-key wording, new
+`healthSync` field, kept tombstone/verifier records, Turkish "eşitleme", ko/ja/zh word order,
+`serverReadiness` (8 flags, all false) with one unresolved item each, `require_release_ready()`
+refuses open flags, `--release` refuses the registered pending sentences. Hardening `04aa477`:
+`SYNC_SCOPE` in all 17 locales (debbd1c had narrowed RED 702c296's D1 assertion to en/ko).
+
+- PASS at head: six renderer `--check`s, `check_site.py` (Korean tone 1589 sentences),
+  `korean_tone.py` (0), README unittest set + candidate tests (131), candidate CLI, staged render
+  (108 pages). BLOCKED: `check_site.py --release` (effective date unset).
+- Open (owner/counsel): announcement-check transfer route or opt-out, Cloudflare privacy contact and
+  log retention, verifier host, tombstone retention. Server/app: `recheckPlus` wiring in
+  `src/index.js`, `DELETE /v1/sync/snapshot` (SRV-HTTP `ab92fcf6`), both reset-sync controls.
+- Evidence: workspace `release/evidence/1.0.6/LEGAL-STORE-20261002/round2/legal/`.
+
 ## CANDIDATE — Kakao sign-in removed; Apple and Google only (2026-10-01)
 
 Owner decision 2026-10-01 ("아니다 카카오 로그인은 빼자"): the account feature keeps only Sign in
