@@ -46,9 +46,13 @@ The current handoff and account candidate readiness flags own release status.
 - Both platforms: automatic record backup/sync requires active Plus and separate health-sync
   consent. Records are end-to-end encrypted on the device; the server cannot read their contents.
   This does not hide readable account/purchase metadata or replace incident obligations.
-- Android: OS Google Drive Auto Backup includes the complete app-data set only during
-  verified Plus. Without verified Plus, exclude the database, keys and records together;
-  never write a partial set. Leave existing backups intact and keep restore available.
+- Android: OS Google Drive Auto Backup includes the complete app-data set (database, keys and
+  records together) only during verified Plus. When Plus is free, lapsed, unknown, offline or
+  the store check fails, skip the backup run so the transport keeps the previous backup set;
+  never write an empty or partial backup (Android keeps only the latest Auto Backup per app).
+  Leave existing backups intact and keep restore available. Native proof before release: the
+  bmgr run on API 34 and 36 (Plus backup, switch to free, bmgr backupnow, previous set still
+  present and restoring every record family; a transient entitlement failure behaves like free).
   Show existing1.0.5 users a one-time, non-blocking notice with the manual export route.
   Verify the actual OS/provider backup data, transfer, settings and retention particulars;
   do not reuse the retired app-managed Drive-folder disclosure as OS backup evidence.
