@@ -3,7 +3,18 @@
 - Resume reviewed `3cbc050` for the single major internal price-authority inconsistency.
 - Choose reviewer-permitted store-price wording; preserve histories and closed gates.
 - Added four focused regressions; replaced two numeric authority assertions. AST compile PASS.
-- Product sources unchanged; assertion RED parent replay next. No external action.
+- RED `778ee01` parent replay: compile PASS; six exact methods/six assertion failures,
+  zero errors/skips/omissions; raw evidence retained and owned /tmp worktree removed.
+
+- GREEN active parity/operations/provenance/account blocker now use store-price only;
+  partner snapshots, public pages, trial/statutory rights and closed gates preserved.
+  Source fingerprint refreshed. Focused68 exact methods PASS, zero failures/errors/skips/omissions.
+- Preservation audit PASS:162 pages, assets, product/locale/trial data, partner objects, histories
+  and false gates unchanged; only one account blocker edited. Independent source audit PASS.
+- Full208 exact methods/13 ordinary commands PASS; 260 frozen inputs/runtime match;
+  release child exit1 BLOCKED_EFFECTIVE_DATE retained as failed.
+- Final provenance selector PASS with full-map/relevant-field/runner hashes; full coverage reused
+  only for matching other inputs. Report writer prepared; GREEN/report finalization next.
 
 ## 2026-10-02 — late review 1 (historical; unpublished)
 

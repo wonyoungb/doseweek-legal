@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/audit_scope",
+  "result": "PASS_NO_BLOCKING_OR_MAJOR",
+  "scope": "GREEN diff against 3cbc050; final report excluded",
+  "findings": [
+    "Four active contracts consistently use store-price wording",
+    "Partner objects unchanged and derived numeric matches explicitly historical",
+    "Canonical privacy/Terms/US-health and generated HTML unchanged",
+    "Account structural delta only /unresolvedBeforePublication/27",
+    "All source fingerprints match; readiness false and effective date null",
+    "Stale handoff RED-stage sentence corrected after focused gate"
+  ],
+  "externalActions": []
+}

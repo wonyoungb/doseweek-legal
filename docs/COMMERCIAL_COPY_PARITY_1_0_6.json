@@ -1,7 +1,6 @@
 {
-  "schemaVersion": 1,
-  "authority": "2026-10-02 late owner decisions supersede review-2 price instructions",
-  "requiredKoreaAnnual": "KRW 19,900",
+  "schemaVersion": 2,
+  "authority": "2026-10-02 late review-2 permits consistent store price wording; late owner decisions remain accepted without a numeric configuration authority in this lane",
   "status": "BLOCKED_PARTNER_CHECK_RECEIPTS",
   "nativePriceRule": "App UI shows store-returned localized prices, eligibility and billing periods. Static copy parity does not prove Store configuration.",
   "partners": {
@@ -31,10 +30,11 @@
     }
   },
   "receipt": "evidence/legal-update-20261002/late/partner-snapshots.json",
-  "snapshotNote": "Historical immutable committed snapshots only, preserved unchanged. Partner lanes may advance; obtain matching final copy and check receipts at integration. No external state certified.",
-  "nextAction": "Orchestrator coordinates partner policy, review copy and verification inputs to consistent store price wording or the exact final late-owner prices; obtain matching committed receipts and partner checks before opening commercialCopyParityVerified. Historical conflicting numeric examples are not final parity proof. Apps continue showing store-returned localized prices, eligibility and billing periods.",
+  "snapshotNote": "All fields under partners, including the derived matchesRequiredKoreaAnnual values, describe historical immutable committed snapshots only. They are preserved unchanged and are not current price authority or final parity proof. Partner lanes may advance; obtain matching final store-price copy and check receipts at integration. No external state certified.",
+  "nextAction": "Orchestrator coordinates partner policy, review copy and verification inputs to consistent store price wording; obtain matching committed receipts and partner checks before opening commercialCopyParityVerified. Historical conflicting numeric examples are not final parity proof. Apps continue showing store-returned localized prices, eligibility and billing periods.",
   "ownerDecisionNeeded": false,
   "publicationAuthorized": false,
   "websitePriceWording": "store-price",
-  "websitePriceReason": "Late review-1 permits store price wording to avoid conflicting numeric examples. Final owner prices remain Store-configuration authority; no decision is reopened."
+  "websitePriceReason": "Late review-2 permits price-agnostic store price wording consistently in public copy and active coordination. Actual Store configuration needs separate readback; no decision is reopened.",
+  "requiredPriceWording": "store-price"
 }

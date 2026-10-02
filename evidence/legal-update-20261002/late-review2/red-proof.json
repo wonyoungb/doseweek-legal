@@ -1,0 +1,24 @@
+{
+  "redCommit": "778ee011a653e415d0d962ca8b6a51ddffdd9e6e",
+  "parent": "3cbc050be05cb9a8ae84a8916ed34f15419dcf40",
+  "temporaryWorktree": "/tmp/doseweek-legal-late-review2-red-778ee011",
+  "removed": true,
+  "selectors": [
+    "test_legal_late_review2",
+    "test_legal_late_review1.LegalLateReview1Test.test_parity_record_uses_store_price_and_keeps_receipt_gate_closed",
+    "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker"
+  ],
+  "childExit": 1,
+  "compile": "PASS",
+  "failedMethods": [
+    "test_legal_late_review1.LegalLateReview1Test.test_parity_record_uses_store_price_and_keeps_receipt_gate_closed",
+    "test_legal_late_review2.LegalLateReview2Test.test_account_blocker_requires_store_price_and_keeps_all_readiness_closed",
+    "test_legal_late_review2.LegalLateReview2Test.test_coordination_has_store_price_contract_without_numeric_authority",
+    "test_legal_late_review2.LegalLateReview2Test.test_operations_use_store_price_and_preserve_subscription_safeguards",
+    "test_legal_late_review2.LegalLateReview2Test.test_release_provenance_has_no_numeric_store_configuration_authority",
+    "test_legal_revision2.LegalRevision2Test.test_parity_receipts_and_coordination_keep_required_price_and_real_blocker"
+  ],
+  "assertionFailures": 6,
+  "receipt": "red-parent.json",
+  "log": "red-parent.log.gz"
+}

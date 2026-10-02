@@ -1,0 +1,30 @@
+{
+  "before": {
+    "path": "legal-release-map.json",
+    "sha256": "8cfff1ec963588bcb5c6cbb79698f50710b3ba5ba727359356d32f14d7e29691",
+    "testedFields": {
+      "subscription": "Late review-2: all17 public Terms and active coordination use store price for monthly/annual plans with full local price/taxes/period before purchase. Actual Store configuration requires separate readback; no numeric configuration authority is asserted here. First-time1-calendar-month trial, auto-renewal, cancel any time; statutory rights and store-returned native UI preserved.",
+      "effectiveDate": null,
+      "commercialCopyParity": "BLOCKED_PARTNER_CHECK_RECEIPTS; docs/COMMERCIAL_COPY_PARITY_1_0_6.json records immutable partner snapshots; integration must acquire matching final policy/review/check receipts; commercialCopyParityVerified=false"
+    },
+    "runnerSha256": "893e227772acee9c189ac47c158478cc69ab498103dfdd9af8b4b4c86c2207b5",
+    "supplementRunnerSha256": "03e9d6045cc863955ed0aa7168d158367baf3aee8248ead3e84a050bab612fd5"
+  },
+  "after": {
+    "path": "legal-release-map.json",
+    "sha256": "8cfff1ec963588bcb5c6cbb79698f50710b3ba5ba727359356d32f14d7e29691",
+    "testedFields": {
+      "subscription": "Late review-2: all17 public Terms and active coordination use store price for monthly/annual plans with full local price/taxes/period before purchase. Actual Store configuration requires separate readback; no numeric configuration authority is asserted here. First-time1-calendar-month trial, auto-renewal, cancel any time; statutory rights and store-returned native UI preserved.",
+      "effectiveDate": null,
+      "commercialCopyParity": "BLOCKED_PARTNER_CHECK_RECEIPTS; docs/COMMERCIAL_COPY_PARITY_1_0_6.json records immutable partner snapshots; integration must acquire matching final policy/review/check receipts; commercialCopyParityVerified=false"
+    },
+    "runnerSha256": "893e227772acee9c189ac47c158478cc69ab498103dfdd9af8b4b4c86c2207b5",
+    "supplementRunnerSha256": "03e9d6045cc863955ed0aa7168d158367baf3aee8248ead3e84a050bab612fd5"
+  },
+  "match": true,
+  "result": "PASS",
+  "coverage": [
+    "test_legal_late_review2.LegalLateReview2Test.test_release_provenance_has_no_numeric_store_configuration_authority"
+  ],
+  "reason": "The reused full-gate runner excludes derived release-map reporting. This supplement fingerprints the new test input and replays only its method."
+}

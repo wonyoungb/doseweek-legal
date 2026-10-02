@@ -5,12 +5,33 @@ store-price contract across active coordination, operations, provenance, tests a
 Reviewed HEAD `3cbc050be05cb9a8ae84a8916ed34f15419dcf40`; branch `next-ai/legal-store-legal-cx`.
 Initial worktree clean. Baseline/input hashes and untouched prior report in
 `evidence/legal-update-20261002/late-review2/`. Historical evidence remains immutable.
-Owned dirty: new regression, two existing parity assertions, baseline/offline runners, this
-handoff and CHANGELOG. No product edit yet. All scripts AST compile PASS.
+Owned scope: regression/assertions, four active contracts, local evidence/runners, handoff
+and CHANGELOG. Git status owns the exact dirty inventory. All scripts AST compile PASS.
 No owned PID/device/live job or external action; canonical release ledger read only.
 Partner snapshots remain historical; effective date/readiness/publication gates stay closed.
-Next action: commit assertion-only RED, replay six exact selectors on detached reviewed parent
-under /tmp, retain assertion failures and remove the owned proof worktree before GREEN.
+RED committed at `778ee01` (full identity in Git/report) before product edits.
+RED parent replay PASS as failure proof: six exact methods, six assertion failures,
+AST compile PASS; zero errors/skips/omissions. Raw identities/logs in `late-review2/red-parent.*`.
+Owned detached /tmp worktree removed; no running job.
+GREEN edit: parity schema now requires store-price wording; remove numeric setup authority
+from operations/provenance and numeric alternative from account blocker. Partner objects are
+byte-equivalent historical receipts; trials/rights/public pages/readiness untouched. Candidate
+source fingerprint refreshed. Owned dirty also includes four active contracts and RED evidence.
+Focused seven-module family: 68 exact methods PASS; AST compile PASS; zero failure/error/skip/omission.
+Preservation audit PASS: all162 generated pages/assets/17-locale product and account data,
+partner objects, historical evidence and readiness unchanged; only one account blocker changed.
+Release-map source fingerprints match. Evidence `late-review2/preservation-audit.json`.
+Independent read-only source audit PASS; no blocking/major issues.
+Full208 exact methods and13 ordinary commands PASS; zero failure/error/skip/omission.
+Release child exit1 BLOCKED_EFFECTIVE_DATE retained as failed; all gates remain closed.
+260 frozen inputs/runtime match. No product/test input edits during checks.
+New provenance assertion reads release-map reporting: supplement its final exact fields and
+full-file fingerprint with a targeted replay; other unchanged inputs retain matching full coverage.
+Supplemental final provenance selector PASS with matching full-map/runner/field hashes;
+260 full-gate frozen inputs still match. Exact receipt `late-review2/provenance-input-comparison.json`.
+New report writer validates identities/logs/inputs/stamps/false gates and uses store-price only.
+Owned translation/temporary worktree/scratch removed; no running owned process/device.
+Next action: commit GREEN, then overwrite final report and independently audit its readback.
 
 ## HISTORICAL — legal-update-legal late review 1 (2026-10-02; unpublished)
 
