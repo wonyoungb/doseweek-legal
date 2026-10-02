@@ -49,9 +49,11 @@ class LegalLate2BackupTest(unittest.TestCase):
             text = entry.get('automaticBackup', '')
             with self.subTest(locale=locale):
                 self.assertIn('Plus', text)
-                self.assertIn('Free', text)
+            # The Free plan is named with the term each locale's live copy already uses
+            # (preservedFreePrefix); English and plan-name locales may use "Free" itself.
             self.concepts(locale, expected, text,
-                          ('e2ee', 'unreadable', 'consent', 'manual', 'export', 'import', 'reminder'))
+                          ('freePlan', 'e2ee', 'unreadable', 'consent', 'manual', 'export', 'import',
+                           'reminder'))
 
     def test_ios_icloud_and_cloudkit_do_not_back_up_app_data_all_locales(self):
         for locale, expected, entry in self.each():

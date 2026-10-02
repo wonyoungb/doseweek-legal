@@ -66,6 +66,10 @@
         "내보낸 파일과 복구 코드를 안전하게 보관하세요. 개발자는 둘 중 어느 것에도 접근할 수 없어서, 잃어버린 코드를 복구하거나 파일을 복호화할 수 없어요. 둘 다 지원 담당자에게 보내지 마세요."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "무료 사용자"
+        ],
         "e2ee": [
           "종단간 암호화"
         ],
@@ -209,6 +213,9 @@
         "Keep the exported file and its recovery code secure. The developer has access to neither and cannot recover a lost code or decrypt the file for you. Never share either with support."
       ],
       "concepts": {
+        "freePlan": [
+          "Free"
+        ],
         "e2ee": [
           "end-to-end"
         ],
@@ -347,6 +354,10 @@
         "書き出したファイルと復旧コードは安全に保管してください。開発者はどちらにもアクセスできず、紛失したコードの復旧やファイルの復号はできません。どちらもサポートに送らないでください。"
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "無料版"
+        ],
         "e2ee": [
           "エンドツーエンド"
         ],
@@ -495,6 +506,10 @@
         "Bewahren Sie die exportierte Datei und ihren Wiederherstellungscode sicher auf. Der Entwickler hat auf beides keinen Zugriff und kann weder einen verlorenen Code zurücksetzen noch die Datei für Sie entschlüsseln. Geben Sie beides nie an den Support weiter."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "kostenlosen Version"
+        ],
         "e2ee": [
           "Ende-zu-Ende"
         ],
@@ -637,6 +652,10 @@
         "Conservez le fichier exporté et son code de récupération en lieu sûr. Le développeur n’a accès ni à l’un ni à l’autre et ne peut ni réinitialiser un code perdu ni déchiffrer le fichier à votre place. Ne les partagez jamais avec l’assistance."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "version gratuite"
+        ],
         "e2ee": [
           "bout en bout"
         ],
@@ -778,6 +797,10 @@
         "Guarde el archivo exportado y su código de recuperación en lugar seguro. El desarrollador no tiene acceso a ninguno de los dos y no puede restablecer un código perdido ni descifrar el archivo por usted. Nunca los comparta con el soporte."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "versión gratuita"
+        ],
         "e2ee": [
           "extremo a extremo"
         ],
@@ -916,6 +939,10 @@
         "Conserva in modo sicuro il file esportato e il suo codice di recupero. Lo sviluppatore non ha accesso a nessuno dei due e non può reimpostare un codice perduto né decrittografare il file al posto tuo. Non condividerli mai con l’assistenza."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "versione gratuita"
+        ],
         "e2ee": [
           "end-to-end"
         ],
@@ -1056,6 +1083,10 @@
         "Bewaar het geëxporteerde bestand en de herstelcode veilig. De ontwikkelaar heeft tot geen van beide toegang en kan een verloren code niet herstellen en het bestand niet voor u ontsleutelen. Deel ze nooit met support."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "gratis versie"
+        ],
         "e2ee": [
           "end-to-end"
         ],
@@ -1196,6 +1227,10 @@
         "Guarde em segurança o ficheiro exportado e o respetivo código de recuperação. O programador não tem acesso a nenhum deles e não pode repor um código perdido nem desencriptar o ficheiro por si. Nunca os partilhe com o apoio."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "versão gratuita"
+        ],
         "e2ee": [
           "ponta a ponta"
         ],
@@ -1336,6 +1371,10 @@
         "Przechowuj bezpiecznie wyeksportowany plik i jego kod odzyskiwania. Deweloper nie ma dostępu do żadnego z nich i nie może zresetować utraconego kodu ani odszyfrować pliku za Ciebie. Nigdy nie przekazuj ich wsparciu."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "wersji bezpłatnej"
+        ],
         "e2ee": [
           "end-to-end"
         ],
@@ -1480,6 +1519,10 @@
         "Förvara den exporterade filen och dess återställningskod säkert. Utvecklaren har inte tillgång till någon av dem och kan varken återställa en förlorad kod eller dekryptera filen åt dig. Dela dem aldrig med supporten."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "gratisversionen"
+        ],
         "e2ee": [
           "end-to-end",
           "ände-till-ände"
@@ -1620,6 +1663,10 @@
         "निर्यात की गई फ़ाइल और उसका रिकवरी कोड सुरक्षित रखें। डेवलपर के पास इनमें से कुछ भी नहीं होता, वह खोया कोड रीसेट नहीं कर सकता और फ़ाइल को आपके लिए डिक्रिप्ट नहीं कर सकता। इन्हें कभी सपोर्ट के साथ साझा न करें।"
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "मुफ़्त उपयोगकर्ता"
+        ],
         "e2ee": [
           "एंड-टू-एंड"
         ],
@@ -1763,6 +1810,10 @@
         "Guarde com segurança o arquivo exportado e seu código de recuperação. O desenvolvedor não tem acesso a nenhum dos dois e não pode redefinir um código perdido nem descriptografar o arquivo para você. Nunca os compartilhe com o suporte."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "versão gratuita"
+        ],
         "e2ee": [
           "ponta a ponta"
         ],
@@ -1903,6 +1954,10 @@
         "احتفظ بالملف المصدَّر ورمز الاسترداد في مكان آمن. لا يملك المطوّر أيًا منهما ولا يستطيع استعادة رمز مفقود أو فك تشفير الملف نيابةً عنك. لا تشاركهما مع الدعم أبدًا."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "الإصدار المجاني"
+        ],
         "e2ee": [
           "طرف إلى طرف",
           "من طرف إلى طرف"
@@ -2052,6 +2107,10 @@
         "请妥善保管导出的文件及其恢复码。开发者两者都无法访问，既无法找回丢失的恢复码，也无法替您解密文件。切勿把它们发给支持人员。"
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "免费版"
+        ],
         "e2ee": [
           "端到端"
         ],
@@ -2190,6 +2249,10 @@
         "請妥善保管匯出的檔案及其復原碼。開發者兩者皆無法取得，既無法找回遺失的復原碼，也無法替您解密檔案。切勿將它們交給支援人員。"
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "免費版"
+        ],
         "e2ee": [
           "端對端"
         ],
@@ -2330,6 +2393,10 @@
         "Dışa aktarılan dosyayı ve kurtarma kodunu güvenle saklayın. Geliştiricinin ikisine de erişimi yoktur; kaybolan bir kodu sıfırlayamaz ve dosyayı sizin için çözemez. Bunları asla destekle paylaşmayın."
       ],
       "concepts": {
+        "freePlan": [
+          "Free",
+          "Ücretsiz sürüm"
+        ],
         "e2ee": [
           "uçtan uca"
         ],
