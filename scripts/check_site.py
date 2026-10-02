@@ -579,6 +579,19 @@ def main() -> None:
     assert not staged_left, (
         f"staged 1.0.6 privacy sources keep {len(staged_left)} release placeholders, e.g. {staged_left[:2]}"
     )
+    # Lane LEGAL-STORE round 2 (2026-10-02 reviews): the Cloudflare transfer covers the
+    # announcement check and states a true refusal, imported health data is in the sync, kept
+    # purchase records are listed, and undecided facts stay as registered pending sentences.
+    transfer = account_sync_candidate.transfer_disclosure_errors()
+    assert not transfer, (
+        f"account/sync candidate states {len(transfer)} false or incomplete facts, e.g. {transfer[:3]}"
+    )
+    staged_disclosures = account_sync_candidate.staged_disclosure_errors(
+        render_account_sync.integrated_sources()
+    )
+    assert not staged_disclosures, (
+        f"staged 1.0.6 privacy sources: {len(staged_disclosures)} problems, e.g. {staged_disclosures[:3]}"
+    )
     # Every locale carries the release placeholders exactly as en does, so a translated
     # placeholder is registered (and caught by --release) and no locale keeps one after en changes.
     for relative in ("docs/ios-content.json", "docs/android-content.candidate.json",

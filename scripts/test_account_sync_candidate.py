@@ -190,6 +190,68 @@ class AccountSyncCandidateTest(unittest.TestCase):
                     found[f"{locale}.{field}"] = sorted(set(pattern.findall(text)))
         self.assertEqual(found, {})
 
+    # Lane LEGAL-STORE round 2: findings of the two 2026-10-02 reviews.
+
+    def test_cloudflare_transfer_covers_the_announcement_check_and_refuses_truthfully(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        errors = account_sync_candidate.transfer_disclosure_errors(raw)
+        self.assertEqual([e for e in errors if ".processors:" in e or ".notice:" in e], [])
+
+    def test_sync_key_health_sync_and_kept_records_are_stated(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        errors = account_sync_candidate.transfer_disclosure_errors(raw)
+        self.assertEqual([e for e in errors if ".sync:" in e or ".healthSync:" in e
+                          or ".retention:" in e or e.startswith("tr:")], [])
+
+    def test_unshipped_server_and_client_paths_are_tracked_as_readiness(self):
+        # D8 pruning (src/index.js passes no recheckPlus), DELETE /v1/sync/snapshot, both
+        # reset-sync controls, the verifier host and the tombstone retention are not shipped or
+        # decided: each needs a False flag with its own unresolved item.
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        self.assertIn("serverReadiness", raw)
+        self.assertEqual(set(raw["serverReadiness"]), set(account_sync_candidate.SERVER_READINESS_TOKENS))
+        for key in ("retentionRecheckWired", "syncResetRoute", "syncResetUiIos",
+                    "syncResetUiAndroid", "verifierHostDecided", "tombstoneRetentionDecided"):
+            self.assertIs(raw["serverReadiness"][key], False, key)
+        self.assertEqual([e for e in account_sync_candidate.transfer_disclosure_errors(raw)
+                          if e.startswith("serverReadiness")], [])
+        unresolved = "\n".join(raw["unresolvedBeforePublication"])
+        self.assertIn("src/index.js", unresolved)
+        self.assertIn("ab92fcf6", unresolved)
+
+    def test_release_gate_refuses_open_readiness_flags(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        self.assertIn("serverReadiness", raw)
+        ready = dict(raw, status="integrated-and-verified", unresolvedBeforePublication=[])
+        with self.assertRaisesRegex(AssertionError, "serverReadiness"):
+            account_sync_candidate.require_release_ready(ready)
+
+    def test_staged_sources_carry_health_sync_and_the_pending_verifier_location(self):
+        import render_account_sync
+        self.assertEqual(account_sync_candidate.staged_disclosure_errors(
+            render_account_sync.integrated_sources()), [])
+
+    def test_pending_markers_are_distinct_from_release_placeholders(self):
+        import legal_release
+        for locale in account_sync_candidate.LOCALES:
+            for marker in (legal_release.PENDING_VERIFIER_LOCATION[locale],
+                           legal_release.PENDING_TOMBSTONE_RETENTION[locale]):
+                self.assertEqual(legal_release.release_placeholders(marker), [], marker)
+                self.assertEqual(legal_release.pending_release_markers(marker), [marker])
+        self.assertEqual(legal_release.pending_release_markers(
+            " ".join(legal_release.RELEASE_PLACEHOLDERS)), [])
+
+    def test_transfer_detector_rejects_the_reviewed_false_refusal(self):
+        raw = json.loads(account_sync_candidate.SOURCE.read_text(encoding="utf-8"))
+        entry = dict(raw["locales"]["en"])
+        entry["processors"] = (entry["processors"] + " "
+                               + account_sync_candidate.RETIRED_TRANSFER_REFUSALS["en"])
+        entry["notice"] = "A public announcement can be checked when the app opens."
+        broken = dict(raw, locales={**raw["locales"], "en": entry})
+        errors = account_sync_candidate.transfer_disclosure_errors(broken)
+        self.assertIn("en.processors: false refusal (not signing in does not stop the announcement check)", errors)
+        self.assertIn("en.notice: does not say the announcement request passes through Cloudflare", errors)
+
     def test_release_gate_refuses_unintegrated_candidate(self):
         with self.assertRaisesRegex(AssertionError, "pre-release candidate"):
             account_sync_candidate.require_release_ready()

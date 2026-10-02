@@ -97,6 +97,60 @@ RELEASE_PLACEHOLDERS = (
 )
 
 
+# Lane LEGAL-STORE round 2 (2026-10-02 reviews): facts the owner has not decided yet stay in the
+# staged 1.0.6 sources as registered pending sentences, one per locale, instead of disappearing.
+# check_site.py requires them in the staged sources while the candidate says the fact is open,
+# and `check_site.py --release` refuses them in the effective sources, so applying the staged
+# sources cannot hide an undecided fact. They are deliberately not RELEASE_PLACEHOLDERS: the
+# staged sources must hold none of those.
+# Where the standalone Android purchase-verification server (server/entitlement-verifier) runs.
+PENDING_VERIFIER_LOCATION = {
+    'ko': '별도의 Google Play 구매 확인 서버의 위치는 출시 전에 여기에 공개해요.',
+    'en': 'The location of the separate Google Play purchase-verification server is stated here before release.',
+    'ja': '別のGoogle Play購入確認サーバーの所在地は、公開前にここに記載します。',
+    'de': 'Der Standort des separaten Google-Play-Kaufprüfungsservers wird hier vor der Veröffentlichung angegeben.',
+    'fr': 'L’emplacement du serveur distinct de vérification des achats Google Play est indiqué ici avant la sortie.',
+    'es': 'La ubicación del servidor independiente de verificación de compras de Google Play se indica aquí antes del lanzamiento.',
+    'it': 'L’ubicazione del server separato di verifica degli acquisti Google Play viene indicata qui prima del rilascio.',
+    'nl': 'De locatie van de afzonderlijke Google Play-server voor aankoopverificatie wordt hier vóór de release vermeld.',
+    'pt-PT': 'A localização do servidor separado de verificação de compras do Google Play é indicada aqui antes do lançamento.',
+    'pl': 'Lokalizacja osobnego serwera weryfikacji zakupów Google Play zostanie podana tutaj przed wydaniem.',
+    'sv': 'Platsen för den separata servern för köpverifiering i Google Play anges här före lanseringen.',
+    'hi': 'अलग Google Play खरीद-सत्यापन सर्वर का स्थान रिलीज़ से पहले यहाँ बताया जाएगा।',
+    'pt-BR': 'A localização do servidor separado de verificação de compras do Google Play será informada aqui antes do lançamento.',
+    'ar': 'وسيُذكر هنا موقع خادم التحقق من مشتريات Google Play المنفصل قبل الإصدار.',
+    'zh-Hans': '独立的 Google Play 购买核验服务器所在地将在发布前在此列出。',
+    'zh-Hant': '獨立的 Google Play 購買驗證伺服器所在地會在發布前列於此處。',
+    'tr': 'Ayrı Google Play satın alma doğrulama sunucusunun konumu yayımdan önce burada belirtilir.',
+}
+
+# How long the keyed purchase tombstone kept after account deletion stays (store.js deleteAccount).
+PENDING_TOMBSTONE_RETENTION = {
+    'ko': '이 표식의 보관 기간은 출시 전에 여기에 공개해요.',
+    'en': 'How long this marker is kept is stated here before release.',
+    'ja': 'この標識の保管期間は公開前にここに記載します。',
+    'de': 'Wie lange diese Markierung aufbewahrt wird, wird hier vor der Veröffentlichung angegeben.',
+    'fr': 'La durée de conservation de ce marqueur est indiquée ici avant la sortie.',
+    'es': 'El plazo de conservación de este marcador se indica aquí antes del lanzamiento.',
+    'it': 'Il periodo di conservazione di questo marcatore viene indicato qui prima del rilascio.',
+    'nl': 'Hoe lang deze markering wordt bewaard, wordt hier vóór de release vermeld.',
+    'pt-PT': 'O prazo de conservação deste marcador é indicado aqui antes do lançamento.',
+    'pl': 'Okres przechowywania tego znacznika zostanie podany tutaj przed wydaniem.',
+    'sv': 'Hur länge markören sparas anges här före lanseringen.',
+    'hi': 'यह चिह्न कितने समय तक रखा जाता है, यह रिलीज़ से पहले यहाँ बताया जाएगा।',
+    'pt-BR': 'O prazo de retenção desse marcador será informado aqui antes do lançamento.',
+    'ar': 'وستُذكر هنا مدة الاحتفاظ بهذه العلامة قبل الإصدار.',
+    'zh-Hans': '该标记的保存期限将在发布前在此列出。',
+    'zh-Hant': '此標記的保存期限會在發布前列於此處。',
+    'tr': 'Bu işaretin ne kadar süre saklanacağı yayımdan önce burada belirtilir.',
+}
+PENDING_RELEASE_MARKERS = (*PENDING_VERIFIER_LOCATION.values(), *PENDING_TOMBSTONE_RETENTION.values())
+
+
+def pending_release_markers(text: str) -> list[str]:
+    """Registered pending sentences still present in text."""
+    return [sentence for sentence in PENDING_RELEASE_MARKERS if sentence in text]
+
 def expected_effective_date(current: str) -> str:
     """The effective date a catalog must carry: the filled release date, else the live one."""
     if NEXT_RELEASE_EFFECTIVE_DATE is None:
