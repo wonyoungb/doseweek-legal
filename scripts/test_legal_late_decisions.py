@@ -9,7 +9,6 @@ import render_terms
 from test_legal_revision1 import MARKETS, REGIONAL_ANCHORS, strings
 
 ROOT = Path(__file__).resolve().parents[1]
-PRICES = ('USD 1.99', 'USD 13.99', 'KRW 3,300', 'KRW 19,900', 'JPY 300', 'JPY 1,980')
 VARIABLE_DURATION = {
     'de': ('Die im Store angezeigte tatsächliche Dauer ist maßgeblich', 'Die tatsächliche Dauer wird vor der Bestätigung angezeigt'),
     'fr': ('La durée réelle affichée par la boutique fait foi', 'La durée réelle est affichée avant la confirmation'),
@@ -64,22 +63,21 @@ class LegalLateDecisionsTest(unittest.TestCase):
             for locale, entry in source['locales'].items():
                 offer = next(s for s in entry['sections'] if s['id'] == 'free-plus')['paragraphs'][2]
                 with self.subTest(stage=stage, locale=locale):
-                    for price in PRICES:
-                        self.assertIn(price, offer)
+                    anchor = json.loads((ROOT / 'scripts/fixtures/legal_late_review1_store_prices.json').read_text())[locale]
+                    self.assertTrue(offer.startswith(anchor['storePricePrefix']))
+                    self.assertNotRegex(offer, r'(?:USD|KRW|JPY|[$₩¥])\s*\d')
                     self.assertNotRegex(offer, r'22[,\s]?000|2[,\s]?900')
 
     def test_renderer_accepts_final_price_and_rejects_each_retired_price(self):
         terms, ios = render_terms.load()
-        final = copy.deepcopy(terms)
-        for entry in final['locales'].values():
-            offer = next(s for s in entry['sections'] if s['id'] == 'free-plus')
-            offer['paragraphs'][2] = offer['paragraphs'][2].replace('KRW 22,000', 'KRW 19,900')
-        render_terms.validate(final, ios)
-        for locale in final['localeOrder']:
-            for correct, retired in (('KRW 19,900', 'KRW 22,000'), ('KRW 3,300', 'KRW 2,900')):
-                invalid = copy.deepcopy(final)
-                offer = next(s for s in invalid['locales'][locale]['sections'] if s['id'] == 'free-plus')
-                offer['paragraphs'][2] = offer['paragraphs'][2].replace(correct, retired)
+        # The permitted store-price alternative replaces numeric reference examples.
+        # Inserting a forbidden amount must fail; replace() would be a no-op now.
+        render_terms.validate(terms, ios)
+        for locale in terms['localeOrder']:
+            for retired in ('KRW 22,000', 'KRW 2,900', '22,000', '2,900'):
+                invalid = copy.deepcopy(terms)
+                section = next(s for s in invalid['locales'][locale]['sections'] if s['id'] == 'free-plus')
+                section['paragraphs'][2] += ' ' + retired
                 with self.subTest(locale=locale, retired=retired):
                     with self.assertRaises(AssertionError):
                         render_terms.validate(invalid, ios)

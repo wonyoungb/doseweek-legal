@@ -4,7 +4,20 @@
 - Preserve fixed one-month trial/renewal/cancel/refund and all other legal content.
 - Baseline/review input hashes and historical report retained in `late-review1/`; RED stage next.
 - Added5-method regression and17-locale price/trial preservation fixture; all scripts AST parse PASS.
-- No owned process/device, native, network, publication or other external action.
+- RED `5447afa` committed first and proved on `fe488a5`:5exactmethods,4failed,
+  154assertionfailures,0errors/skips/omissions; ASTcompilePASS,temporaryworktree removed.
+- GREEN17leading price disclosures use store price; original trial suffixes and all other Terms
+  fields preserved byte for byte. Validator/tests/blocker updated; partner gates remain closed.
+- Focused6modules:33exactmethodsPASS,0failure/error/skip/omission; ASTcompilePASS.
+- Terms rendererPASS;18affectedpages regenerated;sourcehashes refreshed;release date/flags unchanged.
+- Interim204methods/13ordinarychecksPASS;releaseexit1BLOCKED_EFFECTIVE_DATE;259frozeninputs match.
+  Independent audit requested preservation of the original bare retired-price guard; final check next.
+- Restored original bare retired-price validator guard;currency and bare insertion tests retained.
+- Final focused33methodsPASS,0fail/error/skip/omission;ASTcompilePASS; final full gates next.
+- Independent final source/render/report-writer auditPASS;18generatedTerms match source/hashes.
+  Interim coverage remains historical. Final204methods/13ordinarychecksPASS,259frozeninputs match;
+  releaseexit1BLOCKED_EFFECTIVE_DATE remains failed;noownedjob/tmpworktree/scratch remains.
+- No owned device, native, network, publication or other external action.
 
 ## 2026-10-02 — late owner decisions (historical; unpublished)
 

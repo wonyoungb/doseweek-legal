@@ -1,0 +1,155 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/late-review1/run_tests.py",
+      "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal",
+      "/Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/CXC-legal-update-legal/evidence/legal-update-20261002/late-review1/full-green"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-00.log.gz",
+    "logSha256": "9b1419dd571fc0e224b13301b5ddd9e2a99d159eca36184a8636caaa74aba367"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_home.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-01.log.gz",
+    "logSha256": "26ba7dbe41b1fc34d09e82d05f7ea3be637e4f2727d88b83b2b455dc0733ed8d"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_ios.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-02.log.gz",
+    "logSha256": "182a8ac43c158f1999ad7d6f52834218717190851ea2b11975d2707714c90637"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_android.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-03.log.gz",
+    "logSha256": "0813af516beb00e41bf311ab170260da368e0be1891be0cae91e9a618bf3657b"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_import.py",
+      "--check",
+      "--require-all-locales"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-04.log.gz",
+    "logSha256": "24700ed7ba5230826a371d026432c632af280c8e6e1a34d0707c93f13bcadea6"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_terms.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-05.log.gz",
+    "logSha256": "96aeaabb6335dd4f39fd758709091379a9ef016bae90954fb7bf2cd5a075979e"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_us_health.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-06.log.gz",
+    "logSha256": "add73d8aa77aa6dbc6706ef8b64470f947c67319a159f3253e9c945becdc13ba"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_sitemap.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-07.log.gz",
+    "logSha256": "7d73944e4f8058f85a2f9f03a28960dfa44a9b2fa3b079a42e6fee9a06561daf"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/check_site.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-08.log.gz",
+    "logSha256": "49eb34ecebab53abbf1e48e8cddde9d7d1b0ed7728ff025c7252a2efc6214106"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/account_sync_candidate.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-09.log.gz",
+    "logSha256": "098687e60b4205dc144633576bd08b8fde43fa9f21a5f2f96b0420d6ca8042e3"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/render_account_sync.py",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-10.log.gz",
+    "logSha256": "da93310dc8352382f7b1b1c10c1193b59c63ef47429ece62517bee71b788bc7e"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/korean_tone.py"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-11.log.gz",
+    "logSha256": "ef84671a8b0a9485f2d7f4d9a4042708cbae8a60b4fd9e73007b88443b033475"
+  },
+  {
+    "cmd": [
+      "python3",
+      "scripts/check_site.py",
+      "--release"
+    ],
+    "exit": 1,
+    "result": "BLOCKED_EFFECTIVE_DATE",
+    "log": "evidence/legal-update-20261002/late-review1/check-12.log.gz",
+    "logSha256": "09029677c66d41f803cc4ed6b761e43fc9493a21d78ee275342c8555da91a3c6"
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0,
+    "result": "PASS",
+    "log": "evidence/legal-update-20261002/late-review1/check-13.log.gz",
+    "logSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+  }
+]

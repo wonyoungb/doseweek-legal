@@ -1,0 +1,62 @@
+{
+  "reviewedParent": "fe488a5320e50f5afc5e4a26150d935eaa154974",
+  "allOtherTermsBytesPreserved": true,
+  "changedPricePrefixes": [
+    "ko",
+    "en",
+    "ja",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "nl",
+    "pt-PT",
+    "pl",
+    "sv",
+    "hi",
+    "pt-BR",
+    "ar",
+    "zh-Hans",
+    "zh-Hant",
+    "tr"
+  ],
+  "trialSuffixHashesMatch": true,
+  "accountOnlyUnresolvedBlockerChanged": [
+    27
+  ],
+  "trialFixtureFirstFourAnchorsUnchanged": true,
+  "partnerSnapshotDataUnchanged": true,
+  "sourcesAndAssetsBytePreserved": {
+    "docs/ios-content.json": "dcd9eda991ecdb657d6528bede3eacaa9c9b5c6f5b2b20ff2768d86e0e96915c",
+    "docs/android-content.candidate.json": "566f01de0d18c4be67a9d4b0f9f51f0d2472cfdd8848113ecda9d2795586acee",
+    "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee",
+    "scripts/privacy_legal.py": "1c68228f62749a9a29ad1ba8e1719188ea475ba7fdae5469c8cf8d36d727326d",
+    "scripts/render_ios.py": "3e88d68e51eb70469338211da49d8988ec0f99d54892e4bc952f53335f8cf9fb",
+    "scripts/render_android.py": "e61ef527c545694412756df4f0cc39ab918c406936581ab780a99f94699300cd",
+    "scripts/render_us_health.py": "c6fc3e057704abafe7607020e57b66fec6c1f8ef4aa969b79862f033627f533e",
+    "scripts/render_account_sync.py": "c00c499615321d4ac46784e50e646c826ab7b82a3db4e551d0c80589e06e9151",
+    "assets/site.css": "3f22b6ac523a33b7084a90f2792182419dd6ec2e86aa07346f196f1cee610392",
+    "assets/language.js": "e03fbcbdfbdb7be9593fd806317bab82a790f1dcd2c5e52d2330878046adb5f0"
+  },
+  "generatedTermsPages": {
+    "ar/terms/index.html": "c06538e495942e3827f5104514d38e5eac7dbbc46f9ff1acfb0cb738ce878ffe",
+    "de/terms/index.html": "9f136cd650fb9fe6c28cec44d6410a13b308fa70b9bbb2e056954663fae8871c",
+    "en/terms/index.html": "59f3ccefd96160bc4ac8bb312474cddbb95ce948f8a2c2b5cbae54278e11d74b",
+    "es/terms/index.html": "8db34890be70b8397f2a65bfbc4ba199e25b4aee991d9200b71c68d2ec60f3a5",
+    "fr/terms/index.html": "3f94bfe2fc86f405770ddbc4fdec649bf64297c0cb253267374a57b4864b3342",
+    "hi/terms/index.html": "97acbeec20009e019915f54020941ca937718f6511dbe3fc4c875f16547dc606",
+    "it/terms/index.html": "88174c3eacebfca9bfe63ef2b8adc6abeb8c7c18a5aa97fc1b2fd0f95f6af5f3",
+    "ja/terms/index.html": "660e4f11cb092d0010880982aa220f402b40853f2be5ecb8d3198609f6e178c7",
+    "ko/terms/index.html": "4c452cc104f9cd2d1acb478a42a07ee7e0db936c4506f52cea146036024e7e1e",
+    "nl/terms/index.html": "a7523d29150b2aee5f27fccde3adbe8ef03a908c9453896c50a66e579bfff3c2",
+    "pl/terms/index.html": "1bda771ef3b5aa287123e4cc711d3df8a23f341b870b33965303cbac709fbbd5",
+    "pt-BR/terms/index.html": "11625b2249693a892b9e1d4967583ee7c58ddc018bbd3568a1cf9d1f2244eb3d",
+    "pt-PT/terms/index.html": "cc2565bcc3e07f63c661dccf58bb3b094afc02d478508f86de1cbf0960f2334f",
+    "sv/terms/index.html": "a92e94e669ee8c1c21fe9228e070cc4567cfa972489a68ea593e2523ca239cc0",
+    "terms/index.html": "402de665358559e3bd8d8f1d4af777a3d0c05d4c4e8e6837e7a4169db96ffd96",
+    "tr/terms/index.html": "c94d2aef5d8b106a28ba71951395310734523b36ea3720d42fc9c8eae4770d07",
+    "zh-Hans/terms/index.html": "a10431ce85d548541e494483464bd713a128c57751dbdd812edd1946709f4d15",
+    "zh-Hant/terms/index.html": "1d04e2ccc73d63a89a54631bc20f83fe4976b694bcc230c39c5e2e315c0e4657"
+  },
+  "nativeStoreLiveVisual": "NOT_RUN"
+}

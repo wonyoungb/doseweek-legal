@@ -1,0 +1,20 @@
+{
+  "redCommit": "5447afae57d1dfbede924ed971c8f29255028f14",
+  "parent": "fe488a5320e50f5afc5e4a26150d935eaa154974",
+  "compile": "PASS",
+  "testsRun": 5,
+  "failedMethods": [
+    "test_legal_late_review1.LegalLateReview1Test.test_all_locales_use_store_price_without_numeric_conflict",
+    "test_legal_late_review1.LegalLateReview1Test.test_parity_record_uses_store_price_and_keeps_receipt_gate_closed",
+    "test_legal_late_review1.LegalLateReview1Test.test_renderer_accepts_store_price_in_each_locale",
+    "test_legal_late_review1.LegalLateReview1Test.test_renderer_rejects_reintroduced_price_amounts"
+  ],
+  "assertionFailures": 154,
+  "errors": [],
+  "skipped": [],
+  "omitted": [],
+  "log": "red-parent.log.gz",
+  "receipt": "red-parent.json",
+  "temporaryDetachedWorktree": "/tmp/doseweek-legal-late-review1-jduqrv9_",
+  "removed": true
+}

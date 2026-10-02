@@ -47,8 +47,10 @@ class TermsLegalUpdateTest(unittest.TestCase):
         for loc, entry in source["locales"].items():
             with self.subTest(locale=loc):
                 prices = sections(entry)["free-plus"]["paragraphs"][2]
-                for token in ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980"):
-                    self.assertIn(token, prices, "superseding owner/spec price is missing")
+                # The owner permits store-price wording instead of numeric examples.
+                anchors = json.loads((ROOT / "scripts/fixtures/legal_late_review1_store_prices.json").read_text())
+                self.assertTrue(prices.startswith(anchors[loc]["storePricePrefix"]))
+                self.assertNotRegex(prices, r"(?:USD|KRW|JPY|[$₩¥])\s*\d")
                 self.assertNotIn("2,900", prices)
                 self.assertNotIn("22,000", prices)
 

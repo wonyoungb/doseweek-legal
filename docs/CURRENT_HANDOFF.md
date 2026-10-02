@@ -12,8 +12,34 @@ No owned PID/device, native or external action. Existing partner receipts stay h
 commercialCopyParityVerified=false until final committed partner copy/check receipts are acquired.
 New5-method regression and17locale fixture added; every Python script AST parse PASS.
 Owned dirty: tests/fixture, baseline/historical receipt, copied offline runners, handoff/CHANGELOG.
-Next action: commit new regression RED, prove assertion failures on this detached parent under /tmp,
-remove temporary worktree, then apply the narrow GREEN source edit. Never publish/push/merge.
+RED `5447afae57d1dfbede924ed971c8f29255028f14` committed first; detached parent `fe488a5320e50f5afc5e4a26150d935eaa154974` compiled and ran5exact methods;
+4methods failed with154assertion failures,0errors/skips/omissions.
+Raw logs/identities in `late-review1/red-parent.*`; proof worktree removed. No live owned job.
+GREEN source edit: only17leading price disclosures replaced; restoring17fields reproduces
+reviewed Terms bytes. All trial suffix hashes match; other billing/rights/features untouched.
+Renderer enforces monthly/annual store-price and full-price/tax/period-before-purchase wording;
+related historic price guards now cover the permitted alternative, retired-price insertions.
+Parity/operations blocker explains store-price choice; historical receipts/gates remain closed.
+Focused related6modules: 33exactmethods PASS,0failure/error/skip/omission; ASTcompilePASS.
+Exact identities/logs in `late-review1/focused-green.*`. No inputs edited during run.
+Terms rendererPASS;18affected hash/locale pages regenerated from canonical source.
+Release-map fingerprints refreshed; effective date/readiness flags remain closed.
+Interim fullsuite204exactmethods and13ordinarychecks PASS; releaseexit1 BLOCKED_EFFECTIVE_DATE.
+259relevant input hashes/runtime match. Retained `interim-*` receipts cover the earlier validator.
+Independent audit confirmed17prefix/trial transformations and10unchangedlegal sources/assets;
+found the original bare2,900/22,000 validator guard should also survive.
+Original bare retired-price guard restored; existing late mutation test now inserts both
+currency-prefixed and bare variants. No product copy changed after generation.
+Final focused6modules:33exactmethods PASS,0fail/error/skip/omission;ASTcompilePASS.
+No source changes during check; final exact identities/logs in `late-review1/focused-final.*`.
+Final fullsuite204exactmethods PASS,0failure/error/skip/omission;all13ordinarycommands PASS.
+Release child exit1 BLOCKED_EFFECTIVE_DATE retained as failed.259frozeninput hashes/Python/runner
+match before/after. Raw command logs,exact identities and frozen inputs in `late-review1/`.
+Independent final source/render/report-writer auditPASS;18actualTerms match output/hashes.
+All readiness flags/effective date remain closed. Partner snapshots unchanged/historical;
+no native/provider/Store/live/visual/counsel/native-speaker verification claimed.
+No owned running process/device or temporary worktree/scratch remains.
+Next action: commit verified GREEN, overwrite final late report and validate its evidence. Never publish/push/merge.
 
 ## HISTORICAL — legal-update-legal late owner decisions (2026-10-02; unpublished)
 

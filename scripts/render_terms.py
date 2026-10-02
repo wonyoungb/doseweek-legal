@@ -53,9 +53,41 @@ MEDICAL_SECTION_ID = "medical"
 # iOS app. check_site.py allows it only on the Terms pages.
 EULA_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
 LINKED_URLS = (EULA_URL,)
-# Final reference prices (superseding owner/spec decision, 2026-10-02). The Store supplies the actual
-# localized price, eligible introductory offer and billing period before purchase.
-REFERENCE_PRICES = ("USD 1.99", "USD 13.99", "KRW 3,300", "KRW 19,900", "JPY 300", "JPY 1,980")
+# Public Terms use the owner/reviewer-permitted store-price alternative, consistently in
+# every locale. Native UI still uses actual Store-returned prices and billing periods.
+STORE_PRICE_DISCLOSURES = {'ko': 'Plus는 월간 또는 연간 요금제의 스토어 가격으로 결제돼요. 구매 전에 스토어에 표시된 전체 현지 가격과 적용되는 세금, 결제 주기를 확인해 주세요.',
+ 'en': 'Plus uses the store price for the monthly or annual plan. Before purchase, check the full local '
+       'price, applicable taxes and billing period shown in the store.',
+ 'ja': 'Plusには月間または年間プランのストア価格が適用されます。購入前に、ストアに表示される現地の総額、適用される税金、請求期間を確認してください。',
+ 'de': 'Für Plus gilt der Store-Preis des Monats- oder Jahresabos. Prüfen Sie vor dem Kauf den im Store '
+       'angezeigten lokalen Gesamtpreis, anfallende Steuern und den Abrechnungszeitraum.',
+ 'fr': 'Plus est facturé au prix de la boutique pour la formule mensuelle ou annuelle. Avant l’achat, '
+       'vérifiez le prix local total, les taxes applicables et la période de facturation affichés dans '
+       'la boutique.',
+ 'es': 'Plus se cobra al precio de la tienda para el plan mensual o anual. Antes de comprar, revise el '
+       'precio local completo, los impuestos aplicables y el periodo de facturación que muestra la '
+       'tienda.',
+ 'it': 'Per Plus si applica il prezzo dello store per il piano mensile o annuale. Prima dell’acquisto, '
+       'verifica il prezzo locale totale, le imposte applicabili e il periodo di fatturazione indicati '
+       'nello store.',
+ 'nl': 'Voor Plus geldt de storeprijs van het maand- of jaarabonnement. Controleer vóór aankoop de '
+       'volledige lokale prijs, toepasselijke belastingen en de factureringsperiode die de store toont.',
+ 'pt-PT': 'O Plus é cobrado ao preço da loja para o plano mensal ou anual. Antes da compra, confirme o '
+          'preço local total, os impostos aplicáveis e o período de faturação apresentados na loja.',
+ 'pl': 'Plus jest rozliczany według ceny sklepowej planu miesięcznego lub rocznego. Przed zakupem '
+       'sprawdź pełną cenę lokalną, obowiązujące podatki i okres rozliczeniowy wyświetlane w sklepie.',
+ 'sv': 'Plus debiteras till butikens pris för månads- eller årsplanen. Kontrollera det fullständiga '
+       'lokala priset, tillämpliga skatter och faktureringsperioden som visas i butiken före köpet.',
+ 'hi': 'Plus के मासिक या वार्षिक प्लान पर स्टोर की कीमत लागू होती है। खरीदने से पहले स्टोर में दिखाई गई '
+       'पूरी स्थानीय कीमत, लागू कर और बिलिंग अवधि देखें।',
+ 'pt-BR': 'O Plus é cobrado pelo preço da loja para o plano mensal ou anual. Antes da compra, confira o '
+          'preço local total, os impostos aplicáveis e o período de cobrança mostrados na loja.',
+ 'ar': 'تُطبق على Plus أسعار المتجر للخطة الشهرية أو السنوية. قبل الشراء، راجع السعر المحلي الكامل '
+       'والضرائب السارية ودورة الفوترة المعروضة في المتجر.',
+ 'zh-Hans': 'Plus 按月度或年度方案的商店价格收费。购买前，请确认商店显示的当地全额价格、适用税费和计费周期。',
+ 'zh-Hant': 'Plus 按月度或年度方案的商店價格收費。購買前，請確認商店顯示的當地全額價格、適用稅費和計費週期。',
+ 'tr': 'Plus için aylık veya yıllık planın mağaza fiyatı geçerlidir. Satın almadan önce mağazada '
+       'gösterilen tam yerel fiyatı, geçerli vergileri ve faturalandırma dönemini kontrol edin.'}
 
 
 def escaped(value: object) -> str:
@@ -162,11 +194,17 @@ def validate(content: dict, ios: dict) -> None:
         assert "24" in pass_text and "48" in pass_text, f"{locale}: rewarded pass limits"
         assert SUPPORT_EMAIL in by_id["contact"]["paragraphs"][0], f"{locale}: contact address"
         offer = by_id["free-plus"]["paragraphs"][2]
-        assert all(price in offer for price in REFERENCE_PRICES), (
-            f"{locale}: final reference prices and their full billing periods must be disclosed"
+        assert offer.startswith(STORE_PRICE_DISCLOSURES[locale]), (
+            f"{locale}: disclose store price, monthly/annual plans and full local price/taxes/period before purchase"
         )
-        assert "2,900" not in offer and "22,000" not in offer and "App Store" in offer and "Google Play" in offer, (
-            f"{locale}: offer must use the final Korean price and identify Store eligibility"
+        assert not re.search(r"(?:USD|KRW|JPY|[$₩¥])\s*\d", text), (
+            f"{locale}: public Terms use store price, without hardcoded currency amounts"
+        )
+        assert "2,900" not in offer and "22,000" not in offer, (
+            f"{locale}: offer must not contain retired Korean prices"
+        )
+        assert "App Store" in offer and "Google Play" in offer, (
+            f"{locale}: offer must identify Store eligibility"
         )
         assert not re.search(r"(?<![\d,])30(?![\d,])", offer), (
             f"{locale}: a calendar-month trial cannot be described as 30 days"

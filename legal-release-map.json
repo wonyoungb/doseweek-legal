@@ -178,7 +178,7 @@
   },
   "terms": {
     "source": "docs/terms-content.json",
-    "sha256": "c1323d2009c3624f210ec84561802faacbc3805748a08160ec02c4f14117be5b",
+    "sha256": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d",
     "renderer": "scripts/render_terms.py",
     "routes": [
       "terms/",
@@ -211,12 +211,12 @@
     "sourceHashes": {
       "docs/ios-content.json": "dcd9eda991ecdb657d6528bede3eacaa9c9b5c6f5b2b20ff2768d86e0e96915c",
       "docs/android-content.candidate.json": "566f01de0d18c4be67a9d4b0f9f51f0d2472cfdd8848113ecda9d2795586acee",
-      "docs/account-sync-content.candidate.json": "26b4a42d2c9aa0b1bf68a7b5ba06b112bcf818fcb07491ef6458eb268245cb81",
-      "docs/terms-content.json": "b7881bcf8a57e1c1570526ce6abd507c1279d3d59a1f1300942ad8db6c905ac1",
+      "docs/account-sync-content.candidate.json": "f3d402a2ac0323452abf001209165a6baa118506a73b73ed79781d4fc9886715",
+      "docs/terms-content.json": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d",
       "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee"
     },
     "privacySupplement": "Art30 purposes/bases/security/rights, recipient-specific Art28-8 inventory, PIPA/FTC/GDPR breach section; supplier particulars stay explicitly unverified and false-gated",
-    "subscription": "Late owner decisions: USD1.99/13.99, KRW3300/19900, JPY300/1980; store-converted other prices; eligible first-time1-calendar-month trial, auto-renewal, cancellation any time in store; statutory rights preserved; native UI uses store-returned prices.",
+    "subscription": "Late review-1: all17 public Terms use store price for monthly/annual plans with full local price/taxes/period before purchase. Final owner Store configuration remains USD1.99/13.99, KRW3300/19900, JPY300/1980; other storefronts store-converted. First-time1-calendar-month trial, auto-renewal, cancel any time; statutory rights and store-returned native UI preserved.",
     "backup": "daily pre-upload-encrypted S3 Seoul app data +weekly OS recovery snapshot; deleted personal data out of all relevant backups within7days; independent cleanup/actual proof required",
     "routes": {
       "site": [
@@ -232,10 +232,10 @@
       ],
       "stagedAccount": "account/delete/ through render_account_sync.py (unpublished/noindex) — request by support email without reinstall or Plus"
     },
-    "verification": "Late decisions PASS:199 exact full unittest methods,0 failures/errors/skips/omissions; focused63 PASS; seven renderer checks plus candidate/staged/site/tone/diff PASS;162 site pages,126 unpublished staged pages;257 frozen source/test/runner/artifact/fixture/config inputs and Python executable hash match. Release child exit1 BLOCKED_EFFECTIVE_DATE; operational gates and final partner check receipts remain blocked. Native/provider/live/visual NOT_RUN; no counsel/native-speaker certification.",
+    "verification": "Late review-1 PASS:204exactfull unittestmethods and33focusedmethods,0failure/error/skip/omission;13ordinarycommands PASS,18Terms pages match source,259frozen source/test/runner/fixture/artifact/config/Python inputs match. Release child exit1 BLOCKED_EFFECTIVE_DATE; all readiness flags and final partner/operational/Store receipts remain closed. Native/provider/live/visual NOT_RUN.",
     "publication": "never published/pushed/merged by this lane; date/native/server/provider/sales-exclusion/operational gates stay closed",
     "ownerQuestions": "Final report and candidate unresolved/readiness fields; no prices/trial/regions/mg/backup/operator decision reopened",
-    "evidence": "evidence/legal-update-20261002/late/",
+    "evidence": "evidence/legal-update-20261002/late-review1/",
     "marketAvailability": {
       "version": "1.0.6",
       "excludedRegions": [
@@ -279,6 +279,15 @@
       "assertionFailures": 104,
       "regionalSource": "Inherited exclusions/no representative; supplemental historical assertion RED retained",
       "sourceGreenCommit": "recorded in late report"
+    },
+    "lateReview1": {
+      "reviewedParent": "fe488a5320e50f5afc5e4a26150d935eaa154974",
+      "redCommit": "5447afa",
+      "redMethods": 5,
+      "failedMethods": 4,
+      "assertionFailures": 154,
+      "resolution": "reviewer-permitted-store-price-alternative",
+      "partnerParity": "BLOCKED_PARTNER_CHECK_RECEIPTS"
     }
   }
 }

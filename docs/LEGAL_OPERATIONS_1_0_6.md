@@ -114,7 +114,10 @@ or code issuance flows as pending activation.
 
 Late owner decisions require USD 1.99/month and USD 13.99/year; Korea KRW 3,300/month
 and KRW 19,900/year; Japan JPY 300/month and JPY 1,980/year; other storefronts use
-store-converted prices. The fixed Store-managed free trial is one calendar month for eligible
+store-converted prices. Public Terms use the permitted “store price” wording in every locale,
+with the full local price, applicable taxes and monthly/annual billing period shown before
+purchase. This avoids conflicting static numeric examples; it does not change Store setup
+prices or certify partner receipts. The fixed Store-managed free trial is one calendar month for eligible
 first-time subscribers; it auto-renews and can be cancelled any time in the store.
 Commercial parity remains BLOCKED until the orchestrator obtains matching committed policy,
 review copy and verification inputs with partner check receipts.

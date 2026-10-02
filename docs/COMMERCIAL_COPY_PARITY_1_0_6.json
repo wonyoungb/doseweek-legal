@@ -31,8 +31,10 @@
     }
   },
   "receipt": "evidence/legal-update-20261002/late/partner-snapshots.json",
-  "snapshotNote": "Immutable committed snapshots only. Partner lanes may advance; obtain matching final receipts at integration. No external state certified.",
-  "nextAction": "Orchestrator coordinates partner policy, review copy and verification inputs to final KRW 19,900/year under late owner decisions; obtain matching committed receipts and exact policy byte parity plus partner checks before opening commercialCopyParityVerified. Apps continue showing store-returned localized prices, eligibility and billing periods.",
+  "snapshotNote": "Historical immutable committed snapshots only, preserved unchanged. Partner lanes may advance; obtain matching final copy and check receipts at integration. No external state certified.",
+  "nextAction": "Orchestrator coordinates partner policy, review copy and verification inputs to consistent store price wording or the exact final late-owner prices; obtain matching committed receipts and partner checks before opening commercialCopyParityVerified. Historical conflicting numeric examples are not final parity proof. Apps continue showing store-returned localized prices, eligibility and billing periods.",
   "ownerDecisionNeeded": false,
-  "publicationAuthorized": false
+  "publicationAuthorized": false,
+  "websitePriceWording": "store-price",
+  "websitePriceReason": "Late review-1 permits store price wording to avoid conflicting numeric examples. Final owner prices remain Store-configuration authority; no decision is reopened."
 }

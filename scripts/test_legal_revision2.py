@@ -83,6 +83,7 @@ class LegalRevision2Test(unittest.TestCase):
         self.assertTrue(path.is_file(), 'matching committed partner evidence must be recorded')
         receipt = json.loads(path.read_text())
         self.assertEqual(receipt['requiredKoreaAnnual'], 'KRW 19,900')
+        self.assertEqual(receipt['websitePriceWording'], 'store-price')
         self.assertEqual(receipt['status'], 'BLOCKED_PARTNER_CHECK_RECEIPTS')
         self.assertIn('late owner decisions', receipt['authority'])
         for partner in receipt['partners'].values():
