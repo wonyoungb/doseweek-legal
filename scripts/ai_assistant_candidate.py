@@ -37,8 +37,20 @@ ROW_CELLS = ("legalBasis", "data", "country", "timingMethod", "recipientContact"
              "retention", "refusalEffect")
 US_HEALTH_FIELDS = ("categories", "purpose", "processor", "noSale", "consent")
 FIELDS = ("name", "perk", "sectionTitle", "clauses", "e2eeException", "healthExclusion",
-          "onDeviceScope", "androidAiFaq", "androidBadge", "androidNotUsedItem", "processorRow",
-          "cloudflareTransit", "terms", "usHealth", "deletion")
+          "onDeviceScope", "onDeviceOnly", "iosAiFaq", "androidAiFaq", "androidBadge",
+          "androidNotUsedItem", "processorRow", "cloudflareTransit", "terms", "usHealth", "deletion")
+# iOS 1.0.5 said "No Private Cloud Compute, server model, or third-party model is used" in the
+# on-device AI section and in the support answer "Why is an AI feature unavailable?". That is
+# true for AI entry and Visit Prep only: the AI record assistant is processed on a server by a
+# third-party model. The staged text scopes the sentence to the two on-device features
+# (onDeviceOnly) and the support answer says where the assistant is processed (iosAiFaq).
+# Review round 2.
+ON_DEVICE_DENIAL_TOKEN = "Private Cloud Compute"
+ON_DEVICE_MODEL_TOKEN = "SystemLanguageModel.default"
+SENTENCE = re.compile(r"(?<=[。।])|(?<=\.)\s+")
+# Draft sentences that say a fact is not verified yet or will be recorded before release:
+# clause 5, and the processor-row cells legalBasis, country, recipientContact and retention.
+PRE_RELEASE_WORDING_FIELDS = 5
 # Android 1.0.5 said "No generative AI" as a home badge and listed "Generative AI" among the
 # things DoseWeek does not use. Both are false once the assistant ships in 1.0.6, so the staged
 # text replaces them at these positions (review round 1).
@@ -148,7 +160,14 @@ def load() -> dict:
         assert "Amazon Bedrock" in us_health["processor"] and "AWS" in us_health["processor"], locale
         assert number(30, entry["deletion"]), locale
         assert "1.0.6" in entry["androidAiFaq"] and "Amazon Bedrock" in entry["androidAiFaq"], locale
-        ios_only = [entry["healthExclusion"]["ios"], entry["onDeviceScope"]]
+        scoped, pointer = entry["onDeviceOnly"], entry["iosAiFaq"]
+        assert ON_DEVICE_DENIAL_TOKEN in scoped and ON_DEVICE_DENIAL_TOKEN not in pointer, locale
+        assert ON_DEVICE_MODEL_TOKEN not in scoped + pointer, f"{locale}: the model is named once, by the page"
+        for token in ("Amazon Bedrock", "Anthropic", "Claude", "DoseWeek"):
+            assert token in pointer, f"{locale}: the iOS AI answer names the server path ({token})"
+        assert name.casefold() in pointer.casefold() and "Pro" in pointer, locale
+        assert "\n" not in scoped + pointer, locale
+        ios_only = [entry["healthExclusion"]["ios"], entry["onDeviceScope"], scoped, pointer]
         android_only = [entry["healthExclusion"]["android"], entry["androidAiFaq"],
                         entry["androidBadge"], entry["androidNotUsedItem"]]
         assert "\n" not in entry["androidBadge"] + entry["androidNotUsedItem"], locale
@@ -170,6 +189,19 @@ def load() -> dict:
     assert "우선 문의 답변" == candidate["locales"]["ko"]["perk"]
     english = "\n".join(candidate["locales"]["en"]["clauses"][4:6] + [candidate["locales"]["en"]["processorRow"]["timingMethod"]])
     assert "end-to-end" not in english, "the AI transit is app-layer encryption to the server key, not end-to-end"
+    wording = candidate["preReleaseWording"]
+    assert list(wording) == list(LOCALES)
+    for locale, drafts in wording.items():
+        assert len(drafts) == PRE_RELEASE_WORDING_FIELDS and all(len(text) > 8 for text in drafts), locale
+        if candidate["status"] == "pre-release-candidate-not-published":
+            # The list follows the text: a draft sentence that is reworded is listed again.
+            entry = candidate["locales"][locale]
+            row = entry["processorRow"]
+            fields = (entry["clauses"][4], row["legalBasis"], row["country"], row["recipientContact"],
+                      row["retention"])
+            assert all(text in field for text, field in zip(drafts, fields)), (
+                f"{locale}: preReleaseWording no longer matches clause 5 and the processor row"
+            )
     return candidate
 
 
@@ -240,6 +272,14 @@ def _sections(entries: list[dict]) -> dict:
     return {section["id"]: section for section in entries}
 
 
+def _scoped_denial(text: str, replacement: str, locale: str) -> str:
+    """Replace the one 1.0.5 sentence that denies any server or third-party model."""
+    found = [part.strip() for block in text.split("\n\n") for part in SENTENCE.split(block)
+             if ON_DEVICE_DENIAL_TOKEN in part]
+    assert len(found) == 1 and text.count(found[0]) == 1, (locale, "on-device AI denial changed")
+    return text.replace(found[0], replacement)
+
+
 def _supplement(privacy: dict, text: dict, platform: str) -> None:
     supplement = privacy["legalSupplement"]
     clauses = [clause.replace(HEALTH_PLACEHOLDER, text["healthExclusion"][platform])
@@ -276,8 +316,14 @@ def integrate(ios: dict, android: dict, terms: dict, us_health: dict, account: d
         # Health-platform data is never used for AI (Apple 5.1.3; PRO-SPEC 5.4 provenance filter).
         ip["health"]["paragraphs"][0] += joiner + text["healthExclusion"]["ios"]
         ap["no-collection"]["paragraphs"][2] += joiner + text["healthExclusion"]["android"]
-        # "No server model" stays true for on-device AI recording; say where the assistant is.
-        ip["ai"]["paragraphs"][0] += "\n\n" + text["onDeviceScope"]
+        # "No server model" is true only for on-device AI entry and Visit Prep. The privacy
+        # section scopes that sentence and says where the assistant is; the support answer
+        # scopes it too and says that the assistant is processed on a server by Amazon Bedrock.
+        ip["ai"]["paragraphs"][0] = (
+            _scoped_denial(ip["ai"]["paragraphs"][0], text["onDeviceOnly"], locale)
+            + "\n\n" + text["onDeviceScope"])
+        answers = i["support"]["released"]["ai"]["answers"]
+        answers[0] = _scoped_denial(answers[0], text["onDeviceOnly"] + joiner + text["iosAiFaq"], locale)
         # 1.0.5 said "no generative AI"; the staged build only bumped the version in that
         # sentence, which is false once the assistant ships in 1.0.6.
         faq = _sections(a["support"]["faq"])["ai-health"]
@@ -323,6 +369,14 @@ def require_release_ready(candidate: dict | None = None) -> None:
     )
     open_flags = [key for key in READINESS_KEYS if candidate["readiness"].get(key) is not True]
     assert not open_flags, f"AI readiness flags still open: {open_flags}"
+    # The flags alone do not change the text: the sentences that say a fact is unverified or will
+    # be recorded before release must be replaced with the verified facts.
+    drafts = [(locale, text) for locale, sentences in candidate["preReleaseWording"].items()
+              for text in sentences if any(text in value for value in _strings(candidate["locales"][locale]))]
+    assert not drafts, (
+        f"AI policy still carries {len(drafts)} draft sentence(s) (not yet verified / before "
+        f"release), first: {drafts[0]}"
+    )
 
 
 if __name__ == "__main__":

@@ -43,8 +43,132 @@
     "The EVAL-AI release gate (PRO-SPEC 10.4) has not run; the refusal behaviour described in clause 12 depends on it",
     "Store declarations (App Review notes, App Privacy, age rating, Play Data safety, Health apps declaration, App access) are drafts in docs/AI_STORE_DECLARATIONS_1_0_6.md; console entry and readback are owner-gated (STORE-PRO)",
     "Priority support replies: the one-business-day first reply is defined as Korean weekdays excluding public holidays; this definition is a lane clarification that the owner can change",
-    "The Pro subscription sentences in the Terms AI section (auto-renewal, 7-day trial eligibility, trial cap of 50) must be reconciled with the final Store configuration and the Korean paid-conversion consent text before publication"
+    "The Pro subscription sentences in the Terms AI section (auto-renewal, 7-day trial eligibility, trial cap of 50) must be reconciled with the final Store configuration and the Korean paid-conversion consent text before publication",
+    "Japanese privacy clause 6 (locales.ja.clauses[5]) states only the processing location (Seoul Region, not sent to another country). compliance 8.1 clause 6 asks the Japanese edition to state the transfer to the Republic of Korea with the country, its legal regime (PIPA and its supervisor, the PIPC) and the safeguards (APPI Art. 28). That statement exists only on Screen A (ai.consent.a.region.jp) and in the general APPI paragraph of the supplement; counsel or the native reviewer adds it to clause 6 with the APPI block, and the ja receipt is re-hashed (review round 2, minor)",
+    "Screen A ai.consent.a.retention.body says the answers are saved only on the device (PRO-SPEC 5.1 verbatim), while privacy clause 4 follows R-8: chat messages are not stored and only the weekly summary cards, at most 2, stay on the device. The consent screen reads broader than the policy; the owner aligns the Screen A sentence with clause 4 at gate 6, then consentVersion is bumped and the 17 receipts are regenerated (review round 2, minor)",
+    "zh-Hans and zh-Hant render 'general meal ideas' as 一般饮食建议 / 一般飲食建議 (general dietary suggestions), the term the shipped CON-PRO strings ai.refuse.diet and ai.refuse.other already use. An 'ideas' term (for example 餐食灵感 / 餐點靈感) has to change in the CON-PRO strings, the consent copy and this policy together, with new zh receipts; decided with the CON-PRO owner at gate 6 (review round 2, minor)"
   ],
+  "preReleaseWording": {
+    "ko": [
+      "AWS의 계약 법인과 연락처는 아직 확인하지 않았고, 출시 전에 이 방침에 적어요.",
+      "28-8의 해외 접근 근거는 미확인이에요.",
+      "해외 지원·접근 여부는 미확인이에요.",
+      "Amazon Web Services(AWS)의 계약 법인과 수신자 연락처는 미확인이에요.",
+      "실제 설정을 확인한 기록은 출시 전에 남겨요."
+    ],
+    "en": [
+      "The AWS contracting entity and its contact details are not yet verified and will be stated in this policy before release.",
+      "28-8 basis for any overseas access are unverified.",
+      "Overseas support or access is unverified.",
+      "The contracting entity and recipient contact for Amazon Web Services (AWS) are unverified.",
+      "the record of checking the actual setting is kept before release."
+    ],
+    "ja": [
+      "AWSの契約法人と連絡先はまだ確認できておらず、リリース前にこのポリシーに記載します。",
+      "28-8 に基づく国外からのアクセスの根拠は未確認です。",
+      "国外からのサポート・アクセスの有無は未確認です。",
+      "Amazon Web Services（AWS）の契約法人と受領者の連絡先は未確認です。",
+      "実際の設定を確認した記録はリリース前に残します。"
+    ],
+    "de": [
+      "Die AWS-Vertragsgesellschaft und ihre Kontaktdaten sind noch nicht geprüft und werden vor der Veröffentlichung in dieser Erklärung genannt.",
+      "28-8 für einen Zugriff aus dem Ausland sind ungeprüft.",
+      "Support oder Zugriff aus dem Ausland ist ungeprüft.",
+      "Die Vertragsgesellschaft und der Empfängerkontakt von Amazon Web Services (AWS) sind ungeprüft.",
+      "der Nachweis der tatsächlichen Einstellung wird vor der Veröffentlichung festgehalten."
+    ],
+    "fr": [
+      "L’entité contractante d’AWS et ses coordonnées ne sont pas encore vérifiées et seront indiquées dans cette politique avant la publication.",
+      "28-8 pour un accès depuis l’étranger ne sont pas vérifiés.",
+      "L’assistance ou l’accès depuis l’étranger ne sont pas vérifiés.",
+      "L’entité contractante et le contact destinataire d’Amazon Web Services (AWS) ne sont pas vérifiés.",
+      "la preuve du réglage réel est consignée avant la publication."
+    ],
+    "es": [
+      "La entidad contratante de AWS y sus datos de contacto aún no están verificados y se indicarán en esta política antes del lanzamiento.",
+      "28-8 para un acceso desde el extranjero no están verificados.",
+      "El soporte o el acceso desde el extranjero no están verificados.",
+      "La entidad contratante y el contacto del destinatario de Amazon Web Services (AWS) no están verificados.",
+      "el registro de la comprobación de la configuración real se guarda antes del lanzamiento."
+    ],
+    "it": [
+      "La società contraente di AWS e i suoi recapiti non sono ancora verificati e saranno indicati in questa informativa prima del rilascio.",
+      "28-8 per un accesso dall’estero non sono verificati.",
+      "L’assistenza o l’accesso dall’estero non sono verificati.",
+      "La società contraente e il contatto del destinatario di Amazon Web Services (AWS) non sono verificati.",
+      "la prova della verifica dell’impostazione effettiva viene registrata prima del rilascio."
+    ],
+    "nl": [
+      "De contracterende AWS-entiteit en haar contactgegevens zijn nog niet geverifieerd en worden vóór de release in dit beleid vermeld.",
+      "28-8 voor toegang vanuit het buitenland zijn niet geverifieerd.",
+      "Ondersteuning of toegang vanuit het buitenland is niet geverifieerd.",
+      "De contracterende entiteit en het contact van de ontvanger van Amazon Web Services (AWS) zijn niet geverifieerd.",
+      "het bewijs van de controle van de werkelijke instelling wordt vóór de release vastgelegd."
+    ],
+    "pt-PT": [
+      "A entidade contratante da AWS e os respetivos contactos ainda não foram verificados e serão indicados nesta política antes do lançamento.",
+      "28-8 para um acesso a partir do estrangeiro não estão verificados.",
+      "O suporte ou o acesso a partir do estrangeiro não estão verificados.",
+      "A entidade contratante e o contacto do destinatário da Amazon Web Services (AWS) não estão verificados.",
+      "o registo da verificação da configuração real é guardado antes do lançamento."
+    ],
+    "pl": [
+      "Podmiot AWS będący stroną umowy i jego dane kontaktowe nie zostały jeszcze zweryfikowane i zostaną podane w tej polityce przed wydaniem.",
+      "28-8 dla dostępu z zagranicy nie zostały zweryfikowane.",
+      "Wsparcie lub dostęp z zagranicy nie zostały zweryfikowane.",
+      "Podmiot będący stroną umowy i kontakt odbiorcy Amazon Web Services (AWS) nie zostały zweryfikowane.",
+      "zapis sprawdzenia rzeczywistego ustawienia zostanie sporządzony przed wydaniem."
+    ],
+    "sv": [
+      "AWS avtalspart och dess kontaktuppgifter är ännu inte verifierade och anges i den här policyn före lanseringen.",
+      "28-8 för åtkomst från utlandet är inte verifierade.",
+      "Support eller åtkomst från utlandet är inte verifierad.",
+      "Avtalsparten och mottagarkontakten för Amazon Web Services (AWS) är inte verifierade.",
+      "dokumentationen av kontrollen av den faktiska inställningen sparas före lanseringen."
+    ],
+    "hi": [
+      "AWS की अनुबंध करने वाली इकाई और उसके संपर्क विवरण की अभी पुष्टि नहीं हुई है; रिलीज़ से पहले इन्हें इस नीति में लिखा जाएगा।",
+      "28-8 का आधार असत्यापित है।",
+      "विदेश से सहायता या पहुँच असत्यापित है।",
+      "Amazon Web Services (AWS) की अनुबंध करने वाली इकाई और प्राप्तकर्ता का संपर्क असत्यापित है।",
+      "असली सेटिंग की जाँच का रिकॉर्ड रिलीज़ से पहले रखा जाएगा।"
+    ],
+    "pt-BR": [
+      "A entidade contratante da AWS e seus dados de contato ainda não foram verificados e serão informados nesta política antes do lançamento.",
+      "28-8 para acesso a partir do exterior não foram verificados.",
+      "Suporte ou acesso a partir do exterior não foram verificados.",
+      "A entidade contratante e o contato do destinatário da Amazon Web Services (AWS) não foram verificados.",
+      "o registro da verificação da configuração real é guardado antes do lançamento."
+    ],
+    "ar": [
+      "الكيان المتعاقد من AWS وبيانات الاتصال به لم يُتحقق منها بعد، وستُذكر في هذه السياسة قبل الإصدار.",
+      "28-8 لأي وصول من الخارج غير متحقق منهما.",
+      "الدعم أو الوصول من الخارج غير متحقق منه.",
+      "الكيان المتعاقد وجهة الاتصال لدى Amazon Web Services (AWS) غير متحقق منهما.",
+      "ويُحفظ سجل التحقق من الإعداد الفعلي قبل الإصدار."
+    ],
+    "zh-Hans": [
+      "AWS 的签约实体及其联系方式尚未核实，将在发布前写入本政策。",
+      "28-8 下境外访问的依据尚未核实。",
+      "是否存在境外支持或访问尚未核实。",
+      "Amazon Web Services（AWS）的签约实体和接收方联系方式尚未核实。",
+      "实际设置的核查记录将在发布前留存。"
+    ],
+    "zh-Hant": [
+      "AWS 的簽約實體及其聯絡方式尚未確認，將在發布前寫入本政策。",
+      "28-8 下境外存取的依據尚未確認。",
+      "是否有境外支援或存取尚未確認。",
+      "Amazon Web Services（AWS）的簽約實體和接收方聯絡方式尚未確認。",
+      "實際設定的查核紀錄將在發布前留存。"
+    ],
+    "tr": [
+      "AWS’nin sözleşme tarafı olan tüzel kişi ve iletişim bilgileri henüz doğrulanmamıştır ve yayından önce bu politikada belirtilecektir.",
+      "28-8 dayanağı doğrulanmamıştır.",
+      "Yurt dışından destek veya erişim doğrulanmamıştır.",
+      "Amazon Web Services’in (AWS) sözleşme tarafı olan tüzel kişi ve alıcı iletişim bilgisi doğrulanmamıştır.",
+      "gerçek ayarın kontrol kaydı yayından önce tutulur."
+    ]
+  },
   "localeOrder": [
     "ko",
     "en",
@@ -89,7 +213,9 @@
         "android": "Health Connect에서 읽어 온 정보는 AI 기능에도 사용하지 않고, AI 기록 도우미로 보내지 않아요."
       },
       "onDeviceScope": "이 항목은 기기 안에서만 처리하는 AI 기록과 진료 준비에 관한 내용이에요. 서버에서 처리하는 AI 기록 도우미(Pro)는 이 방침의 ‘AI 기록 도우미(Pro)’ 항목에서 따로 설명해요.",
-      "androidAiFaq": "Android용 DoseWeek 1.0.6에는 선택 기능인 AI 기록 도우미(Pro)가 있어요. 따로 동의한 뒤에만 Amazon Bedrock(대한민국 서울 리전)의 생성형 AI가 주간 요약, 일반적인 식사 아이디어, 앱 사용 도움말을 만들어요. 그 밖의 기능에는 생성형 AI를 쓰지 않아요.",
+      "onDeviceOnly": "기기 안에서 처리하는 이 두 기능에는 Private Cloud Compute, 서버 모델, 제3자 모델을 쓰지 않아요.",
+      "iosAiFaq": "AI 기록 도우미(Pro)는 이와 다른 기능이에요. 서버에서 제3자 모델로 처리해요. 따로 동의한 뒤에만, 확인하고 보낸 내용이 DoseWeek 서버를 거쳐 Amazon Bedrock(대한민국 서울 리전)으로 가고, Anthropic의 Claude 모델이 답을 만들어요. 인터넷에 연결되어 있어야 하고, 잠시 쉬어 갈 때는 앱에서 알려 드려요. 자세한 내용은 개인정보 처리방침의 ‘AI 기록 도우미(Pro)’ 항목에 있어요.",
+      "androidAiFaq": "Android용 DoseWeek 1.0.6에는 선택 기능인 AI 기록 도우미(Pro)가 있어요. 이 기능은 기기가 아니라 서버에서 처리해요. 따로 동의한 뒤에만 Amazon Bedrock(대한민국 서울 리전)의 생성형 AI가 주간 요약, 일반적인 식사 아이디어, 앱 사용 도움말을 만들어요. 그 밖의 기능에는 생성형 AI를 쓰지 않아요.",
       "androidBadge": "생성형 AI는 따로 동의한 AI 기록 도우미에서만 써요",
       "androidNotUsedItem": "따로 동의하기 전에 생성형 AI(AI 기록 도우미) 사용",
       "processorRow": {
@@ -146,7 +272,9 @@
         "android": "Information read from Health Connect is not used for AI features either and is not sent to the AI record assistant."
       },
       "onDeviceScope": "This section covers only AI recording and visit preparation, which are processed on the device. The AI record assistant (Pro), which is processed on a server, is described separately under “AI record assistant (Pro)” in this policy.",
-      "androidAiFaq": "DoseWeek 1.0.6 for Android includes the optional AI record assistant (Pro). Only after separate consent, generative AI on Amazon Bedrock (Seoul Region, Republic of Korea) creates weekly summaries, general meal ideas and app-help answers. No other feature uses generative AI.",
+      "onDeviceOnly": "These two on-device features use no Private Cloud Compute, server model, or third-party model.",
+      "iosAiFaq": "The AI record assistant (Pro) is a different feature: it is processed on a server, with a third-party model. Only after your separate consent, what you confirm and send goes through the DoseWeek server to Amazon Bedrock (Seoul Region, Republic of Korea), where the Claude model by Anthropic creates the answer. It needs an internet connection and can be paused for a while; the app tells you when that happens. The Privacy Policy describes it under “AI record assistant (Pro)”.",
+      "androidAiFaq": "DoseWeek 1.0.6 for Android includes the optional AI record assistant (Pro). It is processed on a server, not on the device. Only after separate consent, generative AI on Amazon Bedrock (Seoul Region, Republic of Korea) creates weekly summaries, general meal ideas and app-help answers. No other feature uses generative AI.",
       "androidBadge": "Generative AI only in the AI record assistant, after separate consent",
       "androidNotUsedItem": "Using generative AI (the AI record assistant) without your separate consent",
       "processorRow": {
@@ -203,7 +331,9 @@
         "android": "Health Connectから読み取った情報はAI機能にも使用せず、AI記録アシスタントにも送信しません。"
       },
       "onDeviceScope": "この項目は、端末内だけで処理するAI記録と受診準備についての説明です。サーバーで処理するAI記録アシスタント（Pro）については、このポリシーの「AI記録アシスタント（Pro）」の項目で別に説明します。",
-      "androidAiFaq": "Android版DoseWeek 1.0.6には、任意の機能としてAI記録アシスタント（Pro）があります。別途同意した場合にのみ、Amazon Bedrock（大韓民国ソウルリージョン）の生成AIが週間サマリー、一般的な食事のアイデア、アプリの使い方の回答を作成します。そのほかの機能では生成AIを使用しません。",
+      "onDeviceOnly": "端末内で処理するこの2つの機能では、Private Cloud Compute、サーバーモデル、第三者モデルを使用しません。",
+      "iosAiFaq": "AI記録アシスタント（Pro）はこれとは別の機能で、サーバー上で第三者のモデルを使って処理します。別途同意した場合にのみ、確認して送信した内容がDoseWeekのサーバーを経由してAmazon Bedrock（大韓民国ソウルリージョン）に送られ、AnthropicのClaudeモデルが回答を作成します。利用にはインターネット接続が必要で、一時的に停止することがあります。その場合はアプリでお知らせします。詳しくは、プライバシーポリシーの「AI記録アシスタント（Pro）」の項目をご覧ください。",
+      "androidAiFaq": "Android版DoseWeek 1.0.6には、任意の機能としてAI記録アシスタント（Pro）があります。この機能は端末内ではなく、サーバーで処理します。別途同意した場合にのみ、Amazon Bedrock（大韓民国ソウルリージョン）の生成AIが週間サマリー、一般的な食事のアイデア、アプリの使い方の回答を作成します。そのほかの機能では生成AIを使用しません。",
       "androidBadge": "生成AIは、別途同意したAI記録アシスタントでのみ使用",
       "androidNotUsedItem": "別途の同意なしでの生成AI（AI記録アシスタント）の使用",
       "processorRow": {
@@ -260,7 +390,9 @@
         "android": "Aus Health Connect gelesene Daten werden auch nicht für KI-Funktionen verwendet und nicht an den KI-Aufzeichnungsassistenten gesendet."
       },
       "onDeviceScope": "Dieser Abschnitt betrifft nur die KI-Erfassung und die Terminvorbereitung, die auf dem Gerät verarbeitet werden. Der KI-Aufzeichnungsassistent (Pro), der auf einem Server verarbeitet wird, ist in dieser Erklärung gesondert unter „KI-Aufzeichnungsassistent (Pro)“ beschrieben.",
-      "androidAiFaq": "DoseWeek 1.0.6 für Android enthält den optionalen KI-Aufzeichnungsassistenten (Pro). Nur nach gesonderter Einwilligung erstellt generative KI auf Amazon Bedrock (Region Seoul, Republik Korea) Wochenübersichten, allgemeine Mahlzeitenideen und Antworten zur App-Nutzung. Keine andere Funktion verwendet generative KI.",
+      "onDeviceOnly": "Diese beiden Funktionen auf dem Gerät verwenden kein Private Cloud Compute, kein Servermodell und kein Modell Dritter.",
+      "iosAiFaq": "Der KI-Aufzeichnungsassistent (Pro) ist eine andere Funktion: Er wird auf einem Server mit einem Modell eines Dritten verarbeitet. Nur nach Ihrer gesonderten Einwilligung geht das, was Sie bestätigen und senden, über den DoseWeek-Server an Amazon Bedrock (Region Seoul, Republik Korea), wo das Modell Claude von Anthropic die Antwort erstellt. Er benötigt eine Internetverbindung und kann vorübergehend pausiert sein; die App teilt Ihnen das dann mit. Die Datenschutzerklärung beschreibt ihn unter „KI-Aufzeichnungsassistent (Pro)“.",
+      "androidAiFaq": "DoseWeek 1.0.6 für Android enthält den optionalen KI-Aufzeichnungsassistenten (Pro). Er wird auf einem Server verarbeitet, nicht auf dem Gerät. Nur nach gesonderter Einwilligung erstellt generative KI auf Amazon Bedrock (Region Seoul, Republik Korea) Wochenübersichten, allgemeine Mahlzeitenideen und Antworten zur App-Nutzung. Keine andere Funktion verwendet generative KI.",
       "androidBadge": "Generative KI nur im KI-Aufzeichnungsassistenten, nach gesonderter Einwilligung",
       "androidNotUsedItem": "Nutzung generativer KI (KI-Aufzeichnungsassistent) ohne Ihre gesonderte Einwilligung",
       "processorRow": {
@@ -317,7 +449,9 @@
         "android": "Les informations lues depuis Health Connect ne sont pas non plus utilisées pour les fonctions d’IA et ne sont pas envoyées à l’assistant de suivi IA."
       },
       "onDeviceScope": "Cette section concerne uniquement l’enregistrement par IA et la préparation de consultation, qui sont traités sur l’appareil. L’assistant de suivi IA (Pro), traité sur un serveur, est décrit séparément dans la section « Assistant de suivi IA (Pro) » de cette politique.",
-      "androidAiFaq": "DoseWeek 1.0.6 pour Android comprend l’assistant de suivi IA (Pro), une fonction facultative. Uniquement après un consentement distinct, une IA générative sur Amazon Bedrock (région de Séoul, République de Corée) crée des résumés hebdomadaires, des idées de repas générales et des réponses d’aide sur l’app. Aucune autre fonction n’utilise d’IA générative.",
+      "onDeviceOnly": "Ces deux fonctions exécutées sur l’appareil n’utilisent ni Private Cloud Compute, ni modèle serveur, ni modèle tiers.",
+      "iosAiFaq": "L’assistant de suivi IA (Pro) est une fonction différente : il est traité sur un serveur, avec un modèle tiers. Uniquement après votre consentement distinct, ce que vous confirmez et envoyez passe par le serveur DoseWeek jusqu’à Amazon Bedrock (région de Séoul, République de Corée), où le modèle Claude d’Anthropic crée la réponse. Il nécessite une connexion Internet et peut être mis en pause temporairement ; l’app vous l’indique alors. La politique de confidentialité le décrit dans la section « Assistant de suivi IA (Pro) ».",
+      "androidAiFaq": "DoseWeek 1.0.6 pour Android comprend l’assistant de suivi IA (Pro), une fonction facultative. Il est traité sur un serveur, et non sur l’appareil. Uniquement après un consentement distinct, une IA générative sur Amazon Bedrock (région de Séoul, République de Corée) crée des résumés hebdomadaires, des idées de repas générales et des réponses d’aide sur l’app. Aucune autre fonction n’utilise d’IA générative.",
       "androidBadge": "IA générative uniquement dans l’assistant de suivi IA, après un consentement distinct",
       "androidNotUsedItem": "Utilisation d’une IA générative (assistant de suivi IA) sans votre consentement distinct",
       "processorRow": {
@@ -374,7 +508,9 @@
         "android": "La información leída de Health Connect tampoco se usa para funciones de IA ni se envía al asistente de registros con IA."
       },
       "onDeviceScope": "Esta sección se refiere solo al registro con IA y a la preparación de la consulta, que se procesan en el dispositivo. El asistente de registros con IA (Pro), que se procesa en un servidor, se describe por separado en la sección «Asistente de registros con IA (Pro)» de esta política.",
-      "androidAiFaq": "DoseWeek 1.0.6 para Android incluye el asistente de registros con IA (Pro), una función opcional. Solo tras un consentimiento aparte, una IA generativa en Amazon Bedrock (región de Seúl, República de Corea) crea resúmenes semanales, ideas generales de comidas y respuestas de ayuda sobre la app. Ninguna otra función usa IA generativa.",
+      "onDeviceOnly": "Estas dos funciones en el dispositivo no usan Private Cloud Compute, ni modelos de servidor, ni modelos de terceros.",
+      "iosAiFaq": "El asistente de registros con IA (Pro) es una función distinta: se procesa en un servidor, con un modelo de terceros. Solo tras su consentimiento aparte, lo que usted confirma y envía pasa por el servidor de DoseWeek hasta Amazon Bedrock (región de Seúl, República de Corea), donde el modelo Claude de Anthropic crea la respuesta. Necesita conexión a internet y puede estar en pausa durante un tiempo; la app se lo indica cuando ocurre. La política de privacidad lo describe en la sección «Asistente de registros con IA (Pro)».",
+      "androidAiFaq": "DoseWeek 1.0.6 para Android incluye el asistente de registros con IA (Pro), una función opcional. Se procesa en un servidor, no en el dispositivo. Solo tras un consentimiento aparte, una IA generativa en Amazon Bedrock (región de Seúl, República de Corea) crea resúmenes semanales, ideas generales de comidas y respuestas de ayuda sobre la app. Ninguna otra función usa IA generativa.",
       "androidBadge": "IA generativa solo en el asistente de registros con IA, tras un consentimiento aparte",
       "androidNotUsedItem": "Usar IA generativa (asistente de registros con IA) sin su consentimiento aparte",
       "processorRow": {
@@ -431,7 +567,9 @@
         "android": "Le informazioni lette da Health Connect non sono usate nemmeno per le funzioni di IA e non sono inviate all’assistente IA per le registrazioni."
       },
       "onDeviceScope": "Questa sezione riguarda solo la registrazione con IA e la preparazione della visita, che sono elaborate sul dispositivo. L’assistente IA per le registrazioni (Pro), elaborato su un server, è descritto separatamente nella sezione «Assistente IA per le registrazioni (Pro)» di questa informativa.",
-      "androidAiFaq": "DoseWeek 1.0.6 per Android include l’assistente IA per le registrazioni (Pro), una funzione facoltativa. Solo dopo un consenso separato, un’IA generativa su Amazon Bedrock (regione di Seul, Repubblica di Corea) crea riepiloghi settimanali, idee generali per i pasti e risposte di aiuto sull’app. Nessun’altra funzione usa IA generativa.",
+      "onDeviceOnly": "Queste due funzioni sul dispositivo non usano Private Cloud Compute, modelli su server o modelli di terze parti.",
+      "iosAiFaq": "L’assistente IA per le registrazioni (Pro) è una funzione diversa: viene elaborato su un server, con un modello di terze parti. Solo dopo il tuo consenso separato, ciò che confermi e invii passa dal server DoseWeek ad Amazon Bedrock (regione di Seul, Repubblica di Corea), dove il modello Claude di Anthropic crea la risposta. Richiede una connessione a internet e può essere in pausa per un po’; in quel caso l’app ti avvisa. L’informativa sulla privacy lo descrive nella sezione «Assistente IA per le registrazioni (Pro)».",
+      "androidAiFaq": "DoseWeek 1.0.6 per Android include l’assistente IA per le registrazioni (Pro), una funzione facoltativa. Viene elaborato su un server, non sul dispositivo. Solo dopo un consenso separato, un’IA generativa su Amazon Bedrock (regione di Seul, Repubblica di Corea) crea riepiloghi settimanali, idee generali per i pasti e risposte di aiuto sull’app. Nessun’altra funzione usa IA generativa.",
       "androidBadge": "IA generativa solo nell’assistente IA per le registrazioni, dopo un consenso separato",
       "androidNotUsedItem": "Usare l’IA generativa (assistente IA per le registrazioni) senza il tuo consenso separato",
       "processorRow": {
@@ -488,7 +626,9 @@
         "android": "Gegevens die uit Health Connect zijn gelezen, worden ook niet voor AI-functies gebruikt en niet naar de AI-registratieassistent gestuurd."
       },
       "onDeviceScope": "Dit onderdeel gaat alleen over AI-registratie en de voorbereiding van een afspraak, die op het apparaat worden verwerkt. De AI-registratieassistent (Pro), die op een server wordt verwerkt, wordt apart beschreven onder ‘AI-registratieassistent (Pro)’ in dit beleid.",
-      "androidAiFaq": "DoseWeek 1.0.6 voor Android bevat de optionele AI-registratieassistent (Pro). Alleen na afzonderlijke toestemming maakt generatieve AI op Amazon Bedrock (regio Seoul, Republiek Korea) weekoverzichten, algemene maaltijdideeën en antwoorden op vragen over de app. Geen enkele andere functie gebruikt generatieve AI.",
+      "onDeviceOnly": "Deze twee functies op het apparaat gebruiken geen Private Cloud Compute, servermodel of model van derden.",
+      "iosAiFaq": "De AI-registratieassistent (Pro) is een andere functie: deze wordt op een server verwerkt, met een model van een derde partij. Alleen na uw afzonderlijke toestemming gaat wat u bevestigt en verstuurt via de DoseWeek-server naar Amazon Bedrock (regio Seoul, Republiek Korea), waar het Claude-model van Anthropic het antwoord maakt. De assistent heeft een internetverbinding nodig en kan tijdelijk gepauzeerd zijn; de app meldt dat dan. Het privacybeleid beschrijft de assistent onder ‘AI-registratieassistent (Pro)’.",
+      "androidAiFaq": "DoseWeek 1.0.6 voor Android bevat de optionele AI-registratieassistent (Pro). Deze wordt op een server verwerkt, niet op het apparaat. Alleen na afzonderlijke toestemming maakt generatieve AI op Amazon Bedrock (regio Seoul, Republiek Korea) weekoverzichten, algemene maaltijdideeën en antwoorden op vragen over de app. Geen enkele andere functie gebruikt generatieve AI.",
       "androidBadge": "Generatieve AI alleen in de AI-registratieassistent, na afzonderlijke toestemming",
       "androidNotUsedItem": "Generatieve AI (de AI-registratieassistent) gebruiken zonder uw afzonderlijke toestemming",
       "processorRow": {
@@ -545,7 +685,9 @@
         "android": "A informação lida do Health Connect também não é usada em funcionalidades de IA nem é enviada ao assistente de registos com IA."
       },
       "onDeviceScope": "Esta secção refere-se apenas ao registo com IA e à preparação da consulta, que são processados no dispositivo. O assistente de registos com IA (Pro), processado num servidor, é descrito em separado na secção «Assistente de registos com IA (Pro)» desta política.",
-      "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registos com IA (Pro), uma funcionalidade opcional. Só depois de um consentimento separado é que uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre a aplicação. Nenhuma outra funcionalidade usa IA generativa.",
+      "onDeviceOnly": "Estas duas funcionalidades no dispositivo não usam Private Cloud Compute, modelo em servidor nem modelo de terceiros.",
+      "iosAiFaq": "O assistente de registos com IA (Pro) é uma funcionalidade diferente: é processado num servidor, com um modelo de terceiros. Só depois do seu consentimento separado é que aquilo que confirma e envia passa pelo servidor do DoseWeek até ao Amazon Bedrock (região de Seul, República da Coreia), onde o modelo Claude, da Anthropic, cria a resposta. Precisa de ligação à internet e pode estar em pausa durante algum tempo; nesse caso, a aplicação avisa. A política de privacidade descreve-o na secção «Assistente de registos com IA (Pro)».",
+      "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registos com IA (Pro), uma funcionalidade opcional. É processado num servidor, e não no dispositivo. Só depois de um consentimento separado é que uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre a aplicação. Nenhuma outra funcionalidade usa IA generativa.",
       "androidBadge": "IA generativa apenas no assistente de registos com IA, após um consentimento separado",
       "androidNotUsedItem": "Utilizar IA generativa (assistente de registos com IA) sem o seu consentimento separado",
       "processorRow": {
@@ -602,7 +744,9 @@
         "android": "Informacje odczytane z Health Connect nie są też używane w funkcjach AI i nie są wysyłane do asystenta wpisów AI."
       },
       "onDeviceScope": "Ta sekcja dotyczy tylko zapisu z AI i przygotowania do wizyty, które są przetwarzane na urządzeniu. Asystent wpisów AI (Pro), przetwarzany na serwerze, jest opisany osobno w sekcji „Asystent wpisów AI (Pro)” tej polityki.",
-      "androidAiFaq": "DoseWeek 1.0.6 na Androida zawiera opcjonalnego asystenta wpisów AI (Pro). Tylko po odrębnej zgodzie generatywna AI w Amazon Bedrock (region Seul, Republika Korei) tworzy podsumowania tygodnia, ogólne pomysły na posiłki i odpowiedzi z pomocą dotyczącą aplikacji. Żadna inna funkcja nie używa generatywnej AI.",
+      "onDeviceOnly": "Te dwie funkcje działające na urządzeniu nie używają Private Cloud Compute, modelu serwerowego ani modelu innej firmy.",
+      "iosAiFaq": "Asystent wpisów AI (Pro) to inna funkcja: jest przetwarzany na serwerze, z użyciem modelu innej firmy. Tylko po Twojej odrębnej zgodzie to, co potwierdzisz i wyślesz, trafia przez serwer DoseWeek do Amazon Bedrock (region Seul, Republika Korei), gdzie model Claude firmy Anthropic tworzy odpowiedź. Wymaga połączenia z internetem i może być czasowo wstrzymany; aplikacja wtedy o tym informuje. Polityka prywatności opisuje go w sekcji „Asystent wpisów AI (Pro)”.",
+      "androidAiFaq": "DoseWeek 1.0.6 na Androida zawiera opcjonalnego asystenta wpisów AI (Pro). Jest przetwarzany na serwerze, a nie na urządzeniu. Tylko po odrębnej zgodzie generatywna AI w Amazon Bedrock (region Seul, Republika Korei) tworzy podsumowania tygodnia, ogólne pomysły na posiłki i odpowiedzi z pomocą dotyczącą aplikacji. Żadna inna funkcja nie używa generatywnej AI.",
       "androidBadge": "Generatywna AI tylko w asystencie wpisów AI, po odrębnej zgodzie",
       "androidNotUsedItem": "Korzystanie z generatywnej AI (asystent wpisów AI) bez odrębnej zgody",
       "processorRow": {
@@ -659,7 +803,9 @@
         "android": "Uppgifter som har lästs från Health Connect används inte heller för AI-funktioner och skickas inte till AI-loggassistenten."
       },
       "onDeviceScope": "Det här avsnittet gäller bara AI-loggning och besöksförberedelse, som behandlas på enheten. AI-loggassistenten (Pro), som behandlas på en server, beskrivs separat under ”AI-loggassistenten (Pro)” i den här policyn.",
-      "androidAiFaq": "DoseWeek 1.0.6 för Android innehåller den valfria AI-loggassistenten (Pro). Först efter ett separat samtycke skapar generativ AI på Amazon Bedrock (regionen Seoul, Republiken Korea) veckosammanfattningar, allmänna måltidsidéer och svar om hur appen fungerar. Ingen annan funktion använder generativ AI.",
+      "onDeviceOnly": "De här två funktionerna på enheten använder ingen Private Cloud Compute, ingen servermodell och ingen tredjepartsmodell.",
+      "iosAiFaq": "AI-loggassistenten (Pro) är en annan funktion: den behandlas på en server, med en modell från tredje part. Först efter ditt separata samtycke går det du bekräftar och skickar via DoseWeeks server till Amazon Bedrock (regionen Seoul, Republiken Korea), där modellen Claude från Anthropic skapar svaret. Den kräver internetanslutning och kan vara pausad en stund; appen talar då om det. Integritetspolicyn beskriver den under ”AI-loggassistenten (Pro)”.",
+      "androidAiFaq": "DoseWeek 1.0.6 för Android innehåller den valfria AI-loggassistenten (Pro). Den behandlas på en server, inte på enheten. Först efter ett separat samtycke skapar generativ AI på Amazon Bedrock (regionen Seoul, Republiken Korea) veckosammanfattningar, allmänna måltidsidéer och svar om hur appen fungerar. Ingen annan funktion använder generativ AI.",
       "androidBadge": "Generativ AI bara i AI-loggassistenten, efter ett separat samtycke",
       "androidNotUsedItem": "Användning av generativ AI (AI-loggassistenten) utan ditt separata samtycke",
       "processorRow": {
@@ -716,7 +862,9 @@
         "android": "Health Connect से पढ़ी गई जानकारी का इस्तेमाल AI सुविधाओं के लिए भी नहीं किया जाता और उसे AI रिकॉर्ड असिस्टेंट को नहीं भेजा जाता।"
       },
       "onDeviceScope": "यह अनुभाग सिर्फ़ AI से रिकॉर्ड करने और विज़िट की तैयारी के बारे में है, जो डिवाइस पर ही प्रोसेस होते हैं। सर्वर पर प्रोसेस होने वाले AI रिकॉर्ड असिस्टेंट (Pro) के बारे में इस नीति के “AI रिकॉर्ड असिस्टेंट (Pro)” अनुभाग में अलग से बताया गया है।",
-      "androidAiFaq": "Android के लिए DoseWeek 1.0.6 में वैकल्पिक AI रिकॉर्ड असिस्टेंट (Pro) शामिल है। अलग से सहमति देने के बाद ही Amazon Bedrock (सियोल क्षेत्र, कोरिया गणराज्य) पर जनरेटिव AI साप्ताहिक सारांश, भोजन के सामान्य आइडिया और ऐप इस्तेमाल से जुड़ी मदद के जवाब बनाता है। कोई और सुविधा जनरेटिव AI का इस्तेमाल नहीं करती।",
+      "onDeviceOnly": "डिवाइस पर चलने वाली इन दो सुविधाओं में Private Cloud Compute, सर्वर मॉडल या किसी तीसरे पक्ष के मॉडल का इस्तेमाल नहीं किया जाता।",
+      "iosAiFaq": "AI रिकॉर्ड असिस्टेंट (Pro) एक अलग सुविधा है: यह सर्वर पर, तीसरे पक्ष के मॉडल से प्रोसेस होता है। आपकी अलग से दी गई सहमति के बाद ही, आप जो पुष्टि करके भेजते हैं वह DoseWeek सर्वर से होकर Amazon Bedrock (सियोल क्षेत्र, कोरिया गणराज्य) तक जाता है, जहाँ Anthropic का Claude मॉडल जवाब बनाता है। इसके लिए इंटरनेट कनेक्शन चाहिए और यह कुछ समय के लिए रुका हो सकता है; ऐसा होने पर ऐप आपको बताता है। गोपनीयता नीति में इसका विवरण “AI रिकॉर्ड असिस्टेंट (Pro)” अनुभाग में है।",
+      "androidAiFaq": "Android के लिए DoseWeek 1.0.6 में वैकल्पिक AI रिकॉर्ड असिस्टेंट (Pro) शामिल है। यह डिवाइस पर नहीं, सर्वर पर प्रोसेस होता है। अलग से सहमति देने के बाद ही Amazon Bedrock (सियोल क्षेत्र, कोरिया गणराज्य) पर जनरेटिव AI साप्ताहिक सारांश, भोजन के सामान्य आइडिया और ऐप इस्तेमाल से जुड़ी मदद के जवाब बनाता है। कोई और सुविधा जनरेटिव AI का इस्तेमाल नहीं करती।",
       "androidBadge": "जनरेटिव AI केवल AI रिकॉर्ड असिस्टेंट में, अलग से सहमति देने के बाद",
       "androidNotUsedItem": "आपकी अलग सहमति के बिना जनरेटिव AI (AI रिकॉर्ड असिस्टेंट) का इस्तेमाल",
       "processorRow": {
@@ -773,7 +921,9 @@
         "android": "As informações lidas do Health Connect também não são usadas em recursos de IA nem enviadas ao assistente de registros com IA."
       },
       "onDeviceScope": "Esta seção trata apenas do registro com IA e da preparação para a consulta, que são processados no dispositivo. O assistente de registros com IA (Pro), processado em um servidor, é descrito separadamente na seção “Assistente de registros com IA (Pro)” desta política.",
-      "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registros com IA (Pro), um recurso opcional. Somente depois de um consentimento separado, uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre o app. Nenhum outro recurso usa IA generativa.",
+      "onDeviceOnly": "Estes dois recursos no dispositivo não usam Private Cloud Compute, modelo em servidor nem modelo de terceiros.",
+      "iosAiFaq": "O assistente de registros com IA (Pro) é um recurso diferente: ele é processado em um servidor, com um modelo de terceiros. Somente depois do seu consentimento separado, o que você confirma e envia passa pelo servidor do DoseWeek até o Amazon Bedrock (região de Seul, República da Coreia), onde o modelo Claude, da Anthropic, cria a resposta. Ele precisa de conexão com a internet e pode ficar em pausa por um tempo; nesse caso, o app avisa você. A política de privacidade descreve o recurso na seção “Assistente de registros com IA (Pro)”.",
+      "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registros com IA (Pro), um recurso opcional. Ele é processado em um servidor, e não no dispositivo. Somente depois de um consentimento separado, uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre o app. Nenhum outro recurso usa IA generativa.",
       "androidBadge": "IA generativa apenas no assistente de registros com IA, após um consentimento separado",
       "androidNotUsedItem": "Usar IA generativa (assistente de registros com IA) sem seu consentimento separado",
       "processorRow": {
@@ -830,7 +980,9 @@
         "android": "المعلومات المقروءة من Health Connect لا تُستخدم أيضًا في ميزات الذكاء الاصطناعي ولا تُرسَل إلى مساعد السجلات بالذكاء الاصطناعي."
       },
       "onDeviceScope": "يتناول هذا القسم التسجيل بالذكاء الاصطناعي والتحضير للزيارة فقط، وهما يُعالَجان على الجهاز. أما مساعد السجلات بالذكاء الاصطناعي (Pro)، الذي يُعالَج على خادم، فيُشرح بشكل منفصل في قسم «مساعد السجلات بالذكاء الاصطناعي (Pro)» من هذه السياسة.",
-      "androidAiFaq": "يتضمن DoseWeek 1.0.6 لنظام Android مساعد السجلات بالذكاء الاصطناعي (Pro) كميزة اختيارية. بعد موافقة منفصلة فقط، ينشئ ذكاء اصطناعي توليدي على Amazon Bedrock (منطقة سيول، جمهورية كوريا) ملخصات أسبوعية وأفكار وجبات عامة وإجابات مساعدة في استخدام التطبيق. لا تستخدم أي ميزة أخرى الذكاء الاصطناعي التوليدي.",
+      "onDeviceOnly": "لا تستخدم هاتان الميزتان اللتان تعملان على الجهاز Private Cloud Compute ولا نموذج خادم ولا نموذجًا من طرف ثالث.",
+      "iosAiFaq": "مساعد السجلات بالذكاء الاصطناعي (Pro) ميزة مختلفة: تُعالَج على خادم باستخدام نموذج من طرف ثالث. بعد موافقتك المنفصلة فقط، يمر ما تؤكده وترسله عبر خادم DoseWeek إلى Amazon Bedrock (منطقة سيول، جمهورية كوريا)، حيث ينشئ نموذج Claude من Anthropic الإجابة. تحتاج هذه الميزة إلى اتصال بالإنترنت وقد تتوقف مؤقتًا؛ وعندها يخبرك التطبيق بذلك. تشرحها سياسة الخصوصية في قسم «مساعد السجلات بالذكاء الاصطناعي (Pro)».",
+      "androidAiFaq": "يتضمن DoseWeek 1.0.6 لنظام Android مساعد السجلات بالذكاء الاصطناعي (Pro) كميزة اختيارية. تُعالَج هذه الميزة على خادم، لا على الجهاز. بعد موافقة منفصلة فقط، ينشئ ذكاء اصطناعي توليدي على Amazon Bedrock (منطقة سيول، جمهورية كوريا) ملخصات أسبوعية وأفكار وجبات عامة وإجابات مساعدة في استخدام التطبيق. لا تستخدم أي ميزة أخرى الذكاء الاصطناعي التوليدي.",
       "androidBadge": "الذكاء الاصطناعي التوليدي في مساعد السجلات بالذكاء الاصطناعي فقط، بعد موافقة منفصلة",
       "androidNotUsedItem": "استخدام الذكاء الاصطناعي التوليدي (مساعد السجلات بالذكاء الاصطناعي) دون موافقتك المنفصلة",
       "processorRow": {
@@ -887,7 +1039,9 @@
         "android": "从 Health Connect 读取的信息同样不会用于 AI 功能，也不会发送给 AI 记录助手。"
       },
       "onDeviceScope": "本条仅说明在设备上处理的 AI 记录和就诊准备功能。在服务器上处理的 AI 记录助手（Pro）在本政策的“AI 记录助手（Pro）”一节中另行说明。",
-      "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含可选的 AI 记录助手（Pro）。只有在您单独同意后，Amazon Bedrock（大韩民国首尔区域）上的生成式 AI 才会生成每周摘要、一般饮食建议和应用使用帮助的回答。其他功能不使用生成式 AI。",
+      "onDeviceOnly": "这两项在设备上处理的功能既不使用 Private Cloud Compute，也不使用服务器模型或第三方模型。",
+      "iosAiFaq": "AI 记录助手（Pro）是另一项功能：它在服务器上使用第三方模型处理。只有在您单独同意后，您确认并发送的内容才会经由 DoseWeek 服务器发送到 Amazon Bedrock（大韩民国首尔区域），由 Anthropic 的 Claude 模型生成回答。该功能需要联网，并且可能暂时停用；届时应用会提示您。详情见隐私政策的“AI 记录助手（Pro）”一节。",
+      "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含可选的 AI 记录助手（Pro）。该功能在服务器上处理，而不是在设备上处理。只有在您单独同意后，Amazon Bedrock（大韩民国首尔区域）上的生成式 AI 才会生成每周摘要、一般饮食建议和应用使用帮助的回答。其他功能不使用生成式 AI。",
       "androidBadge": "生成式 AI 仅用于 AI 记录助手，且须您单独同意",
       "androidNotUsedItem": "未经您单独同意使用生成式 AI（AI 记录助手）",
       "processorRow": {
@@ -944,7 +1098,9 @@
         "android": "從 Health Connect 讀取的資訊同樣不會用於 AI 功能，也不會傳送給 AI 紀錄助手。"
       },
       "onDeviceScope": "本條僅說明在裝置上處理的 AI 紀錄和就診準備功能。在伺服器上處理的 AI 紀錄助手（Pro）於本政策的「AI 紀錄助手（Pro）」一節中另行說明。",
-      "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含選用的 AI 紀錄助手（Pro）。只有在您另行同意後，Amazon Bedrock（大韓民國首爾區域）上的生成式 AI 才會產生每週摘要、一般飲食建議和 App 使用說明的回答。其他功能不使用生成式 AI。",
+      "onDeviceOnly": "這兩項在裝置上處理的功能既不使用 Private Cloud Compute，也不使用伺服器模型或第三方模型。",
+      "iosAiFaq": "AI 紀錄助手（Pro）是另一項功能：它在伺服器上使用第三方模型處理。只有在您另行同意後，您確認並傳送的內容才會經由 DoseWeek 伺服器傳送到 Amazon Bedrock（大韓民國首爾區域），由 Anthropic 的 Claude 模型產生回答。此功能需要連線到網際網路，且可能暫時停用；屆時 App 會提示您。詳情請見隱私權政策的「AI 紀錄助手（Pro）」一節。",
+      "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含選用的 AI 紀錄助手（Pro）。此功能在伺服器上處理，而不是在裝置上處理。只有在您另行同意後，Amazon Bedrock（大韓民國首爾區域）上的生成式 AI 才會產生每週摘要、一般飲食建議和 App 使用說明的回答。其他功能不使用生成式 AI。",
       "androidBadge": "生成式 AI 僅用於 AI 紀錄助手，且須您另行同意",
       "androidNotUsedItem": "未經您另行同意使用生成式 AI（AI 紀錄助手）",
       "processorRow": {
@@ -1001,7 +1157,9 @@
         "android": "Health Connect’ten okunan bilgiler yapay zeka özellikleri için de kullanılmaz ve yapay zeka kayıt asistanına gönderilmez."
       },
       "onDeviceScope": "Bu bölüm yalnızca cihazda işlenen yapay zeka ile kayıt ve muayene hazırlığı özelliklerini kapsar. Sunucuda işlenen yapay zeka kayıt asistanı (Pro), bu politikanın “Yapay zeka kayıt asistanı (Pro)” bölümünde ayrıca açıklanır.",
-      "androidAiFaq": "Android için DoseWeek 1.0.6, isteğe bağlı yapay zeka kayıt asistanını (Pro) içerir. Yalnızca ayrı bir rızadan sonra, Amazon Bedrock (Seul bölgesi, Kore Cumhuriyeti) üzerindeki üretken yapay zeka haftalık özetler, genel yemek fikirleri ve uygulama kullanımıyla ilgili yardım yanıtları oluşturur. Başka hiçbir özellik üretken yapay zeka kullanmaz.",
+      "onDeviceOnly": "Cihazda işlenen bu iki özellik Private Cloud Compute, sunucu modeli veya üçüncü taraf model kullanmaz.",
+      "iosAiFaq": "Yapay zeka kayıt asistanı (Pro) farklı bir özelliktir: sunucuda, üçüncü taraf bir modelle işlenir. Yalnızca ayrı rızanızdan sonra, onaylayıp gönderdiğiniz içerik DoseWeek sunucusu üzerinden Amazon Bedrock’a (Seul bölgesi, Kore Cumhuriyeti) gider ve yanıtı Anthropic’in Claude modeli oluşturur. İnternet bağlantısı gerektirir ve bir süreliğine duraklatılabilir; bu durumda uygulama sizi bilgilendirir. Gizlilik politikası bu özelliği “Yapay zeka kayıt asistanı (Pro)” bölümünde açıklar.",
+      "androidAiFaq": "Android için DoseWeek 1.0.6, isteğe bağlı yapay zeka kayıt asistanını (Pro) içerir. Bu özellik cihazda değil, sunucuda işlenir. Yalnızca ayrı bir rızadan sonra, Amazon Bedrock (Seul bölgesi, Kore Cumhuriyeti) üzerindeki üretken yapay zeka haftalık özetler, genel yemek fikirleri ve uygulama kullanımıyla ilgili yardım yanıtları oluşturur. Başka hiçbir özellik üretken yapay zeka kullanmaz.",
       "androidBadge": "Üretken yapay zeka yalnızca yapay zeka kayıt asistanında, ayrı bir rızadan sonra",
       "androidNotUsedItem": "Ayrı rızanız olmadan üretken yapay zeka (yapay zeka kayıt asistanı) kullanımı",
       "processorRow": {
