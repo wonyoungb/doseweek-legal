@@ -90,6 +90,8 @@
       },
       "onDeviceScope": "이 항목은 기기 안에서만 처리하는 AI 기록과 진료 준비에 관한 내용이에요. 서버에서 처리하는 AI 기록 도우미(Pro)는 이 방침의 ‘AI 기록 도우미(Pro)’ 항목에서 따로 설명해요.",
       "androidAiFaq": "Android용 DoseWeek 1.0.6에는 선택 기능인 AI 기록 도우미(Pro)가 있어요. 따로 동의한 뒤에만 Amazon Bedrock(대한민국 서울 리전)의 생성형 AI가 주간 요약, 일반적인 식사 아이디어, 앱 사용 도움말을 만들어요. 그 밖의 기능에는 생성형 AI를 쓰지 않아요.",
+      "androidBadge": "생성형 AI는 따로 동의한 AI 기록 도우미에서만 써요",
+      "androidNotUsedItem": "따로 동의하기 전에 생성형 AI(AI 기록 도우미) 사용",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — AI 기록 도우미를 켤 때 따로 받는 건강정보(민감정보) 처리 동의가 근거예요. 처리위탁 계약과 개인정보 보호법 Art. 28-8의 해외 접근 근거는 미확인이에요.",
         "data": "기록을 보낼 때 화면에서 확인한 집계 값과 직접 쓴 질문이에요. 약 이름·용량, 메모, 음식 이름, 사진, 날짜, 계정 정보는 보내지 않아요.",
@@ -145,6 +147,8 @@
       },
       "onDeviceScope": "This section covers only AI recording and visit preparation, which are processed on the device. The AI record assistant (Pro), which is processed on a server, is described separately under “AI record assistant (Pro)” in this policy.",
       "androidAiFaq": "DoseWeek 1.0.6 for Android includes the optional AI record assistant (Pro). Only after separate consent, generative AI on Amazon Bedrock (Seoul Region, Republic of Korea) creates weekly summaries, general meal ideas and app-help answers. No other feature uses generative AI.",
+      "androidBadge": "Generative AI only in the AI record assistant, after separate consent",
+      "androidNotUsedItem": "Using generative AI (the AI record assistant) without your separate consent",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — The basis is the separate consent to process health (sensitive) information that you give when turning on the AI record assistant. The processing contract and the PIPA Art. 28-8 basis for any overseas access are unverified.",
         "data": "The aggregated values you confirm on screen when sending records, and the questions you type. Medication names and doses, notes, food names, photos, dates and account details are not sent.",
@@ -200,6 +204,8 @@
       },
       "onDeviceScope": "この項目は、端末内だけで処理するAI記録と受診準備についての説明です。サーバーで処理するAI記録アシスタント（Pro）については、このポリシーの「AI記録アシスタント（Pro）」の項目で別に説明します。",
       "androidAiFaq": "Android版DoseWeek 1.0.6には、任意の機能としてAI記録アシスタント（Pro）があります。別途同意した場合にのみ、Amazon Bedrock（大韓民国ソウルリージョン）の生成AIが週間サマリー、一般的な食事のアイデア、アプリの使い方の回答を作成します。そのほかの機能では生成AIを使用しません。",
+      "androidBadge": "生成AIは、別途同意したAI記録アシスタントでのみ使用",
+      "androidNotUsedItem": "別途の同意なしでの生成AI（AI記録アシスタント）の使用",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — AI記録アシスタントをオンにするときに別途いただく、健康情報（要配慮の情報）の取り扱いへの同意が根拠です。委託契約と、個人情報保護法 Art. 28-8 に基づく国外からのアクセスの根拠は未確認です。",
         "data": "記録を送信するときに画面で確認した集計値と、入力した質問です。薬の名前・用量、メモ、食品名、写真、日付、アカウント情報は送信しません。",
@@ -255,6 +261,8 @@
       },
       "onDeviceScope": "Dieser Abschnitt betrifft nur die KI-Erfassung und die Terminvorbereitung, die auf dem Gerät verarbeitet werden. Der KI-Aufzeichnungsassistent (Pro), der auf einem Server verarbeitet wird, ist in dieser Erklärung gesondert unter „KI-Aufzeichnungsassistent (Pro)“ beschrieben.",
       "androidAiFaq": "DoseWeek 1.0.6 für Android enthält den optionalen KI-Aufzeichnungsassistenten (Pro). Nur nach gesonderter Einwilligung erstellt generative KI auf Amazon Bedrock (Region Seoul, Republik Korea) Wochenübersichten, allgemeine Mahlzeitenideen und Antworten zur App-Nutzung. Keine andere Funktion verwendet generative KI.",
+      "androidBadge": "Generative KI nur im KI-Aufzeichnungsassistenten, nach gesonderter Einwilligung",
+      "androidNotUsedItem": "Nutzung generativer KI (KI-Aufzeichnungsassistent) ohne Ihre gesonderte Einwilligung",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — Grundlage ist die gesonderte Einwilligung in die Verarbeitung von Gesundheitsdaten (sensiblen Daten), die Sie beim Einschalten des KI-Aufzeichnungsassistenten geben. Der Auftragsverarbeitungsvertrag und die Grundlage nach PIPA Art. 28-8 für einen Zugriff aus dem Ausland sind ungeprüft.",
         "data": "Die zusammengefassten Werte, die Sie beim Senden auf dem Bildschirm bestätigen, und die Fragen, die Sie eingeben. Medikamentennamen und Dosierungen, Notizen, Lebensmittelnamen, Fotos, Datumsangaben und Kontodaten werden nicht gesendet.",
@@ -310,6 +318,8 @@
       },
       "onDeviceScope": "Cette section concerne uniquement l’enregistrement par IA et la préparation de consultation, qui sont traités sur l’appareil. L’assistant de suivi IA (Pro), traité sur un serveur, est décrit séparément dans la section « Assistant de suivi IA (Pro) » de cette politique.",
       "androidAiFaq": "DoseWeek 1.0.6 pour Android comprend l’assistant de suivi IA (Pro), une fonction facultative. Uniquement après un consentement distinct, une IA générative sur Amazon Bedrock (région de Séoul, République de Corée) crée des résumés hebdomadaires, des idées de repas générales et des réponses d’aide sur l’app. Aucune autre fonction n’utilise d’IA générative.",
+      "androidBadge": "IA générative uniquement dans l’assistant de suivi IA, après un consentement distinct",
+      "androidNotUsedItem": "Utilisation d’une IA générative (assistant de suivi IA) sans votre consentement distinct",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — La base est le consentement distinct au traitement des informations de santé (sensibles) que vous donnez en activant l’assistant de suivi IA. Le contrat de sous-traitance et la base prévue par PIPA Art. 28-8 pour un accès depuis l’étranger ne sont pas vérifiés.",
         "data": "Les valeurs agrégées que vous confirmez à l’écran lors de l’envoi et les questions que vous saisissez. Les noms et doses de médicaments, les notes, les noms d’aliments, les photos, les dates et les informations de compte ne sont pas envoyés.",
@@ -365,6 +375,8 @@
       },
       "onDeviceScope": "Esta sección se refiere solo al registro con IA y a la preparación de la consulta, que se procesan en el dispositivo. El asistente de registros con IA (Pro), que se procesa en un servidor, se describe por separado en la sección «Asistente de registros con IA (Pro)» de esta política.",
       "androidAiFaq": "DoseWeek 1.0.6 para Android incluye el asistente de registros con IA (Pro), una función opcional. Solo tras un consentimiento aparte, una IA generativa en Amazon Bedrock (región de Seúl, República de Corea) crea resúmenes semanales, ideas generales de comidas y respuestas de ayuda sobre la app. Ninguna otra función usa IA generativa.",
+      "androidBadge": "IA generativa solo en el asistente de registros con IA, tras un consentimiento aparte",
+      "androidNotUsedItem": "Usar IA generativa (asistente de registros con IA) sin su consentimiento aparte",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — La base es el consentimiento aparte para tratar información de salud (sensible) que usted da al activar el asistente de registros con IA. El contrato de encargo y la base de PIPA Art. 28-8 para un acceso desde el extranjero no están verificados.",
         "data": "Los valores agregados que confirma en pantalla al enviar registros y las preguntas que escribe. No se envían nombres ni dosis de medicamentos, notas, nombres de alimentos, fotos, fechas ni datos de la cuenta.",
@@ -420,6 +432,8 @@
       },
       "onDeviceScope": "Questa sezione riguarda solo la registrazione con IA e la preparazione della visita, che sono elaborate sul dispositivo. L’assistente IA per le registrazioni (Pro), elaborato su un server, è descritto separatamente nella sezione «Assistente IA per le registrazioni (Pro)» di questa informativa.",
       "androidAiFaq": "DoseWeek 1.0.6 per Android include l’assistente IA per le registrazioni (Pro), una funzione facoltativa. Solo dopo un consenso separato, un’IA generativa su Amazon Bedrock (regione di Seul, Repubblica di Corea) crea riepiloghi settimanali, idee generali per i pasti e risposte di aiuto sull’app. Nessun’altra funzione usa IA generativa.",
+      "androidBadge": "IA generativa solo nell’assistente IA per le registrazioni, dopo un consenso separato",
+      "androidNotUsedItem": "Usare l’IA generativa (assistente IA per le registrazioni) senza il tuo consenso separato",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — La base è il consenso separato al trattamento delle informazioni sulla salute (sensibili) che dai quando attivi l’assistente IA per le registrazioni. Il contratto di trattamento e la base prevista da PIPA Art. 28-8 per un accesso dall’estero non sono verificati.",
         "data": "I valori aggregati che confermi sullo schermo quando invii le registrazioni e le domande che scrivi. Non vengono inviati nomi e dosi dei farmaci, note, nomi degli alimenti, foto, date e dati dell’account.",
@@ -475,6 +489,8 @@
       },
       "onDeviceScope": "Dit onderdeel gaat alleen over AI-registratie en de voorbereiding van een afspraak, die op het apparaat worden verwerkt. De AI-registratieassistent (Pro), die op een server wordt verwerkt, wordt apart beschreven onder ‘AI-registratieassistent (Pro)’ in dit beleid.",
       "androidAiFaq": "DoseWeek 1.0.6 voor Android bevat de optionele AI-registratieassistent (Pro). Alleen na afzonderlijke toestemming maakt generatieve AI op Amazon Bedrock (regio Seoul, Republiek Korea) weekoverzichten, algemene maaltijdideeën en antwoorden op vragen over de app. Geen enkele andere functie gebruikt generatieve AI.",
+      "androidBadge": "Generatieve AI alleen in de AI-registratieassistent, na afzonderlijke toestemming",
+      "androidNotUsedItem": "Generatieve AI (de AI-registratieassistent) gebruiken zonder uw afzonderlijke toestemming",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — De grondslag is de afzonderlijke toestemming voor het verwerken van gezondheidsgegevens (gevoelige gegevens) die u geeft wanneer u de AI-registratieassistent inschakelt. De verwerkersovereenkomst en de grondslag van PIPA Art. 28-8 voor toegang vanuit het buitenland zijn niet geverifieerd.",
         "data": "De samengevatte waarden die u bij het verzenden op het scherm bevestigt en de vragen die u typt. Namen en doseringen van medicijnen, notities, namen van voedingsmiddelen, foto’s, datums en accountgegevens worden niet verzonden.",
@@ -530,6 +546,8 @@
       },
       "onDeviceScope": "Esta secção refere-se apenas ao registo com IA e à preparação da consulta, que são processados no dispositivo. O assistente de registos com IA (Pro), processado num servidor, é descrito em separado na secção «Assistente de registos com IA (Pro)» desta política.",
       "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registos com IA (Pro), uma funcionalidade opcional. Só depois de um consentimento separado é que uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre a aplicação. Nenhuma outra funcionalidade usa IA generativa.",
+      "androidBadge": "IA generativa apenas no assistente de registos com IA, após um consentimento separado",
+      "androidNotUsedItem": "Utilizar IA generativa (assistente de registos com IA) sem o seu consentimento separado",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — O fundamento é o consentimento separado para o tratamento de informação de saúde (sensível) que dá ao ativar o assistente de registos com IA. O contrato de subcontratação e o fundamento do PIPA Art. 28-8 para um acesso a partir do estrangeiro não estão verificados.",
         "data": "Os valores agregados que confirma no ecrã ao enviar registos e as perguntas que escreve. Não são enviados nomes nem doses de medicamentos, notas, nomes de alimentos, fotografias, datas nem dados da conta.",
@@ -585,6 +603,8 @@
       },
       "onDeviceScope": "Ta sekcja dotyczy tylko zapisu z AI i przygotowania do wizyty, które są przetwarzane na urządzeniu. Asystent wpisów AI (Pro), przetwarzany na serwerze, jest opisany osobno w sekcji „Asystent wpisów AI (Pro)” tej polityki.",
       "androidAiFaq": "DoseWeek 1.0.6 na Androida zawiera opcjonalnego asystenta wpisów AI (Pro). Tylko po odrębnej zgodzie generatywna AI w Amazon Bedrock (region Seul, Republika Korei) tworzy podsumowania tygodnia, ogólne pomysły na posiłki i odpowiedzi z pomocą dotyczącą aplikacji. Żadna inna funkcja nie używa generatywnej AI.",
+      "androidBadge": "Generatywna AI tylko w asystencie wpisów AI, po odrębnej zgodzie",
+      "androidNotUsedItem": "Korzystanie z generatywnej AI (asystent wpisów AI) bez odrębnej zgody",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — Podstawą jest odrębna zgoda na przetwarzanie informacji o zdrowiu (danych wrażliwych), której udzielasz przy włączaniu asystenta wpisów AI. Umowa powierzenia przetwarzania i podstawa z PIPA Art. 28-8 dla dostępu z zagranicy nie zostały zweryfikowane.",
         "data": "Zbiorcze wartości, które potwierdzasz na ekranie przy wysyłaniu wpisów, oraz pytania, które wpisujesz. Nazwy i dawki leków, notatki, nazwy produktów spożywczych, zdjęcia, daty i dane konta nie są wysyłane.",
@@ -640,6 +660,8 @@
       },
       "onDeviceScope": "Det här avsnittet gäller bara AI-loggning och besöksförberedelse, som behandlas på enheten. AI-loggassistenten (Pro), som behandlas på en server, beskrivs separat under ”AI-loggassistenten (Pro)” i den här policyn.",
       "androidAiFaq": "DoseWeek 1.0.6 för Android innehåller den valfria AI-loggassistenten (Pro). Först efter ett separat samtycke skapar generativ AI på Amazon Bedrock (regionen Seoul, Republiken Korea) veckosammanfattningar, allmänna måltidsidéer och svar om hur appen fungerar. Ingen annan funktion använder generativ AI.",
+      "androidBadge": "Generativ AI bara i AI-loggassistenten, efter ett separat samtycke",
+      "androidNotUsedItem": "Användning av generativ AI (AI-loggassistenten) utan ditt separata samtycke",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — Grunden är det separata samtycke till behandling av hälsoinformation (känsliga uppgifter) som du ger när du slår på AI-loggassistenten. Biträdesavtalet och grunden enligt PIPA Art. 28-8 för åtkomst från utlandet är inte verifierade.",
         "data": "De sammanställda värden du bekräftar på skärmen när du skickar poster och de frågor du skriver. Läkemedelsnamn och doser, anteckningar, livsmedelsnamn, foton, datum och kontouppgifter skickas inte.",
@@ -695,6 +717,8 @@
       },
       "onDeviceScope": "यह अनुभाग सिर्फ़ AI से रिकॉर्ड करने और विज़िट की तैयारी के बारे में है, जो डिवाइस पर ही प्रोसेस होते हैं। सर्वर पर प्रोसेस होने वाले AI रिकॉर्ड असिस्टेंट (Pro) के बारे में इस नीति के “AI रिकॉर्ड असिस्टेंट (Pro)” अनुभाग में अलग से बताया गया है।",
       "androidAiFaq": "Android के लिए DoseWeek 1.0.6 में वैकल्पिक AI रिकॉर्ड असिस्टेंट (Pro) शामिल है। अलग से सहमति देने के बाद ही Amazon Bedrock (सियोल क्षेत्र, कोरिया गणराज्य) पर जनरेटिव AI साप्ताहिक सारांश, भोजन के सामान्य आइडिया और ऐप इस्तेमाल से जुड़ी मदद के जवाब बनाता है। कोई और सुविधा जनरेटिव AI का इस्तेमाल नहीं करती।",
+      "androidBadge": "जनरेटिव AI केवल AI रिकॉर्ड असिस्टेंट में, अलग से सहमति देने के बाद",
+      "androidNotUsedItem": "आपकी अलग सहमति के बिना जनरेटिव AI (AI रिकॉर्ड असिस्टेंट) का इस्तेमाल",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — आधार वह अलग सहमति है जो आप AI रिकॉर्ड असिस्टेंट चालू करते समय स्वास्थ्य (संवेदनशील) जानकारी की प्रोसेसिंग के लिए देते हैं। प्रोसेसिंग का अनुबंध और विदेश से पहुँच के लिए PIPA Art. 28-8 का आधार असत्यापित है।",
         "data": "रिकॉर्ड भेजते समय स्क्रीन पर पक्के किए गए समेकित मान और आपके लिखे सवाल। दवा के नाम और डोज़, नोट, खाद्य पदार्थों के नाम, फ़ोटो, तारीखें और खाते की जानकारी नहीं भेजी जाती।",
@@ -750,6 +774,8 @@
       },
       "onDeviceScope": "Esta seção trata apenas do registro com IA e da preparação para a consulta, que são processados no dispositivo. O assistente de registros com IA (Pro), processado em um servidor, é descrito separadamente na seção “Assistente de registros com IA (Pro)” desta política.",
       "androidAiFaq": "O DoseWeek 1.0.6 para Android inclui o assistente de registros com IA (Pro), um recurso opcional. Somente depois de um consentimento separado, uma IA generativa no Amazon Bedrock (região de Seul, República da Coreia) cria resumos semanais, ideias gerais de refeições e respostas de ajuda sobre o app. Nenhum outro recurso usa IA generativa.",
+      "androidBadge": "IA generativa apenas no assistente de registros com IA, após um consentimento separado",
+      "androidNotUsedItem": "Usar IA generativa (assistente de registros com IA) sem seu consentimento separado",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — A base é o consentimento separado para o tratamento de informações de saúde (sensíveis) que você dá ao ativar o assistente de registros com IA. O contrato de operador e a base do PIPA Art. 28-8 para acesso a partir do exterior não foram verificados.",
         "data": "Os valores agregados que você confirma na tela ao enviar registros e as perguntas que você digita. Nomes e doses de medicamentos, notas, nomes de alimentos, fotos, datas e dados da conta não são enviados.",
@@ -805,6 +831,8 @@
       },
       "onDeviceScope": "يتناول هذا القسم التسجيل بالذكاء الاصطناعي والتحضير للزيارة فقط، وهما يُعالَجان على الجهاز. أما مساعد السجلات بالذكاء الاصطناعي (Pro)، الذي يُعالَج على خادم، فيُشرح بشكل منفصل في قسم «مساعد السجلات بالذكاء الاصطناعي (Pro)» من هذه السياسة.",
       "androidAiFaq": "يتضمن DoseWeek 1.0.6 لنظام Android مساعد السجلات بالذكاء الاصطناعي (Pro) كميزة اختيارية. بعد موافقة منفصلة فقط، ينشئ ذكاء اصطناعي توليدي على Amazon Bedrock (منطقة سيول، جمهورية كوريا) ملخصات أسبوعية وأفكار وجبات عامة وإجابات مساعدة في استخدام التطبيق. لا تستخدم أي ميزة أخرى الذكاء الاصطناعي التوليدي.",
+      "androidBadge": "الذكاء الاصطناعي التوليدي في مساعد السجلات بالذكاء الاصطناعي فقط، بعد موافقة منفصلة",
+      "androidNotUsedItem": "استخدام الذكاء الاصطناعي التوليدي (مساعد السجلات بالذكاء الاصطناعي) دون موافقتك المنفصلة",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — الأساس هو الموافقة المنفصلة على معالجة المعلومات الصحية (الحساسة) التي تعطيها عند تشغيل مساعد السجلات بالذكاء الاصطناعي. عقد المعالجة وأساس PIPA Art. 28-8 لأي وصول من الخارج غير متحقق منهما.",
         "data": "القيم المجمّعة التي تؤكدها على الشاشة عند إرسال السجلات والأسئلة التي تكتبها. لا تُرسَل أسماء الأدوية وجرعاتها ولا الملاحظات ولا أسماء الأطعمة ولا الصور ولا التواريخ ولا بيانات الحساب.",
@@ -860,6 +888,8 @@
       },
       "onDeviceScope": "本条仅说明在设备上处理的 AI 记录和就诊准备功能。在服务器上处理的 AI 记录助手（Pro）在本政策的“AI 记录助手（Pro）”一节中另行说明。",
       "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含可选的 AI 记录助手（Pro）。只有在您单独同意后，Amazon Bedrock（大韩民国首尔区域）上的生成式 AI 才会生成每周摘要、一般饮食建议和应用使用帮助的回答。其他功能不使用生成式 AI。",
+      "androidBadge": "生成式 AI 仅用于 AI 记录助手，且须您单独同意",
+      "androidNotUsedItem": "未经您单独同意使用生成式 AI（AI 记录助手）",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — 依据是您开启 AI 记录助手时单独给予的健康信息（敏感信息）处理同意。委托处理合同以及 PIPA Art. 28-8 下境外访问的依据尚未核实。",
         "data": "发送记录时您在屏幕上确认的汇总值，以及您输入的问题。不发送药物名称和剂量、备注、食物名称、照片、日期和账户信息。",
@@ -915,6 +945,8 @@
       },
       "onDeviceScope": "本條僅說明在裝置上處理的 AI 紀錄和就診準備功能。在伺服器上處理的 AI 紀錄助手（Pro）於本政策的「AI 紀錄助手（Pro）」一節中另行說明。",
       "androidAiFaq": "Android 版 DoseWeek 1.0.6 包含選用的 AI 紀錄助手（Pro）。只有在您另行同意後，Amazon Bedrock（大韓民國首爾區域）上的生成式 AI 才會產生每週摘要、一般飲食建議和 App 使用說明的回答。其他功能不使用生成式 AI。",
+      "androidBadge": "生成式 AI 僅用於 AI 紀錄助手，且須您另行同意",
+      "androidNotUsedItem": "未經您另行同意使用生成式 AI（AI 紀錄助手）",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — 依據是您開啟 AI 紀錄助手時另行給予的健康資訊（敏感資訊）處理同意。委託處理契約以及 PIPA Art. 28-8 下境外存取的依據尚未確認。",
         "data": "傳送紀錄時您在畫面上確認的彙總值，以及您輸入的問題。不傳送藥物名稱和劑量、備註、食物名稱、照片、日期和帳號資訊。",
@@ -970,6 +1002,8 @@
       },
       "onDeviceScope": "Bu bölüm yalnızca cihazda işlenen yapay zeka ile kayıt ve muayene hazırlığı özelliklerini kapsar. Sunucuda işlenen yapay zeka kayıt asistanı (Pro), bu politikanın “Yapay zeka kayıt asistanı (Pro)” bölümünde ayrıca açıklanır.",
       "androidAiFaq": "Android için DoseWeek 1.0.6, isteğe bağlı yapay zeka kayıt asistanını (Pro) içerir. Yalnızca ayrı bir rızadan sonra, Amazon Bedrock (Seul bölgesi, Kore Cumhuriyeti) üzerindeki üretken yapay zeka haftalık özetler, genel yemek fikirleri ve uygulama kullanımıyla ilgili yardım yanıtları oluşturur. Başka hiçbir özellik üretken yapay zeka kullanmaz.",
+      "androidBadge": "Üretken yapay zeka yalnızca yapay zeka kayıt asistanında, ayrı bir rızadan sonra",
+      "androidNotUsedItem": "Ayrı rızanız olmadan üretken yapay zeka (yapay zeka kayıt asistanı) kullanımı",
       "processorRow": {
         "legalBasis": "Amazon Bedrock (AWS) — Dayanak, yapay zeka kayıt asistanını açarken sağlık (hassas) bilgilerinin işlenmesi için verdiğiniz ayrı rızadır. Veri işleme sözleşmesi ve yurt dışından erişim için PIPA Art. 28-8 dayanağı doğrulanmamıştır.",
         "data": "Kayıt gönderirken ekranda onayladığınız toplu değerler ve yazdığınız sorular. İlaç adları ve dozları, notlar, yiyecek adları, fotoğraflar, tarihler ve hesap bilgileri gönderilmez.",

@@ -47,6 +47,20 @@
       "ai.consent.b.cancel",
       "ai.consent.b.send"
     ],
+    "settingsAndPerk": [
+      "ai.help.inputNote",
+      "ai.settings.title",
+      "ai.settings.state.on",
+      "ai.settings.viewConsent",
+      "ai.settings.usage",
+      "ai.settings.deleteSummaries",
+      "ai.settings.withdraw",
+      "ai.settings.withdraw.note",
+      "ai.settings.withdraw.store.ios",
+      "ai.settings.withdraw.store.android",
+      "ai.settings.supportInquiry",
+      "pro.support.priority"
+    ],
     "labels": [
       "ai.label.header",
       "ai.label.output",
@@ -70,8 +84,8 @@
   "sources": {
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
-      "keys": "ai.consent.a.* and ai.consent.b.*",
-      "sha256": "6b5e2bbe4b5fb89bdd5a5a6178f3e52bcd8005bc48bf3ff3e1426fdb1ec16240"
+      "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
+      "sha256": "bba089002de509705c88b3dab0fb91989e443e0552403f1d2594384e6152a40d"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",

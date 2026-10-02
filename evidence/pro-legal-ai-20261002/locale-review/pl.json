@@ -47,6 +47,20 @@
       "ai.consent.b.cancel",
       "ai.consent.b.send"
     ],
+    "settingsAndPerk": [
+      "ai.help.inputNote",
+      "ai.settings.title",
+      "ai.settings.state.on",
+      "ai.settings.viewConsent",
+      "ai.settings.usage",
+      "ai.settings.deleteSummaries",
+      "ai.settings.withdraw",
+      "ai.settings.withdraw.note",
+      "ai.settings.withdraw.store.ios",
+      "ai.settings.withdraw.store.android",
+      "ai.settings.supportInquiry",
+      "pro.support.priority"
+    ],
     "labels": [
       "ai.label.header",
       "ai.label.output",
@@ -70,8 +84,8 @@
   "sources": {
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
-      "keys": "ai.consent.a.* and ai.consent.b.*",
-      "sha256": "26602f175b7ddcdf5d872e4943d91fc4e0cc67aad900af2a2a0a671d691768d1"
+      "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
+      "sha256": "54374e7c6ae847c18be152abd83c67052b5bf9076f94ed4e83b58eaf6310da61"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -98,7 +112,7 @@
   },
   "status": "back-translation-only",
   "reviewer": "LEGAL-AI lane agent (Claude Opus 5.5); an AI agent, not a human reviewer",
-  "method": "same-model back-translation: the agent that wrote the translation translated the listed strings back to English in the same session and compared them with the English source. Not blind, not independent, no native speaker, no counsel. Short labels and buttons were compared without a recorded back-translation.",
+  "method": "same-model back-translation of every listed string, compared with the English source. The 11 long consent strings and the 15 CON-PRO strings were translated back by the agent that wrote the translation, in the writing session. The other 39 app strings (titles, rows, buttons, quota lines, the JP and US region lines, the settings copy and the perk line) were translated back in review-fix session 1 on the same day by the same model, reading each translated string. Not blind (the English source was visible), not independent, no native speaker, no counsel.",
   "nativeSpeakerReview": false,
   "counselReview": false,
   "flag": {
@@ -108,20 +122,60 @@
   },
   "findings": [
     "Informal ty throughout, as in the shipped CON-PRO copy. Clinicians are \"pracownik ochrony zdrowia\" (health-care worker).",
-    "ai.emergency names \"SOR\" (hospital emergency department), a Poland-specific abbreviation shown to Polish-language users in any storefront."
+    "ai.emergency names \"SOR\" (hospital emergency department), a Poland-specific abbreviation shown to Polish-language users in any storefront.",
+    "Review-fix 1: \"Zobacz, na co się zgadzasz\" is present tense (what you agree to), which avoids a gendered past form; \"Zgadzam się i włączam\" is first person (I agree and turn on); \"Odnowienie: {text}\" (renewal) renders \"Refills on {text}\". No deviation in meaning found in the 39 added strings."
   ],
   "backTranslation": {
+    "ai.consent.a.title": "Turn on the AI entries assistant?",
     "ai.consent.a.lead": "On the basis of your entries it creates weekly summaries and general meal ideas and explains how to use the app. The answers are created by AI, not a human, and it does not give medical advice.",
+    "ai.consent.a.sent.title": "What is sent",
     "ai.consent.a.sent.body": "Before entries are sent, we show their content and nothing is sent until you touch \"Send\". We send the number of doses (on time, with delay, skipped), the change in the body mass entered by yourself, the number of records of each kind of symptom, the number of days with a recorded meal together with the protein average and goal, and your streak in weeks. With meal ideas we also send the chosen meal type, preferences, allergies and products you do not like. The language and region setting and the questions you type are also sent, and help about the app adds only the app version, the platform and the current screen.",
     "ai.consent.a.notSent.body": "We do not send names or doses of medicines, notes, names of food products, photos, dates, nor your first and last name, e-mail address or account data. What you type in the question field is sent exactly as it was written.",
+    "ai.consent.a.notSent.health.ios": "Information imported from Apple Health is not sent.",
+    "ai.consent.a.notSent.health.android": "Information imported from Health Connect is not sent.",
+    "ai.consent.a.where.title": "Where the processing takes place",
     "ai.consent.a.where.body": "The app encrypts the content once more and sends it to the DoseWeek server (Seoul, Republic of Korea), and it is processed by Amazon Bedrock from Amazon Web Services (Seoul region). The AI model is Claude of the company Anthropic. AWS operates it, and Anthropic does not see the content.",
+    "ai.consent.a.retention.title": "How long they are stored",
     "ai.consent.a.retention.body": "What you send and the answers we do not leave on the server nor use for training AI. The answers are saved only on your device. Usage counters (without content) we keep up to 2 months, and consent confirmations as long as your account exists. If you report an answer and choose \"Attach the content of the answer\", only that answer is kept for 30 days.",
+    "ai.consent.a.e2ee.title": "This is not end-to-end encryption",
     "ai.consent.a.e2ee.body": "When the AI creates an answer, the DoseWeek server and Amazon Bedrock can read what was sent. Sync and backup data remain protected by end-to-end encryption, as until now.",
+    "ai.consent.a.optional.title": "You do not have to agree",
     "ai.consent.a.optional.body": "Only the AI functions will be unavailable; the other functions of Pro and Plus still work. You can withdraw consent at any moment in Settings > AI entries assistant.",
     "ai.consent.a.check.health": "[Optional] I agree to the processing of my health information (sensitive data)",
     "ai.consent.a.check.health.detail": "Purpose: creating AI weekly summaries and meal ideas and answering questions about using the app / Data: the entries from the part \"What is sent\" above and the questions I type / Retention: deletion right after the answer is created (if an answer was attached to a report, only that answer for 30 days) / If you refuse, everything apart from AI still works",
     "ai.consent.a.check.age": "I am at least 18 years old",
+    "ai.consent.a.later": "Not now",
+    "ai.consent.a.agree": "I agree and turn it on",
+    "ai.consent.a.region.jp": "The entries sent are processed on the operator's server (Republic of Korea) and by Amazon Bedrock from Amazon Web Services (Seoul Region, Republic of Korea). In the Republic of Korea the act on the protection of personal information (PIPA) is in force, and the Personal Information Protection Commission watches over compliance with it. DoseWeek applies measures such as a setting without saving, a setting without AI training and encryption of communication.",
+    "ai.consent.a.region.us": "See the consumer health data privacy policy (USA)",
+    "ai.consent.b.title": "Send these entries to the AI?",
+    "ai.consent.b.purpose.weekly": "A summary of the week will be made from your entries of the last 7 days.",
+    "ai.consent.b.purpose.meal": "General meal ideas will be made from the chosen kind of meal and the preferences.",
+    "ai.consent.b.row.doses": "Dose entries (number on time, late, skipped)",
+    "ai.consent.b.row.weight": "Change in body weight",
+    "ai.consent.b.row.symptoms": "Number by kind of symptom",
+    "ai.consent.b.row.meals": "Meals and protein",
+    "ai.consent.b.weight.excluded.ios": "Body weight imported from the Apple Health app is not sent",
+    "ai.consent.b.weight.excluded.android": "Body weight imported from Health Connect is not sent",
+    "ai.consent.b.preview": "See exactly what will be sent",
     "ai.consent.b.processing": "The app encrypts the content, Amazon Bedrock (Seoul) processes it, and after the answer is created it is deleted at once.",
+    "ai.consent.b.quota.weekly": "This week's summary is not counted in your usage.",
+    "ai.consent.b.quota.regenerate": "Creating it again counts as 1 request. Left this month: {count}",
+    "ai.consent.b.quota.remaining": "Left this month: {count}",
+    "ai.consent.b.cancel": "Cancel",
+    "ai.consent.b.send": "Send",
+    "ai.help.inputNote": "Sending passes this content to the AI service (AWS Seoul Region)",
+    "ai.settings.title": "AI entries assistant",
+    "ai.settings.state.on": "On · Consent of {text}",
+    "ai.settings.viewConsent": "See what you agree to",
+    "ai.settings.usage": "This month: {count}/{count2} · Renewal: {text}",
+    "ai.settings.deleteSummaries": "Delete saved AI summaries",
+    "ai.settings.withdraw": "Withdraw consent",
+    "ai.settings.withdraw.note": "After consent is withdrawn, entries are not sent to the AI. The Pro subscription is not cancelled automatically.",
+    "ai.settings.withdraw.store.ios": "You can change the subscription in subscription management in the App Store.",
+    "ai.settings.withdraw.store.android": "You can change the subscription in subscription management in Google Play.",
+    "ai.settings.supportInquiry": "Question about using the app (Pro)",
+    "pro.support.priority": "Priority reply to questions — To questions about using the app we send a first reply within 1 working day. We do not answer medical questions.",
     "ai.refuse.dose": "I cannot set the dose or the time of administration. That depends on the prescription and your body's reaction, so consult it with the health-care worker who prescribed the medicine. I can instead summarize the history of your doses. Prepare a summary for the next visit?",
     "ai.refuse.sideEffect": "I cannot assess whether a symptom is normal or whether it results from the medicine. If it persists or worries you, consult a health-care worker. I can summarize the recorded symptoms.",
     "ai.refuse.diagnosis": "Only a doctor can assess whether you have a disease and how big its probability is. Discuss your questions with a health-care worker. I can help prepare questions for the visit.",
@@ -137,5 +191,14 @@
     "ai.label.header": "This is the AI entries assistant. The answers are created by AI, and not a human.",
     "ai.label.output": "Content created by AI may contain errors. This is not medical advice. Consult decisions concerning health with a health-care worker.",
     "ai.label.export": "Content generated by AI · DoseWeek"
+  },
+  "backTranslationRecord": {
+    "recorded": 65,
+    "total": 65,
+    "byRound": {
+      "writing-session": 26,
+      "review-fix-1": 39
+    },
+    "missing": []
   }
 }

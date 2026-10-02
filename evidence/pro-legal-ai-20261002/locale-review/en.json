@@ -47,6 +47,20 @@
       "ai.consent.b.cancel",
       "ai.consent.b.send"
     ],
+    "settingsAndPerk": [
+      "ai.help.inputNote",
+      "ai.settings.title",
+      "ai.settings.state.on",
+      "ai.settings.viewConsent",
+      "ai.settings.usage",
+      "ai.settings.deleteSummaries",
+      "ai.settings.withdraw",
+      "ai.settings.withdraw.note",
+      "ai.settings.withdraw.store.ios",
+      "ai.settings.withdraw.store.android",
+      "ai.settings.supportInquiry",
+      "pro.support.priority"
+    ],
     "labels": [
       "ai.label.header",
       "ai.label.output",
@@ -70,8 +84,8 @@
   "sources": {
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
-      "keys": "ai.consent.a.* and ai.consent.b.*",
-      "sha256": "621c50a24ae77a19ec540de82898fa26803cd4a42f503192298ff27d2a0c68ed"
+      "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
+      "sha256": "4d14f9591e83a06b72b0a22f0b6cd8ca15cafb95f610aaa67e2a338fb3170245"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -110,6 +124,7 @@
     "Reviewed by the lane agent against PRO-SPEC 5.1-5.3 and 4.4: items sent match the allowlist of 5.4 (no memo, no food names, no dates); retention follows R-8 and R-9 (answers on the device only, counts up to 2 months, consent records while the account exists, report excerpt 30 days); Amazon Bedrock, Seoul Region and Claude by Anthropic are named; the age box says 18 or older.",
     "The AI transit is described as the app encrypting the content \"once more\" to the server; the words \"end-to-end\" appear only for sync and backup, and Screen A says the server and Amazon Bedrock can read the content (critic C22 wording rule).",
     "CON-PRO English refusals and labels were read against compliance 4.5: each refuses the judgement, redirects to a clinician and offers the allowed alternative; no dose, diagnosis or drug statement; \"clinician\" is used instead of \"doctor or pharmacist\", matching the Korean 의료진. No defect found.",
-    "Health-source sentences are split into .ios and .android keys so the iOS copy names no Android service."
+    "Health-source sentences are split into .ios and .android keys so the iOS copy names no Android service.",
+    "Review-fix 1: the receipt scope now includes the settings copy and the perk line (all 50 app keys are hashed). The 50 English app strings were read again beside the Korean source in the review-fix session; \"See exactly what will be sent\" renders 보낼 내용 자세히 보기 (see in detail). No defect found."
   ]
 }

@@ -37,8 +37,13 @@ ROW_CELLS = ("legalBasis", "data", "country", "timingMethod", "recipientContact"
              "retention", "refusalEffect")
 US_HEALTH_FIELDS = ("categories", "purpose", "processor", "noSale", "consent")
 FIELDS = ("name", "perk", "sectionTitle", "clauses", "e2eeException", "healthExclusion",
-          "onDeviceScope", "androidAiFaq", "processorRow", "cloudflareTransit", "terms",
-          "usHealth", "deletion")
+          "onDeviceScope", "androidAiFaq", "androidBadge", "androidNotUsedItem", "processorRow",
+          "cloudflareTransit", "terms", "usHealth", "deletion")
+# Android 1.0.5 said "No generative AI" as a home badge and listed "Generative AI" among the
+# things DoseWeek does not use. Both are false once the assistant ships in 1.0.6, so the staged
+# text replaces them at these positions (review round 1).
+ANDROID_BADGE_INDEX = 3
+ANDROID_NOT_USED_ITEM_INDEX = 4
 CLAUSES = 12
 TERMS_PARAGRAPHS = 8
 HEALTH_PLACEHOLDER = "{healthExclusion}"
@@ -144,7 +149,9 @@ def load() -> dict:
         assert number(30, entry["deletion"]), locale
         assert "1.0.6" in entry["androidAiFaq"] and "Amazon Bedrock" in entry["androidAiFaq"], locale
         ios_only = [entry["healthExclusion"]["ios"], entry["onDeviceScope"]]
-        android_only = [entry["healthExclusion"]["android"], entry["androidAiFaq"]]
+        android_only = [entry["healthExclusion"]["android"], entry["androidAiFaq"],
+                        entry["androidBadge"], entry["androidNotUsedItem"]]
+        assert "\n" not in entry["androidBadge"] + entry["androidNotUsedItem"], locale
         assert not [token for token in IOS_ONLY_FORBIDDEN for text in ios_only if token in text], locale
         assert not [token for token in ANDROID_ONLY_FORBIDDEN for text in android_only if token in text], locale
         shared = [text for text in texts if text not in ios_only + android_only]
@@ -276,6 +283,10 @@ def integrate(ios: dict, android: dict, terms: dict, us_health: dict, account: d
         faq = _sections(a["support"]["faq"])["ai-health"]
         faq["answers"][0] = render_account_sync.replace_backup_sentence(
             faq["answers"][0], 0, text["androidAiFaq"], locale)
+        # The same denial as a home badge and as an item of the "not used by default" list:
+        # generative AI is used, but only in the assistant and only after separate consent.
+        a["home"]["featureBadges"][ANDROID_BADGE_INDEX] = text["androidBadge"]
+        ap["no-collection"]["items"][ANDROID_NOT_USED_ITEM_INDEX] = text["androidNotUsedItem"]
 
         # Terms: a new section right after the medical notice; later titles move up by one.
         sections = t["sections"]

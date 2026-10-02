@@ -700,6 +700,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         "Advertising and crash-reporting SDKs",
         "No DoseWeek account or developer server",
     )
+    if catalog["versionName"] == "1.0.6":
+        # 1.0.6 ships the opt-in AI record assistant (generative AI on a server), so the 1.0.5
+        # badge and the bare "Generative AI" item of the not-used list are obsolete there. The
+        # served 1.0.5 source keeps them until 1.0.6 is published.
+        obsolete_claims += ("No generative AI", "Generative AI")
     policy = {section["id"]: section for section in english["privacy"]["sections"]}
     claims = english["home"]["featureBadges"] + policy["no-collection"]["items"]
     assert not set(obsolete_claims).intersection(claims), (

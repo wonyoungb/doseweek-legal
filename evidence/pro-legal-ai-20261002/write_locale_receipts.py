@@ -4,11 +4,18 @@
     python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py          # write
     python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check  # compare only
 
-Inputs: docs/ai-app-copy.candidate.json (Screen A and Screen B), con-pro-ai-copy.snapshot.json
-(the shipped labels and refusal templates) and back-translation/<locale>.txt. A line that
-starts with "! " is a finding or review note; "key = text" is the English back-translation of
-one string. The receipts pin the SHA-256 of the exact text that was read, so a later copy
-change makes scripts/test_ai_assistant_legal.py fail until the locale is reviewed again.
+Inputs: docs/ai-app-copy.candidate.json (Screen A, Screen B, the settings copy and the perk
+line), con-pro-ai-copy.snapshot.json (the shipped labels and refusal templates) and
+back-translation/<locale>.txt. A line that starts with "! " is a finding or review note;
+"key = text" is the English back-translation of one string, where key is the full copy key or
+one of the SHORT aliases; a line that starts with "# " is a comment, and the comment
+"# round: <name>" names the session that recorded the lines after it. The receipts pin the
+SHA-256 of the exact text that was read, so a later copy change makes
+scripts/test_ai_assistant_legal.py fail until the locale is reviewed again.
+
+Coverage (review round 1, PRO-SPEC section 8): every one of the 50 app keys and the 15 CON-PRO
+keys has a recorded back-translation in each of the 14 locales. A locale with a missing key
+gets flag.recommended=false and names the keys.
 
 What these receipts are: ko waits for the owner (gate 6) and ja for counsel or a native
 reviewer; en was read by the lane agent; the other 14 locales have a same-model
@@ -50,11 +57,15 @@ STATUS = {
            "Read line by line against PRO-SPEC 4.4 and 5.1-5.5 by the agent that wrote it."),
 }
 BACK_TRANSLATION_METHOD = (
-    "same-model back-translation: the agent that wrote the translation translated the listed "
-    "strings back to English in the same session and compared them with the English source. "
-    "Not blind, not independent, no native speaker, no counsel. Short labels and buttons "
-    "were compared without a recorded back-translation."
+    "same-model back-translation of every listed string, compared with the English source. "
+    "The 11 long consent strings and the 15 CON-PRO strings were translated back by the agent "
+    "that wrote the translation, in the writing session. The other 39 app strings (titles, "
+    "rows, buttons, quota lines, the JP and US region lines, the settings copy and the perk "
+    "line) were translated back in review-fix session 1 on the same day by the same model, "
+    "reading each translated string. Not blind (the English source was visible), not "
+    "independent, no native speaker, no counsel."
 )
+ROUNDS = ("writing-session", "review-fix-1")
 
 
 def canonical_sha256(value):
@@ -62,32 +73,44 @@ def canonical_sha256(value):
     return hashlib.sha256(data.encode("utf-8")).hexdigest()
 
 
-def notes(locale):
-    findings, translation = [], {}
+def notes(locale, allowed):
+    findings, translation, rounds = [], {}, {name: [] for name in ROUNDS}
+    current = ROUNDS[0]
     for number, line in enumerate((HERE / "back-translation" / f"{locale}.txt").read_text(encoding="utf-8").splitlines(), 1):
+        if line.startswith("# round: "):
+            current = line[len("# round: "):].strip()
+            assert current in ROUNDS, (locale, number, current)
+            continue
+        if line.startswith("# "):
+            continue
         if line.startswith("! "):
             findings.append(line[2:].strip())
             continue
         key, separator, text = line.partition(" = ")
-        assert separator and key in SHORT and text.strip(), (locale, number)
-        assert SHORT[key] not in translation, (locale, key)
-        translation[SHORT[key]] = text.strip()
-    return findings, translation
+        key = SHORT.get(key, key)
+        assert separator and key in allowed and text.strip(), (locale, number)
+        assert key not in translation, (locale, key)
+        translation[key] = text.strip()
+        rounds[current].append(key)
+    return findings, translation, rounds
 
 
 def build():
     app = json.loads((ROOT / "docs/ai-app-copy.candidate.json").read_text(encoding="utf-8"))
     snapshot = json.loads((HERE / "con-pro-ai-copy.snapshot.json").read_text(encoding="utf-8"))
-    consent_keys = [key for key in app["keys"] if key.startswith("ai.consent.")]
+    app_keys = list(app["keys"])
     scope = {
-        "screenA": [key for key in consent_keys if key.startswith("ai.consent.a.")],
-        "screenB": [key for key in consent_keys if key.startswith("ai.consent.b.")],
+        "screenA": [key for key in app_keys if key.startswith("ai.consent.a.")],
+        "screenB": [key for key in app_keys if key.startswith("ai.consent.b.")],
+        "settingsAndPerk": [key for key in app_keys if not key.startswith("ai.consent.")],
         "labels": [key for key in snapshot["keys"] if key.startswith("ai.label.")],
         "refusalTemplates": [key for key in snapshot["keys"] if not key.startswith("ai.label.")],
     }
-    receipts = {}
+    order = [*app_keys, *snapshot["keys"]]
+    assert len(order) == len(set(order)) == sum(len(keys) for keys in scope.values())
+    receipts, coverage_missing = {}, {}
     for locale in LOCALES:
-        findings, translation = notes(locale)
+        findings, translation, rounds = notes(locale, set(order))
         copy = app["locales"][locale]["copy"]
         status, reviewer, method = STATUS.get(
             locale, ("back-translation-only", AGENT, BACK_TRANSLATION_METHOD))
@@ -101,8 +124,9 @@ def build():
             "sources": {
                 "appCopy": {
                     "path": "docs/ai-app-copy.candidate.json",
-                    "keys": "ai.consent.a.* and ai.consent.b.*",
-                    "sha256": canonical_sha256({key: copy[key] for key in consent_keys}),
+                    "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, "
+                            "ai.settings.* and pro.support.priority",
+                    "sha256": canonical_sha256({key: copy[key] for key in app_keys}),
                 },
                 "conProSharedCopy": {
                     "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -129,9 +153,19 @@ def build():
             "findings": findings,
         }
         if status == "back-translation-only":
-            expected = [SHORT[key] for key in SHORT]
-            assert list(translation) == expected, (locale, "back-translation keys")
-            receipt["backTranslation"] = translation
+            missing = [key for key in order if key not in translation]
+            receipt["backTranslation"] = {key: translation[key] for key in order if key in translation}
+            receipt["backTranslationRecord"] = {
+                "recorded": len(receipt["backTranslation"]), "total": len(order),
+                "byRound": {name: len(keys) for name, keys in rounds.items()},
+                "missing": missing,
+            }
+            if missing:
+                # PRO-SPEC section 8: a locale without its complete receipt keeps its flag off.
+                coverage_missing[locale] = missing
+                receipt["flag"]["recommended"] = False
+                receipt["flag"]["condition"] = (
+                    "stays false: no recorded back-translation for " + ", ".join(missing))
         else:
             assert not translation, locale
         receipts[locale] = receipt
@@ -145,8 +179,32 @@ def build():
         "nativeSpeakerReviewed": [],
         "counselReviewed": [],
         "flagsOff": [l for l, r in receipts.items() if not r["flag"]["recommended"]],
+        "backTranslationKeyCoverage": {
+            "locales": [l for l, r in receipts.items() if r["status"] == "back-translation-only"],
+            "perLocale": {
+                group: {
+                    "recorded": min(
+                        sum(key in r["backTranslation"] for key in keys)
+                        for r in receipts.values() if r["status"] == "back-translation-only"),
+                    "total": len(keys),
+                } for group, keys in scope.items()
+            },
+            "appKeys": {
+                "recorded": min(
+                    sum(key in r["backTranslation"] for key in app_keys)
+                    for r in receipts.values() if r["status"] == "back-translation-only"),
+                "total": len(app_keys),
+            },
+            "missing": coverage_missing,
+            "recordedIn": {
+                "writing-session": "11 long consent strings and 15 CON-PRO strings per locale",
+                "review-fix-1": "the other 39 app strings per locale (review round 1 found "
+                                "11 of 50 app keys recorded)",
+            },
+        },
         "honesty": "No human has reviewed any locale. en is an AI-agent review; 14 locales have "
-                   "only a same-model back-translation; ko and ja wait for the owner and for "
+                   "only a same-model back-translation (not blind, not independent), now "
+                   "recorded for every key in scope; ko and ja wait for the owner and for "
                    "counsel or a native reviewer.",
     }
     return receipts, summary

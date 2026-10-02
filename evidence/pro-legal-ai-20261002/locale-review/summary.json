@@ -44,5 +44,54 @@
     "ko",
     "ja"
   ],
-  "honesty": "No human has reviewed any locale. en is an AI-agent review; 14 locales have only a same-model back-translation; ko and ja wait for the owner and for counsel or a native reviewer."
+  "backTranslationKeyCoverage": {
+    "locales": [
+      "de",
+      "fr",
+      "es",
+      "it",
+      "nl",
+      "pt-PT",
+      "pl",
+      "sv",
+      "hi",
+      "pt-BR",
+      "ar",
+      "zh-Hans",
+      "zh-Hant",
+      "tr"
+    ],
+    "perLocale": {
+      "screenA": {
+        "recorded": 22,
+        "total": 22
+      },
+      "screenB": {
+        "recorded": 16,
+        "total": 16
+      },
+      "settingsAndPerk": {
+        "recorded": 12,
+        "total": 12
+      },
+      "labels": {
+        "recorded": 3,
+        "total": 3
+      },
+      "refusalTemplates": {
+        "recorded": 12,
+        "total": 12
+      }
+    },
+    "appKeys": {
+      "recorded": 50,
+      "total": 50
+    },
+    "missing": {},
+    "recordedIn": {
+      "writing-session": "11 long consent strings and 15 CON-PRO strings per locale",
+      "review-fix-1": "the other 39 app strings per locale (review round 1 found 11 of 50 app keys recorded)"
+    }
+  },
+  "honesty": "No human has reviewed any locale. en is an AI-agent review; 14 locales have only a same-model back-translation (not blind, not independent), now recorded for every key in scope; ko and ja wait for the owner and for counsel or a native reviewer."
 }
