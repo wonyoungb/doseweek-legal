@@ -24,7 +24,7 @@ HEALTH = {
  'ar': ('موافقة اختيارية منفصلة','أسماء الأدوية','جداول الحقن','سجلات الجرعات','الوزن','الوجبات','البروتين','الأعراض','الملاحظات','استعادة','30 يومًا','7 أيام','التسجيل المحلي','المزامنة غير متاحة'),
  'zh-Hans': ('单独的可选同意','药品名称','注射时间','用药记录','体重','饮食','蛋白质','症状','备注','恢复','30天','7天','本地记录','无法使用同步'),
  'zh-Hant': ('單獨的選擇性同意','藥品名稱','注射時間','用藥紀錄','體重','飲食','蛋白質','症狀','備註','復原','30天','7天','本機紀錄','無法使用同步'),
- 'tr': ('ayrı isteğe bağlı onay','ilaç adları','enjeksiyon zamanları','doz kayıtları','kilo','öğünler','protein','belirtiler','notlar','geri yüklemek','30 gün','7 gün','yerel kayıt','senkronizasyon kullanılamaz'),
+ 'tr': ('ayrı isteğe bağlı onay','ilaç adları','enjeksiyon zamanları','doz kayıtları','kilo','öğünler','protein','belirtiler','notlar','geri yüklemek','30 gün','7 gün','yerel kayıt','eşitleme kullanılamaz'),
 }
 BACKUP = {
  'ko': ('매일','업로드 전에','암호화','Amazon S3','서울','매주','OS','7일','다시 사용하지 않아요'),

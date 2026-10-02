@@ -43,6 +43,12 @@ class PrivacyLegalUpdateTest(unittest.TestCase):
                     'healthBasis', 'retention', 'security', 'destruction', 'noPublicDisclosureSaleAdUse'})
                 self.assertTrue(all(s['duties'].values()))
                 self.assertGreaterEqual(len(s['paragraphs']), 3)
+                text = '\n'.join(s['paragraphs'])
+                self.assertGreater(len(text), 500)
+                for token in ('DoseWeek', 'OS'):
+                    self.assertIn(token, text)
+                # Required disclosures must be prose, not only truth flags.
+                self.assertIn('7', text, 'backup destruction must be stated in the policy')
 
     def test_responsible_operator_and_public_business_contacts(self):
         for name, locale, entry in self.each():
@@ -58,6 +64,10 @@ class PrivacyLegalUpdateTest(unittest.TestCase):
             with self.subTest(source=name, locale=locale):
                 s = self.section(entry, 'rights')
                 self.assertEqual(s['deadlines']['koreaAccessDays'], 10)
+                text = '\n'.join(s['paragraphs'])
+                self.assertIn('10', text, 'actual Korean access deadline absent')
+                self.assertIn('wonyoung@wonyoungchoi.dev', text)
+                self.assertIn('118', text, 'Korean complaint channel absent')
                 self.assertEqual(set(s['rights']), {'access', 'correction', 'erasure',
                     'restriction', 'withdrawal', 'objection', 'portability', 'appeal', 'complaint'})
                 self.assertTrue(all(s['rights'].values()))
@@ -108,6 +118,9 @@ class PrivacyLegalUpdateTest(unittest.TestCase):
                 self.assertEqual(d['ftcMediaStateResidents'], 500)
                 self.assertTrue(s['unauthorizedSdkDisclosureCovered'])
                 self.assertTrue(s['encryptedDataRequiresKeyAndMetadataAssessment'])
+                text = '\n'.join(s['paragraphs'])
+                for token in ('FTC', 'SDK', '72', '60', '500', '1,000', 'GDPR'):
+                    self.assertIn(token, text, 'rendered breach duty absent')
 
     def test_gdpr_breach_risk_and_high_risk_notice(self):
         for name, locale, entry in self.each():

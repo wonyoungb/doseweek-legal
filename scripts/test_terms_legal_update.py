@@ -57,7 +57,7 @@ class TermsLegalUpdateTest(unittest.TestCase):
                 offer = sections(entry)["free-plus"]["paragraphs"][2]
                 self.assertIn(ANCHORS[loc][0], offer)
                 self.assertIn("1", offer)
-                self.assertNotIn("30", offer, "calendar month trial must not become 30 days")
+                self.assertNotRegex(offer, r"(?<![\d,])30(?![\d,])", "calendar month trial must not become 30 days")
                 self.assertTrue("App Store" in offer and "Google Play" in offer, "Store decides eligibility and offer")
 
     def test_korean_conversion_and_increase_need_affirmative_preceding_30_day_consent(self):
