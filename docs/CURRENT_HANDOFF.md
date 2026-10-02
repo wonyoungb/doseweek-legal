@@ -11,6 +11,7 @@ UK and Switzerland sales exclusions with no appointed EU/UK representative. Appl
 existing-user rights/transfer safeguards/breach clocks and iOS PDF portability are preserved.
 Actual Store-exclusion false gates replace appointment-only false gates. Canonical/staged iOS
 policy/help use neutral other-platform/store references; verifier/retention clauses survive.
+Product/source GREEN committed locally at `3ded23a5f655c79fc99b7c2b777019884d805b54`.
 Owned GREEN changes: three policy/Terms sources plus account candidate, bounded validators/
 renderers, regenerated iOS/Android/Terms pages, README/operations/release map and evidence.
 
@@ -32,8 +33,14 @@ appointment question remains for this excluded-market version. No counsel/native
 visual certification; visual/native/provider/live checks NOT_RUN. No network, push, merge,
 store action, deployment or publication. No owned job/device or temporary/scratch files remain.
 
-Next action: commit the verified GREEN candidate, then overwrite and validate the final lane
-report with final HEAD/commits/owned-file inventory and updated operational ownerQuestions.
+Final report overwritten and readback/identity/hash/schema/stamp validation PASS at source
+GREEN; `revision1/report-validation-precompletion.json` retains that result. The reporting-only
+completion commit changes this handoff, dated journal and report writer/receipt. A final
+mechanical report refresh records its final HEAD/commits/files and clean status; no checked
+product input changes and no tests are rerun. Current Git HEAD and the final lane report own
+exact inventory; no concurrent competing handoff or release journal was written.
+Next action: orchestrator reviews/integrates the revision candidate and resolves the remaining
+operational ownerQuestions. Publication remains outside this lane.
 Report: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-report.json`.
 Older snapshots below are historical and cannot authorize release work.
 

@@ -22,6 +22,9 @@ Being on `main` does not by itself prove the live page was checked.
 - Release gate exit1 remains BLOCKED on null date and operational proof. First wrapper
   classification failure and actual terminal log retained; classification corrected without
   rerunning product checks. Evidence: `evidence/legal-update-20261002/revision1/`.
+- Source GREEN committed at `3ded23a5f655c79fc99b7c2b777019884d805b54`. Final report overwritten
+  and validated; a reporting-only completion commit and mechanical final HEAD/inventory refresh
+  do not change the 249 verified product inputs. Exact final state is in the lane JSON report.
 - Owned proof worktree and translation scratch removed. No native/network/store action,
   push, merge, deployment, publication or new visual/counsel/native-speaker certification.
 

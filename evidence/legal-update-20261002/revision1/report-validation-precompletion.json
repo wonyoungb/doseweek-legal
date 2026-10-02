@@ -1,0 +1,11 @@
+{
+  "phase": "source GREEN committed; before reporting-only completion commit",
+  "result": "PASS",
+  "head": "3ded23a5f655c79fc99b7c2b777019884d805b54",
+  "reportSha256": "ae45ba167c1b17b9de76171fd2579f820b04f99d9330e14ada8e8ea7b463171c",
+  "requiredFieldsPresent": true,
+  "exactGreenIds": 182,
+  "commitStampsVerified": true,
+  "frozenInputsMatched": 249,
+  "next": "documentation/evidence-only commit, then mechanically regenerate report HEAD/commit/file inventory; no product checks rerun"
+}
