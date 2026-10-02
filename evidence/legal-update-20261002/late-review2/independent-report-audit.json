@@ -1,0 +1,27 @@
+{
+  "reviewer": "/root/audit_scope",
+  "result": "PASS",
+  "head": "889feca451642f0f61199fb2d289b990ac37efb3",
+  "auditedReportSha256": "e019459ad81ba635033a9b91348cf8917129edd9d3616571154a4ca93c032de1",
+  "scope": "independent read-only report/evidence audit before reporting-only completion; final HEAD/commit/files/clean status refreshed mechanically",
+  "checks": {
+    "redMethods": 6,
+    "redAssertionFailures": 6,
+    "greenMethods": 208,
+    "focusedMethods": 68,
+    "provenanceMethods": 1,
+    "ordinaryPass": 13,
+    "actualReleaseExit": 1,
+    "releaseResult": "BLOCKED_EFFECTIVE_DATE",
+    "frozenFiles": 260,
+    "provenanceSha256": "8cfff1ec963588bcb5c6cbb79698f50710b3ba5ba727359356d32f14d7e29691",
+    "preservedFiles": 175,
+    "identitiesLogsHashesTrailersFilesMatch": true,
+    "historicalReceiptsPreserved": true,
+    "priceAgnosticActiveReport": true,
+    "readinessPublicationClosed": true
+  },
+  "actionableIssues": [],
+  "externalActions": [],
+  "productGatesRerun": false
+}

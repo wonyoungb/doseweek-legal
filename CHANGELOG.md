@@ -14,7 +14,14 @@
 - Full208 exact methods/13 ordinary commands PASS; 260 frozen inputs/runtime match;
   release child exit1 BLOCKED_EFFECTIVE_DATE retained as failed.
 - Final provenance selector PASS with full-map/relevant-field/runner hashes; full coverage reused
-  only for matching other inputs. Report writer prepared; GREEN/report finalization next.
+  only for matching other inputs. Source GREEN committed at `889feca451642f0f61199fb2d289b990ac37efb3`.
+- Final report overwritten; readback/exact-ID/loghash/frozen260inputs/provenance/stamps/
+  false-gates/price-agnostic validation PASS.
+- Independent final report audit PASS:208/68/1GREEN and6RED identities/logs,260inputs plus
+  final-map supplement, commit trailers/files,175preserved files and historical receipts agree.
+  Price-agnostic report/readiness gates explicit; no actionable issue.
+- Reporting-only completion records continuity/checkpoint/audit; final report HEAD/inventory
+  refresh after commit. No owned job/device/tmp worktree/scratch or external action.
 
 ## 2026-10-02 — late review 1 (historical; unpublished)
 

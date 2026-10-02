@@ -1,0 +1,14 @@
+{
+  "head": "889feca451642f0f61199fb2d289b990ac37efb3",
+  "reportSha256": "4887dbea852b5292401bc488ed083113964c6b9a06d6cefa1cda8227fc919eba",
+  "result": "PASS",
+  "reportValidation": {
+    "exactIdentities": true,
+    "logsAndHashes": true,
+    "frozenInputs": true,
+    "provenanceSupplement": true,
+    "commitStamps": true,
+    "falseReadinessGates": true,
+    "priceAgnosticActiveAuthority": true
+  }
+}

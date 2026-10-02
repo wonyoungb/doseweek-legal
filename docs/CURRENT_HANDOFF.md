@@ -30,8 +30,19 @@ full-file fingerprint with a targeted replay; other unchanged inputs retain matc
 Supplemental final provenance selector PASS with matching full-map/runner/field hashes;
 260 full-gate frozen inputs still match. Exact receipt `late-review2/provenance-input-comparison.json`.
 New report writer validates identities/logs/inputs/stamps/false gates and uses store-price only.
-Owned translation/temporary worktree/scratch removed; no running owned process/device.
-Next action: commit GREEN, then overwrite final report and independently audit its readback.
+Owned proof worktree and preparation scratch removed; no running owned process/device.
+Source GREEN committed locally at `889feca451642f0f61199fb2d289b990ac37efb3`; verified product inputs unchanged.
+Final report overwritten at requested external path. Schema/readback/exact-ID/loghash/
+frozen260inputs/provenance/stamps/false-gates/price-agnostic-fields validation PASS; checkpoint
+in `late-review2/report-validation-precompletion.json`. Independent report audit PASS: exact identities/logs/all260inputs/provenance/stamps/
+175preservedfiles/historicalreceipts/falsegates/price-agnostic report agree; no actionable issue.
+Receipt `late-review2/independent-report-audit.json`.
+Reporting-only completion owns handoff/CHANGELOG/checkpoint/audit; product inputs unchanged.
+After completion commit, mechanically refresh final report HEAD/commits/files/clean status.
+No running owned process/device, temporary worktree or scratch remains. No publication/push/
+merge/deploy/native/provider/Store/network action performed. Existing blockers remain explicit.
+Next action for orchestrator: review/integrate these RED/GREEN/completion commits, obtain
+matching final store-price partner copy/check receipts and operational/Store evidence. Never publish from this lane.
 
 ## HISTORICAL — legal-update-legal late review 1 (2026-10-02; unpublished)
 
