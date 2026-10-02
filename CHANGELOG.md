@@ -10,6 +10,9 @@ Being on `main` does not by itself prove the live page was checked.
 - Local source GREEN: `2efa2b0f8e368c074fc24f947a4d014776636e0d`. Completion documentation
   records this checkpoint without changing matching verification inputs; final HEAD is in the
   lane JSON report. Temporary proof worktrees are removed and no owned check process remains.
+- Final JSON written and validated, including 29 evidence paths and independent reporting
+  review. Completion matches 45/46 frozen inputs; only derived release-map metadata changed.
+  Adult-only copy remains; child controls and claim-substantiation follow-up are not certified.
 - Added 17-locale privacy/rights/breach and processor-table drafts, explicit sensitive-health
   consent, Wonyoung Labs operator contacts, daily encrypted S3 Seoul  + weekly OS backups with
   deletion within 7 days, immediate requested erasure, Store-confirmed end + 30 days / at most 7 days outage retention.

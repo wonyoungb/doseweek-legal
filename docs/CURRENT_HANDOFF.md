@@ -31,6 +31,11 @@ EU/UK contact placeholders are explicit. No counsel/native-speaker certification
 policy blocked the local file URL, so visual review is NOT_RUN; no workaround was attempted.
 
 Report: `/Users/wonyoungchoi/Documents/Coding Work/Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/legal-update-legal-report.json`.
+Report written and checked: required fields, 29 actual evidence paths, exact identity/count and
+commit inventories verified; independent reporting review completed. Completion hashes match
+45/46 frozen inputs; the sole difference is derived release-map status/source-hash metadata,
+with effective date still null. Existing adult-only scope is preserved; regional child controls
+and marketing-claim substantiation are follow-up, not implemented or certified by this lane.
 Next action: orchestrator reviews/integrates this candidate and resolves the report's
 ownerQuestions/operational gates; publication remains outside this lane. Older snapshots below
 are historical for this resumed lane. Only derived receipts/docs change after this frozen gate.
