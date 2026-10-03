@@ -904,7 +904,7 @@ the current owner stop. This file does not duplicate counts, HEADs or executable
 
 ## Open owner questions (2026-09-30)
 
-- Resolved in the resumed packet: original primary features remain Free, perpetual ad-free use is not guaranteed, and promotional acquisition alone is not paid-purchase proof. Counsel/platform assessment of prior ad-free purchase claims remains a release blocker; the owner decision is no longer pending.
+- Resolved in the resumed packet: original primary features remain Free, perpetual ad-free use is not guaranteed, and promotional acquisition alone is not paid-purchase proof.
 - The owner chose to include free + ads + Plus in 1.0.6. The release effective date is still
   unset, and the app/page version fields still describe 1.0.5; the release coordinator must
   align them with the final 1.0.6 builds before publication.
