@@ -167,7 +167,8 @@ def check_app(locale: str, copy: dict, location: str, guardrail: str, facts: dic
     """One locale's RESOLVED app copy. `facts` carries the tokens the items must contain."""
     where = (locale, location, guardrail, "app")
     fields = app_fields(copy)
-    scan = dict(fields)
+    # Forbidden claims and retired names are searched in every key, not only in the pinned ones.
+    scan = dict(copy)
     if guardrail == "on":
         scan = {name: text.replace(facts["guardrailSentence"], "") for name, text in scan.items()}
     _forbidden(locale, scan, pins, where)

@@ -1331,6 +1331,28 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                         module.validate_app(mutated, web, ai_legal_guard.with_hashes(pins, web, mutated))
                     self.assertNotIn('--repin', str(failure.exception))
 
+    def test_forbidden_claims_are_searched_in_every_app_key_not_only_the_pinned_ones(self):
+        import copy as copying
+        module = ai_assistant_candidate
+        web, app = self.source(WEB_SOURCE), self.source(APP_SOURCE)
+        pins = ai_legal_guard.read_pins()
+        unpinned = [key for key in APP_KEYS if key not in ai_legal_guard.app_fields(app['locales']['ko']['copy'])]
+        self.assertIn('ai.settings.withdraw.note', unpinned)
+        for locale, key, text in (('ko', 'ai.settings.withdraw.note', ' 아마존 베드록에서 처리해요.'),
+                                  ('ja', 'ai.consent.b.preview', ' アマゾンのクロードが処理します。'),
+                                  ('en', 'pro.support.priority', ' Google never stores your content.'),
+                                  ('zh-Hans', 'ai.settings.usage', ' 亚马逊会立即删除。')):
+            with self.subTest(locale=locale, key=key):
+                self.assertIn(key, unpinned)
+                mutated = copying.deepcopy(app)
+                mutated['locales'][locale]['copy'][key] += text
+                # An unpinned key does not change the hashes, so only the forbidden list can fail.
+                self.assertEqual(ai_legal_guard.with_hashes(pins, web, mutated)['combinationSha256'],
+                                 pins['combinationSha256'])
+                with self.assertRaises(AssertionError) as failure:
+                    module.validate_app(mutated, web, pins)
+                self.assertIn('forbidden claim or retired name', str(failure.exception))
+
     def test_hash_pins_catch_any_other_change_to_a_pinned_field_until_it_is_re_pinned(self):
         # What the hashes are for, and their limit: a change no hand-written guard knows about is
         # detected, and it is accepted again after a re-pin. That is why --repin is a review step.

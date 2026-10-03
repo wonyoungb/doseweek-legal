@@ -53,13 +53,13 @@ not published, every readiness flag false.
     `serverRegistry.guardrailLocales` per combination for the server lane to enforce.
   - consentVersion 2026-10-03.3: every Screen A hash of 2026-10-03.2 is void; apply list, receipts
     and pins regenerated. Evidence: lane folder `.../claude-20261003/round2/`.
-- Checks: `python3 -m unittest discover -s scripts -p 'test_*.py'`: 277 methods, 274 pass,
+- Checks: `python3 -m unittest discover -s scripts -p 'test_*.py'`: 278 methods, 275 pass,
   3 fail (86 subtests). The same 3 fail at `f0c78fe` before this work (263 methods, 86 subtests):
   test_legal_late_decisions trial meanings, test_terms_legal_update App Store trial,
   test_legal_late2_backup legacy hash. They come from the `docs/terms-content.json` change in
   `f0c78fe` (terms pages not re-rendered: `render_terms.py --check` and `check_site.py` fail the
   same way) and are outside this change; the three tests read `docs/terms-content.json` itself, so re-rendering
-  the terms page does not fix them. AI family `test_ai_assistant_legal.py`: 48/48 pass.
+  the terms page does not fix them. AI family `test_ai_assistant_legal.py`: 49/49 pass.
   `ai_assistant_candidate.py`, `ai_legal_guard.py --check`, `ai_consent_apply.py --check`,
   `render_account_sync.py --check`, `korean_tone.py`: pass.
 - Open (also in `unresolvedBeforePublication`): the two owner switches; billing-account entity
