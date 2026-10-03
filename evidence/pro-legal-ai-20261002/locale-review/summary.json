@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "lane": "LEGAL-AI",
+  "date": "2026-10-03",
+  "consentVersion": "2026-10-03.1",
+  "statuses": {
+    "ko": "codex-changed-scope-self-review",
+    "en": "codex-changed-scope-self-review",
+    "ja": "codex-changed-scope-self-review",
+    "de": "back-translation-only",
+    "fr": "back-translation-only",
+    "es": "back-translation-only",
+    "it": "back-translation-only",
+    "nl": "back-translation-only",
+    "pt-PT": "back-translation-only",
+    "pl": "back-translation-only",
+    "sv": "back-translation-only",
+    "hi": "back-translation-only",
+    "pt-BR": "back-translation-only",
+    "ar": "back-translation-only",
+    "zh-Hans": "back-translation-only",
+    "zh-Hant": "back-translation-only",
+    "tr": "back-translation-only"
+  },
+  "backTranslationOnly": [
+    "de",
+    "fr",
+    "es",
+    "it",
+    "nl",
+    "pt-PT",
+    "pl",
+    "sv",
+    "hi",
+    "pt-BR",
+    "ar",
+    "zh-Hans",
+    "zh-Hant",
+    "tr"
+  ],
+  "nativeSpeakerReviewed": [],
+  "counselReviewed": [],
+  "flagsOff": [
+    "ko",
+    "ja"
+  ],
+  "backTranslationKeyCoverage": {
+    "locales": [
+      "de",
+      "fr",
+      "es",
+      "it",
+      "nl",
+      "pt-PT",
+      "pl",
+      "sv",
+      "hi",
+      "pt-BR",
+      "ar",
+      "zh-Hans",
+      "zh-Hant",
+      "tr"
+    ],
+    "perLocale": {
+      "screenA": {
+        "recorded": 22,
+        "total": 22
+      },
+      "screenB": {
+        "recorded": 16,
+        "total": 16
+      },
+      "settingsAndPerk": {
+        "recorded": 12,
+        "total": 12
+      },
+      "labels": {
+        "recorded": 3,
+        "total": 3
+      },
+      "refusalTemplates": {
+        "recorded": 12,
+        "total": 12
+      }
+    },
+    "appKeys": {
+      "recorded": 50,
+      "total": 50
+    },
+    "missing": {},
+    "recordedIn": {
+      "writing-session": "7 unchanged long consent strings and 15 unchanged CON-PRO strings",
+      "review-fix-1": "39 unchanged app strings; prior recordings reused for matching inputs",
+      "codex-refresh-2026-10-03": "4 changed app strings with current recorded English back-translations"
+    }
+  },
+  "honesty": "Current changed-scope review is by Codex. ko/en/ja have source self-review; 14 locales have recorded same-model back-translations, not blind or independent. No native-speaker or counsel review is claimed. Unchanged recordings are reused only for matching source values. Factual/runtime release flags remain false; KO/JA recommendations stay false for unresolved factual consent disclosures."
+}

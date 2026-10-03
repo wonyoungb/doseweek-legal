@@ -1,0 +1,526 @@
+{
+ "lane": "LEGAL-AI",
+ "date": "2026-10-02",
+ "status": "COMPLETE (static); unpublished candidate",
+ "branch": "next-ai/pro-legal-ai",
+ "base": "868932cf09f123dc7be673ef660290819cde25f7",
+ "commits": [
+  {
+   "sha": "8b34c75",
+   "kind": "RED"
+  },
+  {
+   "sha": "b23c985",
+   "kind": "GREEN"
+  },
+  {
+   "kind": "docs",
+   "note": "this evidence and the handoff; its sha is in the lane report"
+  }
+ ],
+ "red": {
+  "proof": "red-proof/legal-red-parent.summary.json",
+  "ran": 24,
+  "failingMethods": 23,
+  "failingSubtests": 269,
+  "errors": 0,
+  "guardPassingOnParent": 1
+ },
+ "green": {
+  "command": "python3 -m unittest discover -s scripts -p 'test_*.py' -v",
+  "exit": 0,
+  "ran": 246,
+  "result": "OK",
+  "newMethods": [
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_ai_section_items_and_retention_follow_screen_a_not_the_first_draft",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_ai_section_names_only_its_own_platform_health_source",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_faq_no_longer_says_1_0_6_has_no_generative_ai",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_candidate_states_the_decided_facts_and_stays_unpublished",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_consent_and_settings_copy_exists_for_every_key_in_17_locales",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_every_server_cannot_read_claim_is_followed_by_the_ai_exception",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_german_uses_sie_and_dutch_uses_u",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_health_platform_paragraphs_say_the_data_is_not_used_for_ai",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_helplines_match_the_spec_and_are_marked_not_refetched",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_korean_copy_never_says_sangdam_and_uses_the_decided_names",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_korean_screen_a_is_the_reconciled_spec_text",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_locale_review_receipts_are_recorded_honestly",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_on_device_ai_section_points_to_the_server_assistant",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_privacy_policies_carry_the_ai_record_assistant_section_in_17_locales",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_processor_table_lists_bedrock_seoul_in_region_without_retention",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_release_gate_stays_closed_until_the_assistant_is_verified",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_served_sources_stay_without_the_unreleased_assistant",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_staged_pages_render_the_section_the_row_and_the_deletion_paragraph",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_store_declarations_follow_the_critic_corrections",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_terms_ai_section_keeps_statutory_rights_and_uses_the_decided_names",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_terms_have_the_ai_section_right_after_the_medical_notice",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_the_exception_is_the_candidate_sentence_and_names_the_feature",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_us_consumer_health_policy_covers_the_assistant",
+   "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_whats_new_is_one_neutral_ai_line_without_commercial_terms"
+  ],
+  "newMethodCount": 24,
+  "discovered": 246,
+  "executed": 246,
+  "passed": 246,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "discoveredEqualsExecuted": true,
+  "byModule": {
+   "test_account_legal_update": 6,
+   "test_account_sync_candidate": 32,
+   "test_ai_assistant_legal": 24,
+   "test_korean_tone": 28,
+   "test_legal_late2_backup": 14,
+   "test_legal_late_decisions": 6,
+   "test_legal_late_review1": 5,
+   "test_legal_late_review2": 4,
+   "test_legal_operations": 3,
+   "test_legal_revision1": 9,
+   "test_legal_revision2": 5,
+   "test_legal_revision2_minor": 6,
+   "test_locale_pages": 11,
+   "test_monetization_copy": 8,
+   "test_privacy_legal_update": 12,
+   "test_privacy_ops": 40,
+   "test_render_paragraphs": 18,
+   "test_terms_legal_update": 8,
+   "test_us_health_policy": 7
+  }
+ },
+ "lightChecks": [
+  {
+   "cmd": "python3 scripts/render_home.py --check",
+   "exit": 0,
+   "result": "OK: shared home and 17 language homes match all 17 guide locales and catalog versions"
+  },
+  {
+   "cmd": "python3 scripts/render_ios.py --check",
+   "exit": 0,
+   "result": "OK: iOS privacy and support pages (17 locales) and 34 language pages"
+  },
+  {
+   "cmd": "python3 scripts/render_android.py --check",
+   "exit": 0,
+   "result": "OK: 54 Android pages and icon match /Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/PRO-LEGAL-AI-legal/docs/android-content.candidate.json"
+  },
+  {
+   "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+   "exit": 0,
+   "result": "OK: import guide, 17 language pages and downloads (17 locales); status supported"
+  },
+  {
+   "cmd": "python3 scripts/render_terms.py --check",
+   "exit": 0,
+   "result": "OK: Terms of Use page (17 locales) and 17 language pages; effective date not set (release date BLOCKED)"
+  },
+  {
+   "cmd": "python3 scripts/render_us_health.py --check",
+   "exit": 0,
+   "result": "OK: US Consumer Health Data policy, 18 pages / 17 locales; effective date not set (release date BLOCKED)"
+  },
+  {
+   "cmd": "python3 scripts/render_sitemap.py --check",
+   "exit": 0,
+   "result": "OK: sitemap.xml lists 162 URLs (9 routes x hash page + 17 languages), each with 18 hreflang alternates"
+  },
+  {
+   "cmd": "python3 scripts/check_site.py",
+   "exit": 0,
+   "result": "OK: 9 hash pages and 153 language pages, hreflang (162 pages, 17 languages + x-default, reciprocal), sitemap (162 URLs with alternates)/robots, local links, locale panels, social metadata, accessible FAQ markers, 44px key targets, critical disclosures, Korean tone (28 self-tests, 2297 sentences, 13 allow-listed), and Android legal-catalog parity"
+  },
+  {
+   "cmd": "python3 scripts/account_sync_candidate.py",
+   "exit": 0,
+   "result": "OK: 17 account/sync draft locales; status=pre-release-candidate-not-published"
+  },
+  {
+   "cmd": "python3 scripts/ai_assistant_candidate.py",
+   "exit": 0,
+   "result": "OK: 17 AI disclosure locales, 50 app copy keys; status=pre-release-candidate-not-published; consentVersion=2026-10-02.1"
+  },
+  {
+   "cmd": "python3 scripts/render_account_sync.py --check",
+   "exit": 0,
+   "result": "OK: 126 unpublished staged pages, 7 routes, 17 locales; no files written"
+  },
+  {
+   "cmd": "python3 scripts/korean_tone.py",
+   "exit": 0,
+   "result": "korean_tone: 738 strings, 2297 sentences; violations ending=0 honorific=0 jargon=0 glossary=0 noun-status=0 total=0; allow-listed 13; stale allow-list entries 0"
+  },
+  {
+   "cmd": "python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check",
+   "exit": 0,
+   "result": "OK: 17 locale receipts; flags off: ['ko', 'ja']; back-translation only: 14"
+  },
+  {
+   "cmd": "python3 scripts/check_site.py --release",
+   "exit": 1,
+   "result": "AssertionError: scripts/legal_release.py: NEXT_RELEASE_EFFECTIVE_DATE is not filled; the owner sets the monetization release date before final builds/signing (BLOCKED)"
+  },
+  {
+   "cmd": "git diff --check",
+   "exit": 0,
+   "result": ""
+  }
+ ],
+ "inputs": {
+  "docs/ai-assistant-content.candidate.json": "dcfbe98b406212a6d77be55ed476702c231948015cee5212ed9796322dd2694c",
+  "docs/ai-app-copy.candidate.json": "2ab719e5a69053e3a3984cd2fe27351e2b5c7bb325a73f6a528165800e4e0824",
+  "docs/AI_STORE_DECLARATIONS_1_0_6.md": "e9990cff13a06146c7ef6e0171ca24f1eb31a7fb0aa6c64ed73723ec51e67c46",
+  "scripts/ai_assistant_candidate.py": "fa6b34030c1695cf94e3b6369b60826f6e799277d158e2782f99007bfdda71b2",
+  "scripts/test_ai_assistant_legal.py": "e67a8d7bae695434aa3d3ebc16fdac1481b4e3351064e99c6d3e1ede4a6a6c7c",
+  "scripts/privacy_legal.py": "2894b8e649c5184444a499f4882b67518f8caafcc3e657ad7573aaea0af0732f",
+  "scripts/render_terms.py": "3acc6aa543fde41990048824cdf105e3ee9040ccded04516028ba50e44590216",
+  "scripts/render_account_sync.py": "fbe30e34247522d4f3311248305f4f5530e8e04dd7eda6500c9bf4221411b2c6",
+  "scripts/check_site.py": "592d53c0873b85a68293b9fac74f3a11bad619ef3f041df819a296f944996c7a",
+  "scripts/korean_tone_allowlist.json": "0800932860ad71fc15168ed943906ab3b07f28be649eda587120cbdcdb41b581",
+  "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json": "59b17a199d377e89de35366427552942b0c11eb26b23066cf1df42767347ce2c"
+ },
+ "python": "Python 3.14.8",
+ "notRun": [
+  "browser render of staged pages",
+  "native app use of the copy (IOS-AI-UI, AND-AI-UI)",
+  "helpline re-fetch from official sources (no network)",
+  "AWS or store console readbacks",
+  "EVAL-AI gate",
+  "native-speaker and counsel review"
+ ],
+ "cleanup": "temporary detached RED worktree removed and pruned; scratch fragments deleted after this summary",
+ "reviewFix1": {
+  "date": "2026-10-02",
+  "findings": [
+   "major: C23 receipts recorded 11 of 50 app keys but recommended the flag",
+   "major: staged Android 1.0.6 content still denied generative AI (home badge and not-used list item, 17 locales)"
+  ],
+  "commits": [
+   {
+    "sha": "2f43f9cf9fb0678df6a71c3da5eac5b36bacb0f1",
+    "kind": "RED"
+   },
+   {
+    "sha": "1c9579b",
+    "kind": "GREEN"
+   },
+   {
+    "kind": "docs",
+    "note": "this evidence and the handoff; its sha is in the lane report"
+   }
+  ],
+  "red": {
+   "proof": "red-proof/review-fix1-red.summary.json",
+   "ran": 26,
+   "failingMethods": 3,
+   "failures": 38,
+   "errors": 0,
+   "fullSuiteRan": 248,
+   "fullSuiteFailures": 38,
+   "maskedByTheFirstAssertion": {
+    "note": "each locale subtest stops at the badge assertion; the item assertions were measured separately at the RED commit in one temporary detached worktree (removed)",
+    "locales": 17,
+    "badgeStillStaged": 17,
+    "itemStillStaged": 17,
+    "liOnLocalePage": 17,
+    "liOnRootPage": 17
+   }
+  },
+  "green": {
+   "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+   "exit": 0,
+   "ran": 248,
+   "result": "OK",
+   "byModuleChanged": {
+    "test_ai_assistant_legal": 26
+   },
+   "newMethods": [
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_badge_and_not_used_list_no_longer_deny_generative_ai",
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_renderer_rejects_the_bare_generative_ai_denial_for_1_0_6"
+   ],
+   "changedMethods": [
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_locale_review_receipts_are_recorded_honestly"
+   ]
+  },
+  "lightChecks": [
+   {
+    "cmd": "python3 scripts/render_home.py --check",
+    "exit": 0,
+    "result": "OK: shared home and 17 language homes match all 17 guide locales and catalog versions"
+   },
+   {
+    "cmd": "python3 scripts/render_ios.py --check",
+    "exit": 0,
+    "result": "OK: iOS privacy and support pages (17 locales) and 34 language pages"
+   },
+   {
+    "cmd": "python3 scripts/render_android.py --check",
+    "exit": 0,
+    "result": "OK: 54 Android pages and icon match /Users/wonyoungchoi/.claude/jobs/doseweek-106/wt/PRO-LEGAL-AI-legal/docs/android-con"
+   },
+   {
+    "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+    "exit": 0,
+    "result": "OK: import guide, 17 language pages and downloads (17 locales); status supported"
+   },
+   {
+    "cmd": "python3 scripts/render_terms.py --check",
+    "exit": 0,
+    "result": "OK: Terms of Use page (17 locales) and 17 language pages; effective date not set (release date BLOCKED)"
+   },
+   {
+    "cmd": "python3 scripts/render_us_health.py --check",
+    "exit": 0,
+    "result": "OK: US Consumer Health Data policy, 18 pages / 17 locales; effective date not set (release date BLOCKED)"
+   },
+   {
+    "cmd": "python3 scripts/render_sitemap.py --check",
+    "exit": 0,
+    "result": "OK: sitemap.xml lists 162 URLs (9 routes x hash page + 17 languages), each with 18 hreflang alternates"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py",
+    "exit": 0,
+    "result": "OK: 9 hash pages and 153 language pages, hreflang (162 pages, 17 languages + x-default, reciprocal), sitemap (162 URLs w"
+   },
+   {
+    "cmd": "python3 scripts/account_sync_candidate.py",
+    "exit": 0,
+    "result": "OK: 17 account/sync draft locales; status=pre-release-candidate-not-published"
+   },
+   {
+    "cmd": "python3 scripts/ai_assistant_candidate.py",
+    "exit": 0,
+    "result": "OK: 17 AI disclosure locales, 50 app copy keys; status=pre-release-candidate-not-published; consentVersion=2026-10-02.1"
+   },
+   {
+    "cmd": "python3 scripts/render_account_sync.py --check",
+    "exit": 0,
+    "result": "OK: 126 unpublished staged pages, 7 routes, 17 locales; no files written"
+   },
+   {
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 0,
+    "result": "korean_tone: 740 strings, 2299 sentences; violations ending=0 honorific=0 jargon=0 glossary=0 noun-status=0 total=0; all"
+   },
+   {
+    "cmd": "python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check",
+    "exit": 0,
+    "result": "OK: 17 locale receipts; flags off: ['ko', 'ja']; back-translation only: 14"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py --release",
+    "exit": 1,
+    "result": "AssertionError: scripts/legal_release.py: NEXT_RELEASE_EFFECTIVE_DATE is not filled; the owner sets the monetization rel"
+   }
+  ],
+  "backTranslationCoverage": {
+   "locales": 14,
+   "appKeysPerLocale": "50 of 50",
+   "conProKeysPerLocale": "15 of 15",
+   "addedInThisRound": "39 app strings per locale (546 lines)",
+   "method": "same-model, not blind, no native speaker, no counsel"
+  },
+  "stagedAndroid": {
+   "field": "home.featureBadges[3] and privacy no-collection items[4]",
+   "locales": 17,
+   "bareDenialsLeft": 0,
+   "servedSourceUnchanged": true
+  },
+  "notRun": [
+   "browser render of the staged pages",
+   "native-speaker or counsel review of any locale"
+  ]
+ },
+ "reviewFix2": {
+  "date": "2026-10-02",
+  "findings": [
+   "major: the staged iOS 1.0.6 support FAQ support.released.ai still said no server model or third-party model is used, in 17 locales (the privacy on-device AI section carried the same sentence with only a pointer below it)",
+   "task addition: the policy must say that settings sync across the account devices (owner decision 2026-10-02 19:22)",
+   "minor: require_release_ready did not check that the draft sentences are gone",
+   "minor (recorded as blockers, no copy change): ja privacy clause 6 APPI transfer statement; Screen A retention sentence broader than clause 4; zh meal-ideas term"
+  ],
+  "commits": [
+   {
+    "sha": "e854f24",
+    "kind": "RED",
+    "scope": "scripts/test_ai_assistant_legal.py"
+   },
+   {
+    "sha": "cf834c1",
+    "kind": "GREEN",
+    "scope": "docs/ai-assistant-content.candidate.json (onDeviceOnly, iosAiFaq, androidAiFaq, preReleaseWording, 3 unresolved items), scripts/ai_assistant_candidate.py, scripts/render_ios.py"
+   },
+   {
+    "sha": "ec6d1e7",
+    "kind": "RED",
+    "scope": "scripts/test_settings_sync_disclosure.py (new)"
+   },
+   {
+    "sha": "c147f38",
+    "kind": "GREEN",
+    "scope": "docs/account-sync-content.candidate.json (sync, 17 locales), docs/ACCOUNT_SYNC_RELEASE_REVIEW.md"
+   },
+   {
+    "kind": "docs",
+    "note": "this evidence, the changelog and the handoff; its sha is in the lane report"
+   }
+  ],
+  "red": {
+   "proof": "red-proof/review-fix2-red.summary.json",
+   "A": {
+    "ran": 33,
+    "failingMethods": 7,
+    "failures": 109,
+    "errors": 0
+   },
+   "B": {
+    "ran": 4,
+    "failingMethods": 3,
+    "failures": 35,
+    "errors": 0,
+    "guardPassingOnParent": 1
+   }
+  },
+  "green": {
+   "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+   "exit": 0,
+   "ran": 259,
+   "result": "OK",
+   "newMethods": 11,
+   "methodsBefore": 248
+  },
+  "lightChecks": [
+   {
+    "cmd": "python3 scripts/render_home.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_ios.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_android.py --check",
+    "exit": 0,
+    "result": "54 Android pages; served 1.0.5 source unchanged"
+   },
+   {
+    "cmd": "python3 scripts/render_import.py --check --require-all-locales",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_terms.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_us_health.py --check",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/render_sitemap.py --check",
+    "exit": 0,
+    "result": "162 URLs"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/account_sync_candidate.py",
+    "exit": 0
+   },
+   {
+    "cmd": "python3 scripts/ai_assistant_candidate.py",
+    "exit": 0,
+    "result": "17 AI disclosure locales, 50 app copy keys"
+   },
+   {
+    "cmd": "python3 scripts/render_account_sync.py --check",
+    "exit": 0,
+    "result": "126 unpublished staged pages"
+   },
+   {
+    "cmd": "python3 scripts/korean_tone.py",
+    "exit": 0,
+    "result": "742 strings, 2311 sentences, 0 violations, 13 allow-listed, 0 stale"
+   },
+   {
+    "cmd": "python3 evidence/pro-legal-ai-20261002/write_locale_receipts.py --check",
+    "exit": 0,
+    "result": "17 receipts unchanged (the app copy did not change)"
+   },
+   {
+    "cmd": "python3 scripts/check_site.py --release",
+    "exit": 1,
+    "result": "BLOCKED as before: NEXT_RELEASE_EFFECTIVE_DATE is not filled (expected)"
+   },
+   {
+    "cmd": "git diff --check",
+    "exit": 0
+   }
+  ],
+  "inputs": {
+   "docs/ai-assistant-content.candidate.json": "5693175dccc47cc27b485f6327473c71b800a03e62433ae2a97d1b9fe34693d6",
+   "docs/account-sync-content.candidate.json": "161002535f27c88d8a1c336a6c9ff36ba7698398b86c887e7a4e6cbe19f20222",
+   "docs/ai-app-copy.candidate.json": "2ab719e5a69053e3a3984cd2fe27351e2b5c7bb325a73f6a528165800e4e0824",
+   "scripts/ai_assistant_candidate.py": "37c386b78d583193a485e33c519856b74b9495dd3311f5227bffd8ed4fa7f31b",
+   "scripts/render_ios.py": "99e628eab0e8d0125f606ba982a21604742405c5fed282ea618673c16e7d7ec9",
+   "scripts/test_ai_assistant_legal.py": "e70fb716c1504ee56eb274e8a5a881acb47cf190740ea129dfc4a27a7bee8db6",
+   "scripts/test_settings_sync_disclosure.py": "0b5e70281988a625b3a995d4984b44c4f726d83723686894b5ad4e31ba24033f"
+  },
+  "sweep": {
+   "method": "every string of the staged iOS, Android, Terms and US-policy sources, both candidate files and all 126 rendered staged pages is checked by test_no_staged_text_denies_a_server_or_third_party_model_outside_the_scoped_sentences; README, AGENTS, docs/*.md, docs/home-content.json, docs/help-navigation.json, import/content.json, templates/ and assets/ were read or grepped by hand",
+   "fixed": [
+    "iOS support.released.ai answers[0] (17 locales)",
+    "iOS privacy section ai paragraphs[0] (17 locales)",
+    "Android support faq ai-health answers[0]: says the assistant is processed on a server, not on the device (17 locales)"
+   ],
+   "noDenialFound": [
+    "Terms",
+    "US consumer-health policy",
+    "docs/ai-app-copy.candidate.json",
+    "docs/home-content.json",
+    "docs/help-navigation.json",
+    "import/content.json (it describes an external AI the user chooses)",
+    "templates/",
+    "assets/",
+    "docs/AI_STORE_DECLARATIONS_1_0_6.md",
+    "docs/LEGAL_OPERATIONS_1_0_6.md"
+   ],
+   "notAiDenialsLeftForTheirOwner": [
+    "iOS support secondRelease.meals answers[1] \"Meal records stay on the device ...\" and Android faq candidate2-meals answers[1] \"Records stay on the device ...\": unconditional although account sync sends meal records end-to-end encrypted; they do not speak about AI (the assistant sends meal-day counts and the protein average, not meal records). Owner: account/sync legal lane",
+    "Android home.intro \"Records stay on the device unless you turn on an optional integration.\": conditional on opt-in features; the Android home page is not one of the staged routes"
+   ]
+  },
+  "newWebsiteStringsReview": "onDeviceOnly, iosAiFaq, the Android server sentence and the settings sync sentences are website candidate text, not app-consumed consent or refusal copy, so they are outside the C23 receipt scope (the receipts hash the 50 app keys and the 15 CON-PRO keys, which did not change). Like the rest of the website candidate they were written by the lane agent in 17 locales and have no native-speaker or counsel review; ko is read by the owner at gate 6 and ja by counsel or a native reviewer.",
+  "notRun": [
+   "browser render of staged pages",
+   "native app behaviour of settings sync (built by the sync lanes)",
+   "helpline re-fetch from official sources (no network)",
+   "AWS or store console readbacks",
+   "EVAL-AI gate",
+   "native-speaker and counsel review"
+  ],
+  "cleanup": "four temporary detached RED worktrees removed by exact path; scratch files deleted by exact path after this summary"
+ },
+ "reviewFix3": {
+  "date": "2026-10-02",
+  "findings": [
+   "major: the settings-sync sentences said all app settings sync and are the same on every device, contradicting the staged Plus-tool and reference-medication sentences and the cross-platform settings contract",
+   "minor: no readiness flag or unresolved item for the settings-sync claim and its restore half",
+   "minor (not changed here): back-translations of the new AI policy strings; the repeated sync paragraph on the staged pages"
+  ],
+  "commits": [
+   {
+    "sha": "2708ded",
+    "kind": "RED",
+    "scope": "scripts/test_settings_sync_disclosure.py"
+   },
+   {
+    "sha": "c6924c8",
+    "kind": "GREEN",
+    "scope": "docs/account-sync-content.candidate.json (sync in 17 locales, serverReadiness.settingsSyncVerified, one unresolved item), scripts/account_sync_candidate.py (readiness token), docs/ACCOUNT_SYNC_RELEASE_REVIEW.md"
+   }
+  ],
+  "red": "red-proof/review-fix3-red.summary.json",
+  "green": "262/262 unittest methods PASS; 13 light commands PASS; check_site.py --release BLOCKED_EFFECTIVE_DATE as before"
+ }
+}

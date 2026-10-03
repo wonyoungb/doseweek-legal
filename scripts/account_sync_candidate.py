@@ -233,6 +233,9 @@ SERVER_READINESS_TOKENS = {
     # LATE2 review (2026-10-02): apps/google release/1.0.6 still ships the 1.0.5 app-managed
     # Drive appDataFolder backup, which the staged 1.0.6 copy no longer describes (OQ-L2-1).
     "appManagedDriveBackupDecided": "CloudBackupService",
+    # Lane PRO LEGAL-AI review round 3: the settings-sync sentences follow the cross-platform
+    # settings contract (owner decisions 19:22 and 20:29), which no native client has proved yet.
+    "settingsSyncVerified": "settingsSyncVerified",
 }
 
 # Lane LEGAL-STORE round 3 (2026-10-02 reviews of e3da3bd).
