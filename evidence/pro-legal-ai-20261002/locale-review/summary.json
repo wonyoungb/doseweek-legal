@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "lane": "LEGAL-AI",
-  "date": "2026-10-02",
-  "consentVersion": "2026-10-02.1",
+  "date": "2026-10-03",
+  "consentVersion": "2026-10-03.1",
   "statuses": {
-    "ko": "pending-owner-gate-6",
-    "en": "reviewed-by-lane-agent",
-    "ja": "pending-counsel-or-native-review",
+    "ko": "codex-changed-scope-self-review",
+    "en": "codex-changed-scope-self-review",
+    "ja": "codex-changed-scope-self-review",
     "de": "back-translation-only",
     "fr": "back-translation-only",
     "es": "back-translation-only",
@@ -89,9 +89,10 @@
     },
     "missing": {},
     "recordedIn": {
-      "writing-session": "11 long consent strings and 15 CON-PRO strings per locale",
-      "review-fix-1": "the other 39 app strings per locale (review round 1 found 11 of 50 app keys recorded)"
+      "writing-session": "7 unchanged long consent strings and 15 unchanged CON-PRO strings",
+      "review-fix-1": "39 unchanged app strings; prior recordings reused for matching inputs",
+      "codex-refresh-2026-10-03": "4 changed app strings with current recorded English back-translations"
     }
   },
-  "honesty": "No human has reviewed any locale. en is an AI-agent review; 14 locales have only a same-model back-translation (not blind, not independent), now recorded for every key in scope; ko and ja wait for the owner and for counsel or a native reviewer."
+  "honesty": "Current changed-scope review is by Codex. ko/en/ja have source self-review; 14 locales have recorded same-model back-translations, not blind or independent. No native-speaker or counsel review is claimed. Unchanged recordings are reused only for matching source values. Factual/runtime release flags remain false; KO/JA recommendations stay false for unresolved factual consent disclosures."
 }

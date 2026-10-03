@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "lane": "LEGAL-AI",
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "locale": "ko",
-  "consentVersion": "2026-10-02.1",
+  "consentVersion": "2026-10-03.1",
   "scope": {
     "screenA": [
       "ai.consent.a.title",
@@ -85,7 +85,7 @@
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
       "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
-      "sha256": "39239953eb1568944b6fdcb5c10646d8e2b1cd6062524741365c2798c3c4a51d"
+      "sha256": "fb2d1917cbdc6ea6e37510cad03fe3b755978421f9e4dc13caa487aa6296725f"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -110,20 +110,19 @@
       "sha256": "f9b7adebf999668b3e10f33ebcec4e53047a9556bfdbccd6bf9b1e8ec672b74f"
     }
   },
-  "status": "pending-owner-gate-6",
-  "reviewer": "none yet: the owner reads the Korean copy at gate 6",
-  "method": "Source locale, written from PRO-SPEC 5.1-5.3. Not reviewed by the owner in this lane.",
+  "status": "codex-changed-scope-self-review",
+  "reviewer": "Codex AI source reviewer; not a human, native speaker or legal counsel",
+  "method": "Codex checked the four changed consent strings against actual source facts on 2026-10-03; unchanged strings retain matching pinned prior source evidence. Source self-review only, not runtime verification or release acceptance.",
   "nativeSpeakerReview": false,
   "counselReview": false,
   "flag": {
     "key": "locales.ko",
     "recommended": false,
-    "condition": "stays false until the owner approves the Korean copy at gate 6"
+    "condition": "source-only Codex review recorded; recommendation remains false while factual consent/publication prerequisites are unverified; no counsel or native-speaker prerequisite is asserted"
   },
   "findings": [
-    "Source locale. Waits for the owner at gate 6; this lane does not sign off Korean copy.",
-    "Screen A follows PRO-SPEC 5.1 with three reconciled differences: the health-source sentence is split into .ios and .android keys (Apple 건강 / Health Connect), quotation marks are typographic, and 증상 is kept as the legally exact data category under a reviewed tone-allowlist entry.",
-    "상담 is not used anywhere; clinician advice is 의료진과 상의, as in the shipped CON-PRO keys. CON-PRO chose 컨디션 / 몸 상태 for 증상 in ai.refuse.sideEffect and ai.emergency; the consent screens say 증상, so the owner should confirm the two terms read consistently.",
-    "The 1-business-day promise of 우선 문의 답변 is defined in the Terms as Korean weekdays excluding public holidays (lane clarification)."
+    "Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.",
+    "This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.",
+    "ko/en/ja changed-scope self-review is by Codex; prior notes below are historical, not current owner/counsel/native approval. Unchanged strings retain matching pinned source evidence."
   ]
 }

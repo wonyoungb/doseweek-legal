@@ -1,4 +1,7 @@
-! Waits for counsel (APPI Art. 28 block, OWNER-DECISIONS #5) or a native reviewer; this lane does not sign off Japanese copy.
-! ai.consent.a.region.jp is the compliance 5.1 draft with 当社 replaced by DoseWeek and です/ます endings; counsel finalizes the wording.
-! Polite です/ます throughout. iOS says サブスクリプション and the Android variant says 定期購入, following each store's own term.
-! CON-PRO ja refusals were read against the Korean source: meaning matches; 医療従事者 is used for clinician.
+! Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.
+! This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.
+! ko/en/ja changed-scope self-review is by Codex; prior notes below are historical, not current owner/counsel/native approval. Unchanged strings retain matching pinned source evidence.
+# Historical note (2026-10-02): Waits for counsel (APPI Art. 28 block, OWNER-DECISIONS #5) or a native reviewer; this lane does not sign off Japanese copy.
+# Historical note (2026-10-02): ai.consent.a.region.jp is the compliance 5.1 draft with 当社 replaced by DoseWeek and です/ます endings; counsel finalizes the wording.
+# Historical note (2026-10-02): Polite です/ます throughout. iOS says サブスクリプション and the Android variant says 定期購入, following each store's own term.
+# Historical note (2026-10-02): CON-PRO ja refusals were read against the Korean source: meaning matches; 医療従事者 is used for clinician.

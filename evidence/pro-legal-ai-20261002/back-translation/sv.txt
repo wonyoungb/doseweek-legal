@@ -1,14 +1,25 @@
-! Informal du throughout, the Swedish standard. The feature is named in the definite form "AI-loggassistenten".
-! End-to-end encryption is rendered "totalsträckskryptering" in the consent copy.
+! Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.
+! This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.
+! Four changed English back-translations use retained per-row Codex evidence; unchanged 46 app and15 shared strings retain their original recordings only for matching pinned source values. Same-model, not blind or independent.
+# Historical note (2026-10-02): Informal du throughout, the Swedish standard. The feature is named in the definite form "AI-loggassistenten".
+# Historical note (2026-10-02): End-to-end encryption is rendered "totalsträckskryptering" in the consent copy.
 lead = It uses your entries to create weekly summaries and general meal ideas and explains how the app works. The answers come from AI, not from a human, and it gives no medical advice.
-sent = Before entries are sent we show the content, and nothing is sent until you press "Send". We send the number of doses (on time, late, skipped), the change in the weight you yourself entered, how many times you have logged each type of symptom, the number of days with a logged meal together with your protein average and protein goal, and your streak in weeks. For meal ideas we also send the meal type, the preferences, the allergies and the foods you do not like that you have chosen. Your language and region setting and the questions you write are also sent, and the app help adds only app version, platform and current screen.
-notSent = We do not send medicine names or doses, notes, food names, photos, dates or your name, your e-mail address or your account details. What you write in the question field is sent exactly as you wrote it.
+# round: codex-refresh-2026-10-03
+sent = Before records are sent, we show you the content, and nothing is sent until you tap Send. We send dose counts (on time, late, skipped), the change in the weight you entered yourself, how many times you logged each kind of symptom, the number of days with a meal log together with your protein average and goal, and your streak in weeks. For meal ideas we also send the meal kind, preferences, allergies and disliked foods you choose. Your language and region setting is also sent. Only app help sends the questions you type and the current conversation history, along with the app version, the platform and the current screen.
+# round: writing-session
+# round: codex-refresh-2026-10-03
+notSent = Model requests built from records exclude medication names and doses, notes, recorded food names, photos, dates, names, email addresses and account identifiers. Meal kinds, preferences, allergies and disliked foods are sent only as values chosen from predefined lists. App help also sends your question and current conversation history, so do not enter names, contact details or other people’s health information. DoseWeek separately processes account and connection information needed for sign-in, usage counts and consent management.
+# round: writing-session
 where = The app encrypts the content one more time and sends it to the DoseWeek server (Seoul, Republic of Korea), and Amazon Bedrock from Amazon Web Services (the Seoul region) processes it. The AI model is Claude from Anthropic. AWS runs it, and Anthropic cannot see the content.
-retention = What you send and the answers are not saved on the server and are not used for AI training. The answers are saved only on your device. Usage counters (without content) are saved for up to 2 months and consent proofs as long as your account exists. If you report an answer and choose "Send along the answer text", only that answer is saved for 30 days.
+# round: codex-refresh-2026-10-03
+retention = What you send and the answers are not kept on the server and are not used for AI training. Conversations are not saved. Only up to 2 weekly summary cards are saved on your device, and they are excluded from sync and backups. Usage counts (without content) are kept for up to 2 months, and consent records for as long as your account exists. If you report an answer and choose “Include the answer text”, only that answer is kept for 30 days.
+# round: writing-session
 e2ee = While the AI creates an answer, the DoseWeek server and Amazon Bedrock can read what you have sent. Sync and backup data are still protected with end-to-end encryption, just as now.
 optional = It is only the AI functions that cannot be used; the other functions in Pro and Plus work as usual. You can withdraw the consent at any time under Settings > the AI log assistant.
 checkHealth = [Optional] I consent to the processing of my health information (sensitive data)
-checkDetail = Purpose: create AI weekly summaries and meal ideas and answer questions about how the app is used / Data: the entries under "What is sent" above and the questions I write / Storage: deleted as soon as the answer has been created (if an answer is sent along in a report, only that answer is saved for 30 days) / If you decline, everything except AI works as usual
+# round: codex-refresh-2026-10-03
+checkDetail = Purpose: creating AI weekly summaries and meal ideas and answering app-use questions / Data: the records and meal choices under “What is sent” above, and app-help questions and current conversation history / Retention: deleted as soon as the answer is made (if an answer is included with a report, only that answer for 30 days) / If you decline, everything except AI keeps working
+# round: writing-session
 checkAge = I am 18 years or older
 processing = The app encrypts the content, Amazon Bedrock (Seoul) processes it and it is deleted as soon as the answer has been created.
 r.dose = I cannot decide your dose or when you should take it. That depends on your prescription and how your body reacts, so talk to the health-care staff who prescribed the medicine. I can instead summarize your dose history. Do you want a summary to show at the next visit?
@@ -27,7 +38,7 @@ header = This is the AI log assistant. The answers come from AI, not from a huma
 output = Created by AI and may contain errors. It is not medical advice. Talk to health-care staff before you make decisions about your health.
 export = AI-generated content · DoseWeek
 # round: review-fix-1
-! Review-fix 1: the settings title uses the definite form "AI-loggassistenten"; "Fylls på {text}" renders "Refills on {text}". No deviation in meaning found in the 39 added strings.
+# Historical note (2026-10-02): Review-fix 1: the settings title uses the definite form "AI-loggassistenten"; "Fylls på {text}" renders "Refills on {text}". No deviation in meaning found in the 39 added strings.
 ai.consent.a.title = Do you want to turn on the AI log assistant?
 ai.consent.a.sent.title = What is sent
 ai.consent.a.notSent.health.ios = Data that has been imported from Apple Health is not sent.

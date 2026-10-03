@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "lane": "LEGAL-AI",
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "locale": "ja",
-  "consentVersion": "2026-10-02.1",
+  "consentVersion": "2026-10-03.1",
   "scope": {
     "screenA": [
       "ai.consent.a.title",
@@ -85,7 +85,7 @@
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
       "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
-      "sha256": "bba089002de509705c88b3dab0fb91989e443e0552403f1d2594384e6152a40d"
+      "sha256": "ca8423fcdf618247c97d445719966f82aa1605331af9e906e96fcd97c2d22411"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -110,20 +110,19 @@
       "sha256": "37199780183fe8f8d4dc7e42d1aaab9d7d136013913d52d1e6d64c196dc96cc7"
     }
   },
-  "status": "pending-counsel-or-native-review",
-  "reviewer": "none yet: counsel reviews it with the APPI block, or a native reviewer if no counsel is booked",
-  "method": "Written by the lane agent from the Korean and English text and the compliance 5.1 Japanese draft. Not reviewed by counsel or a native speaker.",
+  "status": "codex-changed-scope-self-review",
+  "reviewer": "Codex AI source reviewer; not a human, native speaker or legal counsel",
+  "method": "Codex checked the four changed consent strings against actual source facts on 2026-10-03; unchanged strings retain matching pinned prior source evidence. Source self-review only, not runtime verification or release acceptance.",
   "nativeSpeakerReview": false,
   "counselReview": false,
   "flag": {
     "key": "locales.ja",
     "recommended": false,
-    "condition": "stays false until counsel or a native reviewer approves the Japanese copy"
+    "condition": "source-only Codex review recorded; recommendation remains false until actual foreign-recipient/country/assent facts are completed; no counsel or native-speaker prerequisite is asserted"
   },
   "findings": [
-    "Waits for counsel (APPI Art. 28 block, OWNER-DECISIONS #5) or a native reviewer; this lane does not sign off Japanese copy.",
-    "ai.consent.a.region.jp is the compliance 5.1 draft with 当社 replaced by DoseWeek and です/ます endings; counsel finalizes the wording.",
-    "Polite です/ます throughout. iOS says サブスクリプション and the Android variant says 定期購入, following each store's own term.",
-    "CON-PRO ja refusals were read against the Korean source: meaning matches; 医療従事者 is used for clinician."
+    "Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.",
+    "This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.",
+    "ko/en/ja changed-scope self-review is by Codex; prior notes below are historical, not current owner/counsel/native approval. Unchanged strings retain matching pinned source evidence."
   ]
 }

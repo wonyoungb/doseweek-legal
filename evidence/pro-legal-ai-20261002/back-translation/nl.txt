@@ -1,14 +1,25 @@
-! Formal u throughout. Symptoms are called "klacht(en)" (complaints), the usual Dutch patient-facing word, in both the consent copy and the CON-PRO refusals.
-! ai.refuse.pregnancy says "Overleg altijd" (always consult), slightly stronger than the English "Please talk to".
+! Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.
+! This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.
+! Four changed English back-translations use retained per-row Codex evidence; unchanged 46 app and15 shared strings retain their original recordings only for matching pinned source values. Same-model, not blind or independent.
+# Historical note (2026-10-02): Formal u throughout. Symptoms are called "klacht(en)" (complaints), the usual Dutch patient-facing word, in both the consent copy and the CON-PRO refusals.
+# Historical note (2026-10-02): ai.refuse.pregnancy says "Overleg altijd" (always consult), slightly stronger than the English "Please talk to".
 lead = The assistant makes weekly overviews and general meal ideas with your records and explains how you use the app. The answers come from AI, not from a human, and it gives no medical advice.
-sent = Before records are sent, we show you the content, and nothing is sent until you tap "Send". We send the number of doses (on time, too late, skipped), the change in the weight that you entered yourself, how often you recorded each kind of complaint, the number of days with a meal record with your protein average and goal, and your streak in weeks. For meal ideas we also send the kind of meal, the preferences, the allergies and the foods you do not like, as you chose them. Your language and region setting and the questions you type are also sent, and with help about the app only the app version, the platform and the current screen are added.
-notSent = We send no names or dosages of medicines, notes, names of foods, photos, dates, or your name, e-mail address or account data. What you type in the question field is sent as you wrote it.
+# round: codex-refresh-2026-10-03
+sent = Before records are sent, we show you their content, and nothing is sent until you tap “Send”. We send dose counts (on time, late, skipped), the change in the weight you entered yourself, how many times you recorded each type of symptom, the number of days with a meal record together with your protein average and goal, and your streak in weeks. For meal ideas, we also send the meal type, preferences, allergies and foods you dislike, as you selected them. Your language and region setting is also sent. Only app help sends the questions you type and the conversation history of the current session, together with the app version, platform and current screen.
+# round: writing-session
+# round: codex-refresh-2026-10-03
+notSent = Model requests created from records exclude medication names and dosages, notes, recorded food names, photos, dates, names, email addresses and account identifiers. Meal types, preferences, allergies and foods you dislike are sent only as values selected from predefined lists. App help also sends your question and the conversation history of the current session, so do not enter names, contact details or other people’s health information. DoseWeek separately processes account and connection information needed for sign-in, usage counts and consent management.
+# round: writing-session
 where = The app encrypts the content once more and sends it to the DoseWeek server (Seoul, Republic of Korea); Amazon Bedrock from Amazon Web Services (Seoul region) processes the content. The AI model is Claude from Anthropic. AWS manages it, and Anthropic cannot see the content.
-retention = What you send and the answers do not stay on the server and are not used for AI training. Answers are kept only on your device. Usage counts (without content) are kept for at most 2 months, and consent proofs as long as your account exists. If you report an answer and choose "Send answer text along", only that answer is kept 30 days.
+# round: codex-refresh-2026-10-03
+retention = What you send and the answers are not stored on the server and are not used to train AI. Conversations are not saved. Only a maximum of 2 weekly summary cards are saved on your device, and they are excluded from synchronization and backups. Usage counts (without content) are retained for up to 2 months, and consent records for as long as your account exists. If you report an answer and choose “Include the answer text”, only that answer is retained for 30 days.
+# round: writing-session
 e2ee = While the AI makes an answer, the DoseWeek server and Amazon Bedrock can read what you sent. Sync and backup data remain protected with end-to-end encryption just as now.
 optional = Only the AI functions then lapse; the other functions of Pro and Plus keep working. You can withdraw your consent at any time under Settings > AI registration assistant.
 checkHealth = [Optional] I give consent for the processing of my health data (sensitive data)
-checkDetail = Purpose: make AI weekly overviews and meal ideas and answer questions about using the app / Data: the records under "What is sent" above and the questions I type / Retention: deleted as soon as the answer is made (if an answer is sent along with a report, only that answer 30 days) / If you refuse, everything except AI keeps working
+# round: codex-refresh-2026-10-03
+checkDetail = Purpose: create AI weekly summaries and meal ideas and answer questions about using the app / Data: the records and meal choices under “What is sent” above, and questions directed to app help and the conversation history of the current session / Retention: deleted as soon as the answer is created (if an answer is included in a report, only that answer for 30 days) / If you decline, everything except AI remains available
+# round: writing-session
 checkAge = I am 18 years or older
 processing = The app encrypts the content, Amazon Bedrock (Seoul) processes it, and the content is deleted as soon as the answer is made.
 r.dose = I cannot determine your dose or the moment of administering for you. That depends on your prescription and your body, so discuss this with the care provider who prescribed it. I can summarize your dosing history. Do you want an overview for your next appointment?
@@ -27,7 +38,7 @@ header = This is the AI registration assistant. The answers come from AI, not fr
 output = Made by AI and possibly incorrect. This is no medical advice. Discuss decisions about your health with your care provider.
 export = Content generated by AI · DoseWeek
 # round: review-fix-1
-! Review-fix 1: formal u throughout the 39 added strings. "Aantal per soort klacht" uses klacht (complaint) for symptom, as the long Screen A text does. No deviation in meaning found.
+# Historical note (2026-10-02): Review-fix 1: formal u throughout the 39 added strings. "Aantal per soort klacht" uses klacht (complaint) for symptom, as the long Screen A text does. No deviation in meaning found.
 ai.consent.a.title = Turn on the AI registration assistant?
 ai.consent.a.sent.title = What is sent
 ai.consent.a.notSent.health.ios = Data that has been imported from Apple Health is not sent.

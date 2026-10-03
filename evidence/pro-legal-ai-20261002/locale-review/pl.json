@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "lane": "LEGAL-AI",
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "locale": "pl",
-  "consentVersion": "2026-10-02.1",
+  "consentVersion": "2026-10-03.1",
   "scope": {
     "screenA": [
       "ai.consent.a.title",
@@ -85,7 +85,7 @@
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
       "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
-      "sha256": "54374e7c6ae847c18be152abd83c67052b5bf9076f94ed4e83b58eaf6310da61"
+      "sha256": "4cecdcc1de3ad02522d91d4ce568b0a5a2720e89ec1e8877b9d4e8e8c57c9306"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -111,38 +111,38 @@
     }
   },
   "status": "back-translation-only",
-  "reviewer": "LEGAL-AI lane agent (Claude Opus 5.5); an AI agent, not a human reviewer",
-  "method": "same-model back-translation of every listed string, compared with the English source. The 11 long consent strings and the 15 CON-PRO strings were translated back by the agent that wrote the translation, in the writing session. The other 39 app strings (titles, rows, buttons, quota lines, the JP and US region lines, the settings copy and the perk line) were translated back in review-fix session 1 on the same day by the same model, reading each translated string. Not blind (the English source was visible), not independent, no native speaker, no counsel.",
+  "reviewer": "Codex AI source reviewer; not a human, native speaker or legal counsel",
+  "method": "same-model back-translation: the four changed app strings were translated back in the Codex refresh on 2026-10-03 using the retained per-row English evidence. The unchanged 46 app strings and 15 CON-PRO strings retain their prior recordings only because the pinned source values match. Not blind, not independent; no native speaker or counsel review is claimed. This source receipt does not set factual or runtime readiness flags.",
   "nativeSpeakerReview": false,
   "counselReview": false,
   "flag": {
     "key": "locales.pl",
     "recommended": true,
-    "condition": "true only if the orchestrator accepts a same-model back-translation as the C23 receipt; a native review is still missing"
+    "condition": "source-only same-model back-translation recommendation; acceptance does not set factual or runtime release flags"
   },
   "findings": [
-    "Informal ty throughout, as in the shipped CON-PRO copy. Clinicians are \"pracownik ochrony zdrowia\" (health-care worker).",
-    "ai.emergency names \"SOR\" (hospital emergency department), a Poland-specific abbreviation shown to Polish-language users in any storefront.",
-    "Review-fix 1: \"Zobacz, na co się zgadzasz\" is present tense (what you agree to), which avoids a gendered past form; \"Zgadzam się i włączam\" is first person (I agree and turn on); \"Odnowienie: {text}\" (renewal) renders \"Refills on {text}\". No deviation in meaning found in the 39 added strings."
+    "Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.",
+    "This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.",
+    "Four changed English back-translations use retained per-row Codex evidence; unchanged 46 app and15 shared strings retain their original recordings only for matching pinned source values. Same-model, not blind or independent."
   ],
   "backTranslation": {
     "ai.consent.a.title": "Turn on the AI entries assistant?",
     "ai.consent.a.lead": "On the basis of your entries it creates weekly summaries and general meal ideas and explains how to use the app. The answers are created by AI, not a human, and it does not give medical advice.",
     "ai.consent.a.sent.title": "What is sent",
-    "ai.consent.a.sent.body": "Before entries are sent, we show their content and nothing is sent until you touch \"Send\". We send the number of doses (on time, with delay, skipped), the change in the body mass entered by yourself, the number of records of each kind of symptom, the number of days with a recorded meal together with the protein average and goal, and your streak in weeks. With meal ideas we also send the chosen meal type, preferences, allergies and products you do not like. The language and region setting and the questions you type are also sent, and help about the app adds only the app version, the platform and the current screen.",
-    "ai.consent.a.notSent.body": "We do not send names or doses of medicines, notes, names of food products, photos, dates, nor your first and last name, e-mail address or account data. What you type in the question field is sent exactly as it was written.",
+    "ai.consent.a.sent.body": "Before records are sent, we show you the content, and nothing is sent until you tap Send. We send dose counts (on time, late, skipped), the change in the weight you entered yourself, how many times you logged each kind of symptom, the number of days with a meal log together with your protein average and goal, and your streak in weeks. For meal ideas we also send the meal kind, preferences, allergies and disliked foods you choose. Your language and region setting is also sent. Only app help sends the questions you type and the current conversation history, along with the app version, the platform and the current screen.",
+    "ai.consent.a.notSent.body": "Model requests built from records exclude medication names and doses, notes, recorded food names, photos, dates, names, email addresses and account identifiers. Meal kinds, preferences, allergies and disliked foods are sent only as values chosen from predefined lists. App help also sends your question and current conversation history, so do not enter names, contact details or other people’s health information. DoseWeek separately processes account and connection information needed for sign-in, usage counts and consent management.",
     "ai.consent.a.notSent.health.ios": "Information imported from Apple Health is not sent.",
     "ai.consent.a.notSent.health.android": "Information imported from Health Connect is not sent.",
     "ai.consent.a.where.title": "Where the processing takes place",
     "ai.consent.a.where.body": "The app encrypts the content once more and sends it to the DoseWeek server (Seoul, Republic of Korea), and it is processed by Amazon Bedrock from Amazon Web Services (Seoul region). The AI model is Claude of the company Anthropic. AWS operates it, and Anthropic does not see the content.",
     "ai.consent.a.retention.title": "How long they are stored",
-    "ai.consent.a.retention.body": "What you send and the answers we do not leave on the server nor use for training AI. The answers are saved only on your device. Usage counters (without content) we keep up to 2 months, and consent confirmations as long as your account exists. If you report an answer and choose \"Attach the content of the answer\", only that answer is kept for 30 days.",
+    "ai.consent.a.retention.body": "What you send and the answers are not kept on the server and are not used for AI training. Conversations are not saved. Only up to 2 weekly summary cards are saved on your device, and they are excluded from sync and backups. Usage counts (without content) are kept for up to 2 months, and consent records for as long as your account exists. If you report an answer and choose “Include the answer text”, only that answer is kept for 30 days.",
     "ai.consent.a.e2ee.title": "This is not end-to-end encryption",
     "ai.consent.a.e2ee.body": "When the AI creates an answer, the DoseWeek server and Amazon Bedrock can read what was sent. Sync and backup data remain protected by end-to-end encryption, as until now.",
     "ai.consent.a.optional.title": "You do not have to agree",
     "ai.consent.a.optional.body": "Only the AI functions will be unavailable; the other functions of Pro and Plus still work. You can withdraw consent at any moment in Settings > AI entries assistant.",
     "ai.consent.a.check.health": "[Optional] I agree to the processing of my health information (sensitive data)",
-    "ai.consent.a.check.health.detail": "Purpose: creating AI weekly summaries and meal ideas and answering questions about using the app / Data: the entries from the part \"What is sent\" above and the questions I type / Retention: deletion right after the answer is created (if an answer was attached to a report, only that answer for 30 days) / If you refuse, everything apart from AI still works",
+    "ai.consent.a.check.health.detail": "Purpose: creating AI weekly summaries and meal ideas and answering app-use questions / Data: the records and meal choices under “What is sent” above, and app-help questions and current conversation history / Retention: deleted as soon as the answer is made (if an answer is included with a report, only that answer for 30 days) / If you decline, everything except AI keeps working",
     "ai.consent.a.check.age": "I am at least 18 years old",
     "ai.consent.a.later": "Not now",
     "ai.consent.a.agree": "I agree and turn it on",
@@ -196,8 +196,9 @@
     "recorded": 65,
     "total": 65,
     "byRound": {
-      "writing-session": 26,
-      "review-fix-1": 39
+      "writing-session": 22,
+      "review-fix-1": 39,
+      "codex-refresh-2026-10-03": 4
     },
     "missing": []
   }

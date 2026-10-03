@@ -1,4 +1,7 @@
-! Source locale. Waits for the owner at gate 6; this lane does not sign off Korean copy.
-! Screen A follows PRO-SPEC 5.1 with three reconciled differences: the health-source sentence is split into .ios and .android keys (Apple 건강 / Health Connect), quotation marks are typographic, and 증상 is kept as the legally exact data category under a reviewed tone-allowlist entry.
-! 상담 is not used anywhere; clinician advice is 의료진과 상의, as in the shipped CON-PRO keys. CON-PRO chose 컨디션 / 몸 상태 for 증상 in ai.refuse.sideEffect and ai.emergency; the consent screens say 증상, so the owner should confirm the two terms read consistently.
-! The 1-business-day promise of 우선 문의 답변 is defined in the Terms as Korean weekdays excluding public holidays (lane clarification).
+! Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.
+! This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.
+! ko/en/ja changed-scope self-review is by Codex; prior notes below are historical, not current owner/counsel/native approval. Unchanged strings retain matching pinned source evidence.
+# Historical note (2026-10-02): Source locale. Waits for the owner at gate 6; this lane does not sign off Korean copy.
+# Historical note (2026-10-02): Screen A follows PRO-SPEC 5.1 with three reconciled differences: the health-source sentence is split into .ios and .android keys (Apple 건강 / Health Connect), quotation marks are typographic, and 증상 is kept as the legally exact data category under a reviewed tone-allowlist entry.
+# Historical note (2026-10-02): 상담 is not used anywhere; clinician advice is 의료진과 상의, as in the shipped CON-PRO keys. CON-PRO chose 컨디션 / 몸 상태 for 증상 in ai.refuse.sideEffect and ai.emergency; the consent screens say 증상, so the owner should confirm the two terms read consistently.
+# Historical note (2026-10-02): The 1-business-day promise of 우선 문의 답변 is defined in the Terms as Korean weekdays excluding public holidays (lane clarification).

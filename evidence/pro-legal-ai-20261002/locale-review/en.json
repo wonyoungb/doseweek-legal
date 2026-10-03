@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "lane": "LEGAL-AI",
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "locale": "en",
-  "consentVersion": "2026-10-02.1",
+  "consentVersion": "2026-10-03.1",
   "scope": {
     "screenA": [
       "ai.consent.a.title",
@@ -85,7 +85,7 @@
     "appCopy": {
       "path": "docs/ai-app-copy.candidate.json",
       "keys": "all 50 keys: ai.consent.a.*, ai.consent.b.*, ai.help.inputNote, ai.settings.* and pro.support.priority",
-      "sha256": "4d14f9591e83a06b72b0a22f0b6cd8ca15cafb95f610aaa67e2a338fb3170245"
+      "sha256": "384e87ea36d909d0aac0b002a5cec171daff752b9cfbc76ed172a4f8d638514e"
     },
     "conProSharedCopy": {
       "path": "evidence/pro-legal-ai-20261002/con-pro-ai-copy.snapshot.json",
@@ -110,21 +110,19 @@
       "sha256": "a6c5ddb95067e2c09732b03789949e327face7622bb363198e992df2ae554df5"
     }
   },
-  "status": "reviewed-by-lane-agent",
-  "reviewer": "LEGAL-AI lane agent (Claude Opus 5.5); an AI agent, not a human reviewer",
-  "method": "Read line by line against PRO-SPEC 4.4 and 5.1-5.5 by the agent that wrote it.",
+  "status": "codex-changed-scope-self-review",
+  "reviewer": "Codex AI source reviewer; not a human, native speaker or legal counsel",
+  "method": "Codex checked the four changed consent strings against actual source facts on 2026-10-03; unchanged strings retain matching pinned prior source evidence. Source self-review only, not runtime verification or release acceptance.",
   "nativeSpeakerReview": false,
   "counselReview": false,
   "flag": {
     "key": "locales.en",
     "recommended": true,
-    "condition": "true only if the orchestrator accepts an AI-agent review as the en receipt"
+    "condition": "source-only Codex review recommendation; acceptance does not set factual or runtime release flags"
   },
   "findings": [
-    "Reviewed by the lane agent against PRO-SPEC 5.1-5.3 and 4.4: items sent match the allowlist of 5.4 (no memo, no food names, no dates); retention follows R-8 and R-9 (answers on the device only, counts up to 2 months, consent records while the account exists, report excerpt 30 days); Amazon Bedrock, Seoul Region and Claude by Anthropic are named; the age box says 18 or older.",
-    "The AI transit is described as the app encrypting the content \"once more\" to the server; the words \"end-to-end\" appear only for sync and backup, and Screen A says the server and Amazon Bedrock can read the content (critic C22 wording rule).",
-    "CON-PRO English refusals and labels were read against compliance 4.5: each refuses the judgement, redirects to a clinician and offers the allowed alternative; no dose, diagnosis or drug statement; \"clinician\" is used instead of \"doctor or pharmacist\", matching the Korean 의료진. No defect found.",
-    "Health-source sentences are split into .ios and .android keys so the iOS copy names no Android service.",
-    "Review-fix 1: the receipt scope now includes the settings copy and the perk line (all 50 app keys are hashed). The 50 English app strings were read again beside the Korean source in the review-fix session; \"See exactly what will be sent\" renders 보낼 내용 자세히 보기 (see in detail). No defect found."
+    "Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.",
+    "This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.",
+    "ko/en/ja changed-scope self-review is by Codex; prior notes below are historical, not current owner/counsel/native approval. Unchanged strings retain matching pinned source evidence."
   ]
 }

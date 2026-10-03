@@ -618,7 +618,7 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                 self.assert_names_feature(locale, found['disclosures']['paragraphs'][2], 'no-sale paragraph')
                 self.assert_names_feature(locale, found['consent']['paragraphs'][1], 'consent paragraph')
         korean = sections(self.us_health['locales']['ko']['sections'])['categories']['paragraphs'][0]
-        for item in ('식사 선호', '알레르기', '싫어하는 음식', '종단간 암호화 대상이 아니'):
+        for item in ('정해진 목록에서 고른 식사 종류·선호', '알레르기', '싫어하는 음식', '종단간 암호화 대상이 아니'):
             self.assertIn(item, korean, 'critic C18: preferences, allergies and dislikes are categories')
 
     # -- rendered staged pages ----------------------------------------------------------------
@@ -672,14 +672,19 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         # Clause 5 and the processor row say the AWS entity "is not yet verified and will be stated
         # before release". Flipping the flags without replacing those sentences must not publish.
         import copy
+        import tempfile
         module = importlib.import_module('ai_assistant_candidate')
         candidate = copy.deepcopy(module.load())
         candidate['status'] = 'integrated-and-verified'
         candidate['unresolvedBeforePublication'] = []
         candidate['readiness'] = {key: True for key in candidate['readiness']}
-        with self.assertRaises(AssertionError,
-                               msg='the release gate opens while the policy still carries draft sentences'):
-            module.require_release_ready(candidate)
+        with tempfile.TemporaryDirectory(prefix='doseweek-legal-gate-') as directory:
+            candidate['legalSelfReviewEvidence'] = self._synthetic_legal_self_review_evidence(
+                candidate, directory)
+            with self.assertRaises(AssertionError,
+                                   msg='the release gate opens while the policy still carries draft sentences') as failure:
+                module.require_release_ready(candidate, allow_synthetic_fixture=True)
+            self.assertIn('AI policy still carries', str(failure.exception))
         draft = candidate.get('preReleaseWording', {})
         self.assertEqual(list(draft), list(LOCALES))
 
@@ -704,7 +709,75 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                                                            cells['retention'])):
                     self.assertIn(sentence, field)
             candidate['locales'][locale] = without(entry, draft[locale])
-        module.require_release_ready(candidate)
+        with tempfile.TemporaryDirectory(prefix='doseweek-legal-gate-') as directory:
+            candidate['legalSelfReviewEvidence'] = self._synthetic_legal_self_review_evidence(
+                candidate, directory)
+            module.require_release_ready(candidate, allow_synthetic_fixture=True)
+
+    def _synthetic_legal_self_review_evidence(self, candidate, directory):
+        # A test receipt is never evidence of counsel/native review or product readiness.
+        scope = ('schemaVersion', 'plannedVersion', 'facts', 'localeOrder',
+                 'preReleaseWording', 'locales')
+        payload = {
+            'aiCandidate': {key: candidate[key] for key in scope},
+            'stagedSources': {path: self.source(path) for path in (
+                APP_SOURCE, 'docs/account-sync-content.candidate.json',
+                'docs/ios-content.json', 'docs/android-content.candidate.json',
+                'docs/terms-content.json', 'docs/us-health-content.json')},
+        }
+        fingerprint = canonical_sha256(payload)
+        receipt = {
+            'status': 'accepted', 'reviewType': 'codex-source-self-review',
+            'scope': 'synthetic regression fixture only; no real approval',
+            'synthetic': True,
+            'sourceFingerprintSha256': fingerprint,
+            'counselReviewed': False, 'nativeSpeakerReview': False,
+        }
+        path = Path(directory) / 'synthetic-self-review-receipt.json'
+        path.write_text(json.dumps(receipt, sort_keys=True) + '\n', encoding='utf-8')
+        return {'receiptPath': str(path),
+                'receiptSha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+                'sourceFingerprintSha256': fingerprint}
+
+    def test_release_gate_accepts_current_source_self_review_without_counsel(self):
+        import copy
+        import tempfile
+        from unittest.mock import patch
+        module = importlib.import_module('ai_assistant_candidate')
+        with patch.object(module, 'require_release_ready',
+                          wraps=module.require_release_ready) as baseline_gate:
+            self.test_release_gate_refuses_the_draft_sentences_even_when_every_flag_is_true()
+        self.assertEqual(baseline_gate.call_count, 2)
+        candidate = copy.deepcopy(baseline_gate.call_args.args[0])
+        self.assertTrue(all(candidate['readiness'].values()))
+        candidate['readiness']['counselReviewed'] = False
+        candidate['readiness']['legalSelfReviewAccepted'] = True
+        with tempfile.TemporaryDirectory(prefix='doseweek-legal-gate-') as directory:
+            candidate['legalSelfReviewEvidence'] = self._synthetic_legal_self_review_evidence(
+                candidate, directory)
+            self.assertIs(candidate['readiness']['counselReviewed'], False)
+            self.assertTrue(all(value for key, value in candidate['readiness'].items()
+                                if key != 'counselReviewed'))
+            # Every factual flag and draft replacement is valid in this fixture, so
+            # the default call must fail specifically at the synthetic evidence boundary.
+            with self.assertRaisesRegex(
+                    AssertionError, 'Synthetic self-review evidence cannot authorize production release'):
+                module.require_release_ready(candidate)
+            module.require_release_ready(candidate, allow_synthetic_fixture=True)
+
+            # A current-fingerprint accepted-format receipt passes the default guard.
+            # This isolated test control is not real owner acceptance or product readiness.
+            control = json.loads(Path(candidate['legalSelfReviewEvidence']['receiptPath']).read_text(
+                encoding='utf-8'))
+            control['synthetic'] = False
+            control['scope'] = 'Current-source fingerprint acceptance control; no product authorization'
+            control['testOnly'] = True
+            control_path = Path(directory) / 'current-source-acceptance-control.json'
+            control_path.write_text(json.dumps(control, sort_keys=True) + '\n', encoding='utf-8')
+            candidate['legalSelfReviewEvidence']['receiptPath'] = str(control_path)
+            candidate['legalSelfReviewEvidence']['receiptSha256'] = hashlib.sha256(
+                control_path.read_bytes()).hexdigest()
+            module.require_release_ready(candidate)
 
     def test_gate_6_and_counsel_items_of_review_round_2_are_recorded_as_blockers(self):
         unresolved = self.source(WEB_SOURCE)['unresolvedBeforePublication']
@@ -816,14 +889,16 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
 
     def test_locale_review_receipts_are_recorded_honestly(self):
         document = self.source(APP_SOURCE)
-        expected_status = {'ko': 'pending-owner-gate-6', 'ja': 'pending-counsel-or-native-review',
-                           'en': 'reviewed-by-lane-agent'}
+        expected_status = {locale: 'codex-changed-scope-self-review'
+                           for locale in ('ko', 'en', 'ja')}
         for locale in LOCALES:
             path = f'{RECEIPTS}/{locale}.json'
             with self.subTest(locale=locale):
                 receipt = self.source(path)
                 self.assertEqual(receipt['locale'], locale)
                 self.assertEqual(receipt['consentVersion'], document['consentVersion'])
+                self.assertEqual(receipt['date'], document['consentVersion'].rsplit('.', 1)[0])
+                self.assertIn('Codex', receipt['reviewer'])
                 self.assertEqual(receipt['status'], expected_status.get(locale, 'back-translation-only'))
                 self.assertIs(receipt['nativeSpeakerReview'], False)
                 self.assertIs(receipt['counselReview'], False)

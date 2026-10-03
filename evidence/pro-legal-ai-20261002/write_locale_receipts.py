@@ -17,9 +17,10 @@ Coverage (review round 1, PRO-SPEC section 8): every one of the 50 app keys and 
 keys has a recorded back-translation in each of the 14 locales. A locale with a missing key
 gets flag.recommended=false and names the keys.
 
-What these receipts are: ko waits for the owner (gate 6) and ja for counsel or a native
-reviewer; en was read by the lane agent; the other 14 locales have a same-model
-back-translation only. No native speaker and no counsel has reviewed any locale.
+Current refresh: Codex checked the changed scope in ko/en/ja and recorded same-model
+back-translations for the four changed app strings in the other 14 locales. The unchanged
+46 app and 15 shared strings are reused only for matching pinned inputs. No native speaker
+or counsel review is claimed, and these source receipts do not set release-readiness flags.
 """
 import hashlib
 import json
@@ -45,28 +46,22 @@ SHORT = {
     "crisisGeneric": "ai.crisis.generic", "header": "ai.label.header", "output": "ai.label.output",
     "export": "ai.label.export",
 }
-AGENT = "LEGAL-AI lane agent (Claude Opus 5.5); an AI agent, not a human reviewer"
+AGENT = "Codex AI source reviewer; not a human, native speaker or legal counsel"
 STATUS = {
-    "ko": ("pending-owner-gate-6", "none yet: the owner reads the Korean copy at gate 6",
-           "Source locale, written from PRO-SPEC 5.1-5.3. Not reviewed by the owner in this lane."),
-    "ja": ("pending-counsel-or-native-review",
-           "none yet: counsel reviews it with the APPI block, or a native reviewer if no counsel is booked",
-           "Written by the lane agent from the Korean and English text and the compliance 5.1 "
-           "Japanese draft. Not reviewed by counsel or a native speaker."),
-    "en": ("reviewed-by-lane-agent", AGENT,
-           "Read line by line against PRO-SPEC 4.4 and 5.1-5.5 by the agent that wrote it."),
+    locale: ("codex-changed-scope-self-review", AGENT,
+             "Codex checked the four changed consent strings against actual source facts on "
+             "2026-10-03; unchanged strings retain matching pinned prior source evidence. "
+             "Source self-review only, not runtime verification or release acceptance.")
+    for locale in ("ko", "en", "ja")
 }
 BACK_TRANSLATION_METHOD = (
-    "same-model back-translation of every listed string, compared with the English source. "
-    "The 11 long consent strings and the 15 CON-PRO strings were translated back by the agent "
-    "that wrote the translation, in the writing session. The other 39 app strings (titles, "
-    "rows, buttons, quota lines, the JP and US region lines, the settings copy and the perk "
-    "line) were translated back in review-fix session 1 on the same day by the same model, "
-    "reading each translated string. Not blind (the English source was visible), not "
-    "independent, no native speaker, no counsel."
+    "same-model back-translation: the four changed app strings were translated back in the "
+    "Codex refresh on 2026-10-03 using the retained per-row English evidence. The unchanged "
+    "46 app strings and 15 CON-PRO strings retain their prior recordings only because the "
+    "pinned source values match. Not blind, not independent; no native speaker or counsel "
+    "review is claimed. This source receipt does not set factual or runtime readiness flags."
 )
-ROUNDS = ("writing-session", "review-fix-1")
-
+ROUNDS = ("writing-session", "review-fix-1", "codex-refresh-2026-10-03")
 
 def canonical_sha256(value):
     data = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -117,7 +112,7 @@ def build():
         receipt = {
             "schemaVersion": 1,
             "lane": "LEGAL-AI",
-            "date": "2026-10-02",
+            "date": "2026-10-03",
             "locale": locale,
             "consentVersion": app["consentVersion"],
             "scope": scope,
@@ -144,11 +139,16 @@ def build():
                 "key": f"locales.{locale}",
                 "recommended": locale not in ("ko", "ja"),
                 "condition": {
-                    "ko": "stays false until the owner approves the Korean copy at gate 6",
-                    "ja": "stays false until counsel or a native reviewer approves the Japanese copy",
-                    "en": "true only if the orchestrator accepts an AI-agent review as the en receipt",
-                }.get(locale, "true only if the orchestrator accepts a same-model back-translation "
-                              "as the C23 receipt; a native review is still missing"),
+                    "ko": "source-only Codex review recorded; recommendation remains false while "
+                          "factual consent/publication prerequisites are unverified; no counsel "
+                          "or native-speaker prerequisite is asserted",
+                    "ja": "source-only Codex review recorded; recommendation remains false until "
+                          "actual foreign-recipient/country/assent facts are completed; no counsel "
+                          "or native-speaker prerequisite is asserted",
+                    "en": "source-only Codex review recommendation; acceptance does not set "
+                          "factual or runtime release flags",
+                }.get(locale, "source-only same-model back-translation recommendation; acceptance "
+                              "does not set factual or runtime release flags"),
             },
             "findings": findings,
         }
@@ -172,7 +172,7 @@ def build():
     summary = {
         "schemaVersion": 1,
         "lane": "LEGAL-AI",
-        "date": "2026-10-02",
+        "date": "2026-10-03",
         "consentVersion": app["consentVersion"],
         "statuses": {locale: receipt["status"] for locale, receipt in receipts.items()},
         "backTranslationOnly": [l for l, r in receipts.items() if r["status"] == "back-translation-only"],
@@ -197,15 +197,16 @@ def build():
             },
             "missing": coverage_missing,
             "recordedIn": {
-                "writing-session": "11 long consent strings and 15 CON-PRO strings per locale",
-                "review-fix-1": "the other 39 app strings per locale (review round 1 found "
-                                "11 of 50 app keys recorded)",
+                "writing-session": "7 unchanged long consent strings and 15 unchanged CON-PRO strings",
+                "review-fix-1": "39 unchanged app strings; prior recordings reused for matching inputs",
+                "codex-refresh-2026-10-03": "4 changed app strings with current recorded English back-translations",
             },
         },
-        "honesty": "No human has reviewed any locale. en is an AI-agent review; 14 locales have "
-                   "only a same-model back-translation (not blind, not independent), now "
-                   "recorded for every key in scope; ko and ja wait for the owner and for "
-                   "counsel or a native reviewer.",
+        "honesty": "Current changed-scope review is by Codex. ko/en/ja have source self-review; "
+                   "14 locales have recorded same-model back-translations, not blind or independent. "
+                   "No native-speaker or counsel review is claimed. Unchanged recordings are reused "
+                   "only for matching source values. Factual/runtime release flags remain false; "
+                   "KO/JA recommendations stay false for unresolved factual consent disclosures.",
     }
     return receipts, summary
 

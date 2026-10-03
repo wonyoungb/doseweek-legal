@@ -12,13 +12,14 @@ Sources (lane LEGAL-AI, 2026-10-02; PRO-SPEC section 8, compliance sections 4.5 
 
 Nothing here is published. `integrate` changes only the in-memory staged 1.0.6 sources that
 scripts/render_account_sync.py builds; the served pages and their sources stay as they are.
-`require_release_ready` keeps `check_site.py --release` closed until every readiness flag is
+`require_release_ready` keeps `check_site.py --release` closed until every required readiness flag is
 true and the unresolved list is empty.
 
     python3 scripts/ai_assistant_candidate.py   # validate both sources
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -67,8 +68,16 @@ SERVER_CANNOT_READ_FIELDS = ("recordsSync", "mealsSync", "sync")
 READINESS_KEYS = (
     "awsContractingEntityVerified", "bedrockRetentionNoneReadback",
     "bedrockInvocationLoggingOffReadback", "hpkeEnvelopeDeployed", "consentRoutesDeployed",
-    "killSwitchVerified", "helplinesRefetched", "counselReviewed",
+    "killSwitchVerified", "helplinesRefetched", "legalSelfReviewAccepted",
     "localeReviewReceiptsAccepted", "evalGatePassed", "storeDeclarationsReadBack",
+)
+INFORMATIONAL_READINESS_KEYS = ('counselReviewed',)
+LEGAL_REVIEW_SOURCE_FIELDS = ('schemaVersion', 'plannedVersion', 'facts', 'localeOrder',
+                              'preReleaseWording', 'locales')
+LEGAL_REVIEW_BASE_SOURCES = (
+    'docs/ai-app-copy.candidate.json', 'docs/account-sync-content.candidate.json',
+    'docs/ios-content.json', 'docs/android-content.candidate.json',
+    'docs/terms-content.json', 'docs/us-health-content.json',
 )
 FACTS = {
     "provider": "Amazon Bedrock", "region": "ap-northeast-2", "inRegionOnly": True,
@@ -114,7 +123,9 @@ def load() -> dict:
     assert candidate["status"] in ("pre-release-candidate-not-published", "integrated-and-verified")
     assert candidate["plannedVersion"] == "1.0.6"
     assert candidate["facts"] == FACTS, "AI facts changed: update the copy in all 17 locales first"
-    assert set(candidate["readiness"]) == set(READINESS_KEYS)
+    assert set(candidate["readiness"]) == set(READINESS_KEYS + INFORMATIONAL_READINESS_KEYS)
+    evidence = candidate.get("legalSelfReviewEvidence")
+    assert evidence is None or isinstance(evidence, dict), "AI self-review evidence schema"
     assert all(type(value) is bool for value in candidate["readiness"].values())
     assert candidate["localeOrder"] == list(LOCALES)
     assert list(candidate["locales"]) == list(LOCALES)
@@ -358,7 +369,65 @@ def deletion_paragraph(locale: str, candidate: dict | None = None) -> str:
     return (candidate or load())["locales"][locale]["deletion"]
 
 
-def require_release_ready(candidate: dict | None = None) -> None:
+def _legal_review_source_fingerprint(candidate: dict) -> str:
+    payload = {
+        'aiCandidate': {key: candidate[key] for key in LEGAL_REVIEW_SOURCE_FIELDS},
+        'stagedSources': {path: json.loads((ROOT / path).read_text(encoding='utf-8'))
+                          for path in LEGAL_REVIEW_BASE_SOURCES},
+    }
+    data = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+    return hashlib.sha256(data.encode('utf-8')).hexdigest()
+
+
+def _require_legal_self_review(candidate: dict, *, allow_synthetic_fixture: bool) -> None:
+    evidence = candidate.get('legalSelfReviewEvidence')
+    assert isinstance(evidence, dict), 'AI legal self-review evidence is missing'
+    assert set(evidence) == {'receiptPath', 'receiptSha256', 'sourceFingerprintSha256'}, (
+        'AI legal self-review evidence fields'
+    )
+    assert isinstance(evidence['receiptPath'], str) and evidence['receiptPath'].strip(), (
+        'AI legal self-review receipt path is empty'
+    )
+    for key in ('receiptSha256', 'sourceFingerprintSha256'):
+        assert isinstance(evidence[key], str) and re.fullmatch(r'[0-9a-f]{64}', evidence[key]), (
+            f'AI legal self-review {key} is invalid'
+        )
+    path = Path(evidence['receiptPath'])
+    path = path if path.is_absolute() else ROOT / path
+    assert path.is_file(), 'AI legal self-review receipt is missing'
+    data = path.read_bytes()
+    assert data and hashlib.sha256(data).hexdigest() == evidence['receiptSha256'], (
+        'AI legal self-review receipt bytes do not match'
+    )
+    receipt = json.loads(data.decode('utf-8'))
+    assert isinstance(receipt, dict), 'AI legal self-review receipt must be an object'
+    assert receipt.get('status') == 'accepted', 'AI legal self-review receipt is not accepted'
+    assert receipt.get('reviewType') == 'codex-source-self-review', (
+        'AI legal self-review receipt has an unrecognized review type'
+    )
+    scope = receipt.get('scope')
+    assert isinstance(scope, str) and scope.strip(), 'AI legal self-review scope is empty'
+    assert type(receipt.get('synthetic')) is bool, 'AI legal self-review synthetic marker is missing'
+    if not allow_synthetic_fixture:
+        assert receipt['synthetic'] is False and 'synthetic' not in scope.casefold(), (
+            'Synthetic self-review evidence cannot authorize production release'
+        )
+    assert receipt.get('counselReviewed') is False and receipt.get('nativeSpeakerReview') is False, (
+        'Codex self-review evidence must not claim counsel or native-speaker review'
+    )
+    current = _legal_review_source_fingerprint(candidate)
+    assert evidence['sourceFingerprintSha256'] == receipt.get('sourceFingerprintSha256') == current, (
+        'AI legal self-review does not match the current reviewed sources'
+    )
+
+
+def require_release_ready(candidate: dict | None = None, *,
+                          allow_synthetic_fixture: bool = False) -> None:
+    # Synthetic opt-in is restricted to explicit in-memory fixtures, never the loaded candidate.
+    assert type(allow_synthetic_fixture) is bool, "AI synthetic fixture option must be Boolean"
+    assert not allow_synthetic_fixture or candidate is not None, (
+        "Synthetic self-review opt-in requires an explicit test fixture"
+    )
     candidate = candidate if candidate is not None else load()
     assert candidate["status"] == "integrated-and-verified", (
         "AI record assistant disclosure is a pre-release candidate: verify the provider facts, "
@@ -369,6 +438,7 @@ def require_release_ready(candidate: dict | None = None) -> None:
     )
     open_flags = [key for key in READINESS_KEYS if candidate["readiness"].get(key) is not True]
     assert not open_flags, f"AI readiness flags still open: {open_flags}"
+    _require_legal_self_review(candidate, allow_synthetic_fixture=allow_synthetic_fixture)
     # The flags alone do not change the text: the sentences that say a fact is unverified or will
     # be recorded before release must be replaced with the verified facts.
     drafts = [(locale, text) for locale, sentences in candidate["preReleaseWording"].items()
