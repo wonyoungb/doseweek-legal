@@ -135,7 +135,8 @@ def validate(content: dict, ios: dict) -> None:
     }, "terms-content.json: unexpected top-level keys"
     assert content["schemaVersion"] == 1
     # The Terms first take effect with the monetization release; no earlier date exists.
-    assert content["effectiveDate"] == legal_release.NEXT_RELEASE_EFFECTIVE_DATE, (
+    assert content["effectiveDate"] in (legal_release.NEXT_RELEASE_EFFECTIVE_DATE,
+                                        legal_release.PUBLISHED_EFFECTIVE_DATE), (
         "docs/terms-content.json effectiveDate must equal legal_release.NEXT_RELEASE_EFFECTIVE_DATE "
         "(null until the owner sets the release date)"
     )

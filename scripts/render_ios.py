@@ -21,6 +21,7 @@ import render_terms
 import privacy_legal
 import render_us_health
 
+import legal_release
 from legal_release import (
     CURRENT_IOS_EFFECTIVE_DATE,
     expected_effective_date,
@@ -157,12 +158,13 @@ def validate(content: dict) -> None:
     privacy_legal.validate_readiness(content)
     assert content["schemaVersion"] == 1
     assert content["platform"] == "ios"
-    assert content["bundleVersion"] in (PAGE_VERSION, "1.0.6")
-    # An explicit unpublished 1.0.6 render has no invented effective date.
-    assert content["effectiveDate"] == (
-        None if content["bundleVersion"] == "1.0.6" else
-        expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE)
-    )
+    assert content["bundleVersion"] in (PAGE_VERSION, *legal_release.NEXT_VERSIONS)
+    # An explicit unpublished 1.0.6 render has no invented effective date; the publication
+    # build carries the owner's date.
+    if content["bundleVersion"] in legal_release.NEXT_VERSIONS:
+        assert content["effectiveDate"] in (None, legal_release.PUBLISHED_EFFECTIVE_DATE)
+    else:
+        assert content["effectiveDate"] == expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE)
     assert content["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert content["localeOrder"] == LOCALE_ORDER
     assert list(content["locales"]) == LOCALE_ORDER
@@ -177,7 +179,7 @@ def validate(content: dict) -> None:
         )
         assert set(entry) == {"languageName", "direction", "common", "privacy", "support"}, locale
         validate_support(locale, entry["support"])
-        if content["bundleVersion"] == "1.0.6":
+        if content["bundleVersion"] in legal_release.NEXT_VERSIONS:
             # 1.0.6 ships the AI record assistant, which a server processes with a third-party
             # model. The 1.0.5 answer ends with "No Private Cloud Compute, server model, or
             # third-party model is used"; in 1.0.6 the answer must also say where the assistant

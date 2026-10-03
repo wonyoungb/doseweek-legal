@@ -1,0 +1,750 @@
+[
+  {
+    "where": "ios/ko/rights",
+    "removed": "미확인 경로나 계약이 있으면 출시할 수 없고, 이 초안은 전 세계 규정 준수를 보증하지 않아요."
+  },
+  {
+    "where": "ios/ko/processing",
+    "removed": "구매 식별용 해시의 보관 근거와 기간은 아직 확인하지 않았고, 확인 전에는 출시할 수 없어요."
+  },
+  {
+    "where": "ios/ko/caption",
+    "removed": "— 미확인 항목이 있는 출시 전 초안이에요"
+  },
+  {
+    "where": "ios/ko/cloudflare",
+    "removed": "공지 이전의 거부 방법·효과는 미확인이라 출시를 막아요."
+  },
+  {
+    "where": "ios/ko/aws",
+    "removed": "제거해야 하고, 실제 증명은 아직 없어요."
+  },
+  {
+    "where": "ios/en/rights",
+    "removed": "Unverified routes or agreements block release; this draft does not certify worldwide compliance."
+  },
+  {
+    "where": "ios/en/processing",
+    "removed": "Legally required transaction records need a disclosed item, legal basis and period before collection; unresolved purchase-digest retention is a release blocker."
+  },
+  {
+    "where": "ios/en/caption",
+    "removed": "— candidate, unverified entries block release"
+  },
+  {
+    "where": "ios/en/cloudflare",
+    "removed": "Announcement-transfer refusal and effect are not verified and block release."
+  },
+  {
+    "where": "ios/en/aws",
+    "removed": "; implementation proof pending."
+  },
+  {
+    "where": "ios/ja/rights",
+    "removed": "未確認の経路や契約がある場合はリリースを進められず、この草案は世界各国での法令遵守を保証しません。"
+  },
+  {
+    "where": "ios/ja/processing",
+    "removed": "購入ダイジェストの保存期間が未解決のため、リリースを進められません。"
+  },
+  {
+    "where": "ios/ja/caption",
+    "removed": "：候補情報、未確認事項はリリースの妨げとなります"
+  },
+  {
+    "where": "ios/ja/cloudflare",
+    "removed": "お知らせに伴う移転の拒否方法と影響は未確認で、リリースを進められません。"
+  },
+  {
+    "where": "ios/ja/aws",
+    "removed": "実装の証明は未完了です。"
+  },
+  {
+    "where": "ios/de/rights",
+    "removed": "Nicht überprüfte Übermittlungswege oder Vereinbarungen blockieren die Veröffentlichung; dieser Entwurf bestätigt keine weltweite Rechtskonformität."
+  },
+  {
+    "where": "ios/de/processing",
+    "removed": "Die ungeklärte Aufbewahrung von Kauf-Digests blockiert die Veröffentlichung."
+  },
+  {
+    "where": "ios/de/caption",
+    "removed": "— Entwurf; nicht überprüfte Angaben blockieren die Veröffentlichung"
+  },
+  {
+    "where": "ios/de/cloudflare",
+    "removed": "Die Ablehnung von Übermittlungen für Mitteilungen und ihre Folgen sind nicht überprüft und blockieren die Veröffentlichung."
+  },
+  {
+    "where": "ios/de/aws",
+    "removed": "; Nachweis der Umsetzung steht aus."
+  },
+  {
+    "where": "ios/fr/rights",
+    "removed": "Les circuits ou accords non vérifiés bloquent la mise en production ; ce projet ne certifie pas une conformité mondiale."
+  },
+  {
+    "where": "ios/fr/processing",
+    "removed": "La conservation non résolue des empreintes d’achat bloque la mise en production."
+  },
+  {
+    "where": "ios/fr/caption",
+    "removed": "— données provisoires ; les éléments non vérifiés bloquent la mise en production"
+  },
+  {
+    "where": "ios/fr/cloudflare",
+    "removed": "Le refus du transfert lié aux annonces et ses conséquences ne sont pas vérifiés et bloquent la mise en production."
+  },
+  {
+    "where": "ios/fr/aws",
+    "removed": "; preuve de mise en œuvre en attente."
+  },
+  {
+    "where": "ios/es/rights",
+    "removed": "Las vías o acuerdos no verificados impiden el lanzamiento; este borrador no certifica el cumplimiento mundial."
+  },
+  {
+    "where": "ios/es/processing",
+    "removed": "Antes de recopilar registros de transacciones exigidos por ley, deben indicarse los datos, la base jurídica y el plazo de conservación; la conservación sin resolver del resumen criptográfico de compras impide el lanzamiento."
+  },
+  {
+    "where": "ios/es/caption",
+    "removed": "— propuesta; las entradas no verificadas impiden el lanzamiento"
+  },
+  {
+    "where": "ios/es/cloudflare",
+    "removed": "El procedimiento para rechazar la transferencia de avisos y su efecto no están verificados e impiden el lanzamiento."
+  },
+  {
+    "where": "ios/es/aws",
+    "removed": "; pendiente de pruebas de implementación."
+  },
+  {
+    "where": "ios/it/rights",
+    "removed": "Percorsi di trasferimento o accordi non verificati impediscono il rilascio; questa bozza non certifica la conformità in tutto il mondo."
+  },
+  {
+    "where": "ios/it/processing",
+    "removed": "Per i dati delle transazioni richiesti dalla legge, prima della raccolta devono essere dichiarati i dati conservati, la base giuridica e il periodo; la conservazione non ancora definita dei digest degli acquisti impedisce il rilascio."
+  },
+  {
+    "where": "ios/it/caption",
+    "removed": "— bozza, le voci non verificate impediscono il rilascio"
+  },
+  {
+    "where": "ios/it/cloudflare",
+    "removed": "Procedura ed effetti del rifiuto del trasferimento degli avvisi non sono verificati e impediscono il rilascio."
+  },
+  {
+    "where": "ios/it/aws",
+    "removed": "; prova dell'implementazione in attesa."
+  },
+  {
+    "where": "ios/nl/rights",
+    "removed": "Niet-geverifieerde routes of overeenkomsten blokkeren de release; dit concept bevestigt geen wereldwijde naleving."
+  },
+  {
+    "where": "ios/nl/processing",
+    "removed": "Voor wettelijk verplichte transactiegegevens moeten het gegevenstype, de rechtsgrond en de bewaartermijn vóór verzameling worden bekendgemaakt; de onopgeloste bewaartermijn voor aankoopdigests blokkeert de release."
+  },
+  {
+    "where": "ios/nl/caption",
+    "removed": "— concept; niet-geverifieerde vermeldingen blokkeren de release"
+  },
+  {
+    "where": "ios/nl/cloudflare",
+    "removed": "Weigering van doorgifte voor aankondigingen en de gevolgen zijn niet geverifieerd en blokkeren de release."
+  },
+  {
+    "where": "ios/nl/aws",
+    "removed": "; bewijs van implementatie ontbreekt nog."
+  },
+  {
+    "where": "ios/pt-PT/rights",
+    "removed": "Vias ou acordos não verificados impedem o lançamento; este projeto não certifica conformidade mundial."
+  },
+  {
+    "where": "ios/pt-PT/processing",
+    "removed": "Antes da recolha, os registos de transações exigidos por lei precisam de indicar os dados, a base legal e o período de conservação; a conservação ainda não resolvida dos resumos de verificação de compras impede o lançamento."
+  },
+  {
+    "where": "ios/pt-PT/caption",
+    "removed": "— proposta; elementos não verificados impedem o lançamento"
+  },
+  {
+    "where": "ios/pt-PT/cloudflare",
+    "removed": "A recusa da transferência de avisos e o seu efeito não estão verificados e impedem o lançamento."
+  },
+  {
+    "where": "ios/pt-PT/aws",
+    "removed": "; a prova de implementação está pendente."
+  },
+  {
+    "where": "ios/pl/rights",
+    "removed": "Niezweryfikowane trasy lub umowy blokują wydanie; ten projekt nie potwierdza zgodności z prawem na całym świecie."
+  },
+  {
+    "where": "ios/pl/processing",
+    "removed": "Przed zebraniem wymaganych prawem danych transakcyjnych trzeba ujawnić ich zakres, podstawę prawną i okres przechowywania; nierozstrzygnięty okres przechowywania skrótów danych zakupów blokuje wydanie."
+  },
+  {
+    "where": "ios/pl/caption",
+    "removed": "— projekt; niezweryfikowane pozycje blokują wydanie"
+  },
+  {
+    "where": "ios/pl/cloudflare",
+    "removed": "Odmowa przekazywania danych komunikatów i jej skutki są niezweryfikowane i blokują wydanie."
+  },
+  {
+    "where": "ios/pl/aws",
+    "removed": "; potwierdzenie wdrożenia oczekuje."
+  },
+  {
+    "where": "ios/sv/rights",
+    "removed": "Overifierade överföringsvägar eller avtal blockerar lanseringen. Detta utkast intygar inte global regelefterlevnad."
+  },
+  {
+    "where": "ios/sv/processing",
+    "removed": "Den olösta frågan om lagring av köpdigester blockerar lanseringen."
+  },
+  {
+    "where": "ios/sv/caption",
+    "removed": "— preliminär version; overifierade uppgifter blockerar lanseringen"
+  },
+  {
+    "where": "ios/sv/cloudflare",
+    "removed": "Hur du kan avböja överföring för meddelanden och vad det innebär är inte verifierat och blockerar lanseringen."
+  },
+  {
+    "where": "ios/sv/aws",
+    "removed": "Verifiering av genomförandet återstår."
+  },
+  {
+    "where": "ios/hi/rights",
+    "removed": "असत्यापित मार्ग या समझौते रिलीज़ रोकते हैं; यह मसौदा विश्वव्यापी कानूनी अनुपालन प्रमाणित नहीं करता।"
+  },
+  {
+    "where": "ios/hi/processing",
+    "removed": "कानून के अनुसार आवश्यक लेन-देन रिकॉर्ड एकत्र करने से पहले उनके डेटा आइटम, कानूनी आधार और रखने की अवधि का खुलासा करना ज़रूरी है; खरीद डाइजेस्ट के प्रतिधारण का अनसुलझा प्रश्न रिलीज़ रोकता है।"
+  },
+  {
+    "where": "ios/hi/caption",
+    "removed": "— प्रस्तावित, असत्यापित प्रविष्टियाँ रिलीज़ रोकती हैं"
+  },
+  {
+    "where": "ios/hi/cloudflare",
+    "removed": "घोषणा संबंधी स्थानांतरण से मना करने की प्रक्रिया और प्रभाव सत्यापित नहीं हैं और रिलीज़ रोकते हैं।"
+  },
+  {
+    "where": "ios/hi/aws",
+    "removed": "; कार्यान्वयन का प्रमाण लंबित है।"
+  },
+  {
+    "where": "ios/pt-BR/rights",
+    "removed": "Rotas ou acordos não verificados impedem o lançamento; este rascunho não certifica conformidade mundial."
+  },
+  {
+    "where": "ios/pt-BR/processing",
+    "removed": "Registros de transações exigidos por lei precisam ter seus itens, base legal e prazo divulgados antes da coleta; a retenção ainda não definida dos resumos criptográficos de compras impede o lançamento."
+  },
+  {
+    "where": "ios/pt-BR/caption",
+    "removed": "— versão candidata; itens não verificados impedem o lançamento"
+  },
+  {
+    "where": "ios/pt-BR/cloudflare",
+    "removed": "A recusa da transferência de comunicados e seus efeitos não estão verificados e impedem o lançamento."
+  },
+  {
+    "where": "ios/pt-BR/aws",
+    "removed": "; comprovação da implementação pendente."
+  },
+  {
+    "where": "ios/ar/rights",
+    "removed": "تمنع المسارات أو الاتفاقيات غير المتحقق منها الإصدار؛ ولا تشهد هذه المسودة بالامتثال في جميع أنحاء العالم."
+  },
+  {
+    "where": "ios/ar/processing",
+    "removed": "قبل جمع سجلات المعاملات المطلوبة قانونًا، يجب الإفصاح عن نوع البيانات والأساس القانوني ومدة الاحتفاظ بها؛ ويمنع عدم حسم الاحتفاظ ببصمات التحقق من الشراء إصدار النسخة."
+  },
+  {
+    "where": "ios/ar/caption",
+    "removed": "— معلومات مقترحة تمنع بنودها غير المتحقق منها الإصدار"
+  },
+  {
+    "where": "ios/ar/cloudflare",
+    "removed": "لم يُتحقق من إجراء رفض النقل الخاص بإشعارات الخدمة أو أثره، وهذا يمنع الإصدار."
+  },
+  {
+    "where": "ios/ar/aws",
+    "removed": "؛ وما زال إثبات التنفيذ معلقًا."
+  },
+  {
+    "where": "ios/zh-Hans/rights",
+    "removed": "未核实的路径或协议阻止发布；本草案不证明符合全球各地的法律。"
+  },
+  {
+    "where": "ios/zh-Hans/processing",
+    "removed": "购买摘要保留期尚未解决，因此不能发布。"
+  },
+  {
+    "where": "ios/zh-Hans/caption",
+    "removed": "：候选信息，未核实事项阻止发布"
+  },
+  {
+    "where": "ios/zh-Hans/cloudflare",
+    "removed": "公告传输的拒绝方式和影响尚未核实，阻止发布。"
+  },
+  {
+    "where": "ios/zh-Hans/aws",
+    "removed": "；实施证据待提供。"
+  },
+  {
+    "where": "ios/zh-Hant/rights",
+    "removed": "未核實的途徑或協議阻止發布；本草案不證明符合全球各地的法律。"
+  },
+  {
+    "where": "ios/zh-Hant/processing",
+    "removed": "購買摘要保存期限尚未解決，因此不能發布。"
+  },
+  {
+    "where": "ios/zh-Hant/caption",
+    "removed": "：候選資訊，未核實事項阻止發布"
+  },
+  {
+    "where": "ios/zh-Hant/cloudflare",
+    "removed": "公告傳輸的拒絕方式和影響尚未核實，阻止發布。"
+  },
+  {
+    "where": "ios/zh-Hant/aws",
+    "removed": "；實施證據待提供。"
+  },
+  {
+    "where": "ios/tr/rights",
+    "removed": "Doğrulanmamış aktarım yolları veya anlaşmalar sürümün yayımlanmasını engeller; bu taslak, dünya çapında mevzuata uygunluk onayı değildir."
+  },
+  {
+    "where": "ios/tr/processing",
+    "removed": "Yasal olarak tutulması gereken işlem kayıtları için veri toplanmadan önce veri kalemi, hukuki dayanak ve süre açıklanmalıdır; satın alma özetlerinin saklanmasına ilişkin çözümlenmemiş durum, sürümün yayımlanmasını engeller."
+  },
+  {
+    "where": "ios/tr/caption",
+    "removed": "— aday metin; doğrulanmamış bilgiler sürümün yayımlanmasını engeller"
+  },
+  {
+    "where": "ios/tr/cloudflare",
+    "removed": "Duyuru aktarımını reddetme yöntemi ve etkisi doğrulanmadı ve sürümün yayımlanmasını engeller."
+  },
+  {
+    "where": "ios/tr/aws",
+    "removed": "; uygulama kanıtı bekleniyor."
+  },
+  {
+    "where": "android/ko/rights",
+    "removed": "미확인 경로나 계약이 있으면 출시할 수 없고, 이 초안은 전 세계 규정 준수를 보증하지 않아요."
+  },
+  {
+    "where": "android/ko/processing",
+    "removed": "구매 식별용 해시의 보관 근거와 기간은 아직 확인하지 않았고, 확인 전에는 출시할 수 없어요."
+  },
+  {
+    "where": "android/ko/caption",
+    "removed": "— 미확인 항목이 있는 출시 전 초안이에요"
+  },
+  {
+    "where": "android/ko/cloudflare",
+    "removed": "공지 이전의 거부 방법·효과는 미확인이라 출시를 막아요."
+  },
+  {
+    "where": "android/ko/aws",
+    "removed": "제거해야 하고, 실제 증명은 아직 없어요."
+  },
+  {
+    "where": "android/en/rights",
+    "removed": "Unverified routes or agreements block release; this draft does not certify worldwide compliance."
+  },
+  {
+    "where": "android/en/processing",
+    "removed": "Legally required transaction records need a disclosed item, legal basis and period before collection; unresolved purchase-digest retention is a release blocker."
+  },
+  {
+    "where": "android/en/caption",
+    "removed": "— candidate, unverified entries block release"
+  },
+  {
+    "where": "android/en/cloudflare",
+    "removed": "Announcement-transfer refusal and effect are not verified and block release."
+  },
+  {
+    "where": "android/en/aws",
+    "removed": "; implementation proof pending."
+  },
+  {
+    "where": "android/ja/rights",
+    "removed": "未確認の経路や契約がある場合はリリースを進められず、この草案は世界各国での法令遵守を保証しません。"
+  },
+  {
+    "where": "android/ja/processing",
+    "removed": "購入ダイジェストの保存期間が未解決のため、リリースを進められません。"
+  },
+  {
+    "where": "android/ja/caption",
+    "removed": "：候補情報、未確認事項はリリースの妨げとなります"
+  },
+  {
+    "where": "android/ja/cloudflare",
+    "removed": "お知らせに伴う移転の拒否方法と影響は未確認で、リリースを進められません。"
+  },
+  {
+    "where": "android/ja/aws",
+    "removed": "実装の証明は未完了です。"
+  },
+  {
+    "where": "android/de/rights",
+    "removed": "Nicht überprüfte Übermittlungswege oder Vereinbarungen blockieren die Veröffentlichung; dieser Entwurf bestätigt keine weltweite Rechtskonformität."
+  },
+  {
+    "where": "android/de/processing",
+    "removed": "Die ungeklärte Aufbewahrung von Kauf-Digests blockiert die Veröffentlichung."
+  },
+  {
+    "where": "android/de/caption",
+    "removed": "— Entwurf; nicht überprüfte Angaben blockieren die Veröffentlichung"
+  },
+  {
+    "where": "android/de/cloudflare",
+    "removed": "Die Ablehnung von Übermittlungen für Mitteilungen und ihre Folgen sind nicht überprüft und blockieren die Veröffentlichung."
+  },
+  {
+    "where": "android/de/aws",
+    "removed": "; Nachweis der Umsetzung steht aus."
+  },
+  {
+    "where": "android/fr/rights",
+    "removed": "Les circuits ou accords non vérifiés bloquent la mise en production ; ce projet ne certifie pas une conformité mondiale."
+  },
+  {
+    "where": "android/fr/processing",
+    "removed": "La conservation non résolue des empreintes d’achat bloque la mise en production."
+  },
+  {
+    "where": "android/fr/caption",
+    "removed": "— données provisoires ; les éléments non vérifiés bloquent la mise en production"
+  },
+  {
+    "where": "android/fr/cloudflare",
+    "removed": "Le refus du transfert lié aux annonces et ses conséquences ne sont pas vérifiés et bloquent la mise en production."
+  },
+  {
+    "where": "android/fr/aws",
+    "removed": "; preuve de mise en œuvre en attente."
+  },
+  {
+    "where": "android/es/rights",
+    "removed": "Las vías o acuerdos no verificados impiden el lanzamiento; este borrador no certifica el cumplimiento mundial."
+  },
+  {
+    "where": "android/es/processing",
+    "removed": "Antes de recopilar registros de transacciones exigidos por ley, deben indicarse los datos, la base jurídica y el plazo de conservación; la conservación sin resolver del resumen criptográfico de compras impide el lanzamiento."
+  },
+  {
+    "where": "android/es/caption",
+    "removed": "— propuesta; las entradas no verificadas impiden el lanzamiento"
+  },
+  {
+    "where": "android/es/cloudflare",
+    "removed": "El procedimiento para rechazar la transferencia de avisos y su efecto no están verificados e impiden el lanzamiento."
+  },
+  {
+    "where": "android/es/aws",
+    "removed": "; pendiente de pruebas de implementación."
+  },
+  {
+    "where": "android/it/rights",
+    "removed": "Percorsi di trasferimento o accordi non verificati impediscono il rilascio; questa bozza non certifica la conformità in tutto il mondo."
+  },
+  {
+    "where": "android/it/processing",
+    "removed": "Per i dati delle transazioni richiesti dalla legge, prima della raccolta devono essere dichiarati i dati conservati, la base giuridica e il periodo; la conservazione non ancora definita dei digest degli acquisti impedisce il rilascio."
+  },
+  {
+    "where": "android/it/caption",
+    "removed": "— bozza, le voci non verificate impediscono il rilascio"
+  },
+  {
+    "where": "android/it/cloudflare",
+    "removed": "Procedura ed effetti del rifiuto del trasferimento degli avvisi non sono verificati e impediscono il rilascio."
+  },
+  {
+    "where": "android/it/aws",
+    "removed": "; prova dell'implementazione in attesa."
+  },
+  {
+    "where": "android/nl/rights",
+    "removed": "Niet-geverifieerde routes of overeenkomsten blokkeren de release; dit concept bevestigt geen wereldwijde naleving."
+  },
+  {
+    "where": "android/nl/processing",
+    "removed": "Voor wettelijk verplichte transactiegegevens moeten het gegevenstype, de rechtsgrond en de bewaartermijn vóór verzameling worden bekendgemaakt; de onopgeloste bewaartermijn voor aankoopdigests blokkeert de release."
+  },
+  {
+    "where": "android/nl/caption",
+    "removed": "— concept; niet-geverifieerde vermeldingen blokkeren de release"
+  },
+  {
+    "where": "android/nl/cloudflare",
+    "removed": "Weigering van doorgifte voor aankondigingen en de gevolgen zijn niet geverifieerd en blokkeren de release."
+  },
+  {
+    "where": "android/nl/aws",
+    "removed": "; bewijs van implementatie ontbreekt nog."
+  },
+  {
+    "where": "android/pt-PT/rights",
+    "removed": "Vias ou acordos não verificados impedem o lançamento; este projeto não certifica conformidade mundial."
+  },
+  {
+    "where": "android/pt-PT/processing",
+    "removed": "Antes da recolha, os registos de transações exigidos por lei precisam de indicar os dados, a base legal e o período de conservação; a conservação ainda não resolvida dos resumos de verificação de compras impede o lançamento."
+  },
+  {
+    "where": "android/pt-PT/caption",
+    "removed": "— proposta; elementos não verificados impedem o lançamento"
+  },
+  {
+    "where": "android/pt-PT/cloudflare",
+    "removed": "A recusa da transferência de avisos e o seu efeito não estão verificados e impedem o lançamento."
+  },
+  {
+    "where": "android/pt-PT/aws",
+    "removed": "; a prova de implementação está pendente."
+  },
+  {
+    "where": "android/pl/rights",
+    "removed": "Niezweryfikowane trasy lub umowy blokują wydanie; ten projekt nie potwierdza zgodności z prawem na całym świecie."
+  },
+  {
+    "where": "android/pl/processing",
+    "removed": "Przed zebraniem wymaganych prawem danych transakcyjnych trzeba ujawnić ich zakres, podstawę prawną i okres przechowywania; nierozstrzygnięty okres przechowywania skrótów danych zakupów blokuje wydanie."
+  },
+  {
+    "where": "android/pl/caption",
+    "removed": "— projekt; niezweryfikowane pozycje blokują wydanie"
+  },
+  {
+    "where": "android/pl/cloudflare",
+    "removed": "Odmowa przekazywania danych komunikatów i jej skutki są niezweryfikowane i blokują wydanie."
+  },
+  {
+    "where": "android/pl/aws",
+    "removed": "; potwierdzenie wdrożenia oczekuje."
+  },
+  {
+    "where": "android/sv/rights",
+    "removed": "Overifierade överföringsvägar eller avtal blockerar lanseringen. Detta utkast intygar inte global regelefterlevnad."
+  },
+  {
+    "where": "android/sv/processing",
+    "removed": "Den olösta frågan om lagring av köpdigester blockerar lanseringen."
+  },
+  {
+    "where": "android/sv/caption",
+    "removed": "— preliminär version; overifierade uppgifter blockerar lanseringen"
+  },
+  {
+    "where": "android/sv/cloudflare",
+    "removed": "Hur du kan avböja överföring för meddelanden och vad det innebär är inte verifierat och blockerar lanseringen."
+  },
+  {
+    "where": "android/sv/aws",
+    "removed": "Verifiering av genomförandet återstår."
+  },
+  {
+    "where": "android/hi/rights",
+    "removed": "असत्यापित मार्ग या समझौते रिलीज़ रोकते हैं; यह मसौदा विश्वव्यापी कानूनी अनुपालन प्रमाणित नहीं करता।"
+  },
+  {
+    "where": "android/hi/processing",
+    "removed": "कानून के अनुसार आवश्यक लेन-देन रिकॉर्ड एकत्र करने से पहले उनके डेटा आइटम, कानूनी आधार और रखने की अवधि का खुलासा करना ज़रूरी है; खरीद डाइजेस्ट के प्रतिधारण का अनसुलझा प्रश्न रिलीज़ रोकता है।"
+  },
+  {
+    "where": "android/hi/caption",
+    "removed": "— प्रस्तावित, असत्यापित प्रविष्टियाँ रिलीज़ रोकती हैं"
+  },
+  {
+    "where": "android/hi/cloudflare",
+    "removed": "घोषणा संबंधी स्थानांतरण से मना करने की प्रक्रिया और प्रभाव सत्यापित नहीं हैं और रिलीज़ रोकते हैं।"
+  },
+  {
+    "where": "android/hi/aws",
+    "removed": "; कार्यान्वयन का प्रमाण लंबित है।"
+  },
+  {
+    "where": "android/pt-BR/rights",
+    "removed": "Rotas ou acordos não verificados impedem o lançamento; este rascunho não certifica conformidade mundial."
+  },
+  {
+    "where": "android/pt-BR/processing",
+    "removed": "Registros de transações exigidos por lei precisam ter seus itens, base legal e prazo divulgados antes da coleta; a retenção ainda não definida dos resumos criptográficos de compras impede o lançamento."
+  },
+  {
+    "where": "android/pt-BR/caption",
+    "removed": "— versão candidata; itens não verificados impedem o lançamento"
+  },
+  {
+    "where": "android/pt-BR/cloudflare",
+    "removed": "A recusa da transferência de comunicados e seus efeitos não estão verificados e impedem o lançamento."
+  },
+  {
+    "where": "android/pt-BR/aws",
+    "removed": "; comprovação da implementação pendente."
+  },
+  {
+    "where": "android/ar/rights",
+    "removed": "تمنع المسارات أو الاتفاقيات غير المتحقق منها الإصدار؛ ولا تشهد هذه المسودة بالامتثال في جميع أنحاء العالم."
+  },
+  {
+    "where": "android/ar/processing",
+    "removed": "قبل جمع سجلات المعاملات المطلوبة قانونًا، يجب الإفصاح عن نوع البيانات والأساس القانوني ومدة الاحتفاظ بها؛ ويمنع عدم حسم الاحتفاظ ببصمات التحقق من الشراء إصدار النسخة."
+  },
+  {
+    "where": "android/ar/caption",
+    "removed": "— معلومات مقترحة تمنع بنودها غير المتحقق منها الإصدار"
+  },
+  {
+    "where": "android/ar/cloudflare",
+    "removed": "لم يُتحقق من إجراء رفض النقل الخاص بإشعارات الخدمة أو أثره، وهذا يمنع الإصدار."
+  },
+  {
+    "where": "android/ar/aws",
+    "removed": "؛ وما زال إثبات التنفيذ معلقًا."
+  },
+  {
+    "where": "android/zh-Hans/rights",
+    "removed": "未核实的路径或协议阻止发布；本草案不证明符合全球各地的法律。"
+  },
+  {
+    "where": "android/zh-Hans/processing",
+    "removed": "购买摘要保留期尚未解决，因此不能发布。"
+  },
+  {
+    "where": "android/zh-Hans/caption",
+    "removed": "：候选信息，未核实事项阻止发布"
+  },
+  {
+    "where": "android/zh-Hans/cloudflare",
+    "removed": "公告传输的拒绝方式和影响尚未核实，阻止发布。"
+  },
+  {
+    "where": "android/zh-Hans/aws",
+    "removed": "；实施证据待提供。"
+  },
+  {
+    "where": "android/zh-Hant/rights",
+    "removed": "未核實的途徑或協議阻止發布；本草案不證明符合全球各地的法律。"
+  },
+  {
+    "where": "android/zh-Hant/processing",
+    "removed": "購買摘要保存期限尚未解決，因此不能發布。"
+  },
+  {
+    "where": "android/zh-Hant/caption",
+    "removed": "：候選資訊，未核實事項阻止發布"
+  },
+  {
+    "where": "android/zh-Hant/cloudflare",
+    "removed": "公告傳輸的拒絕方式和影響尚未核實，阻止發布。"
+  },
+  {
+    "where": "android/zh-Hant/aws",
+    "removed": "；實施證據待提供。"
+  },
+  {
+    "where": "android/tr/rights",
+    "removed": "Doğrulanmamış aktarım yolları veya anlaşmalar sürümün yayımlanmasını engeller; bu taslak, dünya çapında mevzuata uygunluk onayı değildir."
+  },
+  {
+    "where": "android/tr/processing",
+    "removed": "Yasal olarak tutulması gereken işlem kayıtları için veri toplanmadan önce veri kalemi, hukuki dayanak ve süre açıklanmalıdır; satın alma özetlerinin saklanmasına ilişkin çözümlenmemiş durum, sürümün yayımlanmasını engeller."
+  },
+  {
+    "where": "android/tr/caption",
+    "removed": "— aday metin; doğrulanmamış bilgiler sürümün yayımlanmasını engeller"
+  },
+  {
+    "where": "android/tr/cloudflare",
+    "removed": "Duyuru aktarımını reddetme yöntemi ve etkisi doğrulanmadı ve sürümün yayımlanmasını engeller."
+  },
+  {
+    "where": "android/tr/aws",
+    "removed": "; uygulama kanıtı bekleniyor."
+  },
+  {
+    "where": "us-health/ko/intro",
+    "removed": "아직 게시하지 않은 1.0.6 검토 초안이며, 시행일은 정하지 않았어요."
+  },
+  {
+    "where": "us-health/en/intro",
+    "removed": "This is an unpublished 1.0.6 review draft; its effective date is not set."
+  },
+  {
+    "where": "us-health/ja/intro",
+    "removed": "未公開の1.0.6審査用草案で、施行日は未定です。"
+  },
+  {
+    "where": "us-health/de/intro",
+    "removed": "Dies ist ein unveröffentlichter Prüfentwurf für 1.0.6; das Geltungsdatum steht noch nicht fest."
+  },
+  {
+    "where": "us-health/fr/intro",
+    "removed": "Il s’agit d’un projet de révision 1.0.6 non publié ; sa date d’effet reste à fixer."
+  },
+  {
+    "where": "us-health/es/intro",
+    "removed": "Es un borrador de revisión 1.0.6 sin publicar; su fecha de entrada en vigor no está fijada."
+  },
+  {
+    "where": "us-health/it/intro",
+    "removed": "È una bozza di revisione 1.0.6 non pubblicata; la data di efficacia non è fissata."
+  },
+  {
+    "where": "us-health/nl/intro",
+    "removed": "Dit is een ongepubliceerd beoordelingsconcept voor 1.0.6; de ingangsdatum staat nog niet vast."
+  },
+  {
+    "where": "us-health/pt-PT/intro",
+    "removed": "É um projeto de revisão 1.0.6 não publicado; a data de entrada em vigor não está definida."
+  },
+  {
+    "where": "us-health/pl/intro",
+    "removed": "To nieopublikowany projekt do przeglądu wersji 1.0.6; data wejścia w życie nie jest ustalona."
+  },
+  {
+    "where": "us-health/sv/intro",
+    "removed": "Detta är ett opublicerat granskningsutkast för 1.0.6; ikraftträdandedatum är inte bestämt."
+  },
+  {
+    "where": "us-health/hi/intro",
+    "removed": "यह 1.0.6 का अप्रकाशित समीक्षा मसौदा है; प्रभावी तिथि तय नहीं है।"
+  },
+  {
+    "where": "us-health/pt-BR/intro",
+    "removed": "É um rascunho de revisão 1.0.6 não publicado; a data de vigência não foi definida."
+  },
+  {
+    "where": "us-health/ar/intro",
+    "removed": "هذه مسودة مراجعة غير منشورة للإصدار 1.0.6؛ لم يُحدد تاريخ السريان."
+  },
+  {
+    "where": "us-health/zh-Hans/intro",
+    "removed": "这是尚未发布的 1.0.6 审阅草案；生效日期未定。"
+  },
+  {
+    "where": "us-health/zh-Hant/intro",
+    "removed": "這是尚未發布的 1.0.6 審閱草案；生效日期未定。"
+  },
+  {
+    "where": "us-health/tr/intro",
+    "removed": "Bu, yayımlanmamış 1.0.6 inceleme taslağıdır; yürürlük tarihi belirlenmemiştir."
+  }
+]

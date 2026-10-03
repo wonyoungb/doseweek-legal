@@ -1,0 +1,170 @@
+{
+  "source": "Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md, 'Owner decisions 2026-10-03 17:35 KST' and 'Owner decisions 2026-10-03 19:00 KST — public pages'",
+  "effectiveDate": "2026-10-03",
+  "iosVersion": "1.0.7",
+  "androidVersion": "1.0.6",
+  "ai": {
+    "location": "global",
+    "guardrail": "off",
+    "pipaCountryItemForGlobal": "owner accepted that the country item cannot name one country for location global"
+  },
+  "accountDeletionUrl": "https://doseweek.wonyoungchoi.dev/account-deletion/",
+  "statute": {
+    "retention": "전자상거래 등에서의 소비자보호에 관한 법률 시행령 제6조제1항: 대금결제 및 재화등의 공급에 관한 기록 5년, 소비자의 불만 또는 분쟁처리에 관한 기록 3년 (law.go.kr, 대통령령 제36507호, 시행 2026. 7. 21.; saved text sha256 9a581a6088cac8baf8d6e588560d726d37a9902dda60ad96a44df6a4e6e9081d)"
+  },
+  "accessLog": "nginx 'main' format, daily rotation, 10 rotations; read from the server on 2026-10-03",
+  "translation": "Owner decisions 2026-10-03 19:00 KST (late-decisions.md). Written by the web/legal predeploy agent; AI-translated, no native-speaker review. Statute: Enforcement Decree of the Act on the Consumer Protection in Electronic Commerce, Article 6 (payment and supply records 5 years, consumer complaint and dispute records 3 years). Access log facts read from the server 2026-10-03: nginx 'main' format, daily rotation, 10 rotations.",
+  "text": {
+    "releaseStatus": {
+      "ko": "이 내용은 2026년 10월 3일부터 시행해요. 계정, 동기화, Plus, 광고 등 새 기능에 관한 부분은 이 기능이 처음 들어가는 DoseWeek 버전({version})을 설명하고, 해당 버전이 출시된 때부터 적용돼요. 그 이전 버전에는 이 기능이 없어요.",
+      "en": "This text takes effect on October 3, 2026. The parts about accounts, sync, Plus, ads and other new features describe the first DoseWeek version that has them ({version}) and apply from the release of that version. Earlier versions do not have these features.",
+      "ja": "この内容は2026年10月3日から適用されます。アカウント、同期、Plus、広告などの新機能に関する部分は、これらの機能を最初に備えるDoseWeekのバージョン({version})について説明しており、そのバージョンの公開時から適用されます。それより前のバージョンにこれらの機能はありません。",
+      "de": "Dieser Text gilt ab dem 3. Oktober 2026. Die Abschnitte zu Konten, Synchronisierung, Plus, Werbung und weiteren neuen Funktionen beschreiben die erste DoseWeek-Version mit diesen Funktionen ({version}) und gelten ab deren Veröffentlichung. Frühere Versionen haben diese Funktionen nicht.",
+      "fr": "Ce texte prend effet le 3 octobre 2026. Les parties consacrées aux comptes, à la synchronisation, à Plus, aux publicités et aux autres nouveautés décrivent la première version de DoseWeek qui les propose ({version}) et s’appliquent à partir de la sortie de cette version. Les versions antérieures n’ont pas ces fonctions.",
+      "es": "Este texto entra en vigor el 3 de octubre de 2026. Las partes sobre cuentas, sincronización, Plus, anuncios y otras novedades describen la primera versión de DoseWeek que las incluye ({version}) y se aplican desde el lanzamiento de esa versión. Las versiones anteriores no tienen estas funciones.",
+      "it": "Questo testo ha effetto dal 3 ottobre 2026. Le parti su account, sincronizzazione, Plus, annunci e altre novità descrivono la prima versione di DoseWeek che le include ({version}) e si applicano dal rilascio di tale versione. Le versioni precedenti non hanno queste funzioni.",
+      "nl": "Deze tekst geldt vanaf 3 oktober 2026. De onderdelen over accounts, synchronisatie, Plus, advertenties en andere nieuwe functies beschrijven de eerste DoseWeek-versie met deze functies ({version}) en gelden vanaf de release van die versie. Eerdere versies hebben deze functies niet.",
+      "pt-PT": "Este texto produz efeitos a partir de 3 de outubro de 2026. As partes sobre contas, sincronização, Plus, anúncios e outras novidades descrevem a primeira versão do DoseWeek que as inclui ({version}) e aplicam-se a partir do lançamento dessa versão. As versões anteriores não têm estas funções.",
+      "pl": "Ten tekst obowiązuje od 3 października 2026 r. Części dotyczące kont, synchronizacji, Plus, reklam i innych nowych funkcji opisują pierwszą wersję DoseWeek, która je zawiera ({version}), i mają zastosowanie od wydania tej wersji. Wcześniejsze wersje nie mają tych funkcji.",
+      "sv": "Den här texten gäller från den 3 oktober 2026. Delarna om konton, synk, Plus, annonser och andra nya funktioner beskriver den första DoseWeek-versionen som har dem ({version}) och gäller från att den versionen släpps. Tidigare versioner har inte dessa funktioner.",
+      "hi": "यह पाठ 3 अक्टूबर 2026 से प्रभावी है। खाते, सिंक, Plus, विज्ञापन और अन्य नई सुविधाओं से जुड़े हिस्से DoseWeek के उस पहले संस्करण का वर्णन करते हैं जिसमें ये सुविधाएँ हैं ({version}) और उस संस्करण के जारी होने से लागू होते हैं। पहले के संस्करणों में ये सुविधाएँ नहीं हैं।",
+      "pt-BR": "Este texto entra em vigor em 3 de outubro de 2026. As partes sobre contas, sincronização, Plus, anúncios e outras novidades descrevem a primeira versão do DoseWeek que as inclui ({version}) e valem a partir do lançamento dessa versão. As versões anteriores não têm esses recursos.",
+      "ar": "يسري هذا النص اعتبارًا من 3 أكتوبر 2026. الأجزاء المتعلقة بالحسابات والمزامنة و Plus والإعلانات وغيرها من الميزات الجديدة تصف أول إصدار من DoseWeek يتضمن هذه الميزات ({version})، وتُطبَّق منذ صدور ذلك الإصدار. الإصدارات الأقدم لا تتضمن هذه الميزات.",
+      "zh-Hans": "本内容自 2026 年 10 月 3 日起生效。有关账号、同步、Plus、广告等新功能的部分说明的是首个包含这些功能的 DoseWeek 版本({version})，自该版本发布时起适用。更早的版本没有这些功能。",
+      "zh-Hant": "本內容自 2026 年 10 月 3 日起生效。有關帳號、同步、Plus、廣告等新功能的部分說明的是首個包含這些功能的 DoseWeek 版本({version})，自該版本發布時起適用。更早的版本沒有這些功能。",
+      "tr": "Bu metin 3 Ekim 2026’da yürürlüğe girer. Hesaplar, eşitleme, Plus, reklamlar ve diğer yeni özelliklerle ilgili bölümler, bu özellikleri içeren ilk DoseWeek sürümünü ({version}) anlatır ve o sürümün yayımlanmasıyla uygulanır. Önceki sürümlerde bu özellikler yoktur."
+    },
+    "verifier": {
+      "ko": "별도의 Google Play 구매 확인 서버도 Wonyoung Labs가 Amazon Web Services(AWS) 서울 리전(ap-northeast-2, 대한민국)에서 운영해요.",
+      "en": "The separate Google Play purchase-verification server is also operated by Wonyoung Labs on Amazon Web Services (AWS) in the Seoul region (ap-northeast-2), Republic of Korea.",
+      "ja": "別のGoogle Play購入確認サーバーも、Wonyoung LabsがAmazon Web Services（AWS）のソウルリージョン（ap-northeast-2、大韓民国）で運用しています。",
+      "de": "Auch der separate Google-Play-Kaufprüfungsserver wird von Wonyoung Labs bei Amazon Web Services (AWS) in der Region Seoul (ap-northeast-2), Republik Korea, betrieben.",
+      "fr": "Le serveur distinct de vérification des achats Google Play est lui aussi exploité par Wonyoung Labs sur Amazon Web Services (AWS), dans la région de Séoul (ap-northeast-2), République de Corée.",
+      "es": "El servidor independiente de verificación de compras de Google Play también lo opera Wonyoung Labs en Amazon Web Services (AWS), en la región de Seúl (ap-northeast-2), República de Corea.",
+      "it": "Anche il server separato di verifica degli acquisti Google Play è gestito da Wonyoung Labs su Amazon Web Services (AWS), nella regione di Seul (ap-northeast-2), Repubblica di Corea.",
+      "nl": "Ook de afzonderlijke server voor verificatie van Google Play-aankopen wordt door Wonyoung Labs beheerd bij Amazon Web Services (AWS) in de regio Seoul (ap-northeast-2), Republiek Korea.",
+      "pt-PT": "O servidor separado de verificação de compras do Google Play também é operado pela Wonyoung Labs na Amazon Web Services (AWS), na região de Seul (ap-northeast-2), República da Coreia.",
+      "pl": "Osobny serwer weryfikacji zakupów Google Play również jest prowadzony przez Wonyoung Labs w Amazon Web Services (AWS), w regionie Seul (ap-northeast-2), Republika Korei.",
+      "sv": "Även den separata servern för verifiering av Google Play-köp drivs av Wonyoung Labs hos Amazon Web Services (AWS) i Seoul-regionen (ap-northeast-2), Republiken Korea.",
+      "hi": "अलग Google Play खरीद-सत्यापन सर्वर भी Wonyoung Labs द्वारा Amazon Web Services (AWS) के सियोल क्षेत्र (ap-northeast-2), कोरिया गणराज्य में चलाया जाता है।",
+      "pt-BR": "O servidor separado de verificação de compras do Google Play também é operado pela Wonyoung Labs na Amazon Web Services (AWS), na região de Seul (ap-northeast-2), República da Coreia.",
+      "ar": "خادم التحقق من مشتريات Google Play المنفصل تشغّله أيضًا Wonyoung Labs على Amazon Web Services (AWS) في منطقة سيول (ap-northeast-2)، جمهورية كوريا.",
+      "zh-Hans": "独立的 Google Play 购买验证服务器同样由 Wonyoung Labs 在 Amazon Web Services（AWS）首尔区域（ap-northeast-2，大韩民国）运营。",
+      "zh-Hant": "獨立的 Google Play 購買驗證伺服器同樣由 Wonyoung Labs 在 Amazon Web Services（AWS）首爾區域（ap-northeast-2，大韓民國）營運。",
+      "tr": "Ayrı Google Play satın alma doğrulama sunucusunu da Wonyoung Labs, Amazon Web Services (AWS) Seul bölgesinde (ap-northeast-2), Kore Cumhuriyeti’nde işletir."
+    },
+    "tombstone": {
+      "ko": "이 표식은 「전자상거래 등에서의 소비자보호에 관한 법률 시행령」 제6조에 따른 대금결제 및 재화 등의 공급에 관한 기록으로 5년 동안 보관한 뒤 삭제해요. 문의처럼 소비자의 불만 또는 분쟁처리에 관한 기록은 같은 조에 따라 3년 동안 보관해요.",
+      "en": "This marker is kept for 5 years as a record of payment and supply under Article 6 of the Enforcement Decree of the Korean Act on the Consumer Protection in Electronic Commerce, and is then deleted. Records of consumer complaints and dispute handling, such as support requests, are kept for 3 years under the same article.",
+      "ja": "この標識は、韓国の「電子商取引等における消費者保護に関する法律施行令」第6条に基づく代金決済および財貨等の供給に関する記録として5年間保管し、その後削除します。お問い合わせなど、消費者の苦情または紛争処理に関する記録は、同条に基づき3年間保管します。",
+      "de": "Diese Markierung wird als Aufzeichnung über Zahlung und Lieferung nach Artikel 6 der Durchführungsverordnung zum koreanischen Gesetz über den Verbraucherschutz im elektronischen Geschäftsverkehr 5 Jahre lang aufbewahrt und danach gelöscht. Aufzeichnungen über Verbraucherbeschwerden und Streitbeilegung, etwa Supportanfragen, werden nach demselben Artikel 3 Jahre lang aufbewahrt.",
+      "fr": "Ce marqueur est conservé 5 ans en tant qu’enregistrement relatif au paiement et à la fourniture, conformément à l’article 6 du décret d’application de la loi coréenne sur la protection des consommateurs dans le commerce électronique, puis supprimé. Les enregistrements relatifs aux réclamations des consommateurs et au traitement des litiges, comme les demandes d’assistance, sont conservés 3 ans en vertu du même article.",
+      "es": "Este marcador se conserva 5 años como registro de pago y suministro conforme al artículo 6 del Decreto de aplicación de la Ley coreana de protección del consumidor en el comercio electrónico, y después se elimina. Los registros de quejas de consumidores y de resolución de disputas, como las solicitudes de asistencia, se conservan 3 años conforme al mismo artículo.",
+      "it": "Questo contrassegno viene conservato per 5 anni come registrazione di pagamento e fornitura ai sensi dell’articolo 6 del decreto di attuazione della legge coreana sulla tutela dei consumatori nel commercio elettronico, quindi viene eliminato. Le registrazioni relative a reclami dei consumatori e alla gestione delle controversie, come le richieste di assistenza, vengono conservate per 3 anni ai sensi dello stesso articolo.",
+      "nl": "Deze markering wordt 5 jaar bewaard als registratie van betaling en levering op grond van artikel 6 van het uitvoeringsbesluit bij de Koreaanse wet inzake consumentenbescherming bij elektronische handel en wordt daarna verwijderd. Registraties van klachten van consumenten en geschilafhandeling, zoals supportverzoeken, worden op grond van hetzelfde artikel 3 jaar bewaard.",
+      "pt-PT": "Este marcador é conservado durante 5 anos como registo de pagamento e fornecimento, nos termos do artigo 6.º do decreto de execução da lei coreana de proteção do consumidor no comércio eletrónico, e depois é eliminado. Os registos de reclamações de consumidores e de resolução de litígios, como os pedidos de apoio, são conservados durante 3 anos nos termos do mesmo artigo.",
+      "pl": "Ten znacznik jest przechowywany przez 5 lat jako zapis dotyczący płatności i dostawy na podstawie art. 6 rozporządzenia wykonawczego do koreańskiej ustawy o ochronie konsumentów w handlu elektronicznym, a następnie usuwany. Zapisy dotyczące skarg konsumentów i rozstrzygania sporów, takie jak zgłoszenia do pomocy, są przechowywane przez 3 lata na podstawie tego samego artykułu.",
+      "sv": "Markeringen sparas i 5 år som en uppgift om betalning och leverans enligt artikel 6 i tillämpningsförordningen till Koreas lag om konsumentskydd vid elektronisk handel och raderas därefter. Uppgifter om konsumentklagomål och tvistehantering, till exempel supportärenden, sparas i 3 år enligt samma artikel.",
+      "hi": "यह चिह्न इलेक्ट्रॉनिक वाणिज्य में उपभोक्ता संरक्षण संबंधी कोरियाई अधिनियम के प्रवर्तन आदेश के अनुच्छेद 6 के अंतर्गत भुगतान और आपूर्ति के रिकॉर्ड के रूप में 5 वर्ष तक रखा जाता है और फिर हटा दिया जाता है। उपभोक्ता शिकायतों और विवाद निपटान के रिकॉर्ड, जैसे सहायता अनुरोध, उसी अनुच्छेद के अंतर्गत 3 वर्ष तक रखे जाते हैं।",
+      "pt-BR": "Este marcador é mantido por 5 anos como registro de pagamento e fornecimento, nos termos do artigo 6 do decreto de execução da lei coreana de proteção do consumidor no comércio eletrônico, e depois é excluído. Os registros de reclamações de consumidores e de solução de disputas, como pedidos de suporte, são mantidos por 3 anos nos termos do mesmo artigo.",
+      "ar": "تُحفظ هذه العلامة لمدة 5 سنوات بوصفها سجلًا للدفع والتوريد وفق المادة 6 من المرسوم التنفيذي للقانون الكوري لحماية المستهلك في التجارة الإلكترونية، ثم تُحذف. أما سجلات شكاوى المستهلكين ومعالجة النزاعات، مثل طلبات الدعم، فتُحفظ لمدة 3 سنوات وفق المادة نفسها.",
+      "zh-Hans": "该标记作为付款及商品等供应的记录，依据韩国《电子商务等领域消费者保护法施行令》第6条保存 5 年，之后删除。咨询等有关消费者投诉或纠纷处理的记录，依据同一条保存 3 年。",
+      "zh-Hant": "此標記作為付款及商品等供應的紀錄，依據韓國《電子商務等領域消費者保護法施行令》第6條保存 5 年，之後刪除。諮詢等有關消費者申訴或爭議處理的紀錄，依據同一條保存 3 年。",
+      "tr": "Bu işaret, Kore Elektronik Ticarette Tüketicinin Korunması Kanunu Uygulama Kararnamesi’nin 6. maddesi uyarınca ödeme ve tedarik kaydı olarak 5 yıl saklanır ve ardından silinir. Destek talepleri gibi tüketici şikâyetleri ve uyuşmazlıkların çözümüne ilişkin kayıtlar aynı madde uyarınca 3 yıl saklanır."
+    },
+    "digest": {
+      "ko": "중복 구매 연결을 막기 위한 키 기반 다이제스트 표식은 「전자상거래 등에서의 소비자보호에 관한 법률 시행령」 제6조에 따른 대금결제 및 재화 등의 공급에 관한 기록으로 5년 동안 보관한 뒤 삭제해요.",
+      "en": "Keyed digest markers that prevent duplicate purchase linking are kept for 5 years as records of payment and supply under Article 6 of the Enforcement Decree of the Korean Act on the Consumer Protection in Electronic Commerce, and are then deleted.",
+      "ja": "購入の重複連携を防ぐための鍵付きダイジェスト標識は、韓国の「電子商取引等における消費者保護に関する法律施行令」第6条に基づく代金決済および財貨等の供給に関する記録として5年間保管し、その後削除します。",
+      "de": "Schlüsselbasierte Digest-Markierungen, die eine doppelte Kaufverknüpfung verhindern, werden als Aufzeichnungen über Zahlung und Lieferung nach Artikel 6 der Durchführungsverordnung zum koreanischen Gesetz über den Verbraucherschutz im elektronischen Geschäftsverkehr 5 Jahre lang aufbewahrt und danach gelöscht.",
+      "fr": "Les marqueurs d’empreinte à clé qui empêchent de lier deux fois un même achat sont conservés 5 ans en tant qu’enregistrements relatifs au paiement et à la fourniture, conformément à l’article 6 du décret d’application de la loi coréenne sur la protection des consommateurs dans le commerce électronique, puis supprimés.",
+      "es": "Los marcadores de resumen con clave que impiden vincular dos veces una misma compra se conservan 5 años como registros de pago y suministro conforme al artículo 6 del Decreto de aplicación de la Ley coreana de protección del consumidor en el comercio electrónico, y después se eliminan.",
+      "it": "I contrassegni digest con chiave che impediscono il doppio collegamento di un acquisto vengono conservati per 5 anni come registrazioni di pagamento e fornitura ai sensi dell’articolo 6 del decreto di attuazione della legge coreana sulla tutela dei consumatori nel commercio elettronico, quindi vengono eliminati.",
+      "nl": "Gesleutelde digest-markeringen die dubbele koppeling van een aankoop voorkomen, worden 5 jaar bewaard als registraties van betaling en levering op grond van artikel 6 van het uitvoeringsbesluit bij de Koreaanse wet inzake consumentenbescherming bij elektronische handel en worden daarna verwijderd.",
+      "pt-PT": "Os marcadores de resumo com chave que impedem a associação duplicada de uma compra são conservados durante 5 anos como registos de pagamento e fornecimento, nos termos do artigo 6.º do decreto de execução da lei coreana de proteção do consumidor no comércio eletrónico, e depois são eliminados.",
+      "pl": "Znaczniki skrótu z kluczem, które zapobiegają podwójnemu powiązaniu zakupu, są przechowywane przez 5 lat jako zapisy dotyczące płatności i dostawy na podstawie art. 6 rozporządzenia wykonawczego do koreańskiej ustawy o ochronie konsumentów w handlu elektronicznym, a następnie usuwane.",
+      "sv": "Nyckelbaserade digest-markeringar som förhindrar att ett köp kopplas två gånger sparas i 5 år som uppgifter om betalning och leverans enligt artikel 6 i tillämpningsförordningen till Koreas lag om konsumentskydd vid elektronisk handel och raderas därefter.",
+      "hi": "दोहरी खरीद-लिंकिंग रोकने वाले कुंजी-आधारित डाइजेस्ट चिह्न इलेक्ट्रॉनिक वाणिज्य में उपभोक्ता संरक्षण संबंधी कोरियाई अधिनियम के प्रवर्तन आदेश के अनुच्छेद 6 के अंतर्गत भुगतान और आपूर्ति के रिकॉर्ड के रूप में 5 वर्ष तक रखे जाते हैं और फिर हटा दिए जाते हैं।",
+      "pt-BR": "Os marcadores de resumo com chave que impedem a vinculação duplicada de uma compra são mantidos por 5 anos como registros de pagamento e fornecimento, nos termos do artigo 6 do decreto de execução da lei coreana de proteção do consumidor no comércio eletrônico, e depois são excluídos.",
+      "ar": "تُحفظ علامات الملخص المعتمدة على مفتاح، التي تمنع ربط عملية الشراء نفسها مرتين، لمدة 5 سنوات بوصفها سجلات للدفع والتوريد وفق المادة 6 من المرسوم التنفيذي للقانون الكوري لحماية المستهلك في التجارة الإلكترونية، ثم تُحذف.",
+      "zh-Hans": "用于防止重复关联购买的带密钥摘要标记，作为付款及商品等供应的记录，依据韩国《电子商务等领域消费者保护法施行令》第6条保存 5 年，之后删除。",
+      "zh-Hant": "用於防止重複連結購買的帶金鑰摘要標記，作為付款及商品等供應的紀錄，依據韓國《電子商務等領域消費者保護法施行令》第6條保存 5 年，之後刪除。",
+      "tr": "Bir satın almanın iki kez bağlanmasını önleyen anahtarlı özet işaretleri, Kore Elektronik Ticarette Tüketicinin Korunması Kanunu Uygulama Kararnamesi’nin 6. maddesi uyarınca ödeme ve tedarik kaydı olarak 5 yıl saklanır ve ardından silinir."
+    },
+    "noticeLog": {
+      "ko": {
+        "old": "서버 로그의 항목·보관 기간은 출시 전에 고지해요.",
+        "new": "웹 서버는 IP 주소, 시각, 요청한 주소, 응답 상태와 크기, 참조 주소, 브라우저·앱 식별 정보(User-Agent)를 접속 기록으로 최대 11일 동안 보관해요."
+      },
+      "en": {
+        "old": "server log fields and retention must be disclosed before release.",
+        "new": "the web server keeps an access log of the IP address, time, requested address, response status and size, referrer and browser or app identifier (user agent) for up to 11 days."
+      },
+      "ja": {
+        "old": "ログの項目と保存期間は公開前に示します。",
+        "new": "ウェブサーバーは、IPアドレス、時刻、要求されたアドレス、応答の状態とサイズ、参照元、ブラウザーまたはアプリの識別情報（ユーザーエージェント）をアクセスログとして最長11日間保存します。"
+      },
+      "de": {
+        "old": "Logfelder und Aufbewahrung werden vor Veröffentlichung erläutert.",
+        "new": "der Webserver speichert in einem Zugriffsprotokoll IP-Adresse, Zeitpunkt, angeforderte Adresse, Antwortstatus und -größe, Referrer sowie Browser- oder App-Kennung (User-Agent) bis zu 11 Tage lang."
+      },
+      "fr": {
+        "old": "les champs et la durée des journaux seront indiqués avant la sortie.",
+        "new": "le serveur web conserve pendant 11 jours au plus un journal d’accès contenant l’adresse IP, l’heure, l’adresse demandée, l’état et la taille de la réponse, le référent et l’identifiant du navigateur ou de l’app (user agent)."
+      },
+      "es": {
+        "old": "los campos y plazos de los registros se indicarán antes del lanzamiento.",
+        "new": "el servidor web conserva durante un máximo de 11 días un registro de acceso con la dirección IP, la hora, la dirección solicitada, el estado y el tamaño de la respuesta, el referente y el identificador del navegador o de la app (user agent)."
+      },
+      "it": {
+        "old": "campi e durata dei log saranno indicati prima del rilascio.",
+        "new": "il server web conserva per un massimo di 11 giorni un registro di accesso con indirizzo IP, ora, indirizzo richiesto, stato e dimensione della risposta, referrer e identificativo del browser o dell’app (user agent)."
+      },
+      "nl": {
+        "old": "logvelden en bewaartermijn worden vóór publicatie vermeld.",
+        "new": "de webserver bewaart maximaal 11 dagen een toegangslog met het IP-adres, het tijdstip, het opgevraagde adres, de status en grootte van het antwoord, de verwijzer en de browser- of app-aanduiding (user agent)."
+      },
+      "pt-PT": {
+        "old": "os campos e prazo dos registos serão indicados antes do lançamento.",
+        "new": "o servidor web conserva durante 11 dias, no máximo, um registo de acesso com o endereço IP, a hora, o endereço pedido, o estado e o tamanho da resposta, o referenciador e o identificador do navegador ou da app (user agent)."
+      },
+      "pl": {
+        "old": "pola i okres przechowywania logów zostaną podane przed wydaniem.",
+        "new": "serwer WWW przechowuje przez maksymalnie 11 dni dziennik dostępu zawierający adres IP, czas, żądany adres, stan i rozmiar odpowiedzi, adres odsyłający oraz identyfikator przeglądarki lub aplikacji (user agent)."
+      },
+      "sv": {
+        "old": "loggfält och lagringstid anges före lansering.",
+        "new": "webbservern sparar i högst 11 dagar en åtkomstlogg med IP-adress, tidpunkt, begärd adress, svarets status och storlek, hänvisare och webbläsarens eller appens identifierare (user agent)."
+      },
+      "hi": {
+        "old": "लॉग विवरण और अवधि रिलीज़ से पहले बताई जाएगी।",
+        "new": "वेब सर्वर IP पता, समय, माँगा गया पता, उत्तर की स्थिति और आकार, रेफ़रर तथा ब्राउज़र या ऐप की पहचान (यूज़र एजेंट) का एक्सेस लॉग अधिकतम 11 दिन तक रखता है।"
+      },
+      "pt-BR": {
+        "old": "campos e prazo dos logs serão informados antes do lançamento.",
+        "new": "o servidor web mantém por até 11 dias um log de acesso com o endereço IP, o horário, o endereço solicitado, o status e o tamanho da resposta, o referenciador e o identificador do navegador ou do app (user agent)."
+      },
+      "ar": {
+        "old": "وستُوضح حقول السجل ومدته قبل الإصدار.",
+        "new": "ويحتفظ خادم الويب بسجل وصول يتضمن عنوان IP والوقت والعنوان المطلوب وحالة الاستجابة وحجمها والصفحة المُحيلة ومعرّف المتصفح أو التطبيق (وكيل المستخدم) لمدة أقصاها 11 يومًا."
+      },
+      "zh-Hans": {
+        "old": "日志字段和保存期限将在发布前说明。",
+        "new": "网页服务器会将 IP 地址、时间、请求的地址、响应状态和大小、来源地址以及浏览器或应用标识（User-Agent）作为访问日志保存最多 11 天。"
+      },
+      "zh-Hant": {
+        "old": "日誌欄位與保存期限會在發布前說明。",
+        "new": "網頁伺服器會將 IP 位址、時間、要求的位址、回應狀態與大小、來源位址以及瀏覽器或 App 識別資訊（User-Agent）作為存取日誌保存最多 11 天。"
+      },
+      "tr": {
+        "old": "günlük alanları ve saklama süresi yayın öncesinde açıklanır.",
+        "new": "web sunucusu IP adresini, zamanı, istenen adresi, yanıtın durumunu ve boyutunu, yönlendiren adresi ve tarayıcı ya da uygulama tanımlayıcısını (user agent) erişim günlüğü olarak en fazla 11 gün saklar."
+      }
+    }
+  },
+  "releaseStatusVersion": {
+    "ios": "1.0.7",
+    "android": "1.0.6",
+    "shared": "Android 1.0.6; iPhone, iPad 1.0.7"
+  }
+}
