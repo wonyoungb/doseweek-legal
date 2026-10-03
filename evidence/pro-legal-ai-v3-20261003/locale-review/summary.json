@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "lane": "LEGAL-AI",
   "date": "2026-10-03",
-  "consentVersion": "2026-10-03.3",
+  "consentVersion": "2026-10-03.4",
   "wireConsentVersion": "ai-consent-v3",
   "statuses": {
     "ko": "same-model-authoring-no-review",

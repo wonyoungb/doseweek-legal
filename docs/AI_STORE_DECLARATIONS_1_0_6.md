@@ -8,15 +8,22 @@ ai-consent-v3 (2026-10-03, owner decision: Pro AI ships on Gemini through Google
 cross-border transfer consent). The provider facts below come from Google's published
 documentation and terms, saved with SHA-256 in the lane evidence `FACTS.md`
 (release/evidence/1.0.6/CODEX-LANES-20261002/codex-takeover-20261003/legal-self-review/claude-20261003).
-Two owner decisions are still open and change the wording marked [SWITCH]:
+The owner decided both switches on 2026-10-03 (late-decisions.md, 17:35 and 19:00 KST; wording
+rule 19:10 KST). Replace every [SWITCH] mark with the selected wording:
 
-- SWITCH_LOCATION = us: "with AI processing and storage in the United States (Google Cloud
-  multi-region us; under Google's terms other processing may take place in other countries
-  where Google or its subprocessors have facilities)".
-  SWITCH_LOCATION = global: "through Google's global endpoint; Google states that requests may
-  be processed in any Google Cloud location around the world, so no country is fixed".
-- SWITCH_AWS_GUARDRAIL = off: nothing more. SWITCH_AWS_GUARDRAIL = on: add "Answer text in
-  English, Spanish and French is also checked by Amazon Web Services in Seoul."
+- SWITCH_LOCATION = global (SELECTED): "location Global (Google's global endpoint). Google
+  states that such requests "may be processed in any Google Cloud location around the world".
+  The country where the content is processed can change with each request, depending on which
+  Google servers handle it; Google decides this, so the country cannot be fixed or named in
+  advance. Of the named recipients, Google LLC is located in the United States and Google Asia
+  Pacific Pte. Ltd. in Singapore".
+  Not selected, SWITCH_LOCATION = us: "with AI processing and storage in the United States
+  (Google Cloud multi-region us; under Google's terms other processing may take place in other
+  countries where Google or its subprocessors have facilities)".
+- SWITCH_AWS_GUARDRAIL = off (SELECTED): nothing more; the recipient is Google only. This text
+  must not be submitted while the server still calls the Amazon Web Services Guardrail
+  (readiness.serverGuardrailCallRemovedReadback). Not selected, SWITCH_AWS_GUARDRAIL = on: add
+  "Answer text in English, Spanish and French is also checked by Amazon Web Services in Seoul."
 
 Texts that users read (privacy section, Terms section, consent screens, What's New) are in
 `docs/ai-assistant-content.candidate.json` and `docs/ai-app-copy.candidate.json`. This file
@@ -32,9 +39,9 @@ holds only the store-facing declarations, in English.
 >
 > - Provider: Google. Gemini, a Google AI model, on Google Cloud Vertex AI (Google now calls the
 >   platform Gemini Enterprise Agent Platform), [SWITCH location]. Google acts as our processor
->   under its Cloud Data Processing Addendum; the contracting entity for our billing country is
->   Google Cloud Korea LLC, with Google Asia Pacific Pte. Ltd. and its affiliates including
->   Google LLC. Google does not use the content to train AI models. Google may hold it in memory
+>   under its Cloud Data Processing Addendum; for a billing address in the Republic of Korea,
+>   Google's published terms name Google Cloud Korea LLC as the contracting entity, with Google
+>   Asia Pacific Pte. Ltd. and its affiliates including Google LLC. Google does not use the content to train AI models. Google may hold it in memory
 >   for up to 24 hours, and may store a prompt for up to 90 days if its automated abuse checks
 >   flag it; authorized Google staff may review a flagged prompt. Our server keeps no content.
 >   [SWITCH guardrail]
@@ -147,10 +154,17 @@ day, never medical answers.
 ## 4. Open before submission
 
 - Console entry and readback of every table above (owner-gated).
-- The owner's choice of SWITCH_LOCATION and SWITCH_AWS_GUARDRAIL; then replace every [SWITCH]
-  mark above with the chosen wording.
-- The Google contracting entity read from the billing account of project doseweek-507313
-  (the draft assumes a billing address in South Korea: Google Cloud Korea LLC).
+- Replace every [SWITCH] mark above with the selected wording (SWITCH_LOCATION = global,
+  SWITCH_AWS_GUARDRAIL = off). The owner accepted on 2026-10-03 19:00 KST that the Korean
+  transfer notice cannot name one country for location Global.
+- Readback that the deployed server makes no Amazon Web Services Guardrail call, before any
+  declaration that names Google as the only recipient is submitted.
+- The DoseWeek server location (Seoul, Republic of Korea) is sourced: an AWS Lightsail instance in
+  the Seoul Region, lane receipt server-hardening-20261003/receipt.md.
+- The Google contracting entity on an invoice or in the billing console of project
+  doseweek-507313. A read-only billing-account describe on 2026-10-03 shows currency KRW and no
+  entity or address field, so the draft only repeats what Google's terms name for a billing
+  address in South Korea (Google Cloud Korea LLC, marked there as an authorized reseller).
 - Readback of the Google project settings: in-memory cache (default on, 24 hours) and
   request-response logging (default off). No abuse-monitoring exception has been requested, so
   no zero-data-retention claim is made anywhere.

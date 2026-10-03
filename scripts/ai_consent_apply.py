@@ -5,9 +5,12 @@
     python3 scripts/ai_consent_apply.py --check    # fail when that file is stale
     python3 scripts/ai_consent_apply.py --export DIR   # also write the resolved copy per combination
 
-The two open owner decisions are SWITCH_LOCATION (us | global) and SWITCH_AWS_GUARDRAIL (off | on).
-Once the owner picks, the app and server lanes take the block of that one combination: the
-resolved strings (--export), the Screen A display hashes and the server registry document.
+    python3 scripts/ai_consent_apply.py --export-selected DIR   # final copy of the owner's combination
+
+The two owner switches are SWITCH_LOCATION (us | global) and SWITCH_AWS_GUARDRAIL (off | on). The
+owner chose global and off on 2026-10-03. The app and server lanes take the block of that one
+combination: the resolved strings (--export-selected), the Screen A display hashes and the server
+registry document.
 
 Hash rule (AIAssistConsent.swift `textHash`): SHA-256, lowercase hex, of the Screen A strings in
 screen order joined with U+000A. Screen order: ai_assistant_candidate.screen_a_strings.
@@ -97,7 +100,9 @@ def build() -> dict:
     assert len(set(hashes)) == len(hashes), "every combination and locale has its own text"
     return {
         "schemaVersion": 1,
-        "status": "candidate-not-applied: the owner has not chosen the switches; nothing here is published",
+        "status": "candidate-not-applied: the owner chose SWITCH_LOCATION=global and SWITCH_AWS_GUARDRAIL=off "
+                  "(2026-10-03 17:35 and 19:00 KST); apply combinations.global-off only; nothing here is "
+                  "published or applied to an app or server",
         "consentVersion": document["consentVersion"],
         "wireConsentVersion": document["wireConsentVersion"],
         "ownerSwitches": {"SWITCH_LOCATION": list(candidate.LOCATIONS),
@@ -125,10 +130,13 @@ def build() -> dict:
 
 
 APPLY = {
-    "precondition": "The owner picks SWITCH_LOCATION and SWITCH_AWS_GUARDRAIL. Set switches.location.selected and "
-                    "switches.guardrail.selected in docs/ai-app-copy.candidate.json and "
-                    "docs/ai-assistant-content.candidate.json, then export: python3 scripts/ai_consent_apply.py "
-                    "--export <dir>. Use the file of the chosen combination only.",
+    "precondition": "The owner picked SWITCH_LOCATION=global and SWITCH_AWS_GUARDRAIL=off (late-decisions.md, "
+                    "2026-10-03 17:35 and 19:00 KST); switches.location.selected and switches.guardrail.selected "
+                    "carry that in docs/ai-app-copy.candidate.json and docs/ai-assistant-content.candidate.json. "
+                    "Export the final copy: python3 scripts/ai_consent_apply.py --export-selected <dir> (iOS, "
+                    "Android, web, server registry). Use combination global-off only. The guardrail-off text "
+                    "must not ship before the server stops calling AWS ApplyGuardrail "
+                    "(readiness.serverGuardrailCallRemovedReadback).",
     "ios": [
         "DoseDay/Resources/Localizable.xcstrings: for each of the 17 locales replace the 6 changed keys "
         "(ai.consent.a.where.body, ai.consent.a.retention.body, ai.consent.a.e2ee.body, "
@@ -159,9 +167,9 @@ APPLY = {
         "ai_consent_a_retention_body, ai_consent_a_e2ee_body, ai_consent_a_check_health_detail, "
         "ai_consent_b_processing, ai_help_input_note; add ai_consent_a_transfer_title, ai_consent_a_transfer_body, "
         "ai_consent_a_check_transfer; delete ai_consent_a_region_jp. Text = the exported resolved copy, Android "
-        "variant keys only; update the header comment to consentVersion 2026-10-03.3.",
+        "variant keys only; update the header comment to consentVersion 2026-10-03.4.",
         "app/src/main/java/com/wonyoungchoi/doseweek/domain/aiassist/AiConsentPolicy.kt: VERSION = "
-        "\"ai-consent-v3\", COPY_VERSION = \"2026-10-03.3\"; canAgree and grant take a third argument "
+        "\"ai-consent-v3\", COPY_VERSION = \"2026-10-03.4\"; canAgree and grant take a third argument "
         "transferTicked and require all three.",
         "app/src/main/java/com/wonyoungchoi/doseweek/features/aiassist/AiAssistScreens.kt (Screen A, about lines "
         "414-441): remove the `storefrontRegion == \"JP\"` block; after the optional block add ConsentBlock("
@@ -190,10 +198,62 @@ APPLY = {
         "registry and refuses to start, or to accept a receipt, when its configured guardrail locales differ from "
         "serverRegistry.guardrailLocales[ai-consent-v3]. Until the server enforces this, the off text must not ship "
         "while the server still calls ApplyGuardrail (server report: guardrailDecision stays pinned).",
-        "The copy changed in review round 2 (consentVersion 2026-10-03.3): take the strings again from a fresh "
-        "--export; the Screen A hashes of 2026-10-03.2 are void.",
+        "The copy changed in review round 3 (consentVersion 2026-10-03.4: the Global wording rule, the sentence "
+        "on the recipients' countries, the contracting-entity wording): take the strings again from a fresh "
+        "--export-selected; the Screen A hashes of 2026-10-03.2 and 2026-10-03.3 are void.",
+        "Selected combination global-off: recipients = {ai-consent-v3: google-vertex-global}, guardrail = "
+        "{ai-consent-v3: null}, guardrailLocales = {ai-consent-v3: []}; DOSEWEEK_AI_VERTEX_LOCATION = global. "
+        "The release gate needs readiness.serverGuardrailCallRemovedReadback: a readback that the deployed "
+        "server makes no ApplyGuardrail call.",
     ],
 }
+
+
+def export_selected(directory: Path, document: dict) -> list[Path]:
+    """The final copy of the owner's combination: one file each for iOS, Android, web and the server."""
+    chosen = candidate.selection(candidate.load_app_copy())
+    assert chosen is not None, "the owner switches are not selected"
+    name = combination_name(*chosen)
+    block = document["combinations"][name]
+    app, web = candidate.resolve(candidate.load_app_copy(), *chosen), candidate.resolve(candidate.load(), *chosen)
+    head = {"consentVersion": document["consentVersion"], "wireConsentVersion": document["wireConsentVersion"],
+            "location": chosen[0], "guardrail": chosen[1], "combination": name}
+    outputs = {}
+    for platform, other in (("ios", ".android"), ("android", ".ios")):
+        locales = {}
+        for locale, entry in app["locales"].items():
+            copy = {key: text for key, text in entry["copy"].items() if not key.endswith(other)}
+            locales[locale] = {
+                "name": entry["name"], "perk": entry["perk"], "whatsNew": entry["whatsNew"], "copy": copy,
+                "screenA": {region: {"strings": candidate.screen_a_strings(entry["copy"], platform, region),
+                                     "sha256": block["locales"][locale]["screenA"][f"{platform}.{region}"]}
+                            for region in ("default", "US")}}
+            if platform == "android":
+                locales[locale]["androidNames"] = {key: android_name(key) for key in copy}
+        outputs[f"{platform}.app-copy.{name}.json"] = {
+            **head, "platform": platform,
+            "note": "Resolved text, no switch token. Keys ending in the other platform's suffix are left out. "
+                    "screenA.sha256 is over these source strings joined with U+000A; an app that ships other "
+                    "bytes hashes what it shows.",
+            "changedOrNewKeys": [*NEW_KEYS, *CHANGED_KEYS], "retiredKeys": list(V2_APP_KEYS_REMOVED),
+            "locales": locales}
+    outputs[f"web.ai-assistant-content.{name}.json"] = {
+        **head, "note": "Resolved website text per locale: privacy section clauses, processor row, Terms "
+                        "paragraphs, US consumer-health sentences, deletion paragraph. {healthExclusion} in "
+                        "clause 2 is the platform placeholder that scripts/ai_assistant_candidate.integrate fills.",
+        "locales": web["locales"]}
+    outputs[f"server.ai-consent-texts.{name}.json"] = {
+        **head, "serverVertexLocation": block["serverVertexLocation"],
+        "note": "serverRegistry is the complete ai-consent-texts.json document for this combination. Hashes are "
+                "source-form; replace them with app-computed display hashes if an app ships other bytes.",
+        "serverRegistry": block["serverRegistry"]}
+    directory.mkdir(parents=True, exist_ok=True)
+    written = []
+    for filename, value in outputs.items():
+        path = directory / filename
+        path.write_text(json.dumps(value, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        written.append(path)
+    return written
 
 
 def main() -> None:
@@ -204,6 +264,8 @@ def main() -> None:
             "docs/ai-consent-v3-apply.json is stale: run python3 scripts/ai_consent_apply.py")
     else:
         OUTPUT.write_text(text, encoding="utf-8")
+    if "--export-selected" in sys.argv:
+        export_selected(Path(sys.argv[sys.argv.index("--export-selected") + 1]), document)
     if "--export" in sys.argv:
         directory = Path(sys.argv[sys.argv.index("--export") + 1])
         directory.mkdir(parents=True, exist_ok=True)

@@ -78,8 +78,9 @@ def build():
             "nativeSpeakerReview": False,
             "counselReview": False,
             "flag": {"key": f"locales.{locale}", "recommended": False,
-                     "condition": "stays false: candidate copy with open owner switches, unverified Google "
-                                  "account facts and no review of the v3 strings by anyone but their author"},
+                     "condition": "stays false: candidate copy (owner selection global and off), unverified "
+                                  "Google account facts and no review of the v3 strings by anyone but their "
+                                  "author"},
         }
     summary = {
         "schemaVersion": 2,

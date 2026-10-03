@@ -1,4 +1,36 @@
-## ACTIVE — pro-legal-ai ai-consent-v3: Gemini on Google Cloud, transfer consent, two owner switches (2026-10-03; unpublished candidate)
+## ACTIVE — pro-legal-ai ai-consent-v3: Gemini on Google Cloud, transfer consent, owner selection global / guardrail off (2026-10-03; unpublished candidate)
+
+- Round 3 (2026-10-03, after re-review CHANGES_REQUESTED on `a88ab73`; owner decisions 17:35, 19:00,
+  19:10, 19:25 KST in release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md):
+  - Switches selected in both candidate files: SWITCH_LOCATION=global, SWITCH_AWS_GUARDRAIL=off.
+    Apply combination `global-off` only (recipient `google-vertex-global`, guardrailLocales []).
+  - consentVersion 2026-10-03.4 (wire ai-consent-v3 unchanged). Every Screen A hash of .2 and .3 is void.
+  - Global text, 17 locales (app where.body, transfer.body, b.processing, help.inputNote; web clauses
+    5 and 6, processor row country): says "Global", quotes Google ("may be processed in any Google
+    Cloud location around the world", saved vertex-data-residency.txt 2459-2461), says the processing
+    country can change with the Google servers that handle the request and cannot be fixed in advance,
+    then (R2) that Google LLC is in the United States and Google Asia Pacific Pte. Ltd. in Singapore,
+    then those two systems. The us text carries the same bridge. Two new pinned sentences per locale
+    (`globalCountryChanges`, `recipientCountries`); 12 pinned sentences now.
+  - Readiness true, each with its reason in `readinessEvidence`: vertexLocationDecided,
+    awsGuardrailDecided, pipaCountryItemForGlobalAccepted (owner accepted the risk; not an official
+    text). All other flags false.
+  - R1: every switch value has a gate flag. guardrail off -> `serverGuardrailCallRemovedReadback`
+    (FALSE: the server still calls ApplyGuardrail per the server lane's last report; the off text must
+    not ship before a readback). location us -> `pipaCountryItemForUsAccepted` (false, not selected).
+  - F7: DoseWeek server location sourced (AWS Lightsail, Seoul; lane receipt
+    server-hardening-20261003/receipt.md). Google contracting entity still not read back (billing
+    describe: KRW, no entity field): the recipient line now says what Google's terms name for a billing
+    address in the Republic of Korea; `googleContractingEntityVerified` stays false.
+  - F1 low: every website field is hash-pinned; the "no only" purpose test holds the pinned sentences
+    by SHA-256 in all 17 locales.
+  - `python3 scripts/ai_consent_apply.py --export-selected <dir>` writes the final copy for iOS,
+    Android, web and the server registry. Evidence: lane folder `.../claude-20261003/round3/`.
+  - Checks: 282 methods, 279 pass, the same 3 pre-existing methods fail (86 subtests); AI family
+    53/53. Still open: unresolvedBeforePublication (14 items), no native-speaker or counsel review of
+    any locale, nothing applied to an app or server clone, nothing published.
+  - The lines below describe rounds 1 and 2 and are historical where they say the switches are open,
+    every flag is false or consentVersion is 2026-10-03.3.
 
 Branch `next-ai/pro-legal-ai`, on top of `f0c78fe`. Owner decisions 2026-10-03 15:30-15:50
 (release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md): Pro AI ships on Gemini (Vertex AI,

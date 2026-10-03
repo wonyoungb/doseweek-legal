@@ -94,10 +94,22 @@ INFORMATIONAL_READINESS_KEYS = ('counselReviewed',)
 # Review round 2 (F8): two open points used to block publication only through the free-text
 # unresolved list. Each is now a flag that require_release_ready demands for the switch value that
 # raises the question: (switch, value) -> flag.
+# Review round 3 (re-review R1): the two other switch values had no flag, so the likeliest
+# combination passed the conditional gate with nothing to prove. Guardrail off needs a readback
+# that the server no longer calls AWS ApplyGuardrail (the off text names Google only); location us
+# needs the PIPA 28-8(2)2 form for us accepted.
 CONDITIONAL_READINESS = {
     ("location", "global"): "pipaCountryItemForGlobalAccepted",
+    ("location", "us"): "pipaCountryItemForUsAccepted",
     ("guardrail", "on"): "awsGuardrailEntityAndProcessorRowVerified",
+    ("guardrail", "off"): "serverGuardrailCallRemovedReadback",
 }
+# Owner decisions 2026-10-03 17:35 and 19:00 KST (late-decisions.md): location global, guardrail off.
+OWNER_SELECTION = ("global", "off")
+# Flags that are true in the committed candidate; each needs its reason in readinessEvidence.
+DECIDED_READINESS = ("vertexLocationDecided", "awsGuardrailDecided", "pipaCountryItemForGlobalAccepted")
+# Owner wording rule 2026-10-03 19:10 KST: every global text says "Global".
+GLOBAL_WORD = "Global"
 LEGAL_REVIEW_SOURCE_FIELDS = ('schemaVersion', 'plannedVersion', 'facts', 'switches', 'localeOrder',
                               'preReleaseWording', 'locales')
 LEGAL_REVIEW_BASE_SOURCES = (
@@ -118,15 +130,15 @@ FACTS = {
     "minimumAge": 18, "usageCountRetentionMonths": 2, "reportExcerptRetentionDays": 30,
     "summaryCardsOnDevice": 2, "priorityFirstReplyBusinessDays": 1, "limitReductionNoticeDays": 30,
 }
-COPY_VERSION = "2026-10-03.3"
+COPY_VERSION = "2026-10-03.4"
 WIRE_CONSENT_VERSION = "ai-consent-v3"
-# The two owner decisions that are still open. Each is one switch; both texts of each are in the
+# The two owner switches (decided 2026-10-03: OWNER_SELECTION). Both texts of each stay in the
 # candidate files and every one of the four combinations is validated by load() and load_app_copy().
 LOCATIONS = ("us", "global")
 GUARDRAILS = ("off", "on")
 SWITCH_TOKENS = ("{aiLocation}", "{aiLocationShort}", "{aiTransferCountry}", "{aiGuardrail}")
-# Staged pages are rendered before the owner decides. This pair is used ONLY for that unpublished
-# staging render; require_release_ready refuses to publish while the selection is null.
+# Used ONLY for an unpublished staging render of a document whose selection is null (a test
+# fixture); the committed candidate carries the owner's selection and renders with it.
 STAGING_PREVIEW_SWITCHES = ("us", "off")
 GOOGLE_ENTITIES = ("Google Cloud Korea LLC", "Google Asia Pacific Pte. Ltd.", "Google LLC")
 GOOGLE_CONTACT = "https://support.google.com/cloud/contact/dpo"
@@ -192,6 +204,10 @@ def _switch_text(entry: dict, locale: str) -> dict:
     for name in ("aiLocation", "aiTransferCountry"):
         assert country in text[name]["us"] and GOOGLE_GLOBAL_QUOTE not in text[name]["us"], (locale, name)
         assert GOOGLE_GLOBAL_QUOTE in text[name]["global"], (locale, name)
+    for name in ("aiLocation", "aiLocationShort", "aiTransferCountry"):
+        assert GLOBAL_WORD in text[name]["global"], (
+            f"{locale}: {name} for location global must say {GLOBAL_WORD} (owner wording rule 2026-10-03)")
+        assert GLOBAL_WORD not in text[name]["us"], (locale, name)
     assert GOOGLE_LOCATIONS_URL in text["aiTransferCountry"]["global"], locale
     assert GOOGLE_LOCATIONS_URL not in text["aiTransferCountry"]["us"], locale
     # Both texts describe the systems of the countries where the named recipients are (APPI Rule
@@ -282,6 +298,11 @@ def validate_web(candidate: dict, pins: dict | None = None) -> dict:
     evidence = candidate.get("legalSelfReviewEvidence")
     assert evidence is None or isinstance(evidence, dict), "AI self-review evidence schema"
     assert all(type(value) is bool for value in candidate["readiness"].values())
+    # A flag is true only with a recorded reason (owner decision or readback) next to it.
+    reasons = candidate.get("readinessEvidence", {})
+    for key, value in candidate["readiness"].items():
+        assert not value or (isinstance(reasons.get(key), str) and len(reasons[key]) > 40), (
+            f"readiness.{key} is true without a reason in readinessEvidence")
     assert candidate["localeOrder"] == list(LOCALES)
     assert list(candidate["locales"]) == list(LOCALES)
     _check_switches(candidate)

@@ -9,8 +9,10 @@ adds four guards, all driven by docs/ai-consent-v3-legal-pins.json:
 1. requiredSentences: the exact sentence, per locale, for every legally relevant statement
    (no training, the 24-hour cache and the 90-day abuse log with staff review, what Google uses
    the content for, who does not save conversations, how long Google can read the content, the
-   scope of the United States commitment, the systems of the United States and Singapore). Each
-   must appear verbatim in the fields listed in APP_REQUIRED and WEB_REQUIRED.
+   scope of the United States commitment, the systems of the United States and Singapore, and
+   since review round 3 that with location Global the processing country can change with the
+   Google servers that handle the request and cannot be fixed in advance, and in which countries
+   the named recipients are). Each must appear verbatim in the fields listed in APP_REQUIRED and WEB_REQUIRED.
 2. pipaItemLabels: the six item labels of the transfer notice (PIPA 28-8(2)) per locale, in
    order, and a content rule for each item.
 3. forbiddenClaims: per locale, phrases that state something the sources do not support
@@ -40,7 +42,7 @@ PINS = ROOT / "docs/ai-consent-v3-legal-pins.json"
 CJK = ("ja", "zh-Hans", "zh-Hant")
 SENTENCE_NAMES = ("doseweekServerKeepsNothing", "googleNoTraining", "googleCacheAndAbuse", "googleUse",
                   "doseweekNoConversations", "googleReadsWhileHeld", "usProcessing", "usCommitment",
-                  "usSystem", "singapore")
+                  "usSystem", "singapore", "globalCountryChanges", "recipientCountries")
 PIPA_ITEMS = ("recipient", "country", "items", "timeAndMethod", "purposeAndRetention", "refusal")
 RETENTION = ("doseweekServerKeepsNothing", "googleNoTraining", "googleCacheAndAbuse", "doseweekNoConversations")
 GOOGLE_RETENTION = ("googleNoTraining", "googleCacheAndAbuse")
@@ -48,18 +50,19 @@ GOOGLE_RETENTION = ("googleNoTraining", "googleCacheAndAbuse")
 APP_REQUIRED = {
     "ai.consent.a.retention.body": (RETENTION, (), ()),
     "ai.consent.a.e2ee.body": (("googleReadsWhileHeld",), (), ()),
-    "ai.consent.a.where.body": ((), ("usProcessing",), ()),
-    "ai.consent.a.transfer.body": (("googleUse", "googleCacheAndAbuse", "usSystem", "singapore"),
-                                   ("usCommitment",), ()),
+    "ai.consent.a.where.body": ((), ("usProcessing",), ("globalCountryChanges",)),
+    "ai.consent.a.transfer.body": (("googleUse", "googleCacheAndAbuse", "recipientCountries", "usSystem",
+                                    "singapore"), ("usCommitment",), ("globalCountryChanges",)),
 }
 WEB_REQUIRED = {
     "clauses.3": (RETENTION, (), ()),
-    "clauses.4": ((), ("usProcessing",), ()),
-    "clauses.5": (("usSystem", "singapore"), ("usCommitment",), ()),
+    "clauses.4": ((), ("usProcessing",), ("globalCountryChanges",)),
+    "clauses.5": (("recipientCountries", "usSystem", "singapore"), ("usCommitment",), ("globalCountryChanges",)),
     "clauses.7": (("googleReadsWhileHeld",), (), ()),
     "e2eeException": (("googleReadsWhileHeld",), (), ()),
     "usHealth.categories": (("googleReadsWhileHeld",), (), ()),
-    "processorRow.country": (("usSystem", "singapore"), ("usCommitment",), ()),
+    "processorRow.country": (("recipientCountries", "usSystem", "singapore"), ("usCommitment",),
+                             ("globalCountryChanges",)),
     "processorRow.purpose": (("googleCacheAndAbuse",), (), ()),
     "processorRow.retention": (GOOGLE_RETENTION, (), ()),
     "deletion": (GOOGLE_RETENTION, (), ()),
@@ -67,8 +70,14 @@ WEB_REQUIRED = {
 # Fields whose whole text is hashed (section 4).
 APP_PINNED_PREFIXES = ("ai.consent.a.",)
 APP_PINNED_KEYS = ("ai.consent.b.processing", "ai.help.inputNote")
-WEB_PINNED_FIELDS = ("clauses", "e2eeException", "healthExclusion", "processorRow", "cloudflareTransit",
-                     "usHealth", "deletion", "iosAiFaq", "androidAiFaq")
+# Review round 3 (re-review F1, low): every website field is hashed. terms, sectionTitle,
+# onDeviceScope, onDeviceOnly and androidNotUsedItem (and name, perk, androidBadge) used to be
+# outside the pin, so a sentence added to the Terms section passed without a re-pin.
+WEB_PINNED_FIELDS = ("name", "perk", "sectionTitle", "clauses", "e2eeException", "healthExclusion",
+                     "onDeviceScope", "onDeviceOnly", "iosAiFaq", "androidAiFaq", "androidBadge",
+                     "androidNotUsedItem", "processorRow", "cloudflareTransit", "terms", "usHealth", "deletion")
+# The owner's wording rule of 2026-10-03 19:10 KST: the notice says "Global" in every locale.
+GLOBAL_WORD = "Global"
 
 
 def separator(locale: str) -> str:
@@ -184,8 +193,17 @@ def check_app(locale: str, copy: dict, location: str, guardrail: str, facts: dic
             f"{where}: country item")
     else:
         assert all(token in items["country"] for token in facts["global"]), f"{where}: country item"
+        assert items["country"].startswith(GLOBAL_WORD), (
+            f"{where}: the country item must begin with the word {GLOBAL_WORD} (owner wording rule)")
+        assert sentences["globalCountryChanges"] in items["country"], (
+            f"{where}: the country item must say that the processing country can change and cannot be fixed")
     assert sentences["usSystem"] in items["country"] and sentences["singapore"] in items["country"], (
         f"{where}: the country item describes the United States and Singapore")
+    # Re-review finding R2: the item says where the named recipients are before it describes the
+    # systems of those countries; otherwise "no fixed country" and two country descriptions clash.
+    bridge = sentences["recipientCountries"] + separator(locale) + sentences["usSystem"]
+    assert bridge in items["country"], (
+        f"{where}: the recipients' countries must be stated right before the description of their systems")
     assert facts["sentTitle"] in items["items"], f"{where}: items item points to the sent section"
     assert facts["send"] in items["timeAndMethod"] and "DoseWeek" in items["timeAndMethod"], (
         f"{where}: time and method item")

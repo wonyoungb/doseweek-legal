@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "rule": "Sections requiredSentences, pipaItemLabels and forbiddenClaims are written by hand and never regenerated. combinationSha256 and templateFieldSha256 are rewritten only by `python3 scripts/ai_legal_guard.py --repin`, after the changed text was read against the saved sources. See scripts/ai_legal_guard.py.",
- "authoring": "Written by the lane agent (an AI model) on 2026-10-03, review round 2. No native-speaker or counsel review.",
+ "authoring": "Written by the lane agent (an AI model) on 2026-10-03, review rounds 2 and 3. No native-speaker or counsel review.",
  "sources": {
   "googleNoTraining": "gc-service-terms section 18 (Training Restriction)",
   "googleCacheAndAbuse": "vertex-zero-data-retention (In-memory data caching, 24-hour TTL); vertex-abuse-monitoring (prompt logging up to 90 days; authorized Google employees may assess flagged prompts); gc-terms 4.3",
@@ -10,7 +10,9 @@
   "usProcessing, usCommitment": "gc-service-terms section 16 (store at rest and ML processing only in the Multi-Region); vertex-locations (us multi-region); gc-cdpa 10.1 (other processing: any country with facilities)",
   "usSystem": "jp-ppc-offshore-report-america",
   "singapore": "gc-google-entity (address of Google Asia Pacific Pte. Ltd.); round2/sources/jp-ppc-offshore-report-singapore (Personal Data Protection Act 2012; APEC CBPR since 2018-02); jp-ppc-q12-11 (the country is where the recipient is located)",
-  "doseweekServerKeepsNothing, doseweekNoConversations": "DoseWeek server design (PRO-SPEC sections 5 and 6); not a Google fact"
+  "doseweekServerKeepsNothing, doseweekNoConversations": "DoseWeek server design (PRO-SPEC sections 5 and 6); not a Google fact",
+  "globalCountryChanges": "vertex-data-residency.txt lines 2459-2461 (\"Requests submitted to a global endpoint may be processed in any Google Cloud location around the world, and therefore don't provide any data residency guarantees\") and 2519-2520 (\"Global endpoints route and process data anywhere globally, without restricting it to a specific geographic region\"); owner wording rule 2026-10-03 19:10 KST (late-decisions.md)",
+  "recipientCountries": "gc-google-entity (Google Asia Pacific Pte. Ltd., 70 Pasir Panjang Road, Singapore; \"United States and any other location not covered above: Google LLC\"); jp-ppc-q12-11 (the country is where the recipient is located); review round 2 re-review finding R2"
  },
  "requiredSentences": {
   "ko": {
@@ -23,7 +25,9 @@
    "usProcessing": "Google은 이 내용의 AI 처리와 저장을 미국에서 해요.",
    "usCommitment": "Google은 이 내용의 저장과 AI 처리를 미국에서만 하기로 약속해요. 다만 Google 약관에 따라 그 밖의 처리는 Google이나 그 하위 수탁자의 시설이 있는 다른 나라에서 이루어질 수 있어요.",
    "usSystem": "미국에는 개인정보 전반을 다루는 연방 법률이 없고, 분야별 연방 법률과 주 법률이 적용돼요. 미국은 APEC 국경 간 프라이버시 규칙(CBPR) 체계에 참여하고 있어요.",
-   "singapore": "Google Asia Pacific Pte. Ltd.는 싱가포르에 있어요. 싱가포르에는 개인정보 전반을 다루는 법률(Personal Data Protection Act 2012)이 있고, 싱가포르는 APEC CBPR 체계에 참여하고 있어요."
+   "singapore": "Google Asia Pacific Pte. Ltd.는 싱가포르에 있어요. 싱가포르에는 개인정보 전반을 다루는 법률(Personal Data Protection Act 2012)이 있고, 싱가포르는 APEC CBPR 체계에 참여하고 있어요.",
+   "globalCountryChanges": "처리되는 국가는 요청을 처리하는 Google 서버에 따라 요청마다 달라질 수 있어요. 어느 서버가 처리할지는 Google이 정하기 때문에 국가를 미리 정하거나 알려 드릴 수 없어요.",
+   "recipientCountries": "이 안내에 적은 이전받는 자 가운데 Google LLC는 미국에, Google Asia Pacific Pte. Ltd.는 싱가포르에 있어요. 두 나라의 개인정보 보호 제도는 다음과 같아요."
   },
   "en": {
    "doseweekServerKeepsNothing": "The DoseWeek server does not keep what you send or the answers.",
@@ -35,7 +39,9 @@
    "usProcessing": "Google runs the AI processing and stores this content in the United States.",
    "usCommitment": "Google commits to store this content and run the AI processing only in the United States; under Google’s terms, other processing may take place in any country where Google or its subprocessors have facilities.",
    "usSystem": "The United States has no comprehensive federal law on personal information; sector-specific federal laws and state laws apply, and it takes part in the APEC Cross-Border Privacy Rules (CBPR) system.",
-   "singapore": "Google Asia Pacific Pte. Ltd. is located in Singapore. Singapore has a comprehensive personal data protection law (the Personal Data Protection Act 2012) and takes part in the APEC CBPR system."
+   "singapore": "Google Asia Pacific Pte. Ltd. is located in Singapore. Singapore has a comprehensive personal data protection law (the Personal Data Protection Act 2012) and takes part in the APEC CBPR system.",
+   "globalCountryChanges": "The country where this content is processed can change with each request, depending on which Google servers handle it; Google decides this, so the country cannot be fixed or named in advance.",
+   "recipientCountries": "Of the recipients named in this notice, Google LLC is located in the United States and Google Asia Pacific Pte. Ltd. in Singapore; the data-protection systems of these two countries are described next."
   },
   "ja": {
    "doseweekServerKeepsNothing": "DoseWeekサーバーには、送信した内容と回答を残しません。",
@@ -47,7 +53,9 @@
    "usProcessing": "Googleは、この内容のAI処理と保存をアメリカ合衆国で行います。",
    "usCommitment": "Googleは、この内容の保存とAI処理をアメリカ合衆国内でのみ行うことを約束しています。ただし、Googleの規約では、それ以外の処理はGoogleまたはその復処理者の施設があるいずれの国でも行われる可能性があります。",
    "usSystem": "アメリカ合衆国には個人情報に関する包括的な連邦法がなく、分野ごとの連邦法と州法が適用されます。アメリカ合衆国はAPECの越境プライバシールール（CBPR）システムに参加しています。",
-   "singapore": "Google Asia Pacific Pte. Ltd.はシンガポールに所在します。シンガポールには個人情報の保護に関する包括的な法令（Personal Data Protection Act 2012）があり、シンガポールはAPECのCBPRシステムに参加しています。"
+   "singapore": "Google Asia Pacific Pte. Ltd.はシンガポールに所在します。シンガポールには個人情報の保護に関する包括的な法令（Personal Data Protection Act 2012）があり、シンガポールはAPECのCBPRシステムに参加しています。",
+   "globalCountryChanges": "この内容が処理される国は、リクエストを処理するGoogleのサーバーによってリクエストごとに変わることがあります。どのサーバーで処理するかはGoogleが決めるため、国をあらかじめ決めたりお知らせしたりすることはできません。",
+   "recipientCountries": "この案内に記載した提供先のうち、Google LLCはアメリカ合衆国に、Google Asia Pacific Pte. Ltd.はシンガポールにあります。両国の個人情報保護制度は次のとおりです。"
   },
   "de": {
    "doseweekServerKeepsNothing": "Der DoseWeek-Server speichert weder das Gesendete noch die Antworten.",
@@ -59,7 +67,9 @@
    "usProcessing": "Google führt die KI-Verarbeitung in den Vereinigten Staaten durch und speichert die Inhalte dort.",
    "usCommitment": "Google sagt zu, diese Inhalte nur in den Vereinigten Staaten zu speichern und die KI-Verarbeitung nur dort durchzuführen; nach den Bedingungen von Google kann sonstige Verarbeitung in jedem Land stattfinden, in dem Google oder seine Unterauftragsverarbeiter Einrichtungen unterhalten.",
    "usSystem": "In den Vereinigten Staaten gibt es kein umfassendes Bundesgesetz zum Schutz personenbezogener Daten; es gelten bereichsspezifische Bundesgesetze und Gesetze der Bundesstaaten. Die Vereinigten Staaten nehmen am APEC-System der Cross-Border Privacy Rules (CBPR) teil.",
-   "singapore": "Google Asia Pacific Pte. Ltd. hat ihren Sitz in Singapur. Singapur hat ein umfassendes Gesetz zum Schutz personenbezogener Daten (Personal Data Protection Act 2012) und nimmt am CBPR-System der APEC teil."
+   "singapore": "Google Asia Pacific Pte. Ltd. hat ihren Sitz in Singapur. Singapur hat ein umfassendes Gesetz zum Schutz personenbezogener Daten (Personal Data Protection Act 2012) und nimmt am CBPR-System der APEC teil.",
+   "globalCountryChanges": "Das Land, in dem diese Inhalte verarbeitet werden, kann sich bei jeder Anfrage ändern, je nachdem, welche Google-Server sie bearbeiten; darüber entscheidet Google, sodass sich das Land nicht im Voraus festlegen oder nennen lässt.",
+   "recipientCountries": "Von den in diesem Hinweis genannten Empfängern hat Google LLC seinen Sitz in den Vereinigten Staaten und Google Asia Pacific Pte. Ltd. in Singapur; die Datenschutzsysteme dieser beiden Länder werden im Folgenden beschrieben."
   },
   "fr": {
    "doseweekServerKeepsNothing": "Le serveur DoseWeek ne conserve ni ce que vous envoyez ni les réponses.",
@@ -71,7 +81,9 @@
    "usProcessing": "Google effectue le traitement par l’IA et stocke ce contenu aux États-Unis.",
    "usCommitment": "Google s’engage à stocker ce contenu et à effectuer le traitement par l’IA uniquement aux États-Unis ; selon les conditions de Google, les autres traitements peuvent avoir lieu dans tout pays où Google ou ses sous-traitants ultérieurs disposent d’installations.",
    "usSystem": "Les États-Unis n’ont pas de loi fédérale générale sur les informations personnelles ; des lois fédérales sectorielles et des lois des États s’appliquent, et les États-Unis participent au système APEC des règles transfrontalières de protection de la vie privée (CBPR).",
-   "singapore": "Google Asia Pacific Pte. Ltd. est établie à Singapour. Singapour dispose d’une loi générale sur la protection des données personnelles (Personal Data Protection Act 2012) et participe au système CBPR de l’APEC."
+   "singapore": "Google Asia Pacific Pte. Ltd. est établie à Singapour. Singapour dispose d’une loi générale sur la protection des données personnelles (Personal Data Protection Act 2012) et participe au système CBPR de l’APEC.",
+   "globalCountryChanges": "Le pays où ce contenu est traité peut changer à chaque requête, selon les serveurs de Google qui la traitent ; c’est Google qui en décide, de sorte que le pays ne peut être ni fixé ni indiqué à l’avance.",
+   "recipientCountries": "Parmi les destinataires nommés dans cette notice, Google LLC est située aux États-Unis et Google Asia Pacific Pte. Ltd. à Singapour ; les régimes de protection des données de ces deux pays sont décrits ci-après."
   },
   "es": {
    "doseweekServerKeepsNothing": "El servidor de DoseWeek no guarda lo que usted envía ni las respuestas.",
@@ -83,7 +95,9 @@
    "usProcessing": "Google realiza el procesamiento de IA y almacena este contenido en Estados Unidos.",
    "usCommitment": "Google se compromete a almacenar este contenido y a realizar el procesamiento de IA solo en Estados Unidos; según las condiciones de Google, otros tratamientos pueden realizarse en cualquier país donde Google o sus subencargados tengan instalaciones.",
    "usSystem": "Estados Unidos no tiene una ley federal general sobre información personal; se aplican leyes federales sectoriales y leyes estatales, y participa en el sistema APEC de Reglas de Privacidad Transfronteriza (CBPR).",
-   "singapore": "Google Asia Pacific Pte. Ltd. está situada en Singapur. Singapur tiene una ley general de protección de datos personales (Personal Data Protection Act 2012) y participa en el sistema CBPR de APEC."
+   "singapore": "Google Asia Pacific Pte. Ltd. está situada en Singapur. Singapur tiene una ley general de protección de datos personales (Personal Data Protection Act 2012) y participa en el sistema CBPR de APEC.",
+   "globalCountryChanges": "El país donde se trata este contenido puede cambiar en cada solicitud, según qué servidores de Google la atiendan; lo decide Google, por lo que el país no se puede fijar ni indicar de antemano.",
+   "recipientCountries": "De los destinatarios nombrados en este aviso, Google LLC se encuentra en Estados Unidos y Google Asia Pacific Pte. Ltd. en Singapur; a continuación se describen los sistemas de protección de datos de estos dos países."
   },
   "it": {
    "doseweekServerKeepsNothing": "Il server DoseWeek non conserva né ciò che invii né le risposte.",
@@ -95,7 +109,9 @@
    "usProcessing": "Google esegue l’elaborazione dell’IA e conserva questi contenuti negli Stati Uniti.",
    "usCommitment": "Google si impegna a conservare questi contenuti e a eseguire l’elaborazione dell’IA solo negli Stati Uniti; secondo i termini di Google, altri trattamenti possono avvenire in qualsiasi paese in cui Google o i suoi sub-responsabili dispongono di strutture.",
    "usSystem": "Negli Stati Uniti non esiste una legge federale generale sulle informazioni personali; si applicano leggi federali di settore e leggi dei singoli Stati, e gli Stati Uniti partecipano al sistema APEC delle Cross-Border Privacy Rules (CBPR).",
-   "singapore": "Google Asia Pacific Pte. Ltd. ha sede a Singapore. Singapore ha una legge generale sulla protezione dei dati personali (Personal Data Protection Act 2012) e partecipa al sistema CBPR dell’APEC."
+   "singapore": "Google Asia Pacific Pte. Ltd. ha sede a Singapore. Singapore ha una legge generale sulla protezione dei dati personali (Personal Data Protection Act 2012) e partecipa al sistema CBPR dell’APEC.",
+   "globalCountryChanges": "Il paese in cui questi contenuti vengono trattati può cambiare a ogni richiesta, a seconda dei server di Google che la gestiscono; lo decide Google, quindi il paese non può essere fissato né indicato in anticipo.",
+   "recipientCountries": "Tra i destinatari indicati in questa informativa, Google LLC ha sede negli Stati Uniti e Google Asia Pacific Pte. Ltd. a Singapore; i sistemi di protezione dei dati di questi due paesi sono descritti di seguito."
   },
   "nl": {
    "doseweekServerKeepsNothing": "De DoseWeek-server bewaart niet wat u verstuurt en ook de antwoorden niet.",
@@ -107,7 +123,9 @@
    "usProcessing": "Google voert de AI-verwerking uit en bewaart deze inhoud in de Verenigde Staten.",
    "usCommitment": "Google zegt toe deze inhoud alleen in de Verenigde Staten op te slaan en de AI-verwerking alleen daar uit te voeren; volgens de voorwaarden van Google kan andere verwerking plaatsvinden in elk land waar Google of zijn subverwerkers faciliteiten hebben.",
    "usSystem": "De Verenigde Staten hebben geen algemene federale wet over persoonsgegevens; er gelden sectorale federale wetten en wetten van de staten, en de Verenigde Staten nemen deel aan het APEC-systeem van Cross-Border Privacy Rules (CBPR).",
-   "singapore": "Google Asia Pacific Pte. Ltd. is gevestigd in Singapore. Singapore heeft een algemene wet over de bescherming van persoonsgegevens (Personal Data Protection Act 2012) en neemt deel aan het CBPR-systeem van APEC."
+   "singapore": "Google Asia Pacific Pte. Ltd. is gevestigd in Singapore. Singapore heeft een algemene wet over de bescherming van persoonsgegevens (Personal Data Protection Act 2012) en neemt deel aan het CBPR-systeem van APEC.",
+   "globalCountryChanges": "Het land waar deze inhoud wordt verwerkt, kan per verzoek verschillen, afhankelijk van welke servers van Google het verzoek afhandelen; Google bepaalt dat, zodat het land niet vooraf kan worden vastgelegd of genoemd.",
+   "recipientCountries": "Van de in deze kennisgeving genoemde ontvangers is Google LLC gevestigd in de Verenigde Staten en Google Asia Pacific Pte. Ltd. in Singapore; de stelsels voor gegevensbescherming van deze twee landen worden hierna beschreven."
   },
   "pt-PT": {
    "doseweekServerKeepsNothing": "O servidor do DoseWeek não guarda o que envia nem as respostas.",
@@ -119,7 +137,9 @@
    "usProcessing": "A Google faz o processamento de IA e guarda este conteúdo nos Estados Unidos.",
    "usCommitment": "A Google compromete-se a guardar este conteúdo e a fazer o processamento de IA apenas nos Estados Unidos; segundo os termos da Google, outros tratamentos podem ocorrer em qualquer país onde a Google ou os seus subcontratantes ulteriores tenham instalações.",
    "usSystem": "Os Estados Unidos não têm uma lei federal geral sobre informações pessoais; aplicam-se leis federais setoriais e leis estaduais, e os Estados Unidos participam no sistema APEC de Regras de Privacidade Transfronteiriça (CBPR).",
-   "singapore": "A Google Asia Pacific Pte. Ltd. está situada em Singapura. Singapura tem uma lei geral de proteção de dados pessoais (Personal Data Protection Act 2012) e participa no sistema CBPR da APEC."
+   "singapore": "A Google Asia Pacific Pte. Ltd. está situada em Singapura. Singapura tem uma lei geral de proteção de dados pessoais (Personal Data Protection Act 2012) e participa no sistema CBPR da APEC.",
+   "globalCountryChanges": "O país onde este conteúdo é tratado pode mudar a cada pedido, consoante os servidores da Google que o tratam; é a Google que decide, pelo que o país não pode ser fixado nem indicado antecipadamente.",
+   "recipientCountries": "Dos destinatários indicados neste aviso, a Google LLC está localizada nos Estados Unidos e a Google Asia Pacific Pte. Ltd. em Singapura; os sistemas de proteção de dados destes dois países são descritos a seguir."
   },
   "pl": {
    "doseweekServerKeepsNothing": "Serwer DoseWeek nie zachowuje tego, co wysyłasz, ani odpowiedzi.",
@@ -131,7 +151,9 @@
    "usProcessing": "Google wykonuje przetwarzanie AI i przechowuje te treści w Stanach Zjednoczonych.",
    "usCommitment": "Google zobowiązuje się przechowywać te treści i wykonywać przetwarzanie AI wyłącznie w Stanach Zjednoczonych; zgodnie z warunkami Google inne przetwarzanie może odbywać się w każdym kraju, w którym Google lub jego podmioty podprzetwarzające mają obiekty.",
    "usSystem": "W Stanach Zjednoczonych nie ma ogólnej ustawy federalnej o informacjach osobistych; obowiązują federalne ustawy sektorowe i ustawy stanowe, a Stany Zjednoczone uczestniczą w systemie APEC Cross-Border Privacy Rules (CBPR).",
-   "singapore": "Google Asia Pacific Pte. Ltd. ma siedzibę w Singapurze. Singapur ma ogólną ustawę o ochronie danych osobowych (Personal Data Protection Act 2012) i uczestniczy w systemie CBPR APEC."
+   "singapore": "Google Asia Pacific Pte. Ltd. ma siedzibę w Singapurze. Singapur ma ogólną ustawę o ochronie danych osobowych (Personal Data Protection Act 2012) i uczestniczy w systemie CBPR APEC.",
+   "globalCountryChanges": "Kraj, w którym te treści są przetwarzane, może zmieniać się przy każdym żądaniu, zależnie od tego, które serwery Google je obsługują; decyduje o tym Google, dlatego kraju nie można z góry ustalić ani wskazać.",
+   "recipientCountries": "Spośród odbiorców wymienionych w tej informacji Google LLC ma siedzibę w Stanach Zjednoczonych, a Google Asia Pacific Pte. Ltd. w Singapurze; systemy ochrony danych tych dwóch krajów opisano poniżej."
   },
   "sv": {
    "doseweekServerKeepsNothing": "DoseWeek-servern sparar varken det du skickar eller svaren.",
@@ -143,7 +165,9 @@
    "usProcessing": "Google utför AI-behandlingen och lagrar innehållet i USA.",
    "usCommitment": "Google åtar sig att lagra innehållet och utföra AI-behandlingen enbart i USA; enligt Googles villkor kan annan behandling ske i alla länder där Google eller dess underbiträden har anläggningar.",
    "usSystem": "USA har ingen heltäckande federal lag om personuppgifter; sektorsspecifika federala lagar och delstatslagar gäller, och USA deltar i APEC:s system Cross-Border Privacy Rules (CBPR).",
-   "singapore": "Google Asia Pacific Pte. Ltd. finns i Singapore. Singapore har en heltäckande lag om skydd av personuppgifter (Personal Data Protection Act 2012) och deltar i APEC:s CBPR-system."
+   "singapore": "Google Asia Pacific Pte. Ltd. finns i Singapore. Singapore har en heltäckande lag om skydd av personuppgifter (Personal Data Protection Act 2012) och deltar i APEC:s CBPR-system.",
+   "globalCountryChanges": "Landet där innehållet behandlas kan ändras för varje förfrågan, beroende på vilka av Googles servrar som hanterar den; det avgör Google, så landet kan inte fastställas eller anges i förväg.",
+   "recipientCountries": "Av de mottagare som nämns i denna information finns Google LLC i USA och Google Asia Pacific Pte. Ltd. i Singapore; dataskyddssystemen i dessa två länder beskrivs nedan."
   },
   "hi": {
    "doseweekServerKeepsNothing": "DoseWeek सर्वर आपकी भेजी हुई सामग्री और जवाब नहीं रखता।",
@@ -155,7 +179,9 @@
    "usProcessing": "Google इस सामग्री की AI प्रोसेसिंग और भंडारण संयुक्त राज्य अमेरिका में करता है।",
    "usCommitment": "Google यह वचन देता है कि वह इस सामग्री का भंडारण और AI प्रोसेसिंग सिर्फ़ संयुक्त राज्य अमेरिका में करेगा; Google की शर्तों के अनुसार बाकी प्रोसेसिंग किसी भी ऐसे देश में हो सकती है जहाँ Google या उसके उप-प्रसंस्करणकर्ताओं की सुविधाएँ हैं।",
    "usSystem": "संयुक्त राज्य अमेरिका में व्यक्तिगत जानकारी पर कोई व्यापक संघीय कानून नहीं है; क्षेत्र-विशेष के संघीय कानून और राज्यों के कानून लागू होते हैं, और संयुक्त राज्य अमेरिका APEC की Cross-Border Privacy Rules (CBPR) प्रणाली में भाग लेता है।",
-   "singapore": "Google Asia Pacific Pte. Ltd. सिंगापुर में स्थित है। सिंगापुर में व्यक्तिगत डेटा संरक्षण का एक व्यापक कानून (Personal Data Protection Act 2012) है, और सिंगापुर APEC की CBPR प्रणाली में भाग लेता है।"
+   "singapore": "Google Asia Pacific Pte. Ltd. सिंगापुर में स्थित है। सिंगापुर में व्यक्तिगत डेटा संरक्षण का एक व्यापक कानून (Personal Data Protection Act 2012) है, और सिंगापुर APEC की CBPR प्रणाली में भाग लेता है।",
+   "globalCountryChanges": "यह सामग्री किस देश में प्रोसेस होगी, यह हर अनुरोध पर बदल सकता है और इस पर निर्भर करता है कि Google के कौन से सर्वर उसे संभालते हैं; यह Google तय करता है, इसलिए देश पहले से तय नहीं किया जा सकता और बताया नहीं जा सकता।",
+   "recipientCountries": "इस सूचना में बताए गए प्राप्तकर्ताओं में से Google LLC संयुक्त राज्य अमेरिका में और Google Asia Pacific Pte. Ltd. सिंगापुर में स्थित है; इन दोनों देशों की डेटा संरक्षण व्यवस्था आगे बताई गई है।"
   },
   "pt-BR": {
    "doseweekServerKeepsNothing": "O servidor do DoseWeek não guarda o que você envia nem as respostas.",
@@ -167,7 +193,9 @@
    "usProcessing": "O Google faz o processamento de IA e armazena esse conteúdo nos Estados Unidos.",
    "usCommitment": "O Google se compromete a armazenar esse conteúdo e a fazer o processamento de IA apenas nos Estados Unidos; segundo os termos do Google, outros tratamentos podem ocorrer em qualquer país onde o Google ou seus suboperadores tenham instalações.",
    "usSystem": "Os Estados Unidos não têm uma lei federal geral sobre informações pessoais; aplicam-se leis federais setoriais e leis estaduais, e os Estados Unidos participam do sistema APEC de Regras de Privacidade Transfronteiriça (CBPR).",
-   "singapore": "A Google Asia Pacific Pte. Ltd. fica em Singapura. Singapura tem uma lei geral de proteção de dados pessoais (Personal Data Protection Act 2012) e participa do sistema CBPR da APEC."
+   "singapore": "A Google Asia Pacific Pte. Ltd. fica em Singapura. Singapura tem uma lei geral de proteção de dados pessoais (Personal Data Protection Act 2012) e participa do sistema CBPR da APEC.",
+   "globalCountryChanges": "O país onde esse conteúdo é tratado pode mudar a cada solicitação, dependendo de quais servidores do Google a atendem; quem decide é o Google, por isso o país não pode ser fixado nem indicado com antecedência.",
+   "recipientCountries": "Dos destinatários indicados neste aviso, a Google LLC está localizada nos Estados Unidos e a Google Asia Pacific Pte. Ltd. em Singapura; os sistemas de proteção de dados desses dois países são descritos a seguir."
   },
   "ar": {
    "doseweekServerKeepsNothing": "لا يحتفظ خادم DoseWeek بما ترسله ولا بالإجابات.",
@@ -179,7 +207,9 @@
    "usProcessing": "تُجري Google معالجة الذكاء الاصطناعي وتخزّن هذا المحتوى في الولايات المتحدة.",
    "usCommitment": "تلتزم Google بتخزين هذا المحتوى وإجراء معالجة الذكاء الاصطناعي في الولايات المتحدة فقط؛ ووفق شروط Google قد تجري المعالجات الأخرى في أي بلد توجد فيه منشآت لـ Google أو لمعالجيها من الباطن.",
    "usSystem": "لا يوجد في الولايات المتحدة قانون اتحادي شامل للمعلومات الشخصية؛ تُطبَّق قوانين اتحادية خاصة بقطاعات معينة وقوانين الولايات، وتشارك الولايات المتحدة في نظام قواعد الخصوصية العابرة للحدود (CBPR) التابع لمنتدى APEC.",
-   "singapore": "تقع Google Asia Pacific Pte. Ltd. في سنغافورة. لدى سنغافورة قانون شامل لحماية البيانات الشخصية (Personal Data Protection Act 2012)، وتشارك سنغافورة في نظام CBPR التابع لمنتدى APEC."
+   "singapore": "تقع Google Asia Pacific Pte. Ltd. في سنغافورة. لدى سنغافورة قانون شامل لحماية البيانات الشخصية (Personal Data Protection Act 2012)، وتشارك سنغافورة في نظام CBPR التابع لمنتدى APEC.",
+   "globalCountryChanges": "قد يتغير البلد الذي يُعالَج فيه هذا المحتوى مع كل طلب، بحسب خوادم Google التي تعالجه؛ وGoogle هي التي تقرر ذلك، ولذلك لا يمكن تحديد البلد أو ذكره مسبقًا.",
+   "recipientCountries": "من بين المستلمين المذكورين في هذا الإشعار، تقع Google LLC في الولايات المتحدة وتقع Google Asia Pacific Pte. Ltd. في سنغافورة؛ وفيما يلي وصف لنظامي حماية البيانات في هذين البلدين."
   },
   "zh-Hans": {
    "doseweekServerKeepsNothing": "DoseWeek 服务器不会保留您发送的内容和回答。",
@@ -191,7 +221,9 @@
    "usProcessing": "Google 在美国进行 AI 处理并存储这些内容。",
    "usCommitment": "Google 承诺仅在美国存储这些内容并进行 AI 处理；根据 Google 的条款，其他处理可能在 Google 或其分处理方设有设施的任何国家进行。",
    "usSystem": "美国没有关于个人信息的综合性联邦法律，适用的是各领域的联邦法律和各州法律；美国参加了 APEC 跨境隐私规则（CBPR）体系。",
-   "singapore": "Google Asia Pacific Pte. Ltd. 位于新加坡。新加坡有综合性的个人数据保护法律（Personal Data Protection Act 2012），并参加了 APEC 的 CBPR 体系。"
+   "singapore": "Google Asia Pacific Pte. Ltd. 位于新加坡。新加坡有综合性的个人数据保护法律（Personal Data Protection Act 2012），并参加了 APEC 的 CBPR 体系。",
+   "globalCountryChanges": "处理这些内容的国家可能随每次请求而变化，取决于由哪些 Google 服务器处理该请求；这由 Google 决定，因此无法事先确定或告知国家。",
+   "recipientCountries": "在本告知所列的接收方中，Google LLC 位于美国，Google Asia Pacific Pte. Ltd. 位于新加坡；这两个国家的个人信息保护制度如下。"
   },
   "zh-Hant": {
    "doseweekServerKeepsNothing": "DoseWeek 伺服器不會保留您傳送的內容和回答。",
@@ -203,7 +235,9 @@
    "usProcessing": "Google 在美國進行 AI 處理並儲存這些內容。",
    "usCommitment": "Google 承諾僅在美國儲存這些內容並進行 AI 處理；根據 Google 的條款，其他處理可能在 Google 或其複處理者設有設施的任何國家進行。",
    "usSystem": "美國沒有關於個人資訊的綜合性聯邦法律，適用的是各領域的聯邦法律和各州法律；美國參加了 APEC 跨境隱私規則（CBPR）體系。",
-   "singapore": "Google Asia Pacific Pte. Ltd. 位於新加坡。新加坡有綜合性的個人資料保護法律（Personal Data Protection Act 2012），並參加了 APEC 的 CBPR 體系。"
+   "singapore": "Google Asia Pacific Pte. Ltd. 位於新加坡。新加坡有綜合性的個人資料保護法律（Personal Data Protection Act 2012），並參加了 APEC 的 CBPR 體系。",
+   "globalCountryChanges": "處理這些內容的國家可能隨每次請求而改變，取決於由哪些 Google 伺服器處理該請求；這由 Google 決定，因此無法事先確定或告知國家。",
+   "recipientCountries": "在本告知所列的接收方中，Google LLC 位於美國，Google Asia Pacific Pte. Ltd. 位於新加坡；這兩個國家的個人資訊保護制度如下。"
   },
   "tr": {
    "doseweekServerKeepsNothing": "DoseWeek sunucusu gönderdiklerinizi ve yanıtları saklamaz.",
@@ -215,7 +249,9 @@
    "usProcessing": "Google yapay zeka işlemesini Amerika Birleşik Devletleri’nde yapar ve bu içeriği orada saklar.",
    "usCommitment": "Google, bu içeriği yalnızca Amerika Birleşik Devletleri’nde saklamayı ve yapay zeka işlemesini yalnızca orada yapmayı taahhüt eder; Google’ın şartlarına göre diğer işlemler, Google’ın veya alt işleyenlerinin tesislerinin bulunduğu herhangi bir ülkede yapılabilir.",
    "usSystem": "Amerika Birleşik Devletleri’nde kişisel bilgilere ilişkin kapsamlı bir federal kanun yoktur; sektöre özgü federal kanunlar ve eyalet kanunları uygulanır ve Amerika Birleşik Devletleri APEC Sınır Ötesi Gizlilik Kuralları (CBPR) sistemine katılmaktadır.",
-   "singapore": "Google Asia Pacific Pte. Ltd. Singapur’da bulunur. Singapur’un kapsamlı bir kişisel verileri koruma kanunu (Personal Data Protection Act 2012) vardır ve Singapur APEC CBPR sistemine katılmaktadır."
+   "singapore": "Google Asia Pacific Pte. Ltd. Singapur’da bulunur. Singapur’un kapsamlı bir kişisel verileri koruma kanunu (Personal Data Protection Act 2012) vardır ve Singapur APEC CBPR sistemine katılmaktadır.",
+   "globalCountryChanges": "Bu içeriğin işlendiği ülke, isteği hangi Google sunucularının işlediğine bağlı olarak her istekte değişebilir; buna Google karar verir, bu nedenle ülke önceden belirlenemez ve bildirilemez.",
+   "recipientCountries": "Bu bildirimde adı geçen alıcılardan Google LLC Amerika Birleşik Devletleri’nde, Google Asia Pacific Pte. Ltd. ise Singapur’da bulunur; bu iki ülkenin veri koruma sistemleri aşağıda açıklanmıştır."
   }
  },
  "pipaItemLabels": {
@@ -539,286 +575,286 @@
    "başka (bir )?ülkeye (aktarılmaz|gönderilmez)"
   ]
  },
- "consentVersion": "2026-10-03.3",
+ "consentVersion": "2026-10-03.4",
  "combinationSha256": {
   "us-off": {
    "ko": {
-    "app": "78ef020d3ec94198263b810727d928a025c76352c75980963d2de061751c3676",
-    "web": "2c48a52f603a030fd2458d1417e820579249a3da41c5702c2a30ee81c301b0c2"
+    "app": "46e7ba620a6b107dcb2828de0f69eb31cdbd219ed516f0413dda769df46c28aa",
+    "web": "6bcf4e39eccc9e4e6a367539dc8c0f561109ad1564e19cb7f94fcc85505932dd"
    },
    "en": {
-    "app": "01d75cfceaea8fa380de5aed79d9bfaddba71b614cf89868560b944bca760a37",
-    "web": "f679b0d65fc5412cdcc7fc9663ef7b4a85f09e21fa5994d1ff4a76da77260d0c"
+    "app": "e64ef16cf08a0d3a4a1b6ae6981bf95bff7f071b7512043e0e822a1dd899ebb1",
+    "web": "a86486524ea152fe9f4a4dd5197ca04000d1c90f070631eb6f19da99523efb73"
    },
    "ja": {
-    "app": "9bf57b232cc488d2856f1b867a413165192f091c5778549c441cfb9e017bccc9",
-    "web": "cda38eb6a67182a3d0af04459d987f52a5a90934ef9d0f3dba3fea1c4a1310aa"
+    "app": "02148b1d14c501f3364971e70b20a6880065cbbc45d7be9df1e42bd0463607d7",
+    "web": "30d1f0a679681dc9ad429562c1dad5a24f6d0c779c12ed3f43cf29dd330da166"
    },
    "de": {
-    "app": "75b0953c17aa37672b7a83142df3bee78272f1efaafb56626b0cb9d7c588c546",
-    "web": "86537e11ae6d3811076ecab7f7c6b23129b9bcabe2dd893a426dd89c744f938e"
+    "app": "c76c36bf11b76dff9c5ba244325f5149c11c980c9e49d1bfc79668ebbe7dd12d",
+    "web": "842d8b865fe471dcb08544e008297ace39edfe75c80bf3ae075030e75e4bb870"
    },
    "fr": {
-    "app": "09c23c47905327899ab1d1acce001add185f72e50bfa5453705bf72b064068e6",
-    "web": "0e61251030e7feb5530ca403185bd1289ea1c938dcd3bc389caa2a07e07fee99"
+    "app": "cefc2d1dc298d1dd9987102ea59a1e287c753002a5ee1e4bca811b015062cafc",
+    "web": "e7aa6012931c3df52cfb3ab8093076a6abb536433924d5cced20523265016849"
    },
    "es": {
-    "app": "fcddc2744329b389724e1db041155f0e383a24c60b31b2ffa6c70c8c0caf8005",
-    "web": "d6f531059dc8e1f50a84cc53856d7624ade6fffb325dec58ffec49f7f34b6d14"
+    "app": "dd9d2b990068dcb6cf58ea140eb859c5b13ca2c7597658a69886ec15e5fc6af1",
+    "web": "e5bb340beae386fb102acd90552e1bca01b13013e9b1f076b9439068bc7ced66"
    },
    "it": {
-    "app": "792e13d117cd4336633e37214ec62ae7e976c6d809c28e2721f6f04828686c4e",
-    "web": "a9d8c6f1df4c9e21126c91e5cd3914efcadb73983ee8df45f05f1b40501684f0"
+    "app": "c26e00e462f517eefc520f2b3336892a690f2979c9025f69ccc68d7c4845331f",
+    "web": "e1889b59eb4be94a11f2588365739de5f01b5c1720a4f4ffa4fd9c3528ece96d"
    },
    "nl": {
-    "app": "744c6e892865ab038f2e5ee1aecfbdd4caa6fad8a1e0c0dcadfe858316753341",
-    "web": "2e7460706daac435a746cc7c8b2cf428fb1a489636c84a22177180fd89d5871b"
+    "app": "e161f14c8dee68d3f3f9cf4fee6052160cc2c8375b85437a02dd5d0bc207b0c8",
+    "web": "2db7858235d2411fa55663c18b26c19fa4f88fba422086237afe9779a82a8eff"
    },
    "pt-PT": {
-    "app": "0998f5bf5cd93952453461903faaa5e77b44e20aa6a997e3fe7376e73bb61b8d",
-    "web": "38d8e239833962678dd99273a812691419e193577e99d461ea91268061e68c00"
+    "app": "fdbaeb0329336869369934fbb5f7ab0863ce1b66f7cb4728802364724caffc71",
+    "web": "cabc8a0ddd97a42aebb4ead27d14a522139778a7617b700982055d6ad97d58b1"
    },
    "pl": {
-    "app": "6fa90f3151a90fb28dae6badf9ca874a4b01d699196acf2e6f6a36c7197b7d35",
-    "web": "7d2c0129138ebbade76b5fa53d2561ee9e9f8049b93d6175aa9cb302960ff5d6"
+    "app": "e8941d6ca02ae6218cc1b51ca8f3d49e7bea8c37dfd789e9b3d051cbe72c5e8a",
+    "web": "f1076f7db655e93bbd9422ec35f1367b3529e8a4dd4155e0560a699e945e354f"
    },
    "sv": {
-    "app": "df9bb4fb68f070f4898cbcdceb6b91454aa6c6e8fd20d6132220e8562d863eca",
-    "web": "56a96abd92c42538b4de78e8e5160305b95cf59cceae6fe41da15761d7c9b5e5"
+    "app": "20bda56346247715703406549508a68d49f7f5772020e38ff8e3b0a7ce298905",
+    "web": "f3dd5443e4e6cfa9a25e229050d222640dd6b0c3f741f5b735a2a7306fad2f2c"
    },
    "hi": {
-    "app": "1fe9a897e0fdb9cf8e1ffa0fe2c849efb372c6df2a8fd3c2de85bd9cddbf2182",
-    "web": "4e1e6d6dc61aaa9dc6e716deeb9ff2e9ec96549728906a4d102056953cfe2c4d"
+    "app": "cc096b65007b0fe0a03e49595a3ef1f3021af18b72e486a4a5044bf5fe5a698d",
+    "web": "b27ff558245ce70150a23e268cede6bba3f409e36c5daa661b76fa4f670204f8"
    },
    "pt-BR": {
-    "app": "cd90d761250a18f2330d451e087b834d2a4ab8cf3f855f3d69bb18f3d0b45d11",
-    "web": "e5ee91d3bd9b0214284874d2b54a1941ab9dc541e7e75d79034d9e34350858ac"
+    "app": "24381253008b3a7ce4de9ccefcbda985697668996f1bdd635fde280958845053",
+    "web": "d3ccaa74e08f4219d59257b8d78434e40857c9a6eb11d404905f573477af07c5"
    },
    "ar": {
-    "app": "5fa0a04535fc5815c6856f9dfa6b5e6f66790c97240601899ac91fc5382f2281",
-    "web": "c763bbec5a7cced0f8450ec2648a5985f475f0d9064f057d39a3a2420c5de7a4"
+    "app": "ce06250482676b7317349a8857fef2a16e378410f7470bbf8e90d677010c4b20",
+    "web": "fa6d0c83c0df0de167eb6d501f96150b70c217448676c98870ae0b1631e4ce1e"
    },
    "zh-Hans": {
-    "app": "c652fe450cd7eafc8eb785023d72eae9fe8a0d8a6c1cf5d033c8d05733c6dbef",
-    "web": "23dd505330cbd97251714d865fb1925c1dccabcf2d5a3a17fb38556d42e4b8cb"
+    "app": "de27d1bf8fff6918ca56cb7af4ec867ed29619e476c65cd9e9f1a758561d7b00",
+    "web": "69329c02fc6ccd17ddeda850df64ec74056332e0f359a8bd30e3bf9b1d22757d"
    },
    "zh-Hant": {
-    "app": "4b61da2b3ac5ab02bc3aeb3b18148146b29849971b8b66073f61a45b19d57b76",
-    "web": "7783ff4a3f3a1a490a288b53136bead118ab218c5902048126be6bd6b9e7df3a"
+    "app": "e46d608923b101d3f585b1eaede279cec130a509e17f20c2dcdd57784b6eb72c",
+    "web": "abfc8978e6d2225fd74211f84dc62998984b735c2ea7bc3fdfe611f3c746bee0"
    },
    "tr": {
-    "app": "cd39840b4c70067b1aa745b603d4641ffe0d5ba7873d5d67bee7629138803634",
-    "web": "1f10542165d428c1a5b72e3813b9e301591057d1de92817d8ca6a4a8af2f6428"
+    "app": "fec4d76d2265be0f6339981577fb5802ff623a45c1956b3f3ad0131c699a28ea",
+    "web": "99b3df9709cb0facbe13cc40574000e4d411fe883b369cf36b637809198c6d52"
    }
   },
   "us-on": {
    "ko": {
-    "app": "532d97379983a5499afeeac5d3f7fb63441de10cb54ce07b1573bf3d1787704d",
-    "web": "3b4d8769f4edc2b3069049124ce75ef17b2badf16f9d89ddfbf7c5cc7d186368"
+    "app": "e3c1a7ba10f78559ad8845c5398888a5ac0e1ab902c32de8f5a5fb7e243c4441",
+    "web": "25a0e6ebdd626181f72f89ec4645c3db7312004838d4275e34f607ff4e3b75e2"
    },
    "en": {
-    "app": "adac2b40c75a2801c41d523dd1c1315f22fb426b3b4cc80cd98208a35bf04185",
-    "web": "a30e922553cc0639f0bf71c923de0e6eff5455b7f3919a0eba1d025da634a500"
+    "app": "0a1edb77bfb1ab8a5a893724f39b3cf2de120f1eaa3b700c7ba83b6137a91500",
+    "web": "878fa3a0395cffb12a2c895d0c6d48b2b775687c2b77833d4bb9e06b734c65d6"
    },
    "ja": {
-    "app": "18edaa2590ce41fa8129ffe2fe643b8bb5b6c5e9872f9d0f230ba23c8b16a744",
-    "web": "80137e6960d0346f7db10d2e3941d4e70e4d64c0be7666b90a2ffc7e63e4c7dd"
+    "app": "02128ab902b83d57e664c9f3d46dfb8131d5c06d19282df9e3146694cebbc53a",
+    "web": "87a431fbf5917eefc406b41db8869bf1c3536e6ef1c42426675a02e100f25688"
    },
    "de": {
-    "app": "abc8851bb6bf00c6b6ca9536804fdafe875b60a3dcdb760fae3b6e6b89aab254",
-    "web": "3f69358599a785d8919bcaa43b6d875cfd39fd043d53a03f2e3f439445e7f7e2"
+    "app": "1377da828e1ccad459964b23a32a2697af53e101621a8c99cc738c4417f0f128",
+    "web": "a9b4c48d74fa3682bff9efc8b08a849276d23e896cc034e8d05f19e42ad6353a"
    },
    "fr": {
-    "app": "548a3983735a389774cb561033657d155bebb4745a2796218a8275fcb5f2528e",
-    "web": "cf2cda493856f45f77bbf1105d46ddd37ab847b7d8b9c55e9c49d187f2e06e27"
+    "app": "64decd0c876dd6c83bf482d3e1ca33740f47eec31d526da0dd3ab4a60361fc0f",
+    "web": "6d795ae6881869fe8d78df9b05ace21d18b028fb845d1189bb835a0bc7b9af88"
    },
    "es": {
-    "app": "b08e9c10c73a9b113f53a0f39d3472e3eab02c92e2d5f924652bf96377dd88e6",
-    "web": "2646b1ea51ae2d3c732db77064c0ab530d6b2b25a198403b1d782f65658a3081"
+    "app": "832cee9707f43bc84d6e545894a33f944e62760b4b95bb3f7bd88ce653b90a8d",
+    "web": "d32948f374250b486dee352d585a81cdc0e6296954369433c51277129b410e88"
    },
    "it": {
-    "app": "0145588972aa57419fe21597280a71629d6d76e893eb983d4359d960cfb97ad5",
-    "web": "cfa9c1275a390556ca68d5e0ac0fc7a4aa49460fb07a6b7fe4ab3407c2f724f0"
+    "app": "dfff765c32110d572d6d33808ada83d8f5e08d01cebbe66ce28b75ce73b6a04b",
+    "web": "a01652119bf642f3cff7061ce586df5bd43e22f46215f611c8241f910bbd102e"
    },
    "nl": {
-    "app": "4ea4323b8b77dd87913b75b764b7ae47773b5e4488e513498ed440a48ef91974",
-    "web": "2198336c64641ce96f50f0f443b5108beda30857f6d1dca063f85c1cdcd1326d"
+    "app": "2ab7880081d598c07ad2b7ce53c92a0a2410f8c0a98f31c657741aaeea77a49b",
+    "web": "a72e727b2feee3ff8c13040459a5c23104a65cef4053791ae07fc11f3f3ac9f7"
    },
    "pt-PT": {
-    "app": "b07a5fcf9735f272af1d64d107a319b0e76ac94cafbc3fe07d1ee64ec09c42ff",
-    "web": "bd76934ced1874fbfbfd3416a1ed62b32390e03b31e4033a0ea72a00a8b2ab25"
+    "app": "5cee8f5de46dfa850777c7404e7f88f560ef3060fcc89532565370a33992f6ac",
+    "web": "67091b2329374a09793d621eb0d149079c5eac9aa41b029cdbff6c72e69f7243"
    },
    "pl": {
-    "app": "b5bcfd7dfae464650ec7bd87574a076b4b5d1067bfcbbf5d202a02fd15b67266",
-    "web": "ae59b560d31e0d071b4f428431d785ad03cce3bfc3733ed24b4940fec6859dd7"
+    "app": "39d626e910f58873909b43aff407d3fccd2a38f49feac5430b4715cdb71e4243",
+    "web": "69625ac8fcbde33bafc9048e0b0a59d3f25caecde0fc8bc02d177fceac19bbeb"
    },
    "sv": {
-    "app": "47cf8031136676b318ca9d6d7bcb9ec9214bea25fe1ad01e76853d33a9989052",
-    "web": "67314b6350c80d86f7f07f62c3c9b843ad3e6b63389cfe2fd490e857fde1cc42"
+    "app": "911f8f59197f016483820dc322663733fb256406114cc26aed67eb446262d27f",
+    "web": "07cf384e9fc270832e871b5eec3b1c78f0385a915648eb9dd7e01ecdd17d86b4"
    },
    "hi": {
-    "app": "c5114d1203347d77b31c5b7a6d266ac08385d421fa3ecf7e78b8491b8322904b",
-    "web": "fc65694f17f8503c328cdb7931cc49c67f91bb5ff7b47f40af389091b241df59"
+    "app": "0190a86c886c6c690562a8191204422bf498baee06381c2ecd8f74e2c8cd614a",
+    "web": "29ac216d8e7a30b327a97abcfef5ed79582e8f6b5f46ab927c8eda76a314a0c0"
    },
    "pt-BR": {
-    "app": "b10475cd6d94c7ebb6eec16112489a85ef6205afccdcb2423a51add89ba72b0f",
-    "web": "f15294949f47ebbe63fc3f46d1efc58fb41f009b833f959740844706216fc1b9"
+    "app": "66ec95d43a0707c9cd5a6fe898f8ffdcaacc7b8f52914ac95e90aa7010b473ac",
+    "web": "c2fe218554c43ed6a72757242e644454563e1c011c241e5d5aad5296f59b1529"
    },
    "ar": {
-    "app": "f46721dc3661fa6d7d21d6e500dc7083dbb07043a40081369dc6c0e8bc761414",
-    "web": "186748aa4bed3625c1236a38b449e8b0f22b35cf00822858d474021da594a96c"
+    "app": "ddb63d252cec98c6a6315ad2c875e0cc65a19261111998648c6567288b751406",
+    "web": "2c6d93389dec722ebaa07abb4c6c9aea57665410d6a8dc3d2e1b5f4bc4fda74c"
    },
    "zh-Hans": {
-    "app": "89691f7e141411fda7ee8c4c3a871406ec2a55813eaf7651ce5e8946e3807a40",
-    "web": "f031c8eb657308f82cbe61e39c0b032e0565d2e4ec30c502760b94f0716f7b5e"
+    "app": "42dc09440ba12753bb051616faf8a0a5b722d5caecc5142f5e41d100087d0f83",
+    "web": "227594252b928154f2331e2f74e22da73918040cec83176be2ddb0197a26906c"
    },
    "zh-Hant": {
-    "app": "b9447e0bb0c596bfab17db0a8db31c071ba9d28ff0debeff7b70f1cee31fa445",
-    "web": "5f72cd2c55753e9f8a2a0027d6ff3b77e91e104b6d0013043f32e675fe90a75f"
+    "app": "2e2b382f7c421ba8ea7d3265e6f85b83fc2d2e96d156521f4155eb54c8612cf0",
+    "web": "5c6eb9889478f5d5112e93d9c34cf9248f3b191619ef285e41dd6e7d7c7da139"
    },
    "tr": {
-    "app": "a0e746091bfe58f5eaea99698f0c56a1f3762b7ad54f7c7334f23614bf596e3c",
-    "web": "5491aadfb1d2420556123421a33799d353c42166327a814c327bf03df76e73da"
+    "app": "1f6ea6c87199dcd716c0c9e85a36c757751a020a3a44844c1f267729dbe1e7dd",
+    "web": "808b95b6a9e683285cb653cc97cf6b2e87532077ae900d56b9dc024e7c3475a5"
    }
   },
   "global-off": {
    "ko": {
-    "app": "f66ccd5b6eb6bc56be99cc3968f805df54451436fb9e2d338fcf6ddd81b4dcd3",
-    "web": "384302094fd7f6d3b0c1b29e7a97e2929cdf371b5cbaf49b06a5c91340827699"
+    "app": "75b219728a98a3b2e73a318b06b78ca2122467d576173e61e3713bb2f268f2c4",
+    "web": "8ef46cbba6c11235ede2813664e1469e4a2a5fb84da8c9b3b8f625be51cb18f0"
    },
    "en": {
-    "app": "9cd63c1dbbb6cabadb6c10000ebec7052dfdc010f34a2b205002e4966abc9edc",
-    "web": "6b4513133e02f8fc2a32ccc62d8a7602cc590251b81b47fa4f29ec578ccf4614"
+    "app": "8f1b65b80f2dcd2940ee80564100de47b4538406974d42282dac326595abcd31",
+    "web": "cb0e10f0a8acf75bb380c2c2a541e1de3c9f925388d1008c2f824f496d8489c9"
    },
    "ja": {
-    "app": "3dee9dc8c48a75774789b1585508863493af24a5b54fd918dd264ecf56e07057",
-    "web": "dd2a66dfc53d4c761d6196e9abfb5b1354f72c4c124687732a7e9994221d8fc1"
+    "app": "43b5b6ae32b174d9d793d4f8b9a07feff08c6fb100f4eaaf05fb4d0e5c74ff25",
+    "web": "5c5cc89aa22b982b6733b2795ae5bf181279caeb8601277eb2207a9900d4d5ed"
    },
    "de": {
-    "app": "d237f914154ba0b2b07569d5ee442f689c8590804cc0c8f46363f7eeac311b6c",
-    "web": "f36789adb812dcf1d229dd5279eee6a2b6d5607bc5bb45d8b3fc8456f56f9201"
+    "app": "df9b7aea7a62d9d381c4249cddc03eee1cb8f2378848c2ce4f61356779d4ace5",
+    "web": "80b0fff86362581f72c776c0104e50e09046863f435464df3eefdb5885b22c06"
    },
    "fr": {
-    "app": "22b9b89b21c1b981138a1d058a09a2dfdbe84db4f228da45145a6546c19214c1",
-    "web": "3f1511be3258ae65248d59206dde49fd58044c0aaa10551c2a01cc9479ed861c"
+    "app": "99ad6900e4f590cc209535cc66f6e55f9221bc97103fe588b27bff568d5a26db",
+    "web": "65291e8a731b8e1317f5c551db7818f06763ed396208051b1760557f8b9591d5"
    },
    "es": {
-    "app": "0dd9c4c3e9658cf6266ca0b83215a2a12441c328b13bd76885ca5353fb2303bf",
-    "web": "425319ede7ee5ea6078869cdd77168f03715393f985c0db490caf94825e47245"
+    "app": "164b00027c7f48ffcd42df5de9ae8f88e30fa99fae07208e247aec5638318be2",
+    "web": "dda00bc8213afbb3f5ca5842737ad18d92bae3e40205d6be689d995bd2e27eea"
    },
    "it": {
-    "app": "c791d8c38f04df439db9bfe34196898b675d2820b59ede1a325650851bdc6556",
-    "web": "a63915f3a5d41f92d7ab421e1c935cd949f6cd8dcf9b6c755bafd30e76ce0702"
+    "app": "40b20bbdbb04bba2b3d9e96d20ff03c15c9aef0575553096879c475902a24ba1",
+    "web": "1525b80415a10ec11b73150d03904831f936f58c93c1251522f3acc8778a63e7"
    },
    "nl": {
-    "app": "ad784a4a65511be203df284e4a795a09b75ced1159d585f6c3f8e0bdd863968d",
-    "web": "2e46000816716a6b14c3e67d470dfa285e399dce071986508f7b2b7499e5947c"
+    "app": "92cd426548941091b3b33cf1e292d06b70d2f1c118ad4489e510922c5610220d",
+    "web": "934e957a8707ecc6292bc59d71e465d5a5a6af75e62e5ba7e6c7aa643d7acaa7"
    },
    "pt-PT": {
-    "app": "aac4c645e543246786d8e61a21c9be33ea4216781d492bfc88e646e7f1a6aeaf",
-    "web": "5c7d39cb90994996aac88b65422793b089401f367572d1b77d9aeee7499a636e"
+    "app": "4f9efbaf4d133633dacf4fef104f67377b92f48162e6b287d661b8a18843060f",
+    "web": "07c107631e8b9eb6c8e22654a88bda03f02c8346c0b5341b354a3ec2f12cbd06"
    },
    "pl": {
-    "app": "e8a7c1761e906d84ba7566dd138cbd7d2a9cc303d1c98d570f64b943c39cff27",
-    "web": "63b1a6f56163377c2235fc9ad521322511404cc61a1876c5171b726b99932cdd"
+    "app": "67904eb49b191e6a1f2aa655e8fa4d92366c3de478d4a45aac55d4e2a4d2ad80",
+    "web": "746c8393369592bd06545bde1999674650b0520146391fda578d29ce14cafea6"
    },
    "sv": {
-    "app": "971456b780ba73080e0fa91497a36c483e33947fcc7b97bc793f9efc54763957",
-    "web": "e016bfdb968ddd7c997dc943b1a08f959c769e1135cba9ef9018cf3c8799c43e"
+    "app": "9b9e55ff2b5d9d04f5296b24f25b751efba6fff42020f6dbca31fc5fd4a668ad",
+    "web": "a86a9a5af3f485b3195a9d8ebbb78881b1020299db3f81d3370def4c6a4427b1"
    },
    "hi": {
-    "app": "a4015167157f1142d01ce69d96efd7d885b2c74d2d9d26bd0bcf16d8f7d4e3ac",
-    "web": "8291adb04fa0587f0353a4c1c133cefcf9e6d7fb76780c9a73064f98190c1fa8"
+    "app": "83dd6ceb5d147113ceb7d6d4509edc3d9801110f121d594aeb3fbfde3c213840",
+    "web": "cbf163195e65eef40e4c34cfca823aff65d3d4318180efeb17f57ec34a86883c"
    },
    "pt-BR": {
-    "app": "43f684aa4e2e5aeb4689ac2264b930d3fdc568e40175a019ef67330912a767e0",
-    "web": "e8f952c094fa5a46fa9d1ca90e6d8a6cef55c38d27c8d4b9747207fdffeb67d0"
+    "app": "5278a6da198d2cad068170cfa5fe99bedcee07e4eda54b6d0ab025d9a0936691",
+    "web": "28f649c06c37ac1cd9dd9fb770af25ee4def7461ef7908d0c193c15d3764f793"
    },
    "ar": {
-    "app": "bd252245d3024bf8fafc3e2314db4164e84ad15f8463c847b718b507ae4e43b5",
-    "web": "ca29da264c7b54678937d6143a8e295df9a109024bb8e6e391bd84faa8a95a7c"
+    "app": "bf8d18878d4227fe6db46357187cf07a0f47a3fa6f4c8dd87fa7de010cff9242",
+    "web": "d69dd33e7926f8ff71704af4b0f9165f7b25a3d8c73e50793927cdead148b80a"
    },
    "zh-Hans": {
-    "app": "8ff889b35aea9bcb3e6d3defd4c24603fa32393fd8ca94e5b25e60427ed5404f",
-    "web": "862f9566fc81fa12343cd3311818ca8a66343f67b140ccd4f32d13e7cb9ea1e6"
+    "app": "14bee10dd5f7fb57f3f5c54f9fca25917bdd9bd6dc2260427de5f5eb7ecb0e06",
+    "web": "8402e3fa851adb2a604e500ffa9e7c715d1b6f7e7646fce8340e5c3a0c5d0397"
    },
    "zh-Hant": {
-    "app": "87f6ef43343629e41ace04b646aaf3fb93d1cdd9938e0ce8612db3085124a516",
-    "web": "4e0b457ae20e4643077bc952186d819b05035559cfa4c9f7ebcc143c9b3a1dd7"
+    "app": "59ac3e754d89bc8756348690823afbc48b7a25aa52a0f0695028973a27b86aff",
+    "web": "cdee8b731b2930ca1693fd841062ca45b97143b08bfc8329d20a9553a4690366"
    },
    "tr": {
-    "app": "fbb7513dd9ed9e566bb2bd6c64ca88b481a026f1ccd0da08f458e7244f5a38b7",
-    "web": "fc368cbb3312236488798afb1e4e4f0615b051a1482114187bb1154933c8f64e"
+    "app": "2f7d53a438b4aeae0740d52e5c4914781443e62115bb7b31a088fb8f0a765785",
+    "web": "e30e18f806b7a5f1535be72f0ab52b6889e070b7d14ecb34f4b4fad326416375"
    }
   },
   "global-on": {
    "ko": {
-    "app": "54258158e505aa012a169fdc354ed195710b158b04479fdfb8290e69396c0b86",
-    "web": "9bd6d8f78696c88c5a963025acaca5f6831479f3448d19f20a9ebfdb449ca9c6"
+    "app": "ddd26ed60283380ce0f7fe433e0d36a897966d56ee80d857eb848760c50831c2",
+    "web": "e9a2470e29c6b0faf2520f53fbc4072b40c9ea37fa852191ad4986a1eb54d781"
    },
    "en": {
-    "app": "c70c4a25dbad38fcd5270f856abe1508e845dc6ef457210b85d0b6e18a64f881",
-    "web": "c157e88a188cbaa563cc110d77c0e4fdbc7c2956a2db88e5dfb6263204482371"
+    "app": "30230a74fd2824128990783b70b5f35e2371aec4021997d8f51d5427ba60c374",
+    "web": "897aa45214d3c59bfc32d12fdca9f1a2ff48e440d3669d701a68abe8d8c10814"
    },
    "ja": {
-    "app": "4e894c3a675995dbd2a40e7addab8065ac17021929b45451d4a9f4dbd6482a9e",
-    "web": "8ffa3022f732df85ac0afcdc3a4f4e5ffc0dc7ae3f56aacc98cb8b068f54f2b9"
+    "app": "f551c86fb06275f6ad3efed1a15f314997afb58343c72928251f3717f04dbc1b",
+    "web": "7af7d636b5ea68c3de6d57ce42ae64efe92bd8418bfb6211380f292b0f8091ff"
    },
    "de": {
-    "app": "16cd65bce7dc4c4c317f8f401725050e5ea1beaf80ac134c6dff3613e0d39910",
-    "web": "3e1cd1764f30b6df08c68c7e74ef3380a6a0749249b54bcd8d2c5e7da6fd6e9f"
+    "app": "c16a0d151616602075101e72abd991bfa7c193fe94ec22e9ce0cf317964d7589",
+    "web": "864b6b6baacf53de3358cd387c40bb3c12320344e7f5407ab23664efba786e40"
    },
    "fr": {
-    "app": "79f90f85151367319b1d56124280ed4edbbf2bd8a4a05c0ff9f767a2b860d7fa",
-    "web": "f7510f3731ecbef937673423c9c5871c4b018e2ce6ec937484e15fd24f70bc4d"
+    "app": "552c62ea936da2550e4b46dcf69dfdea3908e6e86a302c1ca82e13a0fe81bccb",
+    "web": "2cb6e5509a1f33bb4193ef5bde38276e9159389f6c0d8ba2254e2176deb17a77"
    },
    "es": {
-    "app": "586eb78f83d1305d30e8c8ce841fefde8406edad288f5d08d38f0f63a558d882",
-    "web": "6a80cc30593631890512413374849d2f278485427b2cb8efe7f61200523d68a4"
+    "app": "6e1f7a4589687140ad7af61095c82d8b7bcc8839642cafabb5b29c8cfabf8174",
+    "web": "82b5074e2224f3cf51aea4827ed40bdd693779ad3a4694cfa0e51fecc60f5324"
    },
    "it": {
-    "app": "7e735ce3e543d3324a426044eaa8b0980d9e56902591e246ee517319d1a4b253",
-    "web": "014801e2ccec5088644ba3d477f4b61054b54b25fe75332f556ab72090e77e92"
+    "app": "bb225a9a0f51a3b3598bc38e46c255eefe9f7d7b71215c2307664a7f6d0d4c2c",
+    "web": "e673bac584686b2db3818f3c1aeedda4580deb956e346914271c71bd76c87822"
    },
    "nl": {
-    "app": "aaaf132e5e2ac2f48a084775178b1cd10334b8062a0e12fe1e26c511569a21ee",
-    "web": "3bcc7f350b8a237cf462255e9430198476b9b3e8c79f3e0000d950a2654678a7"
+    "app": "ba39ff2836835612bbc7f77078f29923ff32f404028760d16ab5bb22a5ea7744",
+    "web": "ad9776ae640e953a6b3030b448ebe97f91bb5f123db13e2cc85bb5c29b06b6a7"
    },
    "pt-PT": {
-    "app": "d4d77143ea373f216255663a66736bb9a648dc51bc0ea8eb3de95f2a70d5f49b",
-    "web": "9206520c66e7cfcaf4813f146d6bdf5dd6e6e8190f6e59a0f1c2ca33a8300af6"
+    "app": "30a55489be29da7bcb4817d58c9f378d69cdeaaaae8c37fd7b89af41558111c7",
+    "web": "f3981b0cba75c881e8b6a9bf6730bfbb8056ac7e14a84e8dcd72d4fa45425841"
    },
    "pl": {
-    "app": "7fb7551d0eb607416c57028d8f9213d0482134853fa0036463a63b7f9bffb37f",
-    "web": "85ebf5bae4f03ef3cc483429fb99103ffd6439fd8835816142167201dc2be8b1"
+    "app": "93700c2bf85eb35fa9295c6fac9b6949a5a420537568acfa064fcd832d5d8cf0",
+    "web": "03f1392c213b5d9fda1ff8b8f8a68ba3e2563840ba2254831e44ff1b0c0dce40"
    },
    "sv": {
-    "app": "d2037024e6c5e2f7da9a3ac3d4271ffec225fb53ae6f513b46a9595f7a89fa91",
-    "web": "c934f28c0a84c9b8a3343750112339673901b51db043ee23d23c3ccbcc847c04"
+    "app": "1c02b1002d2566ec4248ab3fb9eef2c431f12ffa5c4df8f8d57a915d6964635d",
+    "web": "24de171f36541ee7754cbfbdacc880a21c88cfb4ac0d9f6884531bbea588356d"
    },
    "hi": {
-    "app": "d358ff8d06c4c37bc28ab1acf0d3b53189d2566b0c3fdc1e558bd69a19fb2420",
-    "web": "5d871b83848916b905f091d7704cb1ca431299d0082685dd5bba78f58a0456e3"
+    "app": "d461b3623a86841cdaf97f8acf0cbae63c2022015af17df61a8cd6ada620bd50",
+    "web": "7bff92f57670e433927c3f5ea0e0dafa848fe10f45e84c7e80e9f45b88f2941c"
    },
    "pt-BR": {
-    "app": "9cce11af24ecce7e9f7029398714f7c07a42443620b8b90f5da5ef46771a6d5e",
-    "web": "91270690ed2bb9bd792597b91730088a161d66a3e453ffa783ce712aa7940b44"
+    "app": "71f1792cf67eabd3b7049994e6994129fc1284e1ef9f10003c1b2d718080af74",
+    "web": "0edc6076278abe688db3f41d5cfa9797772238352e07b07670828462a0fb608b"
    },
    "ar": {
-    "app": "bcd845866d491d272b3b85ce6de13382fa9bd1f3f022fcc7419bed5d59f665ea",
-    "web": "0df01c9c170b4e5ae2764917d71ff3095f072f8741c8470db9c6708c2092913a"
+    "app": "5b0d9a1f5fac7edfa69569b5003ebd64058a3e189bc89950e53d43a2e4d9f3a5",
+    "web": "19ac736d987f8ede42e6ccf863f13c6b4572f4788c414a16fe83fc604bf1d9c3"
    },
    "zh-Hans": {
-    "app": "1c93e5527c394e23c8fb8a2e5755c837a5b00de53298c4b2efa42f57ac568546",
-    "web": "e747b87c2358b7c5b2ed8988c0cab0336caaf9a462efe4fbbc9216d058fd4257"
+    "app": "4f0de744bc1ff47ead9630549c7a80a2fe6c034da6431c0242d5335c62486cdd",
+    "web": "302ac8792d3bd28729c960454bd1f87f8d799e938b1ad891546b808224c4f53d"
    },
    "zh-Hant": {
-    "app": "13829ee290cb16110854b026813610b34375b4b50fc380968b210a9af1a0f12a",
-    "web": "7ab9b24f8c7e5e769c1409586953f79dd6d71f233afd5d3c7150f4526b7c87a5"
+    "app": "24247a2e18123370c0d84f33971cfbfae113ea93dda1bb415137d47dcf6feba8",
+    "web": "9289e700da3d9d4cceaac60c95ea471c13d5943d67fce3036124e436a2d2baa7"
    },
    "tr": {
-    "app": "2416a764b85cdfa975b1e0911997dfa6bfd65c508fa688a3a8c5e47fab254054",
-    "web": "9eb506abb4de726efce833ea5ace3835a236410d1cefbe0d36ee8d55bc6e83ea"
+    "app": "bf9d5bc2d83a38989e2cfa9b8074f455fd1b51cf4f0639aa916049501e426af8",
+    "web": "9333f2e54b47d8c762d15c4377173b8e9988004c6109758819145100e34b12a2"
    }
   }
  },
@@ -840,7 +876,7 @@
    "app:ai.consent.a.optional.title": "8bc55b7aaf157101854f74547121eb7944a313b0ba91682fe3a35fe801af72fc",
    "app:ai.consent.a.optional.body": "063b7390477759736a8ae3f4c78cd9c4caee48126bfd2398bb024b7f8ba2e28f",
    "app:ai.consent.a.transfer.title": "b11397723cc234d70d08734fdd6ad3baf2a0f299c7ad40b7dfdd9a86dfccc788",
-   "app:ai.consent.a.transfer.body": "74df5cae4a2b8478d834f4d450f52fc0be27af7636f9c6a1b2c78a57e0a44cad",
+   "app:ai.consent.a.transfer.body": "f16811c3ad4884a769e311946609e740c5f720999d6dd19aaba2f0d0e6b50a66",
    "app:ai.consent.a.check.health": "84ba59da62b91eb674cc1d1c72b6fac5a886fd323e2af8889e611a174bff0488",
    "app:ai.consent.a.check.health.detail": "fb86df8c7a5955e5b0797a0f7e4cdf34ebf32db0f892be12efe1ce75d0be12ea",
    "app:ai.consent.a.check.transfer": "54ad37920652beed3f5ca565d9189072e7290a7c81e88f6ab388c08a4830568f",
@@ -850,11 +886,14 @@
    "app:ai.consent.a.region.us": "f63951866ac1ede3587bc219c402cb3ee9e58158d5febc98dca7f5dc0e687f22",
    "app:ai.consent.b.processing": "fc57848fd7d684bae81bdd952b6e301f552fd313aa0f523e55cc96f8dc89416b",
    "app:ai.help.inputNote": "eb6da85486325633b3a43e52e6ac05ae67ba58155b2e1eb8eac6db962bdee6ec",
+   "web:name": "fa2ec27aa14dbd52157b28dc5c06bb515af220b1e7fd95ab65aff3f1641cf681",
+   "web:perk": "dbeb1c641225baecfc38545e6132edbf02b35529a38c40c6ec7e50836a7b7dc0",
+   "web:sectionTitle": "ff44a14b0a42642928e45e4dd1ebaa748306f0dece47a7c4bd9dd23f08d2e3bd",
    "web:clauses.0": "be750128988c4d0a780a5064ed6be929633aaff2c4d32b1e9001d91c4c9740f3",
    "web:clauses.1": "ac206d8d34b905f5bd8da9c04185afc0bd165b80f9b906da216fc754edec4949",
    "web:clauses.2": "10e8d3bbd7f91a422843aa380b799d9848b158624c077ccc24223991e6033482",
    "web:clauses.3": "12605d5c2657b885fcb4833ae25ae8b062f8677fe059c59736e6ca91ff34d161",
-   "web:clauses.4": "4c2f074629cfee65963a3e444bd6dbf966ee840de706efb9bd5175247d532dd1",
+   "web:clauses.4": "7ad480192ae858f867a9aba1604902e4b317e2a2d938de38ef593ca904fbe2b5",
    "web:clauses.5": "ab6690cad7193a3a1fc38eea07319e3b4994a447979e042266c2fb2d80d9fe22",
    "web:clauses.6": "4eef311a5a3df94c5cc2d77ddc3ce3b28c1cabd1655fbda219ddd0f58e992bf9",
    "web:clauses.7": "75f3f13fbd95be7fb519cdd2baa1562e3ff9c2cbf95de56affff66002132e74a",
@@ -865,29 +904,41 @@
    "web:e2eeException": "36b4bf0cca0623f2621f4c26d1a93f62901fafa942cf90969a027192373b5385",
    "web:healthExclusion.ios": "fb5de3cf69698aed2ecd7a45757de2ae9878d818347bda71ec322c140afe6b80",
    "web:healthExclusion.android": "f0a2ec917c7af8c1fb22f9f426f30654e5d1ca56a7879455f0c839af95695b1f",
+   "web:onDeviceScope": "b477f23be10f5a4e987931ae6ea7e43202e0203375c38ac9feb2388ae921fff2",
+   "web:onDeviceOnly": "25d30d52c2116cb9634d304dd72e4377d4e4fee201c6f3b50edab65788bde7a7",
+   "web:iosAiFaq": "22a834b3ebe2d69ff93751db09ea90bc53bac44b29001f55d179c8e298b6491b",
+   "web:androidAiFaq": "332f9b0fb346cb72f0faf75dd8447a7febb298a3f1afa865ebb5de78b5e889db",
+   "web:androidBadge": "9bb3d9ae12d2214392f3955a37e307c06178ed07d67b687a45925919f4615d77",
+   "web:androidNotUsedItem": "cbe9f8036a7468eea8dfc6b844704b0b7181e33d59f87ea403f9536e1b6d21ed",
    "web:processorRow.legalBasis": "8c3f8f31c5713f19d13ab5a9067e2cec8175df5181c355751a0a94b37682055b",
    "web:processorRow.data": "3786f44a7383df7e8bcc113c56f1f3b279eaca101794263d043b96f0b595a389",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "b895997913fc25e2a2279934cf35c18b974e272af4a7f7b8805e08b444555443",
-   "web:processorRow.recipientContact": "3daa4dfce678d1278934dc01694f59432de2ea163db2692240f1b8a28151a7aa",
+   "web:processorRow.recipientContact": "c650913cbadf8201918c8c27584233fc5fcf4c5266b707d608bd2fd8b80df2bb",
    "web:processorRow.purpose": "ba6295c01c8a9dac1a01688eda4c422541a6017f9896de723384c1de5a85388e",
    "web:processorRow.retention": "3ad7ad2b1b202ef70c237851dec8a3a1e0f4db91d6787e3bb784480b9d8e843a",
    "web:processorRow.refusalEffect": "92472ed205db52b91b33f7a31232a81621698007d8dc6e5709e98a39e2d88d1e",
    "web:cloudflareTransit": "1d871616cbffee93dc034530f1f75ff1f0811081eb8c785866a0160b276991a4",
+   "web:terms.0": "1e11d5fb8d6eda2445a3c5edd56086cee286c6ca7e43a5d5d4a7a95383db1492",
+   "web:terms.1": "f78c163129970972a0f92121dcaf599f8894c93ecc2651e281b73fe9eef3a7e1",
+   "web:terms.2": "e5547674ee4ceccb75e2da7e4074f68ac9e49ab74f277204cbb8a03b8ba6cf4f",
+   "web:terms.3": "9e01d8943ebdf2bae6f2894971c019f2230b113e2687b664292d909eb03bf71b",
+   "web:terms.4": "5709dbd9fbcacdd23d919af7a001b14cadf4dcb0bbdaae04f86c1a45849acaf0",
+   "web:terms.5": "feb0e1ee81299b3fb5451e3966595b390cc5f99a55716b338857bb62c2da5227",
+   "web:terms.6": "b49fb811f94dd519be50b36a95ad740d0e91a834499204c18899020b41937261",
+   "web:terms.7": "4abf533c9fdae4c689d9f3d857e590a82d705ad271a0520b29ab0f6083fdcca8",
    "web:usHealth.categories": "142ef1f401f0ee914ea3ea3c933bb07c78fe6065f51e51409c533bdcd7319907",
    "web:usHealth.purpose": "fae6177a71f96571944204b43fbc87a7407a8465e332bff9bcd41894c90aa539",
    "web:usHealth.processor": "75b554ec233cefdf45abfb3ff2c351217e51bf050db88e3291a347f2121eb2b6",
    "web:usHealth.noSale": "39b945cc8c3e767d50840c025d20a3345cdcd4201961c92f8192f850da223a35",
    "web:usHealth.consent": "0aa4f6521cb7fb9635987b7b116f85948268514af877f058e6f7f285240571ac",
    "web:deletion": "4993164541505a91b19dc38afb453457a7725c98a28ddb971b6a3a9e3742ac43",
-   "web:iosAiFaq": "22a834b3ebe2d69ff93751db09ea90bc53bac44b29001f55d179c8e298b6491b",
-   "web:androidAiFaq": "332f9b0fb346cb72f0faf75dd8447a7febb298a3f1afa865ebb5de78b5e889db",
    "switch:aiLocation.us": "9177ef7c39785386aba9e6b19b6b17b89939882ebb96b24fcccfe3c818414786",
-   "switch:aiLocation.global": "8a6a71c7a4cbd0127795be146bd5d8a74375ae80a6914a8b108eb41bb068c833",
+   "switch:aiLocation.global": "bacb096fa2f586832c5ea2f76faec188eeb4c4f10c1563509b21532dc13991f5",
    "switch:aiLocationShort.us": "23ed1f9ea4944fc3c4133d4b82816a1c2d67e77e278f412db488d1743b5e27b7",
-   "switch:aiLocationShort.global": "d84509a632f21e6ba250d96a19469d8596e5bdcf0c8e0a1988f1dd23eeb2d797",
-   "switch:aiTransferCountry.us": "be2e570543f794bb4f00bee15a04f6bf19f7f6abb579c1f2b1c693abbec5b722",
-   "switch:aiTransferCountry.global": "507f41eb2b5fab17720316c69c8c93b76649741e4e5f9bf1ed9e694a766cdaaf",
+   "switch:aiLocationShort.global": "bb024011c154d995934928990943028d0eeb4585a07b5e8ae5fa8b7702ba63da",
+   "switch:aiTransferCountry.us": "d16e07bc146079a0aa4b089b028b5e82d097f7127305bd387f28f9f072495de9",
+   "switch:aiTransferCountry.global": "811bb98061fd3b0ce8aabd7ed9153a787b218cbd7f132b76f54f7df8d13c28b7",
    "switch:aiGuardrail.on": "b39d1a3bc5095f3267b2739ea10d1667a14f477c996acd37757e59a58c2d154b"
   },
   "en": {
@@ -907,7 +958,7 @@
    "app:ai.consent.a.optional.title": "1c8526b065970cf847b2b2d5950c0c66d7187719b6564fe1606d00c67c9aaf4d",
    "app:ai.consent.a.optional.body": "598f17ac94783bab63a46679684fb7510bd3c734a34ac738b8a92737f353a6c8",
    "app:ai.consent.a.transfer.title": "7727c5a195d9dfcb7639dd14e59ac7997529424f2e45e4370ed9bf875b87e988",
-   "app:ai.consent.a.transfer.body": "1ee03ecc0da7d51ea8157ad6c7e5b53b945fc476ba86c78f4182fa7f36597072",
+   "app:ai.consent.a.transfer.body": "43680ef545f589f215faa0ea011f30cb7e1e2a3eebb97ca1806b659ccb27788e",
    "app:ai.consent.a.check.health": "e47b959464f53caf85f440d809e8fc89028ae5f01ed14eb8b795172b7420a207",
    "app:ai.consent.a.check.health.detail": "5548c230de2e9871aba1a2564364564aaa1cdf9a8a05330e2f09d4f70dc9e325",
    "app:ai.consent.a.check.transfer": "0399dd9e14db9fec79731c1af9378a657784e1b23a63cdd00cd995fbb9d3cbfc",
@@ -917,11 +968,14 @@
    "app:ai.consent.a.region.us": "be5e604a10dc8d691a113b567d48692c81ef3561b99f4c262a3171b98800915a",
    "app:ai.consent.b.processing": "23a9449e4961eb2742e6a8fbc529eecb2ae1df084f78b68ba28fa5e936beea43",
    "app:ai.help.inputNote": "94b50f9d37490f14487eede69afb30ed5f9060f5ce15dfea15ff9bd6c48423e4",
+   "web:name": "b31379fd156d57d15700ab2f90139fdf3c78cc568585f4c45b9604122e855643",
+   "web:perk": "5294e6b5733bb73ace9037529ab26283666e0c23e8449c10246a67db9df0bcfb",
+   "web:sectionTitle": "997ae471ca0ff36d41ab3854d2d17ee66eebb37d6ee905b8cad40b604fc83f7a",
    "web:clauses.0": "78a8a801afef5486f1b42e87eff4252bab06da0621741fdd017ac674746a0b54",
    "web:clauses.1": "70253d100c7b0413b216d4b68f93b04491ea2ac6c891b998b4aa1c0acd255d46",
    "web:clauses.2": "c150cb9542ad7be7a29066c635ce9ab5cc156dc18300eb0f204643fa0ae7e04e",
    "web:clauses.3": "d81d657bece8c135873f28a433a32a9ab620c8fefcfbe24ba980fa35ab0a5d73",
-   "web:clauses.4": "29ec7a7e5140c8f0d01d80ea4929f0ee94e72c14a65db774038e1a556904cb93",
+   "web:clauses.4": "6bcf5066ddd36a527c4b2907bba50a14f9c32f4c17a528fdbc44c5d2f7c8b36a",
    "web:clauses.5": "cf25e9d41dcd68e37b9a278d191c3c72e868bdb5be4a2f8c4da742fe42bf97fb",
    "web:clauses.6": "97b60c7b8c6de7a36499b9a73d215fdec34154397ade32347c09423e9f6d01c3",
    "web:clauses.7": "8624b6943ed23bb35424dc6df32b1245d68ab0f0a5cea90ca518d73f1b55d4c7",
@@ -932,29 +986,41 @@
    "web:e2eeException": "df3eb261115e789a5b622f432e2988bd8f6b9288a740fc3e8b2feecf09e4da82",
    "web:healthExclusion.ios": "37024ef69d97d4c99abfe9da8c5cbf05c17446bf1fe1b67e6c787d93a0a27115",
    "web:healthExclusion.android": "16f50376172c22f7c74d8798f4ec69fab3d20072b76d8a3946b2ce3d91007bb9",
+   "web:onDeviceScope": "2e88a2ad4487deb21273bb098a6190722b4e90365f77201d9676baf686795568",
+   "web:onDeviceOnly": "db9b4e0950c3c900debdda134b4102a94a0c7f3323eb9ce07a82d72a2f321b74",
+   "web:iosAiFaq": "509b8f5e12c15eac88a36c0cdbd7494471bf92b95ecb5eca647613d66d5089a6",
+   "web:androidAiFaq": "8735f76a6d17f0ccdd395ab7fc1e0f487e6465d625df12ea88714e46dc2d6ce5",
+   "web:androidBadge": "55741297815eb1c61187a6dce52b5ca5fee4dcd634119780f049763f296d9cde",
+   "web:androidNotUsedItem": "893eceb80b5730cf7e5c6b1518072b54d407d5fd897ed9ef17c5d8a8d08d50d3",
    "web:processorRow.legalBasis": "2568b85a320416f5d0f62d4eb5cbe0a11d5e31d3422bf48f17d920e8b2472e97",
    "web:processorRow.data": "769bb92afaff85503a068fd1c920d284b9647639919094cfd9154cfc7a94e8ad",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "440a8824a9e29a59041e5f37effa4d00b377731d343ac8e1bc9d156c975d7b1c",
-   "web:processorRow.recipientContact": "a71b66fc61a7250b0ab7458516132419ad1df7432c64ef81619d24d9730919cc",
+   "web:processorRow.recipientContact": "916542c73c06e718c9eba5e44d709b9f3b0aab1a7145a762e6e6817c99e1d918",
    "web:processorRow.purpose": "8abc24da5d6a71b59c6ce3206f78f9d2791f1e06d6ac788cc78e37b41ac863f9",
    "web:processorRow.retention": "845f3e18c5c5c673c5b6c22773b087d0db2521c1b7ab6fe53e42828cdcc80f96",
    "web:processorRow.refusalEffect": "e037f738e68a4cc516f3f130592de7196e64e0247c25112f5cd30133fd733f18",
    "web:cloudflareTransit": "892fbc516fb4a80071eb800509701a11b0da6c6eaa3864524cd9e3f1b5fc5fbf",
+   "web:terms.0": "e7b75621c2cba32345b2eefd2da3e13a1fe4dde1f4c6ce09c2dec745d0820ff0",
+   "web:terms.1": "b06b6d1081563336e3a7e72df31d1e2a90345001c72df9821406f7aaca64a984",
+   "web:terms.2": "fc8e054da202b8dfa7634be6d7c4b5f5b7b30a536b317fd5c8fd496010ca327e",
+   "web:terms.3": "59098dec270d342c5d5ed42524faf71ddb43a0369640560a6b98cf65d3a1579a",
+   "web:terms.4": "e0f4bf37ef9abd3616ede62dc0ff19e97037bf2b68f5399460207a42aad20d34",
+   "web:terms.5": "0d45b2be0755831a400318e8d38250967e8f760e5231c8f9e3e0ee5632e340ef",
+   "web:terms.6": "dcbf110e27931121d1c9bc5ce6d155fb3df16c3ae6de7bced6f35a41e34cabca",
+   "web:terms.7": "7182c6d7e5b16ec4d0ec96aad286f7195b6697f62e4cc57c2a1b733a992e66ae",
    "web:usHealth.categories": "489d559f19c5d214c19838c1032e6dd33d278aba687b50168c81397da6df9f2a",
    "web:usHealth.purpose": "ff873722bf84fd3cf642f794388936cb7dcbc0c6ca2fba6782153492340f4740",
    "web:usHealth.processor": "a5fb91c05fe855edd8257af0d76428bec89c80535e4e376e1c78b49af9f292ed",
    "web:usHealth.noSale": "f275ca3ce94899b2770a03c30ac381ee0d578a810146a1ad38e38b33b910c063",
    "web:usHealth.consent": "f0de16055b95d16072798140aa6bb6953a6e8b8cc4031ffd52de134fdfe1b349",
    "web:deletion": "ae658aa12d1771b15327e0bddb7f907dc6486f367936b596e525efe60de28e4b",
-   "web:iosAiFaq": "509b8f5e12c15eac88a36c0cdbd7494471bf92b95ecb5eca647613d66d5089a6",
-   "web:androidAiFaq": "8735f76a6d17f0ccdd395ab7fc1e0f487e6465d625df12ea88714e46dc2d6ce5",
    "switch:aiLocation.us": "08b41727a76a4019c000876023c6e39f0fceec68226ae16aed00ddeb93b1914b",
-   "switch:aiLocation.global": "616ba63b31bb37876e603409c807bddb5702f84c098d55f7ccec7c2c45255bfb",
+   "switch:aiLocation.global": "dc69c107d0594f6fa9d7808abe05f989a35387ce5335cd3b9963e667695c5a9b",
    "switch:aiLocationShort.us": "49dca65f362fee401292ed7ada96f96295eab1e589c52e4e66bf4aedda715fdd",
-   "switch:aiLocationShort.global": "3cf45daa2dbff106ce008233179c38793de99ae364cc9e1bf6d72d237c55daab",
-   "switch:aiTransferCountry.us": "c2defbfcdef3e3410b4a46eab7e9bd9eb1b3873ad4138c7a9c3bb2ea03eeb25a",
-   "switch:aiTransferCountry.global": "a31a1851c0dd485b48f198dc009327fc8c328efd98e8ee18c89c90856deb9989",
+   "switch:aiLocationShort.global": "ef033408812a26767b9a27c8d8a6dce7cb9471cced36208d19aa172635a6dace",
+   "switch:aiTransferCountry.us": "e3f8657872270acd33b67e948ea74ba5e9923bbffca6236bd872d7c063e45e9a",
+   "switch:aiTransferCountry.global": "c6a94ffa38eb39b9643bd6d2d9778af6c39d232937dfecc1b35fb7f9d8ba9c55",
    "switch:aiGuardrail.on": "d6791e064ac2e43eee83493b03a5ef04f9c7f1ed0f23a535846c7b2839f2b434"
   },
   "ja": {
@@ -974,7 +1040,7 @@
    "app:ai.consent.a.optional.title": "5a181620156c3fb863e7a85f0371a0e2908b14da4c9c2d52e5a98d56ad431d7e",
    "app:ai.consent.a.optional.body": "53e253ecc77e6738bb46ee06e599e03d01edba1717eed91bed8f9e466b4e46ae",
    "app:ai.consent.a.transfer.title": "987e267cf23f65d55d78c1475af2fd91b7a9b0dc3697625a8526d6f25415ec5e",
-   "app:ai.consent.a.transfer.body": "0a754b16695036d6ad2f70cf09ecc72e4c7299b3de5d582acc7c05f183760951",
+   "app:ai.consent.a.transfer.body": "50b40406cbb291b16b42d365ce8edb8d80ee8387fdf38cde9ef2719059b9adf7",
    "app:ai.consent.a.check.health": "8dff3507a29cd3b4efa59847e0e32036c0892e410b7a3161338a67bc8cf56e6b",
    "app:ai.consent.a.check.health.detail": "db2fee2af5db8be25e7be1a5127512fe3bbc7a25da3e7e2fbcee7a057572a9d2",
    "app:ai.consent.a.check.transfer": "856479a895e4495ef8371a6f90ae30e83fde63538012a2c9e539fea54c145959",
@@ -984,11 +1050,14 @@
    "app:ai.consent.a.region.us": "73968ae48a7a33d467f6576553ea9e855929c1cc31a4b6364975011606ba4a8c",
    "app:ai.consent.b.processing": "30d79c92b56db8e2f10404d0053004ac59aae92a107d0cfcab5c9ac5b69a07f5",
    "app:ai.help.inputNote": "9f2a1d75fdb3cbfaa580eea1cd048ee83ece9b67aacd6f45d130eb35e13d71c2",
+   "web:name": "6a388e23dabc617e1267483642c4a6b5e9135d35b1a285a99561f9471478d9e5",
+   "web:perk": "62023f53da106b32bf4c3558e2eeab63d42cebf47750d77f630025f2794c89f7",
+   "web:sectionTitle": "fe0d7c88a5a049b709e9532aea01e2fefdd5dece6f5d18560b46ee027ad7abd3",
    "web:clauses.0": "315d96528848dada9e0656c80dc9016882183c559daceb27ffea863ba567ba0f",
    "web:clauses.1": "27a110cbbb98275576081a09492e9173c7af83c1b688cf7c15bd8d5db9f7bf4c",
    "web:clauses.2": "f76955941c124e4e8b463440b22657bdf225ccd9c75b116c855aaae1279d405d",
    "web:clauses.3": "5a73a95605a1c1f08ab0898ee347033cd3e9886fd96a6def0aa060e5cb9a5dc8",
-   "web:clauses.4": "ca235dd810c0dc552369051465f3003d40b98a8117da91f338e0d814dd73f523",
+   "web:clauses.4": "8907f92cb332a4cb30327b7bc5361f8d0f858c725ecb3cbb5c98401875b925b5",
    "web:clauses.5": "d550cff335dcb94d1d6efc84ec0fc32608547412e00049c871fde77c47184b0a",
    "web:clauses.6": "74cd9e82fc64449e3208bb9a3982741ab51686b7b3ed3a78b2339c19f75da3ba",
    "web:clauses.7": "dcdad0c3aeaff1acd38dfa4d585586b796f54a55c10ae80b8e39e61b9cddb567",
@@ -999,29 +1068,41 @@
    "web:e2eeException": "2eb2f37f96b3ea1ac12c618dfc7b67227d5c95e60bd689d85ef7b1079a8b2f1a",
    "web:healthExclusion.ios": "1087cda0aadf33eb4a67aff3d915cbfe56a98a2d0281520a12f59b962fbcfbd7",
    "web:healthExclusion.android": "7ee82cd42ff27437726dfe61ed30f54aca7cdfe14082feb21dba3a0b3e96a670",
+   "web:onDeviceScope": "800db34c63bef6b1e8607e0232a3808bfa7c45579eaea871b8661c17099dd67f",
+   "web:onDeviceOnly": "86d8964ab9a58027eb1cf99446f65c060e70bee555d1e27b3898f3e323d4b9ea",
+   "web:iosAiFaq": "9c6a5c6d6ca3598cf73853455bc6afe6dca0d00b6ea36f23b3da854e695d2060",
+   "web:androidAiFaq": "9e0e06f62c5f7d27893f7d5505f01f3145fc499d4d4fbe1507dafea24a49e91f",
+   "web:androidBadge": "59c4e5c2b5ecf3d3408104b287bfe726ef3df7b35bcd1e4bcb7a422892400e8b",
+   "web:androidNotUsedItem": "c3605fede0472c51cf3ab31a3d3db55c2dcc9f92d28c73d0d2de4170c6854b0e",
    "web:processorRow.legalBasis": "77f3f885f5e34880bbe1b84a9df5c5c67f5505cfb5d97494e4219d759e5c43fe",
    "web:processorRow.data": "230afc12957c91097d8e05b3c83cf81eedd720cc8af98291d7e0088e2a2c8baa",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "6bf6671fd7d3caf2959e75da4a7b7e60046c6704e73f56bed8b2b2bcf1420549",
-   "web:processorRow.recipientContact": "5f4107a3504e3a05d7f1555705eb81e63cd273239e02e7674e1e5bd12d22363d",
+   "web:processorRow.recipientContact": "50d0a04c76f28c0469cae4972a485dbeae6c20526343becee60db43bd0624957",
    "web:processorRow.purpose": "a535e3ce017680d675d6e7b73f40d71aca44de2cfc3452b3b56ac04154cede7a",
    "web:processorRow.retention": "52959c2ae7d89b5b2c63d35a9eb1765d10131752679de5e22dc5298d16fb2288",
    "web:processorRow.refusalEffect": "3edc74a8bf3bd43b9b607fc4e5d9642297b26576b8b7ed3feca14004451df2c6",
    "web:cloudflareTransit": "c056044c0aea02f1ab2b2850044e2fd837bf51bde149b58e7a261d44d037d434",
+   "web:terms.0": "3b50eca38c2cebc871bd79fe7a802c0d2b66eb5b58bfc5743fe29e3509ffb9c1",
+   "web:terms.1": "a6cea7918a673a6c154b17fa97f3ed9cbc7343f114d9cfeebb1e377303748059",
+   "web:terms.2": "54fad4475008edf49862b690db6d435103ecf58a42107824dbaa66cd64a6f9f2",
+   "web:terms.3": "55bd69158b8c086446cafd16e88d6610facc182a0885f08800718505b3a742c5",
+   "web:terms.4": "f7ed1b87f87916b244664e906777a38efb6e8dd6396acdcb3909992a7c80b984",
+   "web:terms.5": "326b61788e81de3dc2ef15261af0d90abd29d51aa348d5c964100ced52768aed",
+   "web:terms.6": "8ea068c46f25bf904310123ab8a0ddc903c3ce3353b0e7509528e459bb405794",
+   "web:terms.7": "ad6ac0ef68bc4607aece7f222536842c6a8aecdfec8e5157a0c1e531a525451d",
    "web:usHealth.categories": "414781dc533f0579fc1a6239dfd1a8075716fdf8baba5ca04c6b97f678ac2845",
    "web:usHealth.purpose": "fd960e0fabc21085bca772927e8ea21c51edd6d9a15b2770ea3455f45e161c94",
    "web:usHealth.processor": "9b551bc05ccfe69606516cf52a7b42dbbf00d3682ad89b58a39e496124ecbc5b",
    "web:usHealth.noSale": "fd318d777302e69b1f0b285068c2e44a6e43c4c52a4420232c52135acdcea079",
    "web:usHealth.consent": "be07a11876dca6bd17189d971285456c24036091f8a8b98e7e3a63aaef6bcf2c",
    "web:deletion": "39ee2072900ab4dcf07a29b0c89be50102cee2cbd2579d336cdbcd0d506ca766",
-   "web:iosAiFaq": "9c6a5c6d6ca3598cf73853455bc6afe6dca0d00b6ea36f23b3da854e695d2060",
-   "web:androidAiFaq": "9e0e06f62c5f7d27893f7d5505f01f3145fc499d4d4fbe1507dafea24a49e91f",
    "switch:aiLocation.us": "38e53cb01ce43e5455f1ac5b9e3a0f01e80ad4c82ea9a64fd1271c0a03dc260f",
-   "switch:aiLocation.global": "1174f36f35d325b6083dfa4ef94fa1ea61216859a96d772609e36b2ddbc00568",
+   "switch:aiLocation.global": "1f81ab49a151a957c2cc7e1f35236dd363fb17b05405be006b101d7f45386607",
    "switch:aiLocationShort.us": "6c0d1142c80dc685cc3ebfe38089744411e05fd143cd268c496c0f0a44750e01",
-   "switch:aiLocationShort.global": "77c3545dbc4ef547c93271f6c60cee665ab95fe44995e4c6b94ad526e8af04d2",
-   "switch:aiTransferCountry.us": "7044cbc12a95b24d3977e7c0839f5ff1dddc0a2f8091ce9d01f00015849e29d6",
-   "switch:aiTransferCountry.global": "a5d79d2a3f643199daaaf33870f862532b2f7fc40d84f1513bdfecb2aab906e6",
+   "switch:aiLocationShort.global": "b5fa2e20abf19ddd09adaddb4e0395426b2410f5b7a0fd8135a3177c68055c90",
+   "switch:aiTransferCountry.us": "9767c922ec3e741757e4932077adbfbd2eb3d35f5571e747a946a93a6af5ff78",
+   "switch:aiTransferCountry.global": "2d21b638f9d3edee68880af48aab89391fe0b3f9c2a42b791753797a5d6045b2",
    "switch:aiGuardrail.on": "748dd8f1a0b53a263021cb4ca9fa0e543895af8592550ff32c689fe2be97bc84"
   },
   "de": {
@@ -1041,7 +1122,7 @@
    "app:ai.consent.a.optional.title": "73872836f37ac96c72c6c8bf1f0812007c7054bee08215fc72b13da3c9d5fa23",
    "app:ai.consent.a.optional.body": "aa7b5167aa26789d20fc47f9db3d6ceca3c8a2f2f559680380859612b0270c94",
    "app:ai.consent.a.transfer.title": "a49bb643ad9fdfbc1921b67365cfed04112138e75d7e732e2a3f97a13409f6cc",
-   "app:ai.consent.a.transfer.body": "1ea46c0cf6a2686282515bf4265a9993e5947434043c177501ee0ef11b187bdd",
+   "app:ai.consent.a.transfer.body": "b39c9d5bc3ed3b7bd439908654a8385393ed9ea94d1d618bf268c76b1483c71b",
    "app:ai.consent.a.check.health": "dcdf0109ab5de410e93103960297895f9f1565ef1a339fe269dd87ab2497c9e9",
    "app:ai.consent.a.check.health.detail": "5143d7dc0b741e1d5fa69b8f3b0aef77292f02a857fd85a9ab6886d96bde8795",
    "app:ai.consent.a.check.transfer": "8ff11b94c56bd266638c14800481b13443eba67d66f842a25183c5743ee3f77e",
@@ -1051,11 +1132,14 @@
    "app:ai.consent.a.region.us": "edf7978baa3ad09113219ca671829b3383220f8c3f2a00b6be988079b602158f",
    "app:ai.consent.b.processing": "7f98a17d24a17e94902dfa22d92a2a3eee754715fbc47354a104e4bcf786589d",
    "app:ai.help.inputNote": "672c102fc3d2c558479d6df7f4f8c1b06c57650ad1d57b275cb588fbad21cc7e",
+   "web:name": "364c37b16d962cf7163b237416c1c61967e567901e1fa889ee2f192124733798",
+   "web:perk": "708386b6e61d083d1c27efee3a14f15b07371700e74dc78ff2648f9a36f0cd74",
+   "web:sectionTitle": "d3996628851a2d9644d11d33c1fd7c4ea511b3540e7392a91b877b72ebdcd454",
    "web:clauses.0": "929e874a693a0a3f287e03ff2f93cbadbbce4118882a7a5d55680d5e1ea09f4e",
    "web:clauses.1": "d2f19fea1e50830eadaa5457a67b75b2f81f5eb6f9e21c9c0bd5460b6e837d99",
    "web:clauses.2": "8a891c564dc89ae95532ab265e38ec8fd4ff4626d5bd13b1341d20bb1a04a041",
    "web:clauses.3": "2f42452ba0dae325b418332451b8abbb4316e305339723a71c90d377546478b1",
-   "web:clauses.4": "c6b10779d018b23ef513b81e3f9dc8b3ca6d548eacab8410b17aebd123a41d74",
+   "web:clauses.4": "400b48b43868a2f0ef44a1e224d11110df5b260531122aeb33853d9d2234d5b1",
    "web:clauses.5": "bc1786c369a08fb6e5d86da436493d8c6d03e3cd6928dbf3c68fa0548847f13f",
    "web:clauses.6": "987377160242b016d3f42e14469b93802fa01f90b176bbf83840cfeda37443c8",
    "web:clauses.7": "936ed93541c80e249a0aa118d644855bcd78791420471823cc78ed849271685c",
@@ -1066,29 +1150,41 @@
    "web:e2eeException": "77dac974c053cafd0c2223bf4096ac82ad4b3c979333f403890ee3721bd0c7a3",
    "web:healthExclusion.ios": "f322a4f3f9ce4b3a1c321e0525844a34770a699b6b134f3d52043683d7f5a434",
    "web:healthExclusion.android": "497fa7e796d9daa7e948d426633e6e40816559c81a4956a3fa1adb2c034262bf",
+   "web:onDeviceScope": "513eb6634cb87440c4e9ba7436ef56268d3bc17ec602e81a13ff1cf4af74cc62",
+   "web:onDeviceOnly": "2ad7c7ef8414de337bdc371fa1f3fb267d4dc4f5d8e647bf72db65594569ce4b",
+   "web:iosAiFaq": "58754e42fcab4a56b61bdd8a189c16c5cf3a8a78275c134ceebaa31fe95dd5ee",
+   "web:androidAiFaq": "cab7bbc77af5ea6099b3f67d71ccfc96807fd1d5a808bca65535b78a3381e474",
+   "web:androidBadge": "3964d29c11c18c5a5698ba2e2b7c8b65e3e36034ab86a4b0085e2717ae7bca88",
+   "web:androidNotUsedItem": "77b265182ff714901e4f5fd55e53a7e3e793ac248e02028c87283c2f31f221f5",
    "web:processorRow.legalBasis": "7338d9bbaa5f635b61f8626c50b81785c7448d393de807e26c3c1066b003faa0",
    "web:processorRow.data": "3f238db0b811a7d397e5e323bb16b0c9c103fd5f3fcfa43205c927d449e18754",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "857b0cf9a1810a4313ac0841fbd1f2ace463d043c9dff7adebc968915853954c",
-   "web:processorRow.recipientContact": "cec108bbbad31c837d2500b61f2e4e4458c92ca118e9cee9a293d9d38ce34445",
+   "web:processorRow.recipientContact": "23cfb8d461bfa0f2928954c3fe8ab7054d27eda4a35680b8b2e82a941125ccd0",
    "web:processorRow.purpose": "1336e17a8ceeec1104bdde95d20d88876a4cf9f84cea602d9c399980fe726a05",
    "web:processorRow.retention": "08cf55cbebf0a860cd7c337930b2b1152c30205d03b0bc5290709052afccc6e3",
    "web:processorRow.refusalEffect": "4892ca3ebec118c1c4117e1d55e71425780a9365ad920245eedb4f8380373598",
    "web:cloudflareTransit": "9f28da0699d763636879bcec67dbcf2116142d7536c8b9b6da0883a04beb0ed0",
+   "web:terms.0": "ecdeec88cab63cb7322f134edf985008d98810357da317746c41e57ac371b03e",
+   "web:terms.1": "a2f0c8f0f3da46b4dbccb7316fb33191846c83be98ef432048a1e959d4a85560",
+   "web:terms.2": "58a6b751d0831262eee735556afcaad0ec273af99b6a08f044c22244fecb210a",
+   "web:terms.3": "a4467c2e640183c6ba661a8a669950f44d84f50bc69a1310e8fdfdd0dd9b7c00",
+   "web:terms.4": "2356ddaacbdc3f27b66f4f331a9bb4cb812889f2415fe67e0e465d0c70eec8f7",
+   "web:terms.5": "6da6672e42225fe1ea8accea8cf76d78e51ff03835090faf5bc138934fcd47c4",
+   "web:terms.6": "adba7e34d01ac664ec6f678acd40115ef6f9bda3bc55a886f261c70b2bf23c53",
+   "web:terms.7": "158ebfb35b58f5be932848d9cf3e43de696c0122b19517c786338143b3cf6754",
    "web:usHealth.categories": "82addee1503e228efeee7781293ee09a93515071c1af8d6f78f2a88097e9c12a",
    "web:usHealth.purpose": "338f8a2594b906b166a81e450f36bc230e0deb1389e708e2e98957e4f61177bc",
    "web:usHealth.processor": "8e9ce29b4aa70f9d427ba020c2d9ba78d9defe30fa1eab395f160c0c1cbc631d",
    "web:usHealth.noSale": "a34b19d5aa1e0615b42ad914fffc19b58bf23df7ab6f2714524767b1eb6822c8",
    "web:usHealth.consent": "d5d7fdaaedd6fd2064e76307cf1f036ae4466b505c98ff9b5fdc51613959330c",
    "web:deletion": "3ffadd207dda4cc6cb812074bb2215bbd1763ec5c41633d666cb751787b5ebc6",
-   "web:iosAiFaq": "58754e42fcab4a56b61bdd8a189c16c5cf3a8a78275c134ceebaa31fe95dd5ee",
-   "web:androidAiFaq": "cab7bbc77af5ea6099b3f67d71ccfc96807fd1d5a808bca65535b78a3381e474",
    "switch:aiLocation.us": "c1e1083a1d56f390ccd0919596fac64b5a6af493f66a0c01750701756b300674",
-   "switch:aiLocation.global": "adcbff98d7de1a2c57dd18b706a3a3a2a4a1d92bc77b401653a97f5a4041df9f",
+   "switch:aiLocation.global": "47107ed8d62551bd02407371699177123ebf25e963250a8aec227e8ac2d42501",
    "switch:aiLocationShort.us": "b53411981acbd70ecba85ca90c05a4791315cd398797652924dd0d6053cc2e76",
-   "switch:aiLocationShort.global": "c9db392cf9f02d84f79312d91f02f7cb7d23bb8e8eb623b5080aac56f0a455c8",
-   "switch:aiTransferCountry.us": "56f27f019b7fef7b74a193a8d6ac65f2d36b4d5edb15774398f7a3de63e8f5df",
-   "switch:aiTransferCountry.global": "88dbc9f017a13955597e28faa1235446242a3e3fc5e190ab375d60d0c12ec3ea",
+   "switch:aiLocationShort.global": "d2073d801c5b9ab556f37e59058e0268a9442a97c2f98a8e5a515f5739c46735",
+   "switch:aiTransferCountry.us": "46d01586f6dfc8d53a88ad515c75466a25d9ba100ecbec968a301a7f918004f7",
+   "switch:aiTransferCountry.global": "6310a8be0df12964d2a2771e5a64d09c0935493ebe06dc9912e8b7132830e552",
    "switch:aiGuardrail.on": "67ffcc98d9bf4cbee5ddd3a9878850ed1ae14166efceffbb454a832b3ec0c4e5"
   },
   "fr": {
@@ -1108,7 +1204,7 @@
    "app:ai.consent.a.optional.title": "8b5e38fcdcecabccecb97875b7681881ddf94c8c634134cc4508e3f12bc2bc29",
    "app:ai.consent.a.optional.body": "ac8147139e40fcdd8bae6877cf47abb759a19e32509b84aa6c1e72138dba8be6",
    "app:ai.consent.a.transfer.title": "6cae39cec65ef8a58bfa5d868dda36674a214e9167cc0a7f52816fae00fee200",
-   "app:ai.consent.a.transfer.body": "9b0c452e399fb0b0a08073b2375908d231e4beba764d010f1450bdc4943d001e",
+   "app:ai.consent.a.transfer.body": "222c38f774a5d7907c9f7b0099a56d8694a34312a645d46fc885e8e4690fe4ff",
    "app:ai.consent.a.check.health": "6f5236410eba0d42b03acfd11aaa9590433df2740e1b89c73d5fc01b24f45d2c",
    "app:ai.consent.a.check.health.detail": "1ab56af655964063c0dab9c6fae56d9308f8bdaae073f406dbb320a88fe2585a",
    "app:ai.consent.a.check.transfer": "4a68fc84edd7fca285c28f22b63d11075a0885f784885edb18888d40db7ce359",
@@ -1118,11 +1214,14 @@
    "app:ai.consent.a.region.us": "3a12225a8562eebb64ab208684b004b15e3035685476baa996ee0b0858a4d661",
    "app:ai.consent.b.processing": "ba116a985201101748e0398de391f3f51740f38eea41700f58f52ab84a26fd5e",
    "app:ai.help.inputNote": "ce3e2574b063b0473bff6a1ed9599e3eedd8bf2f0239464561ef7a9f0c63ec58",
+   "web:name": "8182d43a70d5049e70e268651c90ccc46123cf114cb44f2d07d102d7682f2000",
+   "web:perk": "3495e1a84bd99bf2c9568cc5c2f1cd33e09f8e530c6246a30b8b04370cfb9444",
+   "web:sectionTitle": "4d0f9e3a1f88f63cdbdbb4a09d205207e19d9904904334a3ff8f76905aad524c",
    "web:clauses.0": "50ce1e2ff65b9e9c2b2ec30d14e95c63b3f97aede5e1a70714db3ccf06e0f1d1",
    "web:clauses.1": "352851ca9a6ae025ce1ac73d6fe39fb8b4778731be93cf575bc924214c03d10c",
    "web:clauses.2": "f03da20292017bfb640e4c52b80f5759a98cff304ad542fc77a28bb7d82799cf",
    "web:clauses.3": "8c7857b1ae38e600a84e476109f3507778d16087449a21b15528d05885c9f68a",
-   "web:clauses.4": "c79302f3a39680c613811a86be5638b31d87c8ae6594d56f01d81b1dede60628",
+   "web:clauses.4": "b0e3c827f5fb9b284e9960f6525131cd7eea4a4b76bed097226e717167b43ac1",
    "web:clauses.5": "eb4e9618c7481f603eddef63bb1be5f48b80cdef8f926a1df6f1a9368bce4c37",
    "web:clauses.6": "3e920e868a5a9f3f5710b2480c5206be9914f75ce8595900ca8922620fab6329",
    "web:clauses.7": "5bca96f5f78fd6bb37106f031d7da86734d183ee07ef7439b0aea212df298a9c",
@@ -1133,29 +1232,41 @@
    "web:e2eeException": "76df435dd87bb8e41746d08ec09710413da8db7d2a8ba15782c3673c24bb7129",
    "web:healthExclusion.ios": "9e0de50530dc168f4dfbd58996cc22584cc43b8ff5936df6d7eb298d9389d2de",
    "web:healthExclusion.android": "b1b6c8441ac8aaef1edd16716ee7ef7a159d40037dbb6fca4360cce86a8c801e",
+   "web:onDeviceScope": "35a1d235ffe460b0d7ff613e0ffe94e02e418317bf42e5d1cee9cf3f22c1e370",
+   "web:onDeviceOnly": "d629b092560e28757ff04fe2b78ce11e6d3c9c0e5e4317ebab4151685530165b",
+   "web:iosAiFaq": "d562f2d8a8bcb5e9facf9c769c5e9180ee127f6d6c8f02ceaf0710c593316f51",
+   "web:androidAiFaq": "29eb91f3c81c65d7ec34122a68d16454086818b8a62c37f9aed5c031241d594c",
+   "web:androidBadge": "debd59b634312c6ab94c5465f0d9804b8f0a0a5d3f15a275684701de572e7581",
+   "web:androidNotUsedItem": "02bbc9167290ad6e04a26ee59b5ddbfc42a210a11abdef6d6fdc0415d5faea8a",
    "web:processorRow.legalBasis": "d0630c5896890bc4ba7e67e847c9d8014f1e1933eca2c9218390d2d6e3673ca2",
    "web:processorRow.data": "37de53331cda9c71c9771b481121c162d9a021c4283d04dc545bb80716b69250",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "e95e4ee2143774b8b70be1202ef06f98e459239fb2ac0d51978113589b7055bf",
-   "web:processorRow.recipientContact": "3475684e6bd3cc4e425ca286c84f4a2934ea315514cfa46e5185e2e5bfe44ca7",
+   "web:processorRow.recipientContact": "5b3893bae0ea902719e13ab0822c8092884d97f471413d7c433fa2c7945113ef",
    "web:processorRow.purpose": "c8656a3b5d0d6e2f6deab13cd4dc7176eb2f77c790e3741ea043ba29ba097f85",
    "web:processorRow.retention": "9781ac75e69f7bc2526b5e4f058e523e25e8944171a21f72205e8324b4c74bc1",
    "web:processorRow.refusalEffect": "daceab011d8fe13d9d884aed30f05f3d716e609e8234918c88d6122b03109939",
    "web:cloudflareTransit": "3b2e43b866bea2b1ff26ca96dde1917fd40576a2e4b74682223779a1eb97f493",
+   "web:terms.0": "a46a748d52418f1160ea042ca60f6fc73b722daf137f13aee523bfe5025c8195",
+   "web:terms.1": "28a01f5f92069f809c1028603e112c4059d13d42c2a2b84bbfa8eb7a146a07e9",
+   "web:terms.2": "2816f20acffce844095d52fdcf4116aa80bd3d422bbd8cf09a325c3721089622",
+   "web:terms.3": "73f2bcc34d223ab2cc1e89d51e864f2f09e1e100c22fb842692b65099a9012cf",
+   "web:terms.4": "b4242d43c7b3a40cae75ba5d75bcb53d8d44be93f5a8258a2a177da8034c2a1e",
+   "web:terms.5": "7b2958784717346a7291db3ffc05f7bfa8ff722d8727ca5e5bacd954c293a546",
+   "web:terms.6": "67113770dd3f4024e9e18f3656243753b27b3cd4561eac78362cc04d93e819f7",
+   "web:terms.7": "40a18450b3f7ea1b171d032eba4bbe727fdf4a596211f93093069ac91463965d",
    "web:usHealth.categories": "010a460a30cd70c35b0b820063c02249c348e7fb4c218b5078c5c3016b575c99",
    "web:usHealth.purpose": "067a5f7220ce392592985dfcd7d970a5066e0773bd2baec97c08b59c343bb369",
    "web:usHealth.processor": "0f1734c5b0178927f5f1bbe94597c7c54b2e543f0001e4a22db4b851db5906b5",
    "web:usHealth.noSale": "62d910163d257ab263300dd8d959319daabc35c6b2f1b3cbca50b11452be0780",
    "web:usHealth.consent": "d12995ab6bdd23505324d05d6cc5bf36e32a3dc080b7ebdc74a95cd7a44960b6",
    "web:deletion": "72ae6c8271fe49e8f7396d6ff06e8404328d0f010a09e798301b7c3de291e70b",
-   "web:iosAiFaq": "d562f2d8a8bcb5e9facf9c769c5e9180ee127f6d6c8f02ceaf0710c593316f51",
-   "web:androidAiFaq": "29eb91f3c81c65d7ec34122a68d16454086818b8a62c37f9aed5c031241d594c",
    "switch:aiLocation.us": "432905b4967796fcadf5a7595317271c9d272eb23b3eb6e0878418208623b4a8",
-   "switch:aiLocation.global": "a5771adf8ff7b2a4851fd9d961c39a025b8027a7bf59088016556329f7c63a5b",
+   "switch:aiLocation.global": "f9a456e9a30e3c95da51364c00a0445f4f7225e35ca49165c47d41f66d32590c",
    "switch:aiLocationShort.us": "a9fa54846693fb2c1513387b4cf32a9952f76de909559f8301c6f5b12bbd7adc",
-   "switch:aiLocationShort.global": "563f7cf63b48c6241109d3ddb0c645d1fb9e556843153fbe162ca1b833a5fe6f",
-   "switch:aiTransferCountry.us": "6ca41c471766647f3fc0ef8dcd8aa1754795769f4523a6671a5c8c679d1df7a7",
-   "switch:aiTransferCountry.global": "6e19e2d37ff8e2d0f29c27b157800f78ae2e96175ec146679248d673e80a8a18",
+   "switch:aiLocationShort.global": "96a8a4c862e289d69b7a7124e62571f222590917b3cd6319e1c303c214ccdda5",
+   "switch:aiTransferCountry.us": "cdc50d2dcf649f575915372b169953419c8c4c88c9f433364df38eafe0798593",
+   "switch:aiTransferCountry.global": "b8c41237db9c472e46ca9681341058bdcd23b47440b08b67f9704caf587ff87e",
    "switch:aiGuardrail.on": "2ee91c8a3cf9f95eda895e6af3e2a5e607d0ee1b4b96d96c09af051d07131bdb"
   },
   "es": {
@@ -1175,7 +1286,7 @@
    "app:ai.consent.a.optional.title": "ed0a4f36a0b341f1c8555f3081eeb9988c74f28769b2857cae9429f4ec1b9eeb",
    "app:ai.consent.a.optional.body": "aa377800829ac58d62ad2ec73c2263db030a2746ef243c5c08a3332834219ed4",
    "app:ai.consent.a.transfer.title": "129d21d105958407553b324a2edc39b72898f80f8d2fa785c608a381a2a6f55d",
-   "app:ai.consent.a.transfer.body": "538c34d575ae72cf2cf49508f2bcf655a7798f920bed6ccb7b8af08d46cd4967",
+   "app:ai.consent.a.transfer.body": "5fffbbde21851140bbe912cb7efd88eb57e43ec30341ebb78f3a0f5c178bdd56",
    "app:ai.consent.a.check.health": "0ed8b6e93d141ae7519ecf5d60e7f3872d7457a2de62118619fc983125437db5",
    "app:ai.consent.a.check.health.detail": "15fb9b52f7f40286e134afb561c3b4c6268e5d7e5b9260bab7b13a8d83669941",
    "app:ai.consent.a.check.transfer": "268c3af687cf553e70a7e6c4beceab5f83da42724219e0b931cda8bc39d5b502",
@@ -1185,11 +1296,14 @@
    "app:ai.consent.a.region.us": "caf059b6f0a09aca76d1ccd1e274d4fd03c7b37722b04ca7f738cf96cceeb136",
    "app:ai.consent.b.processing": "3fe204686a8553414057a8ceef438662d7ecedeef157231c749de0cb2d13a3ce",
    "app:ai.help.inputNote": "14230619d0e53e988bc70ea4a0676f25d7143e7c8493a624df523830e35191ba",
+   "web:name": "e3dcdf4f602ff6c5f2f9696963575b1cdc5d07e0d7745f1b381670fbb43b62eb",
+   "web:perk": "c2fd9050e474d3652731e32860a47f8183ca366d7ebb35ba11eaec7dec91a0f2",
+   "web:sectionTitle": "a8976ced115720b7976a5dec521d1974d1ed0a1521dbeab1e4197659649321f0",
    "web:clauses.0": "4b1c9ee498fb919dde21ff97c6c56d0bdf20542aaaed5751c012c537ad150c4f",
    "web:clauses.1": "c51e86f229bdd273991ac5e7c9587ffeecff647b5ca7c2c0ec7ce8ac2b46220a",
    "web:clauses.2": "899af3d3c4d46f4cf19157558d476ffe65be36e4c80452d4d4194b80c882c458",
    "web:clauses.3": "276f3daa5471a2c65706cbbc473de2de45aec580df80d55d0129b4bfcf6f7830",
-   "web:clauses.4": "6cc2dcdd3230b371546f2e52d41d120983fb9d932863f11e2462caaef002ee62",
+   "web:clauses.4": "4d741348f7c92b3b173501dcfc7d450e695bf0bf64991b5e49614b6e42517fba",
    "web:clauses.5": "04d4fd63058b8170b7642919f16fe2dd980b39224849855b51008b8828a8fba6",
    "web:clauses.6": "ba1fbda335e232c2933636537272e68e68527f2e6ff168dd4c97e0948e78d75c",
    "web:clauses.7": "bdea340abb76da06a465323ac4c4c6d61553b0470461ffef227b548440c262b7",
@@ -1200,29 +1314,41 @@
    "web:e2eeException": "b4b7ae75de272bbcec5414a2434f5abd38ba25ae7ef637763a01ceb8c02c3325",
    "web:healthExclusion.ios": "467a0ecaefdfb00f0949daaa597518252fd07d37264c22890d834cc2bb31dbe4",
    "web:healthExclusion.android": "756d05132b10254cb30ef190f99e86d6373b48c7c826bd251bd502b501c56cd5",
+   "web:onDeviceScope": "71366ece1172f81e35ac0b24af0c10726e290cd968e7f1671cd53e675f185a3b",
+   "web:onDeviceOnly": "18dd269a349462287ee56cc9354aa07fac42a5159efacac98052965538ddfd5f",
+   "web:iosAiFaq": "c1d44673c8623eef38dda090ce01646990c3439becab3beb07a337b40c7f74ae",
+   "web:androidAiFaq": "a0e27a478a3f90b4d48dc719f305e95c051470d7e2cf152d251c35bee680daf0",
+   "web:androidBadge": "d4365d7c6384f2d776bdba3c9263d7b9ff61d96b3ca580c5a36cd24e88aa6f01",
+   "web:androidNotUsedItem": "d8e91765316cacbedf854f7dd644c1a8c2ed319a861bb70238be5226104107d3",
    "web:processorRow.legalBasis": "7355fc1ba506514cfb42b5ab566e65cbd8675e1723ce83bfa0c26f9df572105d",
    "web:processorRow.data": "1603d798d900a03fa8590bf6430340a814124329a0c1cfc96fbfac4062a60857",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "1fb5b8ebcd370cf1ab8fbf5ae4e5dea5397ecb20f987bcab5f82f7a5cedc4b92",
-   "web:processorRow.recipientContact": "5a87b58f4d1f8b6bee6b9b7eebeadfa240dbe5f62f726af8f3341f9679360287",
+   "web:processorRow.recipientContact": "0d6bb4a2463008bab68541c7dca678267cd5b7b8787d024e4a14aec2f275e7a1",
    "web:processorRow.purpose": "a73485c18d7f8374aa157e59963e5a9424cd78065da8c99dad663dd7b388759f",
    "web:processorRow.retention": "86d45115c03ca3214dffb45dd788dae8120fffc482c4e5e1a24a80f40f831dbb",
    "web:processorRow.refusalEffect": "4015da5a651a1df80bb630d3daf2ae967baf4bed15525c0eebb10daa9b001149",
    "web:cloudflareTransit": "7a5d74ffbcab5e05751dddfa5fb265e9b40bbca6f0611ab9c30bcf922116cdbb",
+   "web:terms.0": "98f8c39e40c5cd254dd5f78e74c2bf7f4cb8c219858512f18709a4be81f74e1e",
+   "web:terms.1": "71bced0c3c743bc80474647ce2c0f4c99f7e17b3ed9053726f09fa12c9cac48e",
+   "web:terms.2": "f78c4d48004675c21f1b060c07802573576220873781307e238277c63543c087",
+   "web:terms.3": "4c510346feb320e8255835606642cc2ebd73226e6c23b0cbea7580daf28ab950",
+   "web:terms.4": "d0d00cd5e72e86921f4128eaae3e05a37bb9e1b289ea30f97605a56b3b13c776",
+   "web:terms.5": "fda12a15751941db197c4ed080ef68ae57838cf929e0a26ee03fe3ca67bfa0e1",
+   "web:terms.6": "83b0304edd0a9146088b17183db459b69773d28b0b52814ffc678d2d5286a43c",
+   "web:terms.7": "f5a323e8fe0bd48325bdc60878a884f1149925abbfa309a17e154e4bce096c28",
    "web:usHealth.categories": "7739520bf60af7327bebb1a6421eb85751272614cf27fd4ffaab52e94dd90cac",
    "web:usHealth.purpose": "b619136954a21bd13fc5c56bd888b5adcea46ce90c930d55cbe0cf1e4d6ae594",
    "web:usHealth.processor": "ca879ca8ef8e6ab3f81df3d67cec33d1039faab013090d29d8134117bbce1f0d",
    "web:usHealth.noSale": "b630b61f32cfbcce4a307c7bd65a0ab6d989e39f5a1461a61679450b54a0a22a",
    "web:usHealth.consent": "c66976d4031e9a2d815e6bd4018ff74f17bc960aea31a104c65f7bf86e8dd520",
    "web:deletion": "78ace2144fbede78c58ac2216c9412131c93fe25db9a28c47d9c14d79ab9219b",
-   "web:iosAiFaq": "c1d44673c8623eef38dda090ce01646990c3439becab3beb07a337b40c7f74ae",
-   "web:androidAiFaq": "a0e27a478a3f90b4d48dc719f305e95c051470d7e2cf152d251c35bee680daf0",
    "switch:aiLocation.us": "1939700e89945f19f3e2036b54a0ef1547ee28d66ea02646267330be5ae36149",
-   "switch:aiLocation.global": "f89c5161268703f37034302d14ccb8a35ae5a70de8f5e171544aee05bb36b08d",
+   "switch:aiLocation.global": "2212146b3214c4fcc2961120e01f1df67b1b16f24449a3488b2e06686eb74b14",
    "switch:aiLocationShort.us": "20d1a5eb0b1a7bc0405a45d21b7b81d1e262b81bdff7f5f87712035893a0455c",
-   "switch:aiLocationShort.global": "4c0dd0e8d6cb2b55f1b63041cfe75ded5b708344b348eb92d0006a53e90aed2c",
-   "switch:aiTransferCountry.us": "11a07bcba152d43b278206dc06701f55ebc431c7086f921923d226283360e48e",
-   "switch:aiTransferCountry.global": "1298cb912cc3491048fd372359e84a2d86bdae9a130ce8dec48d9b0866e8143d",
+   "switch:aiLocationShort.global": "3beb2e6f9557e57de7c362a40c1a5113073a723d726418955fbfa1c37ac04d52",
+   "switch:aiTransferCountry.us": "cf2a4088f7810d3c76eb72b4b03b1041b928a363b0bee9dc2928d31310dc227f",
+   "switch:aiTransferCountry.global": "b5f2e0e832f7cfd4d406beba02a574bf5082a53940677b7533322a65813aec0a",
    "switch:aiGuardrail.on": "c6489014a441ffb6ff6dc1096edeb80b96b59790753cb1d89e27f633ec679347"
   },
   "it": {
@@ -1242,7 +1368,7 @@
    "app:ai.consent.a.optional.title": "b75cdd3fee2d22e8a14e861730e17d5f4c5d9f102a32c1e5a2d6411d54ffe7f3",
    "app:ai.consent.a.optional.body": "a680bee593f2564e8bb528360aa03697f953487c2d8abbeffb86b79ea29ae9f3",
    "app:ai.consent.a.transfer.title": "87d34942a2d1db9fa69edfbd0f9d4d51b3a90f3198eed533764bd81a67e84ab2",
-   "app:ai.consent.a.transfer.body": "669f880bddd76d4f6570a5c84b79b6bec5c544a6bec5b1d219f52da40b1a1f2f",
+   "app:ai.consent.a.transfer.body": "4c245d05b8660b021c605c1a4bf41750bcaea8a2acbf17c89a180cbc8afabbbc",
    "app:ai.consent.a.check.health": "e6ce1d61f38fd5777f19796dfa6c66afc49e78c9ce1328a896b1826a70d285f5",
    "app:ai.consent.a.check.health.detail": "9cee260e032e04e539f3848bcf22353372d3c4d4296ae309a9b21687ac65c240",
    "app:ai.consent.a.check.transfer": "6e7df001e6660ae83c47ae10d55b4e60c659d7b27f0b32499729220001c8e12a",
@@ -1252,11 +1378,14 @@
    "app:ai.consent.a.region.us": "2955ec491ec25719edc2f0c1cf2de80f7beaf657c5c7af844cb0b1cfc5c07995",
    "app:ai.consent.b.processing": "f9e8221b051dd58fc46d59dc096f2bb6c35277c030bb6b974f0d8a7cd4b0e7f7",
    "app:ai.help.inputNote": "ccc73ed1184210afbd38ea4a1ff5eaeb991ad7cbbfc4f106b957f40fec8ff076",
+   "web:name": "466c71bb1966769c7400ff2509a36bd5acf132bf48df7b01968eef8d69a5c46c",
+   "web:perk": "0cd186532cea295bb7dda0f53d8d01a4d81e36c14e406902b9ae47fab492fdad",
+   "web:sectionTitle": "d4eb59333f5b4f618bd54daf1f28b1c00efb6042ecdf1731e63952cbd429278d",
    "web:clauses.0": "af50ba7ee089d4e3d48b7912cffef1bbdef14b0d666f19912c8eb39ff7e93981",
    "web:clauses.1": "bc96d2bc084dc7b4438635dccb8f499c166711fc65e806038b62f888cb163efa",
    "web:clauses.2": "0968e9797f08811ecc012ff5150039fcfbe4dc4684c64ecef8323bf96fe2a827",
    "web:clauses.3": "4a1e4e272d0979e27437de6c35c86d0f9188104a568834924e73dbd4e21b12f8",
-   "web:clauses.4": "f22a697b509036a1d990e9f9b3d25eba018022390b6a5010f70dffe941ab8b22",
+   "web:clauses.4": "8946d7b38dc267f8aa6c2a76ff303028a2674d5b36b31bca9b1a13fde508850a",
    "web:clauses.5": "e69c8830c4bdb8dd583795e99acce02c0df725d1b84e47637b6b6e6528a447bb",
    "web:clauses.6": "34155f8bdc4764ceafc92de30ac415412007cbd33d53cae04554796eb3688146",
    "web:clauses.7": "610918abfb5a51425517a3a5da25e37b161b82f358f427ae1b66fbed3e9601b3",
@@ -1267,29 +1396,41 @@
    "web:e2eeException": "09276ad92f3f0b4248c4f4ec20a8e3dac0519014a3ca693258f5ce47660c8164",
    "web:healthExclusion.ios": "9cdca89a6430e83c928c2c6d6448c2825d24b8941dae32f4629eee1cedc4991d",
    "web:healthExclusion.android": "365286d4e974a98efbdd63a1a145a442a31629a74dad9ac5db39751cb53cddc0",
+   "web:onDeviceScope": "97dd4fe81509fadd5393996fc017775499dc14384bce550cea20d4fc997d86e3",
+   "web:onDeviceOnly": "6993342eab338e429062e94cdd6e0fb8d244b4f1bbb0dd78c852f0da0d1f50e1",
+   "web:iosAiFaq": "b9390361307a12623fe9e592517ce28c45f3069f50656d59280d53be6505cfa3",
+   "web:androidAiFaq": "0638d2945ce08c72a9492b464e43b653182dfeda02baca5c82256fa104772995",
+   "web:androidBadge": "c183f332c7921d7a56476d4702897c92cd51edb454cff9ceee73dea655e088fb",
+   "web:androidNotUsedItem": "b572b2e7ad14fd20fe88cb8890b312b2afa1fa596c8b2fdc9ec0e487e39d6474",
    "web:processorRow.legalBasis": "c2bc43dd249f105d3bdac8828915eeb403a7e4c54bdb2ced51d8379d581ca86e",
    "web:processorRow.data": "e2625f8de8523f49ab4c150c724edde1832c7218b3ec3a02c4ff4b5c5994b83b",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "f24be32f1c261b5fc743ffe66a810fc90dd3f99ba5ad1d1e038235a9d3970894",
-   "web:processorRow.recipientContact": "a71d00b995b01581b343aa4d93b09b07f5b86231729d7442e7f4f8f2ed6e6ae3",
+   "web:processorRow.recipientContact": "b88d4322174429f506942e5ba52e6da568719f6de525c872186d1d88c727ac58",
    "web:processorRow.purpose": "54b800bf1be7a8d000a5d4d572ab0a715c735cb0ed047904365f38741561859c",
    "web:processorRow.retention": "9ec0dae0af85ae0f8f29b685b2532102428c0204e154a2d2fbf5bc1623089863",
    "web:processorRow.refusalEffect": "3b03ec7f9190b58e836ad612260e5dbb883aa7dd9a577463507eab538f4abb7d",
    "web:cloudflareTransit": "74e9a126b83149982a84ecd34fb06ccc504174262b450a5f3869a1717356090c",
+   "web:terms.0": "513ecd30eb6e2ef6ec61e1f96a7129c9f14396219dd789ae1542b03d1e137de6",
+   "web:terms.1": "20ba542736af4c2bb4fa560eb2e2d68f65822792fdb22dabd28ca69cc2349be6",
+   "web:terms.2": "84e4852604b33f0364c620ad6cb860ce3aba609c21db3152e343a91dc0d35293",
+   "web:terms.3": "efb2f0c78ca87962b7a250a0b7301780a387ed3ae0463af9f2ecaafc6726928e",
+   "web:terms.4": "6868023d6126e6213c16d6bc83187f2a3a0035ae3f535960cd2f60757839b0c0",
+   "web:terms.5": "8021d00e7462c6f47772e71273fbd7b8a636e346e2203f720546243d8aaf1d3e",
+   "web:terms.6": "a91791b22b5def54a6c7103fde778700952602b28b4012a379adc48fa6cfbffc",
+   "web:terms.7": "a2713f904e90d0048bc36494c65bc22f12ab62c165f4f714a126d1181929a20c",
    "web:usHealth.categories": "f79a6094b351ebbe08f4032738a32739b1d206d1689598fadaeba317f60c4b27",
    "web:usHealth.purpose": "e67d34974877e4ce036b4d6d1b50a635e63f0692c071597754047d876778f6f2",
    "web:usHealth.processor": "e5fc39083017e15d53fb58e9f6507c085f01e4a0d26bfb8f682ff0db82fef240",
    "web:usHealth.noSale": "538eae9da01f9464a528f7a0f88788d2bc685312b9a8d1a2db2bec5a7494e9e7",
    "web:usHealth.consent": "00bde434a0380528ace23a18af072ad2dd2f1c397ad35e8744466c6d717b2627",
    "web:deletion": "e1bcd02a607300b42e85e4b21ad3212334174f631fd368c51c1cb3a2dfcd6544",
-   "web:iosAiFaq": "b9390361307a12623fe9e592517ce28c45f3069f50656d59280d53be6505cfa3",
-   "web:androidAiFaq": "0638d2945ce08c72a9492b464e43b653182dfeda02baca5c82256fa104772995",
    "switch:aiLocation.us": "44869aa7bb09a9c30f49b85b3fc16d0f95208b858cc3cc97a4b58b660e9794e9",
-   "switch:aiLocation.global": "11b97939b08268c9ed037804eb87933f631b15cfe5170bce1b31e435a7277540",
+   "switch:aiLocation.global": "54b41401b16c0ce5c7424f7cb30fbdc99efbd00136717c37a18fb001dfa3f27d",
    "switch:aiLocationShort.us": "5b27ae4e49cddf0f877d069b47e04fcf0e4afb427316d003d19c0164fe6cb5a9",
-   "switch:aiLocationShort.global": "ff15d4b80e281812599844697b6c51b7dcebacd937d618b54f88b5a90674c1cd",
-   "switch:aiTransferCountry.us": "958dd8383011e328a7df909d55c8f2392ed6f4bf9701c80825e41b5f3956befe",
-   "switch:aiTransferCountry.global": "3e70f737345f0cffd87fa80f329d825fb3e8f186689ade679c0ec6626536346d",
+   "switch:aiLocationShort.global": "f5cbacbce271d32d8f9bcaf34c446b183922047c9e29fa323455625ca619688a",
+   "switch:aiTransferCountry.us": "58bd6140e638954628fbc0ff5cdf1954ae9e23922c8df91f0041a3c9127bd951",
+   "switch:aiTransferCountry.global": "adc1f692b16be32ac83466d4fead1a1b2596a48e61b6b0b37dd5248b962e354c",
    "switch:aiGuardrail.on": "ad54a37ebc3d4a6a44b2c445d47c3f1f8167f505a5466748596cdd09972ac09c"
   },
   "nl": {
@@ -1309,7 +1450,7 @@
    "app:ai.consent.a.optional.title": "dda42567feb1166f2581e1fb0d7e9588a21c34c0570ddab2d5e0f4d7d0de2700",
    "app:ai.consent.a.optional.body": "f148e469574551599d6131cef791ff17795a8232f1bd2361d81a9e83eabe8546",
    "app:ai.consent.a.transfer.title": "b29882b81ee76409835ba22f2d3d77c43cbf0c094162152ad015a6c4fec174a3",
-   "app:ai.consent.a.transfer.body": "f9052c2cea04ec6c7ce758e14c2201929c4983f034f85c0660fe3f0a66aa9e8b",
+   "app:ai.consent.a.transfer.body": "eb88ade331aa789b9ed475af135f2903db92e16197b322c5b5c48ef0ebe8f3dc",
    "app:ai.consent.a.check.health": "3544835e439fcf4b297a8f8c176d744696a95a0d87039484c22045ceef6a5a8e",
    "app:ai.consent.a.check.health.detail": "be3fa583a0c7ecb0692af69e1981c5c0b9f5e083abcfc5b9a7f52866e358eae8",
    "app:ai.consent.a.check.transfer": "526967995bf1011020bec5cf02ece2ee75e5ee0620872013fd84147598c49ea2",
@@ -1319,11 +1460,14 @@
    "app:ai.consent.a.region.us": "3aae7b175d068618eb66c3c80d33a0e550389728490acbfcc2adc1c2572af35c",
    "app:ai.consent.b.processing": "c39aaaf6621c107c126eee50d998255b47ca1125afeada1fb60af66089160b1a",
    "app:ai.help.inputNote": "22217d31eaad2e26d8207e1a5f04432e45605d5656e52b0115f71dc05c87268c",
+   "web:name": "4db23c7ed251e0545b99a704d0884c68dc53666cd51fbf26ce532055fe62e1a0",
+   "web:perk": "a87532c56e34b72588c5e4d93427ab2db24061f73b90bbc95792c1fff9632827",
+   "web:sectionTitle": "ac3945c3be22db33a12d5ca00f957ca631b42c15adf0782e5801bba48446b553",
    "web:clauses.0": "38d84d8a8c4bb8541d11d31f6d9745240691b85a4f220ef6b92e1faf04f38fa7",
    "web:clauses.1": "7fea19ef388d676be084243b0fd5da0e13bb08c93a8bf3fb2781e828ac46feff",
    "web:clauses.2": "23f0f01e1de5bef9f5201e2676270a4399bcdee51a235d491e3737ce35eb8297",
    "web:clauses.3": "03fada18a23e603eadcfb5abcac93629a469d5610925cd85b8af6c445b1d59e5",
-   "web:clauses.4": "704bb496e68d410e99371f3daea47316ae5a1417a207553f8bf0f2468f2ccf90",
+   "web:clauses.4": "33f0e1fc5d086b3114890a974cce37f31c80b830885dd3517b6c9cf322b84238",
    "web:clauses.5": "1a793505d3cbacda569a36b6ef6ab88312d99a2eb91dd37e32986ebcf87a12aa",
    "web:clauses.6": "928c57f11cd97907c6e7b523d75fe79ff40cb3fcb004816722a4589a46190c96",
    "web:clauses.7": "ddf08b0f96b58d2f0cc7f5c0595b69e3933111ecad46b5689b32ca3e4c6260d7",
@@ -1334,29 +1478,41 @@
    "web:e2eeException": "026695c518b61ff304c7606f42afc6f5aa2a828bf281b136deb985c18e7b1175",
    "web:healthExclusion.ios": "65252945a32080994a321401356c297e7ff38b3a4d647c010e315b9f10c346bd",
    "web:healthExclusion.android": "eae205876ea39d777f3e4d36532b09d2fd420f59bf26a56bdba9e8dcf6e870f1",
+   "web:onDeviceScope": "7117a3ac20338a3ce04a9c6718669ee2cad79e69b611f8c3dd8fbb5d9a75c8d7",
+   "web:onDeviceOnly": "09ea826f00c9a57bcb61e441800befb32ca5b58d542f8f4dcbe3ceaf591bbdd6",
+   "web:iosAiFaq": "7b8c1482e50475ed91eb743c4ebaf957c65418e955a5d12bd8f9e4c5733dd2a3",
+   "web:androidAiFaq": "d8c4a84431aff790d3edfb116f6d48df565df79f48d6843c2996503a276b9e36",
+   "web:androidBadge": "2743b21a920ce21aa7a77659a1dc061a4e77759984ac4a178c17ba92601c68ac",
+   "web:androidNotUsedItem": "68503133d4aae17696b5934e77bb4fe6c922212f760539a4abba0a931026e4a7",
    "web:processorRow.legalBasis": "7b1845a361a1460eab7f3c99f4ce6b6cffe68a607bc1a1243d3212308046c130",
    "web:processorRow.data": "441f6fdf8560465fe5ba951bfcf3578bcb556f7dc9b7abea9e035bd880606aa6",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "c98223825fc0ffaa28ab6dc6364a25a16decb22500180b865d1ad8107dcae3ec",
-   "web:processorRow.recipientContact": "1c91ee0405241c032e9f697b2efdd1e0cb635a71951a06877a4dbf789d3910f0",
+   "web:processorRow.recipientContact": "c196ddb744965cf626376b416e4abfb1341df12a6b1ace2767ae50231b9014e0",
    "web:processorRow.purpose": "3f69b25c091a43cc9595dbb94eeb834e29b5831d7d302fd449eced69c1885ac0",
    "web:processorRow.retention": "3769277daf6d0fe127a92e1b415ddc40dfd2bdee842be71186fb5cc38ef40a94",
    "web:processorRow.refusalEffect": "6ff129b2226e29cc59458ba6038759be5e2e52e34b2c0972b88530b44a826d1a",
    "web:cloudflareTransit": "160a27d7d512f0ccb15e5809c35c3b67c603d2e90d9fe704b8594f3c37315dc9",
+   "web:terms.0": "bee68152bf5381e6b0c709f30b20acd6b5ad22578158fcb3cf8e542e1c3a29d4",
+   "web:terms.1": "615458160d993b06f1608f1ef8798f9037e767dac9d26a54ff30e626a8408203",
+   "web:terms.2": "6c7b13d65f045f898e1e585254c8cfcb0105eb7770443981338841076bf72ff3",
+   "web:terms.3": "00d95db8b252519c73ae817342d51aca4bb6ae3845d8eda35c3aaf41e3ec5c7c",
+   "web:terms.4": "f0e2671a1331f12f58ca681498f4c18cfe3ba1c4f25dd9f86e79e0e3d25ebc32",
+   "web:terms.5": "b0dee7919af3594835f836dd02e14085a2f9a0d00f120353a83bed4554208ffb",
+   "web:terms.6": "fbd30e64172722129c8c76abfab236d52fb6f07c650a8b067dada7ed2aa073c4",
+   "web:terms.7": "d671abbf843d7c2f618b2952af48676bea313c7ea1eca493415b6870bc8eb40e",
    "web:usHealth.categories": "67d4e1fe5a4b6aed3c36b5e0123f44d146d13e57d803e8b9f6074eb22b5bdf11",
    "web:usHealth.purpose": "980ff7e4f9b5d4dd857e23b8afcb51e8b3f324e00b34679ddd4b85e94e10cdd3",
    "web:usHealth.processor": "3d1ee42d84cab84594756019e7832a97a029994a821dfa36a4947a65677de560",
    "web:usHealth.noSale": "ca2ad1f5aa458d4779b58e8b34f9d4d0acf8e284184aac6765636fe3ac0e351a",
    "web:usHealth.consent": "6560fe75a2b4f0cbde7e18036d60894f5e4805ce7605ef1098b0422cd575b4c7",
    "web:deletion": "3702142ff945bbaa59c498509a019e44c5ee7d1fb5a1582ba64f723cf9dc2370",
-   "web:iosAiFaq": "7b8c1482e50475ed91eb743c4ebaf957c65418e955a5d12bd8f9e4c5733dd2a3",
-   "web:androidAiFaq": "d8c4a84431aff790d3edfb116f6d48df565df79f48d6843c2996503a276b9e36",
    "switch:aiLocation.us": "1a16f4cf92a6f7b7a108bf62900e700d65a350adc4cf1dc6939ecfde4ae66a50",
-   "switch:aiLocation.global": "1d1c5f1d7fe2b42a33ceeaf075d66f2fe6da63443d6dc0e7e31de69485d0bcc1",
+   "switch:aiLocation.global": "8654f9ef0e054bb8e7039c57e8e3442c9cab791880c916c0c629d7d45cd05caf",
    "switch:aiLocationShort.us": "eeb741574e179aa52e28074de73e113d725e116df15bf0757599994be727b3a6",
-   "switch:aiLocationShort.global": "9a80f2fb9abc732ad7a93fe7acc148fe3cef4c629218a1d30d5e0202b49fe368",
-   "switch:aiTransferCountry.us": "d819e2d81a20640153d9a100ea30d8a9281acc8a8775981ee546d790ba053806",
-   "switch:aiTransferCountry.global": "01be31efeeb1b9a4a609fb9020132efdef7a507521e786bc8bc924433c56c2c6",
+   "switch:aiLocationShort.global": "615c04edbc109b3d186c901c03d2fb5b4436ae8292d27f5160a1c5637294a45c",
+   "switch:aiTransferCountry.us": "7cd7339f189644ff64c9db09044a0797447c5993b9e984eed74c759150d3efc1",
+   "switch:aiTransferCountry.global": "949e349c69b126a003a0e556dcf8b741ace8d03616a2961a6f6f0c7c7e7b1c72",
    "switch:aiGuardrail.on": "a665989f52f01368412177c2d89a7485d00c5f195d649bdbc8c30432502c5c70"
   },
   "pt-PT": {
@@ -1376,7 +1532,7 @@
    "app:ai.consent.a.optional.title": "278bef6f03eaa3b28bcf4844f967948a64afa448b2d20e9f39fbf98f14e3647c",
    "app:ai.consent.a.optional.body": "227001522e94f24711b30a4b63aa12b107829c62655deaa0ee99a6fc2596df0f",
    "app:ai.consent.a.transfer.title": "35a23c92449f36688e1bbf6fe9b6a58c17c6ea8428aac0b751036773257188df",
-   "app:ai.consent.a.transfer.body": "c60c4905127c0c2948f4dedb3638489feb6f217b6b3707af9f76c46f242e20a3",
+   "app:ai.consent.a.transfer.body": "e1a3740b51cd7a6529536f0cdec3e05a388dc36358bfb8cf85428b1fae4f4986",
    "app:ai.consent.a.check.health": "bce1ecf5b50809422b68607b4c93b6ab5e9050b2515599db94d82bc32a47126b",
    "app:ai.consent.a.check.health.detail": "e1cbd1ec385b5650d6de7b25915f90cfe3a7b7d23cde5f09fbad2e88437c4d60",
    "app:ai.consent.a.check.transfer": "66cb0642f8f57e6aa08ec494171f05894e0bf327f30d75f23d25cc808b03e1cf",
@@ -1386,11 +1542,14 @@
    "app:ai.consent.a.region.us": "650ca096a4cc5b5a804c7edc83a259bf5cf0fb7a77cf51f3fece41fd78e02a30",
    "app:ai.consent.b.processing": "a3983d3e3976d30992f3be8fc50396c2527b92e6c25abb849bfa53394ca0a90a",
    "app:ai.help.inputNote": "8f6565145f0270edb666f34503566545a274be1a119146012eefacfe9bcb2904",
+   "web:name": "79142d74d6c73b5ddc46130d505a1c3c926a56e6d6a94c4c0e656ae13e29daf1",
+   "web:perk": "dc683ce11533f75f66bffc2e83bbe8909ff6d533c78fd8e40aeace5a4e1041b1",
+   "web:sectionTitle": "1879d55f3204a96be9a93c9387d50896b3fe71e7a84b67e94f8a9c8788d37a24",
    "web:clauses.0": "32cfbb8cffd2b41944b425c108d5fd9aa52f6fe45ad84548477ff885a7958d8e",
    "web:clauses.1": "f012d0172fe012c814ffcd480191c2824d40366830e4e7c4df1f4db52da6ab64",
    "web:clauses.2": "837f1de397380006091c2326a3857edf834117c23cbeb06990dd36bd01a1e484",
    "web:clauses.3": "bb77a9cea47d353856f7b23909ddb9c3fd3ae45c06bf4b1fd07d8339a8f382b1",
-   "web:clauses.4": "ff7a645d479f2a006e13bc8f02062826284b9e667b20cc0871415f8c60238d41",
+   "web:clauses.4": "9a107e31764a1e0cd9cea9c81daaba443c5b9797a6c5ab262d4a092dc8cc1f27",
    "web:clauses.5": "1543f18058535c65511440f67b0532165856cc344e546cf238ae49b3caea9209",
    "web:clauses.6": "6d44f5128a428ea9c9d7dd6e1eda0d87101202359e3ed5a6c467905c86bce267",
    "web:clauses.7": "f87734d9aa2c9057b08fa6ca589cc2ed2d7f97a27dcb7e33726f71481f09766e",
@@ -1401,29 +1560,41 @@
    "web:e2eeException": "c929b0fd0612daf6c2a0c6596ca1026c16073a82cb1e432a58ed388655651e78",
    "web:healthExclusion.ios": "5a684cc574743ab2c5b609e2be85396cc3697ca10a8f0833f553770d55c0605d",
    "web:healthExclusion.android": "43ed87c307f9898c496b0ef2892b653353a17feb413c7ffe361725841f5d6516",
+   "web:onDeviceScope": "1c9d6e34caabdbd09530e956102c5ccddfbbb4839c6688f91da1b831a0f01045",
+   "web:onDeviceOnly": "14c419247873be23d84a4416424106ef36d8eeaf803bffd151748865c4e171b5",
+   "web:iosAiFaq": "6a96fba827eb3e367176b440478f699aaca34c4ee028cb490d2c5343bc5f8f02",
+   "web:androidAiFaq": "490d8eda61005446d3ad3726861927e650d3c77416322c6c1ce80c7dcbaeb7ae",
+   "web:androidBadge": "baedf47efc3193f1ac67af95f2d344062055b7c39de37a538a1a87d196d37e42",
+   "web:androidNotUsedItem": "d088e161ec496b750c34cd5ec1e75f06b82712c62be8d62f2e7eba9e0f2cf79c",
    "web:processorRow.legalBasis": "6b3c8c15754e7f981000e16dd671f1e86a934507b342a72fc22a724c3e934eb2",
    "web:processorRow.data": "af27ccbc4fecc29f55c02a6af08b8e293981d794bdb1d82f8be1821a89652891",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "7cf75a21ef4393eb1350420be250053e4471e83b62f61cc2f38961322219bef6",
-   "web:processorRow.recipientContact": "b44bf68b5356afdbfe7e27c65dc4c4b4fc0e12ca63eee42e02fb8043f70d7e45",
+   "web:processorRow.recipientContact": "b6bae9f50846840737e1f66cbfd1f8b7fd964b5b61e7bd9e9d79c61f5717ea68",
    "web:processorRow.purpose": "c1cf103793080dc9378303f78f61c85d160967f4be46c1867ba99ce15ae8b669",
    "web:processorRow.retention": "8041574d0fe47202697c50c3b39d31718d209da2bab677eb69758761782ba4d6",
    "web:processorRow.refusalEffect": "36fdea333ebfc268ad72ec6749d179f486ccc7280f3c7c6e553a938dfbfc6867",
    "web:cloudflareTransit": "de7c72823e9bcb87db1267d04c2fd5885cd759ac72910f4b94c5e8de1e014984",
+   "web:terms.0": "f25dedbb9076e436697f7c4cd2f2fb59f4c4219ae6c5fbb2640131bf3eef3252",
+   "web:terms.1": "af45fa67692523a5bb0cb2f202363c7b815521f492a840009aef7953ae17b840",
+   "web:terms.2": "adc9b57c410709250e00d20b45c8665de4bd43197447bac7db402ed4fa3bf7da",
+   "web:terms.3": "c195c7d5ace631c86a6d46d5f0f45622d7731737bc455c6a552bed836aa54a7a",
+   "web:terms.4": "0492d26ad32ee15c18830e0414a7b194fe76e472fbfd051cd5f1a97453cde168",
+   "web:terms.5": "d4ca2fdc2e290685e1007a5df26829117f58ddc61744ddb714f7b507d6880b8a",
+   "web:terms.6": "e092b769fea9110cb84c07ed4d24faf09b562f7951ffcd8f53fd5b899c2ea869",
+   "web:terms.7": "3a1aee74b0f1fa03d7cb421665201cc7c0cadea65294147815902236fc7df648",
    "web:usHealth.categories": "7cbe314118d82e3d0c009900b1b79ad76f192ea1496f18c7730a2136f5e6680a",
    "web:usHealth.purpose": "6361035dade2dcea7c631bd7d790cec1a4763149d4490987b901ec32c97130ad",
    "web:usHealth.processor": "62907783000a0ebdaf95a1fffdb707abcf398190dd1c592225e65c8ab9e4ed5a",
    "web:usHealth.noSale": "87cca173e0e7f977df3d28a323d8929d459ef5ec23f73cf2e97d3906626eeee5",
    "web:usHealth.consent": "2ec09827fb4974179ee6b7e538da050fbda2c8945c2349e3eea18ec9edae184e",
    "web:deletion": "ed7182b2c55fba102f0f75c47cdb323e13830eaf743d781a471c76a76eeaa43c",
-   "web:iosAiFaq": "6a96fba827eb3e367176b440478f699aaca34c4ee028cb490d2c5343bc5f8f02",
-   "web:androidAiFaq": "490d8eda61005446d3ad3726861927e650d3c77416322c6c1ce80c7dcbaeb7ae",
    "switch:aiLocation.us": "0e4e113f097ef070d3dacbc4b2d67538fc01b4cbfd87717a185025bb52620ef7",
-   "switch:aiLocation.global": "c291a3a45abee9b1c8431579fad3e68edf3a6f83f26c687479947fbbed23e948",
+   "switch:aiLocation.global": "0eb82fde8ccfba3256c9ffee63a1659a6e65ca522dfff891a59eed0fff1c8656",
    "switch:aiLocationShort.us": "20d1a5eb0b1a7bc0405a45d21b7b81d1e262b81bdff7f5f87712035893a0455c",
-   "switch:aiLocationShort.global": "c2e43df1dbbb5bdc94b86401c4d5b1d249c19f54a2ba0826fd906e5ed092d487",
-   "switch:aiTransferCountry.us": "a62387c18401bfef54f2d111280969e86cf45be1840a34c9514b3cb24d7d199b",
-   "switch:aiTransferCountry.global": "62dfb0b7769c64870a89ebf750576f976a8eac7f4c5837f349373e81f2d6344e",
+   "switch:aiLocationShort.global": "6ca0278d920de1159a02df6a36360842282aea4b8979e8702dd5c1537f5ff0f9",
+   "switch:aiTransferCountry.us": "403e0a4b1af013632941bde5a0b55da0fb69ddec08d97b5680e2d91fed90d01c",
+   "switch:aiTransferCountry.global": "15f632122ddb7d39ab49cffad315223dde3de2bcfdb4b4627d9174b9ea7ab312",
    "switch:aiGuardrail.on": "2958688928e216572d73bf5b4cf0609acc7fe3bd9566de5e36408485ee8b2806"
   },
   "pl": {
@@ -1443,7 +1614,7 @@
    "app:ai.consent.a.optional.title": "181980ffe4b45b2a89d489622626479a7d2eb3cd60380ae179b501e20adf35c8",
    "app:ai.consent.a.optional.body": "a7508e39a217a99efdf976e1af997953a2f12be62e6bb3c019ccdf8c81d6cd38",
    "app:ai.consent.a.transfer.title": "66b38b2e43c8b038205951546c8718f2363c13898e67d1f0238426451a8727c3",
-   "app:ai.consent.a.transfer.body": "d33981475fc69e9c568654d69b0b71b62eb4c86e3edfc04add32bb101a312119",
+   "app:ai.consent.a.transfer.body": "a2fc597c1e7e376ed9e291a55105a3bc46de4ce36c5016e1438297295043b8b9",
    "app:ai.consent.a.check.health": "06071402140e777b8e3419336143c021772729337d5198e8f06638197933d766",
    "app:ai.consent.a.check.health.detail": "f86a8a00bb1842fd00a09d92b777ca5721db887200711d6678cf029322923038",
    "app:ai.consent.a.check.transfer": "400c5c503ce53553d608ed5bf271d144a33fe2cab541b997adc7817d4a5e5720",
@@ -1453,11 +1624,14 @@
    "app:ai.consent.a.region.us": "4397a515cc578763d9e08d7d0191712a64e494815ad6d2843749a09ac23a8d99",
    "app:ai.consent.b.processing": "48a77578f37cf9f4437fa9caf8b458ce172cf294d93a483291b6115b4337935c",
    "app:ai.help.inputNote": "8438a80518bfd429f5f723228ebf2c03c33196f6b63c556ef7c596cbff239cbe",
+   "web:name": "d397985d607b5b01d36134d303bb21bfd145a91f1ed9f5c3381a816a293cbbcb",
+   "web:perk": "4c38e44900889130fbff43ca323ab49e38b9a5eab42471a39987126a0b39c5ff",
+   "web:sectionTitle": "b7a3018258f1102ba07dad149975beb2521cba92a06aed541716310a51a9bfa1",
    "web:clauses.0": "e8ac757846ee12a56ddfff9381911d9786c0b7b2179377c5efe4a1b42b90b0ca",
    "web:clauses.1": "d8ea55db110653e155ed10bb5d8c67244264a68ddefd838854d812b561449b33",
    "web:clauses.2": "ca615332218700a023a0938343fd9c2446f1cd42c36729c15c9e214232dbb96a",
    "web:clauses.3": "f5145498b6563a260078611b00f013b57e331b98934db54416099bd4452d10e2",
-   "web:clauses.4": "c0b1480ee69b0a35a483dde442f77ddb1a0182c1bc7b2e604f828589887a36f3",
+   "web:clauses.4": "3801606d81cf607c5963259ad6184419fa5068bc84326e8d2e38589b3fd4f83a",
    "web:clauses.5": "68aa2f20957c2885e3c66f8e0d99c75b278832ebe519c5e601f424a20498afa1",
    "web:clauses.6": "b21f361c143079591156280abe1dbceed35c85bb0e5775d85c58f171da0a1ffb",
    "web:clauses.7": "2086e3ad346480aa1fed1f26688fa6f004e1df4898635962572c44bb4d3ec385",
@@ -1468,29 +1642,41 @@
    "web:e2eeException": "d08e249f2b32cbb52fca79127efbc24b56121314d32deb4673876098891e1539",
    "web:healthExclusion.ios": "d6325cd29915e074f1492d766633e948650251548c69f5f49b9ab9e260dc4eda",
    "web:healthExclusion.android": "5aec6ce3040e57574aadfd558e8b5a1e3563d267e27896b2df8cc10757aeddfa",
+   "web:onDeviceScope": "c4a246cd6eb345e3b4d9cb945296cc68a77cce6804d2ea5889200925c02f77a8",
+   "web:onDeviceOnly": "41fa5fb89300fcab84d1965f5556f2e0c1963c7c3b573dae77a1d21c6de19489",
+   "web:iosAiFaq": "617db4d6bbce2f28b17d6655d87941af763f954b3f9839abce433762b9843901",
+   "web:androidAiFaq": "ee3dd3ebcadd4dc9ad8631d9e8f7330b6b06aa93846cf1fc1cf76f954bc1ee8e",
+   "web:androidBadge": "5f6a390eddd36357168ea8ff856b5536d97db808228b0587861f100f3e9555d9",
+   "web:androidNotUsedItem": "e2f152039d371e02a040d33cc0f8ae27e24fa73dcc322e31db55ac5cc6bc115b",
    "web:processorRow.legalBasis": "c2f4d0d0188e651f4085b9da5f430a0eefbc22b106753b268af74dd5281d5f7a",
    "web:processorRow.data": "0e60b438738d70f444680d2212ccc7ae6fc03222ef5b81286129aff91841a573",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "35487abef479318092429b847770aefae2a5419d62fcbb1bba44fa769db7ba1c",
-   "web:processorRow.recipientContact": "ddb4f32a41e6a1834fbb0859a7420c1822ce1d7af42f9ac89595676838610115",
+   "web:processorRow.recipientContact": "7f9fab76253eadf841ec11a476567ee6ed3f3d5a5dd1768f65e26fb7182e68ff",
    "web:processorRow.purpose": "7afe000e99f97da1cacdb53d7511ff25daa93a3fa6e0f8c4e2fa0f154e22a5c1",
    "web:processorRow.retention": "43109ea82194548476c3635e2a49193f7324858ae38fa600f85be373115d9a7f",
    "web:processorRow.refusalEffect": "3b9384932903ca1c67d056e724537a687ab09ad36d392f10ab278566f2dc47d3",
    "web:cloudflareTransit": "dc7706cc41c4e914006bee89bd109e8147d859921a5290da342789550e2275f5",
+   "web:terms.0": "ef1bacd6734797be99bdc7f643d1f231832feb85bd07a35d66002dd691212698",
+   "web:terms.1": "37212516b3c12d77f009362cdb39a8a1b641bdc8a9c24c4f4593705867ae13b5",
+   "web:terms.2": "0efa04e35b2b789594a61fe10baf2efe25895c1f0c08273364d4c5d06c56272b",
+   "web:terms.3": "23581dd3cea631f10815f86b2eead3f2022cd15056229105ccacd928477eaf79",
+   "web:terms.4": "8c58c83cb7e679cf723955ae16d473f586a03611427176f7a6b7f0405cbbfab4",
+   "web:terms.5": "abb05b575ce8f6a786d460e13864b6a2898994d3d01724c4465d9d471d08500b",
+   "web:terms.6": "7d1390d645f857c4cdef5a44971736928330a393825ca985867f00d81134ac8b",
+   "web:terms.7": "c3f154d467b9905f430d19bb4cbae529e7d8b8439faa265494fe1cf437cce458",
    "web:usHealth.categories": "6bfd34a84ac38100badeb10d5bd7b23775494b29a1f91ec630db0a67612cc9ad",
    "web:usHealth.purpose": "d62cee8803e4b9b5114057722c38ba4d9248298d03df101d02c9deeb1ee9d286",
    "web:usHealth.processor": "b449cdcd32a637b31cf14ea9c9e33e92f99fbaceb5093d9907b8a113cff6ca4c",
    "web:usHealth.noSale": "52842a2b53bfc30c819d6a3551d1940f6d9dca018056ca90b399e527738933cc",
    "web:usHealth.consent": "96078e67d03b85de623eb8ae916c310253e7b8e549613745d57f6de0ab659c63",
    "web:deletion": "c53478544f21fd75fe520cdbf707adacfea7f2f8b38172eb0dadd92596399a18",
-   "web:iosAiFaq": "617db4d6bbce2f28b17d6655d87941af763f954b3f9839abce433762b9843901",
-   "web:androidAiFaq": "ee3dd3ebcadd4dc9ad8631d9e8f7330b6b06aa93846cf1fc1cf76f954bc1ee8e",
    "switch:aiLocation.us": "9c44aa1c39b9abd5791da8b9df881ec705c5646a08208b1db3a6effd45abd5d9",
-   "switch:aiLocation.global": "7e1453cccd4b047ec7107b8efc72536b5bf3ea0f24c39c5ddb0a6e46cacb8113",
+   "switch:aiLocation.global": "283c695ba071f92ffe1502e14dd56c2c7e328ba5f5d9d0e1a4c657f070db35fc",
    "switch:aiLocationShort.us": "1e980dabbef01349900a8acdddf4f9ac219cc6bc1fdb22e80b9f71b71d9951d2",
-   "switch:aiLocationShort.global": "a01c024ad0b9ef065ce6c69bba61d71162c64910a04dea7173be8d419528f157",
-   "switch:aiTransferCountry.us": "ecdeb4e6aa224c227ae89797e48699f28b318dc238e2ef83926e89da028631c6",
-   "switch:aiTransferCountry.global": "53c680a6ebfa8a46babbc48d3ea3af7b49c1b289cc7a9c4848a0284c591cb527",
+   "switch:aiLocationShort.global": "4b26695b29ee9bb4f1aacee91c908ec2ec3b22608b8b95a618ae3e1c39ea6bf9",
+   "switch:aiTransferCountry.us": "5342267f8778d411363d67a6f741cda0291a0b7ca926a3b6e430212667fa2b23",
+   "switch:aiTransferCountry.global": "d4b91b7be5d27798743238596fd0b3f450383b41b37e492567abc6e642a8a4fb",
    "switch:aiGuardrail.on": "374ccd8a1f52d7ff2ffbbbe66dd11c3375885db2cf4c34209ab98fce82296de5"
   },
   "sv": {
@@ -1510,7 +1696,7 @@
    "app:ai.consent.a.optional.title": "9015bdf164f5a2ffd655a04140b471d058ed08a07f726eb4725f7837a219c321",
    "app:ai.consent.a.optional.body": "8584629d642012564e2f6bc7b84d5f2c80ce28e9464aae97a50e0bfffbe68666",
    "app:ai.consent.a.transfer.title": "7c937b4efbb2a6ac8d2f83c1e4cd1b733e159f2b0b7619c61abf9333ab758d91",
-   "app:ai.consent.a.transfer.body": "857595f49bad5110495d491521e978c30d93127e69447e64db17f385dbb42b99",
+   "app:ai.consent.a.transfer.body": "6f73d604ef75d9f1abd31a9185b040facde909b0a5afd2a2853d0b17cd420548",
    "app:ai.consent.a.check.health": "57ef67888aeae267e8d8e5cd3461502685d4dc8091c66400c2a3c0b229396bfd",
    "app:ai.consent.a.check.health.detail": "0dcb792ca58a43bfb1cf96a136a6ae22f4718604d330e4d6398a72804d9a34e1",
    "app:ai.consent.a.check.transfer": "e8230123e8153f28643286c4beff36c2443173fb312ac389bfc3c88a2c7a9dea",
@@ -1520,11 +1706,14 @@
    "app:ai.consent.a.region.us": "2408a7af5b179efdc47affa5b688465fb31051d38798c7426f3ed5a5c37cce5a",
    "app:ai.consent.b.processing": "d4113b988f236d36e7fa332935bd1c8ebdf00146ae5488ee3daf11f5b8371ead",
    "app:ai.help.inputNote": "e0725dd2629cde28258ae8990c82c3c552479f85451e7e078214b72cb98fc086",
+   "web:name": "ffbe1bbd0e974a02e2d37253ecfe6b8a24be7dc4f3b64032712ef6ae5180fddb",
+   "web:perk": "1ceaa45ea17d6858dc86e13ebbd0a6cd6c1c3a0cbe324ce287477dc8819f9fc1",
+   "web:sectionTitle": "2b2312b299cf79cca1a3c1a1e283f969279f3e831d581f7298242a5b37e62d18",
    "web:clauses.0": "033d7bf6f66196fa88f7e19286684ad3a912e7b9a6d5f87444dbbcf284b798cc",
    "web:clauses.1": "95130e4aa264ec8c5d0fb3b9a67c734beb0ebdeb967fb9a533842a63027c421a",
    "web:clauses.2": "bc9ea32735484dfa62bc0ab6a0f6a232d3a0e287427c1babba074b53f65ed2f9",
    "web:clauses.3": "0cd1ec56df1dd8e37673288aead9ac8ea0ac2280fae587a2ae1900a9a8d4a555",
-   "web:clauses.4": "8b28fedd914d1bdcf87ede985120111c5e2a50ca0dab7f6b38ac99e5c4b96a6a",
+   "web:clauses.4": "6ad2c7d19669ee137818b8f18f1086dd2fdd85e8e9c8664bf7319e590d1f4558",
    "web:clauses.5": "5b318648e3d871b50946dc95e755de98d9a8ca0e4e74dc44e5baa3dc1e7e4fa7",
    "web:clauses.6": "160864f6466abec6ecff5992ec1dbceb640509eea226d83038c79352219e404f",
    "web:clauses.7": "8aea825cb9b3b6ef838a143a846097d5734b6b170b6de7dbef6e5b55d91fc524",
@@ -1535,29 +1724,41 @@
    "web:e2eeException": "7624132af5fd07c787a72cfa31bb87b3c45bb5c218904ac0dc3ea3c3093319ce",
    "web:healthExclusion.ios": "6a7b09a5c232bd6a1e1b3d6ff61c402b21432355e2cd32c021dc08ad4eeee81e",
    "web:healthExclusion.android": "4a28160dda67d1845411d98622762e9f84f58259838a8b75113ff64b9fd59666",
+   "web:onDeviceScope": "af17d5ad0db95d1acbfc72f58c7616c82e8b0a520562548eee4b6b0cab0d42d7",
+   "web:onDeviceOnly": "1b968dc71782083b5d9df07ec59deed7af76fb49f15b0f70402c2e7280657188",
+   "web:iosAiFaq": "8284557d65cf55e3c3d8e7c82aa1029ec67bd4329f7e5d3aac6fd8db377b8a60",
+   "web:androidAiFaq": "b2ef6b4bd176ecf6285a50a5d5185e16d34d00e9b2aee917016b926736fae754",
+   "web:androidBadge": "5592a5d19e1f44170e7f31ed9620578f2f6e3e06416976edae38899ce4ed9469",
+   "web:androidNotUsedItem": "ab9e4fc4e9891f3800900e6208549e68e9a3b9bc8eede1ddb0e6e2587de5eef0",
    "web:processorRow.legalBasis": "4f3041ef5d1ba14e80586c2c15f26a1f5d498e8ecccec7c6da2fe46926cc92bd",
    "web:processorRow.data": "d221bcdd4adb6ce4969ca1178a92acf5b12ac178c67ea06715a69c26fcced8c8",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "b13e9ea172de0b84ef5d813d3d3b97157fa8a3ee75cb769f367de8169e3f6c10",
-   "web:processorRow.recipientContact": "239a717262c2e39f36fe7759be32413dc7fef5e3cf5b27edb90ce4b99a3a1366",
+   "web:processorRow.recipientContact": "29c4739a7d8052060ab909baaf1df8c46007f3f24aeba846fb54550a4405f28d",
    "web:processorRow.purpose": "4b831cba5a2cc661dcbd9907b821f880d058374cb0723c2d1b9125c749e34d59",
    "web:processorRow.retention": "61c6f951a6db892ba782264e0d3b6cec515d9f8d12e6dc129bf59a38a3390a6c",
    "web:processorRow.refusalEffect": "55b2020173ed11517fd65b6f69ee2989f266cdef85121d436b03c6496c96fde6",
    "web:cloudflareTransit": "06ba6327b7f5dd2c80926d1aee81d2be1164ec0714e19ba0f4653d0e4305436a",
+   "web:terms.0": "73e92d08d4415cc1a6c23e46f20ca5a0b72c6e6d5981c374771064c48d6157e0",
+   "web:terms.1": "a647d1176d3aada469b5f37d199f53b08b0037c96708c5c7bb78bcd31cc9ed2f",
+   "web:terms.2": "9245cf87118178b74584e5e43947a50573e5bbaa5c76013a180f50c32d9a2b8b",
+   "web:terms.3": "6197c22abd1d3dc5253bcd1b322bfbbce9e0c62de6104367d9dc134939cd2265",
+   "web:terms.4": "e266397d85eb722a75b4d071e715081805fd0a8050e3d4b8140e24e9df24fa52",
+   "web:terms.5": "7e5103989d2127a7689883979b276fd523b25eace69de9cd85d914359a98220e",
+   "web:terms.6": "6bc25f0b2280446d82b751394909aa08e6f44791b97e42089baae7264e7a3853",
+   "web:terms.7": "b37dd3f66d6516da3ec82a7a1c922ab52b3fa088d2d622b764a6042447918db0",
    "web:usHealth.categories": "ae8ab0a9aef025e10b888d2fbabbe3b7e80e01b507c14a7568ca9ca8054ba53e",
    "web:usHealth.purpose": "d358d11537d3a5d3f69474f2037e716f35e13728b000a52642a1fa929e143379",
    "web:usHealth.processor": "1250db3215f0e9b370ad86b780f94e2534c03961735f83d50f7b7d45fe9332f0",
    "web:usHealth.noSale": "ae2a5166350a4ce4afc3a818cc3031b1b9a354b61d2702b2c7f5a4024dde12b5",
    "web:usHealth.consent": "a24f13df359a57c4acc39a9daad3e14f1090fd57743896b401677390d2c6082c",
    "web:deletion": "306c389c9abecb68e4146a85399a5dc1086f2827b9c59bb51db5c14f200e7014",
-   "web:iosAiFaq": "8284557d65cf55e3c3d8e7c82aa1029ec67bd4329f7e5d3aac6fd8db377b8a60",
-   "web:androidAiFaq": "b2ef6b4bd176ecf6285a50a5d5185e16d34d00e9b2aee917016b926736fae754",
    "switch:aiLocation.us": "4b14cfdc94d61ff0f11e42053b0d9bb68598c2fd2f3ad8532ef40da2c059415b",
-   "switch:aiLocation.global": "36b80f20479844a156874bbc25e5e0203b982e9d69aabce47695773e086a796b",
+   "switch:aiLocation.global": "df53738d54bc5ba388d024032619adf74066e1e8b8c33bd135d2c29cd8658a4e",
    "switch:aiLocationShort.us": "aa5ab35a9174c2062b7f7697b33fafe5ce404cf5fecf6bfbbf0dc96ba0d90046",
-   "switch:aiLocationShort.global": "cd51c986367d33ca47f9f421cd9a08985e867e5cb7e70a8c348829cf2d7061f0",
-   "switch:aiTransferCountry.us": "c7ca609db6e2f74bb8ab5555eb4f692db9b1559b95aa5fbcf3d2111aa834ccfd",
-   "switch:aiTransferCountry.global": "64f915604142f6825937554609cc9579e569b096f8bdaca1dac9a9a02ed00840",
+   "switch:aiLocationShort.global": "a36e36f5f2596390e1ca4055617f34246eb33e1a871d2c80e0389aa5f7a32ec6",
+   "switch:aiTransferCountry.us": "503838b9204feb5a20b1beebb6bda6f07ceba6ea12693f1d83aa0e72974ad443",
+   "switch:aiTransferCountry.global": "f4972eb8711f0828026704e4bcc0e8b2c5e009a973163473b54fba51e31e5c8e",
    "switch:aiGuardrail.on": "7f27b6f883b70e67e6b346210e481e56ba31bdeb3c8e03016e389c457016d602"
   },
   "hi": {
@@ -1577,7 +1778,7 @@
    "app:ai.consent.a.optional.title": "ba90dd9afa14e70fd8d83165d11bab1ed60eb68665b38edeb482ddbe8acb8148",
    "app:ai.consent.a.optional.body": "d79d7b36620c959bd208fec763e2e215af0674ad7154e6a542aba2f60b45f127",
    "app:ai.consent.a.transfer.title": "969808820c40e2fe91598f25d5bab982163acbab691387b68d80881b6fc65005",
-   "app:ai.consent.a.transfer.body": "ad62699ff6a08f0c31e0ef78cccd42564ee98cebb597896781e0509e51022000",
+   "app:ai.consent.a.transfer.body": "316109e36a9df29111fca79b610c58e452822c9821302388bbf2d3ea85237ab2",
    "app:ai.consent.a.check.health": "ad1f468c4252bc86cc134a6e69cc875b244005d2f7a7d50ba187c7113627602b",
    "app:ai.consent.a.check.health.detail": "783297670c8861ca9385713c5cea9158f99c97aa9301a33f67db8245a1ff07d8",
    "app:ai.consent.a.check.transfer": "636298de8c96038a1fafa07f89d492c90bc72293e5da23dc2acfb154cedba4be",
@@ -1587,11 +1788,14 @@
    "app:ai.consent.a.region.us": "1b7c5bce25740806aa9d81fd6da6d772c8431c465d2d4763871d43b8bbf0b9d9",
    "app:ai.consent.b.processing": "bfdda3952514ebe9f33fdcdd6924d2311023612f1d854b4dcb81fc59486c547a",
    "app:ai.help.inputNote": "c8d7c2f900f044c76f23276e4a44aa2bc155df8c4133cda981ae5d4f7d59d326",
+   "web:name": "ced8008a4def61435945f852a9f3d3de1a00c64a67751ba814e100b2a775c392",
+   "web:perk": "3abab685b3fc3dbc55c24bb183db7b63b277863416f658cd8d5e3c22e101bf95",
+   "web:sectionTitle": "0bf701dda44cd89ced0d4a3b5204f88dc14bae045994d26b30a87b45054612ff",
    "web:clauses.0": "9a20ff1b49d142226d7aed70877c9637a451712f2a7aac9b3258281661035cc8",
    "web:clauses.1": "10cc9eea38ddeea6bc3c99e5adf0fd87fce7192e552ea5dbf139fdb4aa04ee64",
    "web:clauses.2": "aa5cd51f495af44146c011b24ae8c2b9ccf071a1d9c10542c2838b16b894a1b3",
    "web:clauses.3": "aed84b83f7096cf0971e4ed578178661a42c4a6aa007482c78da230c89032080",
-   "web:clauses.4": "bc4260c7dd4d6d0ccb6ea9e2311e8ec4359d303b06bda5b418411c0b6ba9df6d",
+   "web:clauses.4": "a886c2b7f394dad5480f07825e2ce4cc282d2fd23a3fe0afeba04658a70d075d",
    "web:clauses.5": "791fe808210a16379dfd9a8c6846d544d1a7cdc8cd1fe5ebc91ffc641530da3e",
    "web:clauses.6": "181ff8f11b40431020275242caa9eb5ff1ef2c2def4ba21ad8c31c9a2298f361",
    "web:clauses.7": "1ec5ee4e65cf1c53958cfcd6f02b335333538974b2e0eab9e7b7e5e60a353e77",
@@ -1602,29 +1806,41 @@
    "web:e2eeException": "37bfd17cf8f4a3c38c7a4665c5397c6d93f632d07ed202852f67420a4b3a18c0",
    "web:healthExclusion.ios": "b5b5348f08fe4bdc571990e8a7e0ff29ca7f14596f58c47ca8438063fd6d75ae",
    "web:healthExclusion.android": "fd0f740b366c7a36290b9a4f32aeb2dd443e76525f91b2afa17886428fb3d683",
+   "web:onDeviceScope": "5b05465a770ea1fb4c6a17f63feb2949b494a759a96c51d97d706495c3a95064",
+   "web:onDeviceOnly": "6b152f739131d9419f95fca48bddeaf264d350e378a962919cc47373829d669d",
+   "web:iosAiFaq": "d0fa0569a4d7428b8e7f74f108b4fa065dfd2f56ed4f8e30d28768c21bdb4cdb",
+   "web:androidAiFaq": "e1ea9711ddca0e2c63bcee723e4c5c0f3af59363b24fdfdc6f7d71e57d080fa3",
+   "web:androidBadge": "3e0eb0294f77ce21a3e8ae028db9fcf11ca5c522a8a0371b6052cf35e6b91a13",
+   "web:androidNotUsedItem": "fd734ddd20f53fa7da04b48e3765690cf2f491edbc3b0d32a950876448338963",
    "web:processorRow.legalBasis": "3926d785c7c4c30b1b6c6645bc707318817e35a0bd2556461ae05833af8339b6",
    "web:processorRow.data": "62f24a48113a18499961994762397204b2f101cd49bcdaa52fe8e344487af5b3",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "6cf0cad5bb3a78fbeeb38667c55a85333894c71395cbabc42d52ec2fd077b770",
-   "web:processorRow.recipientContact": "606c3575647a3225c11fdfbce59856bc521761aa30b0eb62790c7013fc603869",
+   "web:processorRow.recipientContact": "fbfc16dae8822cec3688f880e949730d2325ac949e75868f6c275f3d57d58428",
    "web:processorRow.purpose": "b75a94fd436836c24bc50166068f726daeeb95c927f0ef57475ed9a9222e707a",
    "web:processorRow.retention": "fc204bd60a6c4b1b94f3d1ae7028cbacfd5fb189f166b6cedb64738f9c130a87",
    "web:processorRow.refusalEffect": "37194392f67242a484a7756483587aba87aed50d132c70ece2d1ce5147142d96",
    "web:cloudflareTransit": "e5d162b669a8a6b68d362ec01d20fad33b07536b758583ef21864925ec95b440",
+   "web:terms.0": "7547818e089852e5d37814e0062101944e9affbaf0895689ed0aea6531ddd99c",
+   "web:terms.1": "1469de12870aea4efb35496ef50104d73bed0f727f1b73fd5ead125893c7221d",
+   "web:terms.2": "0c733b5cc77f95ef13f903fa5689f73964b0ca6a950681e223cdc34e5a312530",
+   "web:terms.3": "d168b711894f3704188689f9b84bbbfa68a52d1c372389af7091eb32974f7cd8",
+   "web:terms.4": "03c96bf8aa2944ff44d2bab8f5c2ff9f38322986a0c6bc755caf352390a7d746",
+   "web:terms.5": "355065af4aaf8d86fb2fff39986510ea1766557e0e374f05408979da7ad9dbdf",
+   "web:terms.6": "f34f91f65c897ab5a73ac29ee32be8def23ec0d513aac6aed16945b2bda2b70e",
+   "web:terms.7": "1d0d37ccf451a5028af6b086ab1e434b74eb22d915f756512d564fef755f9459",
    "web:usHealth.categories": "85ff1c4059de2f99a3a8cf1dc535ed63ce673f4121e8d6564488a9f3ef1e3fe4",
    "web:usHealth.purpose": "ccd351cd08f0e83b726921150c42b56f1ce278472e14ed7630f8fc51aefbaf37",
    "web:usHealth.processor": "4c472c8a870e7a66dc3d056ffe1e7627abb71fd3a612d2ff32a3bca9632d1e3f",
    "web:usHealth.noSale": "34c0f7c9d1068a8b149b2a547f90dcf13cbf94d9de039db152ba0d1229cd899b",
    "web:usHealth.consent": "10c94966f3c03d85fdd1f33ea67721475396aa8d3c38cb8cd0af60313d267a1c",
    "web:deletion": "c371cd4d24556d89454b36da853edbf4ce3ab5b67cad03dc9ac29837def2822c",
-   "web:iosAiFaq": "d0fa0569a4d7428b8e7f74f108b4fa065dfd2f56ed4f8e30d28768c21bdb4cdb",
-   "web:androidAiFaq": "e1ea9711ddca0e2c63bcee723e4c5c0f3af59363b24fdfdc6f7d71e57d080fa3",
    "switch:aiLocation.us": "0f921c2bde43ae23595c46876a7f7d98a06ac9d8be62e9bcc75509ee8c5bbe1e",
-   "switch:aiLocation.global": "b951335ec39687ed5c8c05ceab2e9c382221a2f3c16f6269bc91406cfe68f0d9",
+   "switch:aiLocation.global": "5f60f912dd266dd4d200955dc28e4dbb346104a9d17700a05cdd33c2849bac43",
    "switch:aiLocationShort.us": "a139679e4bfb63dd1d3a40dd1e669863e3ac1af72830684cf0bafafbbce8b98a",
-   "switch:aiLocationShort.global": "f8e72143ed44cf7b9ee71d401803b757eb78bf11bc057107da60deda02d24857",
-   "switch:aiTransferCountry.us": "a9bba04d463b1c344d4aef1d4858d2baab1446053a008f3b5a5eeb37ab91ff1e",
-   "switch:aiTransferCountry.global": "e2fc85899520c0116aa095320eb14b88f5003d0a160c2ab5b00d1223b72a874e",
+   "switch:aiLocationShort.global": "d497c47af4cde384576bd1863c7f1c3e4ea0cff81d88287b1b5fa8b2dcab6ad3",
+   "switch:aiTransferCountry.us": "52f5559f5b88a2d40d39706f02e8fd32c5be5f969bacbd1ae39f08fff77b7c12",
+   "switch:aiTransferCountry.global": "44ebb1d3c2fbce6e354140899da2d530546a3f71f1073c0e8c6906ca68581be6",
    "switch:aiGuardrail.on": "7aac74b365035f9c39dfd3f6e6d13b2048ae38a74b7819f939fb70a7b711b8ff"
   },
   "pt-BR": {
@@ -1644,7 +1860,7 @@
    "app:ai.consent.a.optional.title": "05683aefc5c95eb3273561263ccc12006b47e69bd9b62a75135349668cde787d",
    "app:ai.consent.a.optional.body": "ad76d49d7690185ee51a61728e672410826fd27174f96fcfe0b0179da71d974e",
    "app:ai.consent.a.transfer.title": "35a23c92449f36688e1bbf6fe9b6a58c17c6ea8428aac0b751036773257188df",
-   "app:ai.consent.a.transfer.body": "d891f093055db45dc253b4be195c30b3a5a7f232c032d0aa07809993d94f02c4",
+   "app:ai.consent.a.transfer.body": "325951201be74ffca65489967f27dba3aff57240027b833ef84741f92b26dacd",
    "app:ai.consent.a.check.health": "6734ce5805aca6372973dd00068bd6196ee854d94841d5ff36a178d40397641b",
    "app:ai.consent.a.check.health.detail": "399d1dce5dd122d3e3f3289e32e3b2662bebe3740f1fa7168e6cfc20eae2e3f4",
    "app:ai.consent.a.check.transfer": "51422c249c1a858cd1f177a82ee78449949f7f670a6c2a06a11ff7d733394de8",
@@ -1654,11 +1870,14 @@
    "app:ai.consent.a.region.us": "650ca096a4cc5b5a804c7edc83a259bf5cf0fb7a77cf51f3fece41fd78e02a30",
    "app:ai.consent.b.processing": "025ef3f795768162e6164afd6e233dbcf5ae4106e8851f0d22de9e9382522fb8",
    "app:ai.help.inputNote": "8f6565145f0270edb666f34503566545a274be1a119146012eefacfe9bcb2904",
+   "web:name": "8e1a4e8680c0c0fee0eaeecb7ffc6136cf697ddf1b2d28a4e636bfccf976a9b7",
+   "web:perk": "dc683ce11533f75f66bffc2e83bbe8909ff6d533c78fd8e40aeace5a4e1041b1",
+   "web:sectionTitle": "fe6511b5ce7b123017fb4e4a816a135e8ef3ca6882fe8f5ce7428fa76bc0fa34",
    "web:clauses.0": "9e4a7d37bc408fb69ebb60b8c6f80fe65ebe451aec85d73236fc379958910ca2",
    "web:clauses.1": "78b2f45637b033e42ef003a9a9ec0b11158b4f4a81eafcaba288f048b0f17269",
    "web:clauses.2": "62a25faf5eee41a4c9c47c9bc761c7d45e8e737e6e94b0770ea31edd30c96707",
    "web:clauses.3": "0c4c0a5d064c59a560c56ed26a6c2dd48ec3b7547517b637552959089836dbe7",
-   "web:clauses.4": "49ea36e94797a3995e483b5e9b36a03069f538cecb221e5442a77f552e9479bf",
+   "web:clauses.4": "e88bf780187d10cf4aa06ca9de0a61d6ab6d900a66793f11dff36a14a4cafae7",
    "web:clauses.5": "f2d11486530028a7c048f6f80450f9d412e71f8196128fbfc5c4520166c3f631",
    "web:clauses.6": "1b741c86d860a403bf67acd463efb817454dfe46dc9f6853c8f21d09a9bddad0",
    "web:clauses.7": "e8cb7b2729b289c1fbad2708bc3424a36dc3416df009b28ea43768b42292304c",
@@ -1669,29 +1888,41 @@
    "web:e2eeException": "4a2a98660c6b3dbf0cc9433a98e50fea6133e26259d14ae08a84a9a426337a44",
    "web:healthExclusion.ios": "1604041cbb103ea19e98d60ab2e44a299eccddbbd8320b753b253705d6a558bc",
    "web:healthExclusion.android": "0be6479b6edae429c72b4b20d450df115d339870c78eb4d42c5d3be1b4a10442",
+   "web:onDeviceScope": "02acd1c9e5c6f9068fc010a0fdf293c0ca2cc76ae7af9a072d07b272bd51fcb7",
+   "web:onDeviceOnly": "b65a7dcf31153a6daf2fb5d00ea57895ea550346a9904793172645c339cb2242",
+   "web:iosAiFaq": "a893d8918375b5de1395daa7434fa72427f44259e7d4fa34d82f058e3fc97e04",
+   "web:androidAiFaq": "b6b6f657f053341cade6ff6a8a163ed9d65ed500341334217bb862eccd35aa2a",
+   "web:androidBadge": "171e8a6db3d270427333931ce4d1208431e55de02c989a5703d96e052825d34d",
+   "web:androidNotUsedItem": "5b706a737b93a0d74d49c95f0089d3bdd03b495cd76f832b7e2ac2d93ca587fb",
    "web:processorRow.legalBasis": "7090ed17e4f23216477146fac852a064ba1fea77df09e1f2c09df0d5751b4673",
    "web:processorRow.data": "4d040556d7e641eb6267cc11fa8f93130f4fa03b7c55216092c5cd5f6f0e20a0",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "5d201f13ccda694fc3dab17ca6af19c3d62457a70352937c7305c61a2f72cf85",
-   "web:processorRow.recipientContact": "354753452bf0f330c97ed796236b7fb550164af136beab96474ef52521a38518",
+   "web:processorRow.recipientContact": "975a55da24c64b5b71b0e04b21d93a53cc8f53703414b50daa92029c7870d7f8",
    "web:processorRow.purpose": "8f866ee369914db9ae622ad7a6fdd6c3854ce478bf125617bb00fe7789c677a1",
    "web:processorRow.retention": "5d19ff7cdb70a0303a05e1341dbcb75838fbd9534b4e277091fea9d59d350bba",
    "web:processorRow.refusalEffect": "10fe3beb6fd2a94b57c946d096cd3b404614507867d623f9f4eab55e0ba840b8",
    "web:cloudflareTransit": "8053bb0a7b40cf6101e379c2f9b7f2dc70e8b79eba34f8e8633bd6091904d964",
+   "web:terms.0": "75416beb702ba05489afee0af28214e110f3b9dda2fc3084dd27a8d317f5d10a",
+   "web:terms.1": "2fcdcaa3d52991e0773c852ae9090c65300586d47e60980bde90bcdd825c55b5",
+   "web:terms.2": "79431cec5b2d010b6cfab4089a8d32cb097d410cf77ed5597c4b64b3196b79cd",
+   "web:terms.3": "fc5b1a04d73226305bf828fc19b19b4fecfaf6ba9c022be26735a2dd53a1a08e",
+   "web:terms.4": "1183e268e6249d9fb4ba9377656e6675da99db64f6724d248d6780271a0c1cfb",
+   "web:terms.5": "367041bafec68ff169d769d1af51c1059a822aaa3ee3c7c93882e0e587a3df42",
+   "web:terms.6": "39e243f833a0c2b987887b7172a40948607f5d8267a75db14864f4859056de94",
+   "web:terms.7": "75861ea6642e48b3d812203275bb1c6360ade520062d154228812394d0dbdeea",
    "web:usHealth.categories": "63af74a4ff5be1f4f34040c6242e1d812d5a0e3a2de68174cc75ba6b3b517ea8",
    "web:usHealth.purpose": "d9a2d4394aa58402c6acc82c3f2de9c7195aa3de9360e5a46c1a29fb1c5a5d45",
    "web:usHealth.processor": "0cb7ff925eb21526d142f6e940387d48e250ab384c823421d2cf2954e92d2cac",
    "web:usHealth.noSale": "0ab224bccf7b54a65302750ab37bc2a34da6dff16a2c74ac130dbc58e2e663c6",
    "web:usHealth.consent": "0a0484f2e20653d3332a5083992137a4da1edd7e3b52381cd0c60697ddbedb89",
    "web:deletion": "3a8762f3667581654e28e481ded707366c5014f7b5891db49f596c55fffea728",
-   "web:iosAiFaq": "a893d8918375b5de1395daa7434fa72427f44259e7d4fa34d82f058e3fc97e04",
-   "web:androidAiFaq": "b6b6f657f053341cade6ff6a8a163ed9d65ed500341334217bb862eccd35aa2a",
    "switch:aiLocation.us": "a4da06308b1d79e8fe052691e7bba6e99e6a35216d80277f34779c43e4c989bc",
-   "switch:aiLocation.global": "354c94961c9deb545882a90bdf1873df84e28e6eab9042b114c07c1d580aa2b1",
+   "switch:aiLocation.global": "34c4316f6c08b163027ab48b876488f3c45faef9d150d101fac14efc4c5771cc",
    "switch:aiLocationShort.us": "20d1a5eb0b1a7bc0405a45d21b7b81d1e262b81bdff7f5f87712035893a0455c",
-   "switch:aiLocationShort.global": "c7286e1317fbd10af60405b45fbb1539bdba6391b786ae8473e10914bbf8a79c",
-   "switch:aiTransferCountry.us": "f77f93d37f3f6c2b7e77c9432586fe51cf168332a9aa2f9ed7a35a4245d488cd",
-   "switch:aiTransferCountry.global": "bccf7327e2dadbf4f239cfc1dd7f1a5b11691dd11c3d7bd5ba298012dd97182c",
+   "switch:aiLocationShort.global": "6ca0278d920de1159a02df6a36360842282aea4b8979e8702dd5c1537f5ff0f9",
+   "switch:aiTransferCountry.us": "b105926a7780d9ddba348e4b9e4219e280928b7e453069c4c59a1db556f6fb78",
+   "switch:aiTransferCountry.global": "2a9c24a55a587768f6feed22e07e7303c02f330275f776a8ddb921c393394e9e",
    "switch:aiGuardrail.on": "20be28237f58111234cdb872250049b0009f52dda3b82641ad60440d29e4f17b"
   },
   "ar": {
@@ -1711,7 +1942,7 @@
    "app:ai.consent.a.optional.title": "00142245e6ed8c2a3172a10c72173f3786bdea1c31e180280b7ad095da0e3000",
    "app:ai.consent.a.optional.body": "5fa4115bf19933639a48ff58055d47daff6a6b73235647b9968a5f8cba271d99",
    "app:ai.consent.a.transfer.title": "935874c4ca5c756a39e9bbc8dd8a5980b730ee5d2e4b2e300174a3b792f295b9",
-   "app:ai.consent.a.transfer.body": "f0ba3a2bb22404b1bbf1e9caafd83fed01fc86817ab3dde09b4aee8b9507b444",
+   "app:ai.consent.a.transfer.body": "614291364f5f27e2135cbd9ddd4a9f12bc2ac5913ab1691c3f36b75a7b61dd41",
    "app:ai.consent.a.check.health": "0d2c949971511185dac505581fc528eac932108925dbf8506838271aaec5b512",
    "app:ai.consent.a.check.health.detail": "e09cbacf878660ad7f2812a9a9c55fc7ec45e0dd17c829305020c7b146ff2087",
    "app:ai.consent.a.check.transfer": "5b419621be9df8b579fd638c2609dbbfbe20d02dbc25689b1f55f254998abbbb",
@@ -1721,11 +1952,14 @@
    "app:ai.consent.a.region.us": "cc91e22a6ec16439a446766379eaddaedab313542ea5ecd981b742c98e8ae017",
    "app:ai.consent.b.processing": "2c4cfd05e80d1ee98039adcf7c599802ea758d1fa5e9eeda477893a302af205d",
    "app:ai.help.inputNote": "8ea343ae16d7e6ced24458313f40bf8600ad5b913431988f9107efac983cc0cc",
+   "web:name": "318f923afa0f491e8228ad0317576cfe54add5bee7b0851180f368996b6c5870",
+   "web:perk": "fcb250b99a52a4c8be155b811e345a5e95385b965cc12afed16d0e3e7cb6c633",
+   "web:sectionTitle": "e187c17fe2704e20d283ee6e3b570fa40c364589730c1e3af26d39c66cb7cb8d",
    "web:clauses.0": "0d4d2ace3b0ff7bf41e13b094dd3a9e475c14e40a38836d4a90395fd3b9c5378",
    "web:clauses.1": "735c80a1322e61edced6b224622e82cf960c724b30c68b3545222dd220d58d2b",
    "web:clauses.2": "6b5da198ebc072e15ccd0746d510c3107b381c0321af316c0fd05a136e1dd743",
    "web:clauses.3": "dadce2bbf900ade35324a481a598572128605a5b1756e6e61e2104b86fc4efd5",
-   "web:clauses.4": "7fb9e1a0e898ade813ecbaa593aa72da0c0d8398eae986338d3d2369de51372e",
+   "web:clauses.4": "4620cd6a14d0e2025bf0515575f2cf736c3dacbdbc012719821a1a08e57dd241",
    "web:clauses.5": "d552b7ec200dd7814e1775183b35776cbef314861dbbf8e95fc31b56fd53fde9",
    "web:clauses.6": "896b55aa724ae98db5a1a201fb729a7a361a04aecfbd0887b6a1bc841919f7ce",
    "web:clauses.7": "8b525a0496726835bfa824f078750643f4da75e87dec34ff05c827d334460e23",
@@ -1736,29 +1970,41 @@
    "web:e2eeException": "4a4b52aa0f217801f51abd110cc2d64b669da4104b410de2d6bb6c063dc80887",
    "web:healthExclusion.ios": "40ef72cc08311713ac41f8e82beff88dedb0c01bb4b8dba62e9855469664bcae",
    "web:healthExclusion.android": "2c5e201e81af2cd068673b8a22e4b6c62e5d834f4304f6cd9f164ae58ca438a3",
+   "web:onDeviceScope": "574ef754e99c2ac62312f691d9bcee0b40f065a07c5759a71f50917eb925cc0e",
+   "web:onDeviceOnly": "8a18cac4a99d4cc50f2c46952299f270d1357209abfd388d82cf6f916cfd385f",
+   "web:iosAiFaq": "cd4d804ebe91dcd6004a4696fdb831009c25166b493ef52b4f5fa919600036bd",
+   "web:androidAiFaq": "716a2331b604502379839d68592e3f5738851797316206b65cba7acf074eccb8",
+   "web:androidBadge": "fb33a3f2f1e7b6aa7c3fff53ca314b9eadb3616ee03e147b23378bf7260c7059",
+   "web:androidNotUsedItem": "43db04e750b94525b84527379fc357b2930dd98bc48707cba131b8e5ada1d508",
    "web:processorRow.legalBasis": "5b6b273ce18adfb2860a9395559ca91a1d46965c61e811e03783b8a7a0a36d99",
    "web:processorRow.data": "17251e9a7948a8ab160916f25a3bbbca4920cd79ef7d75e9b56aeed79312d8c1",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "95e43b5d22a42f7f11f6bc066af7fe68eb6875da26a43b443ec78ac3a1cebc85",
-   "web:processorRow.recipientContact": "951df4abf76c5552adb52212b7c6fe8d9432ee94d3af9c7c91225ac3d9012988",
+   "web:processorRow.recipientContact": "8a4b71920777ed9255b5d401b5306839ac8423e8ac9eafbe8937f31e1cafba3d",
    "web:processorRow.purpose": "b99bc5c0468d050a0960a1056a44b3ab84356d7cea9e864f24ac82560c0f2a58",
    "web:processorRow.retention": "f7a3b8d61dd4f7b2c97fd622b2c27f5cf67e98fa5f537efafe9073f0698c0f5a",
    "web:processorRow.refusalEffect": "92dc4367b2f585a75a7c07c912e893fecbf2f4032b3c31bee1a9ba97f72f740e",
    "web:cloudflareTransit": "0dde443c1c709f6dc7bc2df6ef43ff6920cd221c7f29d3a71c6f039e5dfdfb14",
+   "web:terms.0": "ce4793f955b8388003c88f1fb010217396ee4252ffc097c45928889e8c4b6e8b",
+   "web:terms.1": "8fd9bb0eb6b09832c1acd9bebfb84416f3b7547cffab34f039077e4968d067e1",
+   "web:terms.2": "8804c1d8379da79cd3de4d6217306a5d96afca05d67d016b53802bd47f14b1fb",
+   "web:terms.3": "299a051cce77e58f9e1dfe2215b5eeded4773447d20577d33c160da1ea95e88e",
+   "web:terms.4": "09512363ce674c0492b9bc2e2475dd6689ae63642d0a8339dcd7aef52ecf2991",
+   "web:terms.5": "08b0e6e43e8d5ad20023c4abc42282911b299c5df099f9afdb97dfce1dcf4f0d",
+   "web:terms.6": "3e803eaf06a929be02cdbcf852b6e3c26f0f64e88ccf2c4dd2ca30cee4be6c34",
+   "web:terms.7": "87e5e916d12672a9e142d972cecacae63cbcb15a09929390e10048a56e04c7cc",
    "web:usHealth.categories": "f4e734d893b6cfa23b11b131a292ed36d389fb226c4930b6a705147408ec3123",
    "web:usHealth.purpose": "d8317ecd06f99ddd31300b66769c67a56664916a72fd7d9402a6b36833ff6434",
    "web:usHealth.processor": "e5c416252a774a953dd31b4268c8c5c111c625e077a83472fe9e74ca5ebd3a9d",
    "web:usHealth.noSale": "ccd7701ddd133c826e5716e94743e83c3a8ca53e22a7145378f3f2635b38fa54",
    "web:usHealth.consent": "4aeb230a2417dca90d79105d4c95a1ecc30584f6243925495bdf3fa5f9963d76",
    "web:deletion": "fddcb824e8dc3fa1047689a302581e28b6d5bef9c2c0028e0008b48ff2121c22",
-   "web:iosAiFaq": "cd4d804ebe91dcd6004a4696fdb831009c25166b493ef52b4f5fa919600036bd",
-   "web:androidAiFaq": "716a2331b604502379839d68592e3f5738851797316206b65cba7acf074eccb8",
    "switch:aiLocation.us": "4cf3466b9fa4029ffb5027459d89b8d95ee1c1b8332eb729ec440bf97734a632",
-   "switch:aiLocation.global": "29e907429fbec8d3bd9b9c963348e7314b4ddd1fff5782aea82c679f4bc55f97",
+   "switch:aiLocation.global": "b66f13fdb0b720180d8d48536ea885331269759913b90a44bf6e47797d0c0ffe",
    "switch:aiLocationShort.us": "b1ba0a34a799ff6c3fb87090d9f52e93c7e1e1dc44ee1d05e99683c1d04211f1",
-   "switch:aiLocationShort.global": "618b57e03f49b51899307781f4015a631c40107f3ca9322794ecb6bbdfbed718",
-   "switch:aiTransferCountry.us": "1c7c2bc534a9a08ba4cbd4c1d2ba4ad2ef88d6d9e9935a556c1f505921b87afe",
-   "switch:aiTransferCountry.global": "7053f9ab8c8a26ab98cdda319ba59ed7b2b3d08632ae47f36500a7012681322b",
+   "switch:aiLocationShort.global": "48a51394839c330ed3614b1fa9c3011615e4745988e052cb4aae226d4c332b9a",
+   "switch:aiTransferCountry.us": "91f9e8611bdd657f1889379f8aa35deb9773d316952f648ef383f0c65ce31271",
+   "switch:aiTransferCountry.global": "6ed5605910282b8dfc7ec9e6804389f8d1b0570ce333bd351d406fe1f0eb4fb7",
    "switch:aiGuardrail.on": "9a1e04180d60948139d5972c3b6e054a3b4549c95c03c1d4b8e8aad90f26ec40"
   },
   "zh-Hans": {
@@ -1778,7 +2024,7 @@
    "app:ai.consent.a.optional.title": "c37e507ee303d06d08ccc4463a301917ededb47d9de8b17289803187256a8fc4",
    "app:ai.consent.a.optional.body": "036cf24a65577848cb92ddbcf2d4f6fa7995198e2326bb560282808b89bf41a9",
    "app:ai.consent.a.transfer.title": "c2aa1a53212c17a3c0e50860f7468ff3548cc40cb34bb29723d419303bb6064a",
-   "app:ai.consent.a.transfer.body": "6293a561e6cd8da50e133a6702e3a278025c04a5c993f24a30f6ba58255853fc",
+   "app:ai.consent.a.transfer.body": "64164ba31495f3f28850706f5e9b3db7ddbef9c7232eec762aa84bfc137b5fb7",
    "app:ai.consent.a.check.health": "2b61e7b03f4d170abdc625a1c660a599a62de61a66d388c965b466bb3916ab98",
    "app:ai.consent.a.check.health.detail": "24e75490616c153388b9d544d2b979f67d4726e702b0d8eb4d3433614c9de212",
    "app:ai.consent.a.check.transfer": "f34e5c12494252ddee47c2c1d73c9d9a512d90f61ec91493ad5b73fb8ab3a343",
@@ -1788,11 +2034,14 @@
    "app:ai.consent.a.region.us": "f099674ae7d62cd708e9d552f224b06097f9d4426c415b7f9f9995859d042a07",
    "app:ai.consent.b.processing": "09770e1568d3e927579ed4182e97d74e2f81542a4a77514edc113ac66778ee3d",
    "app:ai.help.inputNote": "c9cb2b4d007e14bc1e5ea9b8f3995102bb820e7c49a004c587fab624bda91aa8",
+   "web:name": "498b6cf64b4e89dcef91ab77f13adff8fd15aa3878443a881b731b54aa982c5c",
+   "web:perk": "bf68d228b3ce3d884df323caa307da7afece665a8aa778e312ec4810dc06eb10",
+   "web:sectionTitle": "b3aabaff14e22835209fafc74fea9ff079a9aa93d7ac81b813021a0db5b2bb08",
    "web:clauses.0": "ed634ba59d64941448a31696fb3cb3f87fbf91fafd1d71c5dd4925f401d5cdb0",
    "web:clauses.1": "bf2809927db434e82e3dbb78043534261abac57672d46123f11d2b4ea79364d4",
    "web:clauses.2": "4a438b15d7edc42d348d2a459c950053c674d51decf50b79918e794530c675e6",
    "web:clauses.3": "526ab692bf57568b3cf7c27c8ee3eb3b7e40cc07a643c3141b53c8f9567b2af9",
-   "web:clauses.4": "8c34e13adade94ee3f3d7432b9d6c2d64d8d9e11f31fdc2f6c50bd59c6ff25c5",
+   "web:clauses.4": "d562a47f6e3489dde505af2f6a098fb09b970acba65ce280512dcde6994193f1",
    "web:clauses.5": "2412f5866f732f4cae9e72807a1c77cac1b6c5d3aea3ecc609b1e20f43689b3d",
    "web:clauses.6": "c887a6efd1114bbfbe9a840016b1c2eaf5f644315a136bc9b703ff592a602fcb",
    "web:clauses.7": "894055f7f8efdf5c5c4d7b81b3ba74f075ce234be548a00ee2e36b72ad393a96",
@@ -1803,29 +2052,41 @@
    "web:e2eeException": "f02512397999bd434d9893763fd820cfbd11518fbe4fa189ada208eb567ef145",
    "web:healthExclusion.ios": "c22e6ff3d90e02d2192728bf513eff0e1f2c69fd090d12cb9fe177900d7d2bf5",
    "web:healthExclusion.android": "5ed47f997c2dabe3cc3092259fee1348e7f39e5d571fe05b2f2c7ccea5a34798",
+   "web:onDeviceScope": "fe6376c0ddf73478c442e2ebde27855ddfc7cc07f9d5622129d6e295c640971a",
+   "web:onDeviceOnly": "ca7a6c103b2af11f055fd26da940e728c6c2c8bdc414eba15d4e563572db0f84",
+   "web:iosAiFaq": "5c058f505f59d281bc59fe79ff86556dbe896600c94acd253b0d2f4a4b9c4e34",
+   "web:androidAiFaq": "a1b61b4be6b9d9c332789e4aaf6b784f8aeed53e680ab70833b89ad0dec35095",
+   "web:androidBadge": "8163f2f173202e5f17e18e789b3d0ca2c8035a61d94b138d1dafdb5edce5d114",
+   "web:androidNotUsedItem": "0447a991f4b6b21edd59c706524050dae081b42ccbb91d17833916da7a375bb1",
    "web:processorRow.legalBasis": "43fb94ab227bf9f51641785642934a3f208038ee7f8103da3f0ae4270112116f",
    "web:processorRow.data": "4e5b3d0a7e7d94510dbd258879e29e213df7bdebae5db8fc71aed2e33ba24125",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "bf26c6c77a5a9871a48f856490e986bf59c9bae427bacbafa682792631bbdbd7",
-   "web:processorRow.recipientContact": "a6c71a4f976208a762ffcf44c3f0269be163cefd7dff9328452654eb59aa0194",
+   "web:processorRow.recipientContact": "d1cee2e8fff21f9a25435010b421dc715be6d0e4f5d466e1ba0d528acc34c00b",
    "web:processorRow.purpose": "6d6e11bb34b3cfc553356c40a4d64879822dc908e5cf062e1ff9534a57cd5a02",
    "web:processorRow.retention": "5bf83ff9f39491a2905cea00ed430c4cda57411eb81164074f32ec4912681a3d",
    "web:processorRow.refusalEffect": "54bef87ccd1ee514b43379ce3699b2ae0b6eac44ce79c75c740fcc5ec91f2e11",
    "web:cloudflareTransit": "db2594655764e36b6a23e06b48c19054c9d45dbe1690f807824d4fc4712668d5",
+   "web:terms.0": "90a5a265d6bb051b693300601b8b07bc9d3a83911685763d7ed18cd1719102df",
+   "web:terms.1": "982b4280d9b02185a81f089b95993885405f9f213b72084d99f0d4907e1269dc",
+   "web:terms.2": "fa2d784597a29687a32427e224bcd55aa5f9f27233f4b3c18dc416269a10afdd",
+   "web:terms.3": "cc3223659c3ed44d862b2d8d4a87be4f0f5ef02f439912dc9d87573a8aa04156",
+   "web:terms.4": "c06764601d5632b9f7ce84bb4340b8c6410b6bee1d1ee2bd331f7c45ae924bb3",
+   "web:terms.5": "6d1958b30b6627e05e60946e3687ab0e97f68b0bc52a153cc731b4cd349befba",
+   "web:terms.6": "4a269eb329e042a840ec2751ac1dd71e13f64f07551eba9c637acc21082b8c32",
+   "web:terms.7": "5e9d20d1001011e29a1690f0390c9b2a70946aad723c6ae39244491ce8986273",
    "web:usHealth.categories": "eddd8cf669534ad8107a09cf5ad75c5ab7053739a919881d5da6cb4ce8cadc9a",
    "web:usHealth.purpose": "f99f750243e52a129c2972d948a041820b99bbfb009efe0c66d99581d57cfbb8",
    "web:usHealth.processor": "428010a9d184ce42885e91d475679f10a0eae0c15a57796b65723701d0e716ce",
    "web:usHealth.noSale": "ac1cab9ce6eace0e1c0c22338937043af32037ebb278af0e2566c33529473330",
    "web:usHealth.consent": "3e882113177f9ecdb40af9a03192c195752feb1c600ee91fbbf244ec81e4e466",
    "web:deletion": "439aa7c3fc084b65d4dd52f058f06ba2a40ddc29897085562f68c8cce9592e47",
-   "web:iosAiFaq": "5c058f505f59d281bc59fe79ff86556dbe896600c94acd253b0d2f4a4b9c4e34",
-   "web:androidAiFaq": "a1b61b4be6b9d9c332789e4aaf6b784f8aeed53e680ab70833b89ad0dec35095",
    "switch:aiLocation.us": "599688e73cf09850d6a528394de5f07e274fbb57df240c9bd521a377076bc7d9",
-   "switch:aiLocation.global": "520c7fac5961aa7b89ffdde17cf429571e460dbebb295d4c987eba6644d39cc8",
+   "switch:aiLocation.global": "611149921363b049af37d6f8c3c9e1500ab7f6ff2c5bd72c26f05f1c280ea2e0",
    "switch:aiLocationShort.us": "58857e5318f3090b61e8b0944298c0cb60fa0e2cfb89a34e50da12915a3efeb4",
-   "switch:aiLocationShort.global": "700b86b1f21c43800825e8a4644f974ae0ab3f3c5fb92b34caa01a8a6861732d",
-   "switch:aiTransferCountry.us": "29d892d441ea1e9113532c763e8e7324a0f1d1b55bb069fcd9387f060b91f73c",
-   "switch:aiTransferCountry.global": "b927a52a3c4f5369474f2304f76e02a9eb8047523bf6355ed49d275f49fc3dc1",
+   "switch:aiLocationShort.global": "e7689345a62b414162b38594cc9d34f343485534561469f67d3b79f2ef5f34be",
+   "switch:aiTransferCountry.us": "e0c58878ff3d9e0090fc4b3c6f5ebab572130bdbeb65a4de168ce31b0b66fe52",
+   "switch:aiTransferCountry.global": "b0e9f32cec456867643492e815da732bd9a9ff5592b44fa4c4e876a73a078f5f",
    "switch:aiGuardrail.on": "00072d878194ed03bcda97a17b4ba2b901d1a6a3a8804d942a5a6da4dfe7eba4"
   },
   "zh-Hant": {
@@ -1845,7 +2106,7 @@
    "app:ai.consent.a.optional.title": "c37e507ee303d06d08ccc4463a301917ededb47d9de8b17289803187256a8fc4",
    "app:ai.consent.a.optional.body": "3d898fcec36a59c11f69cc1f565bb99eecdca6e9e1de986915336e2d9c515381",
    "app:ai.consent.a.transfer.title": "87715ec129fdb1776b3f5aa3ee44f80e932343aaf6e11b39894bf6846bb6b144",
-   "app:ai.consent.a.transfer.body": "33ffcb49f009cd9a545645d2beec9314a55275cd20a576f02e1254d79e360b0a",
+   "app:ai.consent.a.transfer.body": "640dc36399db0344c702080e3243a51c4edc69360cbd6cd5683dc542f41b4582",
    "app:ai.consent.a.check.health": "6c1898fd3f09c9d2504fa2ce8dff7d46e26a4706f3041d29e493457cdbdd14da",
    "app:ai.consent.a.check.health.detail": "03f11c1456f56621897e27773beee5d3f76969c14eacc250414259f8b9ae1a67",
    "app:ai.consent.a.check.transfer": "913501244d19d637090c4c705306476078e433dc9a033f34f045707260abf379",
@@ -1855,11 +2116,14 @@
    "app:ai.consent.a.region.us": "a8381a54bae2ae6217df7e02af0e9c9dd377b8251db3676b9b5d6c875fb12f0f",
    "app:ai.consent.b.processing": "83b2ec59384f945ecb06cedec7f6c41f0106bc4dc52a9a18273efc2b272063c6",
    "app:ai.help.inputNote": "431e59da5e7ac48d2df3c5515f7a6e83316cac320b60175a370934a2d68359a4",
+   "web:name": "7dba3079af01b0371ec12e8328c0767913dbc023081316d10e10e78a24064b96",
+   "web:perk": "316b64f1bf65c06e7f47610195fa5b151cd281a8a760e0a6f0302423b74c2fa3",
+   "web:sectionTitle": "ec18e1ec5c658829788c2e9def4c1fa877cf62a1dc7da4c2c98ddedee2de8086",
    "web:clauses.0": "e68e6c4b96f469a206cdf31d68d11889b00431de73af73bbff6c14125e75d600",
    "web:clauses.1": "d997032636c18fefb4ccbe47dcabfa957249039e822ed6255d821e527092d4b2",
    "web:clauses.2": "4fe353bb4b5a3bbbfb9867983b8eeb1878dbc65d6ac01d046238ce555807c6b0",
    "web:clauses.3": "2fee7657eff63126b1087a98c023ba7fc51ad196bd66f81b7142e195c792aae0",
-   "web:clauses.4": "eb0cc90db15397c69989970f920df4be1399818697e14a9b7ee0aae7f1391111",
+   "web:clauses.4": "5d10313b30e4d079575cc4c91e00548b3c3e94134ee90a8be983f519493a6dbb",
    "web:clauses.5": "fa2af85b786360cc9952248504a6d7a85d6cb292757fae0a2c6c5acee91396b2",
    "web:clauses.6": "856c0073076856bafb7d9deef35453e3201a4aa271e5fe4898e54545cc6a9fe2",
    "web:clauses.7": "880a971a153e73438871f750d561ce67de186dda64cb47d57946f29fae602694",
@@ -1870,29 +2134,41 @@
    "web:e2eeException": "8b2cbc0db7609c61d1aa829ac34ce54c1ca282542911ece44fb1b6c0b7cf7a82",
    "web:healthExclusion.ios": "aa6773ae3c512eb5da0a80613caa6789c2f147d12cd27f3d13ec633bb38f4371",
    "web:healthExclusion.android": "1266c113c778a83a1bf25e3cb61f783a43b8c983c1818fc67a0dd480c70ec30a",
+   "web:onDeviceScope": "b267b8d713198d749458dcbe612966ed67827437a820501e180116e86f7a8708",
+   "web:onDeviceOnly": "efa7ec9f182cb708dfe178b55834e6ab092b419e8e40015aaf1860eb10bf07dc",
+   "web:iosAiFaq": "a41f1081fe0685cb8968889ce68bf827213b162d174ab10d4f4aa6d03279073b",
+   "web:androidAiFaq": "882f8fb7a60ff106f438cf181fe2d84795acb0574bd5c6068ccb08b20bf11f10",
+   "web:androidBadge": "0bedbd0d722f5f04eb3e7c5d3975069d230582c2f74c7acbad8ad1ae88e6ba70",
+   "web:androidNotUsedItem": "6f082c254d00a6d9585dd9811cb7cf7c60b976381c461e63aba505a1f8b94adb",
    "web:processorRow.legalBasis": "fc944b644b4444846bf0c7df3467c2cacd7cbe9d6ae3d537d5e14fd9bec8480f",
    "web:processorRow.data": "a68484eb3cc2fce5c5f212982d8e09822e50fa42d3633b471cdda861937d7705",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "1045bb865a49b735114f2cad520099baf1e73db8477c84663b79dea861f59090",
-   "web:processorRow.recipientContact": "aa3e13976d9272148e7e53a17f07209efa54fd37e32378c0b36f16896ba4b614",
+   "web:processorRow.recipientContact": "145ce1ff110434d8a7c6e55f339c1ad45dbabf35efb7fc72c9041872346aa875",
    "web:processorRow.purpose": "37c64b8fd30c9a114c2159a3a997c17e36fc7d5bad22dba71a78d3e4d21021da",
    "web:processorRow.retention": "6913350bed3548c16d56ff4efd19e715ee43f9443bdf3789e7d8791b8272ea53",
    "web:processorRow.refusalEffect": "e180e7535c4ad02e585270843f0d0dea4d625041bb6fde7d7ff0fd3c71bd35d9",
    "web:cloudflareTransit": "53303de607981581bdee8a70f6af9d2c58e02dadef24a1a61d541ee34221bfec",
+   "web:terms.0": "a51affff46801ae31d0f382bac78f4556b973059dc4ab0bc17dfd5efbfb53707",
+   "web:terms.1": "71f4f835e91e3c08db4071b17c702fe38a744d1f55232ff63b18b0843a0d96c8",
+   "web:terms.2": "f98dbaa38dec675bc4f1a9a74a3c8b9d2aa60c92510b66592472e48c312f5877",
+   "web:terms.3": "f23e67d813d3962ea2545ed1baae9d3e884697cbbbbbcea0ba07992d882910b6",
+   "web:terms.4": "3596b6ba4f7f91bf114f07809ebd970b54daca5b45f28dfc22e58e6cdd47a1e2",
+   "web:terms.5": "9cfc53c88b933396c99358c4934d309fcf49cb8bfbcafe9e13d622b73db53121",
+   "web:terms.6": "c5756020be474ba779c8db50dadee5ee8fdf5b9d793887d9154403066d53a685",
+   "web:terms.7": "b7d0e792d1845c94d1e681da6b526133e249530ad559af7f89daa680d2d50a19",
    "web:usHealth.categories": "6fd10073e1942eaf2a1ff651005e2ddec015a52d8898cdaa6ba98600ce8652dd",
    "web:usHealth.purpose": "7139dd5f993d50721f06048da67e72a79eb05dccb2ee76d998df1607047d803c",
    "web:usHealth.processor": "a9198ce12fa8a19b3e28b1254a0aa3ebee9c72005c07cb709f082dd2935907a1",
    "web:usHealth.noSale": "85e00ea47111d1324dfc004fff184c87d85fb81c89e056e77e7e9993f9183794",
    "web:usHealth.consent": "7330efbea019594774386c70cc2dd6f46569a5806b890a35f2051804329a01fe",
    "web:deletion": "384951a183073665f8d4334c4883187770ffc460546ae7eab994940e5bda31e6",
-   "web:iosAiFaq": "a41f1081fe0685cb8968889ce68bf827213b162d174ab10d4f4aa6d03279073b",
-   "web:androidAiFaq": "882f8fb7a60ff106f438cf181fe2d84795acb0574bd5c6068ccb08b20bf11f10",
    "switch:aiLocation.us": "3703a295856cf461d9b247e5b88bc650c27dfd2772a19bb3a049f718a8d5d2ba",
-   "switch:aiLocation.global": "e40e445324b13e6ce0ee3d2773e14372064039157a4819ee8a85873d4e889a9f",
+   "switch:aiLocation.global": "791b1ca52ea8c01fa6df883a9ad85ca8f34ccfb0cc6b687b5540ff98326ccb8a",
    "switch:aiLocationShort.us": "6c2a9e197403c6932b03e56ac239ed6aea6ce2edfc7ef1a51d15bcf0ccff5d52",
-   "switch:aiLocationShort.global": "13a8d1c482b794bfdbc81002d632155d09207de29676c7977a7c248151cebe69",
-   "switch:aiTransferCountry.us": "d39e4fd43a73158d249b759e5f29b18ea061724880a881da3385f06356b64569",
-   "switch:aiTransferCountry.global": "efe7c5f17fabf38b7094544cf3a81fecfe753a93015c558a0f7e76f1a5660cba",
+   "switch:aiLocationShort.global": "23810ce1aee6ecaf45762a40f41978ec701ebfe18ae86f7dbf0ff068dfa88f37",
+   "switch:aiTransferCountry.us": "27a6951f85244e5e9bfbfef6182e7403f7cb0041aee23a8ed8ee58d079a29544",
+   "switch:aiTransferCountry.global": "f89e97e5ab09142d32eb7698a7a06fb9c508bf241e911bfeef39aac4f7ba4689",
    "switch:aiGuardrail.on": "2afafd2131f662daef94cfd483e450d15160194e773d7003246068388486c890"
   },
   "tr": {
@@ -1912,7 +2188,7 @@
    "app:ai.consent.a.optional.title": "54b903b49b9aceacb7052677555aa5602885bed2c6bc11bef76110f6035bedad",
    "app:ai.consent.a.optional.body": "406ac1ceb725b7dfdb11325954eb5ec18e4644e5e4ff6dbb1577d8110b0795f5",
    "app:ai.consent.a.transfer.title": "6fc22923d52642310c9f28c8b0767be52268a40dc8df4f639758a9bac632c0a8",
-   "app:ai.consent.a.transfer.body": "ac067455f969e88fa55a3972ada7e31a416b666eb91bbaf8389f1c131dc24f6e",
+   "app:ai.consent.a.transfer.body": "08255be50e183c87a4d9684ed1b7952284b4dee3a597eb93825342eff7a8d32a",
    "app:ai.consent.a.check.health": "ebdae69c6e8f826705c3f2cb93581aba1d40205ecd390c3cc55f4b128a6f6f07",
    "app:ai.consent.a.check.health.detail": "b9c816448c4005518af54d79127a1568198f4586030fa99d7c16f7960f0f9910",
    "app:ai.consent.a.check.transfer": "85d0300abb4e4836ef00dbfa3e7842166af0b96bf8d3c8538255ea1f0f737a7e",
@@ -1922,11 +2198,14 @@
    "app:ai.consent.a.region.us": "4ec22b375a3b1c58a05c6c89ae8742bd551d7d92f07229ef656b9bfe9f3f97e4",
    "app:ai.consent.b.processing": "e652ad7d83328ee786dd96edd0cf5be66e9f4e27bc992bbb41025a8e5618639f",
    "app:ai.help.inputNote": "69c4e58c2f15388b3b5a89fe3f5f73710be0124370a70165b97d613d42c01a42",
+   "web:name": "68642999652d1462aa7abf9656dfe8d1d7c1822f8c349900ac0fb31a7496c533",
+   "web:perk": "56a7cec66a036125c3e413c04027ed6cba1d3092e46512ba41709c1b21fd3fd6",
+   "web:sectionTitle": "f39747dce306f50bbc1d584b3c3297d654913c4efbc5703066c2373aecb2c550",
    "web:clauses.0": "b962c7586e2f8f25e4b24197b54b34d00593181cbc1f166aec025593ca8405af",
    "web:clauses.1": "9f88c35e630500fe787b1023df566c26bcf17c953d51b4525181f2feda4173f2",
    "web:clauses.2": "8e7b46805bfdf77f531960a3ca12f5e8a26462f8c22e8ed8954320961f327e08",
    "web:clauses.3": "6f9fbbaea95d00e14bd96ed1ba642ee04288825f747aee76a000307d5f10891b",
-   "web:clauses.4": "508d268bc661d9893549963bd77d70097d07467320edbc1229560aac4500e8f8",
+   "web:clauses.4": "fe6901d88e41792fcaa8b99b81d0a6d8070844f5b2980c98020f981b0e1e6931",
    "web:clauses.5": "72e420d214b73d717a973ebbb93097165198fac8844372a04a821ed6500b55bc",
    "web:clauses.6": "1ebe2aa371d8cfc7b93fbb371e89f32a447443e5c3ab41748da25e3a0e6f9f52",
    "web:clauses.7": "2ed8b30834bf084808c282eb12bddf23f8cbeb8a13046ecf5564204467301a47",
@@ -1937,29 +2216,41 @@
    "web:e2eeException": "51111e6606014cf75799a90b22f17dedea83441d70a2a232c4c207528ea539fc",
    "web:healthExclusion.ios": "6955d0d9d6ec904470693049f1696b9cd80f7736ae359f5f0af1c2b0d1c8cd3e",
    "web:healthExclusion.android": "e042b376faf9659d20e18003eb50a9a9fdadd060e9945f5cc2c5e422f38271d1",
+   "web:onDeviceScope": "46291a0a3ba9f2a1a4da908a74cd9d60e193dcc24dede022ebcf9cbd2f324766",
+   "web:onDeviceOnly": "22e8626799d0ffa696b23c54be3cc0c2e200e1bfb2585e2cdb19f67adf53bdce",
+   "web:iosAiFaq": "d23dc514e827625bf636982364a841739c9d0ca7a6ab1ab52477bc422a1f83b9",
+   "web:androidAiFaq": "43d82f9b33123d5fe49571f291e58af9395bccef88f60df0c761ca8627662607",
+   "web:androidBadge": "68b32976b712f08e43b387c6a7ab0cc80332b1f39b5b7c45d0c1cc362d9db873",
+   "web:androidNotUsedItem": "e32ec4fc54c87a8d779c35005d677d7192a75dd4cbc35969681380a5b08727db",
    "web:processorRow.legalBasis": "9e8c887567eaab25b75007c1fec8955c6163a9a8cbbdf433cb2fa78e08685558",
    "web:processorRow.data": "540f2b49c963932b88d385f9e65aa5ff4cfe6e95dd576bdf6c99b9c540fc01f9",
    "web:processorRow.country": "06e424427483904fc0c6c12f3c9618cbb4b2225807eaff54d9599176d823980c",
    "web:processorRow.timingMethod": "6652f2e4624228ad5141128c25611e71506372f6364745defc5a9ba93e569fcd",
-   "web:processorRow.recipientContact": "d89f5c8c795d22884cd21705e2f77f46cc99d1f2a92c4bf668410215d7d377be",
+   "web:processorRow.recipientContact": "7ec53d104be516f14f678c494068e7b2a403e67d25bf64c8b2deb906e273fd18",
    "web:processorRow.purpose": "e80fed78c2ef50581d0d6ae571b8dc476f91a4f643a4785a8d7a6a083a5358f8",
    "web:processorRow.retention": "c24d67fe59587e53cf40c08da30c5c0d903a21bd66e5c0018e482a7de6dfaedd",
    "web:processorRow.refusalEffect": "6a12361d553bd57cbb9f6c5efe5459dc0a4dd3a03e0bbff398f083b6d5dc7290",
    "web:cloudflareTransit": "d36d00c50cf5171166521196fbb850521f1a1df1081b51c200a78179bf65f662",
+   "web:terms.0": "0b60b937a1b281ee91d634acf3a0a9e09d6eac57f07c79bc072ec12546dc3a61",
+   "web:terms.1": "25227e7fa4ba817ac9cc21e20360aebe9ebe353a850d28106b9711056f497183",
+   "web:terms.2": "588be12a3341e9cc833bebb7fa6b9016b3f6b8de5fa1c4a7b8d446af06afdf0e",
+   "web:terms.3": "50b9a6e1ac4a670ab3809502da4d0ea6242353cb0cd5f41bb3b7c792219f42bc",
+   "web:terms.4": "52036fe8622c8ec0de74b69976221b49ca7a3dad7c9ae01369387b80052392de",
+   "web:terms.5": "1132a7f975b4dc769bb66a138aa9f46c6718c2d67dd0a7fda406b18477676319",
+   "web:terms.6": "21cc9970b1bd96fb82510917bd04b2a6f9a3dcac1ca74486f66c23a624d307ee",
+   "web:terms.7": "6d9175bbe30cafe4599e9d7e63277eb7afa737253e0e3663dd1f40d185cd135e",
    "web:usHealth.categories": "5cdf7b06cfe0430523efb892e651eec08bdb2f9282186b13f09c45285c1de7d4",
    "web:usHealth.purpose": "c091ebf841787935e3eda76fd0c01e695081d14067390360c58688bbaac44db5",
    "web:usHealth.processor": "85abc13dfa415321bd036816988b9df725ce55246697ba4072cacd8ca3eaa48a",
    "web:usHealth.noSale": "aaa7da684a53cd4157a93f9abd8ebcfa41b4fa07af38439e06a3b0440d798f61",
    "web:usHealth.consent": "c54731586d21acd37ef8f7d8783e92845e2d1ab59caadedc3cc4a91e5dea8a7e",
    "web:deletion": "4d796e3d350c4b7365ff28a17278f834bb54ede16eddc2ffbc8c357d8009af4e",
-   "web:iosAiFaq": "d23dc514e827625bf636982364a841739c9d0ca7a6ab1ab52477bc422a1f83b9",
-   "web:androidAiFaq": "43d82f9b33123d5fe49571f291e58af9395bccef88f60df0c761ca8627662607",
    "switch:aiLocation.us": "74ef1742e4c3ed95b27f451e1d98e92b19b6508d6f2a617d7c6c91d1e3e18a47",
-   "switch:aiLocation.global": "a16f24818e13458b65f0671d8da0544ffb7acf2277669a0bd277cec7260fe756",
+   "switch:aiLocation.global": "5e5467855ec120e679e92604ccfa1c8787d69b1e5a6952e0a5bdfd01f2c9bec5",
    "switch:aiLocationShort.us": "e0a7d61d48f251bef03c0a2d1f2999e905bac4ea178536738c69aeed5ef6c98f",
-   "switch:aiLocationShort.global": "d828fb4778b8f0efb6c39bddd30a5a14d94d2cb316336c745a96a99ad6da0c58",
-   "switch:aiTransferCountry.us": "d462a0070269c3c4dea57e57b1b1f0215499018a0f0550ef34b0047abf78aacf",
-   "switch:aiTransferCountry.global": "c23ee19f5f1170b36121f49e44873792880b53bcb65b7eb42a8b2e4351c55ae2",
+   "switch:aiLocationShort.global": "0faa32de68bb02a40c8cdb199b5ef91d9b4327fd90d635c9b450d54a9e5e6928",
+   "switch:aiTransferCountry.us": "f0f4b0a3590f490fa6aa92ff9a09435490b802df2e24389536f45b8461460ce3",
+   "switch:aiTransferCountry.global": "26cac2dfb95b00e97eb4c38b9725a1a16d7ba8b07f7a99c1ab7a61b7832504f3",
    "switch:aiGuardrail.on": "70e3e4c9e5c089605c699fee7984011072a1d135d1eae8905176506feb578c26"
   }
  }

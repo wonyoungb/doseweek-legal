@@ -41,11 +41,34 @@ LOCALES = ('ko', 'en', 'ja', 'de', 'fr', 'es', 'it', 'nl', 'pt-PT', 'pl', 'sv', 
 CJK = ('ja', 'zh-Hans', 'zh-Hant')
 SECTION = 'ai-assistant'
 PROCESSOR_ROW = 'google-vertex-ai'
-PREVIEW = ai_assistant_candidate.STAGING_PREVIEW_SWITCHES
+# The owner selected location global and guardrail off (2026-10-03); staged pages render with it.
+PREVIEW = ai_assistant_candidate.OWNER_SELECTION
 COMBINATIONS = tuple((location, guardrail) for location in ('us', 'global') for guardrail in ('off', 'on'))
 QUOTE = '“may be processed in any Google Cloud location around the world”'
 GOOGLE_ENTITIES = ('Google Cloud Korea LLC', 'Google Asia Pacific Pte. Ltd.', 'Google LLC')
 RETIRED_PROVIDER = ('Bedrock', 'Anthropic', 'Claude', 'AWS', 'Amazon', 'ap-northeast-2')
+# SHA-256 of each locale's pinned purpose item (googleUse + googleCacheAndAbuse), read against the
+# sources in review round 2 (no "only"): Google also caches for 24 hours and logs flagged prompts for
+# 90 days. Unchanged since consentVersion 2026-10-03.3. A changed pin fails here in every locale.
+PURPOSE_ITEM_SHA256 = {
+    'ko': '6c330ee2727c3f3dd117f02e649f125dcbfdb0ac149a9bbb80a46455d58070e0',
+    'en': 'c940c731489c8b119aaade3033b09f3e5f9d6f48eb5d4a80975d16ee920d975b',
+    'ja': '894cf22a29e437c8b334a02ecbbf4d04d19599fbc9bbdd3cf16bd88693089f82',
+    'de': '240f294a6f2600814c2c83ff1ec338fe1374ee7453dfb492870cad22c4bba7ea',
+    'fr': 'e54d4e68edbdba5fcb9b0bece099aaefd4f9a266569c62c9ea8f3fad1c3ba062',
+    'es': '80992ed6351d0cb4a0314dc943588801a17bc78e24a1a4df7dac790c7ec9ef40',
+    'it': '99dee4d270c11f0ef00b457afd23a8c2064a1dd26f2354928bf687bad53ec97a',
+    'nl': '1c8a59d9c0edcc1b288928b1123bbf0861c87e227e0ebbc982ee43dfcc1a9c5f',
+    'pt-PT': 'b05a7bba56b141fb03d0342d60ef22a911365b8d71803b1bdd8c86fbf79dd787',
+    'pl': '5a8153716c86e4ff91680279cde8d5c1ef43eac0151ebc20371c21fd162c20e4',
+    'sv': '33cfe43f5c67efcf9a2e53e0b6de61118f93a42506f5f0035774c75adac21711',
+    'hi': 'cc346ef35e4ec3a74adf4ae6d123b19dc8de32d27883089eef2cc8a24e8119c5',
+    'pt-BR': '5e2750771992f0be45524c85c320f541edd2c377a334ea716ade333e2611b39e',
+    'ar': 'f93bc2f8582a7c37b819a2eb3e1e362a0772a4c7571625038a4448bdacbdb75a',
+    'zh-Hans': 'f76aff8c3f1670db11a248eb92829924a0c4f6ff7812c2f37f0876013b108f37',
+    'zh-Hant': 'b678723e757e8f804a4d62f5cc5ae7bcc4e8d9c5434ddad86aa728a0ce6c690f',
+    'tr': '907df31742477eb5172582f0c75416d9b02b5b575eeb1f47972979c35d0e8186',
+}
 # The feature name each locale's shipped ai.* copy uses (CON-PRO shared_copy.json, 6186a662),
 # as the stem that survives case endings.
 NAME_STEMS = {
@@ -208,7 +231,7 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         cls.android = cls.staged['android-content.candidate.json']
         cls.terms = cls.staged['terms-content.json']
         cls.us_health = cls.staged['us-health-content.json']
-        # The candidate files carry switch tokens; staged pages use the staging preview pair.
+        # The candidate files carry switch tokens; staged pages use the owner's selection.
         cls.web = ai_assistant_candidate.resolve(load(WEB_SOURCE), *PREVIEW)
         cls.app = ai_assistant_candidate.resolve(load(APP_SOURCE), *PREVIEW)
 
@@ -486,7 +509,7 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         self.assertTrue(korean.endswith(
             '기기 안에서 처리하는 이 두 기능에는 Private Cloud Compute, 서버 모델, 제3자 모델을 쓰지 않아요. '
             'AI 기록 도우미(Pro)는 이와 다른 기능이에요. 서버에서 제3자 모델로 처리해요. 따로 동의한 뒤에만, '
-            '확인하고 보낸 내용이 DoseWeek 서버를 거쳐 Google Cloud Vertex AI(미국)로 가고, '
+            '확인하고 보낸 내용이 DoseWeek 서버를 거쳐 Google Cloud Vertex AI(Global, 처리 국가 미정)로 가고, '
             'Google의 Gemini 모델이 답을 만들어요. 인터넷에 연결되어 있어야 하고, 잠시 쉬어 갈 때는 '
             '앱에서 알려 드려요. 자세한 내용은 개인정보 처리방침의 ‘AI 기록 도우미(Pro)’ 항목에 있어요.'), korean)
         english = self.ios['locales']['en']['support']['released']['ai']['answers'][0]
@@ -494,7 +517,7 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
             'These two on-device features use no Private Cloud Compute, server model, or third-party '
             'model. The AI record assistant (Pro) is a different feature: it is processed on a server, '
             'with a third-party model. Only after your separate consent, what you confirm and send '
-            'goes through the DoseWeek server to Google Cloud Vertex AI (United States), '
+            'goes through the DoseWeek server to Google Cloud Vertex AI (Global, no fixed country), '
             'where the Gemini model by Google creates the answer. It needs an internet connection '
             'and can be paused for a while; the app tells you when that happens. The Privacy Policy '
             'describes it under “AI record assistant (Pro)”.'), english)
@@ -687,7 +710,22 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                           ['us', 'global'], False, 24, 90))
         self.assertEqual([key for key in facts if 'bedrock' in key.casefold() or key == 'region'], [])
         self.assertTrue(candidate['unresolvedBeforePublication'])
-        self.assertFalse(any(candidate['readiness'].values()), 'nothing is verified in this lane')
+        # Round 3: true are only the three flags that record an owner decision, each with its
+        # citation; no flag that needs a readback or a review is true.
+        decided = ('vertexLocationDecided', 'awsGuardrailDecided', 'pipaCountryItemForGlobalAccepted')
+        self.assertEqual(ai_assistant_candidate.DECIDED_READINESS, decided)
+        self.assertEqual(sorted(key for key, value in candidate['readiness'].items() if value), sorted(decided))
+        reasons = candidate['readinessEvidence']
+        for key in decided:
+            self.assertIn('late-decisions.md', reasons[key])
+            self.assertIn('2026-10-03', reasons[key])
+        self.assertIn('19:00', reasons['pipaCountryItemForGlobalAccepted'])
+        self.assertIn('not an official text', reasons['pipaCountryItemForGlobalAccepted'])
+        self.assertEqual(ai_assistant_candidate.selection(candidate), ('global', 'off'))
+        self.assertEqual(ai_assistant_candidate.selection(self.source(APP_SOURCE)), ('global', 'off'))
+        untruthful = dict(candidate, readiness=dict(candidate['readiness'], killSwitchVerified=True))
+        with self.assertRaises(AssertionError, msg='a flag may be true without a recorded reason'):
+            ai_assistant_candidate.validate_web(untruthful)
         self.assertEqual(list(candidate['locales']), list(LOCALES))
 
     def test_release_gate_stays_closed_until_the_assistant_is_verified(self):
@@ -702,13 +740,17 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                       (ROOT / 'scripts/check_site.py').read_text(encoding='utf-8'))
 
     def test_release_gate_refuses_an_undecided_switch_even_when_every_flag_is_true(self):
-        # ai-consent-v3 has two open owner decisions. Flipping every flag without choosing the
-        # location and the guardrail must not publish: no combination is a silent default.
+        # ai-consent-v3 has two owner switches. Flipping every flag without choosing the location
+        # and the guardrail must not publish: no combination is a silent default. The committed
+        # candidate carries the owner's selection (global, off), so this fixture clears it.
         import copy
         import tempfile
         module = importlib.import_module('ai_assistant_candidate')
         candidate = copy.deepcopy(module.load())
-        self.assertIsNone(module.selection(candidate), 'the committed candidate must leave both switches open')
+        self.assertEqual(module.selection(candidate), module.OWNER_SELECTION)
+        for name in ('location', 'guardrail'):
+            candidate['switches'][name]['selected'] = None
+        self.assertIsNone(module.selection(candidate))
         candidate['status'] = 'integrated-and-verified'
         candidate['unresolvedBeforePublication'] = []
         candidate['readiness'] = {key: True for key in candidate['readiness']}
@@ -801,20 +843,29 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
     def test_open_owner_decisions_and_unverified_google_facts_are_recorded_as_blockers(self):
         unresolved = self.source(WEB_SOURCE)['unresolvedBeforePublication']
         self.assertEqual([item for item in unresolved if 'Bedrock' in item], [])
-        for tokens in (('SWITCH_LOCATION', 'us or global'),
-                       ('SWITCH_AWS_GUARDRAIL', 'off or on'),
-                       ('googleContractingEntityVerified', 'Google Cloud Korea LLC', 'billing'),
+        for tokens in (('SWITCH_AWS_GUARDRAIL is off', 'ApplyGuardrail', 'serverGuardrailCallRemovedReadback',
+                        'serverRegistry.guardrailLocales'),
+                       ('googleContractingEntityVerified', 'Google Cloud Korea LLC', 'billing', 'KRW',
+                        'authorized reseller'),
                        ('vertexCacheSettingReadback', '24 hours', '90 days', 'zero data retention'),
-                       ('28-8(2)2', 'global', 'pipaCountryItemForGlobalAccepted'),
-                       ('28-8(2)2', 'location us', 'NOT_RETRIEVED'),
                        ('APPI Rule 17(2)', 'Singapore', 'Q12-11', 'Rule 17(2)3'),
-                       ('DoseWeek server location', 'not read back'),
-                       ('serverRegistry.guardrailLocales', 'awsGuardrailEntityAndProcessorRowVerified'),
                        ('no native-speaker review', '17 locales'),
-                       ('ai.consent.a.check.transfer', 'server registry'),
+                       ('ai.consent.a.check.transfer', 'server registry', 'google-vertex-global'),
                        ('zh-Hans', 'zh-Hant', 'meal ideas', 'CON-PRO')):
             with self.subTest(tokens=tokens):
                 self.assertEqual(len([item for item in unresolved if all(token in item for token in tokens)]), 1)
+        # Round 3: decided or sourced points left the blocker list and are recorded with their source.
+        for closed in ('us or global', 'off or on', 'not read back from the hosting account',
+                       'pipaCountryItemForGlobalAccepted'):
+            self.assertEqual([item for item in unresolved if closed in item], [], closed)
+        reasons = self.source(WEB_SOURCE)['readinessEvidence']
+        for token in ('Lightsail', 'ap-northeast-2', 'server-hardening-20261003/receipt.md', 'checkpoint-34.json',
+                      'e7c7faf484c24a57ddecda624c52cf548fc213f7d5805382601417d9e2bf3758'):
+            self.assertIn(token, reasons['doseweekServerLocation'])
+        for token in ('currencyCode KRW', 'does not verify', 'authorized', 'reseller'):
+            self.assertIn(token, reasons['googleContractingEntityVerified'])
+        self.assertIn('NOT_RETRIEVED', reasons['pipaCountryItemForUsAccepted'])
+        self.assertIn('ApplyGuardrail', reasons['serverGuardrailCallRemovedReadback'])
 
     def test_korean_copy_never_says_sangdam_and_uses_the_decided_names(self):
         for path in (WEB_SOURCE, APP_SOURCE):
@@ -841,7 +892,7 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         self.assertEqual(tuple(document['keys']), APP_KEYS)
         self.assertRegex(document['consentVersion'], r'^\d{4}-\d{2}-\d{2}\.\d+$')
         self.assertEqual((document['consentVersion'], document['wireConsentVersion']),
-                         ('2026-10-03.3', 'ai-consent-v3'))
+                         ('2026-10-03.4', 'ai-consent-v3'))
         self.assertNotIn('ai.consent.a.region.jp', document['keys'],
                          'v3 shows the transfer notice on every storefront, not as a Japan-only paragraph')
         self.assertIn('EVERY storefront', document['screens']['A'])
@@ -902,13 +953,17 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         self.assertEqual(
             copy['ai.consent.a.where.body'],
             '앱에서 한 번 더 암호화해 DoseWeek 서버(대한민국 서울)로 보내요. 서버는 이 내용을 Google Cloud의 Vertex AI로 '
-            '전달하고, Google의 AI 모델인 Gemini가 답을 만들어요. Google은 이 내용의 AI 처리와 저장을 미국에서 해요.')
+            '전달하고, Google의 AI 모델인 Gemini가 답을 만들어요. DoseWeek는 Google의 Global(글로벌) 위치(글로벌 엔드포인트)를 '
+            '써요. Google은 이런 요청이 ‘전 세계 어느 Google Cloud 위치에서든 처리될 수 있다’(“may be processed in any '
+            'Google Cloud location around the world”)고 밝히고 있어요. 처리되는 국가는 요청을 처리하는 Google 서버에 따라 '
+            '요청마다 달라질 수 있어요. 어느 서버가 처리할지는 Google이 정하기 때문에 국가를 미리 정하거나 알려 드릴 수 '
+            '없어요.')
         self.assertIn('Google은 응답 속도를 높이려고 이 내용을 메모리에 최대 24시간 둘 수 있고, Google의 자동 악용 탐지에서 '
                       '의심되는 요청은 최대 90일 보관할 수 있어요. 이런 요청은 권한이 있는 Google 직원이 검토할 수 있어요. '
                       'DoseWeek는 대화 내용을 저장하지 않아요.', copy['ai.consent.a.retention.body'])
         self.assertNotIn('바로 삭제', copy['ai.consent.a.check.health.detail'],
                          'Google does not delete at once: 24-hour memory cache, 90-day abuse log')
-        for item in ('이전받는 자:', '이전되는 국가: 미국', '이전 항목:', '이전 시기와 방법:', '이용 목적과 보유 기간:',
+        for item in ('이전받는 자:', '이전되는 국가: Global(글로벌)', '이전 항목:', '이전 시기와 방법:', '이용 목적과 보유 기간:',
                      '거부 방법과 효과:'):
             self.assertIn(item, copy['ai.consent.a.transfer.body'], 'PIPA 28-8(2) notice item')
         self.assertNotIn('메모도', copy['ai.consent.a.sent.body'])
@@ -1157,9 +1212,14 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
         self.assertEqual(committed, json.loads(json.dumps(ai_consent_apply.build())),
                          'docs/ai-consent-v3-apply.json is stale: run python3 scripts/ai_consent_apply.py')
         self.assertEqual(list(committed['combinations']), ['us-off', 'us-on', 'global-off', 'global-on'])
-        self.assertEqual(committed['ownerSwitches']['selected'], None)
+        self.assertEqual(committed['ownerSwitches']['selected'], ['global', 'off'])
+        selected = committed['combinations']['global-off']['serverRegistry']
+        self.assertEqual((selected['recipients'], selected['guardrail'], selected['guardrailLocales']),
+                         ({'ai-consent-v3': 'google-vertex-global'}, {'ai-consent-v3': None},
+                          {'ai-consent-v3': []}))
+        self.assertIn('global-off', committed['status'])
         self.assertEqual((committed['consentVersion'], committed['wireConsentVersion']),
-                         ('2026-10-03.3', 'ai-consent-v3'))
+                         ('2026-10-03.4', 'ai-consent-v3'))
         every = []
         for name, block in committed['combinations'].items():
             registry = block['serverRegistry']
@@ -1391,6 +1451,17 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                 self.assertTrue(purpose.endswith(sentences_['googleCacheAndAbuse']))
                 self.assertTrue(number(24, purpose) and number(90, purpose) and purpose.count('Google') >= 3)
                 self.assertIn(sentences_['googleCacheAndAbuse'], entry['processorRow']['purpose'])
+                # Round 3 (re-review F1, low): equality with the pinned sentences in every locale,
+                # in all four combinations, so an "only" cannot return by editing copy and pin
+                # together without this test seeing the pinned sentence change below.
+                joined = sentences_['googleUse'] + ai_legal_guard.separator(locale) + sentences_['googleCacheAndAbuse']
+                for location, guardrail in COMBINATIONS:
+                    resolved = ai_assistant_candidate.resolve(self.source(APP_SOURCE), location, guardrail)
+                    transfer = resolved['locales'][locale]['copy']['ai.consent.a.transfer.body']
+                    self.assertEqual(ai_legal_guard.pipa_items(locale, transfer, pins, locale)['purposeAndRetention'],
+                                     joined)
+                self.assertEqual(hashlib.sha256(joined.encode('utf-8')).hexdigest(), PURPOSE_ITEM_SHA256[locale],
+                                 'the pinned purpose sentences changed: read them against the sources (no "only")')
         stale = {'en': ('only to create', 'Not used for AI training or advertising'),
                  'ko': ('만드는 데에만', '광고에는 쓰지 않아요'), 'ja': ('ためだけに', '目的でのみ'),
                  'de': ('nur zur Erstellung', 'ausschließlich zur Erstellung'), 'fr': ('uniquement pour créer',),
@@ -1403,7 +1474,8 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                  'tr': ('yalnızca istediğiniz', 'yalnızca yanıtı')}
         self.assertEqual(sorted(stale), sorted(LOCALES))
         for locale, phrases in stale.items():
-            text = '\n'.join([*strings(self.web['locales'][locale]), *self.app['locales'][locale]['copy'].values()])
+            text = '\n'.join([*strings(self.web['locales'][locale]), *self.app['locales'][locale]['copy'].values(),
+                              *pins['requiredSentences'][locale].values()])
             with self.subTest(locale=locale, check='no only'):
                 self.assertEqual([phrase for phrase in phrases if phrase in text], [])
 
@@ -1453,8 +1525,12 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                 self.assertNotIn(sentences_['usCommitment'], world)
                 self.assertIn(module.US_STEMS[locale], sentences_['usCommitment'])
                 for text in (us, world):
-                    self.assertTrue(text.endswith(sentences_['usSystem'] + ai_legal_guard.separator(locale)
-                                                  + sentences_['singapore']))
+                    # R2: where the named recipients are, right before the systems of those countries.
+                    self.assertTrue(text.endswith(ai_legal_guard.separator(locale).join(
+                        (sentences_['recipientCountries'], sentences_['usSystem'], sentences_['singapore']))))
+                    self.assertEqual(text.count(sentences_['recipientCountries']), 1)
+                for token in ('Google LLC', 'Google Asia Pacific Pte. Ltd.', module.US_STEMS[locale]):
+                    self.assertIn(token, sentences_['recipientCountries'])
                 self.assertIn('Personal Data Protection Act 2012', sentences_['singapore'])
                 self.assertIn('Google Asia Pacific Pte. Ltd.', sentences_['singapore'])
         english = pins['requiredSentences']['en']
@@ -1464,41 +1540,208 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                       'facilities', english['usCommitment'])
 
     def test_release_gate_ties_each_open_legal_point_to_its_switch_value(self):
-        # F8: location global (PIPA country item) and guardrail on (AWS entity and processor row)
-        # were blocked only by the free-text unresolved list. Each now needs its own flag.
+        # F8 and re-review R1: every switch value has its own flag, so no combination passes the
+        # conditional gate with nothing to prove. Guardrail off needs the readback that the server
+        # no longer calls AWS ApplyGuardrail; location us needs the PIPA country form for us.
         import copy
         import tempfile
         module = importlib.import_module('ai_assistant_candidate')
         self.assertEqual(module.CONDITIONAL_READINESS, {
             ('location', 'global'): 'pipaCountryItemForGlobalAccepted',
-            ('guardrail', 'on'): 'awsGuardrailEntityAndProcessorRowVerified'})
+            ('location', 'us'): 'pipaCountryItemForUsAccepted',
+            ('guardrail', 'on'): 'awsGuardrailEntityAndProcessorRowVerified',
+            ('guardrail', 'off'): 'serverGuardrailCallRemovedReadback'})
         base = copy.deepcopy(module.load())
+        self.assertIs(base['readiness']['serverGuardrailCallRemovedReadback'], False,
+                      'no readback says the server stopped calling ApplyGuardrail')
+        self.assertIs(base['readiness']['pipaCountryItemForUsAccepted'], False)
         base['status'] = 'integrated-and-verified'
         base['unresolvedBeforePublication'] = []
-        for location, guardrail, flag in (('global', 'off', 'pipaCountryItemForGlobalAccepted'),
-                                          ('us', 'on', 'awsGuardrailEntityAndProcessorRowVerified')):
-            with self.subTest(location=location, guardrail=guardrail), \
-                    tempfile.TemporaryDirectory(prefix='doseweek-legal-gate-') as directory:
-                candidate = copy.deepcopy(base)
-                candidate['readiness'] = {key: key not in module.CONDITIONAL_READINESS.values()
-                                          for key in candidate['readiness']}
-                candidate['switches']['location']['selected'] = location
-                candidate['switches']['guardrail']['selected'] = guardrail
-                candidate['legalSelfReviewEvidence'] = self._synthetic_legal_self_review_evidence(
-                    candidate, directory)
-                with self.assertRaises(AssertionError) as failure:
+        conditional = set(module.CONDITIONAL_READINESS.values())
+        for location, guardrail in COMBINATIONS:
+            needed = {module.CONDITIONAL_READINESS[('location', location)],
+                      module.CONDITIONAL_READINESS[('guardrail', guardrail)]}
+            self.assertEqual(len(needed), 2)
+            for missing in sorted(needed):
+                with self.subTest(location=location, guardrail=guardrail, missing=missing), \
+                        tempfile.TemporaryDirectory(prefix='doseweek-legal-gate-') as directory:
+                    candidate = copy.deepcopy(base)
+                    # Every flag true except the one under test; the two flags of the other
+                    # switch values stay false and must not be asked for.
+                    candidate['readiness'] = {key: key not in conditional or key in needed - {missing}
+                                              for key in candidate['readiness']}
+                    candidate['switches']['location']['selected'] = location
+                    candidate['switches']['guardrail']['selected'] = guardrail
+                    candidate['legalSelfReviewEvidence'] = self._synthetic_legal_self_review_evidence(
+                        candidate, directory)
+                    with self.assertRaises(AssertionError) as failure:
+                        module.require_release_ready(candidate, allow_synthetic_fixture=True)
+                    self.assertIn(f'readiness.{missing} is not true', str(failure.exception))
+                    candidate['readiness'][missing] = True
                     module.require_release_ready(candidate, allow_synthetic_fixture=True)
-                self.assertIn(flag, str(failure.exception))
-                candidate['readiness'][flag] = True
-                module.require_release_ready(candidate, allow_synthetic_fixture=True)
+        # The committed selection (global, off): the owner's acceptance alone does not open the gate.
         with tempfile.TemporaryDirectory(prefix='doseweek-legal-gate-') as directory:
             candidate = copy.deepcopy(base)
-            candidate['readiness'] = {key: key not in module.CONDITIONAL_READINESS.values()
+            self.assertEqual(module.selection(candidate), ('global', 'off'))
+            candidate['readiness'] = {key: key != 'serverGuardrailCallRemovedReadback'
                                       for key in candidate['readiness']}
-            candidate['switches']['location']['selected'] = 'us'
-            candidate['switches']['guardrail']['selected'] = 'off'
             candidate['legalSelfReviewEvidence'] = self._synthetic_legal_self_review_evidence(candidate, directory)
-            module.require_release_ready(candidate, allow_synthetic_fixture=True)
+            with self.assertRaises(AssertionError) as failure:
+                module.require_release_ready(candidate, allow_synthetic_fixture=True)
+            self.assertIn('guardrail=off', str(failure.exception))
+            self.assertIn('serverGuardrailCallRemovedReadback', str(failure.exception))
+
+    def test_global_notice_says_global_and_that_the_country_can_change_in_17_locales(self):
+        # Owner wording rule 2026-10-03 19:10 KST: state "Global" explicitly and say the processing
+        # country can change depending on which Google servers handle the request and cannot be
+        # fixed in advance. Google's own statement is quoted from the saved data-residency page.
+        import copy as copying
+        module = ai_assistant_candidate
+        pins = ai_legal_guard.read_pins()
+        web, app = self.source(WEB_SOURCE), self.source(APP_SOURCE)
+        resolved_app, resolved_web = module.resolve(app, 'global', 'off'), module.resolve(web, 'global', 'off')
+        for locale in LOCALES:
+            sentences_ = pins['requiredSentences'][locale]
+            change, bridge = sentences_['globalCountryChanges'], sentences_['recipientCountries']
+            copy, entry = resolved_app['locales'][locale]['copy'], resolved_web['locales'][locale]
+            with self.subTest(locale=locale):
+                self.assertIn('Google', change)
+                country = ai_legal_guard.pipa_items(locale, copy['ai.consent.a.transfer.body'], pins, locale)['country']
+                self.assertTrue(country.startswith('Global'), country[:40])
+                for text in (copy['ai.consent.a.transfer.body'], entry['clauses'][5], entry['processorRow']['country']):
+                    self.assertGreaterEqual(text.count('Global'), 2)
+                    self.assertEqual(text.count(change), 1)
+                    self.assertEqual(text.count(QUOTE), 1)
+                    self.assertLess(text.index(QUOTE), text.index(change))
+                    self.assertLess(text.index(change), text.index(bridge))
+                    self.assertLess(text.index(bridge), text.index(sentences_['usSystem']))
+                    self.assertIn('https://cloud.google.com/about/locations', text)
+                for text in (copy['ai.consent.a.where.body'], entry['clauses'][4]):
+                    self.assertIn('Global', text)
+                    self.assertEqual(text.count(change), 1)
+                for key in ('ai.consent.b.processing', 'ai.help.inputNote'):
+                    self.assertIn('Global', copy[key])
+                switch = app['locales'][locale]['switchText']
+                self.assertNotIn(change, switch['aiTransferCountry']['us'])
+                self.assertNotIn('Global', switch['aiTransferCountry']['us'])
+        english = pins['requiredSentences']['en']
+        self.assertEqual(english['globalCountryChanges'],
+                         'The country where this content is processed can change with each request, depending on '
+                         'which Google servers handle it; Google decides this, so the country cannot be fixed or '
+                         'named in advance.')
+        self.assertEqual(english['recipientCountries'],
+                         'Of the recipients named in this notice, Google LLC is located in the United States and '
+                         'Google Asia Pacific Pte. Ltd. in Singapore; the data-protection systems of these two '
+                         'countries are described next.')
+        self.assertEqual(resolved_app['locales']['en']['copy']['ai.consent.a.transfer.body'].count(
+            'Country: Global (no single country).'), 1)
+        self.assertIn('처리되는 국가는 요청을 처리하는 Google 서버에 따라 요청마다 달라질 수 있어요.',
+                      pins['requiredSentences']['ko']['globalCountryChanges'])
+        self.assertIn('국가를 미리 정하거나 알려 드릴 수 없어요.', pins['requiredSentences']['ko']['globalCountryChanges'])
+        self.assertIn('이전되는 국가: Global(글로벌)', resolved_app['locales']['ko']['copy']['ai.consent.a.transfer.body'])
+        # Each rule holds after a re-pin: dropping the sentence, the word or the bridge fails on a guard.
+        for locale in ('ko', 'ja', 'ar', 'de'):
+            sentences_ = pins['requiredSentences'][locale]
+            for case, old in (('country can change', sentences_['globalCountryChanges']),
+                              ('recipients bridge', sentences_['recipientCountries']),
+                              ('the word Global', 'Global')):
+                with self.subTest(locale=locale, removed=case):
+                    mutated_app, mutated_web = copying.deepcopy(app), copying.deepcopy(web)
+                    for document in (mutated_app, mutated_web):
+                        text = document['locales'][locale]['switchText']
+                        for name in ('aiLocation', 'aiLocationShort', 'aiTransferCountry'):
+                            text[name]['global'] = ' '.join(text[name]['global'].replace(old, 'x').split())
+                    with self.assertRaises(AssertionError) as failure:
+                        module.validate_app(mutated_app, mutated_web,
+                                            ai_legal_guard.with_hashes(pins, mutated_web, mutated_app))
+                    self.assertNotIn('--repin', str(failure.exception))
+
+    def test_recipient_line_names_the_entities_as_documented_by_google(self):
+        # F7: the contracting entity is not read back (billing describe shows KRW, no entity), so
+        # the copy says what Google's terms name for a Korean billing address, in every locale.
+        old = {'ko': '(계약 법인, 대한민국 서울)', 'en': '(contracting entity; Seoul', 'ja': '（契約法人、大韓民国ソウル）',
+               'de': '(Vertragspartner; Seoul', 'fr': '(entité contractante ; Séoul', 'es': '(entidad contratante; Seúl',
+               'it': '(società contraente; Seul', 'nl': '(contractpartij; Seoul', 'pt-PT': '(entidade contratante; Seul',
+               'pl': '(strona umowy; Seul', 'sv': '(avtalspart; Seoul', 'hi': '(अनुबंध करने वाली इकाई; सियोल',
+               'pt-BR': '(entidade contratante; Seul', 'ar': '(الكيان المتعاقد؛ سيول', 'zh-Hans': '（签约实体，大韩民国首尔）',
+               'zh-Hant': '（簽約實體，大韓民國首爾）', 'tr': '(sözleşme tarafı; Seul'}
+        self.assertEqual(sorted(old), sorted(LOCALES))
+        for locale in LOCALES:
+            copy, entry = self.app['locales'][locale]['copy'], self.web['locales'][locale]
+            with self.subTest(locale=locale):
+                for text in (copy['ai.consent.a.transfer.body'], entry['clauses'][4],
+                             entry['processorRow']['recipientContact']):
+                    self.assertNotIn(old[locale], text, 'the entity is stated as a read-back fact')
+                    after = text[text.index('Google Cloud Korea LLC') + len('Google Cloud Korea LLC'):]
+                    self.assertIn('Google', after[:after.index('Google Asia Pacific Pte. Ltd.')],
+                                  'the label must attribute the entity to Google\'s terms')
+        self.assertIn('Google Cloud Korea LLC (the contracting entity Google’s terms name for a billing address in '
+                      'the Republic of Korea; Seoul, Republic of Korea)',
+                      self.app['locales']['en']['copy']['ai.consent.a.transfer.body'])
+        self.assertIs(self.source(WEB_SOURCE)['readiness']['googleContractingEntityVerified'], False)
+
+    def test_every_website_field_is_hash_pinned(self):
+        # Re-review F1 (low): terms, sectionTitle, onDeviceScope, onDeviceOnly and androidNotUsedItem
+        # were outside the pin; "Google keeps no copy of what you send." added to a Terms paragraph
+        # passed every check without a re-pin (reviewer probe M1).
+        import copy as copying
+        module = ai_assistant_candidate
+        web = self.source(WEB_SOURCE)
+        pins = ai_legal_guard.read_pins()
+        self.assertEqual(sorted(ai_legal_guard.WEB_PINNED_FIELDS),
+                         sorted(name for name in module.FIELDS if name != 'switchText'))
+        for name, change in (
+                ('terms', lambda e: e['terms'].__setitem__(1, e['terms'][1] + ' Google keeps no copy of what you send.')),
+                ('sectionTitle', lambda e: e.__setitem__('sectionTitle', e['sectionTitle'] + ' Pro+')),
+                ('onDeviceScope', lambda e: e.__setitem__('onDeviceScope', e['onDeviceScope'] + ' Tack.')),
+                ('onDeviceOnly', lambda e: e.__setitem__('onDeviceOnly', e['onDeviceOnly'] + ' Tack.')),
+                ('androidNotUsedItem', lambda e: e.__setitem__('androidNotUsedItem', e['androidNotUsedItem'] + ' x')),
+                ('androidBadge', lambda e: e.__setitem__('androidBadge', e['androidBadge'] + ' x'))):
+            for locale in ('en', 'sv'):
+                with self.subTest(field=name, locale=locale):
+                    mutated = copying.deepcopy(web)
+                    change(mutated['locales'][locale])
+                    with self.assertRaises(AssertionError) as failure:
+                        module.validate_web(mutated, pins)
+                    self.assertIn('--repin', str(failure.exception))
+
+    def test_selected_combination_exports_the_final_copy_for_each_consumer(self):
+        import tempfile
+        import ai_consent_apply
+        committed = self.source('docs/ai-consent-v3-apply.json')
+        block = committed['combinations']['global-off']
+        with tempfile.TemporaryDirectory(prefix='doseweek-legal-export-') as directory:
+            written = ai_consent_apply.export_selected(Path(directory), committed)
+            self.assertEqual(sorted(path.name for path in written),
+                             ['android.app-copy.global-off.json', 'ios.app-copy.global-off.json',
+                              'server.ai-consent-texts.global-off.json', 'web.ai-assistant-content.global-off.json'])
+            files = {path.name.split('.')[0]: json.loads(path.read_text(encoding='utf-8')) for path in written}
+        self.assertEqual(files['server']['serverRegistry'], block['serverRegistry'])
+        self.assertEqual(files['server']['serverRegistry']['recipients'], {'ai-consent-v3': 'google-vertex-global'})
+        self.assertEqual(files['server']['serverVertexLocation'], 'global')
+        for name, value in files.items():
+            text = json.dumps(value, ensure_ascii=False)
+            with self.subTest(file=name):
+                self.assertEqual((value['location'], value['guardrail'], value['consentVersion']),
+                                 ('global', 'off', '2026-10-03.4'))
+                self.assertEqual(re.findall(r'\{ai[A-Za-z]+\}', text), [], 'a switch token is left')
+                self.assertEqual([token for token in RETIRED_PROVIDER if token in text], [])
+                self.assertNotIn('switchText', text)
+        for platform, other in (('ios', '.android'), ('android', '.ios')):
+            for locale in LOCALES:
+                entry = files[platform]['locales'][locale]
+                with self.subTest(platform=platform, locale=locale):
+                    self.assertEqual([key for key in entry['copy'] if key.endswith(other)], [])
+                    self.assertEqual(entry['copy'], {key: text for key, text in self.app['locales'][locale]['copy'].items()
+                                                     if not key.endswith(other)})
+                    for region in ('default', 'US'):
+                        shown = entry['screenA'][region]
+                        self.assertEqual(hashlib.sha256('\n'.join(shown['strings']).encode('utf-8')).hexdigest(),
+                                         shown['sha256'])
+                        self.assertEqual(shown['sha256'], block['locales'][locale]['screenA'][f'{platform}.{region}'])
+                        self.assertIn(shown['sha256'], block['serverRegistry']['texts']['ai-consent-v3'][locale])
+                    self.assertIn('Global', entry['copy']['ai.consent.a.transfer.body'])
+        self.assertEqual(files['web']['locales'], self.web['locales'])
 
     def test_apply_data_binds_the_guardrail_switch_for_the_server(self):
         committed = self.source('docs/ai-consent-v3-apply.json')
