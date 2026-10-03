@@ -19,6 +19,7 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/<locale>/…` | The same nine routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
 | `/us-health/` | Separate US Consumer Health Data Privacy Policy, with consent, recipients and state rights; unpublished 1.0.6 candidate |
 | `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 162 pages (9 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
+| `/app-ads.txt` | AdMob authorized seller record. Keep the publisher ID equal to the snippet in the owner's AdMob account; publish this plain-text file at the domain root |
 
 Every route covers 17 locales: ko, en, ja, de, fr, es, it, nl, pt-PT, pl, sv, hi, pt-BR, ar,
 zh-Hans, zh-Hant and tr. Keep Arabic right-to-left, the separate Portuguese and Chinese

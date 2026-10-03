@@ -210,6 +210,10 @@ branch is not merged or published.
   placeholders as en, so `--release` keeps refusing a translated placeholder and no locale keeps
   one after en and ko are filled in.
 
+## 2026-09-30: AdMob seller verification
+
+- Added the root `app-ads.txt` record for Google publisher `pub-9675683489444791`.
+
 ## Unreleased: per-language URLs
 
 - Every route now also has one static page per locale at `/<locale>/<route>` (7 routes x 17
