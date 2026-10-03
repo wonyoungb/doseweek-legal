@@ -7,7 +7,7 @@
   },
   "translation": "en/ko written by the publishing agent; other locales AI-translated; no native review",
   "complete": true,
-  "androidInStore": false,
+  "androidInStore": true,
   "text": {
     "nextIos": {
       "ko": "다음 iOS 업데이트",
