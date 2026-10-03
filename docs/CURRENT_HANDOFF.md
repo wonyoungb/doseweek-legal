@@ -1,3 +1,20 @@
+## ACTIVE — predeploy integration check (2026-10-03; unpublished, main untouched)
+
+Branch `integ/legal-106-predeploy` = `next-ai/legal-store-legal-cx` 868932c + origin/main e652734
+(PR #12 app-ads.txt; CHANGELOG/README conflicts, both sides kept). 222/222 unittest methods PASS,
+`check_site.py` PASS (162 pages), `render_account_sync.py --check` PASS (126 staged pages, in memory).
+`check_site.py --release` exit 1: NEXT_RELEASE_EFFECTIVE_DATE unset. Also still closed: 2 release
+placeholders per locale on both privacy pages (server location/operator, retention), 19
+serverReadiness flags false, the app-managed Drive backup (OQ-L2-1; CloudBackupService is still in
+the Android integration tree 57f096247), and the AI text (ai-consent-v3 on `next-ai/pro-legal-ai`
+a88ab73: both switches null in the files, every readiness flag false, not merged here).
+The pages on this branch still show effective date 2026-09-23 and do not render the account,
+sync, encrypted server backup or AI disclosures, so publishing it would not meet the Play privacy
+requirement for Android 1.0.6. Not published. Public site verified unchanged: 126/126 sitemap URLs
+200, app-ads.txt exact. Evidence: `Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/web-predeploy-20261003/report.json`.
+Next action: owner sets the effective date and answers OQ-L2-1; fill the two placeholders; then
+merge ai-consent-v3 with location=global, guardrail=off and pass `check_site.py --release` before main.
+
 ## ACTIVE — legal-update-legal LATE2 review-1 fix (2026-10-02; unpublished)
 
 Objective: fix the two majors from the review that rejected `04f43c5`. Branch
