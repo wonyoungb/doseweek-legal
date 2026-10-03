@@ -1,3 +1,13 @@
+## 2026-10-03 — Publish 3: backup wording true to the host
+
+- No backup job runs on the host today. `serverBackup` text, the AWS timing cell and the
+  destruction paragraph (17 locales) now say: scheduled backups are not running at present; when
+  enabled, archives are encrypted before upload to Amazon S3 Seoul and deleted within 7 days.
+- Purchase marker: the 5-year period stays as the retention period; the destruction paragraph
+  says the operator deletes such records when the period ends (no automatic mechanism claimed;
+  the server expiry job is a queued follow-up).
+- 282/282 tests, `check_site.py`, `publish_release.py --check` PASS.
+
 ## 2026-10-03 — Publish 2: AI record assistant (Pro), next iOS update, business identity, statutory gaps
 
 - AI: approved ai-consent-v3 (`next-ai/pro-legal-ai` cfbed2f, Global / guardrail off,

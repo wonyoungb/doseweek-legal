@@ -141,6 +141,9 @@ def decided_candidate() -> dict:
         assert entry["notice"].count(log["old"]) == 1, (locale, "notice log clause")
         entry["notice"] = entry["notice"].replace(log["old"], log["new"])
         entry["retention"] += ("" if locale in render_account_sync.CJK else " ") + P2["text"]["verifierNature"][locale]
+        # 2026-10-03 publish 3: no backup job runs on the host, so the text says what is true
+        # now and what applies once scheduled backups are enabled.
+        entry["serverBackup"] = P2["text"]["serverBackup"][locale]
     # Owner 2026-10-03 19:00: the purchase-verification server is on AWS Seoul. The flag lives
     # only in this in-memory copy; the candidate file keeps its own state.
     candidate["serverReadiness"]["verifierHostDecided"] = True
@@ -294,6 +297,7 @@ def published_sources() -> dict[str, dict]:
                 REMOVED.append({"where": f"{document['platform']}/{locale}/processors-intro", "removed": parts[1]})
                 processors["paragraphs"][0] = ("" if locale in render_account_sync.CJK else " ").join(
                     parts[:1] + parts[2:])
+            rows["aws"]["timingMethod"] = P2["text"]["awsTiming"][locale]
             for row_id, cells in P2["processorCells"].items():
                 for cell_id, by_locale in cells.items():
                     assert cell_id in rows[row_id], (row_id, cell_id)
