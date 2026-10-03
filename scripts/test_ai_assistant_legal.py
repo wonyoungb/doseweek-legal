@@ -805,6 +805,7 @@ class AiAssistantLegalCopyTest(unittest.TestCase):
                        ('googleContractingEntityVerified', 'Google Cloud Korea LLC', 'billing'),
                        ('vertexCacheSettingReadback', '24 hours', '90 days', 'zero data retention'),
                        ('28-8(2)2', 'global'),
+                       ('APPI Rule 17(2)', 'Singapore', 'not described'),
                        ('no native-speaker review', '17 locales'),
                        ('ai.consent.a.check.transfer', 'server registry'),
                        ('zh-Hans', 'zh-Hant', 'meal ideas', 'CON-PRO')):
