@@ -20,7 +20,7 @@
     "tr"
   ],
   "legacySourceSha256": {
-    "docs/terms-content.json": "cec3a608f3bc17f07d37115ab35ec9bb27c9f0263f33a1b442a09f430a1d7dcb"
+    "docs/terms-content.json": "1859bb6708bfeda1c778e786b9b3ccec30107894c9e90551e99c7d5507bbc31f"
   },
   "locales": {
     "ko": {
@@ -2813,6 +2813,7 @@
     "docs/android-content.candidate.json": "50d7ec55a02a5075d7c290935cbe448f471322d3ded388d8924737e3eef51585"
   },
   "notes": [
-    "2026-10-03 publish 2: docs/terms-content.json digest updated after the approved ai-consent-v3 lane (f0c78fe..cfbed2f) reworded the store billing subsections for the Plus 1-month and Pro 7-day trials."
+    "2026-10-03 publish 2: docs/terms-content.json digest updated after the approved ai-consent-v3 lane (f0c78fe..cfbed2f) reworded the store billing subsections for the Plus 1-month and Pro 7-day trials.",
+    "2026-10-03 publish 3: docs/terms-content.json digest updated for the owner's prior-buyer paragraph."
   ]
 }

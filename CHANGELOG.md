@@ -6,6 +6,15 @@
 - Purchase marker: the 5-year period stays as the retention period; the destruction paragraph
   says the operator deletes such records when the period ends (no automatic mechanism claimed;
   the server expiry job is a queued follow-up).
+- Prior-buyer paragraph (owner master text 2026-10-03, 17 locales; candidate `legacyRights`,
+  base Terms, privacy, help): states the operating-cost reason for the free/ads/subscription
+  model; no statutory-rights sentence in this paragraph (the Terms withdrawal/refund section is
+  untouched); no pending-review statement. Android pages say 1.0.6, iOS pages "the next iOS
+  update", Terms both. Removed from 17 locales: the "1.0.5 users get a one-time notice"
+  sentences. Pending-review remarks also removed from `docs/ACCOUNT_SYNC_RELEASE_REVIEW.md`,
+  `docs/LEGAL_OPERATIONS_1_0_6.md` and the candidate's unresolved list.
+- Tests: rights anchors fixture regenerated; two pins on the pending-review wording inverted;
+  Terms digest updated.
 - 282/282 tests, `check_site.py`, `publish_release.py --check` PASS.
 
 ## 2026-10-03 — Publish 2: AI record assistant (Pro), next iOS update, business identity, statutory gaps

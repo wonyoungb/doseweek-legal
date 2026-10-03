@@ -139,8 +139,8 @@ The current handoff and account candidate readiness flags own release status.
 ## Commercial copy parity and prior users
 
 The prior-buyer claim/code program is retired. No separate prior-buyer Plus grant is offered.
-Core features remain Free for new and prior users; standard Store-confirmed trials, statutory
-rights and review of historical ad-free rights remain. Do not advertise claim/evidence/appeal
+Core features remain Free for new and prior users; standard Store-confirmed trials remain; an earlier
+purchase does not guarantee ad-free use or permanent ad removal (owner wording 2026-10-03). Do not advertise claim/evidence/appeal
 or code issuance flows as pending activation.
 
 Use “store price” consistently in public Terms, partner policy/review copy and active

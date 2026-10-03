@@ -16,6 +16,8 @@ def load(name):
 
 class LegalRevision2Test(unittest.TestCase):
     def test_all_locales_keep_free_features_and_rights_without_special_offer(self):
+        # Anchors regenerated 2026-10-03 from the owner's master paragraph: operating-cost reason
+        # added; statutory-rights and pending-review sentences removed from this paragraph.
         anchors = json.loads((ROOT / 'scripts/fixtures/legal_revision2_rights_anchors.json').read_text())
         candidate = load('account-sync-content.candidate.json')
         terms = load('terms-content.json')
@@ -51,7 +53,9 @@ class LegalRevision2Test(unittest.TestCase):
         pending = '\n'.join(candidate['unresolvedBeforePublication'])
         self.assertNotIn('application/status/appeal', pending)
         self.assertNotIn('claim-evidence', pending)
-        self.assertIn('prior paid-ad-free purchase', pending)
+        # Owner wording 2026-10-03: firm statement, no pending-review admission anywhere public.
+        self.assertIn('does not guarantee ad-free use', pending)
+        self.assertNotIn('remains pending', '\n'.join(e['legacyRights'] for e in candidate['locales'].values()))
 
     def test_retired_claim_collection_has_no_active_release_workflow(self):
         text = (ROOT / 'docs/ACCOUNT_SYNC_RELEASE_REVIEW.md').read_text()
@@ -61,7 +65,8 @@ class LegalRevision2Test(unittest.TestCase):
                       'one-month Plus→monthly auto-renewal contract becomes operative'):
             self.assertNotIn(stale, text)
         self.assertIn('subscription lookup', text)
-        self.assertIn('consumer rights remains a release blocker', text)
+        # Owner 2026-10-03: no public statement about an unfinished legal or platform review.
+        self.assertNotIn('remains a release blocker', text)
 
     def test_commercial_copy_parity_is_a_distinct_closed_release_gate(self):
         candidate = load('account-sync-content.candidate.json')

@@ -78,6 +78,15 @@ def status(locale: str, family: str) -> str:
     return DECISIONS["text"]["releaseStatus"][locale].replace("{version}", version(locale, family))
 
 
+def legacy(locale: str, family: str) -> str:
+    """The prior-buyer paragraph (owner master text 2026-10-03): the Android pages say 1.0.6,
+    the iOS pages 'the next iOS update', the shared Terms both."""
+    text = P2["text"]
+    return {"android": text["legacyRights"][locale].replace("{version}", "1.0.6"),
+            "ios": text["legacyRightsIos"][locale],
+            "shared": text["legacyRightsShared"][locale]}[family]
+
+
 def version(locale: str, family: str) -> str:
     """Android pages say 1.0.6; iOS pages promise no version number (App Store work is on
     hold): 'the next iOS update'; the shared Terms and US policy say both."""
@@ -144,6 +153,8 @@ def decided_candidate() -> dict:
         # 2026-10-03 publish 3: no backup job runs on the host, so the text says what is true
         # now and what applies once scheduled backups are enabled.
         entry["serverBackup"] = P2["text"]["serverBackup"][locale]
+        # Owner 2026-10-03: firm prior-buyer wording; no statement about a pending legal review.
+        entry["legacyRights"] = legacy(locale, "android")
     # Owner 2026-10-03 19:00: the purchase-verification server is on AWS Seoul. The flag lives
     # only in this in-memory copy; the candidate file keeps its own state.
     candidate["serverReadiness"]["verifierHostDecided"] = True
@@ -226,6 +237,9 @@ def published_sources() -> dict[str, dict]:
             staged = json.dumps(status(locale, "android"), ensure_ascii=False)[1:-1]
             assert staged in flat, (name, locale, "status sentence")
             flat = flat.replace(staged, json.dumps(status(locale, key), ensure_ascii=False)[1:-1])
+            for source_family in ("android", "shared"):
+                prior = json.dumps(legacy(locale, source_family), ensure_ascii=False)[1:-1]
+                flat = flat.replace(prior, json.dumps(legacy(locale, key), ensure_ascii=False)[1:-1])
         sources[name] = json.loads(flat)
     ios, android, terms, us_health = (sources[name] for name in SOURCE_NAMES)
     for document in sources.values():
