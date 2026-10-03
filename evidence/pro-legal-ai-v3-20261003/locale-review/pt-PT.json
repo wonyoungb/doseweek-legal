@@ -3,50 +3,54 @@
   "lane": "LEGAL-AI",
   "date": "2026-10-03",
   "locale": "pt-PT",
-  "consentVersion": "2026-10-03.2",
+  "consentVersion": "2026-10-03.3",
   "wireConsentVersion": "ai-consent-v3",
   "sources": {
     "appCopyTemplate": {
       "path": "docs/ai-app-copy.candidate.json",
       "keys": "all 52 keys with the switch tokens unresolved, plus switchText",
-      "sha256": "7483ff81d9db0f58bb51760faf3ecf6269f470798f72f49d5dcbfc71fe804907"
+      "sha256": "cd3d0096c61c3ded0d4d7e559f4cec259455a8af19828821ecf1fc2f72124bf4"
     },
     "combinations": {
       "us-off": {
-        "appCopySha256": "643e8d896c2e8a0f0339e9e60cb2aecf5eaff466d8a0e484221896adc7c01d12",
+        "appCopySha256": "d7d4b4e58b68e3e646067680a6e0692926c45104f33a77e66e036527f61c613d",
         "screenA": {
-          "ios.default": "e4b21c0410047525d0f9cb5f79ec7d48be78e7f7933e824e297a48af15ee2295",
-          "ios.US": "004ca284db61635f894129c6299c5f976cba4d9f57b3174810b89bf72b9dd364",
-          "android.default": "cbed4202ef4e97961c203b566b08d36fa0f41bd2bad08ff64efd71f7b8dcf6f0",
-          "android.US": "6e93439b3c179aef04ef7eb127154b04c86048d1355183433e7ac58c6d484a2d"
-        }
+          "ios.default": "bb2a70a7bb6ab826b01e5457671813d2ed902245bdfdad837c554e25806dab57",
+          "ios.US": "793e51299819f805d1f4a88ec77eaa3d6462c73dce79293d61bfac615f1c36d4",
+          "android.default": "6cde14c7abd2ffb176f6245ebe662ee96f4053a1c61ea9f07b9611ffde25c211",
+          "android.US": "cf65385b40c2ca6917198724a8ece2d027532e3a3c56fd012691014adb0b91d9"
+        },
+        "legalPinSha256": "0998f5bf5cd93952453461903faaa5e77b44e20aa6a997e3fe7376e73bb61b8d"
       },
       "us-on": {
-        "appCopySha256": "4bf24e9c7cff0ec0ecb0fdc91d0d1d7a08238deb6dce4d7e816822baa9a80bf6",
+        "appCopySha256": "caa34a5e6ca2b39f79a84d42ee8d11a538e5691b251123ab0d41cbf9d99d6afa",
         "screenA": {
-          "ios.default": "e0a7a6ffcf08d636e2a971d909ac5dea59b0d9811026d544ccb638f73eff572f",
-          "ios.US": "d229c31afbe8a5640189a215a69cd48ca716dc1d66a19d0c441a47dff16dc086",
-          "android.default": "bbcf1170c18ff0e4bbd8c1daa3a2853e361c1ef317fad1d913da6327a2d4380c",
-          "android.US": "b4f56c34ea426fc066e382a3afce0654983df52658c8eea0179e6feb10fac9c1"
-        }
+          "ios.default": "3d0c78808af412e2ab608c27a5515d2b81464c0b15887d2a1e41e3d992ef292b",
+          "ios.US": "92e4558dac4ebde223c171b76e63e630c1c3c62900bb4024407f73b0098c3217",
+          "android.default": "46c6d8352836d303b21d56a062676f0ed3829eb7fb9611806ee5b612e08e9530",
+          "android.US": "b187858b4aa55fc87937d0321d90a5279b532c161e9f427429bb8e46596392e0"
+        },
+        "legalPinSha256": "b07a5fcf9735f272af1d64d107a319b0e76ac94cafbc3fe07d1ee64ec09c42ff"
       },
       "global-off": {
-        "appCopySha256": "33d95d7a5498e08bfd901f595578983ad62d63470a58e4daa8efcf014aa41340",
+        "appCopySha256": "ce01ffe50d47e60a5c209cb1be557b8c25609feb79e672662ca071d317eb11cb",
         "screenA": {
-          "ios.default": "fb9360d577c11da6631195b6148e1bbc737ca1d84a14dbf52124abbd04b00e56",
-          "ios.US": "96a2283c2dcc625b61335d90c4fb75c922809293b6d41a8592faf241cbec529c",
-          "android.default": "9f74ce4c4c0956196f51421850687002137835ae13040ae270505bd8e0df8d7c",
-          "android.US": "d098c96638a53ca934f4d748cf30bd4b93b616692e696c2ad3f6acff06f19cf6"
-        }
+          "ios.default": "847d0e7501c097e4c5871fc6eb091da2809fa222ce3f012e693dabfeda3af56c",
+          "ios.US": "fb4a8b0df3be97339799fca6edb8a11d09c2dd2f52c63e0bea435f4f9c11e4eb",
+          "android.default": "016e6f82a10e6d0397772e6107870c841d3e3f81c1f3fd7f2949bef9d57fa2f6",
+          "android.US": "44a3453a9dbb1762ef0f73c7e50f6e5b4bce6ec9c22baf8ca1dae5cccc80eb74"
+        },
+        "legalPinSha256": "aac4c645e543246786d8e61a21c9be33ea4216781d492bfc88e646e7f1a6aeaf"
       },
       "global-on": {
-        "appCopySha256": "a87d218b2792bcc393b7700c63399ea8e4ab319d1c75d221c79a96f773fa0612",
+        "appCopySha256": "a5f24362e039ce4b8de9476e274d6be0b1021a33e173a64150865e4a6431c15b",
         "screenA": {
-          "ios.default": "b6ed9f335cc08f2dd6383cdfe93db872930ee20bf339fdaabd9cd6e6ec85254d",
-          "ios.US": "56401a3ae383e40d936a10167c88f25d0355beb086470f46a41426e2a2c458cf",
-          "android.default": "2f178b218d119dbd7f5dd7bab4dc1793d8c929a173eb24b06681186aa4b63e2c",
-          "android.US": "f7ea1d73536eb79a86037dfae2cccc9b0262816428395335bd3f81992887ad1f"
-        }
+          "ios.default": "af35e7a374676a0d5b5a2fca04be9ede230b33d0277243930a09fc4a0194f30a",
+          "ios.US": "dfcb4ed84ddedddca0a1525103b32d85ed28c34e92190a0e8e80d8d9c92004ce",
+          "android.default": "dd29381c39be96e6460170b6438899357ce8191d33fc7c671277863a5dab6a19",
+          "android.US": "bb8c440d8b85606da18ec10db3cf4267d317d8e93bc0accd5d378ed2e9a460d5"
+        },
+        "legalPinSha256": "d4d77143ea373f216255663a66736bb9a648dc51bc0ea8eb3de95f2a70d5f49b"
       }
     }
   },

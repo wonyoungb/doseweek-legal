@@ -18,6 +18,12 @@ carry the tokens {aiLocation}, {aiLocationShort}, {aiTransferCountry} and {aiGua
 `resolve(document, location, guardrail)` returns the text a reader sees. v1 and v2 named Amazon
 Bedrock in Seoul; that text is in the Git history of both files.
 
+Review round 2 (2026-10-03): the token checks below accepted copy that contradicted the facts.
+scripts/ai_legal_guard.py adds exact pinned sentences per locale, the six notice items of the
+transfer notice, forbidden claims per locale and per-combination hashes of the pinned fields
+(docs/ai-consent-v3-legal-pins.json). `validate_web` and `validate_app` run on an in-memory
+document, so a test can replay a wrong edit.
+
 Nothing here is published. `integrate` changes only the in-memory staged 1.0.6 sources that
 scripts/render_account_sync.py builds; the served pages and their sources stay as they are.
 `require_release_ready` keeps `check_site.py --release` closed until every required readiness flag is
@@ -31,6 +37,8 @@ import hashlib
 import json
 import re
 from pathlib import Path
+
+import ai_legal_guard
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs/ai-assistant-content.candidate.json"
@@ -83,6 +91,13 @@ READINESS_KEYS = (
     "localeReviewReceiptsAccepted", "evalGatePassed", "storeDeclarationsReadBack",
 )
 INFORMATIONAL_READINESS_KEYS = ('counselReviewed',)
+# Review round 2 (F8): two open points used to block publication only through the free-text
+# unresolved list. Each is now a flag that require_release_ready demands for the switch value that
+# raises the question: (switch, value) -> flag.
+CONDITIONAL_READINESS = {
+    ("location", "global"): "pipaCountryItemForGlobalAccepted",
+    ("guardrail", "on"): "awsGuardrailEntityAndProcessorRowVerified",
+}
 LEGAL_REVIEW_SOURCE_FIELDS = ('schemaVersion', 'plannedVersion', 'facts', 'switches', 'localeOrder',
                               'preReleaseWording', 'locales')
 LEGAL_REVIEW_BASE_SOURCES = (
@@ -103,7 +118,7 @@ FACTS = {
     "minimumAge": 18, "usageCountRetentionMonths": 2, "reportExcerptRetentionDays": 30,
     "summaryCardsOnDevice": 2, "priorityFirstReplyBusinessDays": 1, "limitReductionNoticeDays": 30,
 }
-COPY_VERSION = "2026-10-03.2"
+COPY_VERSION = "2026-10-03.3"
 WIRE_CONSENT_VERSION = "ai-consent-v3"
 # The two owner decisions that are still open. Each is one switch; both texts of each are in the
 # candidate files and every one of the four combinations is validated by load() and load_app_copy().
@@ -179,7 +194,13 @@ def _switch_text(entry: dict, locale: str) -> dict:
         assert GOOGLE_GLOBAL_QUOTE in text[name]["global"], (locale, name)
     assert GOOGLE_LOCATIONS_URL in text["aiTransferCountry"]["global"], locale
     assert GOOGLE_LOCATIONS_URL not in text["aiTransferCountry"]["us"], locale
-    assert "APEC" in text["aiTransferCountry"]["us"], f"{locale}: the US notice describes the US system"
+    # Both texts describe the systems of the countries where the named recipients are (APPI Rule
+    # 17(2), PPC Q12-11): the United States and Singapore, each with its APEC CBPR participation.
+    for option in LOCATIONS:
+        assert text["aiTransferCountry"][option].count("APEC") >= 2, (
+            f"{locale}: the {option} notice describes the United States and Singapore")
+        assert "Google Asia Pacific Pte. Ltd." in text["aiTransferCountry"][option], (locale, option)
+        assert "Personal Data Protection Act 2012" in text["aiTransferCountry"][option], (locale, option)
     assert "Amazon Web Services" in text["aiGuardrail"]["on"], locale
     assert not [token for token in RETIRED_PROVIDER_TOKENS
                 for name in ("aiLocation", "aiLocationShort", "aiTransferCountry")
@@ -246,12 +267,18 @@ def _provider_tokens(text: str, guardrail: str, sentence: str, where: object) ->
 
 
 def load() -> dict:
-    candidate = json.loads(SOURCE.read_text(encoding="utf-8"))
+    return validate_web(json.loads(SOURCE.read_text(encoding="utf-8")))
+
+
+def validate_web(candidate: dict, pins: dict | None = None) -> dict:
+    """Validate a website candidate document (the file, or an in-memory copy a test changed)."""
+    pins = pins if pins is not None else ai_legal_guard.read_pins()
     assert candidate["schemaVersion"] == 1
     assert candidate["status"] in ("pre-release-candidate-not-published", "integrated-and-verified")
     assert candidate["plannedVersion"] == "1.0.6"
     assert candidate["facts"] == FACTS, "AI facts changed: update the copy in all 17 locales first"
-    assert set(candidate["readiness"]) == set(READINESS_KEYS + INFORMATIONAL_READINESS_KEYS)
+    assert set(candidate["readiness"]) == set(
+        READINESS_KEYS + INFORMATIONAL_READINESS_KEYS + tuple(CONDITIONAL_READINESS.values()))
     evidence = candidate.get("legalSelfReviewEvidence")
     assert evidence is None or isinstance(evidence, dict), "AI self-review evidence schema"
     assert all(type(value) is bool for value in candidate["readiness"].values())
@@ -269,7 +296,7 @@ def load() -> dict:
         assert tokens.count(HEALTH_PLACEHOLDER) == 1 and HEALTH_PLACEHOLDER in entry["clauses"][1], locale
     for location in LOCATIONS:
         for guardrail in GUARDRAILS:
-            _check_web(resolve(candidate, location, guardrail), candidate, location, guardrail)
+            _check_web(resolve(candidate, location, guardrail), candidate, location, guardrail, pins)
     korean = "\n".join(_strings(candidate["locales"]["ko"]))
     assert not [term for term in RETIRED_KOREAN_TERMS if term in korean], "Korean AI copy uses a retired term"
     assert "AI 기록 도우미" == candidate["locales"]["ko"]["name"]
@@ -283,11 +310,13 @@ def load() -> dict:
     return candidate
 
 
-def _check_web(resolved: dict, candidate: dict, location: str, guardrail: str) -> None:
+def _check_web(resolved: dict, candidate: dict, location: str, guardrail: str, pins: dict) -> None:
     for locale, entry in resolved["locales"].items():
         where = (locale, location, guardrail)
         switch = candidate["locales"][locale]["switchText"]
         sentence, country = switch["aiGuardrail"]["on"], US_STEMS[locale]
+        # Exact pinned sentences, forbidden claims and field hashes (review round 2, F1).
+        ai_legal_guard.check_web(locale, entry, location, guardrail, {"guardrailSentence": sentence}, pins)
         clauses = entry["clauses"]
         assert len(clauses) == CLAUSES and len(entry["terms"]) == TERMS_PARAGRAPHS, where
         assert tuple(entry["processorRow"]) == ROW_CELLS, where
@@ -381,7 +410,12 @@ def _check_web(resolved: dict, candidate: dict, location: str, guardrail: str) -
 
 
 def load_app_copy() -> dict:
-    document = json.loads(APP_SOURCE.read_text(encoding="utf-8"))
+    return validate_app(json.loads(APP_SOURCE.read_text(encoding="utf-8")))
+
+
+def validate_app(document: dict, web: dict | None = None, pins: dict | None = None) -> dict:
+    """Validate an app copy document (the file, or an in-memory copy a test changed)."""
+    pins = pins if pins is not None else ai_legal_guard.read_pins()
     assert document["schemaVersion"] == 1
     assert document["status"] == "pre-release-candidate-not-published"
     assert document["plannedVersion"] == "1.0.6"
@@ -401,7 +435,7 @@ def load_app_copy() -> dict:
     assert document["helplines"]["verification"]["refetchFromOfficialSources"] == "NOT_RUN" or (
         document["helplines"]["verification"]["status"] == "refetched"
     )
-    web = json.loads(SOURCE.read_text(encoding="utf-8"))
+    web = web if web is not None else json.loads(SOURCE.read_text(encoding="utf-8"))
     assert document["switches"] == web["switches"], "the two candidate files disagree on the switches"
     for locale, entry in document["locales"].items():
         assert tuple(entry) == ("name", "perk", "copy", "switchText", "whatsNew"), locale
@@ -412,13 +446,13 @@ def load_app_copy() -> dict:
         assert found == sorted(SWITCH_TOKENS), f"{locale}: every switch token is used by the app copy"
     for location in LOCATIONS:
         for guardrail in GUARDRAILS:
-            _check_app(resolve(document, location, guardrail), document, location, guardrail)
+            _check_app(resolve(document, location, guardrail), document, location, guardrail, pins)
     korean = "\n".join(_strings(document["locales"]["ko"]))
     assert not [term for term in RETIRED_KOREAN_TERMS if term in korean], "Korean app copy uses a retired term"
     return document
 
 
-def _check_app(resolved: dict, document: dict, location: str, guardrail: str) -> None:
+def _check_app(resolved: dict, document: dict, location: str, guardrail: str, pins: dict) -> None:
     keys = document["keys"]
     reference = resolved["locales"]["ko"]["copy"]
     for locale, entry in resolved["locales"].items():
@@ -444,11 +478,15 @@ def _check_app(resolved: dict, document: dict, location: str, guardrail: str) ->
         for token in ("Google", "Gemini", "Vertex AI", "DoseWeek"):
             assert token in body, (where, token)
         # PIPA 28-8(2): recipient and contact, country, items, time and method, purpose and
-        # retention, how to refuse and the effect. The titles it points to are this locale's own.
+        # retention, how to refuse and the effect. ai_legal_guard checks every item on its own:
+        # its label, its content and, for purpose and retention, the exact pinned sentences.
         for token in (*GOOGLE_ENTITIES, GOOGLE_CONTACT, "Cloud Data Processing Addendum", "PIPA",
-                      copy["ai.consent.a.sent.title"], copy["ai.consent.a.retention.title"],
-                      copy["ai.consent.b.send"]):
+                      copy["ai.consent.a.sent.title"], copy["ai.consent.b.send"]):
             assert token in transfer, (where, "transfer notice", token)
+        ai_legal_guard.check_app(locale, copy, location, guardrail, {
+            "guardrailSentence": sentence, "recipient": (*GOOGLE_ENTITIES, GOOGLE_CONTACT), "country": country,
+            "global": (GOOGLE_GLOBAL_QUOTE, GOOGLE_LOCATIONS_URL), "sentTitle": copy["ai.consent.a.sent.title"],
+            "send": copy["ai.consent.b.send"]}, pins)
         for text in (body, transfer):
             if location == "us":
                 assert country in text and GOOGLE_GLOBAL_QUOTE not in text, where
@@ -679,10 +717,17 @@ def require_release_ready(candidate: dict | None = None, *,
     )
     open_flags = [key for key in READINESS_KEYS if candidate["readiness"].get(key) is not True]
     assert not open_flags, f"AI readiness flags still open: {open_flags}"
-    assert selection(candidate) is not None, (
+    chosen = selection(candidate)
+    assert chosen is not None, (
         "AI owner switches are not decided: set switches.location.selected (us or global) and "
         "switches.guardrail.selected (off or on) in both candidate files"
     )
+    # A switch value that raises an open legal point needs its own flag (review round 2, F8).
+    for (switch, value), flag in CONDITIONAL_READINESS.items():
+        if dict(zip(("location", "guardrail"), chosen))[switch] == value:
+            assert candidate["readiness"].get(flag) is True, (
+                f"AI switch {switch}={value} is selected but readiness.{flag} is not true"
+            )
     _require_legal_self_review(candidate, allow_synthetic_fixture=allow_synthetic_fixture)
     # The flags alone do not change the text: the sentences that say a fact is unverified or will
     # be recorded before release must be replaced with the verified facts.

@@ -12,7 +12,7 @@ not published, every readiness flag false.
   flagged prompt up to 90 days; contracting entity for a Korean billing address is Google Cloud
   Korea LLC (reseller; "Google" = Google Asia Pacific Pte. Ltd. and affiliates); Google is a processor
   under its Cloud Data Processing Addendum.
-- Copy: `docs/ai-app-copy.candidate.json` (consentVersion 2026-10-03.2, wire ai-consent-v3, 52 keys:
+- Copy: `docs/ai-app-copy.candidate.json` (consentVersion 2026-10-03.3, wire ai-consent-v3, 52 keys:
   +ai.consent.a.transfer.title/.body, +ai.consent.a.check.transfer, -ai.consent.a.region.jp) and
   `docs/ai-assistant-content.candidate.json` (processor row `google-vertex-ai`), 17 locales. The
   strings carry the tokens {aiLocation}, {aiLocationShort}, {aiTransferCountry}, {aiGuardrail};
@@ -31,17 +31,42 @@ not published, every readiness flag false.
   changed or new keys in every locale; no back-translation, native speaker or counsel; all 17
   recommendation flags off. `evidence/pro-legal-ai-20261002/` is historical (v2 text): its
   `write_locale_receipts.py --check` no longer matches the current copy by design.
-- Checks: `python3 -m unittest discover -s scripts -p 'test_*.py'`: 268 methods, 265 pass,
+- Review round 2 (2026-10-03, CHANGES_REQUESTED on `03f8b81`, findings F1-F8 fixed):
+  - F1: `scripts/ai_legal_guard.py` + `docs/ai-consent-v3-legal-pins.json`. Per locale: 10 exact
+    pinned sentences, the 6 PIPA 28-8(2) item labels with a content rule per item, forbidden-claim
+    patterns, retired provider names in non-Latin scripts; per locale and switch combination a
+    SHA-256 of the pinned fields. The first three are hand-written and hold after a re-pin; the
+    hashes only detect change. `python3 scripts/ai_legal_guard.py --repin` is a review step.
+    The reviewer's 8 mutations: 7 passed at `03f8b81`, 8 of 8 fail now, also with re-pinned hashes.
+  - F2: the purpose item (17 locales) is "Google uses this content to create the AI answers you
+    request" plus the 24-hour cache and the 90-day abuse log with staff review; no "only". The
+    unsourced "not used for advertising" about Google is gone from the processor row.
+  - F3: "DoseWeek does not save your conversations." F4: Google can read the content for as long
+    as it holds it; authorized Google staff may review a flagged request. F5: location us states
+    storage and AI processing in the United States and that other processing may happen where
+    Google or its subprocessors have facilities. F6: ja check.health.detail is conditional.
+  - APPI: PPC Q12-11 settles that the country to name is the recipient's; both location texts
+    now describe the United States and Singapore (PPC country reports). PIPA with location us and
+    with location global stay unresolved (no PIPC text retrieved).
+  - F8: `require_release_ready` needs `pipaCountryItemForGlobalAccepted` for location global and
+    `awsGuardrailEntityAndProcessorRowVerified` for guardrail on; the apply data carries
+    `serverRegistry.guardrailLocales` per combination for the server lane to enforce.
+  - consentVersion 2026-10-03.3: every Screen A hash of 2026-10-03.2 is void; apply list, receipts
+    and pins regenerated. Evidence: lane folder `.../claude-20261003/round2/`.
+- Checks: `python3 -m unittest discover -s scripts -p 'test_*.py'`: 277 methods, 274 pass,
   3 fail (86 subtests). The same 3 fail at `f0c78fe` before this work (263 methods, 86 subtests):
   test_legal_late_decisions trial meanings, test_terms_legal_update App Store trial,
   test_legal_late2_backup legacy hash. They come from the `docs/terms-content.json` change in
   `f0c78fe` (terms pages not re-rendered: `render_terms.py --check` and `check_site.py` fail the
-  same way) and are outside this change. AI family `test_ai_assistant_legal.py`: 39/39 pass (34 before + 5 new).
-  `ai_assistant_candidate.py`, `ai_consent_apply.py --check`, `render_account_sync.py --check`,
-  `korean_tone.py`: pass.
+  same way) and are outside this change; the three tests read `docs/terms-content.json` itself, so re-rendering
+  the terms page does not fix them. AI family `test_ai_assistant_legal.py`: 48/48 pass.
+  `ai_assistant_candidate.py`, `ai_legal_guard.py --check`, `ai_consent_apply.py --check`,
+  `render_account_sync.py --check`, `korean_tone.py`: pass.
 - Open (also in `unresolvedBeforePublication`): the two owner switches; billing-account entity
   readback; Google project settings readback (cache, request-response logging); PIPA 28-8(2)2 with
-  location global (the country cannot be named); app lanes (third tick box, block on every
+  location global (the country cannot be named) and with location us (form of the country item
+  not confirmed by a PIPC text); APPI Rule 17(2)3 and no ja reader; DoseWeek server location not
+  read back; app lanes (third tick box, block on every
   storefront, Android text hash) and server lane (recipient token for location us) not applied.
 Next action: owner picks the two switches; then set `selected` in both files, run
 `python3 scripts/ai_consent_apply.py --export <dir>`, and the app and server lanes apply the block

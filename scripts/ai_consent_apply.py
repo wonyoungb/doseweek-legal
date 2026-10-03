@@ -25,6 +25,7 @@ import sys
 from pathlib import Path
 
 import ai_assistant_candidate as candidate
+import ai_legal_guard
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs/ai-consent-v3-apply.json"
@@ -36,6 +37,11 @@ DISPLAY_VARIANTS = (("ios", "default"), ("ios", "US"), ("android", "default"), (
 # Server AI_CONSENT_RECIPIENTS (PRO-SRV-AI src/aiConsent.js): only google-vertex-global exists at
 # cfc906f46 / e14e5ae97. The us token is this lane's proposal; the server lane adds it.
 RECIPIENT_TOKENS = {"global": "google-vertex-global", "us": "google-vertex-us"}
+# Review round 2 (F8): the guardrail switch is bound in data, not only in an instruction. The server
+# checks answer text with the Seoul Guardrail in exactly these locales; with the switch off the list
+# is empty and no ApplyGuardrail call may be made, because the off text does not name AWS.
+GUARDRAIL_LOCALES = {"off": [], "on": ["en", "es", "fr"]}
+GUARDRAIL_TOKENS = {"off": None, "on": "aws-guardrail-seoul"}
 
 
 def canonical_sha256(value: object) -> str:
@@ -59,6 +65,7 @@ def combination_name(location: str, guardrail: str) -> str:
 
 def build() -> dict:
     document = candidate.load_app_copy()
+    pins = ai_legal_guard.read_pins()
     combinations = {}
     for location in candidate.LOCATIONS:
         for guardrail in candidate.GUARDRAILS:
@@ -69,7 +76,9 @@ def build() -> dict:
                 screen = {f"{platform}.{region}": candidate.screen_a_hash(copy, platform, region)
                           for platform, region in DISPLAY_VARIANTS}
                 assert len(set(screen.values())) == len(screen), (locale, "display variants must differ")
-                locales[locale] = {"appCopySha256": canonical_sha256(copy), "screenA": screen}
+                locales[locale] = {"appCopySha256": canonical_sha256(copy), "screenA": screen,
+                                   "legalPinSha256": pins["combinationSha256"][
+                                       combination_name(location, guardrail)][locale]["app"]}
                 registry[locale] = list(screen.values())
             combinations[combination_name(location, guardrail)] = {
                 "location": location, "guardrail": guardrail,
@@ -78,6 +87,8 @@ def build() -> dict:
                 "serverRegistry": {
                     "current": {locale: candidate.WIRE_CONSENT_VERSION for locale in candidate.LOCALES},
                     "recipients": {candidate.WIRE_CONSENT_VERSION: RECIPIENT_TOKENS[location]},
+                    "guardrail": {candidate.WIRE_CONSENT_VERSION: GUARDRAIL_TOKENS[guardrail]},
+                    "guardrailLocales": {candidate.WIRE_CONSENT_VERSION: GUARDRAIL_LOCALES[guardrail]},
                     "texts": {candidate.WIRE_CONSENT_VERSION: registry},
                 },
             }
@@ -140,15 +151,17 @@ APPLY = {
         "After the catalog edit compute display_hash() over AIConsentSheet.shownStrings for region default and US "
         "in each locale; if the catalog adds no-break spaces these differ from the source-form hashes here and "
         "the computed values go to the server registry.",
+        "Do not edit a consent string in the catalog by hand: docs/ai-consent-v3-legal-pins.json pins the exact "
+        "legal sentences per locale and scripts/ai_legal_guard.py rejects a changed, added or dropped sentence.",
     ],
     "android": [
         "app/src/main/res/values*/ai_assistant_screens.xml (17 files): replace ai_consent_a_where_body, "
         "ai_consent_a_retention_body, ai_consent_a_e2ee_body, ai_consent_a_check_health_detail, "
         "ai_consent_b_processing, ai_help_input_note; add ai_consent_a_transfer_title, ai_consent_a_transfer_body, "
         "ai_consent_a_check_transfer; delete ai_consent_a_region_jp. Text = the exported resolved copy, Android "
-        "variant keys only; update the header comment to consentVersion 2026-10-03.2.",
+        "variant keys only; update the header comment to consentVersion 2026-10-03.3.",
         "app/src/main/java/com/wonyoungchoi/doseweek/domain/aiassist/AiConsentPolicy.kt: VERSION = "
-        "\"ai-consent-v3\", COPY_VERSION = \"2026-10-03.2\"; canAgree and grant take a third argument "
+        "\"ai-consent-v3\", COPY_VERSION = \"2026-10-03.3\"; canAgree and grant take a third argument "
         "transferTicked and require all three.",
         "app/src/main/java/com/wonyoungchoi/doseweek/features/aiassist/AiAssistScreens.kt (Screen A, about lines "
         "414-441): remove the `storefrontRegion == \"JP\"` block; after the optional block add ConsentBlock("
@@ -172,6 +185,13 @@ APPLY = {
         "receipt for the us text never authorizes a global send and the reverse.",
         "Guardrail off: guardrailLocales must be [] and no ApplyGuardrail call may be made, because the off text "
         "does not name Amazon Web Services. Guardrail on: keep the pinned Seoul Guardrail for en, es, fr.",
+        "Bind the guardrail like the location (review round 2, F8): serverRegistry.guardrail and "
+        "serverRegistry.guardrailLocales of the chosen combination are data. The server lane loads them with the "
+        "registry and refuses to start, or to accept a receipt, when its configured guardrail locales differ from "
+        "serverRegistry.guardrailLocales[ai-consent-v3]. Until the server enforces this, the off text must not ship "
+        "while the server still calls ApplyGuardrail (server report: guardrailDecision stays pinned).",
+        "The copy changed in review round 2 (consentVersion 2026-10-03.3): take the strings again from a fresh "
+        "--export; the Screen A hashes of 2026-10-03.2 are void.",
     ],
 }
 

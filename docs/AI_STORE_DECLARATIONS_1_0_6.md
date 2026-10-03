@@ -10,7 +10,9 @@ documentation and terms, saved with SHA-256 in the lane evidence `FACTS.md`
 (release/evidence/1.0.6/CODEX-LANES-20261002/codex-takeover-20261003/legal-self-review/claude-20261003).
 Two owner decisions are still open and change the wording marked [SWITCH]:
 
-- SWITCH_LOCATION = us: "in the United States (Google Cloud multi-region us)".
+- SWITCH_LOCATION = us: "with AI processing and storage in the United States (Google Cloud
+  multi-region us; under Google's terms other processing may take place in other countries
+  where Google or its subprocessors have facilities)".
   SWITCH_LOCATION = global: "through Google's global endpoint; Google states that requests may
   be processed in any Google Cloud location around the world, so no country is fixed".
 - SWITCH_AWS_GUARDRAIL = off: nothing more. SWITCH_AWS_GUARDRAIL = on: add "Answer text in
@@ -34,7 +36,8 @@ holds only the store-facing declarations, in English.
 >   Google Cloud Korea LLC, with Google Asia Pacific Pte. Ltd. and its affiliates including
 >   Google LLC. Google does not use the content to train AI models. Google may hold it in memory
 >   for up to 24 hours, and may store a prompt for up to 90 days if its automated abuse checks
->   flag it. Our server keeps no content. [SWITCH guardrail]
+>   flag it; authorized Google staff may review a flagged prompt. Our server keeps no content.
+>   [SWITCH guardrail]
 > - Requests are encrypted at the app layer to our server's public key (HPKE), so the CDN sees
 >   only ciphertext; our server (Seoul, Republic of Korea) decrypts them in memory to call
 >   Google and logs no content. End-to-end encryption applies to sync and backup only, and the
