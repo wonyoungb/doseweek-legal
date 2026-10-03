@@ -35,7 +35,7 @@ Start with the [README](../README.md), [AGENTS.md](../AGENTS.md) and
 - [Legal operations](LEGAL_OPERATIONS_1_0_6.md) defines incident notices, deletion/backup proof,
   rights, processor contracts and regional subscription notice gates. It does not prove execution.
 - [AI record assistant website copy](ai-assistant-content.candidate.json) is an unpublished
-  17-locale 1.0.6 draft for the Pro "AI 기록 도우미": the privacy section, the Amazon Bedrock
+  17-locale 1.0.6 draft for the Pro "AI 기록 도우미": the privacy section, the Google Vertex AI (Gemini; ai-consent-v3, Amazon Bedrock in v1/v2)
   processor row, the exception to the "server cannot read" claims, the Terms section and the
   US-policy sentences. [ai_assistant_candidate.py](../scripts/ai_assistant_candidate.py) validates
   it and adds it to the staged sources of `render_account_sync.py`; served pages do not change.

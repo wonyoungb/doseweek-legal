@@ -182,7 +182,7 @@ def validate(content: dict) -> None:
             # model. The 1.0.5 answer ends with "No Private Cloud Compute, server model, or
             # third-party model is used"; in 1.0.6 the answer must also say where the assistant
             # is processed. The served 1.0.5 source keeps its answer until 1.0.6 is published.
-            assert "Amazon Bedrock" in entry["support"]["released"]["ai"]["answers"][0], (
+            assert "Google Cloud Vertex AI" in entry["support"]["released"]["ai"]["answers"][0], (
                 f"{locale}: the 1.0.6 AI answer denies a server or third-party model without "
                 "naming the server-processed AI record assistant"
             )

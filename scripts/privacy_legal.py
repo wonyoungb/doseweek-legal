@@ -19,10 +19,11 @@ COLUMN_IDS = ('legalBasis', 'data', 'country', 'timingMethod', 'recipientContact
               'purpose', 'retention', 'refusalEffect')
 PROVIDER_IDS = ('cloudflare', 'aws', 'firebase', 'admob', 'apple-sign-in', 'google-sign-in')
 # Staged Pro AI record assistant (scripts/ai_assistant_candidate.py): the 1.0.6 staging render
-# appends one more supplement section and puts an Amazon Bedrock processor row right after the
+# appends one more supplement section and puts the Google Vertex AI processor row (ai-consent-v3;
+# Amazon Bedrock in v1 and v2) right after the
 # AWS hosting row. Sources without them stay valid; nothing else may be added.
 STAGED_AI_SECTION_ID = 'ai-assistant'
-STAGED_AI_PROVIDER_ID = 'aws-bedrock'
+STAGED_AI_PROVIDER_ID = 'google-vertex-ai'
 STAGED_AI_PARAGRAPHS = 12
 PROCESSOR_IDS = ('cloudflare', 'aws', STAGED_AI_PROVIDER_ID, 'firebase')
 READINESS_KEYS = ('providerInventoryVerified', 'overseasTransferBasisVerified',

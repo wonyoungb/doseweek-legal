@@ -1,3 +1,52 @@
+## ACTIVE — pro-legal-ai ai-consent-v3: Gemini on Google Cloud, transfer consent, two owner switches (2026-10-03; unpublished candidate)
+
+Branch `next-ai/pro-legal-ai`, on top of `f0c78fe`. Owner decisions 2026-10-03 15:30-15:50
+(release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md): Pro AI ships on Gemini (Vertex AI,
+project doseweek-507313, Gemini 3.8 Flash) with cross-border transfer consent; self-review against
+official sources, no paid lawyer. Pass status: COMPLETE (static candidate). Not legally reviewed,
+not published, every readiness flag false.
+- Facts with saved sources and SHA-256: lane evidence
+  `release/evidence/1.0.6/CODEX-LANES-20261002/codex-takeover-20261003/legal-self-review/claude-20261003/FACTS.md`.
+  Gemini 3.8 Flash is served only on global, us and eu (no Seoul); us costs 10% more than global;
+  Google does not train on the content, may hold it in memory up to 24 hours and may store a
+  flagged prompt up to 90 days; contracting entity for a Korean billing address is Google Cloud
+  Korea LLC (reseller; "Google" = Google Asia Pacific Pte. Ltd. and affiliates); Google is a processor
+  under its Cloud Data Processing Addendum.
+- Copy: `docs/ai-app-copy.candidate.json` (consentVersion 2026-10-03.2, wire ai-consent-v3, 52 keys:
+  +ai.consent.a.transfer.title/.body, +ai.consent.a.check.transfer, -ai.consent.a.region.jp) and
+  `docs/ai-assistant-content.candidate.json` (processor row `google-vertex-ai`), 17 locales. The
+  strings carry the tokens {aiLocation}, {aiLocationShort}, {aiTransferCountry}, {aiGuardrail};
+  `ai_assistant_candidate.resolve(document, location, guardrail)` gives the reader's text.
+  v1/v2 (Amazon Bedrock, Seoul) stay in the Git history of both files.
+- Owner switches, both open (`switches.*.selected` = null in both files): SWITCH_LOCATION us | global,
+  SWITCH_AWS_GUARDRAIL off | on. All four combinations are validated by `load()` and
+  `load_app_copy()`; the release gate refuses a null selection. Staged pages render with the
+  staging preview pair (us, off) only.
+- Hashes and apply list: `scripts/ai_consent_apply.py` writes `docs/ai-consent-v3-apply.json`
+  (4 combinations x 17 locales x 4 Screen A display variants, the server registry document per
+  combination, and the exact iOS / Android / server steps). `--export <dir>` writes the resolved
+  changed keys per combination. Hashes are over the source strings; an app that ships other bytes
+  (no-break spaces) hashes what it shows.
+- Receipts: `evidence/pro-legal-ai-v3-20261003/` (writer + 17 receipts). One AI model wrote the 9
+  changed or new keys in every locale; no back-translation, native speaker or counsel; all 17
+  recommendation flags off. `evidence/pro-legal-ai-20261002/` is historical (v2 text): its
+  `write_locale_receipts.py --check` no longer matches the current copy by design.
+- Checks: `python3 -m unittest discover -s scripts -p 'test_*.py'`: 268 methods, 265 pass,
+  3 fail (86 subtests). The same 3 fail at `f0c78fe` before this work (263 methods, 86 subtests):
+  test_legal_late_decisions trial meanings, test_terms_legal_update App Store trial,
+  test_legal_late2_backup legacy hash. They come from the `docs/terms-content.json` change in
+  `f0c78fe` (terms pages not re-rendered: `render_terms.py --check` and `check_site.py` fail the
+  same way) and are outside this change. AI family `test_ai_assistant_legal.py`: 39/39 pass (34 before + 5 new).
+  `ai_assistant_candidate.py`, `ai_consent_apply.py --check`, `render_account_sync.py --check`,
+  `korean_tone.py`: pass.
+- Open (also in `unresolvedBeforePublication`): the two owner switches; billing-account entity
+  readback; Google project settings readback (cache, request-response logging); PIPA 28-8(2)2 with
+  location global (the country cannot be named); app lanes (third tick box, block on every
+  storefront, Android text hash) and server lane (recipient token for location us) not applied.
+Next action: owner picks the two switches; then set `selected` in both files, run
+`python3 scripts/ai_consent_apply.py --export <dir>`, and the app and server lanes apply the block
+of that combination.
+
 ## ACTIVE — legal-update-legal LATE2 review-1 fix (2026-10-02; unpublished)
 
 Objective: fix the two majors from the review that rejected `04f43c5`. Branch

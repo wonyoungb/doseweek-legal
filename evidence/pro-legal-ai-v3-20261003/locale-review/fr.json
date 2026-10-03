@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "lane": "LEGAL-AI",
+  "date": "2026-10-03",
+  "locale": "fr",
+  "consentVersion": "2026-10-03.2",
+  "wireConsentVersion": "ai-consent-v3",
+  "sources": {
+    "appCopyTemplate": {
+      "path": "docs/ai-app-copy.candidate.json",
+      "keys": "all 52 keys with the switch tokens unresolved, plus switchText",
+      "sha256": "0240b4063b5bc86b2fa502021953f8dad2f9e2f06a953d100160bf47a93531ae"
+    },
+    "combinations": {
+      "us-off": {
+        "appCopySha256": "52614af8a410f11dd38df18494c8eae745d4c1840cdeb80f0c19dbb94cd9ec82",
+        "screenA": {
+          "ios.default": "5a4833a5f2cb2c322e0cd5273df02b66afcb76a185059449029be48640240027",
+          "ios.US": "fed978e5f2b2bc142116d9490db1f01a9c6e6a50682f0f8f61eea4b586053fb5",
+          "android.default": "d28c5f4970e80a55087c841779beafff11db67ef8f004bcb679844ac602b273a",
+          "android.US": "6d6d8b8c03888a6acb86189d5e5da6ce28e59d1c87684f14eaa42b049c52bb75"
+        }
+      },
+      "us-on": {
+        "appCopySha256": "639d5c3b62785e2dd61eb9f5ba684c70cc7cc1f3cb7f4babbf752ab8366a05ed",
+        "screenA": {
+          "ios.default": "3b553a02640aca38f0d48676d6a636f6d26d9550cf8545d0ee582fb6747c6b7b",
+          "ios.US": "563ea344b4d8b6f197191a3144316eaefff24cd67b1b8921a04b7dd73f75be34",
+          "android.default": "1e8b168407046f29618c6081ffd667c9488bd7ee413c6e3e52518a8a2fba6677",
+          "android.US": "9a6f06f63274155dccf59ad7a74ab682cd4dffe752c3fa49b981d9ede4587505"
+        }
+      },
+      "global-off": {
+        "appCopySha256": "60f08686cc97ff9bc536cb52a193a688ba7dbbdb08cc60d95c2a04038e0ee441",
+        "screenA": {
+          "ios.default": "8229ccbdd9ecdfcb215ced29a69a33e670c2e00582d7dc9fa06200a4b998e799",
+          "ios.US": "9a5d32451a97ee4a2964ed38189c078e6235b6f9562192483d34b38145569eea",
+          "android.default": "eabc834f76ba0b0ffa161e89f835bd939cdf8870deb3f9818fc7c2d807abafa0",
+          "android.US": "4fb6038a3f855a1d130b50ecd97f1842008cd0a8f62f1faf219a11cac9403bba"
+        }
+      },
+      "global-on": {
+        "appCopySha256": "1f8000721a5098fed5397674ba808285b501f2263d991725254d9f3bb643f902",
+        "screenA": {
+          "ios.default": "53bcf6a7c1979b872437cbc4e279432a8e54b64f3b8e5f187a3d299506530782",
+          "ios.US": "fbd4f4a529986ce0ccab8c67c18d1a55e6500839b95b9dc4a0d57f626394d15a",
+          "android.default": "ad00864fdbf5605c691ca07b4d9cc05b926f6bc48d1ae96cae569c0e9881b9a9",
+          "android.US": "3d35d068425119ed20ebf7d71f435349d592004b0923583c1c1bb9a8185733ad"
+        }
+      }
+    }
+  },
+  "changedOrNewKeys": [
+    "ai.consent.a.where.body",
+    "ai.consent.a.retention.body",
+    "ai.consent.a.e2ee.body",
+    "ai.consent.a.transfer.title",
+    "ai.consent.a.transfer.body",
+    "ai.consent.a.check.health.detail",
+    "ai.consent.a.check.transfer",
+    "ai.consent.b.processing",
+    "ai.help.inputNote"
+  ],
+  "unchangedFromV2": {
+    "count": 43,
+    "comparedWith": "evidence/pro-legal-ai-v3-20261003/v2-app-copy-key-hashes.json",
+    "retiredV2Keys": [
+      "ai.consent.a.region.jp"
+    ]
+  },
+  "status": "same-model-authoring-no-review",
+  "reviewer": "Claude lane agent (AI model); not a human, native speaker or legal counsel",
+  "method": "The changed and new strings were written from the English reference by the same AI model in one session on 2026-10-03, using the facts in the lane evidence FACTS.md. No back-translation, no blind or independent check, no native speaker and no counsel. Unchanged strings are byte-identical to ai-consent-v2 and keep only their v2 same-model back-translation.",
+  "backTranslation": "NOT_RUN for the changed and new keys",
+  "nativeSpeakerReview": false,
+  "counselReview": false,
+  "flag": {
+    "key": "locales.fr",
+    "recommended": false,
+    "condition": "stays false: candidate copy with open owner switches, unverified Google account facts and no review of the v3 strings by anyone but their author"
+  }
+}
