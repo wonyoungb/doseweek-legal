@@ -18,6 +18,44 @@
   global/off: branch `integ/legal-106-predeploy` 3945a16. Publish 2 must be live before the
   Android 1.0.6 store release; until then the pages keep the 1.0.5 AI statements.
 - 222/222 unittest methods PASS; `check_site.py` PASS (162 pages).
+## 2026-10-02 — Pro AI record assistant legal copy (unpublished)
+
+- Staged 1.0.6 pages in 17 locales gain the privacy section "AI 기록 도우미(Pro)", an Amazon
+  Bedrock (Seoul, in-Region, no retention) processor row, the AI exception after every "server
+  cannot read your records" claim, a Terms section (150 a month, 50 in the 7-day trial, 우선 문의
+  답변 with a first reply within 1 business day) and US consumer-health additions.
+- New sources `docs/ai-assistant-content.candidate.json` and `docs/ai-app-copy.candidate.json`
+  (Screen A/B/Settings copy, helplines, one neutral What's New line); store declaration drafts in
+  `docs/AI_STORE_DECLARATIONS_1_0_6.md`. `check_site.py --release` also requires the AI candidate
+  to be verified.
+- Review receipts are honest about their limits: ko and ja are pending, en is an AI-agent review,
+  14 locales have only a same-model back-translation.
+- Review round 1 (same day): the 14 back-translation receipts now record every key in scope
+  (50 app keys and 15 CON-PRO keys per locale; the first receipts recorded 11 app keys), and the
+  staged Android 1.0.6 content no longer says "No generative AI" as a home badge or lists
+  "Generative AI" among the things not used; both now name the opt-in assistant in 17 locales.
+- Review round 2 (same day): the staged iOS 1.0.6 support answer "Why is an AI feature
+  unavailable?" and the privacy section "On-device AI" no longer say outright that no server
+  model or third-party model is used. In 17 locales the sentence is scoped to the two on-device
+  features, and the support answer adds that the AI record assistant (Pro) is processed on a
+  server with a third-party model (Amazon Bedrock, Seoul Region, Claude by Anthropic) only after
+  separate consent. The staged Android answer says the assistant is processed on a server, not on
+  the device. `render_ios.validate` refuses a 1.0.6 AI answer that does not name Amazon Bedrock,
+  and a sweep test allows a server or third-party model denial only inside the scoped sentences.
+- Settings sync (owner decision 2026-10-02 19:22): the `sync` text of the account/sync candidate
+  now says, in 17 locales, that supported settings are all app settings and stay the same on the
+  account's devices, that an important change made on another device is applied and announced
+  once, and that device permissions and connections are not synced.
+- Review round 3 (same day): the settings-sync text no longer says that all app settings sync and
+  stay the same on every device. In 17 locales it names the settings that sync, says that device
+  permissions, connections and widget appearance stay on each device, that sync never turns on
+  an AI feature, and that a restore from Settings applies the saved settings and names what
+  changed. A new readiness flag keeps it unpublished until both apps prove the behaviour.
+- The AI release gate also refuses the candidate while clause 5 or the processor row still carry
+  a draft sentence ("not yet verified", "before release"), even when every flag is true.
+- Failing-first: RED `8b34c75`, GREEN `b23c985`; round 1 RED `2f43f9c`, GREEN `1c9579b`; round 2
+  RED `e854f24`, GREEN `cf834c1`, RED `ec6d1e7`, GREEN `c147f38`. 259/259 tests and 13 light
+  checks PASS; release check BLOCKED_EFFECTIVE_DATE. Served pages unchanged. Never publish.
 
 ## 2026-10-02 — LATE2 review-1 fix (unpublished)
 

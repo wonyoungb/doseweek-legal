@@ -1,0 +1,36 @@
+{
+ "lane": "LEGAL-AI",
+ "round": "review-fix-1",
+ "date": "2026-10-02",
+ "repository": "doseweek-legal clone PRO-LEGAL-AI-legal",
+ "redCommit": "2f43f9cf9fb0678df6a71c3da5eac5b36bacb0f1",
+ "parent": "9955ee75cf4a8a8549141b726c77054ee00be9e4",
+ "how": "The RED commit changes only scripts/test_ai_assistant_legal.py, so its tree is the parent source plus the new assertions. The run was made on a clean working tree at the RED commit, before any GREEN file was edited; no temporary worktree was needed.",
+ "command": "cd scripts && python3 -m unittest -v test_ai_assistant_legal",
+ "exit": 1,
+ "ran": 26,
+ "failures": 38,
+ "errors": 0,
+ "failingMethods": {
+  "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_badge_and_not_used_list_no_longer_deny_generative_ai": 18,
+  "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_renderer_rejects_the_bare_generative_ai_denial_for_1_0_6": 2,
+  "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_locale_review_receipts_are_recorded_honestly": 18
+ },
+ "assertionReasons": {
+  "17 x locale: the 1.0.5 badge is still in the staged home.featureBadges": 17,
+  "other: '생성형 AI 없음' != '생성형 AI는 따로 동의한 AI 기록 도우미에서만 써요'": 1,
+  "2 x validate_catalog accepts the bare 1.0.6 badge / item": 2,
+  "3 x ko/en/ja: receipt scope settingsAndPerk is missing (the receipt did not cover the settings copy and the perk line)": 3,
+  "14 x back-translation-only locale: \"<n> of 65 keys have no recorded back-translation (PRO-SPEC section 8, critic C23)\" (39 app keys missing per locale)": 14,
+  "1 x locale-review/summary.json has no backTranslationKeyCoverage": 1
+ },
+ "fullSuiteAtRed": {
+  "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+  "exit": 1,
+  "ran": 248,
+  "result": "failures=38",
+  "otherFailingMethods": 0
+ },
+ "log": "review-fix1-red.log.gz",
+ "logSha256": "7c91728e90e5013714bfa6d626d98e154c300e4e417066dca943526ac6c34f7f"
+}

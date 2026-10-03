@@ -15,6 +15,7 @@ import shutil
 from pathlib import Path
 from urllib.parse import urlencode
 import account_sync_candidate
+import ai_assistant_candidate
 import legal_release
 import locale_pages
 import render_ios
@@ -200,6 +201,9 @@ def integrated_sources(candidate=None):
         # subject and must never replace refund, conversion or price-change clauses.
         tp['billing']['paragraphs'][1] += '\n\n' + join('account', 'retention')
         tp['records']['paragraphs'][0] = join('automaticBackup', 'iosAppDataBackup', 'androidSystemBackup', 'sync', 'retention', 'webDeletion', 'notice', 'analytics')
+    # Pro AI record assistant (lane LEGAL-AI): privacy section, processor row, the exception to
+    # every "server cannot read" claim, the Terms section and the US-policy sentences.
+    ai_assistant_candidate.integrate(ios, android, terms, us_health, c)
     render_ios.validate(ios)
     render_android.validate_catalog(android)
     render_terms.validate(terms, ios)
@@ -218,6 +222,8 @@ def deletion_panel(c, loc):
     title = html.escape(text['deletionTitle'])
     mailto = 'mailto:' + c['deletionRequest']['supportEmail'] + '?' + urlencode({'subject': 'DoseWeek account deletion request'})
     paragraphs = ''.join('<p>' + html.escape(text[k]) + '</p>' for k in ('releaseStatus', 'webDeletion', 'retention', 'automaticBackup', 'iosAppDataBackup', 'androidSystemBackup', 'serverBackup', 'account', 'analytics'))
+    # What account deletion does to the AI record assistant's server rows (PRO-SPEC 5.5).
+    paragraphs += '<p>' + html.escape(ai_assistant_candidate.deletion_paragraph(loc)) + '</p>'
     return f'<article id="{loc}" class="language-panel" lang="{loc}" dir="{locale_pages.direction(loc)}" data-language="{loc}" data-document-title="{title} — DoseWeek" aria-labelledby="{loc}-content"><header class="hero"><h1 id="{loc}-content">{title}</h1></header><div class="policy-card">{paragraphs}<a class="button primary" href="{html.escape(mailto, quote=True)}">{html.escape(text["requestLabel"])}</a><p><a href="{html.escape(mailto, quote=True)}">wonyoung@wonyoungchoi.dev</a></p></div></article>'
 
 def rendered_pages(sources, candidate=None):

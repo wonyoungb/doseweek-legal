@@ -49,6 +49,14 @@ PARAGRAPH_COUNTS = {
 }
 SUBSECTIONS = {"billing": {"billing-ios": 2, "billing-android": 1}}
 MEDICAL_SECTION_ID = "medical"
+# Staged Pro AI record assistant (scripts/ai_assistant_candidate.py): the 1.0.6 staging render
+# inserts this one section right after the medical notice and renumbers the later titles.
+STAGED_AI_SECTION_ID = "ai-assistant"
+STAGED_SECTION_IDS = [
+    *SECTION_IDS[:SECTION_IDS.index(MEDICAL_SECTION_ID) + 1], STAGED_AI_SECTION_ID,
+    *SECTION_IDS[SECTION_IDS.index(MEDICAL_SECTION_ID) + 1:],
+]
+STAGED_PARAGRAPH_COUNTS = {**PARAGRAPH_COUNTS, STAGED_AI_SECTION_ID: 8}
 # Deliberate external link (reviewed 2026-09-29): Apple's standard EULA, which also governs the
 # iOS app. check_site.py allows it only on the Terms pages.
 EULA_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
@@ -144,7 +152,7 @@ def validate(content: dict, ios: dict) -> None:
         for value in (entry["title"], entry["intro"], entry["effectiveDateLabel"],
                       *entry["links"].values()):
             assert isinstance(value, str) and value.strip(), locale
-        assert [section["id"] for section in entry["sections"]] == SECTION_IDS, locale
+        assert [section["id"] for section in entry["sections"]] in (SECTION_IDS, STAGED_SECTION_IDS), locale
         for number, section in enumerate(entry["sections"], start=1):
             label = f"{locale}:{section['id']}"
             expected_keys = {"id", "title", "paragraphs"} | (
@@ -152,7 +160,7 @@ def validate(content: dict, ios: dict) -> None:
             )
             assert set(section) == expected_keys, label
             assert section["title"].startswith(f"{number}. "), f"{label}: title must start with {number}."
-            assert len(section["paragraphs"]) == PARAGRAPH_COUNTS[section["id"]], label
+            assert len(section["paragraphs"]) == STAGED_PARAGRAPH_COUNTS[section["id"]], label
             if section["id"] in SUBSECTIONS:
                 assert [sub["id"] for sub in section["subsections"]] == list(SUBSECTIONS[section["id"]]), label
                 for sub in section["subsections"]:

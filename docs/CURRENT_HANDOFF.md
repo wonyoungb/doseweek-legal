@@ -31,6 +31,111 @@ requirement for Android 1.0.6. Not published. Public site verified unchanged: 12
 200, app-ads.txt exact. Evidence: `Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/web-predeploy-20261003/report.json`.
 Next action: owner sets the effective date and answers OQ-L2-1; fill the two placeholders; then
 merge ai-consent-v3 with location=global, guardrail=off and pass `check_site.py --release` before main.
+## ACTIVE — pro-legal-ai ai-consent-v3: Gemini on Google Cloud, transfer consent, owner selection global / guardrail off (2026-10-03; unpublished candidate)
+
+- Round 3 (2026-10-03, after re-review CHANGES_REQUESTED on `a88ab73`; owner decisions 17:35, 19:00,
+  19:10, 19:25 KST in release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md):
+  - Switches selected in both candidate files: SWITCH_LOCATION=global, SWITCH_AWS_GUARDRAIL=off.
+    Apply combination `global-off` only (recipient `google-vertex-global`, guardrailLocales []).
+  - consentVersion 2026-10-03.4 (wire ai-consent-v3 unchanged). Every Screen A hash of .2 and .3 is void.
+  - Global text, 17 locales (app where.body, transfer.body, b.processing, help.inputNote; web clauses
+    5 and 6, processor row country): says "Global", quotes Google ("may be processed in any Google
+    Cloud location around the world", saved vertex-data-residency.txt 2459-2461), says the processing
+    country can change with the Google servers that handle the request and cannot be fixed in advance,
+    then (R2) that Google LLC is in the United States and Google Asia Pacific Pte. Ltd. in Singapore,
+    then those two systems. The us text carries the same bridge. Two new pinned sentences per locale
+    (`globalCountryChanges`, `recipientCountries`); 12 pinned sentences now.
+  - Readiness true, each with its reason in `readinessEvidence`: vertexLocationDecided,
+    awsGuardrailDecided, pipaCountryItemForGlobalAccepted (owner accepted the risk; not an official
+    text). All other flags false.
+  - R1: every switch value has a gate flag. guardrail off -> `serverGuardrailCallRemovedReadback`
+    (FALSE: the server still calls ApplyGuardrail per the server lane's last report; the off text must
+    not ship before a readback). location us -> `pipaCountryItemForUsAccepted` (false, not selected).
+  - F7: DoseWeek server location sourced (AWS Lightsail, Seoul; lane receipt
+    server-hardening-20261003/receipt.md). Google contracting entity still not read back (billing
+    describe: KRW, no entity field): the recipient line now says what Google's terms name for a billing
+    address in the Republic of Korea; `googleContractingEntityVerified` stays false.
+  - F1 low: every website field is hash-pinned; the "no only" purpose test holds the pinned sentences
+    by SHA-256 in all 17 locales.
+  - `python3 scripts/ai_consent_apply.py --export-selected <dir>` writes the final copy for iOS,
+    Android, web and the server registry. Evidence: lane folder `.../claude-20261003/round3/`.
+  - Checks: 282 methods, 279 pass, the same 3 pre-existing methods fail (86 subtests); AI family
+    53/53. Still open: unresolvedBeforePublication (14 items), no native-speaker or counsel review of
+    any locale, nothing applied to an app or server clone, nothing published.
+  - The lines below describe rounds 1 and 2 and are historical where they say the switches are open,
+    every flag is false or consentVersion is 2026-10-03.3.
+
+Branch `next-ai/pro-legal-ai`, on top of `f0c78fe`. Owner decisions 2026-10-03 15:30-15:50
+(release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md): Pro AI ships on Gemini (Vertex AI,
+project doseweek-507313, Gemini 3.8 Flash) with cross-border transfer consent; self-review against
+official sources, no paid lawyer. Pass status: COMPLETE (static candidate). Not legally reviewed,
+not published, every readiness flag false.
+- Facts with saved sources and SHA-256: lane evidence
+  `release/evidence/1.0.6/CODEX-LANES-20261002/codex-takeover-20261003/legal-self-review/claude-20261003/FACTS.md`.
+  Gemini 3.8 Flash is served only on global, us and eu (no Seoul); us costs 10% more than global;
+  Google does not train on the content, may hold it in memory up to 24 hours and may store a
+  flagged prompt up to 90 days; contracting entity for a Korean billing address is Google Cloud
+  Korea LLC (reseller; "Google" = Google Asia Pacific Pte. Ltd. and affiliates); Google is a processor
+  under its Cloud Data Processing Addendum.
+- Copy: `docs/ai-app-copy.candidate.json` (consentVersion 2026-10-03.3, wire ai-consent-v3, 52 keys:
+  +ai.consent.a.transfer.title/.body, +ai.consent.a.check.transfer, -ai.consent.a.region.jp) and
+  `docs/ai-assistant-content.candidate.json` (processor row `google-vertex-ai`), 17 locales. The
+  strings carry the tokens {aiLocation}, {aiLocationShort}, {aiTransferCountry}, {aiGuardrail};
+  `ai_assistant_candidate.resolve(document, location, guardrail)` gives the reader's text.
+  v1/v2 (Amazon Bedrock, Seoul) stay in the Git history of both files.
+- Owner switches, both open (`switches.*.selected` = null in both files): SWITCH_LOCATION us | global,
+  SWITCH_AWS_GUARDRAIL off | on. All four combinations are validated by `load()` and
+  `load_app_copy()`; the release gate refuses a null selection. Staged pages render with the
+  staging preview pair (us, off) only.
+- Hashes and apply list: `scripts/ai_consent_apply.py` writes `docs/ai-consent-v3-apply.json`
+  (4 combinations x 17 locales x 4 Screen A display variants, the server registry document per
+  combination, and the exact iOS / Android / server steps). `--export <dir>` writes the resolved
+  changed keys per combination. Hashes are over the source strings; an app that ships other bytes
+  (no-break spaces) hashes what it shows.
+- Receipts: `evidence/pro-legal-ai-v3-20261003/` (writer + 17 receipts). One AI model wrote the 9
+  changed or new keys in every locale; no back-translation, native speaker or counsel; all 17
+  recommendation flags off. `evidence/pro-legal-ai-20261002/` is historical (v2 text): its
+  `write_locale_receipts.py --check` no longer matches the current copy by design.
+- Review round 2 (2026-10-03, CHANGES_REQUESTED on `03f8b81`, findings F1-F8 fixed):
+  - F1: `scripts/ai_legal_guard.py` + `docs/ai-consent-v3-legal-pins.json`. Per locale: 10 exact
+    pinned sentences, the 6 PIPA 28-8(2) item labels with a content rule per item, forbidden-claim
+    patterns, retired provider names in non-Latin scripts; per locale and switch combination a
+    SHA-256 of the pinned fields. The first three are hand-written and hold after a re-pin; the
+    hashes only detect change. `python3 scripts/ai_legal_guard.py --repin` is a review step.
+    The reviewer's 8 mutations: 7 passed at `03f8b81`, 8 of 8 fail now, also with re-pinned hashes.
+  - F2: the purpose item (17 locales) is "Google uses this content to create the AI answers you
+    request" plus the 24-hour cache and the 90-day abuse log with staff review; no "only". The
+    unsourced "not used for advertising" about Google is gone from the processor row.
+  - F3: "DoseWeek does not save your conversations." F4: Google can read the content for as long
+    as it holds it; authorized Google staff may review a flagged request. F5: location us states
+    storage and AI processing in the United States and that other processing may happen where
+    Google or its subprocessors have facilities. F6: ja check.health.detail is conditional.
+  - APPI: PPC Q12-11 settles that the country to name is the recipient's; both location texts
+    now describe the United States and Singapore (PPC country reports). PIPA with location us and
+    with location global stay unresolved (no PIPC text retrieved).
+  - F8: `require_release_ready` needs `pipaCountryItemForGlobalAccepted` for location global and
+    `awsGuardrailEntityAndProcessorRowVerified` for guardrail on; the apply data carries
+    `serverRegistry.guardrailLocales` per combination for the server lane to enforce.
+  - consentVersion 2026-10-03.3: every Screen A hash of 2026-10-03.2 is void; apply list, receipts
+    and pins regenerated. Evidence: lane folder `.../claude-20261003/round2/`.
+- Checks: `python3 -m unittest discover -s scripts -p 'test_*.py'`: 278 methods, 275 pass,
+  3 fail (86 subtests). The same 3 fail at `f0c78fe` before this work (263 methods, 86 subtests):
+  test_legal_late_decisions trial meanings, test_terms_legal_update App Store trial,
+  test_legal_late2_backup legacy hash. They come from the `docs/terms-content.json` change in
+  `f0c78fe` (terms pages not re-rendered: `render_terms.py --check` and `check_site.py` fail the
+  same way) and are outside this change; the three tests read `docs/terms-content.json` itself, so re-rendering
+  the terms page does not fix them. AI family `test_ai_assistant_legal.py`: 49/49 pass.
+  `ai_assistant_candidate.py`, `ai_legal_guard.py --check`, `ai_consent_apply.py --check`,
+  `render_account_sync.py --check`, `korean_tone.py`: pass.
+- Open (also in `unresolvedBeforePublication`): the two owner switches; billing-account entity
+  readback; Google project settings readback (cache, request-response logging); PIPA 28-8(2)2 with
+  location global (the country cannot be named) and with location us (form of the country item
+  not confirmed by a PIPC text); APPI Rule 17(2)3 and no ja reader; DoseWeek server location not
+  read back; app lanes (third tick box, block on every
+  storefront, Android text hash) and server lane (recipient token for location us) not applied.
+Next action: owner picks the two switches; then set `selected` in both files, run
+`python3 scripts/ai_consent_apply.py --export <dir>`, and the app and server lanes apply the block
+of that combination.
 
 ## ACTIVE — legal-update-legal LATE2 review-1 fix (2026-10-02; unpublished)
 
@@ -52,6 +157,129 @@ BLOCKED_EFFECTIVE_DATE as expected; frozen inputs match (263 files). Evidence:
 No native/provider/live check applies. Never publish.
 Next action: orchestrator re-review; the owner answers OQ-L2-1 (remove or disclose the
 app-managed Drive backup) before the flag can open.
+
+## ACTIVE — pro-legal-ai: Pro AI record assistant legal copy (2026-10-02; unpublished; separate lane)
+
+Lane LEGAL-AI on branch `next-ai/pro-legal-ai`, cut from `868932c` (the LATE2 review-1 head above,
+which this lane does not change). Objective: PRO-SPEC 2026-10-02 section 8 (critic C18, C20, C23),
+sections 4.4 and 5.1-5.5, compliance 4.5 and 8, owner second round (150 a month, 7-day trial with
+50, names "AI 기록 도우미" and "우선 문의 답변", never "상담"). Pass status: COMPLETE (static).
+- Sources: `docs/ai-assistant-content.candidate.json` (website text) and
+  `docs/ai-app-copy.candidate.json` (Screen A/B/Settings copy, helplines, What's New), 17 locales.
+  Both are hand-maintained JSON; `scripts/ai_assistant_candidate.py` validates them, integrates
+  them into the staged 1.0.6 sources and adds its own `--release` gate. Store drafts:
+  `docs/AI_STORE_DECLARATIONS_1_0_6.md`.
+- Staged result (`render_account_sync.py`): supplement section `ai-assistant` and processor row
+  `aws-bedrock` in both privacy policies; the AI exception after every `recordsSync`, `mealsSync`
+  and `sync` claim (iOS 10, Android 15, Terms 1 per locale); health-platform paragraphs say the
+  data is not used for AI; the on-device AI section points to the server assistant; the Android
+  `ai-health` answer no longer says 1.0.6 has no generative AI; Terms section 6 with later titles
+  renumbered; five US-policy sentences; one paragraph on the staged account-deletion page.
+  Served pages and their sources are unchanged (a test guards that).
+- Commits: RED `8b34c75`, GREEN `b23c985`, then this docs/evidence commit. RED on the detached
+  parent: 24 methods, 23 failing, 269 assertion subtests, 0 errors (1 guard passes by design).
+- Checks at GREEN: 246/246 unittest methods PASS (222 existing + 24 new); 13 light commands PASS;
+  `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+  `evidence/pro-legal-ai-20261002/summary.json`.
+- Review receipts (`evidence/pro-legal-ai-20261002/locale-review/`): ko waits for the owner at
+  gate 6; ja waits for counsel or a native reviewer; en was read by the lane agent; the other 14
+  locales have only a same-model back-translation. No native speaker or counsel reviewed any
+  locale. `write_locale_receipts.py --check` keeps the receipts equal to their inputs, and a
+  copy change after a receipt fails `test_ai_assistant_legal.py`.
+- NOT_RUN / open: helpline re-fetch (no network), AWS contracting entity, Bedrock retention and
+  logging readbacks, deployed consent routes and kill switch, EVAL-AI gate, counsel review, store
+  console entry. All are readiness flags or unresolved items in the candidate.
+- Observation for the Terms owner: the staged Terms intro and section 2 title still describe only
+  Free and Plus; Pro first appears in section 6.
+- Review round 1 (2026-10-02, two major findings; RED `2f43f9c`, GREEN `1c9579b`, then this
+  docs/evidence commit):
+  - C23 receipts were incomplete (11 of 50 app keys recorded, flag still recommended). Now
+    `back-translation/<locale>.txt` records all 50 app keys and the 15 CON-PRO keys for each of
+    the 14 locales; 39 strings per locale were translated back in the review-fix session by the
+    same model (still not blind, no native speaker, no counsel). The receipts hash all 50 app
+    keys, carry `backTranslationRecord`, and a locale with a missing key gets
+    `flag.recommended=false`. `locale-review/summary.json` states the key coverage.
+  - The staged Android 1.0.6 content still said "No generative AI" (`home.featureBadges[3]`)
+    and listed "Generative AI" in the not-used list (`no-collection.items[4]`, rendered as
+    `<li>` on android/privacy) in 17 locales. `integrate()` now replaces both with the candidate
+    fields `androidBadge` and `androidNotUsedItem`; `render_android.validate_catalog` rejects
+    the two bare English claims when `versionName` is 1.0.6. The served 1.0.5 source keeps them.
+  - RED at `2f43f9c` (tree = parent + tests): 26 methods ran, 3 failing, 38 assertion failures,
+    0 errors. GREEN: 248/248 unittest methods PASS (246 + 2 new); the same 13 light commands
+    PASS; `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+    `evidence/pro-legal-ai-20261002/red-proof/review-fix1-red.summary.json` and `summary.json`
+    (`reviewFix1`).
+- Review round 2 (2026-10-02, one major finding plus the settings sync addition; legal head
+  before the docs commit `c147f38`):
+  - Major: the staged iOS 1.0.6 support answer `support.released.ai` (and the privacy section
+    `ai`) still ended with "No Private Cloud Compute, server model, or third-party model is
+    used" in 17 locales. PRO-SPEC 4.4 `ai.paused` links to that answer. RED `e854f24`, GREEN
+    `cf834c1`: new candidate fields `onDeviceOnly` (the sentence scoped to the two on-device
+    features) and `iosAiFaq` (the assistant is a different feature, processed on a server with
+    a third-party model: DoseWeek server, Amazon Bedrock Seoul, Claude by Anthropic, only after
+    separate consent; needs a connection; the app says when it is paused). `integrate()`
+    replaces the one denial sentence in the answer and in the privacy section (the
+    `onDeviceScope` pointer stays). `androidAiFaq` gained "It is processed on a server, not on
+    the device." `render_ios.validate` refuses a 1.0.6 AI answer without "Amazon Bedrock"; the
+    served 1.0.5 source is unchanged.
+  - Sweep: `test_no_staged_text_denies_a_server_or_third_party_model_outside_the_scoped_sentences`
+    reads every string of the staged iOS, Android, Terms and US-policy sources, both candidate
+    files and the rendered staged pages with per-locale phrase stems (`DENIAL_STEMS`,
+    `SERVER_STEMS`, `ON_DEVICE_STEMS`). README, AGENTS, docs/*.md, home, help navigation, import,
+    templates/ and assets/ were checked by hand: no other denial. Left for their owner, because
+    they do not speak about AI: iOS `secondRelease.meals` and Android `candidate2-meals` say
+    records "stay on the device" without the account-sync condition; Android `home.intro` is
+    conditional on opt-in features and is not a staged route.
+  - Settings sync (owner decision 2026-10-02 19:22, late-decisions.md): RED `ec6d1e7`, GREEN
+    `c147f38`. The `sync` text of `docs/account-sync-content.candidate.json` says after the
+    record list, in 17 locales: supported settings are all app settings (injection-reminder
+    switches, recording without a plan, supply tracking); they stay the same on every device
+    signed in to the account; an important change made on another device is applied and
+    announced once; permissions and connections of one device (notification permission, app
+    lock, health-data, calendar and cloud-storage connections) are not synced. The sentences
+    name no platform, store or provider. Not written here: the restore half of the decision
+    (a restore from Settings applies the saved settings and names what changed) is app UI copy
+    of the sync and backup lanes; the file-backup sections may need a matching sentence later.
+  - Minors: `require_release_ready` refuses the draft sentences listed in the new top-level
+    `preReleaseWording` (5 per locale: clause 5 and four processor-row cells) even with every
+    flag true. Recorded in `unresolvedBeforePublication`, with no copy change: the ja privacy
+    clause 6 APPI transfer statement (counsel; flag `locales.ja` is off), the Screen A retention
+    sentence that reads broader than clause 4 (owner at gate 6; it needs a consentVersion bump
+    and new receipts), and the zh "meal ideas" term (the shipped CON-PRO strings use the same
+    term, so both change together). Unchanged: the blanket "상담" checks (decided at gate 6).
+  - `ai.refuse.sideEffect` (round-1 minor, PRO-SPEC 4.4 open copy conflict): settled as the
+    shipped CON-PRO wording without "날짜별로". The payload carries no dates, so no date-sorted
+    AI answer exists; the owner confirms at gate 6.
+  - The new website sentences are candidate text, not app-consumed consent copy, so they are
+    outside the C23 receipts (the 50 app keys and 15 CON-PRO keys did not change;
+    `write_locale_receipts.py --check` passes). They have no native-speaker or counsel review.
+  - RED proofs in temporary detached worktrees (removed): A 33 methods ran, 7 failing, 109
+    assertion failures, 0 errors; B 4 ran, 3 failing, 35 failures, 0 errors (1 guard passes).
+    GREEN: 259/259 unittest methods PASS (248 + 11 new); the same 13 light commands PASS;
+    `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+    `evidence/pro-legal-ai-20261002/red-proof/review-fix2-red.summary.json` and `summary.json`
+    (`reviewFix2`); the full logs are in the workspace lanes folder only.
+- Review fix 3 (2026-10-02, major: the settings-sync sentences said all app settings sync and are
+  the same on every device, which contradicted the staged Plus-tool and reference-medication
+  sentences). RED `2708ded` (tests only), GREEN `c6924c8`. The `sync` text now follows the
+  cross-platform settings contract (`settings-xplat-contract-20261002.md` sections 2-3) in 17
+  locales: it names the settings that sync (appearance, weight-change unit, body map view,
+  reminder switches, detailed previews and medication name, record-only mode, supply tracking,
+  food-search market and language), says a change from another device is applied and an
+  important one announced once, that sync never turns on an AI feature, that notification
+  permission, app lock, health/calendar/cloud-storage connections and widget appearance stay on
+  each device, and that a restore from Settings applies the saved settings and names what
+  changed. New `serverReadiness.settingsSyncVerified=false` with an unresolved item (native proof
+  on both clients; the contract marks the estimate reference half-life and the Plus feature
+  document as shared while the staged pages keep them on the device, so their page owners must
+  reconcile). RED: module 7 ran, 4 failing methods, 188 failures, 0 errors; full suite 262 ran,
+  188 failures, no other method. GREEN: 262/262 PASS; the same 13 light commands PASS;
+  `check_site.py --release` BLOCKED_EFFECTIVE_DATE as before. Evidence:
+  `evidence/pro-legal-ai-20261002/red-proof/review-fix3-red.summary.json`, `summary.json`
+  (`reviewFix3`). The web clone has no settings-sync claim and is unchanged.
+- No owned process, device or external action. Temporary RED worktrees removed. Never publish.
+Next action: orchestrator re-review; IOS-AI-UI and AND-AI-UI copy the 50 app keys from
+`docs/ai-app-copy.candidate.json`; the owner reads the Korean copy and the What's New line at gate 6.
 
 ## HISTORICAL — legal-update-legal LATE2 automatic backup (2026-10-02; unpublished)
 

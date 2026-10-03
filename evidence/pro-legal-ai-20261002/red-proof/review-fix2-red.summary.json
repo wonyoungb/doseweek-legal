@@ -1,0 +1,100 @@
+{
+ "lane": "LEGAL-AI",
+ "round": "review-fix-2",
+ "date": "2026-10-02",
+ "repository": "doseweek-legal clone PRO-LEGAL-AI-legal",
+ "pairs": [
+  {
+   "id": "A: on-device AI denial, Android server sentence, release-gate draft wording, recorded blockers",
+   "repository": "doseweek-legal (PRO-LEGAL-AI-legal)",
+   "redCommit": "e854f242938649c68d05627a39267f6033082402",
+   "parent": "7df5c6867a757420e5119e8466ba1e6119353bf2",
+   "where": "temporary detached worktree at the RED commit (parent source plus the new assertions only), removed afterwards; tree clean",
+   "treeDirtyEntries": 0,
+   "command": "cd scripts && python3 -m unittest -v test_ai_assistant_legal",
+   "exit": 1,
+   "ran": 33,
+   "result": "FAILED (failures=109)",
+   "errors": 0,
+   "failingMethods": {
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_android_ai_answer_says_the_assistant_is_processed_on_a_server": 18,
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_gate_6_and_counsel_items_of_review_round_2_are_recorded_as_blockers": 3,
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_ios_ai_answer_says_which_ai_runs_on_the_device_and_which_on_a_server": 18,
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_ios_renderer_rejects_the_unscoped_ai_denial_for_1_0_6": 1,
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_no_staged_text_denies_a_server_or_third_party_model_outside_the_scoped_sentences": 51,
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_on_device_ai_section_scopes_its_denial_to_the_on_device_features": 17,
+    "test_ai_assistant_legal.AiAssistantLegalCopyTest.test_release_gate_refuses_the_draft_sentences_even_when_every_flag_is_true": 1
+   },
+   "failingMethodCount": 7,
+   "passingMethodCount": 26,
+   "log": {
+    "file": "LEGAL-AI-fix2-red-proof-legal-a.log.gz",
+    "rawBytes": 213322,
+    "rawSha256": "cfe1b6d24766298caeb8c853e8bbb347aca52570435161bbd27d0310e7279795",
+    "gzSha256": "200a187c8c758ce3ec9055c532599ddd826e45db91a6f0ea516d7c5629db5a59"
+   },
+   "greenCommit": "cf834c1",
+   "fullSuiteAtRed": {
+    "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "exit": 1,
+    "ran": 255,
+    "result": "failures=109",
+    "otherFailingMethods": 0,
+    "where": "second temporary detached worktree at the RED commit, removed afterwards"
+   },
+   "assertionReasons": {
+    "17 locales + pinned ko/en: the staged iOS AI answer still ends with the bare 1.0.5 denial": 18,
+    "17 locales: the staged on-device AI privacy section still carries the bare denial": 17,
+    "17 x source ios + 34 pages (privacy, support): a server or third-party model denial outside a scoped sentence": 51,
+    "17 locales + pinned ko/en: the Android AI answer does not say the assistant is processed on a server": 18,
+    "render_ios.validate accepts the 1.0.5 AI answer in a 1.0.6 catalog": 1,
+    "require_release_ready opens with every flag true while the draft sentences remain": 1,
+    "three gate-6 / counsel items are not recorded in unresolvedBeforePublication": 3
+   }
+  },
+  {
+   "id": "B: settings sync across the account devices (owner decision 2026-10-02 19:22)",
+   "repository": "doseweek-legal (PRO-LEGAL-AI-legal)",
+   "redCommit": "ec6d1e707f48fddd3568b2de1ca2ca57b8d8dcf5",
+   "parent": "cf834c11401d0a7e0b6b88788cd812d1b14eb8ca",
+   "where": "temporary detached worktree at the RED commit (parent source plus the new assertions only), removed afterwards; tree clean",
+   "treeDirtyEntries": 0,
+   "command": "cd scripts && python3 -m unittest -v test_settings_sync_disclosure",
+   "exit": 1,
+   "ran": 4,
+   "result": "FAILED (failures=35)",
+   "errors": 0,
+   "failingMethods": {
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_korean_and_english_state_the_owner_decision": 1,
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_staged_policies_terms_and_pages_carry_the_settings_sentences": 17,
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_sync_text_says_what_settings_sync_and_what_stays_on_one_device_in_17_locales": 17
+   },
+   "failingMethodCount": 3,
+   "passingMethodCount": 1,
+   "log": {
+    "file": "LEGAL-AI-fix2-red-proof-legal-b.log.gz",
+    "rawBytes": 50148,
+    "rawSha256": "783a4692e7a1a9d31e445534081efd4a6e33a3256145c7f0693d4dfdc6010311",
+    "gzSha256": "674df1a29cdcedb45af23f1850f08c79ed697edc8535d3c38018ce1236d58159"
+   },
+   "greenCommit": "c147f38",
+   "fullSuiteAtRed": {
+    "command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "exit": 1,
+    "ran": 259,
+    "result": "failures=35",
+    "otherFailingMethods": 0,
+    "where": "clean working tree at the RED commit, before any GREEN edit"
+   },
+   "passingOnParentByDesign": [
+    "test_settings_sync_disclosure.SettingsSyncDisclosureTest.test_the_settings_sentences_name_no_platform_store_or_provider"
+   ],
+   "assertionReasons": {
+    "17 locales: the sync text has no sentence that names the notification permission and the calendar connection": 17,
+    "17 locales: the staged policies, Terms and pages cannot carry that sentence": 17,
+    "the decided Korean and English wording is absent": 1
+   }
+  }
+ ],
+ "logNote": "The full log is kept only in the workspace lanes folder (release/evidence/1.0.6/PRO-DESIGN-20261002/lanes/), not in this repository (review round 1 asked for summaries only)."
+}

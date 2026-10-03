@@ -1,0 +1,80 @@
+! Codex source-only refresh on 2026-10-03: record-derived exclusions, app-help session input/history and weekly-summary-only persistence were checked against the approved current source; no native-speaker or counsel review is claimed.
+! This source evidence does not verify model retention, recipient/support access, runtime transport, foreign assent or store declarations and does not set product readiness flags.
+! Four changed English back-translations use retained per-row Codex evidence; unchanged 46 app and15 shared strings retain their original recordings only for matching pinned source values. Same-model, not blind or independent.
+# Historical note (2026-10-02): Formal Sie throughout. "Serie in Wochen" renders "streak in weeks". No deviation in meaning found.
+# Historical note (2026-10-02): ai.label.output says "Keine medizinische Beratung" (no medical advice); "Beratung" is used for advice, never as a product or perk name.
+lead = It creates weekly overviews and general meal ideas from your entries and explains how to use the app. The answers come from an AI, not from a human, and it gives no medical advice.
+# round: codex-refresh-2026-10-03
+sent = Before records are sent, we show you their content, and nothing is sent until you tap “Send”. We send dose counts (on time, late, skipped), the change in the weight you entered yourself, how many times you recorded each type of symptom, the number of days with a meal record together with your protein average and goal, and your streak in weeks. For meal ideas, we also send the meal type, preferences, allergies and foods you dislike, as you selected them. Your language and region setting is also sent. Only app help sends the questions you type and the conversation history of the current session, together with the app version, platform and current screen.
+# round: writing-session
+# round: codex-refresh-2026-10-03
+notSent = Model requests created from records exclude medication names and dosages, notes, recorded food names, photos, dates, names, email addresses and account identifiers. Meal types, preferences, allergies and foods you dislike are sent only as values selected from predefined lists. App help also sends your question and the conversation history of the current session, so do not enter names, contact details or other people’s health information. DoseWeek separately processes account and connection information needed for sign-in, usage counts and consent management.
+# round: writing-session
+where = The app encrypts the content additionally and sends it to the DoseWeek server (Seoul, Republic of Korea); it is processed by Amazon Bedrock from Amazon Web Services (Seoul Region). The AI model is Claude from Anthropic. AWS operates it, and Anthropic cannot see the content.
+# round: codex-refresh-2026-10-03
+retention = What you send and the answers are not stored on the server and are not used to train AI. Conversations are not saved. Only a maximum of 2 weekly summary cards are saved on your device, and they are excluded from synchronization and backups. Usage counts (without content) are retained for up to 2 months, and consent records for as long as your account exists. If you report an answer and choose “Include the answer text”, only that answer is retained for 30 days.
+# round: writing-session
+e2ee = While the AI creates an answer, the DoseWeek server and Amazon Bedrock can read what you sent. Sync and backup data remain protected by end-to-end encryption as before.
+optional = Then only the AI functions are dropped; you can keep using the other functions of Pro and Plus. Under Settings > AI record assistant you can withdraw your consent at any time.
+checkHealth = [Optional] I consent to the processing of my health data (sensitive data)
+# round: codex-refresh-2026-10-03
+checkDetail = Purpose: create AI weekly summaries and meal ideas and answer questions about using the app / Data: the records and meal choices under “What is sent” above, and questions directed to app help and the conversation history of the current session / Retention: deleted as soon as the answer is created (if an answer is included in a report, only that answer for 30 days) / If you decline, everything except AI remains available
+# round: writing-session
+checkAge = I am at least 18 years old
+processing = The app encrypts the content, Amazon Bedrock (Seoul) processes it, and it is deleted as soon as the answer is created.
+r.dose = I cannot set your dose or the time of use. That depends on your prescription and your body, so please discuss it with the medical professional who prescribed the medicine. Instead I can summarize your uses so far. Shall I create an overview for your next appointment?
+r.sideEffect = Whether a symptom is harmless or comes from the medicine, I cannot judge. If it persists or you are worried, please turn to a medical professional. I can summarize your recorded symptoms.
+r.diagnosis = Whether you have a disease or how likely it is, only a doctor can judge. Please discuss your questions with a medical professional. I am glad to help you collect questions for your appointment.
+r.drugInfo = Whether you can combine other medicines or food supplements, or which medicine suits you better, I cannot answer. Tell the medical professional everything you take and ask there.
+r.diet = I cannot give diet plans for diseases or targets for intake. Please discuss amounts of food and weight goals with a medical professional. I am glad to give you general meal ideas for enough protein and fluids.
+r.pregnancy = I cannot give guidance on medicines and nutrition in pregnancy or while breastfeeding. Please turn to a medical professional.
+r.minor = The AI record assistant is only for persons aged 18 and over. For health questions, please turn to a medical professional together with a parent or a legal guardian.
+r.other = I cannot help with that. I am glad to support you in ordering your entries, with general meal ideas or with questions about the app.
+emergency = If your complaints are severe or suddenly get worse, do not wait. Call {text} at once or go to the nearest emergency department. I cannot assess emergencies.
+emergencyGeneric = If your complaints are severe or suddenly get worse, do not wait. Call the local emergency number at once or go to the nearest emergency department. I cannot assess emergencies.
+crisis = That sounds as if things are very hard for you right now. You do not have to get through this alone. At {text} you can talk to someone now, around the clock. If you are in acute danger, call {text2}.
+crisisGeneric = That sounds as if things are very hard for you right now. You do not have to get through this alone. At {text} you will find a helpline in your region. If you are in acute danger, call the local emergency number.
+header = This is the AI record assistant. The answers come from an AI, not from a human.
+output = Created by AI and possibly faulty. No medical advice. Discuss decisions about your health with a medical professional.
+export = AI-generated content · DoseWeek
+# round: review-fix-1
+# Historical note (2026-10-02): Review-fix 1: "Einwilligung ansehen" renders "View what you agreed to" as "View consent"; "Wird am {text} aufgefüllt" renders "Refills on {text}". No deviation in meaning found in the 39 added strings.
+ai.consent.a.title = Turn on the AI record assistant?
+ai.consent.a.sent.title = What is sent
+ai.consent.a.notSent.health.ios = Data imported from Apple Health is not sent.
+ai.consent.a.notSent.health.android = Data imported from Health Connect is not sent.
+ai.consent.a.where.title = Where processing takes place
+ai.consent.a.retention.title = How long it is stored
+ai.consent.a.e2ee.title = This is not end-to-end encryption
+ai.consent.a.optional.title = You do not have to consent
+ai.consent.a.later = Later
+ai.consent.a.agree = Consent and turn on
+ai.consent.a.region.jp = The entries sent are processed on the operator's server (Republic of Korea) and by Amazon Bedrock from Amazon Web Services (Seoul Region, Republic of Korea). In the Republic of Korea the Personal Information Protection Act (PIPA) applies, and the Personal Information Protection Commission supervises compliance with it. DoseWeek takes measures such as a setting without storage, a setting without AI training and encrypted communication.
+ai.consent.a.region.us = View the US privacy policy for consumer health data
+ai.consent.b.title = Send these entries to the AI?
+ai.consent.b.purpose.weekly = A weekly overview is created from your entries of the last 7 days.
+ai.consent.b.purpose.meal = General meal ideas are created from the chosen meal type and your preferences.
+ai.consent.b.row.doses = Dose entries (number on time, late, skipped)
+ai.consent.b.row.weight = Weight change
+ai.consent.b.row.symptoms = Number per kind of symptom
+ai.consent.b.row.meals = Meals and protein
+ai.consent.b.weight.excluded.ios = Weight imported from the Apple Health app is not sent
+ai.consent.b.weight.excluded.android = Weight imported from Health Connect is not sent
+ai.consent.b.preview = See exactly what is sent
+ai.consent.b.quota.weekly = This week's overview does not count toward your usage.
+ai.consent.b.quota.regenerate = Creating it again counts as 1 request. Still left this month: {count}
+ai.consent.b.quota.remaining = Still left this month: {count}
+ai.consent.b.cancel = Cancel
+ai.consent.b.send = Send
+ai.help.inputNote = On sending, this is transmitted to the AI service (AWS Seoul Region)
+ai.settings.title = AI record assistant
+ai.settings.state.on = On · Consent of {text}
+ai.settings.viewConsent = View consent
+ai.settings.usage = This month: {count}/{count2} · Refilled on {text}
+ai.settings.deleteSummaries = Delete saved AI overviews
+ai.settings.withdraw = Withdraw consent
+ai.settings.withdraw.note = After the withdrawal no entries are sent to the AI. Your Pro subscription is not cancelled automatically.
+ai.settings.withdraw.store.ios = You can change your subscription in the subscription management in the App Store.
+ai.settings.withdraw.store.android = You can change your subscription in the subscription management at Google Play.
+ai.settings.supportInquiry = Question about using the app (Pro)
+pro.support.priority = Preferred reply to inquiries — For questions about using the app you receive a first reply within 1 working day. We do not answer medical questions.
