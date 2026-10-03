@@ -9,7 +9,7 @@
   sources plus the account/sync overlay. Base sources and candidates are unchanged.
   `publish_release.py --check` and `check_site.py` verify the public pages against that build.
 - This was NOT gated by `check_site.py --release` or `require_release_ready`: 18
-  `serverReadiness` flags and the 31 unresolved items stay open and are listed in
+  `serverReadiness` flags and the 30 unresolved items stay open and are listed in
   `docs/published/manifest.json` (`notVerifiedAtPublication`). The owner ordered publication.
 - Version scope instead of the draft notice: Android 1.0.6, iPhone/iPad 1.0.7. Draft-only
   remarks removed (`docs/published/removed-draft-remarks.json`); "not verified" statements stay.
