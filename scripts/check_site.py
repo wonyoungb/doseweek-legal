@@ -19,6 +19,7 @@ from urllib.parse import unquote, urlsplit
 
 import korean_tone
 import legal_release
+ACCOUNT_DELETION_URL = "https://doseweek.wonyoungchoi.dev/account-deletion/"
 import locale_pages
 import account_sync_candidate
 import render_ios
@@ -31,6 +32,19 @@ from render_import import rendered as rendered_import, validate as validate_impo
 
 
 ROOT = Path(__file__).resolve().parents[1]
+# Publication state (owner decision 2026-10-03): the public pages are built by
+# scripts/publish_release.py from the base sources plus the account/sync and AI overlays.
+# Sentences of the base text that the overlays replace are listed in
+# docs/published/superseded-base-sentences.json with the reason; everything else is still required.
+PUBLISHED_MANIFEST = ROOT / "docs/published/manifest.json"
+SUPERSEDED_PATH = ROOT / "docs/published/superseded-base-sentences.json"
+SUPERSEDED = (set(json.loads(SUPERSEDED_PATH.read_text(encoding="utf-8"))["sentences"])
+              if PUBLISHED_MANIFEST.is_file() and SUPERSEDED_PATH.is_file() else set())
+
+
+def superseded(required: str) -> bool:
+    return required in SUPERSEDED
+
 IOS_HTML_FILES = [ROOT / "index.html", ROOT / "support/index.html", ROOT / "privacy/index.html"]
 ANDROID_HTML_FILES = [
     ROOT / "android/index.html",
@@ -203,6 +217,10 @@ def local_target(source: Path, reference: str, *, attribute: str | None = None) 
             and reference in TERMS_SOURCE_LINKS
         ):
             # Deliberate navigation to Apple's standard EULA from the Terms, never a remote asset.
+            return None
+        if attribute == "href" and reference.startswith(ACCOUNT_DELETION_URL + "#"):
+            # Owner decision 2026-10-03: the account-deletion page lives on the product site
+            # (the Google Play deletion URL). Navigation only, never a remote asset.
             return None
         if reference.startswith(SITE_BASE):
             relative_path = unquote(split.path.removeprefix("/doseweek-legal/").lstrip("/"))
@@ -754,7 +772,7 @@ def main() -> None:
         "Private Cloud Compute",
         "AES-256-GCM",
     ):
-        assert required in privacy_text, f"privacy/index.html: missing required disclosure {required!r}"
+        assert superseded(required) or required in privacy_text, f"privacy/index.html: missing required disclosure {required!r}"
 
     assert privacy_text.count("SystemLanguageModel.default") == len(ALL_LANGUAGES), (
         "privacy/index.html: SystemLanguageModel.default must appear once per language"
@@ -893,7 +911,19 @@ def main() -> None:
                                   source, flags=re.DOTALL)
                 assert entry is not None, identifier
                 paragraphs = re.findall(r"<p>(.*?)</p>", entry.group(1), flags=re.DOTALL)
-                assert len(paragraphs) == 2, identifier
+                if topic == "backup":
+                    # Published 1.0.6 text (publish_release.py): the backup answer opens with
+                    # the manual-backup scope and ends with the Plus backup paths, so the
+                    # version-scope line is no longer its first paragraph.
+                    assert len(paragraphs) >= 2, identifier
+                    scope_line = next((p for p in paragraphs if scope_overrides.get(
+                        topic, second_release_version) in p), None)
+                    assert scope_line is not None, (
+                        f"{identifier}: the version-scope line must name the version it applies to"
+                    )
+                    paragraphs = [scope_line, *paragraphs]
+                else:
+                    assert len(paragraphs) == 2, identifier
                 assert scope_overrides.get(topic, second_release_version) in paragraphs[0], (
                     f"{identifier}: the version-scope line must name the version it applies to"
                 )
@@ -937,7 +967,7 @@ def main() -> None:
         "개인 맞춤형이 아닌 광고에도 정보 처리가 필요해요.",
         "설정 > 광고 개인정보 선택",
     ):
-        assert required in privacy_text, f"privacy/index.html: missing monetization disclosure {required!r}"
+        assert superseded(required) or required in privacy_text, f"privacy/index.html: missing monetization disclosure {required!r}"
     terms_text = " ".join(pages[(ROOT / "terms/index.html").resolve()].text)
     for required in (
         "at least 24 hours before the end of the current period",
@@ -947,7 +977,7 @@ def main() -> None:
         "이 앱은 의료기기가 아니에요.",
         "wonyoung@wonyoungchoi.dev",
     ):
-        assert required in terms_text, f"terms/index.html: missing required term {required!r}"
+        assert superseded(required) or required in terms_text, f"terms/index.html: missing required term {required!r}"
     for relative in ("support/index.html", "android/support/index.html"):
         source = (ROOT / relative).read_text(encoding="utf-8")
         guides = re.findall(r'<section class="help-start" aria-labelledby="([^"]+)-start">(.*?)</section>',
@@ -1000,7 +1030,7 @@ def main() -> None:
         "wonyoung@wonyoungchoi.dev",
         "Android 1.0.0",
     ):
-        assert required in android_text, f"Android pages are missing required disclosure {required!r}"
+        assert superseded(required) or required in android_text, f"Android pages are missing required disclosure {required!r}"
     # "CC0 1.0" is the name of a data licence, not an app version, so it is removed before
     # the version scan; every remaining 1.0 would be an inexact version scope.
     android_version_text = android_text.replace("CC0 1.0", "CC0")
@@ -1058,30 +1088,46 @@ def main() -> None:
         "data.go.kr",
         "iOS 26.0",
     ):
-        assert required in privacy_text, (
+        assert superseded(required) or required in privacy_text, (
             f"privacy/index.html: missing second-release disclosure {required!r}"
         )
 
     ios_content = json.loads((ROOT / "docs/ios-content.json").read_text(encoding="utf-8"))
-    assert render_ios.rendered(ios_content) == (ROOT / "privacy/index.html").read_text(
-        encoding="utf-8"
-    ), "privacy/index.html does not match docs/ios-content.json; rerun render_ios.py"
-    assert render_ios.rendered_support(ios_content) == (ROOT / "support/index.html").read_text(
-        encoding="utf-8"
-    ), "support/index.html does not match docs/ios-content.json; rerun render_ios.py"
-    for path, expected in {**render_ios.rendered_locale_pages(ios_content),
-                           **render_home.rendered_locale_pages()}.items():
-        assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
-            f"{path.relative_to(ROOT)} does not match its source; rerun render_ios.py and render_home.py"
-        )
-    for path, expected in render_terms.rendered_pages(*render_terms.load()).items():
-        assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
-            f"{path.relative_to(ROOT)} does not match docs/terms-content.json; rerun render_terms.py"
-        )
-    for path, expected in render_us_health.rendered_pages(*render_us_health.load()).items():
-        assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
-            f"{path.relative_to(ROOT)} does not match docs/us-health-content.json; rerun render_us_health.py"
-        )
+    if PUBLISHED_MANIFEST.is_file():
+        # Published state: every public page and docs/published/* must equal a fresh
+        # publication build (base sources + account/sync and AI overlays + owner decisions).
+        import publish_release
+        published = publish_release.published_sources()
+        expected_pages = publish_release.published_pages(published)
+        for path, expected in expected_pages.items():
+            assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+                f"{path.relative_to(ROOT)} does not match the publication build; "
+                "rerun publish_release.py"
+            )
+        for name, source in published.items():
+            assert (publish_release.PUBLISHED / name).read_text(encoding="utf-8") == (
+                publish_release.serialized(source)
+            ), f"docs/published/{name} is stale; rerun publish_release.py"
+    else:
+        assert render_ios.rendered(ios_content) == (ROOT / "privacy/index.html").read_text(
+            encoding="utf-8"
+        ), "privacy/index.html does not match docs/ios-content.json; rerun render_ios.py"
+        assert render_ios.rendered_support(ios_content) == (ROOT / "support/index.html").read_text(
+            encoding="utf-8"
+        ), "support/index.html does not match docs/ios-content.json; rerun render_ios.py"
+        for path, expected in {**render_ios.rendered_locale_pages(ios_content),
+                               **render_home.rendered_locale_pages()}.items():
+            assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+                f"{path.relative_to(ROOT)} does not match its source; rerun render_ios.py and render_home.py"
+            )
+        for path, expected in render_terms.rendered_pages(*render_terms.load()).items():
+            assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+                f"{path.relative_to(ROOT)} does not match docs/terms-content.json; rerun render_terms.py"
+            )
+        for path, expected in render_us_health.rendered_pages(*render_us_health.load()).items():
+            assert path.is_file() and path.read_text(encoding="utf-8") == expected, (
+                f"{path.relative_to(ROOT)} does not match docs/us-health-content.json; rerun render_us_health.py"
+            )
 
     if arguments.catalog:
         catalog_check(arguments.catalog.resolve(), privacy_text)
@@ -1091,7 +1137,8 @@ def main() -> None:
         android_catalog = json.loads(arguments.android_content.read_text(encoding="utf-8"))
         validate_catalog(android_catalog)
         android_guard_regression_check(android_catalog)
-        for path, expected in rendered_pages(android_catalog).items():
+        for path, expected in ({} if PUBLISHED_MANIFEST.is_file() else
+                               rendered_pages(android_catalog)).items():
             assert path.read_text(encoding="utf-8") == expected, (
                 f"{path.relative_to(ROOT)} does not match the Android legal source"
             )

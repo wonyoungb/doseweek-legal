@@ -1,0 +1,54 @@
+{
+  "status": "published by owner decision",
+  "effectiveDate": "2026-10-03",
+  "decisions": "Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md, 'Owner decisions 2026-10-03 17:35 KST' and 'Owner decisions 2026-10-03 19:00 KST — public pages'",
+  "ai": {
+    "included": false,
+    "decided": {
+      "location": "global",
+      "guardrail": "off"
+    },
+    "reason": "AI/Pro text is publish 2: ai-consent-v3 (next-ai/pro-legal-ai a88ab73) has no re-review approval yet and the owner wording rule of 2026-10-03 19:10 KST (state Global; the country can change per request) is not in it. Until publish 2 the pages keep the 1.0.5 AI statements; publish 2 must be live before the Android 1.0.6 store release."
+  },
+  "accountDeletionUrl": "https://doseweek.wonyoungchoi.dev/account-deletion/",
+  "inputs": {
+    "docs/ios-content.json": "975487b21dd45d44e8dc4b1567d5ff21a580f5568d2aae8ad0e06b031236c06e",
+    "docs/android-content.candidate.json": "056bacd4c3551e225f637189003a7bb82d9a269feb89b23dceaa8258c9273e1b",
+    "docs/terms-content.json": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d",
+    "docs/us-health-content.json": "40d6d03ee23829a4cfd759e14dbec1755c311c7096df8a583c07f387983185ee",
+    "docs/home-content.json": "890c180c0afc8a04a0421a4ef0719b39a5bed95a493a8095dbef5230203e42f0",
+    "docs/account-sync-content.candidate.json": "4b95bd8a8a0102a6a3947ca0143ccaf058438fcb9ed2573cc65a5aac9e95c761",
+    "docs/publication-decisions-20261003.json": "23cbbaa00ec94e1a21d1870138d2f94f65ed0061a96b52c61950f2410606d465"
+  },
+  "sources": {
+    "ios-content.json": "a505ca5762d5ecff00486fac73195081511a6a7705f083e9c17a30d0dc16d0b8",
+    "android-content.candidate.json": "e2fa97a6cbd035ed0f05a14175b496439ada955a171027903a9713ffd9c85a08",
+    "terms-content.json": "8e1f609cea612c39727d30b78d7a57448bccec35312dca6bb5099c67f34ed01f",
+    "us-health-content.json": "42c233cda818d77558683ade465b2b251cc3c4bb08760558923eb51cf28099ea"
+  },
+  "pages": 144,
+  "notVerifiedAtPublication": {
+    "accountServerReadiness": [
+      "accessLogDisclosed",
+      "announcementTransferReviewed",
+      "appManagedDriveBackupDecided",
+      "backupWindowVerified",
+      "breachProcedureOperational",
+      "cloudflareContactVerified",
+      "commercialCopyParityVerified",
+      "consumerHealthRightsVerified",
+      "healthConsentVerified",
+      "processorInventoryVerified",
+      "regionalSubscriptionNoticesVerified",
+      "retentionRecheckWired",
+      "salesRegionExclusionsVerified",
+      "syncResetRoute",
+      "syncResetUiAndroid",
+      "syncResetUiIos",
+      "tombstoneRetentionDecided",
+      "verifierHostDecided"
+    ],
+    "accountUnresolved": 30,
+    "note": "The candidates' open flags and lists are unchanged. The owner ordered publication on 2026-10-03 with these items open; they remain release conditions of the apps and the server, not facts this build verified."
+  }
+}

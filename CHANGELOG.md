@@ -1,3 +1,24 @@
+## 2026-10-03 — Publish 1: 1.0.6 legal pages without AI/Pro (owner-ordered)
+
+- Owner decisions 2026-10-03 (release ledger `late-decisions.md`, 19:00 KST entry;
+  `docs/publication-decisions-20261003.json`): effective date 2026-10-03; the Android
+  app-managed Google Drive backup stays and is described; operator Wonyoung Labs, servers on
+  AWS Seoul; retention under 전자상거래법 시행령 제6조제1항 (5 years payment/supply, 3 years
+  complaints); Play account-deletion URL = product site `/account-deletion/`.
+- `scripts/publish_release.py` builds `docs/published/*` and 144 public pages from the base
+  sources plus the account/sync overlay. Base sources and candidates are unchanged.
+  `publish_release.py --check` and `check_site.py` verify the public pages against that build.
+- This was NOT gated by `check_site.py --release` or `require_release_ready`: 18
+  `serverReadiness` flags and the 31 unresolved items stay open and are listed in
+  `docs/published/manifest.json` (`notVerifiedAtPublication`). The owner ordered publication.
+- Version scope instead of the draft notice: Android 1.0.6, iPhone/iPad 1.0.7. Draft-only
+  remarks removed (`docs/published/removed-draft-remarks.json`); "not verified" statements stay.
+- AI record assistant (Pro) text is publish 2: `next-ai/pro-legal-ai` a88ab73 has no re-review
+  approval and predates the owner wording rule of 19:10 KST. Candidate with AI resolved to
+  global/off: branch `integ/legal-106-predeploy` 3945a16. Publish 2 must be live before the
+  Android 1.0.6 store release; until then the pages keep the 1.0.5 AI statements.
+- 222/222 unittest methods PASS; `check_site.py` PASS (162 pages).
+
 ## 2026-10-02 — LATE2 review-1 fix (unpublished)
 
 - Staged earlier answers in ko, ja and tr (both platforms) drop the 1.0.5 "nothing is deleted

@@ -44,7 +44,8 @@ def load() -> tuple[dict, dict]:
 def validate(content: dict, ios: dict) -> None:
     assert set(content) == {'schemaVersion', 'effectiveDate', 'supportEmail', 'localeOrder', 'locales'}
     assert content['schemaVersion'] == 1
-    assert content['effectiveDate'] == legal_release.NEXT_RELEASE_EFFECTIVE_DATE, (
+    assert content['effectiveDate'] in (legal_release.NEXT_RELEASE_EFFECTIVE_DATE,
+                                        legal_release.PUBLISHED_EFFECTIVE_DATE), (
         'US health-data policy effectiveDate must match NEXT_RELEASE_EFFECTIVE_DATE')
     assert content['supportEmail'] == SUPPORT_EMAIL
     assert content['localeOrder'] == list(locale_pages.LOCALES) == ios['localeOrder']

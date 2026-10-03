@@ -16,6 +16,7 @@ import privacy_legal
 import render_us_health
 from help_navigation import COPY as HELP_COPY, HOME as HELP_HOME, task_cards, support_start
 
+import legal_release
 from legal_release import (
     CURRENT_ANDROID_EFFECTIVE_DATE,
     expected_effective_date,
@@ -439,10 +440,11 @@ def validate_catalog(catalog: dict[str, object]) -> None:
     assert catalog["platform"] == "android"
     assert catalog["applicationId"] == "com.wonyoungchoi.doseweek"
     assert catalog["versionName"] in ("1.0.5", "1.0.6")
-    assert catalog["effectiveDate"] == (
-        None if catalog["versionName"] == "1.0.6" else
-        expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
-    )
+    if catalog["versionName"] == "1.0.6":
+        # Staged draft: no date. Publication build (publish_release.py): the owner's date.
+        assert catalog["effectiveDate"] in (None, legal_release.PUBLISHED_EFFECTIVE_DATE)
+    else:
+        assert catalog["effectiveDate"] == expected_effective_date(CURRENT_ANDROID_EFFECTIVE_DATE)
     assert catalog["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert isinstance(catalog["localeOrder"], list)
     assert isinstance(catalog["locales"], dict)
@@ -714,8 +716,14 @@ def validate_catalog(catalog: dict[str, object]) -> None:
         ("accounts FAQ", " ".join(english_faq["accounts"]["answers"])),
     ):
         if catalog["versionName"] == "1.0.6":
-            assert "DoseWeek account" in text and "off until actual verification" in text, (
-                f"Android {label} must disclose optional accounts and the unverified OFF state"
+            # Staged draft: "off until actual verification". Published text (owner decision
+            # 2026-10-03, scripts/publish_release.py): the version scope sentence instead.
+            assert "DoseWeek account" in text and (
+                "off until actual verification" in text
+                or "apply from the release of that version" in text
+            ), (
+                f"Android {label} must disclose optional accounts and the unverified OFF state "
+                "or the published version scope"
             )
             assert "no developer server for health records" not in text, (
                 f"Android {label} retains the obsolete no-account health-server denial"

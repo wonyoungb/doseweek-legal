@@ -15,9 +15,9 @@ a candidate only: it is not public until it is merged to `main` and the live pag
 | `/support/`, `/privacy/` | iOS support (six-step getting-started guide, then FAQ) and privacy policy |
 | `/android/`, `/android/support/`, `/android/privacy/` | Android overview, support (getting-started guide, then FAQ) and privacy policy |
 | `/import/` | Guide for importing records from another app, with localized prompt and format downloads |
-| `/terms/` | Terms of Use for both apps (free version with ads, Plus subscription, App Store and Google Play billing). Candidate for the monetization release; not published |
+| `/terms/` | Terms of Use for both apps (free version with ads, Plus subscription, App Store and Google Play billing). Published 2026-10-03 by `scripts/publish_release.py` |
 | `/<locale>/…` | The same nine routes once per locale, one language per page (for example `/ar/support/`, `/zh-Hant/android/privacy/`) |
-| `/us-health/` | Separate US Consumer Health Data Privacy Policy, with consent, recipients and state rights; unpublished 1.0.6 candidate |
+| `/us-health/` | Separate US Consumer Health Data Privacy Policy, with consent, recipients and state rights; published 2026-10-03 by `scripts/publish_release.py` |
 | `/robots.txt`, `/sitemap.xml` | Search discovery. The sitemap lists all 162 pages (9 routes x the hash page and 17 language pages), each with its hreflang alternates; `check_site.py` keeps it equal to the generated pages |
 | `/app-ads.txt` | AdMob authorized seller record. Keep the publisher ID equal to the snippet in the owner's AdMob account; publish this plain-text file at the domain root |
 
@@ -123,6 +123,7 @@ python3 scripts/account_sync_candidate.py
 python3 scripts/render_account_sync.py --check  # in-memory unpublished 1.0.6 sources/pages
 python3 scripts/korean_tone.py           # Korean 해요체 voice check alone (lists violations)
 python3 scripts/check_site.py --release  # also requires the release effective date and no release placeholders
+python3 scripts/publish_release.py --check  # published state: public pages == base sources + overlays + owner decisions (docs/published)
 python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 

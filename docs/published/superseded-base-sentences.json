@@ -1,0 +1,8 @@
+{
+  "reason": "Required by check_site.py for the base (1.0.5 + monetization candidate) text; replaced or removed by the account/sync and AI overlays in the published 1.0.6 text.",
+  "sentences": [
+    "In this version the iOS app sends no purchase data to the developer.",
+    "only the app's package name, the product and the purchase token",
+    "no developer server for health records"
+  ]
+}

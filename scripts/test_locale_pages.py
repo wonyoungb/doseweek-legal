@@ -121,7 +121,12 @@ def load(route: str, locale: str | None = None) -> Page:
 
 
 def sources() -> dict[str, dict]:
-    read = lambda relative: json.loads((ROOT / relative).read_text(encoding="utf-8"))
+    # The public pages come from docs/published (scripts/publish_release.py) once it exists.
+    published = ROOT / "docs/published"
+    def read(relative):
+        candidate = published / Path(relative).name
+        path = candidate if relative.startswith("docs/") and candidate.is_file() else ROOT / relative
+        return json.loads(path.read_text(encoding="utf-8"))
     return {
         "home": read("docs/home-content.json"),
         "ios": read("docs/ios-content.json")["locales"],

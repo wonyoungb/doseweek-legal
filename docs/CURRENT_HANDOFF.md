@@ -1,4 +1,21 @@
-## ACTIVE — predeploy integration check (2026-10-03; unpublished, main untouched)
+## ACTIVE — Publish 1 of the 1.0.6 legal pages (2026-10-03; owner-ordered, no AI/Pro)
+
+Branch `publish/legal-106-p1` from `integ/legal-106-predeploy` 9ff91c4, merged to `main` for
+GitHub Pages. Build: `python3 scripts/publish_release.py` (writes `docs/published/*` and 144
+pages), check: `python3 scripts/publish_release.py --check` and `python3 scripts/check_site.py`.
+Do not run the single renderers (`render_ios.py`, `render_android.py`, `render_terms.py`,
+`render_us_health.py`, `render_home.py`) without `--check` on a published tree: they render
+the base sources and would overwrite the public pages; their `--check` now fails by design.
+Decisions and their text: `docs/publication-decisions-20261003.json`. Not verified at
+publication: `docs/published/manifest.json`. Statutory mapping and gaps: release ledger
+`web-predeploy-20261003/statutory-checklist.json` (gaps: 파기방법, 전화번호, 통신판매업 신고번호,
+processor-table cells that still say 미확인, AI transfer not yet published).
+Open: publish 2 (AI/Pro text) from `integ/legal-106-predeploy` once ai-consent-v3 is approved
+and carries the 19:10 wording rule; it must be live before the Android 1.0.6 store release.
+After 1.0.6 is in the store, change the scope sentence "current version 1.0.5" (17 locales).
+Next action: publish 2.
+
+## HISTORICAL — predeploy integration check (2026-10-03; unpublished, main untouched)
 
 Branch `integ/legal-106-predeploy` = `next-ai/legal-store-legal-cx` 868932c + origin/main e652734
 (PR #12 app-ads.txt; CHANGELOG/README conflicts, both sides kept). 222/222 unittest methods PASS,

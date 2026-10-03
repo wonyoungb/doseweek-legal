@@ -35,6 +35,15 @@ import datetime
 # The owner sets the monetization release date. None: not decided (BLOCKED for --release).
 NEXT_RELEASE_EFFECTIVE_DATE: str | None = None
 
+# Owner decision 2026-10-03 19:00 KST: the 1.0.6 pages (iOS 1.0.7) are published with this
+# effective date by scripts/publish_release.py, which builds them from the base sources plus the
+# staged overlays. The base sources keep the previous date and NEXT_RELEASE_EFFECTIVE_DATE stays
+# None, so the staged checks keep working; the public pages are checked by
+# `publish_release.py --check`.
+PUBLISHED_EFFECTIVE_DATE = "2026-10-03"
+# Versions the staged overlay and the publication build may name (Android 1.0.6, iOS 1.0.7).
+NEXT_VERSIONS = ("1.0.6", "1.0.7")
+
 # Effective dates of the policies that are live now: main 8b53cf0, whose pages matched the live
 # site on 2026-09-29 (the 1.0.5 policy date, formerly SECOND_RELEASE_EFFECTIVE_DATE).
 CURRENT_IOS_EFFECTIVE_DATE = "2026-09-23"
