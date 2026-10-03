@@ -90,7 +90,10 @@ class TermsLegalUpdateTest(unittest.TestCase):
             with self.subTest(locale=loc):
                 sub = sections(entry)["billing"]["subsections"][0]
                 text = " ".join(sub["paragraphs"])
-                self.assertIn(ANCHORS[loc][0], text)
+                # 2026-10-03 (approved lane cfbed2f): the subsection names the Plus 1-month and
+                # the Pro 7-day trial; the first-time condition is pinned in the offer paragraph.
+                self.assertIn(ANCHORS[loc][0], sections(entry)["free-plus"]["paragraphs"][2])
+                self.assertIn("Plus", text)
                 self.assertIn("1", text)
                 self.assertGreaterEqual(text.count("24"), 2)
                 self.assertNotIn("Android", text)

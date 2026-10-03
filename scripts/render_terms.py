@@ -282,7 +282,7 @@ def panel(locale: str, entry: dict, ios_entry: dict, effective_date: str | None)
 
 
 FOOTER = (
-    '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span>'
+    '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span>'
     '<span>DoseWeek</span></footer>'
 )
 

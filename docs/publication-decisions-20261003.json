@@ -1,14 +1,14 @@
 {
   "source": "Doseweek/release/evidence/1.0.6/CODEX-LANES-20261002/late-decisions.md, 'Owner decisions 2026-10-03 17:35 KST' and 'Owner decisions 2026-10-03 19:00 KST — public pages'",
   "effectiveDate": "2026-10-03",
-  "iosVersion": "1.0.7",
+  "iosVersion": null,
   "androidVersion": "1.0.6",
   "ai": {
     "location": "global",
     "guardrail": "off",
-    "pipaCountryItemForGlobal": "owner accepted that the country item cannot name one country for location global",
-    "included": false,
-    "reason": "AI/Pro text is publish 2: ai-consent-v3 (next-ai/pro-legal-ai a88ab73) has no re-review approval yet and the owner wording rule of 2026-10-03 19:10 KST (state Global; the country can change per request) is not in it. Until publish 2 the pages keep the 1.0.5 AI statements; publish 2 must be live before the Android 1.0.6 store release."
+    "included": true,
+    "lane": "next-ai/pro-legal-ai cfbed2f3228bd37ed86e054d21bb325a61730dc6, consentVersion 2026-10-03.4, approved (coordinator 2026-10-03)",
+    "pipaCountryItemForGlobal": "owner accepted"
   },
   "accountDeletionUrl": "https://doseweek.wonyoungchoi.dev/account-deletion/",
   "statute": {
@@ -165,8 +165,8 @@
     }
   },
   "releaseStatusVersion": {
-    "ios": "1.0.7",
     "android": "1.0.6",
-    "shared": "Android 1.0.6; iPhone, iPad 1.0.7"
+    "ios": "nextIos (publication-decisions-20261003-p2.json)",
+    "shared": "Android 1.0.6; nextIos"
   }
 }

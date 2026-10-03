@@ -177,7 +177,7 @@ def page_shell(
       </div>
     </main>
 
-    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span><span>DoseWeek · Android {version}</span></footer>
+    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span><span>DoseWeek · Android {version}</span></footer>
   </body>
 </html>
 """
@@ -798,7 +798,7 @@ def rendered_locale_pages(catalog: dict[str, object]) -> dict[Path, str]:
     """
     names = {locale: entry["languageName"] for locale, entry in catalog["locales"].items()}
     footer = (
-        '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span>'
+        '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span>'
         f'<span>DoseWeek · Android {escaped(catalog["versionName"])}</span></footer>'
     )
     routes = (

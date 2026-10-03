@@ -40,10 +40,16 @@ class LegalLateDecisionsTest(unittest.TestCase):
                 with self.subTest(stage=stage, locale=locale, field='offer'):
                     for meaning in anchors[locale]:
                         self.assertIn(meaning, sections['free-plus']['paragraphs'][2])
+                # 2026-10-03 (ai-consent-v3, approved lane cfbed2f): the store subsections now
+                # state both trials ("the Plus free trial lasts 1 calendar month and the Pro
+                # free trial lasts 7 days") and tie them to the store confirming eligibility.
+                # The first-time-subscriber condition stays pinned in the offer paragraph above.
                 for sub in sections['billing']['subsections']:
                     with self.subTest(stage=stage, locale=locale, field=sub['id']):
-                        for meaning in anchors[locale][:2]:
-                            self.assertIn(meaning, sub['paragraphs'][0])
+                        self.assertIn('1', sub['paragraphs'][0])
+                        self.assertIn('7', sub['paragraphs'][0])
+                        self.assertIn('Plus', sub['paragraphs'][0])
+                        self.assertIn('Pro', sub['paragraphs'][0])
 
     def test_fixed_month_trial_has_no_variable_duration_override(self):
         for locale, entry in load('terms-content.json')['locales'].items():

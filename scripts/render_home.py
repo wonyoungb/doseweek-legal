@@ -68,7 +68,7 @@ def rendered_locale_pages() -> dict[Path, str]:
             image_alt="DoseWeek app icon", brand_href="./", brand_aria="DoseWeek",
             brand_label="DoseWeek", skip_label=ios["locales"][locale]["common"]["skipToContent"],
             skip_target=f"{locale}-content", body_attributes=' class="home-simple"',
-            footer='<footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span>'
+            footer='<footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span>'
                    '<span lang="en">DoseWeek · Private by design</span></footer>',
         )
         for locale, raw in content.items()

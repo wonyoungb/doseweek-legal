@@ -1,5 +1,141 @@
 [
   {
+    "where": "ios/ko/processors-intro",
+    "removed": "아직 확인하지 않은 항목은 표에 표시했어요."
+  },
+  {
+    "where": "android/ko/processors-intro",
+    "removed": "아직 확인하지 않은 항목은 표에 표시했어요."
+  },
+  {
+    "where": "ios/en/processors-intro",
+    "removed": "Unverified particulars are explicitly marked below."
+  },
+  {
+    "where": "android/en/processors-intro",
+    "removed": "Unverified particulars are explicitly marked below."
+  },
+  {
+    "where": "ios/ja/processors-intro",
+    "removed": "未確認の事項は明記しています。"
+  },
+  {
+    "where": "android/ja/processors-intro",
+    "removed": "未確認の事項は明記しています。"
+  },
+  {
+    "where": "ios/de/processors-intro",
+    "removed": "Nicht überprüfte Angaben sind unten ausdrücklich gekennzeichnet."
+  },
+  {
+    "where": "android/de/processors-intro",
+    "removed": "Nicht überprüfte Angaben sind unten ausdrücklich gekennzeichnet."
+  },
+  {
+    "where": "ios/fr/processors-intro",
+    "removed": "Les informations non vérifiées sont explicitement indiquées ci-dessous."
+  },
+  {
+    "where": "android/fr/processors-intro",
+    "removed": "Les informations non vérifiées sont explicitement indiquées ci-dessous."
+  },
+  {
+    "where": "ios/es/processors-intro",
+    "removed": "Los detalles no verificados se señalan expresamente."
+  },
+  {
+    "where": "android/es/processors-intro",
+    "removed": "Los detalles no verificados se señalan expresamente."
+  },
+  {
+    "where": "ios/it/processors-intro",
+    "removed": "I dettagli non verificati sono indicati esplicitamente di seguito."
+  },
+  {
+    "where": "android/it/processors-intro",
+    "removed": "I dettagli non verificati sono indicati esplicitamente di seguito."
+  },
+  {
+    "where": "ios/nl/processors-intro",
+    "removed": "Niet-geverifieerde details zijn hieronder uitdrukkelijk gemarkeerd."
+  },
+  {
+    "where": "android/nl/processors-intro",
+    "removed": "Niet-geverifieerde details zijn hieronder uitdrukkelijk gemarkeerd."
+  },
+  {
+    "where": "ios/pt-PT/processors-intro",
+    "removed": "Os elementos não verificados estão expressamente assinalados abaixo."
+  },
+  {
+    "where": "android/pt-PT/processors-intro",
+    "removed": "Os elementos não verificados estão expressamente assinalados abaixo."
+  },
+  {
+    "where": "ios/pl/processors-intro",
+    "removed": "Poniżej wyraźnie oznaczono niezweryfikowane szczegóły."
+  },
+  {
+    "where": "android/pl/processors-intro",
+    "removed": "Poniżej wyraźnie oznaczono niezweryfikowane szczegóły."
+  },
+  {
+    "where": "ios/sv/processors-intro",
+    "removed": "Overifierade uppgifter markeras uttryckligen nedan."
+  },
+  {
+    "where": "android/sv/processors-intro",
+    "removed": "Overifierade uppgifter markeras uttryckligen nedan."
+  },
+  {
+    "where": "ios/hi/processors-intro",
+    "removed": "असत्यापित विवरण नीचे स्पष्ट रूप से चिह्नित हैं।"
+  },
+  {
+    "where": "android/hi/processors-intro",
+    "removed": "असत्यापित विवरण नीचे स्पष्ट रूप से चिह्नित हैं।"
+  },
+  {
+    "where": "ios/pt-BR/processors-intro",
+    "removed": "Os detalhes não verificados estão marcados explicitamente abaixo."
+  },
+  {
+    "where": "android/pt-BR/processors-intro",
+    "removed": "Os detalhes não verificados estão marcados explicitamente abaixo."
+  },
+  {
+    "where": "ios/ar/processors-intro",
+    "removed": "تُميّز التفاصيل غير المتحقق منها بوضوح أدناه."
+  },
+  {
+    "where": "android/ar/processors-intro",
+    "removed": "تُميّز التفاصيل غير المتحقق منها بوضوح أدناه."
+  },
+  {
+    "where": "ios/zh-Hans/processors-intro",
+    "removed": "未核实事项均已明确标示。"
+  },
+  {
+    "where": "android/zh-Hans/processors-intro",
+    "removed": "未核实事项均已明确标示。"
+  },
+  {
+    "where": "ios/zh-Hant/processors-intro",
+    "removed": "未核實事項均已明確標示。"
+  },
+  {
+    "where": "android/zh-Hant/processors-intro",
+    "removed": "未核實事項均已明確標示。"
+  },
+  {
+    "where": "ios/tr/processors-intro",
+    "removed": "Doğrulanmamış ayrıntılar aşağıda açıkça işaretlenmiştir."
+  },
+  {
+    "where": "android/tr/processors-intro",
+    "removed": "Doğrulanmamış ayrıntılar aşağıda açıkça işaretlenmiştir."
+  },
+  {
     "where": "ios/ko/rights",
     "removed": "미확인 경로나 계약이 있으면 출시할 수 없고, 이 초안은 전 세계 규정 준수를 보증하지 않아요."
   },

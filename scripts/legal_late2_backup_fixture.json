@@ -20,7 +20,7 @@
     "tr"
   ],
   "legacySourceSha256": {
-    "docs/terms-content.json": "93cd0b89a1789feaafa8fa9bc1944ca0e8078982af0b1acc7102a87631a3924d"
+    "docs/terms-content.json": "cec3a608f3bc17f07d37115ab35ec9bb27c9f0263f33a1b442a09f430a1d7dcb"
   },
   "locales": {
     "ko": {
@@ -2811,5 +2811,8 @@
   "canonicalWithoutAwsTimingMethodSha256": {
     "docs/ios-content.json": "c5559919126178d7dd2d9c76a93d69c7a54d6fa7ecc39b887e0348d731bb951b",
     "docs/android-content.candidate.json": "50d7ec55a02a5075d7c290935cbe448f471322d3ded388d8924737e3eef51585"
-  }
+  },
+  "notes": [
+    "2026-10-03 publish 2: docs/terms-content.json digest updated after the approved ai-consent-v3 lane (f0c78fe..cfbed2f) reworded the store billing subsections for the Plus 1-month and Pro 7-day trials."
+  ]
 }

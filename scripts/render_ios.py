@@ -164,7 +164,10 @@ def validate(content: dict) -> None:
     if content["bundleVersion"] in legal_release.NEXT_VERSIONS:
         assert content["effectiveDate"] in (None, legal_release.PUBLISHED_EFFECTIVE_DATE)
     else:
-        assert content["effectiveDate"] == expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE)
+        # Live label (1.0.5): the base date, or the owner's date in the publication build,
+        # which promises no iOS version number while App Store work is on hold.
+        assert content["effectiveDate"] in (expected_effective_date(CURRENT_IOS_EFFECTIVE_DATE),
+                                            legal_release.PUBLISHED_EFFECTIVE_DATE)
     assert content["supportEmail"] == "wonyoung@wonyoungchoi.dev"
     assert content["localeOrder"] == LOCALE_ORDER
     assert list(content["locales"]) == LOCALE_ORDER
@@ -566,7 +569,7 @@ def page_shell(content: dict, *, page: str, canonical: str, title: str, descript
       </div>
     </main>
 
-    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span><span>DoseWeek · iOS {escaped(content['bundleVersion'])}</span></footer>
+    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span><span>DoseWeek · iOS {escaped(content['bundleVersion'])}</span></footer>
   </body>
 </html>
 """
@@ -657,7 +660,7 @@ def rendered(content: dict) -> str:
       </div>
     </main>
 
-    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span><span>DoseWeek · iOS {escaped(content['bundleVersion'])}</span></footer>
+    <footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span><span>DoseWeek · iOS {escaped(content['bundleVersion'])}</span></footer>
   </body>
 </html>
 """
@@ -671,7 +674,7 @@ def rendered_locale_pages(content: dict) -> dict[Path, str]:
     validate(content)
     names = {locale: entry["languageName"] for locale, entry in content["locales"].items()}
     footer = (
-        '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Choi</span>'
+        '<footer class="site-footer site-shell"><span>© 2026 Wonyoung Labs</span>'
         f'<span>DoseWeek · iOS {escaped(content["bundleVersion"])}</span></footer>'
     )
     pages = {}

@@ -1,3 +1,25 @@
+## 2026-10-03 — Publish 2: AI record assistant (Pro), next iOS update, business identity, statutory gaps
+
+- AI: approved ai-consent-v3 (`next-ai/pro-legal-ai` cfbed2f, Global / guardrail off,
+  consentVersion 2026-10-03.4) is in the privacy policies (section, processor row, transfer
+  notice), Terms (Pro section), help answers and US policy. Every AI passage opens with a scope
+  sentence: it applies from Android 1.0.6 / the next iOS update; until release nothing is sent
+  to Google. Android badge reads "DoseWeek 1.0.6: …".
+- iOS: no version number is promised ("the next iOS update", 17 locales); the iOS label stays 1.0.5.
+- Business identity (owner decision relayed by the coordinator): 원영랩스 (Wonyoung Labs),
+  통신판매업 신고번호 제 2026-부산금정-0425 호 (부산광역시 금정구), e-mail. Sentences with the
+  registration number, street address or representative name are removed
+  (`docs/published/removed-identity-sentences.json`); footers read © 2026 Wonyoung Labs.
+- Added (17 locales): destruction procedure and method (from server code 78b57d9), children
+  under 14, "no orders on this website", what the Play verifier records are. Processor table: 24
+  cells filled from provider documents (`web-predeploy-20261003/providers/sources.json`).
+- Sources: `docs/publication-decisions-20261003-p2.json`. Release day:
+  set `"androidInStore": true` there and run `python3 scripts/publish_release.py`.
+- Three test pins updated for the lane's approved Terms wording (store subsections name the
+  Plus 1-month and Pro 7-day trials). 282/282 tests PASS; `check_site.py` PASS.
+- Still open (not verified, `docs/published/manifest.json`): readiness flags of both candidates;
+  purchase marker has no expiry in code; backup jobs not running on the host.
+
 ## 2026-10-03 — Publish 1: 1.0.6 legal pages without AI/Pro (owner-ordered)
 
 - Owner decisions 2026-10-03 (release ledger `late-decisions.md`, 19:00 KST entry;

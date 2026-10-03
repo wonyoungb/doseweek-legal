@@ -24,14 +24,14 @@
   "locales": {
     "ko": {
       "title": "미국 소비자 건강정보 개인정보 처리방침",
-      "intro": "이 내용은 2026년 10월 3일부터 시행해요. 계정, 동기화, Plus, 광고 등 새 기능에 관한 부분은 이 기능이 처음 들어가는 DoseWeek 버전(Android 1.0.6; iPhone, iPad 1.0.7)을 설명하고, 해당 버전이 출시된 때부터 적용돼요. 그 이전 버전에는 이 기능이 없어요.\n\nWashington, Nevada, Connecticut을 포함한 미국 이용자의 건강정보를 따로 안내해요.",
+      "intro": "이 내용은 2026년 10월 3일부터 시행해요. 계정, 동기화, Plus, 광고 등 새 기능에 관한 부분은 이 기능이 처음 들어가는 DoseWeek 버전(Android 1.0.6; 다음 iOS 업데이트)을 설명하고, 해당 버전이 출시된 때부터 적용돼요. 그 이전 버전에는 이 기능이 없어요.\n\nWashington, Nevada, Connecticut을 포함한 미국 이용자의 건강정보를 따로 안내해요.",
       "effectiveDateLabel": "시행일",
       "sections": [
         {
           "id": "categories",
           "title": "1. 건강정보의 종류",
           "paragraphs": [
-            "건강정보에는 약 이름과 투약량·시각, 메모, 체중 같은 신체 측정값, 식사·영양 기록, 투약량 추정치 같은 참고용 건강 추론이 포함돼요. 동기화한 암호화 기록과 연결된 계정·동기화·접속·건강 서비스 이용 정보도 건강정보일 수 있어요. 서버는 종단간 암호화 기록을 읽을 수 없어요."
+            "건강정보에는 약 이름과 투약량·시각, 메모, 체중 같은 신체 측정값, 식사·영양 기록, 투약량 추정치 같은 참고용 건강 추론이 포함돼요. 동기화한 암호화 기록과 연결된 계정·동기화·접속·건강 서비스 이용 정보도 건강정보일 수 있어요. 서버는 종단간 암호화 기록을 읽을 수 없어요. AI 기록 도우미(Pro)를 켜고 보내기로 확인하면, 직접 입력한 기록에서 만든 투여 횟수, 체중 변화, 증상 종류별 횟수, 식사·단백질 집계와 정해진 목록에서 고른 식사 종류·선호·알레르기·싫어하는 음식, 앱 사용 도움말에 입력한 질문·현재 대화 이력도 건강정보로 다뤄요. 이 내용은 종단간 암호화 대상이 아니에요. 답을 만드는 동안 DoseWeek 서버와 Google이 이 내용을 읽을 수 있고, DoseWeek 서버에는 남기지 않아요. Google은 이 내용을 보관하는 동안에도 읽을 수 있어요. 메모리에 최대 24시간, 악용 탐지에서 의심된 요청은 최대 90일이고, 이런 요청은 권한이 있는 Google 직원이 검토할 수 있어요. HealthKit이나 Health Connect에서 읽어 온 정보는 AI 기록 도우미로 보내지 않아요."
           ]
         },
         {
@@ -39,16 +39,16 @@
           "title": "2. 목적과 정보 출처",
           "paragraphs": [
             "직접 입력한 기록과 허용한 Apple 건강(HealthKit) 또는 Health Connect 측정값이 출처예요. Apple·Google 로그인과 스토어 알림에서 계정·구매 정보를 받아요. 정보 판매업자에게서 건강정보를 받지 않아요.",
-            "기록을 보여 주고 관리하며, 참고용으로 계산하고, 요청한 동기화·백업을 제공하고, 서비스를 안전하게 지키는 데 써요. 진단·치료 권고나 건강정보를 바탕으로 한 광고·통계에 쓰지 않아요."
+            "기록을 보여 주고 관리하며, 참고용으로 계산하고, 요청한 동기화·백업을 제공하고, 서비스를 안전하게 지키는 데 써요. 진단·치료 권고나 건강정보를 바탕으로 한 광고·통계에 쓰지 않아요. 요청하면 AI 요약과 일반적인 영양 아이디어를 만드는 데에도 써요. AI 답변은 진단이나 치료 권고가 아니에요."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. 제공받는 곳과 제공 범위",
           "paragraphs": [
-            "처리수탁자인 Cloudflare와 AWS는 위 건강 기록의 암호화된 사본과 필요한 계정·접속 정보를 전달·호스팅·보호·백업을 위해 처리해요. 안내한 지시와 계약상 보호 조치를 따라야 하며, 건강정보의 독자적인 이용은 허용하지 않아요.",
+            "처리수탁자인 Cloudflare와 AWS는 위 건강 기록의 암호화된 사본과 필요한 계정·접속 정보를 전달·호스팅·보호·백업을 위해 처리해요. 안내한 지시와 계약상 보호 조치를 따라야 하며, 건강정보의 독자적인 이용은 허용하지 않아요. AI 기록 도우미 요청은 처리수탁자인 Google이 Google Cloud의 Vertex AI(Global, 처리 국가 미정)에서 답을 만들기 위해 처리해요. Google은 내용을 AI 모델 학습에 쓰지 않고, Google이 보관할 수 있는 기간은 개인정보 처리방침에 적혀 있어요.",
             "Apple과 Google은 각자의 역할에 따라 로그인·결제를 처리하며, 이 경로로 기록한 건강 내용을 보내지 않아요. Google AdMob·Firebase에는 일반 개인정보 처리방침에 안내한 SDK 기술 정보만 보내고 기록한 건강 내용은 보내지 않아요. 건강 서비스 이용을 드러내는 기술 정보에도 건강정보 보호 기준을 적용해요. 계열사에 건강정보를 제공하지 않아요. 내보내기·캘린더 연동·개인 클라우드 백업을 선택하면, 선택한 수령자와 파일·캘린더·클라우드 제공자가 선택한 내용이나 암호화 파일을 받고 다른 사본을 만들 수 있어요. 기술 정보가 건강 서비스 이용을 드러낸다면, AdMob·Firebase에 제공할 때 필요한 건강정보 제공 동의를 별도로 받아야 해요. 광고 동의만으로 대신할 수 없어요.",
-            "건강정보를 팔지 않아요. 기록한 건강 내용을 광고에 보내거나 건강정보를 바탕으로 광고 대상을 고르지 않아요. 의료기관 주변에 가상 경계를 설정해 사람을 식별·추적하거나 건강정보를 수집하거나 건강 관련 안내·광고를 보내지 않아요."
+            "건강정보를 팔지 않아요. 기록한 건강 내용을 광고에 보내거나 건강정보를 바탕으로 광고 대상을 고르지 않아요. 의료기관 주변에 가상 경계를 설정해 사람을 식별·추적하거나 건강정보를 수집하거나 건강 관련 안내·광고를 보내지 않아요. AI 기록 도우미에 보낸 건강정보도 팔지 않고, 광고를 위해 제공하지 않아요."
           ]
         },
         {
@@ -56,7 +56,7 @@
           "title": "4. 동의와 선택",
           "paragraphs": [
             "선택적인 건강정보 동기화에는 명시적인 동의를 받아요. 동의 없는 수집·이용이나 제공은 이용자가 요청한 서비스를 위해 꼭 필요한 범위로 제한해요. 선택적인 광고·통계에는 이 예외를 적용하지 않아요.",
-            "요청한 서비스 밖의 제공은 수집 동의와 별도로 동의를 받아요. 거절해도 기기에서 기록할 수 있어요. 동의할 때처럼 쉽게 철회할 수 있어요. 설정에서 동기화를 끄거나 연락해 주세요."
+            "요청한 서비스 밖의 제공은 수집 동의와 별도로 동의를 받아요. 거절해도 기기에서 기록할 수 있어요. 동의할 때처럼 쉽게 철회할 수 있어요. 설정에서 동기화를 끄거나 연락해 주세요. AI 기록 도우미는 처음 켤 때 별도의 동의 화면에서 동의를 받고, 기록을 보낼 때마다 한 번 더 확인해요. 설정 > AI 기록 도우미에서 언제든 철회할 수 있어요."
           ]
         },
         {
@@ -81,7 +81,7 @@
           "id": "contact",
           "title": "7. 연락처와 변경 안내",
           "paragraphs": [
-            "운영자: Wonyoung Labs. 개인정보 보호 담당자: Wonyoung Choi, wonyoung@wonyoungchoi.dev. 보관·이전·보안·유출 대응은 일반 개인정보 처리방침에서 안내해요. 건강정보의 이용·제공 범위를 넓힐 때는 필요한 안내와 새 동의를 받아요."
+            "운영자: Wonyoung Labs. 보관·이전·보안·유출 대응은 일반 개인정보 처리방침에서 안내해요. 건강정보의 이용·제공 범위를 넓힐 때는 필요한 안내와 새 동의를 받아요.\n\nDoseWeek는 대한민국의 원영랩스(Wonyoung Labs)가 운영해요. 통신판매업 신고번호는 제 2026-부산금정-0425 호(신고기관: 부산광역시 금정구)예요. 문의와 개인정보 관련 요청은 wonyoung@wonyoungchoi.dev로 보내 주세요."
           ]
         }
       ],
@@ -92,14 +92,14 @@
     },
     "en": {
       "title": "US Consumer Health Data Privacy Policy",
-      "intro": "This text takes effect on October 3, 2026. The parts about accounts, sync, Plus, ads and other new features describe the first DoseWeek version that has them (Android 1.0.6; iPhone, iPad 1.0.7) and apply from the release of that version. Earlier versions do not have these features.\n\nThis separate notice covers consumer health data of US users, including Washington, Nevada and Connecticut.",
+      "intro": "This text takes effect on October 3, 2026. The parts about accounts, sync, Plus, ads and other new features describe the first DoseWeek version that has them (Android 1.0.6; the next iOS update) and apply from the release of that version. Earlier versions do not have these features.\n\nThis separate notice covers consumer health data of US users, including Washington, Nevada and Connecticut.",
       "effectiveDateLabel": "Effective date",
       "sections": [
         {
           "id": "categories",
           "title": "1. Health data",
           "paragraphs": [
-            "Health data includes medication names and dose/timing records, notes, body measurements including weight, meals and nutrition, and reference-only health inferences such as dose estimates. Encrypted synced records and linked account, sync, access and health-service-use metadata may also qualify. The server cannot read end-to-end-encrypted records."
+            "Health data includes medication names and dose/timing records, notes, body measurements including weight, meals and nutrition, and reference-only health inferences such as dose estimates. Encrypted synced records and linked account, sync, access and health-service-use metadata may also qualify. The server cannot read end-to-end-encrypted records. If you turn on the AI record assistant (Pro) and confirm sending, we also treat as health information the dose counts, weight change, counts of each kind of symptom and meal and protein totals built from what you entered, meal kinds, preferences, allergies and disliked foods chosen from predefined lists, and app-help questions and current conversation history. This content is not end-to-end encrypted. The DoseWeek server and Google can read this content while an answer is being made; the DoseWeek server does not keep it. Google can also read it for as long as Google holds it: in memory for up to 24 hours, or for up to 90 days when Google’s abuse checks flag a request, which authorized Google staff may then review. Information read from HealthKit or Health Connect is not sent to the AI record assistant."
           ]
         },
         {
@@ -107,16 +107,16 @@
           "title": "2. Purposes and sources",
           "paragraphs": [
             "Sources are records you enter and readings you choose to allow from Apple Health (HealthKit) or Health Connect. Apple/Google sign-in and Store notices supply account/purchase metadata. We do not obtain health data from data brokers.",
-            "We use this data to display and manage your records, make reference-only calculations, provide sync and backups you request, and protect service security. We do not use it for diagnosis, treatment recommendations or health-derived ads or analytics."
+            "We use this data to display and manage your records, make reference-only calculations, provide sync and backups you request, and protect service security. We do not use it for diagnosis, treatment recommendations or health-derived ads or analytics. On request, we also use it to create AI summaries and general nutrition ideas. AI answers are not a diagnosis or a treatment recommendation."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Disclosures and recipients",
           "paragraphs": [
-            "Infrastructure processors Cloudflare and AWS handle the encrypted health records described above and necessary account/connection metadata for transfer, hosting, protection and backups. They must act under our instructions and contractual safeguards; we do not authorize independent health-data use.",
+            "Infrastructure processors Cloudflare and AWS handle the encrypted health records described above and necessary account/connection metadata for transfer, hosting, protection and backups. They must act under our instructions and contractual safeguards; we do not authorize independent health-data use. AI record assistant requests are processed by Google, a processor, on Google Cloud Vertex AI (Global, no fixed country) to create the answer. Google does not use the content to train AI models; how long Google may hold it is described in the Privacy Policy.",
             "Apple and Google handle sign-in/payments in their own roles; DoseWeek sends no recorded health content through those paths. Google AdMob/Firebase receive the technical SDK data disclosed in the general privacy policies, not recorded health content. Technical data revealing health-service use receive applicable health-data protections. We do not share health data with corporate affiliates. If you choose export, calendar integration or your own cloud backup, chosen recipients and file/calendar/cloud providers receive the selected details or encrypted file and may make onward copies. When technical data reveal health-service use, disclosure to AdMob/Firebase requires the applicable separate health-data sharing consent; advertising consent alone does not establish it.",
-            "We do not sell health data. We do not send recorded health content for advertising or use health-derived ad targeting. We do not use geofencing around healthcare locations to identify or track people, collect health data, or send health-related messages or ads."
+            "We do not sell health data. We do not send recorded health content for advertising or use health-derived ad targeting. We do not use geofencing around healthcare locations to identify or track people, collect health data, or send health-related messages or ads. We do not sell health information sent to the AI record assistant either, and we do not share it for advertising."
           ]
         },
         {
@@ -124,7 +124,7 @@
           "title": "4. Your consent",
           "paragraphs": [
             "Optional health sync uses explicit consent. Collection/use or sharing without consent is limited to what is necessary for your requested service. This exception never covers optional ads or analytics.",
-            "Sharing outside the requested service requires separate consent from collection consent. Refusal leaves local recording available. You can withdraw as easily as granting consent: disable sync in Settings or contact us."
+            "Sharing outside the requested service requires separate consent from collection consent. Refusal leaves local recording available. You can withdraw as easily as granting consent: disable sync in Settings or contact us. For the AI record assistant we ask for consent on a separate screen when you first turn it on, and we ask you to confirm again each time records are sent. You can withdraw at any time in Settings > AI record assistant."
           ]
         },
         {
@@ -149,7 +149,7 @@
           "id": "contact",
           "title": "7. Contact and changes",
           "paragraphs": [
-            "Operator: Wonyoung Labs. Privacy contact: Wonyoung Choi, wonyoung@wonyoungchoi.dev. The general privacy policies explain retention, transfers, security and breach response. Broader health-data use or sharing requires the applicable notice and new consent."
+            "Operator: Wonyoung Labs. The general privacy policies explain retention, transfers, security and breach response. Broader health-data use or sharing requires the applicable notice and new consent.\n\nDoseWeek is operated by Wonyoung Labs (원영랩스), Republic of Korea. Mail-order business registration number: 제 2026-부산금정-0425 호 (registered with Geumjeong-gu, Busan Metropolitan City). For questions and privacy requests, contact wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -160,14 +160,14 @@
     },
     "ja": {
       "title": "米国消費者健康データのプライバシーポリシー",
-      "intro": "この内容は2026年10月3日から適用されます。アカウント、同期、Plus、広告などの新機能に関する部分は、これらの機能を最初に備えるDoseWeekのバージョン(Android 1.0.6; iPhone, iPad 1.0.7)について説明しており、そのバージョンの公開時から適用されます。それより前のバージョンにこれらの機能はありません。\n\nWashington、Nevada、Connecticutを含む米国の利用者の健康データを別途説明します。",
+      "intro": "この内容は2026年10月3日から適用されます。アカウント、同期、Plus、広告などの新機能に関する部分は、これらの機能を最初に備えるDoseWeekのバージョン(Android 1.0.6; 次回のiOSアップデート)について説明しており、そのバージョンの公開時から適用されます。それより前のバージョンにこれらの機能はありません。\n\nWashington、Nevada、Connecticutを含む米国の利用者の健康データを別途説明します。",
       "effectiveDateLabel": "施行日",
       "sections": [
         {
           "id": "categories",
           "title": "1. 健康データの種類",
           "paragraphs": [
-            "健康データには薬名、投与量・時刻、メモ、体重などの身体測定値、食事・栄養記録、投与量の推定など参考用の健康推論が含まれます。暗号化された同期記録と関連するアカウント・同期・アクセス・健康サービス利用情報も該当する場合があります。サーバーはエンドツーエンド暗号化された記録を読めません。"
+            "健康データには薬名、投与量・時刻、メモ、体重などの身体測定値、食事・栄養記録、投与量の推定など参考用の健康推論が含まれます。暗号化された同期記録と関連するアカウント・同期・アクセス・健康サービス利用情報も該当する場合があります。サーバーはエンドツーエンド暗号化された記録を読めません。AI記録アシスタント（Pro）をオンにして送信を確認した場合、入力した記録から作成した投与回数、体重の変化、症状の種類ごとの回数、食事・たんぱく質の集計、用意された一覧から選んだ食事の種類・好み・アレルギー・苦手な食品、アプリの使い方のヘルプに入力した質問・現在の会話履歴も健康情報として取り扱います。この内容はエンドツーエンド暗号化の対象ではありません。回答を作成している間は、DoseWeekサーバーとGoogleがこの内容を読み取れますが、DoseWeekサーバーには残しません。Googleは、保持している間もこの内容を読み取れます。保持期間はメモリ上で最大24時間、不正利用検知で疑いがあると判定されたリクエストは最大90日間で、その場合は権限のあるGoogleの担当者が確認することがあります。HealthKitまたはHealth Connectから読み取った情報は、AI記録アシスタントに送信しません。"
           ]
         },
         {
@@ -175,16 +175,16 @@
           "title": "2. 目的と情報源",
           "paragraphs": [
             "情報源は入力した記録と、許可して選んだAppleヘルスケア（HealthKit）またはHealth Connectの測定値です。Apple・Googleログインとストア通知からアカウント・購入情報を受け取ります。データ販売業者から健康データを取得しません。",
-            "記録の表示・管理、参考用の計算、依頼した同期・バックアップ、サービスの安全確保に使用します。診断、治療の推奨、健康データに基づく広告・分析には使用しません。"
+            "記録の表示・管理、参考用の計算、依頼した同期・バックアップ、サービスの安全確保に使用します。診断、治療の推奨、健康データに基づく広告・分析には使用しません。ご依頼があれば、AIサマリーと一般的な栄養のアイデアの作成にも利用します。AIの回答は、診断や治療の推奨ではありません。"
           ]
         },
         {
           "id": "disclosures",
           "title": "3. 提供先と提供範囲",
           "paragraphs": [
-            "処理受託者CloudflareとAWSは、上記健康記録の暗号化コピーと必要なアカウント・接続情報を転送・ホスティング・保護・バックアップのため処理します。指示と契約上の保護措置に従う必要があり、健康データの独自利用は認めません。",
+            "処理受託者CloudflareとAWSは、上記健康記録の暗号化コピーと必要なアカウント・接続情報を転送・ホスティング・保護・バックアップのため処理します。指示と契約上の保護措置に従う必要があり、健康データの独自利用は認めません。AI記録アシスタントへのリクエストは、処理委託先であるGoogleが、Google CloudのVertex AI（Global、国は未確定）で、回答を作成するために処理します。Googleは内容をAIモデルの学習に利用せず、Googleが保持できる期間はプライバシーポリシーに記載しています。",
             "AppleとGoogleは各自の役割でログイン・決済を処理し、この経路で記録した健康内容を送りません。Google AdMob・Firebaseには一般プライバシーポリシーで説明するSDK技術情報を送り、記録した健康内容は送りません。健康サービスの利用を示す技術情報にも適用される健康データ保護を行います。関連会社に健康データを提供しません。エクスポート、カレンダー連携、ご自身のクラウドバックアップを選ぶ場合、選択した受領者やファイル・カレンダー・クラウド提供者が選択した内容または暗号化ファイルを受け取り、追加のコピーを作ることがあります。 技術情報が健康サービスの利用を示す場合、AdMob・Firebaseへの提供には適用される別個の健康データ提供同意が必要です。広告への同意だけでは代わりになりません。",
-            "健康データを販売しません。記録した健康内容を広告のため送信せず、健康データに基づく広告ターゲティングを行いません。医療施設周辺のジオフェンシングで人を特定・追跡し、健康データを収集し、健康関連メッセージや広告を送りません。"
+            "健康データを販売しません。記録した健康内容を広告のため送信せず、健康データに基づく広告ターゲティングを行いません。医療施設周辺のジオフェンシングで人を特定・追跡し、健康データを収集し、健康関連メッセージや広告を送りません。AI記録アシスタントに送信した健康情報も販売せず、広告のために提供しません。"
           ]
         },
         {
@@ -192,7 +192,7 @@
           "title": "4. 同意と選択",
           "paragraphs": [
             "任意の健康データ同期には明示的な同意を得ます。同意なしの収集・利用・提供は、依頼されたサービスに必要な範囲に限ります。この例外を任意の広告・分析には適用しません。",
-            "依頼されたサービス外への提供には収集とは別の同意が必要です。拒否しても端末での記録は使えます。同意時と同じ容易さで撤回できます。設定で同期を無効にするか、ご連絡ください。"
+            "依頼されたサービス外への提供には収集とは別の同意が必要です。拒否しても端末での記録は使えます。同意時と同じ容易さで撤回できます。設定で同期を無効にするか、ご連絡ください。AI記録アシスタントでは、初めてオンにするときに別の同意画面で同意をいただき、記録を送信するたびにもう一度確認します。「設定」>「AI記録アシスタント」でいつでも撤回できます。"
           ]
         },
         {
@@ -217,7 +217,7 @@
           "id": "contact",
           "title": "7. 連絡先と変更",
           "paragraphs": [
-            "運営者：Wonyoung Labs。個人情報窓口：Wonyoung Choi、wonyoung@wonyoungchoi.dev。保管、移転、安全対策、漏えい対応は一般プライバシーポリシーで説明します。健康データの利用・提供を広げる場合は必要な通知と新たな同意を得ます。"
+            "運営者：Wonyoung Labs。保管、移転、安全対策、漏えい対応は一般プライバシーポリシーで説明します。健康データの利用・提供を広げる場合は必要な通知と新たな同意を得ます。\n\nDoseWeekは大韓民国のWonyoung Labs（원영랩스）が運営しています。通信販売業申告番号：제 2026-부산금정-0425 호（申告先：釜山広域市金井区）。お問い合わせと個人情報に関するご請求は wonyoung@wonyoungchoi.dev までご連絡ください。"
           ]
         }
       ],
@@ -228,14 +228,14 @@
     },
     "de": {
       "title": "US-Datenschutzhinweise für Verbrauchergesundheitsdaten",
-      "intro": "Dieser Text gilt ab dem 3. Oktober 2026. Die Abschnitte zu Konten, Synchronisierung, Plus, Werbung und weiteren neuen Funktionen beschreiben die erste DoseWeek-Version mit diesen Funktionen (Android 1.0.6; iPhone, iPad 1.0.7) und gelten ab deren Veröffentlichung. Frühere Versionen haben diese Funktionen nicht.\n\nDiese gesonderten Hinweise gelten für Gesundheitsdaten von US-Nutzern, einschließlich Washington, Nevada und Connecticut.",
+      "intro": "Dieser Text gilt ab dem 3. Oktober 2026. Die Abschnitte zu Konten, Synchronisierung, Plus, Werbung und weiteren neuen Funktionen beschreiben die erste DoseWeek-Version mit diesen Funktionen (Android 1.0.6; das nächste iOS-Update) und gelten ab deren Veröffentlichung. Frühere Versionen haben diese Funktionen nicht.\n\nDiese gesonderten Hinweise gelten für Gesundheitsdaten von US-Nutzern, einschließlich Washington, Nevada und Connecticut.",
       "effectiveDateLabel": "Gültig ab",
       "sections": [
         {
           "id": "categories",
           "title": "1. Gesundheitsdaten",
           "paragraphs": [
-            "Gesundheitsdaten umfassen Medikamentennamen, Dosis- und Zeitangaben, Notizen, Körpermesswerte wie Gewicht, Mahlzeiten und Ernährung sowie rein orientierende Gesundheitsableitungen wie Dosisschätzungen. Auch verschlüsselte synchronisierte Daten und verknüpfte Konto-, Synchronisations-, Zugriffs- und Gesundheitsdienst-Nutzungsdaten können dazugehören. Der Server kann Ende-zu-Ende-verschlüsselte Aufzeichnungen nicht lesen."
+            "Gesundheitsdaten umfassen Medikamentennamen, Dosis- und Zeitangaben, Notizen, Körpermesswerte wie Gewicht, Mahlzeiten und Ernährung sowie rein orientierende Gesundheitsableitungen wie Dosisschätzungen. Auch verschlüsselte synchronisierte Daten und verknüpfte Konto-, Synchronisations-, Zugriffs- und Gesundheitsdienst-Nutzungsdaten können dazugehören. Der Server kann Ende-zu-Ende-verschlüsselte Aufzeichnungen nicht lesen. Wenn Sie den KI-Aufzeichnungsassistenten (Pro) einschalten und das Senden bestätigen, behandeln wir auch Folgendes als Gesundheitsdaten: die aus Ihren Eingaben gebildete Anzahl der Dosen, die Gewichtsveränderung, die Anzahl je Symptomart, die Summen zu Mahlzeiten und Eiweiß, die aus vordefinierten Listen gewählten Mahlzeitenarten, Vorlieben, Allergien und Lebensmittel, die Sie nicht mögen, sowie Fragen an die Hilfe zur App und den Gesprächsverlauf der aktuellen Sitzung. Diese Inhalte sind nicht Ende-zu-Ende-verschlüsselt. Der DoseWeek-Server und Google können diese Inhalte lesen, während eine Antwort erstellt wird; der DoseWeek-Server speichert sie nicht. Google kann die Inhalte außerdem so lange lesen, wie Google sie vorhält: bis zu 24 Stunden im Arbeitsspeicher oder bis zu 90 Tage, wenn die Missbrauchserkennung von Google eine Anfrage als verdächtig einstuft; eine solche Anfrage können befugte Beschäftigte von Google prüfen. Aus HealthKit oder Health Connect gelesene Daten werden nicht an den KI-Aufzeichnungsassistenten gesendet."
           ]
         },
         {
@@ -243,16 +243,16 @@
           "title": "2. Zwecke und Quellen",
           "paragraphs": [
             "Quellen sind Ihre Eingaben und die von Ihnen erlaubten Messwerte aus Apple Health (HealthKit) oder Health Connect. Apple-/Google-Anmeldung und Store-Mitteilungen liefern Konto- und Kaufdaten. Wir beziehen keine Gesundheitsdaten von Datenhändlern.",
-            "Wir verwenden diese Daten zur Anzeige und Verwaltung Ihrer Aufzeichnungen, für rein orientierende Berechnungen, die angeforderte Synchronisation und Sicherung sowie die Sicherheit des Dienstes. Sie dienen nicht Diagnose, Behandlungsempfehlungen oder gesundheitsbasierten Anzeigen oder Analysen."
+            "Wir verwenden diese Daten zur Anzeige und Verwaltung Ihrer Aufzeichnungen, für rein orientierende Berechnungen, die angeforderte Synchronisation und Sicherung sowie die Sicherheit des Dienstes. Sie dienen nicht Diagnose, Behandlungsempfehlungen oder gesundheitsbasierten Anzeigen oder Analysen. Auf Anfrage verwenden wir sie auch, um KI-Übersichten und allgemeine Ernährungsideen zu erstellen. KI-Antworten sind keine Diagnose und keine Behandlungsempfehlung."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Offenlegung und Empfänger",
           "paragraphs": [
-            "Die Infrastruktur-Auftragsverarbeiter Cloudflare und AWS verarbeiten die oben beschriebenen verschlüsselten Gesundheitsaufzeichnungen und erforderliche Konto-/Verbindungsdaten für Übertragung, Hosting, Schutz und Sicherung. Sie müssen unsere Weisungen und vertraglichen Schutzvorgaben befolgen; eine unabhängige Gesundheitsdatennutzung erlauben wir nicht.",
+            "Die Infrastruktur-Auftragsverarbeiter Cloudflare und AWS verarbeiten die oben beschriebenen verschlüsselten Gesundheitsaufzeichnungen und erforderliche Konto-/Verbindungsdaten für Übertragung, Hosting, Schutz und Sicherung. Sie müssen unsere Weisungen und vertraglichen Schutzvorgaben befolgen; eine unabhängige Gesundheitsdatennutzung erlauben wir nicht. Anfragen an den KI-Aufzeichnungsassistenten verarbeitet Google als Auftragsverarbeiter auf Google Cloud Vertex AI (Global, kein festes Land) zur Erstellung der Antwort. Google verwendet die Inhalte nicht zum Training von KI-Modellen; wie lange Google sie vorhalten kann, steht in der Datenschutzerklärung.",
             "Apple und Google verarbeiten Anmeldung und Zahlungen in eigener Rolle; über diese Wege sendet DoseWeek keine erfassten Gesundheitsinhalte. Google AdMob/Firebase erhalten die in den allgemeinen Datenschutzhinweisen beschriebenen technischen SDK-Daten, keine erfassten Gesundheitsinhalte. Technische Daten, die Gesundheitsdienstnutzung offenbaren, erhalten den anwendbaren Gesundheitsdatenschutz. Wir geben keine Gesundheitsdaten an verbundene Unternehmen weiter. Bei gewähltem Export, Kalenderintegration oder eigener Cloud-Sicherung erhalten ausgewählte Empfänger und Datei-/Kalender-/Cloud-Anbieter die ausgewählten Angaben oder verschlüsselte Datei und können weitere Kopien erstellen. Wenn technische Daten Gesundheitsdienstnutzung offenbaren, erfordert ihre Weitergabe an AdMob/Firebase die anwendbare separate Einwilligung zur Gesundheitsdatenweitergabe; Werbeeinwilligung allein genügt nicht.",
-            "Wir verkaufen keine Gesundheitsdaten. Wir senden keine erfassten Gesundheitsinhalte für Werbung und nutzen kein gesundheitsbasiertes Werbetargeting. Wir setzen kein Geofencing um Gesundheitseinrichtungen ein, um Personen zu identifizieren oder zu verfolgen, Gesundheitsdaten zu sammeln oder gesundheitsbezogene Nachrichten oder Werbung zu senden."
+            "Wir verkaufen keine Gesundheitsdaten. Wir senden keine erfassten Gesundheitsinhalte für Werbung und nutzen kein gesundheitsbasiertes Werbetargeting. Wir setzen kein Geofencing um Gesundheitseinrichtungen ein, um Personen zu identifizieren oder zu verfolgen, Gesundheitsdaten zu sammeln oder gesundheitsbezogene Nachrichten oder Werbung zu senden. Auch Gesundheitsdaten, die an den KI-Aufzeichnungsassistenten gesendet werden, verkaufen wir nicht und geben sie nicht für Werbung weiter."
           ]
         },
         {
@@ -260,7 +260,7 @@
           "title": "4. Ihre Einwilligung",
           "paragraphs": [
             "Optionale Gesundheitssynchronisation erfordert ausdrückliche Einwilligung. Erhebung/Nutzung oder Weitergabe ohne Einwilligung beschränken sich auf das für den angeforderten Dienst Notwendige. Diese Ausnahme gilt nie für optionale Werbung oder Analysen.",
-            "Weitergabe außerhalb des angeforderten Dienstes braucht eine von der Erhebung getrennte Einwilligung. Bei Ablehnung bleibt lokale Aufzeichnung verfügbar. Widerruf ist so einfach wie Zustimmung: Deaktivieren Sie Synchronisation in den Einstellungen oder kontaktieren Sie uns."
+            "Weitergabe außerhalb des angeforderten Dienstes braucht eine von der Erhebung getrennte Einwilligung. Bei Ablehnung bleibt lokale Aufzeichnung verfügbar. Widerruf ist so einfach wie Zustimmung: Deaktivieren Sie Synchronisation in den Einstellungen oder kontaktieren Sie uns. Für den KI-Aufzeichnungsassistenten holen wir beim ersten Einschalten Ihre Einwilligung auf einem eigenen Bildschirm ein und bitten Sie bei jedem Senden von Einträgen erneut um Bestätigung. Unter Einstellungen > KI-Aufzeichnungsassistent können Sie jederzeit widerrufen."
           ]
         },
         {
@@ -285,7 +285,7 @@
           "id": "contact",
           "title": "7. Kontakt und Änderungen",
           "paragraphs": [
-            "Betreiber: Wonyoung Labs. Datenschutzkontakt: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Allgemeine Datenschutzhinweise erklären Speicherung, Übermittlungen, Sicherheit und Vorfallreaktion. Erweiterte Gesundheitsdatennutzung oder Weitergabe erfordert die vorgeschriebene Information und neue Einwilligung."
+            "Betreiber: Wonyoung Labs. Allgemeine Datenschutzhinweise erklären Speicherung, Übermittlungen, Sicherheit und Vorfallreaktion. Erweiterte Gesundheitsdatennutzung oder Weitergabe erfordert die vorgeschriebene Information und neue Einwilligung.\n\nDoseWeek wird von Wonyoung Labs (원영랩스), Republik Korea, betrieben. Registrierungsnummer für den Versandhandel: 제 2026-부산금정-0425 호 (registriert bei Geumjeong-gu, Busan). Für Fragen und Datenschutzanfragen wenden Sie sich an wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -296,14 +296,14 @@
     },
     "fr": {
       "title": "Politique de confidentialité des données de santé des consommateurs aux États-Unis",
-      "intro": "Ce texte prend effet le 3 octobre 2026. Les parties consacrées aux comptes, à la synchronisation, à Plus, aux publicités et aux autres nouveautés décrivent la première version de DoseWeek qui les propose (Android 1.0.6; iPhone, iPad 1.0.7) et s’appliquent à partir de la sortie de cette version. Les versions antérieures n’ont pas ces fonctions.\n\nCette notice distincte couvre les données de santé des utilisateurs aux États-Unis, notamment Washington, Nevada et Connecticut.",
+      "intro": "Ce texte prend effet le 3 octobre 2026. Les parties consacrées aux comptes, à la synchronisation, à Plus, aux publicités et aux autres nouveautés décrivent la première version de DoseWeek qui les propose (Android 1.0.6; la prochaine mise à jour iOS) et s’appliquent à partir de la sortie de cette version. Les versions antérieures n’ont pas ces fonctions.\n\nCette notice distincte couvre les données de santé des utilisateurs aux États-Unis, notamment Washington, Nevada et Connecticut.",
       "effectiveDateLabel": "Date d’entrée en vigueur",
       "sections": [
         {
           "id": "categories",
           "title": "1. Données de santé",
           "paragraphs": [
-            "Les données de santé comprennent les médicaments, doses et horaires, notes, mesures corporelles dont le poids, repas et nutrition, ainsi que des déductions indicatives comme les estimations de dose. Les dossiers synchronisés chiffrés et les métadonnées liées au compte, à la synchronisation, aux accès et à l’utilisation de services de santé peuvent aussi en relever. Le serveur ne peut pas lire les dossiers chiffrés de bout en bout."
+            "Les données de santé comprennent les médicaments, doses et horaires, notes, mesures corporelles dont le poids, repas et nutrition, ainsi que des déductions indicatives comme les estimations de dose. Les dossiers synchronisés chiffrés et les métadonnées liées au compte, à la synchronisation, aux accès et à l’utilisation de services de santé peuvent aussi en relever. Le serveur ne peut pas lire les dossiers chiffrés de bout en bout. Si vous activez l’assistant de suivi IA (Pro) et confirmez l’envoi, nous traitons aussi comme des informations de santé le nombre de doses, l’évolution du poids, le nombre par type de symptôme et les totaux de repas et de protéines établis à partir de ce que vous avez saisi, les types de repas, les préférences, les allergies et les aliments que vous n’aimez pas choisis dans des listes prédéfinies, ainsi que les questions adressées à l’aide sur l’app et l’historique de conversation de la session en cours. Ce contenu n’est pas chiffré de bout en bout. Le serveur DoseWeek et Google peuvent lire ce contenu pendant la création d’une réponse ; le serveur DoseWeek ne le conserve pas. Google peut aussi lire ce contenu tant que Google le garde : en mémoire pendant 24 heures au maximum, ou jusqu’à 90 jours si les contrôles d’abus de Google signalent une requête, que des employés autorisés de Google peuvent alors examiner. Les informations lues depuis HealthKit ou Health Connect ne sont pas envoyées à l’assistant de suivi IA."
           ]
         },
         {
@@ -311,16 +311,16 @@
           "title": "2. Finalités et sources",
           "paragraphs": [
             "Les sources sont vos saisies et les mesures autorisées que vous choisissez dans Apple Santé (HealthKit) ou Health Connect. La connexion Apple/Google et les notifications du Store fournissent des métadonnées de compte et d’achat. Nous n’obtenons pas de données de santé auprès de courtiers.",
-            "Nous utilisons ces données pour afficher et gérer vos dossiers, effectuer des calculs indicatifs, fournir la synchronisation et les sauvegardes demandées et sécuriser le service. Elles ne servent pas au diagnostic, aux recommandations thérapeutiques ou à la publicité ou l’analyse fondées sur la santé."
+            "Nous utilisons ces données pour afficher et gérer vos dossiers, effectuer des calculs indicatifs, fournir la synchronisation et les sauvegardes demandées et sécuriser le service. Elles ne servent pas au diagnostic, aux recommandations thérapeutiques ou à la publicité ou l’analyse fondées sur la santé. Sur demande, nous les utilisons aussi pour créer des résumés IA et des idées générales de nutrition. Les réponses de l’IA ne sont ni un diagnostic ni une recommandation de traitement."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Communication et destinataires",
           "paragraphs": [
-            "Les sous-traitants d’infrastructure Cloudflare et AWS traitent les dossiers de santé chiffrés décrits ci-dessus et les métadonnées nécessaires de compte/connexion pour le transfert, l’hébergement, la protection et les sauvegardes. Ils doivent suivre nos instructions et garanties contractuelles ; nous n’autorisons pas leur utilisation autonome des données de santé.",
+            "Les sous-traitants d’infrastructure Cloudflare et AWS traitent les dossiers de santé chiffrés décrits ci-dessus et les métadonnées nécessaires de compte/connexion pour le transfert, l’hébergement, la protection et les sauvegardes. Ils doivent suivre nos instructions et garanties contractuelles ; nous n’autorisons pas leur utilisation autonome des données de santé. Les demandes de l’assistant de suivi IA sont traitées par Google, sous-traitant, sur Google Cloud Vertex AI (Global, pays non fixé) pour créer la réponse. Google n’utilise pas le contenu pour entraîner des modèles d’IA ; la durée pendant laquelle Google peut le garder est décrite dans la Politique de confidentialité.",
             "Apple et Google traitent connexion et paiement dans leurs propres rôles ; DoseWeek n’envoie pas de contenu de santé enregistré par ces voies. Google AdMob/Firebase reçoivent les données techniques SDK décrites dans les politiques générales, pas le contenu de santé enregistré. Les données techniques révélant l’usage d’un service de santé bénéficient des protections applicables. Nous ne communiquons pas de données de santé à des sociétés affiliées. Si vous choisissez export, intégration calendrier ou sauvegarde dans votre propre cloud, les destinataires et fournisseurs de fichiers/calendrier/cloud choisis reçoivent les informations sélectionnées ou le fichier chiffré et peuvent créer d’autres copies. Lorsque des données techniques révèlent l’usage d’un service de santé, leur communication à AdMob/Firebase exige le consentement distinct applicable au partage de données de santé ; le consentement publicitaire seul ne suffit pas.",
-            "Nous ne vendons pas de données de santé. Nous n’envoyons pas de contenu de santé enregistré pour la publicité et n’utilisons pas de ciblage publicitaire fondé sur la santé. Nous n’utilisons pas de géorepérage autour des lieux de soins pour identifier ou suivre des personnes, collecter des données de santé ou envoyer des messages ou publicités de santé."
+            "Nous ne vendons pas de données de santé. Nous n’envoyons pas de contenu de santé enregistré pour la publicité et n’utilisons pas de ciblage publicitaire fondé sur la santé. Nous n’utilisons pas de géorepérage autour des lieux de soins pour identifier ou suivre des personnes, collecter des données de santé ou envoyer des messages ou publicités de santé. Nous ne vendons pas non plus les informations de santé envoyées à l’assistant de suivi IA et nous ne les communiquons pas à des fins publicitaires."
           ]
         },
         {
@@ -328,7 +328,7 @@
           "title": "4. Votre consentement",
           "paragraphs": [
             "La synchronisation facultative des données de santé exige un consentement explicite. La collecte/l’utilisation ou le partage sans consentement se limite au nécessaire pour le service demandé. Cette exception ne couvre jamais la publicité ou l’analyse facultatives.",
-            "Le partage hors du service demandé exige un consentement distinct de celui de collecte. Le refus préserve l’enregistrement local. Le retrait est aussi simple que l’accord : désactivez la synchronisation dans les réglages ou contactez-nous."
+            "Le partage hors du service demandé exige un consentement distinct de celui de collecte. Le refus préserve l’enregistrement local. Le retrait est aussi simple que l’accord : désactivez la synchronisation dans les réglages ou contactez-nous. Pour l’assistant de suivi IA, nous recueillons votre consentement sur un écran distinct lors de la première activation et nous vous demandons de confirmer à nouveau à chaque envoi d’enregistrements. Vous pouvez le retirer à tout moment dans Réglages > Assistant de suivi IA."
           ]
         },
         {
@@ -353,7 +353,7 @@
           "id": "contact",
           "title": "7. Contact et modifications",
           "paragraphs": [
-            "Exploitant : Wonyoung Labs. Contact confidentialité : Wonyoung Choi, wonyoung@wonyoungchoi.dev. Les politiques générales expliquent conservation, transferts, sécurité et réponse aux violations. Toute extension d’utilisation ou de partage des données de santé exige l’information applicable et un nouveau consentement."
+            "Exploitant : Wonyoung Labs. Les politiques générales expliquent conservation, transferts, sécurité et réponse aux violations. Toute extension d’utilisation ou de partage des données de santé exige l’information applicable et un nouveau consentement.\n\nDoseWeek est exploité par Wonyoung Labs (원영랩스), République de Corée. Numéro de déclaration de vente à distance : 제 2026-부산금정-0425 호 (déclaré auprès de Geumjeong-gu, Busan). Pour toute question ou demande relative à la confidentialité, écrivez à wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -364,14 +364,14 @@
     },
     "es": {
       "title": "Política de privacidad de datos de salud de consumidores en EE. UU.",
-      "intro": "Este texto entra en vigor el 3 de octubre de 2026. Las partes sobre cuentas, sincronización, Plus, anuncios y otras novedades describen la primera versión de DoseWeek que las incluye (Android 1.0.6; iPhone, iPad 1.0.7) y se aplican desde el lanzamiento de esa versión. Las versiones anteriores no tienen estas funciones.\n\nEste aviso separado cubre datos de salud de usuarios de EE. UU., incluidos Washington, Nevada y Connecticut.",
+      "intro": "Este texto entra en vigor el 3 de octubre de 2026. Las partes sobre cuentas, sincronización, Plus, anuncios y otras novedades describen la primera versión de DoseWeek que las incluye (Android 1.0.6; la próxima actualización de iOS) y se aplican desde el lanzamiento de esa versión. Las versiones anteriores no tienen estas funciones.\n\nEste aviso separado cubre datos de salud de usuarios de EE. UU., incluidos Washington, Nevada y Connecticut.",
       "effectiveDateLabel": "Fecha de entrada en vigor",
       "sections": [
         {
           "id": "categories",
           "title": "1. Datos de salud",
           "paragraphs": [
-            "Los datos de salud incluyen medicamentos, dosis y horarios, notas, medidas corporales como el peso, comidas y nutrición e inferencias orientativas como estimaciones de dosis. También pueden incluir registros sincronizados cifrados y metadatos vinculados a cuenta, sincronización, acceso y uso de servicios de salud. El servidor no puede leer registros cifrados de extremo a extremo."
+            "Los datos de salud incluyen medicamentos, dosis y horarios, notas, medidas corporales como el peso, comidas y nutrición e inferencias orientativas como estimaciones de dosis. También pueden incluir registros sincronizados cifrados y metadatos vinculados a cuenta, sincronización, acceso y uso de servicios de salud. El servidor no puede leer registros cifrados de extremo a extremo. Si activa el asistente de registros con IA (Pro) y confirma el envío, también tratamos como información de salud el número de dosis, el cambio de peso, el recuento por tipo de síntoma y los totales de comidas y proteínas elaborados a partir de lo que usted introdujo, los tipos de comida, las preferencias, las alergias y los alimentos que no le gustan elegidos de listas predefinidas, así como las preguntas dirigidas a la ayuda sobre la app y el historial de conversación de la sesión actual. Este contenido no está cifrado de extremo a extremo. El servidor de DoseWeek y Google pueden leer este contenido mientras se crea una respuesta; el servidor de DoseWeek no lo guarda. Google también puede leer este contenido mientras Google lo mantenga: hasta 24 horas en memoria, o hasta 90 días si los controles de abuso de Google marcan una solicitud, que el personal autorizado de Google puede entonces revisar. La información leída de HealthKit o Health Connect no se envía al asistente de registros con IA."
           ]
         },
         {
@@ -379,16 +379,16 @@
           "title": "2. Finalidades y fuentes",
           "paragraphs": [
             "Las fuentes son los registros que introduce y las lecturas que permite y elige de Apple Salud (HealthKit) o Health Connect. El inicio Apple/Google y los avisos del Store proporcionan metadatos de cuenta/compra. No obtenemos datos de salud de intermediarios de datos.",
-            "Usamos estos datos para mostrar y gestionar sus registros, realizar cálculos orientativos, prestar la sincronización y copias solicitadas y proteger el servicio. No se usan para diagnóstico, recomendaciones de tratamiento ni publicidad o analítica derivada de salud."
+            "Usamos estos datos para mostrar y gestionar sus registros, realizar cálculos orientativos, prestar la sincronización y copias solicitadas y proteger el servicio. No se usan para diagnóstico, recomendaciones de tratamiento ni publicidad o analítica derivada de salud. Si lo solicita, también la usamos para crear resúmenes de IA e ideas generales de nutrición. Las respuestas de la IA no son un diagnóstico ni una recomendación de tratamiento."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Comunicación y destinatarios",
           "paragraphs": [
-            "Los encargados de infraestructura Cloudflare y AWS tratan los registros de salud cifrados anteriores y metadatos necesarios de cuenta/conexión para transferencia, alojamiento, protección y copias. Deben seguir nuestras instrucciones y garantías contractuales; no autorizamos un uso independiente de datos de salud.",
+            "Los encargados de infraestructura Cloudflare y AWS tratan los registros de salud cifrados anteriores y metadatos necesarios de cuenta/conexión para transferencia, alojamiento, protección y copias. Deben seguir nuestras instrucciones y garantías contractuales; no autorizamos un uso independiente de datos de salud. Las solicitudes del asistente de registros con IA las trata Google, como encargado, en Google Cloud Vertex AI (Global, sin país fijo) para crear la respuesta. Google no usa el contenido para entrenar modelos de IA; el tiempo que Google puede mantenerlo se describe en la Política de privacidad.",
             "Apple y Google tratan acceso y pagos en sus propios roles; DoseWeek no envía contenido de salud registrado por esas vías. Google AdMob/Firebase reciben datos técnicos SDK descritos en las políticas generales, no contenido de salud registrado. Los datos técnicos que revelan uso de servicios de salud reciben las protecciones aplicables. No compartimos datos de salud con empresas afiliadas. Si elige exportación, integración de calendario o su propia copia en la nube, los destinatarios y proveedores de archivos/calendario/nube elegidos reciben los detalles seleccionados o el archivo cifrado y pueden hacer otras copias. Cuando los datos técnicos revelan uso de servicios de salud, comunicarlos a AdMob/Firebase requiere el consentimiento separado aplicable para compartir datos de salud; consentir la publicidad por sí solo no lo sustituye.",
-            "No vendemos datos de salud. No enviamos contenido de salud registrado para publicidad ni usamos segmentación publicitaria derivada de salud. No usamos geovallas alrededor de centros sanitarios para identificar o seguir personas, recoger datos de salud o enviar mensajes o anuncios de salud."
+            "No vendemos datos de salud. No enviamos contenido de salud registrado para publicidad ni usamos segmentación publicitaria derivada de salud. No usamos geovallas alrededor de centros sanitarios para identificar o seguir personas, recoger datos de salud o enviar mensajes o anuncios de salud. Tampoco vendemos la información de salud enviada al asistente de registros con IA ni la compartimos con fines publicitarios."
           ]
         },
         {
@@ -396,7 +396,7 @@
           "title": "4. Su consentimiento",
           "paragraphs": [
             "La sincronización opcional de salud requiere consentimiento explícito. La recogida/uso o comunicación sin consentimiento se limita a lo necesario para el servicio solicitado. La excepción nunca cubre publicidad o analítica opcionales.",
-            "Compartir fuera del servicio solicitado requiere consentimiento separado del de recogida. Rechazarlo mantiene el registro local. Retirarlo es tan sencillo como otorgarlo: desactive sincronización en Ajustes o contacte con nosotros."
+            "Compartir fuera del servicio solicitado requiere consentimiento separado del de recogida. Rechazarlo mantiene el registro local. Retirarlo es tan sencillo como otorgarlo: desactive sincronización en Ajustes o contacte con nosotros. Para el asistente de registros con IA pedimos su consentimiento en una pantalla aparte la primera vez que lo activa, y le pedimos que confirme de nuevo cada vez que se envían registros. Puede retirarlo en cualquier momento en Ajustes > Asistente de registros con IA."
           ]
         },
         {
@@ -421,7 +421,7 @@
           "id": "contact",
           "title": "7. Contacto y cambios",
           "paragraphs": [
-            "Operador: Wonyoung Labs. Contacto de privacidad: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Las políticas generales explican conservación, transferencias, seguridad y respuesta a incidentes. Ampliar uso o comunicación de salud requiere los avisos aplicables y nuevo consentimiento."
+            "Operador: Wonyoung Labs. Las políticas generales explican conservación, transferencias, seguridad y respuesta a incidentes. Ampliar uso o comunicación de salud requiere los avisos aplicables y nuevo consentimiento.\n\nDoseWeek lo opera Wonyoung Labs (원영랩스), República de Corea. Número de registro de venta a distancia: 제 2026-부산금정-0425 호 (registrado ante Geumjeong-gu, Busan). Para consultas y solicitudes de privacidad, escribe a wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -432,14 +432,14 @@
     },
     "it": {
       "title": "Informativa sulla privacy dei dati sanitari dei consumatori negli USA",
-      "intro": "Questo testo ha effetto dal 3 ottobre 2026. Le parti su account, sincronizzazione, Plus, annunci e altre novità descrivono la prima versione di DoseWeek che le include (Android 1.0.6; iPhone, iPad 1.0.7) e si applicano dal rilascio di tale versione. Le versioni precedenti non hanno queste funzioni.\n\nQuesta informativa separata riguarda i dati sanitari degli utenti USA, inclusi Washington, Nevada e Connecticut.",
+      "intro": "Questo testo ha effetto dal 3 ottobre 2026. Le parti su account, sincronizzazione, Plus, annunci e altre novità descrivono la prima versione di DoseWeek che le include (Android 1.0.6; il prossimo aggiornamento iOS) e si applicano dal rilascio di tale versione. Le versioni precedenti non hanno queste funzioni.\n\nQuesta informativa separata riguarda i dati sanitari degli utenti USA, inclusi Washington, Nevada e Connecticut.",
       "effectiveDateLabel": "Data di entrata in vigore",
       "sections": [
         {
           "id": "categories",
           "title": "1. Dati sanitari",
           "paragraphs": [
-            "I dati sanitari includono farmaci, dosi e orari, note, misure corporee come il peso, pasti e nutrizione e inferenze indicative come stime della dose. Possono includere anche registri sincronizzati cifrati e metadati collegati ad account, sincronizzazione, accessi e uso di servizi sanitari. Il server non può leggere i registri cifrati end-to-end."
+            "I dati sanitari includono farmaci, dosi e orari, note, misure corporee come il peso, pasti e nutrizione e inferenze indicative come stime della dose. Possono includere anche registri sincronizzati cifrati e metadati collegati ad account, sincronizzazione, accessi e uso di servizi sanitari. Il server non può leggere i registri cifrati end-to-end. Se attivi l’assistente IA per le registrazioni (Pro) e confermi l’invio, trattiamo come informazioni sulla salute anche il numero di dosi, la variazione del peso, il conteggio per tipo di sintomo e i totali di pasti e proteine ricavati da ciò che hai inserito, i tipi di pasto, le preferenze, le allergie e gli alimenti che non ti piacciono scelti da elenchi predefiniti, oltre alle domande rivolte all’aiuto sull’app e alla cronologia della conversazione della sessione corrente. Questo contenuto non è protetto da crittografia end-to-end. Il server DoseWeek e Google possono leggere questi contenuti mentre viene creata una risposta; il server DoseWeek non li conserva. Google può inoltre leggere questi contenuti finché Google li tiene: in memoria fino a 24 ore, oppure fino a 90 giorni se i controlli di Google contro gli abusi segnalano una richiesta, che il personale autorizzato di Google può allora esaminare. Le informazioni lette da HealthKit o Health Connect non sono inviate all’assistente IA per le registrazioni."
           ]
         },
         {
@@ -447,16 +447,16 @@
           "title": "2. Finalità e fonti",
           "paragraphs": [
             "Le fonti sono i dati inseriti e le letture scelte e autorizzate da Apple Salute (HealthKit) o Health Connect. Accesso Apple/Google e notifiche dello Store forniscono metadati di account/acquisto. Non acquisiamo dati sanitari da intermediari di dati.",
-            "Usiamo questi dati per mostrare e gestire i suoi registri, fare calcoli indicativi, offrire sincronizzazione e backup richiesti e proteggere il servizio. Non li usiamo per diagnosi, consigli terapeutici o pubblicità o analisi basate sulla salute."
+            "Usiamo questi dati per mostrare e gestire i suoi registri, fare calcoli indicativi, offrire sincronizzazione e backup richiesti e proteggere il servizio. Non li usiamo per diagnosi, consigli terapeutici o pubblicità o analisi basate sulla salute. Su richiesta le usiamo anche per creare riepiloghi IA e idee generali di nutrizione. Le risposte dell’IA non sono una diagnosi né una raccomandazione di trattamento."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Comunicazioni e destinatari",
           "paragraphs": [
-            "I responsabili infrastrutturali Cloudflare e AWS trattano i registri sanitari cifrati descritti sopra e i metadati necessari di account/connessione per trasferimento, hosting, protezione e backup. Devono seguire le nostre istruzioni e garanzie contrattuali; non autorizziamo usi sanitari autonomi.",
+            "I responsabili infrastrutturali Cloudflare e AWS trattano i registri sanitari cifrati descritti sopra e i metadati necessari di account/connessione per trasferimento, hosting, protezione e backup. Devono seguire le nostre istruzioni e garanzie contrattuali; non autorizziamo usi sanitari autonomi. Le richieste dell’assistente IA per le registrazioni sono trattate da Google, in qualità di responsabile del trattamento, su Google Cloud Vertex AI (Global, nessun paese fisso) per creare la risposta. Google non usa il contenuto per addestrare modelli di IA; per quanto tempo Google può tenerlo è descritto nell’Informativa sulla privacy.",
             "Apple e Google trattano accesso/pagamenti nei propri ruoli; DoseWeek non invia contenuti sanitari registrati attraverso tali percorsi. Google AdMob/Firebase ricevono dati tecnici SDK descritti nelle informative generali, non contenuti sanitari registrati. I dati tecnici che rivelano uso di servizi sanitari ricevono le tutele applicabili. Non condividiamo dati sanitari con società affiliate. Se sceglie esportazione, integrazione calendario o backup sul suo cloud, destinatari e fornitori di file/calendario/cloud scelti ricevono i dettagli selezionati o il file cifrato e possono produrre altre copie. Se i dati tecnici rivelano l’uso di servizi sanitari, comunicarli ad AdMob/Firebase richiede il consenso separato applicabile alla condivisione sanitaria; il solo consenso pubblicitario non lo sostituisce.",
-            "Non vendiamo dati sanitari. Non inviamo contenuti sanitari registrati per pubblicità né usiamo targeting pubblicitario derivato dalla salute. Non usiamo geofencing intorno a luoghi di cura per identificare o seguire persone, raccogliere dati sanitari o inviare messaggi o annunci sanitari."
+            "Non vendiamo dati sanitari. Non inviamo contenuti sanitari registrati per pubblicità né usiamo targeting pubblicitario derivato dalla salute. Non usiamo geofencing intorno a luoghi di cura per identificare o seguire persone, raccogliere dati sanitari o inviare messaggi o annunci sanitari. Non vendiamo nemmeno le informazioni sulla salute inviate all’assistente IA per le registrazioni e non le condividiamo a fini pubblicitari."
           ]
         },
         {
@@ -464,7 +464,7 @@
           "title": "4. Il suo consenso",
           "paragraphs": [
             "La sincronizzazione sanitaria facoltativa richiede consenso esplicito. Raccolta/uso o condivisione senza consenso si limitano al necessario per il servizio richiesto. L’eccezione non copre mai pubblicità o analisi facoltative.",
-            "La condivisione fuori dal servizio richiesto richiede consenso distinto dalla raccolta. Il rifiuto mantiene disponibile la registrazione locale. Revocare è semplice quanto consentire: disattivi la sincronizzazione nelle impostazioni o ci contatti."
+            "La condivisione fuori dal servizio richiesto richiede consenso distinto dalla raccolta. Il rifiuto mantiene disponibile la registrazione locale. Revocare è semplice quanto consentire: disattivi la sincronizzazione nelle impostazioni o ci contatti. Per l’assistente IA per le registrazioni chiediamo il consenso in una schermata separata alla prima attivazione, e ti chiediamo di confermare di nuovo ogni volta che vengono inviate registrazioni. Puoi revocarlo in qualsiasi momento in Impostazioni > Assistente IA per le registrazioni."
           ]
         },
         {
@@ -489,7 +489,7 @@
           "id": "contact",
           "title": "7. Contatti e modifiche",
           "paragraphs": [
-            "Gestore: Wonyoung Labs. Contatto privacy: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Le informative generali spiegano conservazione, trasferimenti, sicurezza e risposta alle violazioni. Estendere uso o condivisione sanitaria richiede gli avvisi applicabili e nuovo consenso."
+            "Gestore: Wonyoung Labs. Le informative generali spiegano conservazione, trasferimenti, sicurezza e risposta alle violazioni. Estendere uso o condivisione sanitaria richiede gli avvisi applicabili e nuovo consenso.\n\nDoseWeek è gestito da Wonyoung Labs (원영랩스), Repubblica di Corea. Numero di registrazione per la vendita a distanza: 제 2026-부산금정-0425 호 (registrato presso Geumjeong-gu, Busan). Per domande e richieste sulla privacy, scrivi a wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -500,14 +500,14 @@
     },
     "nl": {
       "title": "Privacyverklaring voor gezondheidsgegevens van Amerikaanse consumenten",
-      "intro": "Deze tekst geldt vanaf 3 oktober 2026. De onderdelen over accounts, synchronisatie, Plus, advertenties en andere nieuwe functies beschrijven de eerste DoseWeek-versie met deze functies (Android 1.0.6; iPhone, iPad 1.0.7) en gelden vanaf de release van die versie. Eerdere versies hebben deze functies niet.\n\nDeze afzonderlijke verklaring geldt voor gezondheidsgegevens van Amerikaanse gebruikers, waaronder Washington, Nevada en Connecticut.",
+      "intro": "Deze tekst geldt vanaf 3 oktober 2026. De onderdelen over accounts, synchronisatie, Plus, advertenties en andere nieuwe functies beschrijven de eerste DoseWeek-versie met deze functies (Android 1.0.6; de volgende iOS-update) en gelden vanaf de release van die versie. Eerdere versies hebben deze functies niet.\n\nDeze afzonderlijke verklaring geldt voor gezondheidsgegevens van Amerikaanse gebruikers, waaronder Washington, Nevada en Connecticut.",
       "effectiveDateLabel": "Ingangsdatum",
       "sections": [
         {
           "id": "categories",
           "title": "1. Gezondheidsgegevens",
           "paragraphs": [
-            "Gezondheidsgegevens omvatten medicijnnamen, doses en tijdstippen, notities, lichaamsmetingen zoals gewicht, maaltijden en voeding en uitsluitend indicatieve afleidingen zoals dosisschattingen. Ook versleutelde gesynchroniseerde gegevens en gekoppelde account-, synchronisatie-, toegangs- en gezondheidsdienstgebruikmetadata kunnen hieronder vallen. De server kan end-to-endversleutelde gegevens niet lezen."
+            "Gezondheidsgegevens omvatten medicijnnamen, doses en tijdstippen, notities, lichaamsmetingen zoals gewicht, maaltijden en voeding en uitsluitend indicatieve afleidingen zoals dosisschattingen. Ook versleutelde gesynchroniseerde gegevens en gekoppelde account-, synchronisatie-, toegangs- en gezondheidsdienstgebruikmetadata kunnen hieronder vallen. De server kan end-to-endversleutelde gegevens niet lezen. Als u de AI-registratieassistent (Pro) inschakelt en het verzenden bevestigt, behandelen we ook het volgende als gezondheidsgegevens: het aantal doses, de gewichtsverandering, het aantal per soort klacht en de totalen van maaltijden en eiwit die uit uw invoer zijn samengesteld, soorten maaltijden, voorkeuren, allergieën en voedingsmiddelen die u niet lust, gekozen uit vooraf vastgestelde lijsten, en vragen aan de hulp over de app en de gespreksgeschiedenis van de huidige sessie. Deze inhoud is niet end-to-end versleuteld. De DoseWeek-server en Google kunnen deze inhoud lezen terwijl een antwoord wordt gemaakt; de DoseWeek-server bewaart de inhoud niet. Google kan deze inhoud ook lezen zolang Google die vasthoudt: maximaal 24 uur in het geheugen, of maximaal 90 dagen als de misbruikcontroles van Google een verzoek markeren; bevoegde medewerkers van Google kunnen zo’n verzoek dan beoordelen. Gegevens die uit HealthKit of Health Connect zijn gelezen, worden niet naar de AI-registratieassistent gestuurd."
           ]
         },
         {
@@ -515,16 +515,16 @@
           "title": "2. Doelen en bronnen",
           "paragraphs": [
             "Bronnen zijn uw invoer en de metingen die u toestaat en kiest uit Apple Gezondheid (HealthKit) of Health Connect. Apple-/Google-aanmelding en Store-meldingen leveren account-/aankoopmetadata. Wij krijgen geen gezondheidsgegevens van gegevenshandelaren.",
-            "Wij gebruiken deze gegevens om uw registraties te tonen en beheren, indicatieve berekeningen te maken, gevraagde synchronisatie en back-ups te bieden en de dienst te beveiligen. Wij gebruiken ze niet voor diagnose, behandeladvies of op gezondheid gebaseerde reclame of analyse."
+            "Wij gebruiken deze gegevens om uw registraties te tonen en beheren, indicatieve berekeningen te maken, gevraagde synchronisatie en back-ups te bieden en de dienst te beveiligen. Wij gebruiken ze niet voor diagnose, behandeladvies of op gezondheid gebaseerde reclame of analyse. Op verzoek gebruiken we ze ook om AI-overzichten en algemene voedingsideeën te maken. AI-antwoorden zijn geen diagnose en geen behandeladvies."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Verstrekking en ontvangers",
           "paragraphs": [
-            "Infrastructuurverwerkers Cloudflare en AWS verwerken bovengenoemde versleutelde gezondheidsregistraties en noodzakelijke account-/verbindingsmetadata voor overdracht, hosting, bescherming en back-ups. Zij moeten onze instructies en contractuele waarborgen volgen; zelfstandig gezondheidsgegevensgebruik staan wij niet toe.",
+            "Infrastructuurverwerkers Cloudflare en AWS verwerken bovengenoemde versleutelde gezondheidsregistraties en noodzakelijke account-/verbindingsmetadata voor overdracht, hosting, bescherming en back-ups. Zij moeten onze instructies en contractuele waarborgen volgen; zelfstandig gezondheidsgegevensgebruik staan wij niet toe. Verzoeken van de AI-registratieassistent worden verwerkt door Google, als verwerker, op Google Cloud Vertex AI (Global, geen vast land) om het antwoord te maken. Google gebruikt de inhoud niet om AI-modellen te trainen; hoe lang Google de inhoud kan vasthouden staat in het Privacybeleid.",
             "Apple en Google verwerken aanmelding/betaling in hun eigen rol; DoseWeek stuurt via die routes geen geregistreerde gezondheidsinhoud. Google AdMob/Firebase ontvangen de technische SDK-gegevens uit de algemene privacyverklaringen, geen geregistreerde gezondheidsinhoud. Technische gegevens die gezondheidsdienstgebruik onthullen krijgen de toepasselijke bescherming. Wij delen geen gezondheidsgegevens met gelieerde bedrijven. Bij gekozen export, kalenderintegratie of eigen cloudback-up ontvangen gekozen ontvangers en bestands-/kalender-/cloudaanbieders de geselecteerde informatie of versleutelde bestanden en kunnen zij verdere kopieën maken. Als technische gegevens gezondheidsdienstgebruik onthullen, vereist verstrekking aan AdMob/Firebase de toepasselijke aparte toestemming voor delen van gezondheidsgegevens; toestemming voor reclame alleen is onvoldoende.",
-            "Wij verkopen geen gezondheidsgegevens. Wij sturen geen geregistreerde gezondheidsinhoud voor reclame en gebruiken geen op gezondheid gebaseerde advertentietargeting. Wij gebruiken geen geofencing rond zorglocaties om mensen te identificeren of volgen, gezondheidsgegevens te verzamelen of gezondheidsberichten of advertenties te sturen."
+            "Wij verkopen geen gezondheidsgegevens. Wij sturen geen geregistreerde gezondheidsinhoud voor reclame en gebruiken geen op gezondheid gebaseerde advertentietargeting. Wij gebruiken geen geofencing rond zorglocaties om mensen te identificeren of volgen, gezondheidsgegevens te verzamelen of gezondheidsberichten of advertenties te sturen. Ook gezondheidsgegevens die naar de AI-registratieassistent zijn gestuurd, verkopen we niet en delen we niet voor reclame."
           ]
         },
         {
@@ -532,7 +532,7 @@
           "title": "4. Uw toestemming",
           "paragraphs": [
             "Optionele gezondheidssynchronisatie vereist uitdrukkelijke toestemming. Verzameling/gebruik of delen zonder toestemming blijft beperkt tot wat noodzakelijk is voor de gevraagde dienst. Deze uitzondering geldt nooit voor optionele reclame of analyse.",
-            "Delen buiten de gevraagde dienst vereist aparte toestemming naast verzameling. Weigering laat lokaal registreren beschikbaar. Intrekken is even eenvoudig als toestemmen: schakel synchronisatie uit in Instellingen of neem contact op."
+            "Delen buiten de gevraagde dienst vereist aparte toestemming naast verzameling. Weigering laat lokaal registreren beschikbaar. Intrekken is even eenvoudig als toestemmen: schakel synchronisatie uit in Instellingen of neem contact op. Voor de AI-registratieassistent vragen we uw toestemming op een apart scherm wanneer u die voor het eerst inschakelt, en we vragen u opnieuw te bevestigen telkens wanneer registraties worden verzonden. U kunt de toestemming op elk moment intrekken onder Instellingen > AI-registratieassistent."
           ]
         },
         {
@@ -557,7 +557,7 @@
           "id": "contact",
           "title": "7. Contact en wijzigingen",
           "paragraphs": [
-            "Exploitant: Wonyoung Labs. Privacycontact: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Algemene privacyverklaringen verklaren bewaring, doorgifte, beveiliging en datalekrespons. Ruimer gezondheidsgebruik of delen vereist de toepasselijke kennisgeving en nieuwe toestemming."
+            "Exploitant: Wonyoung Labs. Algemene privacyverklaringen verklaren bewaring, doorgifte, beveiliging en datalekrespons. Ruimer gezondheidsgebruik of delen vereist de toepasselijke kennisgeving en nieuwe toestemming.\n\nDoseWeek wordt beheerd door Wonyoung Labs (원영랩스), Republiek Korea. Registratienummer voor verkoop op afstand: 제 2026-부산금정-0425 호 (geregistreerd bij Geumjeong-gu, Busan). Voor vragen en privacyverzoeken kunt u mailen naar wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -568,14 +568,14 @@
     },
     "pt-PT": {
       "title": "Política de privacidade dos dados de saúde dos consumidores nos EUA",
-      "intro": "Este texto produz efeitos a partir de 3 de outubro de 2026. As partes sobre contas, sincronização, Plus, anúncios e outras novidades descrevem a primeira versão do DoseWeek que as inclui (Android 1.0.6; iPhone, iPad 1.0.7) e aplicam-se a partir do lançamento dessa versão. As versões anteriores não têm estas funções.\n\nEste aviso separado abrange os dados de saúde dos utilizadores nos EUA, incluindo Washington, Nevada e Connecticut.",
+      "intro": "Este texto produz efeitos a partir de 3 de outubro de 2026. As partes sobre contas, sincronização, Plus, anúncios e outras novidades descrevem a primeira versão do DoseWeek que as inclui (Android 1.0.6; a próxima atualização para iOS) e aplicam-se a partir do lançamento dessa versão. As versões anteriores não têm estas funções.\n\nEste aviso separado abrange os dados de saúde dos utilizadores nos EUA, incluindo Washington, Nevada e Connecticut.",
       "effectiveDateLabel": "Data de entrada em vigor",
       "sections": [
         {
           "id": "categories",
           "title": "1. Dados de saúde",
           "paragraphs": [
-            "Os dados de saúde incluem medicamentos, doses e horários, notas, medidas corporais como peso, refeições e nutrição e inferências meramente indicativas, como estimativas de dose. Registos sincronizados cifrados e metadados ligados à conta, sincronização, acesso e utilização de serviços de saúde também podem estar abrangidos. O servidor não consegue ler registos cifrados ponto a ponto."
+            "Os dados de saúde incluem medicamentos, doses e horários, notas, medidas corporais como peso, refeições e nutrição e inferências meramente indicativas, como estimativas de dose. Registos sincronizados cifrados e metadados ligados à conta, sincronização, acesso e utilização de serviços de saúde também podem estar abrangidos. O servidor não consegue ler registos cifrados ponto a ponto. Se ativar o assistente de registos com IA (Pro) e confirmar o envio, tratamos também como informação de saúde o número de doses, a variação do peso, a contagem por tipo de sintoma e os totais de refeições e proteína elaborados a partir do que introduziu, o tipo de refeição, as preferências, as alergias e os alimentos de que não gosta escolhidos de listas predefinidas, e as perguntas da ajuda sobre a aplicação e o histórico da conversa atual. Este conteúdo não tem encriptação de ponta a ponta. O servidor do DoseWeek e a Google conseguem ler este conteúdo enquanto uma resposta é criada; o servidor do DoseWeek não o guarda. A Google também consegue ler este conteúdo enquanto a Google o mantiver: até 24 horas em memória, ou até 90 dias se os controlos de abuso da Google assinalarem um pedido, que funcionários autorizados da Google podem então analisar. A informação lida do HealthKit ou do Health Connect não é enviada ao assistente de registos com IA."
           ]
         },
         {
@@ -583,16 +583,16 @@
           "title": "2. Finalidades e fontes",
           "paragraphs": [
             "As fontes são os registos introduzidos e as leituras autorizadas que escolhe do Apple Saúde (HealthKit) ou Health Connect. O início Apple/Google e avisos da loja fornecem metadados de conta/compra. Não obtemos dados de saúde de intermediários de dados.",
-            "Usamos estes dados para apresentar e gerir registos, fazer cálculos indicativos, fornecer sincronização e cópias solicitadas e proteger o serviço. Não os usamos para diagnóstico, recomendações de tratamento ou publicidade ou análise baseada na saúde."
+            "Usamos estes dados para apresentar e gerir registos, fazer cálculos indicativos, fornecer sincronização e cópias solicitadas e proteger o serviço. Não os usamos para diagnóstico, recomendações de tratamento ou publicidade ou análise baseada na saúde. A pedido, usamo-la também para criar resumos de IA e ideias gerais de nutrição. As respostas da IA não são um diagnóstico nem uma recomendação de tratamento."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Comunicação e destinatários",
           "paragraphs": [
-            "Os subcontratantes de infraestrutura Cloudflare e AWS tratam os registos de saúde cifrados acima e metadados necessários de conta/ligação para transferência, alojamento, proteção e cópias. Devem seguir instruções e garantias contratuais; não autorizamos utilização autónoma de dados de saúde.",
+            "Os subcontratantes de infraestrutura Cloudflare e AWS tratam os registos de saúde cifrados acima e metadados necessários de conta/ligação para transferência, alojamento, proteção e cópias. Devem seguir instruções e garantias contratuais; não autorizamos utilização autónoma de dados de saúde. Os pedidos do assistente de registos com IA são tratados pela Google, enquanto subcontratante, no Google Cloud Vertex AI (Global, sem país fixo) para criar a resposta. A Google não usa o conteúdo para treinar modelos de IA; o tempo durante o qual a Google o pode manter está descrito na Política de Privacidade.",
             "Apple e Google tratam início/pagamentos nos seus próprios papéis; DoseWeek não envia conteúdo de saúde registado por essas vias. Google AdMob/Firebase recebem dados técnicos SDK descritos nas políticas gerais, não conteúdo de saúde registado. Dados técnicos que revelam utilização de serviços de saúde recebem as proteções aplicáveis. Não partilhamos dados de saúde com empresas afiliadas. Se escolher exportação, integração de calendário ou cópia na sua própria nuvem, destinatários e fornecedores de ficheiros/calendário/nuvem escolhidos recebem os detalhes selecionados ou ficheiro cifrado e podem criar outras cópias. Quando dados técnicos revelam utilização de serviços de saúde, comunicá-los à AdMob/Firebase exige o consentimento separado aplicável à partilha de dados de saúde; o consentimento para publicidade, por si só, não o substitui.",
-            "Não vendemos dados de saúde. Não enviamos conteúdo de saúde registado para publicidade nem usamos segmentação publicitária baseada na saúde. Não usamos delimitação geográfica junto de locais de cuidados para identificar ou seguir pessoas, recolher dados de saúde ou enviar mensagens ou anúncios de saúde."
+            "Não vendemos dados de saúde. Não enviamos conteúdo de saúde registado para publicidade nem usamos segmentação publicitária baseada na saúde. Não usamos delimitação geográfica junto de locais de cuidados para identificar ou seguir pessoas, recolher dados de saúde ou enviar mensagens ou anúncios de saúde. Também não vendemos a informação de saúde enviada ao assistente de registos com IA nem a partilhamos para fins de publicidade."
           ]
         },
         {
@@ -600,7 +600,7 @@
           "title": "4. Consentimento",
           "paragraphs": [
             "A sincronização de saúde opcional requer consentimento explícito. Recolha/utilização ou partilha sem consentimento limita-se ao necessário para o serviço solicitado. A exceção nunca abrange publicidade ou análise opcionais.",
-            "Partilha fora do serviço solicitado requer consentimento separado da recolha. A recusa mantém o registo local. Retirar é tão simples como consentir: desative a sincronização nas definições ou contacte-nos."
+            "Partilha fora do serviço solicitado requer consentimento separado da recolha. A recusa mantém o registo local. Retirar é tão simples como consentir: desative a sincronização nas definições ou contacte-nos. Para o assistente de registos com IA, pedimos o consentimento num ecrã separado quando o ativa pela primeira vez, e pedimos que confirme novamente sempre que são enviados registos. Pode retirá-lo a qualquer momento em Definições > Assistente de registos com IA."
           ]
         },
         {
@@ -625,7 +625,7 @@
           "id": "contact",
           "title": "7. Contacto e alterações",
           "paragraphs": [
-            "Operador: Wonyoung Labs. Contacto de privacidade: Wonyoung Choi, wonyoung@wonyoungchoi.dev. As políticas gerais explicam conservação, transferências, segurança e resposta a violações. Ampliar utilização ou partilha de saúde requer os avisos aplicáveis e novo consentimento."
+            "Operador: Wonyoung Labs. As políticas gerais explicam conservação, transferências, segurança e resposta a violações. Ampliar utilização ou partilha de saúde requer os avisos aplicáveis e novo consentimento.\n\nO DoseWeek é operado pela Wonyoung Labs (원영랩스), República da Coreia. Número de registo de venda à distância: 제 2026-부산금정-0425 호 (registado em Geumjeong-gu, Busan). Para questões e pedidos de privacidade, contacte wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -636,14 +636,14 @@
     },
     "pl": {
       "title": "Polityka prywatności danych zdrowotnych konsumentów w USA",
-      "intro": "Ten tekst obowiązuje od 3 października 2026 r. Części dotyczące kont, synchronizacji, Plus, reklam i innych nowych funkcji opisują pierwszą wersję DoseWeek, która je zawiera (Android 1.0.6; iPhone, iPad 1.0.7), i mają zastosowanie od wydania tej wersji. Wcześniejsze wersje nie mają tych funkcji.\n\nTa odrębna informacja obejmuje dane zdrowotne użytkowników w USA, w tym Washington, Nevada i Connecticut.",
+      "intro": "Ten tekst obowiązuje od 3 października 2026 r. Części dotyczące kont, synchronizacji, Plus, reklam i innych nowych funkcji opisują pierwszą wersję DoseWeek, która je zawiera (Android 1.0.6; następna aktualizacja na iOS), i mają zastosowanie od wydania tej wersji. Wcześniejsze wersje nie mają tych funkcji.\n\nTa odrębna informacja obejmuje dane zdrowotne użytkowników w USA, w tym Washington, Nevada i Connecticut.",
       "effectiveDateLabel": "Data wejścia w życie",
       "sections": [
         {
           "id": "categories",
           "title": "1. Dane zdrowotne",
           "paragraphs": [
-            "Dane zdrowotne obejmują nazwy leków, dawki i terminy, notatki, pomiary ciała, w tym wagę, posiłki i żywienie oraz wyłącznie orientacyjne wnioski, np. szacunki dawki. Mogą obejmować też zaszyfrowane synchronizowane zapisy i powiązane metadane konta, synchronizacji, dostępu i korzystania z usług zdrowotnych. Serwer nie odczyta zapisów szyfrowanych end-to-end."
+            "Dane zdrowotne obejmują nazwy leków, dawki i terminy, notatki, pomiary ciała, w tym wagę, posiłki i żywienie oraz wyłącznie orientacyjne wnioski, np. szacunki dawki. Mogą obejmować też zaszyfrowane synchronizowane zapisy i powiązane metadane konta, synchronizacji, dostępu i korzystania z usług zdrowotnych. Serwer nie odczyta zapisów szyfrowanych end-to-end. Jeśli włączysz asystenta wpisów AI (Pro) i potwierdzisz wysłanie, jako informacje o zdrowiu traktujemy także liczbę dawek, zmianę masy ciała, liczbę zapisów według rodzaju objawu oraz sumy posiłków i białka utworzone z wprowadzonych danych, rodzaje posiłków, preferencje, alergie i produkty, których nie lubisz, wybrane z wcześniej zdefiniowanych list, a także pytania do pomocy dotyczącej aplikacji i historię bieżącej rozmowy. Ta treść nie jest szyfrowana end-to-end. Serwer DoseWeek i Google mogą odczytać te treści podczas tworzenia odpowiedzi; serwer DoseWeek ich nie zachowuje. Google może też odczytać te treści tak długo, jak Google je przechowuje: do 24 godzin w pamięci albo do 90 dni, jeśli mechanizmy Google wykrywające nadużycia oznaczą żądanie; takie żądanie mogą wtedy sprawdzić upoważnieni pracownicy Google. Informacje odczytane z HealthKit lub Health Connect nie są wysyłane do asystenta wpisów AI."
           ]
         },
         {
@@ -651,16 +651,16 @@
           "title": "2. Cele i źródła",
           "paragraphs": [
             "Źródłami są wpisane zapisy i wybrane, dozwolone odczyty Apple Zdrowie (HealthKit) lub Health Connect. Logowanie Apple/Google i powiadomienia sklepu dostarczają metadane konta/zakupu. Nie pozyskujemy danych zdrowotnych od brokerów danych.",
-            "Używamy ich do wyświetlania i zarządzania zapisami, obliczeń orientacyjnych, żądanej synchronizacji i kopii oraz ochrony usługi. Nie służą diagnozie, zaleceniom leczenia ani reklamie lub analityce opartej na zdrowiu."
+            "Używamy ich do wyświetlania i zarządzania zapisami, obliczeń orientacyjnych, żądanej synchronizacji i kopii oraz ochrony usługi. Nie służą diagnozie, zaleceniom leczenia ani reklamie lub analityce opartej na zdrowiu. Na twoją prośbę używamy ich także do tworzenia podsumowań AI i ogólnych pomysłów żywieniowych. Odpowiedzi AI nie są diagnozą ani zaleceniem leczenia."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Ujawnianie i odbiorcy",
           "paragraphs": [
-            "Podmioty przetwarzające infrastrukturę Cloudflare i AWS obsługują opisane wyżej zaszyfrowane zapisy zdrowotne i niezbędne metadane konta/połączenia do przesyłania, hostingu, ochrony i kopii. Muszą stosować nasze instrukcje i zabezpieczenia umowne; nie zezwalamy na samodzielne użycie danych zdrowotnych.",
+            "Podmioty przetwarzające infrastrukturę Cloudflare i AWS obsługują opisane wyżej zaszyfrowane zapisy zdrowotne i niezbędne metadane konta/połączenia do przesyłania, hostingu, ochrony i kopii. Muszą stosować nasze instrukcje i zabezpieczenia umowne; nie zezwalamy na samodzielne użycie danych zdrowotnych. Żądania asystenta wpisów AI przetwarza Google, jako podmiot przetwarzający, w Google Cloud Vertex AI (Global, bez ustalonego kraju) w celu utworzenia odpowiedzi. Google nie używa treści do trenowania modeli AI; to, jak długo Google może je przechowywać, opisano w Polityce prywatności.",
             "Apple i Google obsługują logowanie/płatności we własnych rolach; DoseWeek nie wysyła tymi drogami zapisanej treści zdrowotnej. Google AdMob/Firebase otrzymują techniczne dane SDK opisane w politykach ogólnych, nie zapisaną treść zdrowotną. Dane techniczne ujawniające użycie usługi zdrowotnej podlegają właściwej ochronie. Nie udostępniamy danych zdrowotnych spółkom powiązanym. Po wyborze eksportu, integracji kalendarza lub własnej kopii w chmurze wybrani odbiorcy i dostawcy plików/kalendarza/chmury otrzymują wybrane informacje lub zaszyfrowany plik i mogą utworzyć kolejne kopie. Gdy dane techniczne ujawniają korzystanie z usług zdrowotnych, przekazanie ich AdMob/Firebase wymaga właściwej odrębnej zgody na udostępnianie danych zdrowotnych; sama zgoda reklamowa nie wystarcza.",
-            "Nie sprzedajemy danych zdrowotnych. Nie wysyłamy zapisanej treści zdrowotnej do reklamy ani nie stosujemy targetowania reklam na podstawie zdrowia. Nie stosujemy geofencingu wokół placówek opieki do identyfikacji lub śledzenia ludzi, zbierania danych zdrowotnych lub wysyłania zdrowotnych wiadomości czy reklam."
+            "Nie sprzedajemy danych zdrowotnych. Nie wysyłamy zapisanej treści zdrowotnej do reklamy ani nie stosujemy targetowania reklam na podstawie zdrowia. Nie stosujemy geofencingu wokół placówek opieki do identyfikacji lub śledzenia ludzi, zbierania danych zdrowotnych lub wysyłania zdrowotnych wiadomości czy reklam. Informacji o zdrowiu wysłanych do asystenta wpisów AI także nie sprzedajemy i nie udostępniamy do celów reklamowych."
           ]
         },
         {
@@ -668,7 +668,7 @@
           "title": "4. Zgoda",
           "paragraphs": [
             "Opcjonalna synchronizacja zdrowia wymaga wyraźnej zgody. Zbieranie/użycie lub udostępnianie bez zgody ogranicza się do konieczności świadczenia żądanej usługi. Wyjątek nigdy nie obejmuje opcjonalnych reklam lub analityki.",
-            "Udostępnianie poza żądaną usługą wymaga odrębnej zgody od zbierania. Odmowa nie blokuje lokalnych zapisów. Wycofanie jest równie łatwe jak udzielenie: należy wyłączyć synchronizację w ustawieniach lub skontaktować się z nami."
+            "Udostępnianie poza żądaną usługą wymaga odrębnej zgody od zbierania. Odmowa nie blokuje lokalnych zapisów. Wycofanie jest równie łatwe jak udzielenie: należy wyłączyć synchronizację w ustawieniach lub skontaktować się z nami. W przypadku asystenta wpisów AI prosimy o zgodę na osobnym ekranie przy pierwszym włączeniu, a przy każdym wysłaniu wpisów prosimy o ponowne potwierdzenie. Zgodę możesz wycofać w każdej chwili w Ustawieniach > Asystent wpisów AI."
           ]
         },
         {
@@ -693,7 +693,7 @@
           "id": "contact",
           "title": "7. Kontakt i zmiany",
           "paragraphs": [
-            "Operator: Wonyoung Labs. Kontakt prywatności: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Ogólne polityki wyjaśniają retencję, przekazywanie, bezpieczeństwo i reakcje na naruszenia. Rozszerzenie użycia lub udostępniania zdrowia wymaga właściwego zawiadomienia i nowej zgody."
+            "Operator: Wonyoung Labs. Ogólne polityki wyjaśniają retencję, przekazywanie, bezpieczeństwo i reakcje na naruszenia. Rozszerzenie użycia lub udostępniania zdrowia wymaga właściwego zawiadomienia i nowej zgody.\n\nDoseWeek prowadzi Wonyoung Labs (원영랩스), Republika Korei. Numer zgłoszenia sprzedaży na odległość: 제 2026-부산금정-0425 호 (zgłoszono w Geumjeong-gu, Busan). W sprawie pytań i wniosków dotyczących prywatności napisz na wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -704,14 +704,14 @@
     },
     "sv": {
       "title": "Integritetspolicy för amerikanska konsumenters hälsodata",
-      "intro": "Den här texten gäller från den 3 oktober 2026. Delarna om konton, synk, Plus, annonser och andra nya funktioner beskriver den första DoseWeek-versionen som har dem (Android 1.0.6; iPhone, iPad 1.0.7) och gäller från att den versionen släpps. Tidigare versioner har inte dessa funktioner.\n\nDenna separata information gäller hälsodata för användare i USA, inklusive Washington, Nevada och Connecticut.",
+      "intro": "Den här texten gäller från den 3 oktober 2026. Delarna om konton, synk, Plus, annonser och andra nya funktioner beskriver den första DoseWeek-versionen som har dem (Android 1.0.6; nästa iOS-uppdatering) och gäller från att den versionen släpps. Tidigare versioner har inte dessa funktioner.\n\nDenna separata information gäller hälsodata för användare i USA, inklusive Washington, Nevada och Connecticut.",
       "effectiveDateLabel": "Ikraftträdandedatum",
       "sections": [
         {
           "id": "categories",
           "title": "1. Hälsodata",
           "paragraphs": [
-            "Hälsodata omfattar läkemedelsnamn, doser och tidpunkter, anteckningar, kroppsmått som vikt, måltider och näring samt endast vägledande slutsatser som dosuppskattningar. Även krypterade synkroniserade uppgifter och kopplad konto-, synkroniserings-, åtkomst- och hälsotjänstanvändningsmetadata kan omfattas. Servern kan inte läsa totalsträckskrypterade uppgifter."
+            "Hälsodata omfattar läkemedelsnamn, doser och tidpunkter, anteckningar, kroppsmått som vikt, måltider och näring samt endast vägledande slutsatser som dosuppskattningar. Även krypterade synkroniserade uppgifter och kopplad konto-, synkroniserings-, åtkomst- och hälsotjänstanvändningsmetadata kan omfattas. Servern kan inte läsa totalsträckskrypterade uppgifter. Om du slår på AI-loggassistenten (Pro) och bekräftar att du vill skicka behandlar vi även följande som hälsoinformation: antal doser, viktförändring, antal per symptomtyp och summor för måltider och protein som har tagits fram ur det du har angett, måltidstyper, preferenser, allergier och livsmedel du inte tycker om som du har valt från fördefinierade listor samt apphjälpens frågor och den aktuella konversationshistoriken. Det här innehållet är inte totalsträckskrypterat. DoseWeek-servern och Google kan läsa innehållet medan ett svar skapas; DoseWeek-servern sparar det inte. Google kan också läsa innehållet så länge Google har kvar det: i minnet i upp till 24 timmar, eller i upp till 90 dagar om Googles missbrukskontroller flaggar en förfrågan, som behörig personal hos Google då kan granska. Uppgifter som har lästs från HealthKit eller Health Connect skickas inte till AI-loggassistenten."
           ]
         },
         {
@@ -719,16 +719,16 @@
           "title": "2. Syften och källor",
           "paragraphs": [
             "Källor är uppgifter du anger och avläsningar du väljer att tillåta från Apple Hälsa (HealthKit) eller Health Connect. Apple-/Google-inloggning och Store-meddelanden ger konto-/köpmetadata. Vi hämtar inte hälsodata från datamäklare.",
-            "Vi använder data för att visa och hantera dina uppgifter, göra vägledande beräkningar, ge begärd synkronisering och säkerhetskopiering och skydda tjänsten. De används inte för diagnos, behandlingsråd eller hälsobaserade annonser eller analyser."
+            "Vi använder data för att visa och hantera dina uppgifter, göra vägledande beräkningar, ge begärd synkronisering och säkerhetskopiering och skydda tjänsten. De används inte för diagnos, behandlingsråd eller hälsobaserade annonser eller analyser. På begäran använder vi den också för att skapa AI-sammanfattningar och allmänna kostidéer. AI-svar är inte en diagnos eller en behandlingsrekommendation."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Delning och mottagare",
           "paragraphs": [
-            "Infrastrukturbiträdena Cloudflare och AWS behandlar ovan beskrivna krypterade hälsouppgifter och nödvändig konto-/anslutningsmetadata för överföring, hosting, skydd och säkerhetskopiering. De måste följa våra instruktioner och avtalsgarantier; vi tillåter inte självständig användning av hälsodata.",
+            "Infrastrukturbiträdena Cloudflare och AWS behandlar ovan beskrivna krypterade hälsouppgifter och nödvändig konto-/anslutningsmetadata för överföring, hosting, skydd och säkerhetskopiering. De måste följa våra instruktioner och avtalsgarantier; vi tillåter inte självständig användning av hälsodata. Förfrågningar från AI-loggassistenten behandlas av Google, som är personuppgiftsbiträde, på Google Cloud Vertex AI (Global, inget fast land) för att skapa svaret. Google använder inte innehållet för att träna AI-modeller; hur länge Google kan hålla kvar det beskrivs i integritetspolicyn.",
             "Apple och Google hanterar inloggning/betalning i egna roller; DoseWeek skickar inget registrerat hälsoinnehåll via dessa vägar. Google AdMob/Firebase får tekniska SDK-data enligt allmänna integritetspolicyer, inte registrerat hälsoinnehåll. Tekniska data som avslöjar hälsotjänstanvändning får tillämpligt hälsodataskydd. Vi delar inga hälsodata med koncernbolag. Om du väljer export, kalenderintegration eller egen molnsäkerhetskopiering får valda mottagare och fil-/kalender-/molnleverantörer utvalda uppgifter eller krypterade filer och kan skapa ytterligare kopior. När tekniska data avslöjar hälsotjänstanvändning kräver delning med AdMob/Firebase tillämpligt separat samtycke till delning av hälsodata; annonssamtycke ensamt räcker inte.",
-            "Vi säljer inte hälsodata. Vi skickar inte registrerat hälsoinnehåll för annonser och använder inte hälsobaserad annonsinriktning. Vi använder inte geofencing runt vårdplatser för att identifiera eller spåra personer, samla hälsodata eller skicka hälsorelaterade meddelanden eller annonser."
+            "Vi säljer inte hälsodata. Vi skickar inte registrerat hälsoinnehåll för annonser och använder inte hälsobaserad annonsinriktning. Vi använder inte geofencing runt vårdplatser för att identifiera eller spåra personer, samla hälsodata eller skicka hälsorelaterade meddelanden eller annonser. Vi säljer inte heller hälsoinformation som skickas till AI-loggassistenten, och vi delar den inte för reklam."
           ]
         },
         {
@@ -736,7 +736,7 @@
           "title": "4. Ditt samtycke",
           "paragraphs": [
             "Valfri hälsosynkronisering använder uttryckligt samtycke. Insamling/användning eller delning utan samtycke begränsas till det nödvändiga för den begärda tjänsten. Undantaget gäller aldrig valfria annonser eller analyser.",
-            "Delning utanför begärd tjänst kräver separat samtycke från insamlingen. Vid avböjande fungerar lokal registrering. Det är lika enkelt att återkalla som att samtycka: stäng av synkronisering i Inställningar eller kontakta oss."
+            "Delning utanför begärd tjänst kräver separat samtycke från insamlingen. Vid avböjande fungerar lokal registrering. Det är lika enkelt att återkalla som att samtycka: stäng av synkronisering i Inställningar eller kontakta oss. För AI-loggassistenten ber vi om samtycke på en separat skärm när du slår på den första gången, och vi ber dig bekräfta igen varje gång poster skickas. Du kan när som helst återkalla samtycket under Inställningar > AI-loggassistenten."
           ]
         },
         {
@@ -761,7 +761,7 @@
           "id": "contact",
           "title": "7. Kontakt och ändringar",
           "paragraphs": [
-            "Operatör: Wonyoung Labs. Integritetskontakt: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Allmänna policyer förklarar lagring, överföring, säkerhet och incidenthantering. Utökad användning eller delning av hälsodata kräver tillämpligt meddelande och nytt samtycke."
+            "Operatör: Wonyoung Labs. Allmänna policyer förklarar lagring, överföring, säkerhet och incidenthantering. Utökad användning eller delning av hälsodata kräver tillämpligt meddelande och nytt samtycke.\n\nDoseWeek drivs av Wonyoung Labs (원영랩스), Republiken Korea. Registreringsnummer för distansförsäljning: 제 2026-부산금정-0425 호 (registrerat hos Geumjeong-gu, Busan). För frågor och integritetsärenden, kontakta wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -772,14 +772,14 @@
     },
     "hi": {
       "title": "अमेरिकी उपभोक्ता स्वास्थ्य डेटा गोपनीयता नीति",
-      "intro": "यह पाठ 3 अक्टूबर 2026 से प्रभावी है। खाते, सिंक, Plus, विज्ञापन और अन्य नई सुविधाओं से जुड़े हिस्से DoseWeek के उस पहले संस्करण का वर्णन करते हैं जिसमें ये सुविधाएँ हैं (Android 1.0.6; iPhone, iPad 1.0.7) और उस संस्करण के जारी होने से लागू होते हैं। पहले के संस्करणों में ये सुविधाएँ नहीं हैं।\n\nWashington, Nevada और Connecticut सहित अमेरिकी उपयोगकर्ताओं के लिए अलग स्वास्थ्य डेटा सूचना।",
+      "intro": "यह पाठ 3 अक्टूबर 2026 से प्रभावी है। खाते, सिंक, Plus, विज्ञापन और अन्य नई सुविधाओं से जुड़े हिस्से DoseWeek के उस पहले संस्करण का वर्णन करते हैं जिसमें ये सुविधाएँ हैं (Android 1.0.6; अगला iOS अपडेट) और उस संस्करण के जारी होने से लागू होते हैं। पहले के संस्करणों में ये सुविधाएँ नहीं हैं।\n\nWashington, Nevada और Connecticut सहित अमेरिकी उपयोगकर्ताओं के लिए अलग स्वास्थ्य डेटा सूचना।",
       "effectiveDateLabel": "प्रभावी तिथि",
       "sections": [
         {
           "id": "categories",
           "title": "1. स्वास्थ्य डेटा",
           "paragraphs": [
-            "स्वास्थ्य डेटा में दवाओं, खुराक और समय के रिकॉर्ड, नोट्स, वज़न जैसे शारीरिक माप, भोजन और पोषण की जानकारी, तथा केवल संदर्भ के लिए स्वास्थ्य संबंधी अनुमान शामिल हैं, जैसे खुराक का अनुमान। एन्क्रिप्ट किए गए सिंक रिकॉर्ड और उनसे जुड़ी खाते, सिंक, एक्सेस और स्वास्थ्य सेवा के उपयोग की जानकारी भी स्वास्थ्य डेटा हो सकती है। सर्वर एंड-टू-एंड एन्क्रिप्ट किए गए रिकॉर्ड नहीं पढ़ सकता।"
+            "स्वास्थ्य डेटा में दवाओं, खुराक और समय के रिकॉर्ड, नोट्स, वज़न जैसे शारीरिक माप, भोजन और पोषण की जानकारी, तथा केवल संदर्भ के लिए स्वास्थ्य संबंधी अनुमान शामिल हैं, जैसे खुराक का अनुमान। एन्क्रिप्ट किए गए सिंक रिकॉर्ड और उनसे जुड़ी खाते, सिंक, एक्सेस और स्वास्थ्य सेवा के उपयोग की जानकारी भी स्वास्थ्य डेटा हो सकती है। सर्वर एंड-टू-एंड एन्क्रिप्ट किए गए रिकॉर्ड नहीं पढ़ सकता। अगर आप AI रिकॉर्ड असिस्टेंट (Pro) चालू करते हैं और भेजने की पुष्टि करते हैं, तो हम आपके दर्ज किए गए रिकॉर्ड से बनी डोज़ की गिनती, वज़न में बदलाव, लक्षण के प्रकार के हिसाब से गिनती, भोजन और प्रोटीन के कुल आँकड़े, पहले से तय सूचियों से चुने गए भोजन के प्रकार, पसंद, एलर्जी और नापसंद खाद्य पदार्थ, तथा ऐप की मदद के सवाल और मौजूदा बातचीत के इतिहास को भी स्वास्थ्य जानकारी मानते हैं। यह सामग्री एंड-टू-एंड एन्क्रिप्टेड नहीं होती।जवाब बनते समय DoseWeek सर्वर और Google यह सामग्री पढ़ सकते हैं; DoseWeek सर्वर इसे नहीं रखता। Google यह सामग्री तब तक भी पढ़ सकता है जब तक Google इसे रखता है: मेमोरी में 24 घंटे तक, या 90 दिन तक अगर Google की दुरुपयोग की जाँच किसी अनुरोध को चिह्नित करती है; ऐसे अनुरोध की समीक्षा Google के अधिकृत कर्मचारी कर सकते हैं। HealthKit या Health Connect से पढ़ी गई जानकारी AI रिकॉर्ड असिस्टेंट को नहीं भेजी जाती।"
           ]
         },
         {
@@ -787,16 +787,16 @@
           "title": "2. डेटा के स्रोत और उपयोग",
           "paragraphs": [
             "आप रिकॉर्ड दर्ज करते हैं या Apple Health (HealthKit) अथवा Health Connect से उन रीडिंग को चुनते हैं जिनकी अनुमति आपने दी है। Apple/Google साइन-इन और Store की सूचनाओं से खाते और खरीद की जानकारी मिलती है। हम डेटा ब्रोकर से जानकारी नहीं लेते।",
-            "हम डेटा से आपके रिकॉर्ड दिखाते और सँभालते हैं, केवल संदर्भ के लिए गणनाएँ करते हैं, आपके अनुरोध पर सिंक और बैकअप देते हैं, और सेवा की सुरक्षा बनाए रखते हैं। हम निदान, उपचार की सलाह, या स्वास्थ्य डेटा से बने विज्ञापन या विश्लेषण नहीं देते।"
+            "हम डेटा से आपके रिकॉर्ड दिखाते और सँभालते हैं, केवल संदर्भ के लिए गणनाएँ करते हैं, आपके अनुरोध पर सिंक और बैकअप देते हैं, और सेवा की सुरक्षा बनाए रखते हैं। हम निदान, उपचार की सलाह, या स्वास्थ्य डेटा से बने विज्ञापन या विश्लेषण नहीं देते। आपके कहने पर हम इसका इस्तेमाल AI सारांश और पोषण के सामान्य आइडिया बनाने के लिए भी करते हैं। AI के जवाब निदान या इलाज की सिफ़ारिश नहीं हैं।"
           ]
         },
         {
           "id": "disclosures",
           "title": "3. डेटा किसे दिया जाता है",
           "paragraphs": [
-            "अवसंरचना सेवा प्रदाता Cloudflare और AWS एन्क्रिप्ट किए गए रिकॉर्ड तथा खाते और कनेक्शन की आवश्यक जानकारी को स्थानांतरण, होस्टिंग, सुरक्षा और बैकअप के लिए सँभालते हैं। उन्हें हमारे निर्देशों और अनुबंध में तय सुरक्षा उपायों का पालन करना अनिवार्य है; हम स्वास्थ्य डेटा के स्वतंत्र उपयोग की अनुमति नहीं देते।",
+            "अवसंरचना सेवा प्रदाता Cloudflare और AWS एन्क्रिप्ट किए गए रिकॉर्ड तथा खाते और कनेक्शन की आवश्यक जानकारी को स्थानांतरण, होस्टिंग, सुरक्षा और बैकअप के लिए सँभालते हैं। उन्हें हमारे निर्देशों और अनुबंध में तय सुरक्षा उपायों का पालन करना अनिवार्य है; हम स्वास्थ्य डेटा के स्वतंत्र उपयोग की अनुमति नहीं देते। AI रिकॉर्ड असिस्टेंट के अनुरोधों को प्रसंस्करणकर्ता Google, Google Cloud Vertex AI (Global, देश तय नहीं) पर जवाब बनाने के लिए प्रोसेस करता है। Google सामग्री का इस्तेमाल AI मॉडल के प्रशिक्षण के लिए नहीं करता; Google इसे कितने समय तक रख सकता है, यह गोपनीयता नीति में बताया गया है।",
             "Apple/Google अपनी भूमिकाओं में साइन-इन और भुगतान सँभालते हैं; DoseWeek साइन-इन या भुगतान के रास्तों से दर्ज की गई स्वास्थ्य सामग्री नहीं भेजता। Google AdMob/Firebase को केवल सामान्य गोपनीयता नीतियों में घोषित SDK तकनीकी डेटा मिलता है, दर्ज की गई स्वास्थ्य सामग्री नहीं। स्वास्थ्य सेवा के उपयोग का पता देने वाले तकनीकी डेटा पर भी लागू स्वास्थ्य डेटा सुरक्षा उपाय लागू होते हैं। आप निर्यात, कैलेंडर एकीकरण या अपना क्लाउड बैकअप चुनते हैं, तो चुने हुए प्राप्तकर्ताओं और फ़ाइल, कैलेंडर या क्लाउड सेवा प्रदाताओं को चुनी गई जानकारी या एन्क्रिप्ट की गई फ़ाइल मिलती है; वे आगे प्रतियाँ बना सकते हैं। जब तकनीकी डेटा से स्वास्थ्य सेवा के उपयोग का पता चलता है, तो AdMob/Firebase को इसे देने के लिए लागू नियमों के अनुसार स्वास्थ्य डेटा साझा करने की अलग सहमति चाहिए; केवल विज्ञापन की सहमति से यह अलग सहमति नहीं मिल जाती।",
-            "हम स्वास्थ्य डेटा संबद्ध कंपनियों के साथ साझा नहीं करते। हम स्वास्थ्य डेटा नहीं बेचते। हम विज्ञापन के लिए दर्ज की गई स्वास्थ्य सामग्री नहीं भेजते और स्वास्थ्य डेटा पर आधारित विज्ञापन लक्ष्यीकरण नहीं करते। लोगों की पहचान या निगरानी, स्वास्थ्य डेटा एकत्र करने, या स्वास्थ्य संबंधी संदेश या विज्ञापन भेजने के लिए स्वास्थ्य सेवा स्थानों के आसपास जियोफेंसिंग नहीं करते।"
+            "हम स्वास्थ्य डेटा संबद्ध कंपनियों के साथ साझा नहीं करते। हम स्वास्थ्य डेटा नहीं बेचते। हम विज्ञापन के लिए दर्ज की गई स्वास्थ्य सामग्री नहीं भेजते और स्वास्थ्य डेटा पर आधारित विज्ञापन लक्ष्यीकरण नहीं करते। लोगों की पहचान या निगरानी, स्वास्थ्य डेटा एकत्र करने, या स्वास्थ्य संबंधी संदेश या विज्ञापन भेजने के लिए स्वास्थ्य सेवा स्थानों के आसपास जियोफेंसिंग नहीं करते। AI रिकॉर्ड असिस्टेंट को भेजी गई स्वास्थ्य जानकारी भी हम नहीं बेचते और विज्ञापन के लिए साझा नहीं करते।"
           ]
         },
         {
@@ -804,7 +804,7 @@
           "title": "4. सहमति और आपके विकल्प",
           "paragraphs": [
             "वैकल्पिक स्वास्थ्य सिंक के लिए स्पष्ट सहमति ली जाती है। सहमति के बिना डेटा एकत्र करना, उपयोग करना या साझा करना केवल आपकी माँगी गई सेवा के लिए आवश्यक होने तक सीमित है। यह अपवाद वैकल्पिक विज्ञापनों या विश्लेषण पर कभी लागू नहीं होता।",
-            "माँगी गई सेवा से बाहर डेटा साझा करने के लिए, डेटा एकत्र करने की सहमति से अलग सहमति चाहिए। मना करने पर भी स्थानीय रिकॉर्ड रखना उपलब्ध रहता है। सहमति वापस लेना उतना ही आसान है जितना देना: सेटिंग्स में सिंक बंद करें या हमसे संपर्क करें।"
+            "माँगी गई सेवा से बाहर डेटा साझा करने के लिए, डेटा एकत्र करने की सहमति से अलग सहमति चाहिए। मना करने पर भी स्थानीय रिकॉर्ड रखना उपलब्ध रहता है। सहमति वापस लेना उतना ही आसान है जितना देना: सेटिंग्स में सिंक बंद करें या हमसे संपर्क करें। AI रिकॉर्ड असिस्टेंट के लिए हम उसे पहली बार चालू करते समय एक अलग स्क्रीन पर सहमति लेते हैं, और हर बार रिकॉर्ड भेजते समय दोबारा पुष्टि करवाते हैं। आप सेटिंग > AI रिकॉर्ड असिस्टेंट में कभी भी सहमति वापस ले सकते हैं।"
           ]
         },
         {
@@ -829,7 +829,7 @@
           "id": "contact",
           "title": "7. संपर्क और बदलाव",
           "paragraphs": [
-            "संचालक: Wonyoung Labs। गोपनीयता संपर्क: Wonyoung Choi, wonyoung@wonyoungchoi.dev। सामान्य गोपनीयता नीतियाँ डेटा रखने की अवधि, स्थानांतरण, सुरक्षा और डेटा उल्लंघन की प्रतिक्रिया समझाती हैं। स्वास्थ्य डेटा के उपयोग या साझाकरण का दायरा बढ़ाने वाले बदलावों के लिए लागू सूचना और नई सहमति जरूरी है।"
+            "संचालक: Wonyoung Labs। सामान्य गोपनीयता नीतियाँ डेटा रखने की अवधि, स्थानांतरण, सुरक्षा और डेटा उल्लंघन की प्रतिक्रिया समझाती हैं। स्वास्थ्य डेटा के उपयोग या साझाकरण का दायरा बढ़ाने वाले बदलावों के लिए लागू सूचना और नई सहमति जरूरी है।\n\nDoseWeek का संचालन Wonyoung Labs (원영랩스), कोरिया गणराज्य करता है। दूरस्थ बिक्री (मेल-ऑर्डर) पंजीकरण संख्या: 제 2026-부산금정-0425 호 (पंजीकरण: Geumjeong-gu, Busan)। प्रश्नों और गोपनीयता अनुरोधों के लिए wonyoung@wonyoungchoi.dev पर लिखें।"
           ]
         }
       ],
@@ -840,14 +840,14 @@
     },
     "pt-BR": {
       "title": "Política de privacidade de dados de saúde de consumidores nos EUA",
-      "intro": "Este texto entra em vigor em 3 de outubro de 2026. As partes sobre contas, sincronização, Plus, anúncios e outras novidades descrevem a primeira versão do DoseWeek que as inclui (Android 1.0.6; iPhone, iPad 1.0.7) e valem a partir do lançamento dessa versão. As versões anteriores não têm esses recursos.\n\nEste aviso separado cobre dados de saúde de usuários nos EUA, incluindo Washington, Nevada e Connecticut.",
+      "intro": "Este texto entra em vigor em 3 de outubro de 2026. As partes sobre contas, sincronização, Plus, anúncios e outras novidades descrevem a primeira versão do DoseWeek que as inclui (Android 1.0.6; a próxima atualização para iOS) e valem a partir do lançamento dessa versão. As versões anteriores não têm esses recursos.\n\nEste aviso separado cobre dados de saúde de usuários nos EUA, incluindo Washington, Nevada e Connecticut.",
       "effectiveDateLabel": "Data de vigência",
       "sections": [
         {
           "id": "categories",
           "title": "1. Dados de saúde",
           "paragraphs": [
-            "Dados de saúde incluem medicamentos, doses e horários, notas, medidas corporais como peso, refeições e nutrição e inferências apenas indicativas, como estimativas de dose. Registros sincronizados criptografados e metadados vinculados a conta, sincronização, acesso e uso de serviços de saúde também podem se enquadrar. O servidor não lê registros com criptografia ponta a ponta."
+            "Dados de saúde incluem medicamentos, doses e horários, notas, medidas corporais como peso, refeições e nutrição e inferências apenas indicativas, como estimativas de dose. Registros sincronizados criptografados e metadados vinculados a conta, sincronização, acesso e uso de serviços de saúde também podem se enquadrar. O servidor não lê registros com criptografia ponta a ponta. Se você ativar o assistente de registros com IA (Pro) e confirmar o envio, também tratamos como informações de saúde o número de doses, a variação do peso, a contagem por tipo de sintoma e os totais de refeições e proteína elaborados a partir do que você informou, os tipos de refeição, as preferências, as alergias e os alimentos de que você não gosta escolhidos de listas predefinidas, e as perguntas da ajuda sobre o app e o histórico da conversa atual. Esse conteúdo não tem criptografia de ponta a ponta. O servidor do DoseWeek e o Google conseguem ler esse conteúdo enquanto uma resposta é criada; o servidor do DoseWeek não o guarda. O Google também consegue ler esse conteúdo enquanto o Google o mantiver: por até 24 horas na memória, ou por até 90 dias se as verificações de abuso do Google sinalizarem uma solicitação, que funcionários autorizados do Google podem então analisar. As informações lidas do HealthKit ou do Health Connect não são enviadas ao assistente de registros com IA."
           ]
         },
         {
@@ -855,16 +855,16 @@
           "title": "2. Finalidades e fontes",
           "paragraphs": [
             "As fontes são registros que você insere e leituras autorizadas que escolhe do Apple Saúde (HealthKit) ou Health Connect. Login Apple/Google e avisos da loja fornecem metadados de conta/compra. Não obtemos dados de saúde de corretores de dados.",
-            "Usamos os dados para exibir e gerenciar seus registros, fazer cálculos indicativos, fornecer sincronização e backups solicitados e proteger o serviço. Não usamos para diagnóstico, recomendação de tratamento ou anúncios ou análises baseados na saúde."
+            "Usamos os dados para exibir e gerenciar seus registros, fazer cálculos indicativos, fornecer sincronização e backups solicitados e proteger o serviço. Não usamos para diagnóstico, recomendação de tratamento ou anúncios ou análises baseados na saúde. Quando você solicita, também as usamos para criar resumos de IA e ideias gerais de nutrição. As respostas da IA não são um diagnóstico nem uma recomendação de tratamento."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Compartilhamento e destinatários",
           "paragraphs": [
-            "Os operadores de infraestrutura Cloudflare e AWS tratam os registros de saúde criptografados acima e metadados necessários de conta/conexão para transferência, hospedagem, proteção e backups. Devem seguir nossas instruções e garantias contratuais; não autorizamos uso independente de dados de saúde.",
+            "Os operadores de infraestrutura Cloudflare e AWS tratam os registros de saúde criptografados acima e metadados necessários de conta/conexão para transferência, hospedagem, proteção e backups. Devem seguir nossas instruções e garantias contratuais; não autorizamos uso independente de dados de saúde. As solicitações do assistente de registros com IA são tratadas pelo Google, como operador, no Google Cloud Vertex AI (Global, sem país fixo) para criar a resposta. O Google não usa o conteúdo para treinar modelos de IA; o tempo pelo qual o Google pode mantê-lo está descrito na Política de Privacidade.",
             "Apple e Google tratam login/pagamento em seus próprios papéis; DoseWeek não envia conteúdo de saúde registrado por esses caminhos. Google AdMob/Firebase recebem dados técnicos SDK descritos nas políticas gerais, não o conteúdo de saúde registrado. Dados técnicos que revelem uso de serviço de saúde recebem as proteções aplicáveis. Não compartilhamos dados de saúde com empresas afiliadas. Se escolher exportação, integração de calendário ou backup na sua própria nuvem, destinatários e provedores de arquivos/calendário/nuvem escolhidos recebem os detalhes selecionados ou arquivo criptografado e podem fazer outras cópias. Quando dados técnicos revelam uso de serviços de saúde, divulgá-los à AdMob/Firebase exige o consentimento separado aplicável para compartilhar dados de saúde; consentimento para anúncios, por si só, não o substitui.",
-            "Não vendemos dados de saúde. Não enviamos conteúdo de saúde registrado para publicidade nem usamos segmentação de anúncios baseada na saúde. Não usamos cercas virtuais em torno de locais de saúde para identificar ou rastrear pessoas, coletar dados de saúde ou enviar mensagens ou anúncios de saúde."
+            "Não vendemos dados de saúde. Não enviamos conteúdo de saúde registrado para publicidade nem usamos segmentação de anúncios baseada na saúde. Não usamos cercas virtuais em torno de locais de saúde para identificar ou rastrear pessoas, coletar dados de saúde ou enviar mensagens ou anúncios de saúde. Também não vendemos as informações de saúde enviadas ao assistente de registros com IA nem as compartilhamos para publicidade."
           ]
         },
         {
@@ -872,7 +872,7 @@
           "title": "4. Seu consentimento",
           "paragraphs": [
             "A sincronização de saúde opcional usa consentimento explícito. Coleta/uso ou compartilhamento sem consentimento se limita ao necessário ao serviço solicitado. A exceção nunca cobre anúncios ou análises opcionais.",
-            "Compartilhar fora do serviço solicitado exige consentimento separado da coleta. Recusar mantém o registro local. Revogar é tão fácil quanto consentir: desative sincronização em Ajustes ou entre em contato."
+            "Compartilhar fora do serviço solicitado exige consentimento separado da coleta. Recusar mantém o registro local. Revogar é tão fácil quanto consentir: desative sincronização em Ajustes ou entre em contato. Para o assistente de registros com IA, pedimos o consentimento em uma tela separada quando você o ativa pela primeira vez, e pedimos que confirme de novo sempre que registros são enviados. Você pode revogá-lo a qualquer momento em Ajustes > Assistente de registros com IA."
           ]
         },
         {
@@ -897,7 +897,7 @@
           "id": "contact",
           "title": "7. Contato e mudanças",
           "paragraphs": [
-            "Operador: Wonyoung Labs. Contato de privacidade: Wonyoung Choi, wonyoung@wonyoungchoi.dev. As políticas gerais explicam retenção, transferências, segurança e resposta a incidentes. Ampliar uso ou compartilhamento de saúde exige os avisos aplicáveis e novo consentimento."
+            "Operador: Wonyoung Labs. As políticas gerais explicam retenção, transferências, segurança e resposta a incidentes. Ampliar uso ou compartilhamento de saúde exige os avisos aplicáveis e novo consentimento.\n\nO DoseWeek é operado pela Wonyoung Labs (원영랩스), República da Coreia. Número de registro de venda a distância: 제 2026-부산금정-0425 호 (registrado em Geumjeong-gu, Busan). Para dúvidas e solicitações de privacidade, escreva para wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -908,14 +908,14 @@
     },
     "ar": {
       "title": "سياسة خصوصية البيانات الصحية للمستهلكين في الولايات المتحدة",
-      "intro": "يسري هذا النص اعتبارًا من 3 أكتوبر 2026. الأجزاء المتعلقة بالحسابات والمزامنة و Plus والإعلانات وغيرها من الميزات الجديدة تصف أول إصدار من DoseWeek يتضمن هذه الميزات (Android 1.0.6; iPhone, iPad 1.0.7)، وتُطبَّق منذ صدور ذلك الإصدار. الإصدارات الأقدم لا تتضمن هذه الميزات.\n\nإشعار مستقل بشأن البيانات الصحية للمستخدمين في الولايات المتحدة، بما فيها Washington وNevada وConnecticut.",
+      "intro": "يسري هذا النص اعتبارًا من 3 أكتوبر 2026. الأجزاء المتعلقة بالحسابات والمزامنة و Plus والإعلانات وغيرها من الميزات الجديدة تصف أول إصدار من DoseWeek يتضمن هذه الميزات (Android 1.0.6; تحديث iOS القادم)، وتُطبَّق منذ صدور ذلك الإصدار. الإصدارات الأقدم لا تتضمن هذه الميزات.\n\nإشعار مستقل بشأن البيانات الصحية للمستخدمين في الولايات المتحدة، بما فيها Washington وNevada وConnecticut.",
       "effectiveDateLabel": "تاريخ السريان",
       "sections": [
         {
           "id": "categories",
           "title": "1. البيانات الصحية",
           "paragraphs": [
-            "تشمل البيانات الصحية سجلات الأدوية والجرعات وتوقيتها، والملاحظات، وقياسات الجسم مثل الوزن، والوجبات والتغذية، والاستنتاجات الصحية المخصصة للاستئناس فقط، مثل تقديرات الجرعات. وقد تشمل أيضًا السجلات المشفرة المتزامنة والبيانات المرتبطة بالحساب والمزامنة والوصول واستخدام الخدمات الصحية. لا يستطيع الخادم قراءة السجلات المشفرة من طرف إلى طرف."
+            "تشمل البيانات الصحية سجلات الأدوية والجرعات وتوقيتها، والملاحظات، وقياسات الجسم مثل الوزن، والوجبات والتغذية، والاستنتاجات الصحية المخصصة للاستئناس فقط، مثل تقديرات الجرعات. وقد تشمل أيضًا السجلات المشفرة المتزامنة والبيانات المرتبطة بالحساب والمزامنة والوصول واستخدام الخدمات الصحية. لا يستطيع الخادم قراءة السجلات المشفرة من طرف إلى طرف. إذا شغّلت مساعد السجلات بالذكاء الاصطناعي (Pro) وأكدت الإرسال، فإننا نعامل أيضًا كمعلومات صحية عدد الجرعات والتغيّر في الوزن والعدد حسب نوع العَرَض ومجاميع الوجبات والبروتين المستخلصة مما أدخلته، وأنواع الوجبات والتفضيلات والحساسية والأطعمة التي لا تحبها المختارة من قوائم محددة مسبقًا، وأسئلة المساعدة في استخدام التطبيق وسجل المحادثة الحالية. هذا المحتوى غير مشفّر من طرف إلى طرف. يستطيع خادم DoseWeek وGoogle قراءة هذا المحتوى أثناء إنشاء الإجابة؛ ولا يحتفظ به خادم DoseWeek. وتستطيع Google أيضًا قراءة هذا المحتوى ما دامت تحتفظ به: في الذاكرة مدة تصل إلى 24 ساعة، أو مدة تصل إلى 90 يومًا إذا أشارت فحوص إساءة الاستخدام لدى Google إلى طلب ما، وعندها قد يراجعه موظفون مخوَّلون لدى Google. المعلومات المقروءة من HealthKit أو Health Connect لا تُرسَل إلى مساعد السجلات بالذكاء الاصطناعي."
           ]
         },
         {
@@ -923,16 +923,16 @@
           "title": "2. مصادر البيانات وأغراض استخدامها",
           "paragraphs": [
             "تُدخل السجلات بنفسك، أو تختار القراءات التي سمحت بالوصول إليها من Apple Health (HealthKit) أو Health Connect. توفر خدمة تسجيل الدخول من Apple/Google وإشعارات Store بيانات الحساب والمشتريات. لا نحصل على البيانات من وسطاء البيانات.",
-            "نستخدم البيانات لعرض سجلاتك وإدارتها، وإجراء حسابات للاستئناس فقط، وتوفير المزامنة والنسخ الاحتياطية التي تطلبها، وحماية أمن الخدمة. لا نقدم تشخيصًا أو توصيات علاجية، ولا نستخدم البيانات الصحية لإنتاج إعلانات أو تحليلات."
+            "نستخدم البيانات لعرض سجلاتك وإدارتها، وإجراء حسابات للاستئناس فقط، وتوفير المزامنة والنسخ الاحتياطية التي تطلبها، وحماية أمن الخدمة. لا نقدم تشخيصًا أو توصيات علاجية، ولا نستخدم البيانات الصحية لإنتاج إعلانات أو تحليلات. عند طلبك نستخدمها أيضًا لإنشاء ملخصات بالذكاء الاصطناعي وأفكار تغذية عامة. إجابات الذكاء الاصطناعي ليست تشخيصًا ولا توصية علاجية."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. الجهات التي تتلقى البيانات",
           "paragraphs": [
-            "تعالج جهتا البنية التحتية Cloudflare وAWS السجلات المشفرة وبيانات الحساب والاتصال الضرورية للنقل والاستضافة والحماية والنسخ الاحتياطي. وعليهما الالتزام بتعليماتنا والضمانات التعاقدية؛ ولا نجيز الاستخدام المستقل للبيانات الصحية.",
+            "تعالج جهتا البنية التحتية Cloudflare وAWS السجلات المشفرة وبيانات الحساب والاتصال الضرورية للنقل والاستضافة والحماية والنسخ الاحتياطي. وعليهما الالتزام بتعليماتنا والضمانات التعاقدية؛ ولا نجيز الاستخدام المستقل للبيانات الصحية. تعالج Google، بصفتها جهة معالجة، طلبات مساعد السجلات بالذكاء الاصطناعي على Google Cloud Vertex AI (Global، بلا بلد محدد) لإنشاء الإجابة. لا تستخدم Google المحتوى لتدريب نماذج الذكاء الاصطناعي؛ والمدة التي قد تُبقيه Google خلالها موضحة في سياسة الخصوصية.",
             "تتولى Apple/Google تسجيل الدخول والدفع ضمن أدوارها الخاصة؛ ولا يرسل DoseWeek المحتوى الصحي المسجل عبر مسارات تسجيل الدخول أو الدفع. تتلقى Google AdMob/Firebase فقط البيانات التقنية لحزم SDK المعلنة في سياسات الخصوصية العامة، ولا تتلقى المحتوى الصحي المسجل. وتخضع البيانات التقنية التي تكشف استخدام الخدمات الصحية للحماية المطبقة على البيانات الصحية. إذا اخترت التصدير أو تكامل التقويم أو النسخ الاحتياطي إلى سحابتك، فتتلقى الجهات التي تختارها ومزودو خدمات الملفات أو التقويم أو السحابة المعلومات المحددة أو الملف المشفر، وقد تنشئ نسخًا لاحقة. عندما تكشف البيانات التقنية استخدام الخدمات الصحية، يتطلب الإفصاح عنها لـ AdMob/Firebase الموافقة المنفصلة الواجبة على مشاركة البيانات الصحية؛ ولا تكفي الموافقة على الإعلانات وحدها لإثبات هذه الموافقة.",
-            "لا نشارك البيانات الصحية مع الشركات التابعة. لا نبيع البيانات الصحية. لا نرسل المحتوى الصحي المسجل لأغراض الإعلان ولا نستخدم استهدافًا إعلانيًا مستمدًا من البيانات الصحية. ولا نستخدم السياج الجغرافي حول مواقع الرعاية الصحية للتعرف على الأشخاص أو تتبعهم، أو لجمع البيانات الصحية، أو لإرسال رسائل أو إعلانات مرتبطة بالصحة."
+            "لا نشارك البيانات الصحية مع الشركات التابعة. لا نبيع البيانات الصحية. لا نرسل المحتوى الصحي المسجل لأغراض الإعلان ولا نستخدم استهدافًا إعلانيًا مستمدًا من البيانات الصحية. ولا نستخدم السياج الجغرافي حول مواقع الرعاية الصحية للتعرف على الأشخاص أو تتبعهم، أو لجمع البيانات الصحية، أو لإرسال رسائل أو إعلانات مرتبطة بالصحة. لا نبيع كذلك المعلومات الصحية المرسلة إلى مساعد السجلات بالذكاء الاصطناعي ولا نشاركها لأغراض الإعلان."
           ]
         },
         {
@@ -940,7 +940,7 @@
           "title": "4. الموافقة وخياراتك",
           "paragraphs": [
             "تتطلب المزامنة الصحية الاختيارية موافقة صريحة. يقتصر جمع البيانات أو استخدامها أو مشاركتها دون موافقة على ما يلزم لتقديم الخدمة التي طلبتها. ولا يشمل هذا الاستثناء مطلقًا الإعلانات أو التحليلات الاختيارية.",
-            "تتطلب المشاركة خارج نطاق الخدمة المطلوبة موافقة منفصلة عن موافقة الجمع. يظل تسجيل البيانات محليًا متاحًا عند الرفض. سحب الموافقة سهل بقدر منحها: أوقف المزامنة في الإعدادات أو تواصل معنا."
+            "تتطلب المشاركة خارج نطاق الخدمة المطلوبة موافقة منفصلة عن موافقة الجمع. يظل تسجيل البيانات محليًا متاحًا عند الرفض. سحب الموافقة سهل بقدر منحها: أوقف المزامنة في الإعدادات أو تواصل معنا. في مساعد السجلات بالذكاء الاصطناعي نطلب موافقتك على شاشة منفصلة عند تشغيله لأول مرة، ونطلب منك التأكيد مرة أخرى في كل مرة تُرسَل فيها سجلات. يمكنك سحب الموافقة في أي وقت من الإعدادات > مساعد السجلات بالذكاء الاصطناعي."
           ]
         },
         {
@@ -965,7 +965,7 @@
           "id": "contact",
           "title": "7. التواصل والتغييرات",
           "paragraphs": [
-            "المشغّل: Wonyoung Labs. جهة التواصل بشأن الخصوصية: Wonyoung Choi، wonyoung@wonyoungchoi.dev. تشرح سياسات الخصوصية العامة الاحتفاظ بالبيانات ونقلها وأمنها والاستجابة لخرق البيانات. تتطلب التغييرات التي توسع استخدام البيانات الصحية أو مشاركتها الإشعار الواجب وموافقة جديدة."
+            "المشغّل: Wonyoung Labs. تشرح سياسات الخصوصية العامة الاحتفاظ بالبيانات ونقلها وأمنها والاستجابة لخرق البيانات. تتطلب التغييرات التي توسع استخدام البيانات الصحية أو مشاركتها الإشعار الواجب وموافقة جديدة.\n\nتشغّل DoseWeek شركة Wonyoung Labs (원영랩스) في جمهورية كوريا. رقم تسجيل البيع عن بُعد: 제 2026-부산금정-0425 호 (مسجّل لدى Geumjeong-gu، بوسان). للاستفسارات وطلبات الخصوصية راسل wonyoung@wonyoungchoi.dev."
           ]
         }
       ],
@@ -976,14 +976,14 @@
     },
     "zh-Hans": {
       "title": "美国消费者健康数据隐私政策",
-      "intro": "本内容自 2026 年 10 月 3 日起生效。有关账号、同步、Plus、广告等新功能的部分说明的是首个包含这些功能的 DoseWeek 版本(Android 1.0.6; iPhone, iPad 1.0.7)，自该版本发布时起适用。更早的版本没有这些功能。\n\n面向美国用户的独立健康数据通知，涵盖 Washington、Nevada 和 Connecticut。",
+      "intro": "本内容自 2026 年 10 月 3 日起生效。有关账号、同步、Plus、广告等新功能的部分说明的是首个包含这些功能的 DoseWeek 版本(Android 1.0.6; 下一次 iOS 更新)，自该版本发布时起适用。更早的版本没有这些功能。\n\n面向美国用户的独立健康数据通知，涵盖 Washington、Nevada 和 Connecticut。",
       "effectiveDateLabel": "生效日期",
       "sections": [
         {
           "id": "categories",
           "title": "1. 健康数据",
           "paragraphs": [
-            "健康数据包括用药、剂量和时间记录、备注、体重等身体测量数据、饮食与营养信息，以及仅供参考的健康推断，例如剂量估算。加密的同步记录及相关账户、同步、访问和健康服务使用元数据也可能属于健康数据。服务器无法读取端到端加密的记录。"
+            "健康数据包括用药、剂量和时间记录、备注、体重等身体测量数据、饮食与营养信息，以及仅供参考的健康推断，例如剂量估算。加密的同步记录及相关账户、同步、访问和健康服务使用元数据也可能属于健康数据。服务器无法读取端到端加密的记录。如果您开启 AI 记录助手（Pro）并确认发送，我们也会将以下内容作为健康信息处理：根据您输入的记录生成的用药次数、体重变化、按症状类别统计的次数、饮食和蛋白质汇总，从预设列表中选择的餐别、偏好、过敏和不喜欢的食物，以及应用使用帮助的问题和当前对话记录。这些内容不属于端到端加密的范围。在生成回答期间，DoseWeek 服务器和 Google 可以读取这些内容；DoseWeek 服务器不会保留。在 Google 保留这些内容期间，Google 也可以读取这些内容：在内存中最长 24 小时；如果 Google 的滥用检测标记了某个请求，则最长 90 天，届时可能由获授权的 Google 员工进行审核。从 HealthKit 或 Health Connect 读取的信息不会发送给 AI 记录助手。"
           ]
         },
         {
@@ -991,16 +991,16 @@
           "title": "2. 数据来源与用途",
           "paragraphs": [
             "您自行输入记录，或从 Apple Health（HealthKit）或 Health Connect 中选择已授权的读数。Apple/Google 登录和 Store 通知提供账户与购买元数据。我们不从数据经纪商获取数据。",
-            "我们使用数据来显示和管理您的记录、进行仅供参考的计算、提供您请求的同步与备份，并保障服务安全。我们不提供诊断或治疗建议，也不基于健康数据制作广告或进行分析。"
+            "我们使用数据来显示和管理您的记录、进行仅供参考的计算、提供您请求的同步与备份，并保障服务安全。我们不提供诊断或治疗建议，也不基于健康数据制作广告或进行分析。在您提出请求时，我们也会将其用于生成 AI 摘要和一般营养建议。AI 回答不是诊断或治疗建议。"
           ]
         },
         {
           "id": "disclosures",
           "title": "3. 接收数据的各方",
           "paragraphs": [
-            "基础设施处理方 Cloudflare 和 AWS 处理加密记录和必要的账户、连接元数据，用于传输、托管、保护和备份。它们必须遵守我们的指示及合同保障措施；我们不授权它们独立使用健康数据。",
+            "基础设施处理方 Cloudflare 和 AWS 处理加密记录和必要的账户、连接元数据，用于传输、托管、保护和备份。它们必须遵守我们的指示及合同保障措施；我们不授权它们独立使用健康数据。AI 记录助手的请求由作为受托处理方的 Google 在 Google Cloud Vertex AI（Global，国家不固定）上处理，用于生成回答。Google 不会将内容用于训练 AI 模型；Google 可保留内容的期限见隐私政策。",
             "Apple/Google 根据各自的角色处理登录和付款；DoseWeek 不通过登录或付款路径发送记录的健康内容。Google AdMob/Firebase 仅接收一般隐私政策中已披露的 SDK 技术数据，不接收记录的健康内容。透露健康服务使用情况的技术数据也享有适用的健康数据保护。如您选择导出、日历集成或自行使用的云备份，选定的接收方及文件、日历或云服务提供方会收到选定的信息或加密文件，并可能进一步生成副本。当技术数据透露健康服务使用情况时，向 AdMob/Firebase 披露这些数据须根据适用要求取得健康数据共享的单独同意；仅有广告同意不等于已取得这项同意。",
-            "我们不与关联公司共享健康数据。我们不出售健康数据。我们不为广告发送记录的健康内容，也不基于健康数据进行广告定向。我们不在医疗服务地点周边使用地理围栏来识别或追踪人员、收集健康数据，或发送健康相关信息或广告。"
+            "我们不与关联公司共享健康数据。我们不出售健康数据。我们不为广告发送记录的健康内容，也不基于健康数据进行广告定向。我们不在医疗服务地点周边使用地理围栏来识别或追踪人员、收集健康数据，或发送健康相关信息或广告。发送给 AI 记录助手的健康信息我们同样不会出售，也不会为广告目的而提供。"
           ]
         },
         {
@@ -1008,7 +1008,7 @@
           "title": "4. 同意与选择",
           "paragraphs": [
             "可选的健康同步需要明确同意。未经同意的收集、使用或共享，仅限于提供您请求的服务所必需的范围。此例外绝不适用于可选广告或分析。",
-            "超出所请求服务范围的共享，需要与收集同意分开的独立同意。拒绝后仍可在本地记录。撤回同意与给予同意同样方便：在设置中关闭同步，或联系我们。"
+            "超出所请求服务范围的共享，需要与收集同意分开的独立同意。拒绝后仍可在本地记录。撤回同意与给予同意同样方便：在设置中关闭同步，或联系我们。对于 AI 记录助手，我们会在您首次开启时通过单独的同意界面征求同意，并在每次发送记录时请您再次确认。您可以随时在“设置 > AI 记录助手”中撤回同意。"
           ]
         },
         {
@@ -1033,7 +1033,7 @@
           "id": "contact",
           "title": "7. 联系与变更",
           "paragraphs": [
-            "运营方：Wonyoung Labs。隐私联系人：Wonyoung Choi，wonyoung@wonyoungchoi.dev。一般隐私政策说明数据保留、传输、安全及数据泄露响应。扩大健康数据用途或共享范围的变更，需要依法通知并取得新的同意。"
+            "运营方：Wonyoung Labs。一般隐私政策说明数据保留、传输、安全及数据泄露响应。扩大健康数据用途或共享范围的变更，需要依法通知并取得新的同意。\n\nDoseWeek 由大韩民国的 Wonyoung Labs（원영랩스）运营。通信销售业申报编号：제 2026-부산금정-0425 호（申报机关：釜山广域市金井区）。咨询和隐私相关请求请发送至 wonyoung@wonyoungchoi.dev。"
           ]
         }
       ],
@@ -1044,14 +1044,14 @@
     },
     "zh-Hant": {
       "title": "美國消費者健康資料隱私政策",
-      "intro": "本內容自 2026 年 10 月 3 日起生效。有關帳號、同步、Plus、廣告等新功能的部分說明的是首個包含這些功能的 DoseWeek 版本(Android 1.0.6; iPhone, iPad 1.0.7)，自該版本發布時起適用。更早的版本沒有這些功能。\n\n提供給美國使用者的獨立健康資料通知，涵蓋 Washington、Nevada 和 Connecticut。",
+      "intro": "本內容自 2026 年 10 月 3 日起生效。有關帳號、同步、Plus、廣告等新功能的部分說明的是首個包含這些功能的 DoseWeek 版本(Android 1.0.6; 下一次 iOS 更新)，自該版本發布時起適用。更早的版本沒有這些功能。\n\n提供給美國使用者的獨立健康資料通知，涵蓋 Washington、Nevada 和 Connecticut。",
       "effectiveDateLabel": "生效日期",
       "sections": [
         {
           "id": "categories",
           "title": "1. 健康資料",
           "paragraphs": [
-            "健康資料包括用藥、劑量和時間紀錄、備註、體重等身體測量資料、飲食與營養資訊，以及僅供參考的健康推論，例如劑量估算。加密的同步紀錄及相關帳戶、同步、存取和健康服務使用中繼資料也可能屬於健康資料。伺服器無法讀取端對端加密的紀錄。"
+            "健康資料包括用藥、劑量和時間紀錄、備註、體重等身體測量資料、飲食與營養資訊，以及僅供參考的健康推論，例如劑量估算。加密的同步紀錄及相關帳戶、同步、存取和健康服務使用中繼資料也可能屬於健康資料。伺服器無法讀取端對端加密的紀錄。如果您開啟 AI 紀錄助手（Pro）並確認傳送，我們也會將下列內容作為健康資訊處理：根據您輸入的紀錄產生的用藥次數、體重變化、依症狀類別統計的次數、飲食和蛋白質彙總，從預設清單中選擇的餐別、偏好、過敏和不喜歡的食物，以及 App 使用說明的問題和目前的對話紀錄。這些內容不屬於端對端加密的範圍。在產生回答期間，DoseWeek 伺服器和 Google 可以讀取這些內容；DoseWeek 伺服器不會保留。在 Google 保留這些內容期間，Google 也可以讀取這些內容：在記憶體中最長 24 小時；如果 Google 的濫用偵測標記了某個請求，則最長 90 天，屆時可能由獲授權的 Google 員工進行審查。從 HealthKit 或 Health Connect 讀取的資訊不會傳送給 AI 紀錄助手。"
           ]
         },
         {
@@ -1059,16 +1059,16 @@
           "title": "2. 資料來源與用途",
           "paragraphs": [
             "您自行輸入紀錄，或從 Apple Health（HealthKit）或 Health Connect 中選擇已授權的讀數。Apple/Google 登入和 Store 通知提供帳戶與購買中繼資料。我們不從資料仲介商取得資料。",
-            "我們使用資料來顯示和管理您的紀錄、進行僅供參考的計算、提供您要求的同步與備份，並保障服務安全。我們不提供診斷或治療建議，也不依據健康資料製作廣告或進行分析。"
+            "我們使用資料來顯示和管理您的紀錄、進行僅供參考的計算、提供您要求的同步與備份，並保障服務安全。我們不提供診斷或治療建議，也不依據健康資料製作廣告或進行分析。在您提出要求時，我們也會將其用於產生 AI 摘要和一般營養建議。AI 回答不是診斷或治療建議。"
           ]
         },
         {
           "id": "disclosures",
           "title": "3. 接收資料的各方",
           "paragraphs": [
-            "基礎設施處理方 Cloudflare 和 AWS 處理加密紀錄和必要的帳戶、連線中繼資料，用於傳輸、託管、保護和備份。它們必須遵守我們的指示及合約保障措施；我們不授權它們獨立使用健康資料。",
+            "基礎設施處理方 Cloudflare 和 AWS 處理加密紀錄和必要的帳戶、連線中繼資料，用於傳輸、託管、保護和備份。它們必須遵守我們的指示及合約保障措施；我們不授權它們獨立使用健康資料。AI 紀錄助手的請求由作為受託處理方的 Google 在 Google Cloud Vertex AI（Global，國家不固定）上處理，用於產生回答。Google 不會將內容用於訓練 AI 模型；Google 可保留內容的期限見隱私權政策。",
             "Apple/Google 依各自的角色處理登入和付款；DoseWeek 不透過登入或付款流程傳送記錄的健康內容。Google AdMob/Firebase 僅接收一般隱私政策中已揭露的 SDK 技術資料，不接收紀錄的健康內容。透露健康服務使用情況的技術資料也享有適用的健康資料保護。如您選擇匯出、行事曆整合或自行使用的雲端備份，選定的接收方及檔案、行事曆或雲端服務提供方會收到選定的資訊或加密檔案，並可能進一步產生副本。當技術資料透露健康服務使用情況時，向 AdMob/Firebase 揭露這些資料須依適用要求取得健康資料分享的獨立同意；僅有廣告同意不等於已取得這項同意。",
-            "我們不與關係企業分享健康資料。我們不出售健康資料。我們不為廣告傳送記錄的健康內容，也不以健康資料為依據鎖定廣告對象。我們不在醫療服務地點周邊使用地理圍欄來識別或追蹤人員、收集健康資料，或傳送健康相關訊息或廣告。"
+            "我們不與關係企業分享健康資料。我們不出售健康資料。我們不為廣告傳送記錄的健康內容，也不以健康資料為依據鎖定廣告對象。我們不在醫療服務地點周邊使用地理圍欄來識別或追蹤人員、收集健康資料，或傳送健康相關訊息或廣告。傳送給 AI 紀錄助手的健康資訊我們同樣不會出售，也不會為廣告目的而提供。"
           ]
         },
         {
@@ -1076,7 +1076,7 @@
           "title": "4. 同意與選擇",
           "paragraphs": [
             "選用的健康同步需要明確同意。未經同意的收集、使用或分享，僅限於提供您要求的服務所必需的範圍。此例外絕不適用於選用廣告或分析。",
-            "超出所要求服務範圍的分享，需要與收集同意分開的獨立同意。拒絕後仍可在本機記錄。撤回同意與給予同意同樣方便：在設定中關閉同步，或聯絡我們。"
+            "超出所要求服務範圍的分享，需要與收集同意分開的獨立同意。拒絕後仍可在本機記錄。撤回同意與給予同意同樣方便：在設定中關閉同步，或聯絡我們。對於 AI 紀錄助手，我們會在您首次開啟時透過獨立的同意畫面徵求同意，並在每次傳送紀錄時請您再次確認。您可以隨時在「設定 > AI 紀錄助手」中撤回同意。"
           ]
         },
         {
@@ -1101,7 +1101,7 @@
           "id": "contact",
           "title": "7. 聯絡與變更",
           "paragraphs": [
-            "營運者：Wonyoung Labs。隱私聯絡人：Wonyoung Choi，wonyoung@wonyoungchoi.dev。一般隱私政策說明資料保留、傳輸、安全及資料外洩應變。擴大健康資料用途或分享範圍的變更，需要依法通知並取得新的同意。"
+            "營運者：Wonyoung Labs。一般隱私政策說明資料保留、傳輸、安全及資料外洩應變。擴大健康資料用途或分享範圍的變更，需要依法通知並取得新的同意。\n\nDoseWeek 由大韓民國的 Wonyoung Labs（원영랩스）營運。通信銷售業申報編號：제 2026-부산금정-0425 호（申報機關：釜山廣域市金井區）。諮詢與隱私相關請求請寄至 wonyoung@wonyoungchoi.dev。"
           ]
         }
       ],
@@ -1112,14 +1112,14 @@
     },
     "tr": {
       "title": "ABD Tüketici Sağlık Verileri Gizlilik Politikası",
-      "intro": "Bu metin 3 Ekim 2026’da yürürlüğe girer. Hesaplar, eşitleme, Plus, reklamlar ve diğer yeni özelliklerle ilgili bölümler, bu özellikleri içeren ilk DoseWeek sürümünü (Android 1.0.6; iPhone, iPad 1.0.7) anlatır ve o sürümün yayımlanmasıyla uygulanır. Önceki sürümlerde bu özellikler yoktur.\n\nWashington, Nevada ve Connecticut dâhil ABD'deki kullanıcılar için ayrı sağlık verisi bildirimi.",
+      "intro": "Bu metin 3 Ekim 2026’da yürürlüğe girer. Hesaplar, eşitleme, Plus, reklamlar ve diğer yeni özelliklerle ilgili bölümler, bu özellikleri içeren ilk DoseWeek sürümünü (Android 1.0.6; bir sonraki iOS güncellemesi) anlatır ve o sürümün yayımlanmasıyla uygulanır. Önceki sürümlerde bu özellikler yoktur.\n\nWashington, Nevada ve Connecticut dâhil ABD'deki kullanıcılar için ayrı sağlık verisi bildirimi.",
       "effectiveDateLabel": "Yürürlük tarihi",
       "sections": [
         {
           "id": "categories",
           "title": "1. Sağlık verileri",
           "paragraphs": [
-            "Sağlık verileri; ilaç, doz ve zamanlama kayıtlarını, notları, kilo gibi vücut ölçümlerini, öğün ve beslenme bilgilerini ve doz tahminleri gibi yalnızca referans amaçlı sağlık çıkarımlarını kapsar. Şifrelenmiş eşitleme kayıtları ile bunlara bağlı hesap, eşitleme, erişim ve sağlık hizmeti kullanım üst verileri de sağlık verisi sayılabilir. Sunucu, uçtan uca şifrelenmiş kayıtları okuyamaz."
+            "Sağlık verileri; ilaç, doz ve zamanlama kayıtlarını, notları, kilo gibi vücut ölçümlerini, öğün ve beslenme bilgilerini ve doz tahminleri gibi yalnızca referans amaçlı sağlık çıkarımlarını kapsar. Şifrelenmiş eşitleme kayıtları ile bunlara bağlı hesap, eşitleme, erişim ve sağlık hizmeti kullanım üst verileri de sağlık verisi sayılabilir. Sunucu, uçtan uca şifrelenmiş kayıtları okuyamaz. Yapay zeka kayıt asistanını (Pro) açar ve gönderimi onaylarsanız, girdiğiniz kayıtlardan oluşturulan doz sayılarını, kilo değişimini, belirti türüne göre sayıları, öğün ve protein toplamlarını, önceden tanımlanmış listelerden seçilen öğün türlerini, tercihleri, alerjileri ve sevmediğiniz yiyecekleri, uygulama yardımı sorularını ve geçerli konuşma geçmişini de sağlık bilgisi olarak ele alırız. Bu içerik uçtan uca şifrelenmez. Bir yanıt oluşturulurken DoseWeek sunucusu ve Google bu içeriği okuyabilir; DoseWeek sunucusu içeriği saklamaz. Google bu içeriği, Google’da tutulduğu sürece de okuyabilir: bellekte 24 saate kadar veya Google’ın kötüye kullanım denetimleri bir isteği işaretlerse 90 güne kadar; böyle bir isteği yetkili Google çalışanları inceleyebilir. HealthKit veya Health Connect’ten okunan bilgiler yapay zeka kayıt asistanına gönderilmez."
           ]
         },
         {
@@ -1127,16 +1127,16 @@
           "title": "2. Veri kaynakları ve kullanım amaçları",
           "paragraphs": [
             "Kayıtları siz girersiniz veya Apple Health (HealthKit) ya da Health Connect üzerinden izin verdiğiniz ölçümleri seçersiniz. Apple/Google ile giriş ve Store bildirimleri, hesap ve satın alma üst verilerini sağlar. Veri aracılarından veri almayız.",
-            "Verileri kayıtlarınızı göstermek ve yönetmek, yalnızca referans amaçlı hesaplamalar yapmak, istediğiniz eşitleme ve yedeklemeyi sağlamak ve hizmet güvenliğini korumak için kullanırız. Tanı veya tedavi önerisi sunmayız; sağlık verilerinden reklam ya da analitik üretmeyiz."
+            "Verileri kayıtlarınızı göstermek ve yönetmek, yalnızca referans amaçlı hesaplamalar yapmak, istediğiniz eşitleme ve yedeklemeyi sağlamak ve hizmet güvenliğini korumak için kullanırız. Tanı veya tedavi önerisi sunmayız; sağlık verilerinden reklam ya da analitik üretmeyiz. İstediğinizde bunları yapay zeka özetleri ve genel beslenme fikirleri oluşturmak için de kullanırız. Yapay zeka yanıtları teşhis veya tedavi önerisi değildir."
           ]
         },
         {
           "id": "disclosures",
           "title": "3. Verileri alan taraflar",
           "paragraphs": [
-            "Altyapı veri işleyenleri Cloudflare ve AWS, aktarım, barındırma, koruma ve yedekleme için şifrelenmiş kayıtları ve gerekli hesap ve bağlantı üst verilerini işler. Talimatlarımıza ve sözleşmesel güvencelere uymak zorundadırlar; sağlık verilerini bağımsız olarak kullanmalarına izin vermeyiz.",
+            "Altyapı veri işleyenleri Cloudflare ve AWS, aktarım, barındırma, koruma ve yedekleme için şifrelenmiş kayıtları ve gerekli hesap ve bağlantı üst verilerini işler. Talimatlarımıza ve sözleşmesel güvencelere uymak zorundadırlar; sağlık verilerini bağımsız olarak kullanmalarına izin vermeyiz. Yapay zeka kayıt asistanı isteklerini, veri işleyen olarak Google, Google Cloud Vertex AI (Global, belirli bir ülke yok) üzerinde yanıtı oluşturmak için işler. Google içeriği yapay zeka modellerini eğitmek için kullanmaz; Google’ın içeriği ne kadar süre tutabileceği Gizlilik Politikası’nda açıklanmıştır.",
             "Apple/Google, kendi rolleri kapsamında giriş ve ödemeyi yürütür; DoseWeek, giriş veya ödeme akışları üzerinden kaydedilmiş sağlık içeriği göndermez. Google AdMob/Firebase yalnızca genel gizlilik politikalarında açıklanan SDK teknik verilerini alır, kaydedilen sağlık içeriğini almaz. Sağlık hizmeti kullanımını ortaya koyan teknik veriler de geçerli sağlık verisi korumalarına tabidir. Dışa aktarımı, takvim entegrasyonunu veya kendi bulut yedeğinizi seçerseniz, seçtiğiniz alıcılar ile dosya, takvim veya bulut sağlayıcıları seçilen bilgileri ya da şifrelenmiş dosyayı alır ve bunlardan başka kopyalar oluşturabilir. Teknik veriler sağlık hizmeti kullanımını ortaya koyduğunda, bunların AdMob/Firebase ile paylaşılması için geçerli kurallar uyarınca ayrı sağlık verisi paylaşım rızası gerekir; reklam rızası tek başına bu rızayı sağlamaz.",
-            "Sağlık verilerini bağlı şirketlerle paylaşmayız. Sağlık verilerini satmayız. Reklam amacıyla kaydedilmiş sağlık içeriği göndermeyiz veya sağlık verilerinden türetilen reklam hedeflemesi kullanmayız. Sağlık hizmeti sunulan yerlerin çevresinde kişileri tanımak ya da izlemek, sağlık verisi toplamak ya da sağlıkla ilgili mesaj veya reklam göndermek için coğrafi sınırlama kullanmayız."
+            "Sağlık verilerini bağlı şirketlerle paylaşmayız. Sağlık verilerini satmayız. Reklam amacıyla kaydedilmiş sağlık içeriği göndermeyiz veya sağlık verilerinden türetilen reklam hedeflemesi kullanmayız. Sağlık hizmeti sunulan yerlerin çevresinde kişileri tanımak ya da izlemek, sağlık verisi toplamak ya da sağlıkla ilgili mesaj veya reklam göndermek için coğrafi sınırlama kullanmayız. Yapay zeka kayıt asistanına gönderilen sağlık bilgilerini de satmayız ve reklam amacıyla paylaşmayız."
           ]
         },
         {
@@ -1144,7 +1144,7 @@
           "title": "4. Rıza ve seçenekleriniz",
           "paragraphs": [
             "İsteğe bağlı sağlık eşitlemesi açık rıza gerektirir. Rıza olmadan toplama, kullanma veya paylaşma, yalnızca istediğiniz hizmet için gerekli olan işlemlerle sınırlıdır. Bu istisna, isteğe bağlı reklam veya analitiği hiçbir zaman kapsamaz.",
-            "İstediğiniz hizmetin dışındaki paylaşım, toplama rızasından ayrı bir rıza gerektirir. Reddetseniz de yerel kayıt tutabilirsiniz. Rızayı geri çekmek, vermek kadar kolaydır: Ayarlar üzerinden eşitlemeyi kapatın veya bize ulaşın."
+            "İstediğiniz hizmetin dışındaki paylaşım, toplama rızasından ayrı bir rıza gerektirir. Reddetseniz de yerel kayıt tutabilirsiniz. Rızayı geri çekmek, vermek kadar kolaydır: Ayarlar üzerinden eşitlemeyi kapatın veya bize ulaşın. Yapay zeka kayıt asistanı için, özelliği ilk kez açtığınızda ayrı bir ekranda rızanızı isteriz ve kayıtlar her gönderildiğinde yeniden onaylamanızı isteriz. Rızanızı Ayarlar > Yapay zeka kayıt asistanı bölümünden istediğiniz zaman geri alabilirsiniz."
           ]
         },
         {
@@ -1169,7 +1169,7 @@
           "id": "contact",
           "title": "7. İletişim ve değişiklikler",
           "paragraphs": [
-            "İşletmeci: Wonyoung Labs. Gizlilik iletişimi: Wonyoung Choi, wonyoung@wonyoungchoi.dev. Genel gizlilik politikaları saklama, aktarım, güvenlik ve veri ihlallerine müdahaleyi açıklar. Sağlık verilerinin kullanımını veya paylaşımını genişleten değişiklikler, geçerli bildirimleri ve yeni rızayı gerektirir."
+            "İşletmeci: Wonyoung Labs. Genel gizlilik politikaları saklama, aktarım, güvenlik ve veri ihlallerine müdahaleyi açıklar. Sağlık verilerinin kullanımını veya paylaşımını genişleten değişiklikler, geçerli bildirimleri ve yeni rızayı gerektirir.\n\nDoseWeek, Kore Cumhuriyeti’ndeki Wonyoung Labs (원영랩스) tarafından işletilir. Mesafeli satış kayıt numarası: 제 2026-부산금정-0425 호 (kayıt makamı: Geumjeong-gu, Busan). Sorular ve gizlilik talepleri için wonyoung@wonyoungchoi.dev adresine yazın."
           ]
         }
       ],

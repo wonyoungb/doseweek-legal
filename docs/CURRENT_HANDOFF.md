@@ -1,4 +1,17 @@
-## ACTIVE — Publish 1 of the 1.0.6 legal pages (2026-10-03; owner-ordered, no AI/Pro)
+## ACTIVE — Publish 2 live (2026-10-03): AI/Pro, next iOS update, business identity
+
+`main` carries publish 2, built by `python3 scripts/publish_release.py` from the base sources,
+the account/sync overlay, ai-consent-v3 (cfbed2f) and the decisions in
+`docs/publication-decisions-20261003.json` and `-p2.json`. Checks: `publish_release.py --check`,
+`check_site.py`, unittest 282/282. Do not run the single renderers without `--check`.
+Release day (Android 1.0.6 in the store): set `"androidInStore": true` in the p2 decisions file,
+run `python3 scripts/publish_release.py`, run the checks, commit, push main. That changes the 17
+"current version" scope lines to 1.0.6; also remove the "until that version is released" scope
+sentence for Android then (text key `aiScope`).
+Open: see CHANGELOG 2026-10-03 publish 2 and the release ledger
+`web-predeploy-20261003/statutory-checklist.json`.
+
+## HISTORICAL — Publish 1 of the 1.0.6 legal pages (2026-10-03; owner-ordered, no AI/Pro)
 
 Branch `publish/legal-106-p1` from `integ/legal-106-predeploy` 9ff91c4, merged to `main` for
 GitHub Pages. Build: `python3 scripts/publish_release.py` (writes `docs/published/*` and 144

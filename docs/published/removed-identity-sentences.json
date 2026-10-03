@@ -1,0 +1,582 @@
+[
+  {
+    "where": "ios-content.json/ko/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "대표자와 개인정보 보호책임자는 Wonyoung Choi예요.",
+      "사업자등록번호는 863-25-02023이에요.",
+      "주소는 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea(부산광역시 금정구 수림로81번길 6, 201호)예요."
+    ]
+  },
+  {
+    "where": "ios-content.json/ko/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "사업자등록번호는 863-25-02023이고, 대표자는 Wonyoung Choi예요.",
+      "주소는 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281이에요."
+    ]
+  },
+  {
+    "where": "ios-content.json/en/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Representative and privacy officer: Wonyoung Choi.",
+      "Business registration: 863-25-02023.",
+      "Address: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "ios-content.json/en/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Business registration: 863-25-02023; representative: Wonyoung Choi; address: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/ja/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "代表者・個人情報保護責任者：Wonyoung Choi。",
+      "事業者登録番号：863-25-02023。",
+      "住所：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea。"
+    ]
+  },
+  {
+    "where": "ios-content.json/ja/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "事業者登録番号: 863-25-02023、代表者: Wonyoung Choi、住所: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281。"
+    ]
+  },
+  {
+    "where": "ios-content.json/de/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Vertreter und Datenschutzverantwortlicher: Wonyoung Choi.",
+      "Gewerberegistrierung: 863-25-02023.",
+      "Anschrift: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "ios-content.json/de/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Unternehmensregistrierung: 863-25-02023; Vertreter: Wonyoung Choi; Anschrift: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/fr/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Représentant et responsable de la protection des données : Wonyoung Choi.",
+      "Numéro d’immatriculation de l’entreprise : 863-25-02023.",
+      "Adresse : 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, République de Corée."
+    ]
+  },
+  {
+    "where": "ios-content.json/fr/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Numéro d’entreprise : 863-25-02023 ; représentant : Wonyoung Choi ; adresse : 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/es/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Representante y responsable de privacidad: Wonyoung Choi.",
+      "Registro empresarial: 863-25-02023.",
+      "Dirección: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, República de Corea."
+    ]
+  },
+  {
+    "where": "ios-content.json/es/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Registro empresarial: 863-25-02023; representante: Wonyoung Choi; dirección: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/it/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Rappresentante e responsabile della privacy: Wonyoung Choi.",
+      "Numero di registrazione dell'impresa: 863-25-02023.",
+      "Indirizzo: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Repubblica di Corea."
+    ]
+  },
+  {
+    "where": "ios-content.json/it/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Registrazione aziendale: 863-25-02023; rappresentante: Wonyoung Choi; indirizzo: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/nl/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Vertegenwoordiger en privacyfunctionaris: Wonyoung Choi.",
+      "Bedrijfsregistratie: 863-25-02023.",
+      "Adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republiek Korea."
+    ]
+  },
+  {
+    "where": "ios-content.json/nl/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Bedrijfsregistratie: 863-25-02023; vertegenwoordiger: Wonyoung Choi; adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/pt-PT/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Representante e responsável pela privacidade: Wonyoung Choi.",
+      "Registo comercial: 863-25-02023.",
+      "Morada: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, República da Coreia."
+    ]
+  },
+  {
+    "where": "ios-content.json/pt-PT/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Registo empresarial: 863-25-02023; representante: Wonyoung Choi; morada: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/pl/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Przedstawiciel i osoba odpowiedzialna za prywatność: Wonyoung Choi.",
+      "Numer rejestracji działalności: 863-25-02023.",
+      "Adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republika Korei."
+    ]
+  },
+  {
+    "where": "ios-content.json/pl/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Numer rejestracyjny: 863-25-02023; przedstawiciel: Wonyoung Choi; adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/sv/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Företrädare och dataskyddsansvarig: Wonyoung Choi.",
+      "Företagsregistrering: 863-25-02023.",
+      "Adress: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republiken Korea."
+    ]
+  },
+  {
+    "where": "ios-content.json/sv/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Företagsregistrering: 863-25-02023; företrädare: Wonyoung Choi; adress: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/hi/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "प्रतिनिधि और गोपनीयता अधिकारी: Wonyoung Choi।",
+      "व्यवसाय पंजीकरण: 863-25-02023।",
+      "पता: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea।"
+    ]
+  },
+  {
+    "where": "ios-content.json/hi/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "व्यवसाय पंजीकरण: 863-25-02023; प्रतिनिधि: Wonyoung Choi; पता: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281।"
+    ]
+  },
+  {
+    "where": "ios-content.json/pt-BR/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Representante e responsável pela privacidade: Wonyoung Choi.",
+      "Registro empresarial: 863-25-02023.",
+      "Endereço: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, República da Coreia."
+    ]
+  },
+  {
+    "where": "ios-content.json/pt-BR/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "Registro empresarial: 863-25-02023; representante: Wonyoung Choi; endereço: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/ar/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "الممثل ومسؤول الخصوصية: Wonyoung Choi.",
+      "رقم تسجيل النشاط التجاري: 863-25-02023.",
+      "العنوان: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "ios-content.json/ar/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "رقم تسجيل النشاط: 863-25-02023؛ الممثل: Wonyoung Choi؛ العنوان: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "ios-content.json/zh-Hans/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "代表及隐私负责人：Wonyoung Choi。",
+      "营业登记号：863-25-02023。",
+      "地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea。"
+    ]
+  },
+  {
+    "where": "ios-content.json/zh-Hans/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "商业登记号：863-25-02023；代表人：Wonyoung Choi；地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281。"
+    ]
+  },
+  {
+    "where": "ios-content.json/zh-Hant/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "代表及隱私負責人：Wonyoung Choi。",
+      "營業登記號：863-25-02023。",
+      "地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea。"
+    ]
+  },
+  {
+    "where": "ios-content.json/zh-Hant/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "商業登記號：863-25-02023；代表人：Wonyoung Choi；地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281。"
+    ]
+  },
+  {
+    "where": "ios-content.json/tr/privacy/sections/6/paragraphs/0",
+    "removed": [
+      "Temsilci ve gizlilik sorumlusu: Wonyoung Choi.",
+      "İşletme kayıt numarası: 863-25-02023.",
+      "Adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "ios-content.json/tr/privacy/sections/11/paragraphs/0",
+    "removed": [
+      "İşletme kayıt numarası: 863-25-02023; temsilci: Wonyoung Choi; adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/ko/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "사업자등록번호는 863-25-02023이고, 대표자는 Wonyoung Choi예요.",
+      "주소는 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281이에요."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/ko/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "대표자와 개인정보 보호책임자는 Wonyoung Choi예요.",
+      "사업자등록번호는 863-25-02023이에요.",
+      "주소는 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea(부산광역시 금정구 수림로81번길 6, 201호)예요."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/en/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Business registration: 863-25-02023; representative: Wonyoung Choi; address: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/en/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Representative and privacy officer: Wonyoung Choi.",
+      "Business registration: 863-25-02023.",
+      "Address: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/ja/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "事業者登録番号: 863-25-02023、代表者: Wonyoung Choi、住所: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281。"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/ja/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "代表者・個人情報保護責任者：Wonyoung Choi。",
+      "事業者登録番号：863-25-02023。",
+      "住所：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea。"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/de/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Unternehmensregistrierung: 863-25-02023; Vertreter: Wonyoung Choi; Anschrift: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/de/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Vertreter und Datenschutzverantwortlicher: Wonyoung Choi.",
+      "Gewerberegistrierung: 863-25-02023.",
+      "Anschrift: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/fr/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Numéro d’entreprise : 863-25-02023 ; représentant : Wonyoung Choi ; adresse : 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/fr/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Représentant et responsable de la protection des données : Wonyoung Choi.",
+      "Numéro d’immatriculation de l’entreprise : 863-25-02023.",
+      "Adresse : 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, République de Corée."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/es/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Registro empresarial: 863-25-02023; representante: Wonyoung Choi; dirección: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/es/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Representante y responsable de privacidad: Wonyoung Choi.",
+      "Registro empresarial: 863-25-02023.",
+      "Dirección: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, República de Corea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/it/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Registrazione aziendale: 863-25-02023; rappresentante: Wonyoung Choi; indirizzo: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/it/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Rappresentante e responsabile della privacy: Wonyoung Choi.",
+      "Numero di registrazione dell'impresa: 863-25-02023.",
+      "Indirizzo: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Repubblica di Corea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/nl/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Bedrijfsregistratie: 863-25-02023; vertegenwoordiger: Wonyoung Choi; adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/nl/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Vertegenwoordiger en privacyfunctionaris: Wonyoung Choi.",
+      "Bedrijfsregistratie: 863-25-02023.",
+      "Adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republiek Korea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/pt-PT/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Registo empresarial: 863-25-02023; representante: Wonyoung Choi; morada: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/pt-PT/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Representante e responsável pela privacidade: Wonyoung Choi.",
+      "Registo comercial: 863-25-02023.",
+      "Morada: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, República da Coreia."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/pl/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Numer rejestracyjny: 863-25-02023; przedstawiciel: Wonyoung Choi; adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/pl/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Przedstawiciel i osoba odpowiedzialna za prywatność: Wonyoung Choi.",
+      "Numer rejestracji działalności: 863-25-02023.",
+      "Adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republika Korei."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/sv/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Företagsregistrering: 863-25-02023; företrädare: Wonyoung Choi; adress: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/sv/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Företrädare och dataskyddsansvarig: Wonyoung Choi.",
+      "Företagsregistrering: 863-25-02023.",
+      "Adress: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republiken Korea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/hi/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "व्यवसाय पंजीकरण: 863-25-02023; प्रतिनिधि: Wonyoung Choi; पता: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281।"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/hi/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "प्रतिनिधि और गोपनीयता अधिकारी: Wonyoung Choi।",
+      "व्यवसाय पंजीकरण: 863-25-02023।",
+      "पता: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea।"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/pt-BR/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "Registro empresarial: 863-25-02023; representante: Wonyoung Choi; endereço: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/pt-BR/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Representante e responsável pela privacidade: Wonyoung Choi.",
+      "Registro empresarial: 863-25-02023.",
+      "Endereço: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, República da Coreia."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/ar/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "رقم تسجيل النشاط: 863-25-02023؛ الممثل: Wonyoung Choi؛ العنوان: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/ar/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "الممثل ومسؤول الخصوصية: Wonyoung Choi.",
+      "رقم تسجيل النشاط التجاري: 863-25-02023.",
+      "العنوان: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/zh-Hans/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "商业登记号：863-25-02023；代表人：Wonyoung Choi；地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281。"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/zh-Hans/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "代表及隐私负责人：Wonyoung Choi。",
+      "营业登记号：863-25-02023。",
+      "地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea。"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/zh-Hant/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "商業登記號：863-25-02023；代表人：Wonyoung Choi；地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281。"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/zh-Hant/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "代表及隱私負責人：Wonyoung Choi。",
+      "營業登記號：863-25-02023。",
+      "地址：201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea。"
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/tr/privacy/sections/5/paragraphs/2",
+    "removed": [
+      "İşletme kayıt numarası: 863-25-02023; temsilci: Wonyoung Choi; adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281."
+    ]
+  },
+  {
+    "where": "android-content.candidate.json/tr/privacy/sections/8/paragraphs/0",
+    "removed": [
+      "Temsilci ve gizlilik sorumlusu: Wonyoung Choi.",
+      "İşletme kayıt numarası: 863-25-02023.",
+      "Adres: 201, 6 Surim-ro 81beon-gil, Geumjeong-gu, Busan 46281, Republic of Korea."
+    ]
+  },
+  {
+    "where": "us-health-content.json/ko/sections/6/paragraphs/0",
+    "removed": [
+      "개인정보 보호 담당자: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/en/sections/6/paragraphs/0",
+    "removed": [
+      "Privacy contact: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/ja/sections/6/paragraphs/0",
+    "removed": [
+      "個人情報窓口：Wonyoung Choi、wonyoung@wonyoungchoi.dev。"
+    ]
+  },
+  {
+    "where": "us-health-content.json/de/sections/6/paragraphs/0",
+    "removed": [
+      "Datenschutzkontakt: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/fr/sections/6/paragraphs/0",
+    "removed": [
+      "Contact confidentialité : Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/es/sections/6/paragraphs/0",
+    "removed": [
+      "Contacto de privacidad: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/it/sections/6/paragraphs/0",
+    "removed": [
+      "Contatto privacy: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/nl/sections/6/paragraphs/0",
+    "removed": [
+      "Privacycontact: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/pt-PT/sections/6/paragraphs/0",
+    "removed": [
+      "Contacto de privacidade: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/pl/sections/6/paragraphs/0",
+    "removed": [
+      "Kontakt prywatności: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/sv/sections/6/paragraphs/0",
+    "removed": [
+      "Integritetskontakt: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/hi/sections/6/paragraphs/0",
+    "removed": [
+      "गोपनीयता संपर्क: Wonyoung Choi, wonyoung@wonyoungchoi.dev।"
+    ]
+  },
+  {
+    "where": "us-health-content.json/pt-BR/sections/6/paragraphs/0",
+    "removed": [
+      "Contato de privacidade: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/ar/sections/6/paragraphs/0",
+    "removed": [
+      "جهة التواصل بشأن الخصوصية: Wonyoung Choi، wonyoung@wonyoungchoi.dev."
+    ]
+  },
+  {
+    "where": "us-health-content.json/zh-Hans/sections/6/paragraphs/0",
+    "removed": [
+      "隐私联系人：Wonyoung Choi，wonyoung@wonyoungchoi.dev。"
+    ]
+  },
+  {
+    "where": "us-health-content.json/zh-Hant/sections/6/paragraphs/0",
+    "removed": [
+      "隱私聯絡人：Wonyoung Choi，wonyoung@wonyoungchoi.dev。"
+    ]
+  },
+  {
+    "where": "us-health-content.json/tr/sections/6/paragraphs/0",
+    "removed": [
+      "Gizlilik iletişimi: Wonyoung Choi, wonyoung@wonyoungchoi.dev."
+    ]
+  }
+]
